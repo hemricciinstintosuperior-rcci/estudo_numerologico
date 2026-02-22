@@ -720,28 +720,7 @@ setTimeout(() => {
 
 }, 2500);
 // 📄 GERA PDF AUTOMATICAMENTE
-// 🚀 GERAR PDF SOMENTE QUANDO TUDO TERMINAR DE CARREGAR
-window.onload = function gerarPDF(){
 
-  const relatorioTela = document.body.innerHTML;
-  const folha = document.getElementById("pdfFolha");
-
-  // copia o relatório pronto para a folha A4 invisível
-  folha.innerHTML = relatorioTela;
-
-  const opt = {
-    margin:0,
-    filename:"Relatorio_Numerologico.pdf",
-    image:{ type:"jpeg", quality:1 },
-    html2canvas:{ scale:2, useCORS:true },
-    jsPDF:{ unit:"px", format:"a4", orientation:"portrait" }
-  };
-
-  setTimeout(()=>{
-    html2pdf().set(opt).from(folha).save();
-  },1000);
-
-}
 
 observer.observe(document.body, { childList:true, subtree:true });
 
