@@ -679,8 +679,9 @@ preencher("{{TEXTO_D2}}",dados.textos.d2);
 preencher("{{TEXTO_D3}}",dados.textos.d3);
 
 preencher("{{TEXTO_DEFICIENCIAS}}",dados.textos.deficiencias);
-preencher("{{ANO_PESSOAL_NUMERO}}",dados.anoPessoalNumero);
-preencher("{{TEXTO_ANO_PESSOAL}}",dados.textoAnoPessoal);
+// Cole isto logo após o fechamento da função preencher(chave, valor)
+preencher("{{ANO_PESSOAL_NUMERO}}", dados.ano_pessoal_num);
+preencher("{{TEXTO_ANO_PESSOAL}}", dados.ano_pessoal_texto);
 // =============================
 // INSERIR PERÍODOS NO RELATÓRIO
 // =============================
