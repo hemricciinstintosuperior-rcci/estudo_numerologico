@@ -1,4 +1,7 @@
 <style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#111827">
+  
 body { font-family: Arial, sans-serif; }
 .card {
   border: 1px solid #ccc;
@@ -3272,5 +3275,10 @@ document.onselectstart=()=>false;
    // abre a página que gera o PDF
    window.open("https://hemricciinstintosuperior-rcci.github.io/estudo_numerologico//premiummapa.html","_blank");
 }
- 
+  </script>
+  
+ <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
   </script>
