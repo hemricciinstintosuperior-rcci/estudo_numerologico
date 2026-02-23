@@ -702,29 +702,18 @@ preencher("{{PERIODO_D2}}", periodoCiclo2);
 preencher("{{PERIODO_D3}}", periodoCiclo3);  
 
 // 🚀 GERAR PDF VIA IMPRESSÃO PROFISSIONAL (100% compatível Wix)
-setTimeout(() => {
+// ===============================
+// GERAR PDF AUTOMÁTICO (MOBILE + PC)
+// ===============================
+function gerarPDF(){
+  window.scrollTo(0,0); // garante topo
+  setTimeout(()=>{
+    window.print();
+  },800);
+}
 
-  // cria janela invisível
-  const janela = window.open('', '_blank');
-
-  // copia TODO o HTML pronto da tela
-  const conteudo = document.documentElement.outerHTML;
-
-  // escreve na nova janela
-  janela.document.open();
-  janela.document.write(conteudo);
-  janela.document.close();
-
-  // espera renderizar e manda imprimir
-  janela.onload = () => {
-    janela.focus();
-    janela.print();
-    janela.close();
-  };
-
-}, 2500);
-// 📄 GERA PDF AUTOMATICAMENTE
-
+// gera automaticamente após montar o relatório
+setTimeout(gerarPDF, 1200);
 
 observer.observe(document.body, { childList:true, subtree:true });
 
