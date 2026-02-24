@@ -13,6 +13,18 @@ body { font-family: Arial, sans-serif; }
 .texto {
   white-space: pre-line;
 }
+input {
+  width: 600px;
+  font-size: 18px;
+  padding: 14px;
+  background-color: #e5e7eb; /* Cor cinza idêntica ao padrão do sistema */
+  border: 1px solid #ccc;    /* Borda suave para dar profundidade */
+  color: #333;               /* Cor do texto ao digitar */
+  display: block;            /* Garante que fiquem um abaixo do outro */
+  margin: 10px auto;         /* Centraliza e dá espaçamento */
+}  
+
+  
 .botao-comprar {
   display: inline-block;
   margin-top: 40px;
@@ -27,16 +39,6 @@ body { font-family: Arial, sans-serif; }
    margin-top:50px;
 }
 
-input {
-  width: 600px;
-  font-size: 18px;
-  padding: 14px;
-  background-color: #e5e7eb; /* Cor cinza idêntica ao padrão do sistema */
-  border: 1px solid #ccc;    /* Borda suave para dar profundidade */
-  color: #333;               /* Cor do texto ao digitar */
-  display: block;            /* Garante que fiquem um abaixo do outro */
-  margin: 10px auto;         /* Centraliza e dá espaçamento */
-}  
 
 .btn-gerar{
    background:#22c55e;
@@ -60,6 +62,23 @@ input {
    font-weight:bold;
    cursor:pointer;
 }
+
+/* Isso força os campos a aparecerem e ficarem empilhados no celular */
+@media (max-width: 768px) {
+    .container-inputs { /* Use a classe que envolve seus inputs */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, select {
+        display: block !important; /* Força a exibição */
+        width: 90% !important;     /* Ajusta a largura para o celular */
+            margin: 0 auto 25px auto !important;
+        background-color: #e5e7eb !important; /* Força o cinza no celular */
+        font-size: 16px;
+    }
+}  
   
 </style>
 
