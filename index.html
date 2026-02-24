@@ -3,97 +3,107 @@
 
 <style>
 
-  
-body { font-family: Arial, sans-serif; }
-.card {
-  border: 1px solid #ccc;
-  padding: 15px;
-  margin: 15px 0;
-}
-.texto {
-  white-space: pre-line;
+body{
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:20px;
 }
 
- input,button{
-  padding:10px;
-  margin:5px;
-  border-radius:6px;
-  border:none;
-} 
-input {
-  width: 600px;
-  font-size: 18px;
-  padding: 14px;
-  background-color: #e5e7eb; /* Cor cinza idêntica ao padrão do sistema */
-  border: 1px solid #ccc;    /* Borda suave para dar profundidade */
-  color: #333;               /* Cor do texto ao digitar */
-  display: block;            /* Garante que fiquem um abaixo do outro */
-  margin: 10px auto;         /* Centraliza e dá espaçamento */
-}  
-
-  
-.botao-comprar {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 20px;
-  background: #000;
-  color: #fff;
-  text-decoration: none;
+h1{
+  text-align:center;
 }
+
+.container-form{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:30px;
+  gap:20px;
+}
+
+.campo{
+  width:100%;
+  max-width:500px;
+  display:flex;
+  flex-direction:column;
+  font-size:14px;
+  font-weight:bold;
+  color:#333;
+}
+
+.campo input{
+  margin-top:8px;
+  padding:14px;
+  font-size:16px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  background:#e5e7eb;
+  width:100%;
+  box-sizing:border-box;
+}
+
 .botoes-topo{
-   display:flex;
-   gap:30px;
-   margin-top:50px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin-top:40px;
+  flex-wrap:wrap;
 }
-
 
 .btn-gerar{
-   background:#22c55e;
-   color:green;
-   border:none;
-   padding:18px 28px;
-   font-size:18px;
-   border-radius:12px;
-   cursor:pointer;
-   font-weight:bold;
+  background:#22c55e;
+  color:#065f46;
+  padding:16px 24px;
+  font-size:16px;
+  border-radius:10px;
+  border:none;
+  font-weight:bold;
 }
 
 .btn-premium{
-   display:inline-block;
-   background: linear-gradient(45deg,#6a11cb,#2575fc);
-   color:white;
-   padding:18px 28px;
-   font-size:18px;
-   border-radius:12px;
-   text-decoration:none;
-   font-weight:bold;
-   cursor:pointer;
+  background:linear-gradient(45deg,#6a11cb,#2575fc);
+  color:white;
+  padding:16px 24px;
+  font-size:16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
 }
 
-/* Isso força os campos a aparecerem e ficarem empilhados no celular */
-@media (max-width: 768px) {
-    .container-inputs { /* Use a classe que envolve seus inputs */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+@media (max-width:768px){
+  .campo{
+    max-width:95%;
+  }
 
-    input, select {
-        display: block !important; /* Força a exibição */
-        width: 90% !important;     /* Ajusta a largura para o celular */
-            margin: 0 auto 25px auto !important;
-        background-color: #e5e7eb !important; /* Força o cinza no celular */
-        font-size: 16px;
-    }
-}  
-  
+  .botoes-topo{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .btn-gerar,
+  .btn-premium{
+    width:95%;
+    text-align:center;
+  }
+}
+
 </style>
 
 <h1>INSTINTO SUPERIOR</h1>
-Nome completo igual a da certidão
-<input id="nome" placeholder="">
-data de nascimento
-<input id="data" type="date">
+
+<div class="container-form">
+
+  <div class="campo">
+    Nome completo igual ao da certidão
+    <input id="nome" type="text">
+  </div>
+
+  <div class="campo">
+    Data de nascimento
+    <input id="data" type="date">
+  </div>
+
+</div>
 
 <div class="botoes-topo">
    <button class="btn-gerar" onclick="gerarMapa()">Gerar Mapa Gratuito</button>
@@ -102,11 +112,6 @@ data de nascimento
       🔓 Desbloquear Relatório Premium
    </a>
 </div>
-
-
-
-
-
 
 <div id="resultado"></div>
 
