@@ -13,6 +13,11 @@
 
 
 <style>
+html, body {
+  width:100%;
+  overflow-x:hidden;
+}
+  
 
 *{
   box-sizing:border-box;
@@ -94,7 +99,21 @@ h1{
 @media (max-width:600px){
   .botoes-topo{
     flex-direction:column;
-  }
+ /* Isso força os campos a aparecerem e ficarem empilhados no celular */
+@media (max-width: 768px) {
+    .container-inputs { /* Use a classe que envolve seus inputs */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input, select {
+        display: block !important; /* Força a exibição */
+        width: 90% !important;     /* Ajusta a largura para o celular */
+            margin: 0 auto 25px auto !important;
+        background-color: #e5e7eb !important; /* Força o cinza no celular */
+        font-size: 16px;
+    }
 }
 
 </style>
@@ -105,7 +124,7 @@ h1{
 <div class="container">
 
   <div class="campo">
-    Nome completo igual ao da certidão
+    Nome completo (igual certidão)
     <input id="nome" type="text">
   </div>
 
