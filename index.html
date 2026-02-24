@@ -27,6 +27,17 @@ body { font-family: Arial, sans-serif; }
    margin-top:50px;
 }
 
+input {
+  width: 600px;
+  font-size: 18px;
+  padding: 14px;
+  background-color: #e5e7eb; /* Cor cinza idêntica ao padrão do sistema */
+  border: 1px solid #ccc;    /* Borda suave para dar profundidade */
+  color: #333;               /* Cor do texto ao digitar */
+  display: block;            /* Garante que fiquem um abaixo do outro */
+  margin: 10px auto;         /* Centraliza e dá espaçamento */
+}  
+
 .btn-gerar{
    background:#22c55e;
    color:green;
@@ -53,8 +64,8 @@ body { font-family: Arial, sans-serif; }
 </style>
 
 <h1>INSTINTO SUPERIOR</h1>
-<input id="nome" placeholder="Nome completo">
-<input id="data" type="date">
+Nome completo igual a da certidão<input id="nome" placeholder="">
+               data de nascimento<input id="data" type="date">
 
 <div class="botoes-topo">
    <button class="btn-gerar" onclick="gerarMapa()">Gerar Mapa Gratuito</button>
