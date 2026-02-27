@@ -1,393 +1,185 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Plano de Expressão Quântico</title>
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#111827">
-
-<style>
-body{font-family:Arial;padding:30px;background:#f4f4f4}
-input,button{padding:10px;margin:5px}
-.card{background:#fff;padding:20px;margin-top:20px;border-radius:10px}
-table{border-collapse:collapse;width:100%;margin-top:15px}
-th,td{border:1px solid #ccc;padding:6px;text-align:center}
-.vermelho{color:#c0392b}
-.azul{color:#2980b9}
-.verde{color:#27ae60}
-.amarelo{color:#f1c40f}
-
-.bloco-momento{
-  margin-top:60px;
-  padding:30px;
-  background:#111827;
-  color:white;
-  border-radius:10px;
-}
-.bar-bg{background:#2a2a2a;height:18px;border-radius:10px;margin:8px 0;}
-.bar{height:100%;width:0%;border-radius:10px;transition:1s;}
-.fisico{background:#ff4d4d;}
-.mental{background:#4da6ff;}
-.emocional{background:#33cc66;}
-.intuitivo{background:#ffd633;}
-.criativo { background: #a855f7; } 
-.indeciso { background: #f97316; } 
-.neutro { background: #94a3b8; }  
-.resumoMomento{margin-top:25px;padding:20px;background:#1f2937;border-radius:8px;}
-/* Esconde o texto que fica abaixo das barras */
-#txtFisicoNat, #txtMentalNat, #txtEmocionalNat, #txtIntuitivoNat,
-#txtFisico, #txtMental, #txtEmocional, #txtIntuitivo {
-    display: none;
-}
-input {
-  width: 600px;
-  font-size: 18px;
-  padding: 14px;
-  background-color: #e5e7eb; 
-  border: 1px solid #ccc;    
-  color: #333;               
-  display: block;            
-  margin: 10px auto;         
-}
-  
-/* MOBILE */
-@media (max-width:768px){
-  body{padding:15px;}
-  h1{font-size:28px;}
-  input,button,select{width:100%;box-sizing:border-box;margin:8px 0;}
-  .bloco-momento{padding:20px;margin-top:30px;}
-}
-  
-#resultado {
-    font-size: 18px;
-}
-@media (max-width: 768px) {
-    .container-inputs { 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    input, select {
-        display: block !important; 
-        width: 90% !important;     
-        margin-bottom: 25px;      
-    }
-} 
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instinto Superior - Numerologia Cabalística</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#111827">
+  <style>
+    /* Mantenho seus estilos originais, mas adicionei a classe .texto para suportar pre-line */
+    html, body { width:100%; overflow-x:hidden; }
+    *{ box-sizing:border-box; }
+    body{ font-family: Arial, sans-serif; margin:0; padding:20px; display:flex; flex-direction:column; align-items:center; background: #f9fafb; }
+    h1{ text-align:center; margin-bottom:30px; color: #111827; }
+    .container{ width:100%; max-width:500px; display:flex; flex-direction:column; gap:20px; }
+    .campo{ display:flex; flex-direction:column; font-size:14px; font-weight:bold; color:#333; }
+    .campo input{ margin-top:8px; padding:14px; font-size:16px; border-radius:8px; border:1px solid #ccc; background:#e5e7eb; width:100%; }
+    .botoes-topo{ display:flex; gap:15px; margin-top:30px; width:100%; }
+    .btn-gerar, .btn-premium{ flex:1; padding:16px; font-size:16px; border-radius:10px; font-weight:bold; text-align:center; cursor: pointer; border: none; }
+    .btn-gerar{ background:#22c55e; color:white; }
+    .btn-premium{ background:linear-gradient(45deg,#6a11cb,#2575fc); color:white; text-decoration:none; display: block; }
+    .card { background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); margin-bottom: 20px; width: 100%; max-width: 600px; }
+    .card h3 { color: #1f2937; margin-top: 0; border-bottom: 2px solid #f3f4f6; padding-bottom: 10px; }
+    .texto { white-space: pre-line; color: #4b5563; line-height: 1.6; font-size: 16px; margin-top: 15px; }
+    @media (max-width:600px){ .botoes-topo{ flex-direction:column; } }
+  </style>
 </head>
 <body>
 
-<h1>Plano de Expressão Quântico</h1>
-Nome Completo (igual certidão)
-<input id="nome" placeholder="">
-  Data de Nascimento
-<input type="date" id="dataNascimento" required data-placeholder="Data de Nascimento">
-                 
-<button onclick="gerarTudo()">GERAR o seu Plano de Expressão</button>
-<button onclick="exportarRelatorio()">LIberar o acesso ao relatório e baixar o PDF</button>
-
-<div id="natural" class="card"></div>
-<div id="momento" style="display:none"></div>
-
-<section class="bloco-momento" id="blocoNatural">
-<h2>PLANO NATURAL</h2>
-<div>
-Físico: <span id="numFisicoNat"></span><div class="bar-bg"><div id="barFisicoNat" class="bar fisico"></div></div><p id="txtFisicoNat"></p>
-Mental: <span id="numMentalNat"></span><div class="bar-bg"><div id="barMentalNat" class="bar mental"></div></div><p id="txtMentalNat"></p>
-Emocional: <span id="numEmocionalNat"></span><div class="bar-bg"><div id="barEmocionalNat" class="bar emocional"></div></div><p id="txtEmocionalNat"></p>
-Intuitivo: <span id="numIntuitivoNat"></span><div class="bar-bg"><div id="barIntuitivoNat" class="bar intuitivo"></div></div><p id="txtIntuitivoNat"></p>
-<hr style="border: 0; border-top: 1px solid #374151; margin: 20px 0;">
-Criativo: <span id="numCriativoNat"></span><div class="bar-bg"><div id="barCriativoNat" class="bar criativo"></div></div>
-Indeciso: <span id="numIndecisoNat"></span><div class="bar-bg"><div id="barIndecisoNat" class="bar indeciso"></div></div>
-Neutro: <span id="numNeutroNat"></span><div class="bar-bg"><div id="barNeutroNat" class="bar neutro"></div></div> 
-<div id="resumoExpressaoNat" class="resumoMomento" style="margin-top:10px; border-left: 4px solid #a855f7;"></div>  
-</div>
-<div id="resumoNatural" class="resumoMomento"></div>
-</section>
-
-<section class="bloco-momento">
-<h2>STATUS DO MOMENTO</h2>
-<select id="anoSelect"></select>
-<button onclick="gerarStatusMomento()">Gerar Status</button>
-
-<div>
-Físico: <span id="numFisico"></span><div class="bar-bg"><div id="barFisico" class="bar fisico"></div></div><p id="txtFisico"></p>
-Mental: <span id="numMental"></span><div class="bar-bg"><div id="barMental" class="bar mental"></div></div><p id="txtMental"></p>
-Emocional: <span id="numEmocional"></span><div class="bar-bg"><div id="barEmocional" class="bar emocional"></div></div><p id="txtEmocional"></p>
-Intuitivo: <span id="numIntuitivo"></span><div class="bar-bg"><div id="barIntuitivo" class="bar intuitivo"></div></div><p id="txtIntuitivo"></p>
-<hr style="border: 0; border-top: 1px solid #374151; margin: 20px 0;">
-Criativo: <span id="numCriativoMom"></span><div class="bar-bg"><div id="barCriativoMom" class="bar criativo"></div></div>
-Indeciso: <span id="numIndecisoMom"></span><div class="bar-bg"><div id="barIndecisoMom" class="bar indeciso"></div></div>
-Neutro: <span id="numNeutroMom"></span><div class="bar-bg"><div id="barNeutroMom" class="bar neutro"></div></div>
-<div id="resumoExpressaoMom" class="resumoMomento" style="margin-top:10px; border-left: 4px solid #a855f7;"></div>  
+<h1>Estudo Numerológico Cabalístico</h1>
+<div class="container">
+  <div class="campo"> Nome completo (igual certidão) <input id="nome" type="text" placeholder="Ex: João Silva"> </div>
+  <div class="campo"> Data de nascimento <input id="data" type="date"> </div>
+  <div class="botoes-topo">
+    <button class="btn-gerar" onclick="gerarMapa()">Gerar Mapa Gratuito</button>
+    <a id="btnPremium" onclick="validarPremium()" class="btn-premium">🔓 Relatório Premium</a>
+  </div>
 </div>
 
-<div id="resumoMomento" class="resumoMomento"></div>
-
-<div id="blocoTrânsitoAnual" class="resumoMomento" style="margin-top:20px; border-top: 4px solid #ffd633;">
-    <h3 style="color: #ffd633;">VIBRAÇÃO DE TRÂNSITO DO ANO</h3>
-    <div id="resultadoTrânsito"></div>
-</div>
-</section>
+<div id="resultado" style="margin-top: 40px; width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
 
 <script src="textos.js"></script>
-<script>
-const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
-const tabelaExpressao = {
-    'E':'criativo','W':'indeciso','D':'neutro','M':'neutro',
-    'A':'criativo','H':'indeciso','J':'indeciso','N':'indeciso','P':'indeciso','G':'neutro','L':'neutro',
-    'I':'criativo','O':'criativo','R':'criativo','Z':'criativo','B':'indeciso','S':'indeciso','T':'indeciso','X':'indeciso',
-    'K':'criativo','F':'indeciso','Q':'indeciso','U':'indeciso','Y':'indeciso','C':'neutro','V':'neutro'
-};
-const planos = { fisico: ["E","W","D","M"], mental: ["A","H","J","N","P","G","L"], emocional: ["I","O","R","Z","B","S","T","X"], intuitivo: ["K","F","Q","U","Y","C","V"] };
 
-let bancoMomentos = [];
-let resultadoPlanosNatural = null;
-let valoresBrutosNatural = null;
+<script>
+// ============================================
+// 1. FUNÇÕES DE PERSONALIZAÇÃO E FILTRO
+// ============================================
+
+function formatarNomeDinamico() {
+    let nomeInput = document.getElementById("nome").value.trim();
+    if (!nomeInput) return "Você";
+    let primeiroNome = nomeInput.split(' ')[0];
+    return primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
+}
+
+function aplicarFiltroTexto(texto) {
+    if (!texto) return "";
+    let nome = formatarNomeDinamico();
+    // Substitui "você" por "Nome" em negrito
+    return texto.replace(/você/gi, `<strong>${nome}</strong>`);
+}
+
+// ============================================
+// 2. MOTOR DE CÁLCULO (TABELA CABALÍSTICA)
+// ============================================
+const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
+const vogais = ["A","E","I","O","U"];
 
 function calcularValorComAcentos(letra) {
-    const base = letra.normalize("NFD")[0];
-    const valorBase = tabela[base] || 0;
-    let soma = 0, mult = 1;
-    for(let c of letra.normalize("NFD")) {
-        if(c==="\u0301") soma+=2; else if(c==="\u0302") soma+=7;
-        else if(c==="\u0303") soma+=3; else if(c==="\u0327") soma+=6;
-        else if(c==="\u0300" || c==="\u0308") mult*=2;
+  const base = letra.normalize("NFD")[0];
+  const valorBase = tabela[base];
+  if (!valorBase) return 0;
+  let soma = 0, mult = 1;
+  for (let c of letra.normalize("NFD")) {
+    if (c === "\u0301") soma += 2; else if (c === "\u0302") soma += 7;
+    else if (c === "\u0303") soma += 3; else if (c === "\u0327") soma += 6;
+    else if (c === "\u0300" || c === "\u0308") mult *= 2;
+  }
+  return (valorBase + soma) * mult;
+}
+
+function reduzir(n) {
+  n = Math.abs(n);
+  while (n > 9) { n = n.toString().split("").reduce((a,b)=>a+Number(b),0); }
+  return n;
+}
+
+function card(titulo, subtitulo, numero, textoRaw) {
+  const textoProcessado = aplicarFiltroTexto(textoRaw);
+  return `
+  <div class="card">
+    <h3>${titulo}</h3>
+    <p><strong>${subtitulo}</strong> | Número: ${numero}</p>
+    <div class="texto">${textoProcessado || ""}</div>
+  </div>`;
+}
+
+let mapaGerado = false;
+const acessoPago = false; // Mudar via lógica de pagamento
+
+function gerarMapa() {
+  const nomeInput = document.getElementById("nome").value.trim();
+  const dataInput = document.getElementById("data").value;
+
+  if(nomeInput.length < 5) { alert("Digite seu nome completo."); return; }
+  if(!dataInput) { alert("Selecione sua data de nascimento."); return; }
+
+  mapaGerado = true;
+  const nome = nomeInput.toUpperCase();
+  const [ano, mes, dia] = dataInput.split("-").map(Number);
+
+  // Cálculos de Nome
+  let somaV = 0, somaC = 0, usados = new Set();
+  for (let l of nome) {
+    const valor = calcularValorComAcentos(l);
+    if (!valor) continue;
+    const base = l.normalize("NFD")[0];
+    usados.add(tabela[base]);
+    vogais.includes(base) ? somaV += valor : somaC += valor;
+  }
+
+  const motivacao = reduzir(somaV);
+  const influencia = reduzir(somaC);
+  const personalidade = reduzir(somaV + somaC);
+
+  // Cálculos de Data
+  const diaN = dia;
+  const comportamento = reduzir(dia);
+  const caminhoVida = reduzir(dia + mes + ano);
+  const missao = reduzir(caminhoVida + personalidade);
+  const maturidade = missao;
+  const relacionamento = missao;
+
+  // Ciclos e Momentos (Cálculo de idades)
+  const fim1 = 37 - caminhoVida;
+  const fim2 = fim1 + 27;
+  const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
+  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
+  const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
+
+  const anoAtual = new Date().getFullYear();
+  const anoPessoal = reduzir(dia + mes + anoAtual);
+  let faltantes = [];
+  for (let i=1;i<=9;i++) if(!usados.has(i)) faltantes.push(i);
+
+  // Salvar para o Premium
+  const dadosPremium = {
+    nome: nomeInput,
+    data: dataInput.split("-").reverse().join("/"),
+    // Aqui você mapeia todos os campos para o premium.html ler depois
+    resultados: {
+        motivacao, influencia, personalidade, caminhoVida, missao, comportamento, diaN, anoPessoal
+    },
+    textos: {
+        motivacao: textos.motivacao[motivacao],
+        destino: textos.CaminhodeVida[caminhoVida],
+        expressao: textos.Personalidade[personalidade],
+        missao: textos.Propósito[missao]
+        // ... adicione os demais conforme o textos.js
     }
-    return (valorBase + soma) * mult;
-}
+  };
+  localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
 
-function reduzirNumero(n) {
-    if (n === 0) return 0;
-    while(n > 9) n = n.toString().split("").reduce((a,b) => a + Number(b), 0);
-    return n;
-}
-
-function descobrirPlano(letra) {
-    let l = letra.normalize("NFD")[0].toUpperCase();
-    for(let p in planos) if(planos[p].includes(l)) return p;
-    return null;
-}
-
-function classificarIntensidade(valor, maior) {
-    if (valor >= maior * 0.75) return "forte";
-    if (valor >= maior * 0.5) return "medio";
-    return "fraco";
-}
-
-function atualizarTabela3(letras, sufixo) {
-    let cont = { criativo: 0, indeciso: 0, neutro: 0 };
-    letras.forEach(l => {
-        if(!l) return;
-        let letra = l.normalize("NFD")[0].toUpperCase();
-        if (tabelaExpressao[letra]) cont[tabelaExpressao[letra]]++;
-    });
-    const maior = Math.max(cont.criativo, cont.indeciso, cont.neutro);
-    ["Criativo", "Indeciso", "Neutro"].forEach(id => {
-        let val = cont[id.toLowerCase()];
-        let larg = maior > 0 ? Math.max((val / maior) * 100, 12) : 0;
-        let elBar = document.getElementById("bar" + id + sufixo);
-        let elNum = document.getElementById("num" + id + sufixo);
-        if(elBar) elBar.style.width = larg + "%";
-        if(elNum) { elNum.innerText = val; elNum.style.display = "none"; }
-    });
-    let dominanteExpressao = Object.keys(cont).reduce((a, b) => cont[a] >= cont[b] ? a : b);
-    let campoTexto = document.getElementById("resumoExpressao" + sufixo);
-    if(campoTexto && typeof textosExpressao !== 'undefined') {
-        campoTexto.innerHTML = textosExpressao[dominanteExpressao] || "";
-        campoTexto.style.display = "block"; 
-    }
-}
-
-function gerarTextoPlano(tipo, dados) {
-    const nomesAmigaveis = { fisico: "Plano Físico", mental: "Plano Mental", emocional: "Plano Emocional", intuitivo: "Plano Intuitivo" };
-    let planosOrdenados = Object.keys(dados)
-        .map(chave => ({ chave, valor: Number(dados[chave].valorReal) || 0, nivel: dados[chave].nivel, num: dados[chave].numero }))
-        .sort((a, b) => b.valor - a.valor);
-
-    let textoFinal = (introducoes[tipo] || "") + "\n\n";
-    planosOrdenados.forEach((plano, index) => {
-        let posicao = index + 1;
-        let nomePlano = nomesAmigaveis[plano.chave];
-        textoFinal += `${posicao}ºIntensidade - ${nomePlano} \n`;
-        if (typeof explicacoesPosicao !== 'undefined') textoFinal += (explicacoesPosicao[posicao] || "") + "\n\n";
-        if (typeof textosPlanos !== 'undefined' && textosPlanos[plano.chave]) {
-            let txt = textosPlanos[plano.chave][plano.nivel][plano.num];
-            textoFinal += (txt || "") + "\n\n";
-        }
-        if (index < 3 && typeof conectores !== 'undefined') textoFinal += conectores[Math.floor(Math.random() * conectores.length)] + "\n\n";
-    });
-
-    const baseTextos = {
-        fisico: {
-            fraco: "Sua falta de praticidade e objetividade, associada a uma tendência em evitar ações repetitivas, pode fazer com que você complique as coisas mais do que realmente são, tornando difícil colocar planos em andamento.",
-            medio: "O bom senso é sua chave para o sucesso. Você tem a capacidade de cumprir atividades perfeitamente mesmo sem vontade, mantendo o foco sem ultrapassar seus limites.",
-            forte: "Suas atitudes são poderosas e seguras. Você foge de improvisos e foca na solução imediata, sendo alguém difícil de ser superado devido ao seu forte senso de valores."
-        },
-        mental: {
-            fraco: "Você pode ter dificuldade em resistir a opiniões alheias, tornando-se influenciável. Precisa de mais disciplina para que nada o desvie de seus próprios interesses.",
-            medio: "Você é cauteloso e lida bem com questões complexas, captando dinâmicas sociais sem exigir um esforço mental exaustivo ou desgastante.",
-            forte: "Você é extremamente analítico e racional. Analisa cada detalhe e é apegado aos seus valores, o que lhe dá capacidade para ser um líder excepcional."
-        },
-        emocional: {
-            fraco: "Você pode ter problemas em expressar sentimentos, o que gera incerteza interna. Os outros podem interpretá-lo como alguém frio ou desinteressado.",
-            medio: "Equilíbrio emocional pleno. Você se comunica de forma saudável, mantendo a harmonia sem dizer mais do que realmente sente.",
-            forte: "Suas emoções comandam suas decisões e o coração geralmente vence a razão. Isso alimenta uma criatividade incrível, mas exige cuidado com ilusões."
-        },
-        intuitivo: {
-            fraco: "O lado sensorial e espiritual não é sua prioridade. Isso dificulta entender o que acontece dentro de si e o torna mais influenciável pelo meio.",
-            medio: "Você é mais introspectivo e profundo ao lidar com o que está além da lógica, usando o recolhimento para recuperar sua energia mental.",
-            forte: "Seu sentido espiritual é vital. Você capta facilmente as intenções das pessoas e deixa que seus instintos mostrem a direção certa."
-        }
-    };
-
-    const p1 = planosOrdenados[0]; const p4 = planosOrdenados[3];
-    let conclusaoDinamica = "";
-    if (p1.nivel === "forte" && p4.nivel === "fraco") {
-        conclusaoDinamica = `Identificamos que você opera em um estado de Alta Polaridade. Enquanto seu ${nomesAmigaveis[p1.chave]} é uma ferramenta poderosa que você domina com segurança, seu ${nomesAmigaveis[p4.chave]} aparece como um ponto de vulnerabilidade onde você se torna influenciável. \n\n*Conselho: Use a força do seu ${nomesAmigaveis[p1.chave]} para proteger sua fragilidade no ${nomesAmigaveis[p4.chave]}.`;
-    } else if (p1.nivel === "medio" && p4.nivel === "medio") {
-        conclusaoDinamica = `Sua análise revela um raro "Equilíbrio Moderado". Você não peca pelo excesso nem pela falta. Sua jornada é guiada pelo bom senso em quase todos os planos, o que lhe confere uma estabilidade emocional e prática muito acima da média.`;
-    } else if (p1.nivel === "forte" && planosOrdenados[1].nivel === "forte") {
-        const p2 = planosOrdenados[1];
-        conclusaoDinamica = `Você vive um "Dinamismo de Alta Intensidade" entre o ${nomesAmigaveis[p1.chave]} e o ${nomesAmigaveis[p2.chave]}. Duas forças poderosas disputam sua atenção. Isso te dá muita capacidade de realização, mas cuidado para que essa "vontade de fazer tudo" não te gere uma confusão mental ou estresse físico.`;
-    }
-
-    let textoVeredito = `--- \n SÍNTESE DO PERFIL \n\n`;
-    textoVeredito += `Sua Força Principal (${nomesAmigaveis[p1.chave]} - ${p1.nivel.toUpperCase()}): \n${baseTextos[p1.chave][p1.nivel]} \n\n`;
-    textoVeredito += `Seu Desafio Atual (${nomesAmigaveis[p4.chave]} - ${p4.nivel.toUpperCase()}): \n${baseTextos[p4.chave][p4.nivel]} \n\n`;
-    textoVeredito += `A CONEXÃO FINAL: \n${conclusaoDinamica}`;
-    return textoFinal + "\n" + textoVeredito;
-}
-
-function planoNatural(nome) {
-    let soma = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
-    for(let l of nome.toUpperCase()) {
-        let p = descobrirPlano(l);
-        if(p) soma[p] += calcularValorComAcentos(l);
-    }
-    const maior = Math.max(soma.fisico, soma.mental, soma.emocional, soma.intuitivo);
-    const dados = {
-        fisico: { nivel: classificarIntensidade(soma.fisico, maior), numero: reduzirNumero(soma.fisico), valorReal: soma.fisico },
-        mental: { nivel: classificarIntensidade(soma.mental, maior), numero: reduzirNumero(soma.mental), valorReal: soma.mental },
-        emocional: { nivel: classificarIntensidade(soma.emocional, maior), numero: reduzirNumero(soma.emocional), valorReal: soma.emocional },
-        intuitivo: { nivel: classificarIntensidade(soma.intuitivo, maior), numero: reduzirNumero(soma.intuitivo), valorReal: soma.intuitivo }
-    };
-    resultadoPlanosNatural = dados; valoresBrutosNatural = soma;
-    document.getElementById("resumoNatural").innerText = gerarTextoPlano("natural", dados);
-    for(let p in soma) atualizarBarraNatural(p.charAt(0).toUpperCase() + p.slice(1) + "Nat", soma[p], maior, dados[p].numero);
-    atualizarTabela3(nome.split(""), "Nat");
-}
-
-function planoMomento(nomeCompleto, data) {
-    bancoMomentos = [];
-    const dt = new Date(data + 'T00:00:00');
-    const dia = String(dt.getDate()).padStart(2, '0');
-    const mes = String(dt.getMonth() + 1).padStart(2, '0');
-    const partes = nomeCompleto.toUpperCase().trim().split(/\s+/);
-    let timelines = partes.map(p => {
-        let t = [];
-        for(let l of p) { let v = calcularValorComAcentos(l); for(let i=0; i<v; i++) t.push(l); }
-        return t;
-    });
-    for (let i = 0; i <= 100; i++) {
-        let soma = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
-        let letras = timelines.map(t => t[i % t.length]);
-        letras.forEach(l => {
-            let p = descobrirPlano(l);
-            if(p) soma[p] += calcularValorComAcentos(l);
-        });
-        const anoI = dt.getFullYear() + i;
-        bancoMomentos.push({ ano: anoI, intervalo: `de ${dia}/${mes}/${anoI} até ${dia}/${mes}/${anoI + 1}`, letras: letras, ...soma });
-    }
-    const sel = document.getElementById("anoSelect");
-    sel.innerHTML = bancoMomentos.map(a => `<option value="${a.ano}">${a.ano}</option>`).join("");
-}
-
-function gerarStatusMomento() {
-    const ano = document.getElementById("anoSelect").value;
-    const d = bancoMomentos.find(a => a.ano == ano);
-    if (!d) return;
-    const maior = Math.max(d.fisico, d.mental, d.emocional, d.intuitivo);
-    const red = { fisico: reduzirNumero(d.fisico), mental: reduzirNumero(d.mental), emocional: reduzirNumero(d.emocional), intuitivo: reduzirNumero(d.intuitivo) };
-
-    for(let p in d) {
-        if(p !== "ano" && p !== "letras" && p !== "intervalo") {
-            atualizarBarraNatural(p.charAt(0).toUpperCase() + p.slice(1), d[p], maior, reduzirNumero(d[p]));
-        }
-    }
-    atualizarTabela3(d.letras, "Mom");
-
-    const dadosTxt = {
-        fisico: { nivel: classificarIntensidade(d.fisico, maior), numero: red.fisico, valorReal: d.fisico },
-        mental: { nivel: classificarIntensidade(d.mental, maior), numero: red.mental, valorReal: d.mental },
-        emocional: { nivel: classificarIntensidade(d.emocional, maior), numero: red.emocional, valorReal: d.emocional },
-        intuitivo: { nivel: classificarIntensidade(d.intuitivo, maior), numero: red.intuitivo, valorReal: d.intuitivo }
-    };
-    document.getElementById("resumoMomento").innerText = "No ano de " + ano + " (" + d.intervalo + "):\n\n" + gerarTextoPlano("momento", dadosTxt);
-
-    // IMPLEMENTAÇÃO DO TRÂNSITO (SOMA E REDUÇÃO)
-    const somaTransito = d.fisico + d.mental + d.emocional + d.intuitivo;
-    const numTransito = reduzirNumero(somaTransito);
-    let txtTransito = (typeof textosTrânsito !== 'undefined' && textosTrânsito[numTransito]) ? textosTrânsito[numTransito] : "A vibração deste ciclo é " + numTransito;
+  // Renderização na Tela
+  document.getElementById("resultado").innerHTML = `
+    ${card("Dia de Nascimento", "Talentos Naturais", diaN, textos.dia[diaN])}
+    ${card("Comportamento", "Número Psíquico", comportamento, textos.comportamento[comportamento])}
+    ${card("Motivação", "Seu Desejo Íntimo", motivacao, textos.motivacao[motivacao])}
+    ${card("Personalidade", "Sua Expressão", personalidade, textos.Personalidade[personalidade])}
+    ${card("Caminho de Vida", "Seu Destino", caminhoVida, textos.CaminhodeVida[caminhoVida])}
+    ${card("Ano Pessoal", "Sua energia em " + anoAtual, anoPessoal, textos.anoPessoal[anoPessoal])}
     
-    document.getElementById("resultadoTrânsito").innerHTML = `
-        <div style="display:flex; align-items:center; gap:10px; margin-bottom:10px;">
-            <span style="background:#ffd633; color:#000; padding:5px 12px; border-radius:50%; font-weight:bold; font-size:1.4rem;">${numTransito}</span>
-        </div>
-        <p>${txtTransito}</p>
-    `;
+    <div class="card" style="background: #fee2e2; border: 2px dashed #ef4444; text-align: center;">
+        <p><strong>Os Ciclos de Vida, Momentos Decisivos e Desafios estão disponíveis apenas no Relatório Premium abaixo.</strong></p>
+    </div>
+  `;
 }
 
-function atualizarBarraNatural(tipo, val, maior, red) {
-    let larg = maior > 0 ? Math.max((val/maior)*100, 12) : 0;
-    let elBar = document.getElementById("bar"+tipo);
-    if(elBar) elBar.style.width = larg + "%";
-    // Esconde o número na tela conforme solicitado
-    let elNum = document.getElementById("num"+tipo);
-    if(elNum) { elNum.innerText = red; elNum.style.display = "none"; }
+function validarPremium() {
+   if(!mapaGerado){ alert("⚠️ Gere o mapa primeiro."); return; }
+   window.open("https://hemricciinstintosuperior-rcci.github.io/estudo_numerologico/premiummapa.html","_blank");
 }
-
-function gerarTudo() {
-    const n = document.getElementById("nome").value;
-    const d = document.getElementById("dataNascimento").value;
-    if(!n || !d) return alert("Preencha nome e data.");
-    planoNatural(n); planoMomento(n, d); gerarStatusMomento();
-}
-
-function exportarRelatorio() {
-    if(!resultadoPlanosNatural) return alert("Gere o mapa primeiro.");
-    const anoSel = document.getElementById("anoSelect").value;
-    const dAno = bancoMomentos.find(a => a.ano == anoSel);
-    
-    const pacote = {
-        nome: document.getElementById("nome").value,
-        data: document.getElementById("dataNascimento").value,
-        anoMomento: anoSel,
-        fisico: valoresBrutosNatural.fisico, mental: valoresBrutosNatural.mental, emocional: valoresBrutosNatural.emocional, intuitivo: valoresBrutosNatural.intuitivo,
-        fisicoMomento: dAno.fisico, mentalMomento: dAno.mental, emocionalMomento: dAno.emocional, intuitivoMomento: dAno.intuitivo,
-        textoNatural: document.getElementById("resumoNatural").innerText,
-        textoMomento: document.getElementById("resumoMomento").innerText,
-        criativoNat: document.getElementById("numCriativoNat").innerText, indecisoNat: document.getElementById("numIndecisoNat").innerText, neutroNat: document.getElementById("numNeutroNat").innerText,
-        criativoMom: document.getElementById("numCriativoMom").innerText, indecisoMom: document.getElementById("numIndecisoMom").innerText, neutroMom: document.getElementById("numNeutroMom").innerText,
-        textoExpressaoNat: document.getElementById("resumoExpressaoNat").innerHTML,
-        textoExpressaoMom: document.getElementById("resumoExpressaoMom").innerHTML,
-        // Envia o Trânsito para o PDF
-        transitoHTML: document.getElementById("resultadoTrânsito").innerHTML
-    };
-    localStorage.setItem("relatorioMapa", JSON.stringify(pacote));
-    window.open("https://hemricciinstintosuperior-rcci.github.io/app-plano-de-expressao/premium.html", "_blank");
-}
-</script>
-
-<script>
-if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js"); }
-document.oncontextmenu=()=>false;
-document.onselectstart=()=>false; 
 </script>
 </body>
 </html>
