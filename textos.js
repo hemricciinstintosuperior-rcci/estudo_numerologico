@@ -1,6 +1,6 @@
 
 
-<script>
+
 const textos = {
 
   // ======================
@@ -2596,6 +2596,6 @@ Consequências: enfrentará desafios emocionais que estimularão crescimento esp
 
 }
 };
-</script>
+
 
   
