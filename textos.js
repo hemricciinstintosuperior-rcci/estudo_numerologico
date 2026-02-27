@@ -1,325 +1,170 @@
 
 const textos = {
 
-  // ======================
+// ======================
   // DIA DE NASCIMENTO (1–31)
+  // Adaptado com Placeholder [NOME] e Tags <p>
   // ======================
   dia: {
-1:`Desbravador - Dia 1
-
-É um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!
-
-É altamente independente e não gosta das restrições ou de ter que trabalhar com outras pessoas. Se frustra facilmente com a rotina, mas é muito criativo e geralmente rápido de raciocínio.
-
-Tem excelentes instintos principalmente para os negócios. Usa as informações para um propósito específico e normalmente em benefício próprio. A informação ou conhecimento são um instrumento prático que lhe permite obter suas realizações.
-
-Tem uma grande força de vontade e possui uma visão ampla com uma grande capacidade para motivar os outros, o que lhe proporciona muitas oportunidades e lhe permite ter um grande poder sobre as pessoas. Em geral está aberto a novas ideias e opiniões, mas pode ser extremamente teimoso.
-
-Pelo lado negativo, quando frustrado ou se algo não se desenvolve como esperado, tende a agir de maneira afoita e forçar uma solução. Independentemente disso, sua determinação, força de vontade e inventividade são as chaves para o seu sucesso e provavelmente lhe trarão muitas recompensas pessoais assim como o sucesso financeiro.`,
-
-    2:`Pacificador - Dia 2
-
-Está ciente do que acontece ao seu redor e é facilmente influenciado pelas pessoas e pelo ambiente!
-
-É muito sensível, instintivo e diplomático, mas sua sensibilidade lhe torna altamente emotivo e vulnerável às frustrações e decepções, podendo ser levado à falta de confiança e autoestima.
-
-Seus talentos estão na maneira como se relaciona com as pessoas e em sua flexibilidade. Consegue entender o que se passa na cabeça dos outros e geralmente pode se adaptar a fim de se manter em harmonia com elas, bem como ajudando outros a encontrarem uma área de concordância que satisfaça a todos. Sendo modesto, gentil; muito cooperativo e às vezes indeciso, se desenvolve melhor em parcerias do que sozinho. Ao invés de ser o centro das atenções, prefere estar nos bastidores e ser o "poder por trás do poder". É bom para dar continuidade às coisas, não para iniciá-las. Está sempre atento aos detalhes, o que lhe permite perceber o que outra pessoa quer antes mesmo de ela dizer, por outro lado precisa de ambientes harmoniosos e pacíficos para que possa desenvolver todo seu potencial.
-
-Do contrário pode ficar facilmente estressado e tenso, perdendo a concentração e o desempenho.`,
-
-    3:`Carismático - Dia 3
-
-É amigável e sociável, mas pode ser temperamental e sujeito a variações de humor instantâneas!
-
-É otimista, entusiasmado, muito imaginativo, esperto e possui uma enorme habilidade para se expressar. Outros o acham inspirador e fascinante. É um vendedor e um artista que pode se destacar em qualquer área que escolher, desde que não seja rotineira.
-
-Apesar de aparentar ser irresponsável para os que não o conhecem bem, possui muito carisma. Tem um ótimo senso de harmonia e humor, mas pode ser temperamental e sujeito a altos e baixos inesperados. Não aceita ser criticado e tende a se envolver em inúmeras atividades ao mesmo tempo.
-
-Porém quase sempre as deixará pela metade, estando sujeito a muitas frustrações.
-
-Para ser feliz, precisa apenas encontrar um meio de se exteriorizar e estar no meio de pessoas é essencial para sua realização. Mas deve ter cuidado para não gastar tempo e energia em coisas banais e imediatistas, tendo como prioridade as realizações de longo prazo.`,
-
-    4:`Disciplinado - Dia 4
-
-É altamente ético, possui princípios elevados. É disciplinado e responsável!
-
-É um trabalhador esforçado e uma pessoa digna. Detalhista, sistemático e preciso, cuida de tudo o que faz e leva suas obrigações muito a sério. Pode ser orgulhoso, mas não arrogante. É geralmente justo e tem compaixão pelas pessoas, preza as tradições, a família, e é um aliado fiel e confiável. No entanto, não sendo muito sentimental, dificilmente demonstra seu afeto e procura perseverar diante de um obstáculo e deficiências de sua personalidade. Seu foco é seguir uma rotina. É altamente racional e não gosta de soluções geniais ou qualquer coisa que lhe parece boa demais para ser verdade. Sua abordagem é tradicional, lenta e paciente, mas sólida e segura. É um organizador e administrador nato.
-
-As pessoas confiam em sua regularidade e segurança, tanto que é tido geralmente por todos como o porto seguro.
-
-Por outro lado, pode ser teimoso e inflexível. Sua natureza busca segurança, fazer o que pode e esperar.
-
-Isso pode impedi-lo de aproveitar soluções ou ideias criativas e fará com que frequentemente experimente muitos atrasos e frustrações.`,
-5:`Independente - Dia 5
-
-É altamente adaptável, curioso, se entedia facilmente e precisa aprender a ter disciplina e organização!
-
-Normalmente é divertido e alegre, muito ousado e de imaginação fértil, é um amante da liberdade que adora mudanças, novidades e aventuras. Tem uma curiosidade enorme e está sempre em busca de algo que lhe permita alcançar seus objetivos de forma mais fácil. Como um entusiasta da vida, vive intensamente cada minuto dela, gosta de pessoas e de conviver com elas, se ajustando muito bem em qualquer lugar e situação. Seu ambiente natural é o próprio mundo e, na sua visão, tudo é passageiro. É apenas uma questão de tempo até que embarque em outra "aventura".
-
-Trabalha bem com os outros, desde que não haja muitas restrições. Pode ser um pouco irresponsável, impaciente e impulsivo. Precisa aprender a ter disciplina e ordem para exceder seus limites e cometer abusos. Como tem uma mente rápida e analítica, pode ser muito confiante e obstinado.
-
-No entanto, é altamente criativo e normalmente pode encontrar uma solução notavelmente e totalmente viável para a maioria dos problemas.`,
-
-    6:`Zeloso - Dia 6
-
-É um zelador orientado para cuidar das pessoas e capaz de sacrificar seu próprio bem-estar para apoiá-las e ajudá-las!
-
-Sua atenção está voltada para os relacionamentos. Quer participar da vida das pessoas próximas e ajudá-las em suas dificuldades. Normalmente é muito sentimental, mas é equilibrado, é compreensivo, apegado à família, casa, amigos e filhos. Tem talento para resolver disputas entre as pessoas e propor um meio termo que satisfaça a todos, mas necessita de atenção, elogio e proteção. As críticas, por outro lado, lhe causam uma impressão muito prejudicial. Precisa saber que é apreciado e que seu esforço é reconhecido.
-
-Muito prático e econômico, em geral é idealista e despreocupado, mas o medo da pobreza pode torná-lo muito cauteloso quanto a gastar e lhe torna muito apegado ao patrimônio pessoal, cuidando muito bem de tudo. Por outro lado, é capaz de sacrificar seu próprio conforto para apoiar e ajudar outras pessoas, mas as frustrações, principalmente as amorosas, podem lhe ser muito prejudiciais. Entender corretamente suas habilidades lhe trará grandes recompensas na vida.`,
-
-    7:`Perfeccionista - Dia 7
-
-É exigente e difícil de se conhecer. Introspectivo, tranquilo e analítico, seu objetivo é sempre a perfeição!
-
-Procura ver sempre o que há de melhor nas coisas, por outro lado esse perfeccionismo o torna, em certo ponto, arredio a novidades e a novas amizades. Sua orientação é mais filosófica e deve se especializar em algo específico para fazer pleno uso de suas habilidades e de seus dons intelectuais naturais.
-
-Tende a ser analítico, racional e desconfiado em suas abordagens. As emoções são um terreno desconhecido e incerto, no qual não se pode confiar e, por este motivo, vê as pessoas como imprevisíveis e pouco confiáveis.
-
-Pode ser obstinado e teimoso. Tende a terminar tudo o que começa, mas prefere fazer tudo sozinho e definir seu próprio ritmo. Pode ser altamente crítico e egocêntrico, característica que, se não for combatida, causará muita infelicidade, especialmente nos relacionamentos e sendo muito sensível, se ressente profundamente, mas não compartilha seus sentimentos com facilidade. Gosta de ficar sozinho, mas deve ter cuidado para não se tornar muito retraído e solitário.`,
-8:`Original - Dia 8
-
-É altamente competitivo. Gosta de um desafio. As expectativas dos outros o estimulam, especialmente se duvidam de sua capacidade!
-
-Prático, justo e leal, com grande senso de justiça e competência, quando quer pode ser também muito generoso. Tem talento para os negócios e um bom senso de dinheiro. Sua abordagem da vida é original, criativa e ousada.
-
-Tem muito bom senso, mas precisa de liberdade para exercê-lo, do contrário pode se tornar amargo e tirânico. É eficiente e pode lidar com grandes questões, com um caráter forte, é realista, autoconfiante, prático, ambicioso e voltado para objetivos. Mas se desenvolve melhor sozinho, pois sendo altamente competitivo parcerias e associações limitam sua capacidade.
-
-Preza as pessoas e por isso elas confiam em seu julgamento, pois sabem que podem confiar em suas decisões. Por outro lado, precisa de status e poder, podendo ser dominador e autoritário. Tem pouca paciência com fraquezas, sejam suas ou de outras pessoas, e não expressa muitos de seus sentimentos. Sua atitude em relação às dificuldades da vida será a diferença entre o sucesso e o fracasso.`,
-
-9:`Universalista - Dia 9
-
-É liberal e idealista. Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!
-
-Pode desempenhar um papel muito importante na sociedade, mas isso exigirá uma combinação de praticidade e ideologia, pois sendo essencialmente impressionável, se compadece por todos e sendo generoso e protetor; deve tomar muito cuidado para que não se doe em excesso a pessoas e causas erradas. Sua orientação social e humanitária lhe permite se relacionar com pessoas de todos os tipos e esferas da vida, o que lhe dá o dom do encanto e o torna querido e até admirado pelos outros, mesmo que geralmente seja um pouco dramático.
-
-Você tem uma visão ampla das coisas, por outro lado, sua autoconfiança normalmente o faz protelar tudo, e é por este motivo que muitas vezes acaba enfrentando muitas dificuldades desnecessárias. Seu maior defeito são os apegos negativos com pessoas e situações apenas porque sente que estão sendo injustiçadas. Se for capaz de se desligar das dificuldades e interferências do ambiente para encontrar seu espaço e avaliar suas próprias necessidades, terá muitas realizações.`,
-
-    10:`Ambicioso - Dia 10
-
-É audacioso, progressista, prestativo e independente. Está sempre disposto a ajudar àqueles que lhe pedem auxílio!
-
-Possui habilidades de liderança e um forte impulso para o sucesso. É altamente ambicioso e anseia por independência. Consegue impulsionar quase tudo e com sua determinação encontra uma saída onde aparentemente não havia nenhuma. Para os outros, parece dotado de grande força e poder e assim, consegue a confiança de todos.
-
-É um bom planejador e organizador, mas pode ser teimoso e rígido quando se trata de ideias pelas quais se sente fortemente atraído. Mesmo assim, é um amigo leal e dedicado, porém é altamente competitivo e pode ser invejoso e ciumento quando se trata do sucesso de outras pessoas, especialmente as mais próximas. Seu maior desafio é ser capaz de viver de acordo com seus ideais, tendo a coragem e a resistência necessárias para superar os obstáculos e conquistar aquilo que realmente deseja.
-
-Pelo lado negativo, se frustra com atividades rotineiras e pode ficar entediado ou até mesmo deprimido se estiver muito apegado aos pequenos detalhes da vida.`,
-
-    11:`Idealista - Dia 11
-
-É um bom conselheiro e curador. Possui as qualidades de um visionário que aprecia e motiva as pessoas!
-
-É idealista e instintivo. Pode ser muito inspirador, mas sendo altamente sensível, emotivo e reativo, se magoa facilmente, principalmente com as críticas de outras pessoas. Tem muita determinação e possui as qualidades de um visionário. Geralmente é capaz de entusiasmar outras pessoas com suas ideias e convencê-las a seguirem suas intenções ou a adotar novos métodos de vida. Sua presença é marcante e, sendo um diplomata por excelência, delicado nos termos e nas ações, possui tato e discernimento necessário para qualquer problema ou ocasião.
-
-Tem grandes ideais e ambições. Não precisa de um motivo para fazer qualquer coisa, age por impulso, fazendo tudo com grande energia. Muito instintivo, toma decisões rápidas e age de acordo com a situação. Tudo o que faz é feito com muito vigor e determinação, porém é mais sonhador do que realizador. Seus interesses são inconstantes e tende a mudar de ideia no meio do caminho.
-
-Sua sensibilidade e inconstância podem tornar sua vida bastante turbulenta e difícil.`,
-
-    12:`Comunicador - Dia 12
-
-É altamente imaginativo e talentoso, especialmente nas habilidades verbais e de escrita. Mas pode ser temperamental e evasivo!
-
-Possui um grande talento artístico que se manifesta em praticamente tudo o que faz. Para este nativo, a vida é literalmente uma festa. Tem muito entusiasmo, fica facilmente satisfeito e pode tirar o melhor proveito das piores situações.
-
-É um idealista de personalidade cordial e amistosa, quase sempre de bom humor e dificilmente desiste dos seus ideais. Um comunicador nato que, com sua criatividade, expressão e argumentação, consegue convencer facilmente as pessoas, mas como gosta de ser popular, tende a assumir mais compromissos e responsabilidades do que pode dar conta e, dessa maneira, vive atarefado e cheio de trabalho e, sendo naturalmente impaciente, tende a se deixar dominar pelo nervosismo, sofrendo assim com crises de depressão, insatisfação e se entediando com facilidade. Para evitar esta tendência, deve se manter sempre interessado em algo construtivo. Como é íntegro em seus propósitos, justo e leal, pode chegar às alturas se não deixar que sua natureza emotiva atrapalhe.`,
-
-    13:`Prático - Dia 13
-
-É um organizador e gerente natural, focado nos detalhes. Dotado de considerável perseverança e determinação!
-
-Tem um grande apego à família, às tradições e à sua comunidade. Um prático que possui grande habilidade em transformar e mudar as coisas ou situações adversas, contanto que seja de seu interesse, sendo este o motivo pelo qual, muitas vezes, começa-las de má vontade. Independentemente disso, acaba geralmente sendo a base de qualquer atividade com a qual se comprometa, realizando sua parte com determinação e precisão. É meticuloso, autoritário, sistemático, prático e econômico. Um trabalhador incansável que está sempre lutando por seus objetivos e não poupa esforços para atingi-los. Todos reconhecem sua disciplina e confiam em suas habilidades, mas muitas vezes acaba sendo mal compreendido e considerado áspero ou ditatorial, por sua dificuldade em expressar seus sentimentos.
-
-Sua ousadia e dinamismo o leva a tomar atitude ao invés de ficar esperando, porém é muito influenciável pelo ambiente e pode vivenciar muitos conflitos em sua vida, tornando-se explosivo e temperamental diante das frustrações e incertezas da vida.`,
-
-
-  14:`Aventureiro - Dia 14
-
-É altamente adaptável, mas fica entediado facilmente e precisa do novo e do exótico para se sentir estimulado e vivo!
-
-Adora mudanças e emoção. É muito social e trabalha bem com os outros, desde que não haja muitas restrições. Como é muito inquieto e volúvel, se desinteressa das coisas tão rápido quanto as deseja.
-
-É um jogador natural que pode ser muito confiante e teimoso. Por trás de sua inquietação se esconde a insegurança e, apesar de sua aparente calma e frieza, existe muita turbulência emocional, que se reflete em sua vida como mudanças rápidas em seu temperamento e humor.
-
-Existem poucas coisas que não é capaz de fazer, mas apesar de sua versatilidade, sua natureza dúbia alterna entre a razão e a imaginação, tendo a capacidade de construir ou destruir, com a mesma facilidade conforme seu humor.
-
-Bondoso e emotivo por natureza, pode ser presa fácil dos inescrupulosos, principalmente quando querem seus favores, mas controlando sua impulsividade e sendo prudente, poderá ser muito bem-sucedido financeira e também socialmente.`,
-
-    15:`Sedutor - Dia 15
-
-É muito sensível, não suporta ser criticado e, por isso, tende a apoiar os outros a ponto de negar a si mesmo!
-
-Você é altamente criativo, cooperativo e simpático. Gosta de ajudar e de assumir responsabilidades, porém é um ser indomável; quando reprimido, tem problemas de controle e aceitação.
-
-Abusam de seu magnetismo ao extremo e todos acabam por lhe achando simpático, agradável, afetuoso e interessante.
-
-Normalmente é o alvo das atenções e, por isso, é muito invejado por todos. Com um grande calor humano, gosta de estar cercado por pessoas e não tem nenhuma dificuldade em conviver com elas. Se ajusta facilmente ao ambiente e supera quaisquer diferenças que possam existir.
-
-Quer o melhor em sua vida e se esforça por isso. Adora reuniões sociais, ama a vida, as pessoas e não se importa em gastar com qualquer coisa que lhe traga realização e, se não tiver controle, pode acabar sendo um esbanjador.
-
-Age como um imã, atraindo as coisas para si. O compromisso com os relacionamentos, especialmente afetivos, é uma questão fundamental para manter a harmonia em sua vida.`,
-
-    16:`Extremista - Dia 16
-
-Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para terminar o que começou!
-
-É analítico e cético; precisa ver para crer, conhecer a essência das coisas e pessoas. Apresenta traços fortes de perfeccionismo e sua capacidade em compreender as coisas lhe dá vantagem em desvendar situações com muita facilidade. Sensível, instintivo e inspirado, seu grande defeito é querer que todos vivam conforme seus moldes, e se assim não o for, torna-se mal-humorado, antipático, impulsivo e violento. Esse temperamento o faz viver isolado, quando na verdade deseja e necessita de afeto e compreensão. Apesar de tudo isso, não aceita que ninguém interfira na sua vida e em seus projetos, mesmo quando não vão bem.
-
-É muito analítico e, como possui uma grande capacidade de concentração, é capaz de se aprofundar em qualquer assunto ou questão. Sua mente é sua maior vantagem e seu pior inimigo. A grande armadilha é a escolha de se tornar indiferente, crítico, tornando-se inacessível, alienado e amargurado.
-
-Se afasta da realidade e desiste da possibilidade de ter uma vida adequada.`,
-
-    17:`Orgulhoso - Dia 17
-
-É muito ambicioso e independente. Seu desafio é evitar ficar obcecado com seu próprio julgamento e se tornar um ditador!
-
-Muito independente, tem um julgamento firme e equilibrado. Geralmente é bem-humorado e simpático até a seus opositores. Sua abordagem para tudo é original, criativa e ousada. É um excelente administrador e organizador, dotado da capacidade de ver o quadro geral e, surpreendentemente, entender como cada peça se encaixa no jogo antes mesmo de iniciar.
-
-Guiado por sua racionalidade, é autoconfiante e tem grandes expectativas de si mesmo, tendendo a ser orgulhoso e firme em seus ideais. Curiosamente, as expectativas dos outros o estimulam, mas se duvidam de sua competência, fere seu ego e poder a ponto de assumir todo o controle e responsabilidade para si, podendo facilmente assumir o papel de ditador, sentindo que é o único a ter o julgamento adequado para conduzir a situação, e assim tende a agir de forma dramática, principalmente quando o assunto é dinheiro. Nesse caso, torna-se possessivo, sua ambição aumenta, seu orgulho se torna incontrolável e não descansará até que prove seu poder.`,
-
-    18:`Contestador - Dia 18
-
-É capaz de organizar e inspirar outras pessoas; sua satisfação mais profunda é realizar algo que beneficie outras pessoas!
-
-É um líder natural e um gestor eficiente e pode ser extremamente talentoso nas áreas política, comunitária e social, pois além de ser muito criativo, possui um excelente entendimento das pessoas.
-
-Dinâmico e ativo, deseja o poder e precisa de desafios constantes. Tem a mente aberta e um fascínio pelo mundo intelectual. Em geral, é através do intelecto que melhor consegue se expressar. Apresenta um lado emocional e sensível, mas ainda assim sempre será um contestador, pois sendo muito crítico, é difícil de ser agradado e está sempre inclinado para a controvérsia.
-
-Usa de sua personalidade e poder marcantes para ajudar seus semelhantes, dar bons conselhos e resolver os problemas alheios. Precisará de experiência, exposição, conviver com diferentes tipos de pessoas e situações até encontrar a área única em que se realizará. No fundo, é um idealista que tem um grande sonho para a humanidade e deseja melhorar as condições das pessoas. Esteja onde estiverem; é aqui que reside a sua satisfação mais profunda: realizar algo que beneficie outras pessoas.`,
-
-
-  19:`Individualista - Dia 19
-
-É muito determinado e independente, é altamente idealista, mas se seus ideais falharem, pode se tornar amargo e negativo!
-
-Anseia por independência e tende a lutar bravamente para alcançar o grau de autossuficiência que deseja, o que pode levar a enfrentar uma frustração considerável nessa busca. Seu desafio é alcançar uma visão mais ampla sobre si mesmo e sobre os outros, pois, como tende a estabelecer uma identidade individualista, deve primeiro aprender a superar as influências causadas pelo meio e superar sua inclinação a se agarrar às coisas e ideias pelo simples fato de serem suas. A necessidade de ser alguém pode torná-lo dramático e tentar ser sempre o centro das atenções.
-
-É altamente ambicioso, com um forte desejo de sucesso e poder, e embora seja autoconfiante, precisa ser encorajado e pode ser muito teimoso a ponto de afastar as pessoas. Sendo radical nas suas atitudes, está sujeito a variações de humor que vão de "8 a 80" em segundos.
-
-Muito emotivo, vive sempre à beira do abismo, mas tem inúmeras habilidades e consegue sempre enfrentar as dificuldades. As pessoas são atraídas pelo seu profundo compromisso com o trabalho e pela firmeza com que o faz.`,
-
-    20:`Consciente - Dia 20
-
-Tem a capacidade de persuadir os outros sob o seu ponto de vista, usando meios gentis. É brilhante em fazer os outros pensarem que são brilhantes!
-
-É altamente sensível e consciente a ponto de entender os sentimentos dos outros, mesmo quando eles tentam esconder. Consequentemente, é facilmente influenciado pelo seu ambiente e, sendo altamente emotivo, está mais sujeito às mudanças que acontecem ao seu redor, o que cria uma grande necessidade de desenvolver e manter seu próprio centro. Dá carinho e atenção, mas precisa ser retribuído.
-
-Seu talento está em sua perspicácia e disposição para agir como um conselheiro, já que sendo um estrategista, nada escapa à sua atenção. É estrategicamente modesto, diplomático e educado e, por isso, tem a grande capacidade de persuadir os outros, mas as decepções e contrariedades podem lhe causar graves prejuízos. Sabe dar e receber tanto afeição como simpatia e tem fortes sentimentos por aqueles que preza. Deve evitar ser dominado pelas emoções, pois, do contrário, será visto como volúvel.
-
-Cultivando a autoconfiança, seu dom natural de simpatia e a paciência para entender o quão necessário é para todos.`,
-
-    21:`Disperso - Dia 21
-
-Apesar de ser idealista e liberal, necessita da companhia de outras pessoas, pois disso depende o seu sucesso e bem-estar!
-
-É altamente criativo, com uma forte vontade de ter sucesso. É muito sociável e se dá bem com todos, já que geralmente gosta muito das pessoas. Por outro lado, não é muito discreto nem bom em guardar segredos. Revela em tudo que faz, desde sua rotina até seus projetos mais valiosos. Inspirador e sempre entusiasmado, irradia vida e anima qualquer ambiente onde esteja. É um excelente vendedor e divulgador, mas como é muito disperso, seu desafio é ser capaz de concentrar sua energia em algo específico. Deve desenvolver sua personalidade e seus talentos para aproveitar ao máximo a vida.
-
-Do contrário, pode ficar nervoso e inconformado. Sua imaginação fica fora de controle e acaba desperdiçando seus talentos em futilidades.
-
-Sendo muito emotivo, oscila entre os extremos; assim está sujeito constantemente à depressão, e essa inconstância poderá colocar vários obstáculos em seu caminho, mas, no final, terá sucesso, pois sendo muito positivo, tem absoluta certeza de que, independentemente dos obstáculos, tudo acabará de forma favorável.`,
-
-    22:`Sonhador - Dia 22
-
-Tem o dom de ver os detalhes de como tudo deve se desenvolver. Ordeiro e paciente, pode abordar tudo de maneira metódica e sistemática!
-
-É um organizador com visão e a capacidade de concretizar, mas, contraditoriamente, pode ter um medo profundo de suas ambições. É detalhista, mas pouco prático. Tende a encontrar soluções únicas, mas segue seu próprio ponto de vista e pode sentir que nada se compara à sua ideia original, duvidando de si mesmo e de sua capacidade, tendendo a esconder ou acabar abandonando as coisas pela metade por medo do fracasso, o que pode resultar em muitas decepções e frustrações. Seu desafio é estar disposto a iniciar as coisas e tomar medidas práticas para que elas cheguem até o final.
-
-É um sonhador! Suas ideias o fazem querer explorar vastos horizontes e tende a basear seus ideais em métodos realistas. Precisará de disciplina e firmeza de decisão para manter os olhos nos seus ideais e os pés no chão, pois, sendo um sonhador, seu pensamento está sempre no futuro e não tem grandes ambições. Tem grande potencial de sucesso, mas o perfeccionismo e visão futurista acabam por impedi-lo de aproveitar as alegrias do dia a dia.`,
-
-    
-    23:`Versátil - Dia 23
-
-A vida é uma aventura a ser vivida ao máximo, adora mudança e emoção, e precisa dos dois para se sentir verdadeiramente vivo!
-
-É extremamente adaptável, tem um jeito fácil de se relacionar e geralmente se dá bem com a maioria das pessoas que encontra. Tem o dom de se comunicar e se promover e, em geral, possui tanto habilidade verbal como escrita, mas, apesar de ser muito afetuoso e sensível, trabalha bem com os outros, desde que não lhe imponham muitas regras e restrições. É versátil e talentoso; há poucas coisas que não consiga fazer, mas não é muito persistente, já que fica inquieto e entediado facilmente.
-
-É muito criativo e espirituoso, mas propenso a se esquivar da responsabilidade e se deixar levar pelos prazeres da vida. Deve trabalhar muito o seu lado compreensivo para conseguir viver de forma estável. Disciplina e ordem são necessidades para seu sucesso na vida. No fundo, é um idealista, sensível e emotivo, que faz uso de seus sentimentos para expressar tudo de forma extremamente dramática.
-
-Sua instabilidade de humor e materialismo fazem com que, muitas vezes, enfrente mais turbulências e dificuldade em sua vida do que o necessário.`,
-
-
-    24:`Prestativo - Dia 24
-
-É enérgico, responsável e prestativo, mas sua natureza solidária pode fazer com que enfrente muitas dificuldades!
-
-É dedicado às pessoas mais próximas e possui o dom de restaurar e manter o equilíbrio entre elas.
-
-Sendo emotivo e sensível, gosta de demonstrar seu afeto, muitas vezes de forma comovente e até melodramática. Tende a aumentar seus problemas, especialmente quando envolvem algum tipo de crítica pessoal, mas está disposto a sacrificar qualquer coisa para manter a harmonia em seus relacionamentos importantes e acaba sendo vulnerável a aproveitadores.
-
-Por sua natureza dramática, não é muito prático e pode complicar as coisas um pouco mais do que o necessário, precisando que outras pessoas lhe orientem. Apesar disso, acaba se saindo bem na maioria de suas empreitadas por ser sistemático, cuidadoso e paciente na abordagem das questões. Paciente e persistente, não descansa até conseguir o que deseja. É um bom amigo e companheiro fiel.
-
-Seus defeitos, porém, são proporcionais às suas virtudes, ficando ansioso e preocupado com a possibilidade de não realizar o que lhe parece ser o certo.`,
-
-    
-    25:`Inconformado - Dia 25
-
-O sucesso é indispensável para sua autoestima. Estabelece para si padrões de perfeição, ficando deprimido se não consegue alcançá-los!
-
-É racional, lógico e intelectual em suas abordagens, que quer saber tudo nos mínimos detalhes. Quer conhecer tudo profundamente e dificilmente toma qualquer decisão baseada apenas nas aparências.
-
-Defende ferozmente as suas fortes convicções, desde que seja inspirado por elas. Ambicioso, não só pelo lado material, luta para satisfazer seu desejo da moralidade e, sendo perfeccionista, muitas vezes ao extremo, acaba exigindo demais dos outros, porém é um diplomata que age rapidamente e de forma enérgica apenas se necessário.
-
-O perfeccionismo geralmente o leva a trabalhar duro e ser muito produtivo, porém pode perder o controle, se tornar impaciente e muito crítico se as coisas não saem conforme havia planejado. Associando isso ao hábito de não expressar seus pensamentos e sentimentos, faz com que seja geralmente mal compreendido. Seu desafio é ser racional sem negligenciar suas emoções e sentimentos, a ponto de não ofuscar suas qualidades humanas fundamentais de compreensão, compaixão e afeição.`,
-
-    
-    26:`Controlador - Dia 26
-
-Pode ser muito diplomático e convincente. Prefere ser persuasivo em vez de impositivo!
-
-É realista, autoconfiante, prático e muito ambicioso. Possui muito bom senso, mas quer estar no comando de tudo o que está fazendo, pois, tendo uma personalidade forte, pode ser dominador e autoritário. Pouco paciente com fraquezas e limitações das pessoas. Tem o dom de ver o potencial das coisas, mas pode negligenciar os detalhes e, mesmo sabendo muito bem o que quer, às vezes se enche de entusiasmo para começar qualquer coisa, e acaba depois descobrindo que não será tão fácil terminar.
-
-De qualquer forma, é eficiente e capaz de lidar com grandes projetos, pois, sendo perseverante e moderado, jamais desiste de seus objetivos e ideais. Aparenta ser frio e calculista, quando na realidade é alguém extraordinário, sempre pronto a ajudar qualquer um que necessite de sua ajuda. Deve aprender a avaliar suas relações para evitar se dedicar muito aos outros e pensar pouco em si mesmo, sem se tornar egoísta. Seu desafio é manter um equilíbrio entre seus objetivos materiais e suas qualidades humanas, pois, como deposita grandes expectativas em si mesmo, pode se tornar insensível e indiferente para com os outros.`,
-27:`Político - Dia 27
-
-É idealista, sensível e analítico. Sua mente fértil e criativa impressiona facilmente as pessoas através de suas ideias inusitadas!
-
-É idealista e instintivo. Foi feito para guiar, é um político nato, com um equilíbrio excepcionalmente bom entre instinto e razão, é alguém com visão e compreensão incomuns, muitas vezes original e fora do normal. Entende bem as pessoas e é bastante criativo. Com uma mente fértil e criativa, impressiona facilmente as outras pessoas por seus pensamentos inusitados, mas pode aparentar ser dissimulado e desconectado, quando na verdade se utiliza deste artifício para esconder seus conflitos internos e assim acaba agindo por impulsividade, tornando-se muitas vezes indeciso e desconfiado com relação a mudanças.
-
-É muito pacífico e jamais procura problemas, o que não deve ser confundido com covardia.
-
-Pelo contrário, se for injustiçado, pode se tornar agressivo e violento. Com uma personalidade audaciosa e liberal, mas combativa e independente, não aceita dar satisfação dos seus atos. Sabe se expressar bem, embora às vezes um pouco dramaticamente. Em condições normais, tem uma aparência calma e até aristocrática.`,
-
-    
-    28:`Obstinado - Dia 28
-
-É genioso, controverso e aberto a novas ideias dentro dos limites do convencional. Nasceu com o dom do querer e vive se queixando de tudo!
-
-Possui o dom de liderança através da persuasão e gentileza, ao invés de demonstrações abertas de poder, e se desenvolve melhor através do esforço cooperativo. Extremamente ambicioso, idealista, independente, analítico e extremamente racional, é um excelente planejador, possui muita autoconfiança, mas precisa de muito incentivo, pois, após iniciar algo, prefere deixar que outras pessoas deem continuidade e o mantenham. É ótimo dar início, mas pouco interessado em manter as coisas funcionando, e isso faz com que perca muitas oportunidades que lhe seriam mais gratificantes e satisfatórias.
-
-É muito ambicioso e pode ir até às últimas consequências para conseguir o que quer e ter sucesso, mas geralmente acaba se desviando de seus propósitos no meio do caminho. Sendo controverso, gosta de estar na fronteira de tudo o que está fazendo, é um ímã para atrair problemas, mas, com sua determinação, estará sempre pronto para o combate e disposto a aceitar novos desafios.`,
-
-
-  29:`Instintivo - Dia 29
-
-Vivencia muitas oscilações emocionais. Por sua tendência à melancolia e vulnerabilidade, tende a ver tudo de forma exagerada!
-
-É altamente instintivo e criativo. Sua mente pensa em "imagens" e, apesar de sua inteligência e percepção, não é muito lógico ou racional, e sua vida é mais conduzida pela inspiração do que pela razão propriamente dita. Este talvez seja o motivo pelo qual acaba sempre começando tudo tardiamente e também enfrentando muitas frustrações pela sua aparente falta de progresso e por estar sobrecarregado com muitos afazeres. No fundo, é um visionário extremamente sensível e facilmente influenciável pelas pessoas e pelo ambiente. Não há meio termo: ou é muito bom no que faz, ou é muito ruim, e sendo muito emotivo, normalmente se magoa com muita facilidade, alternando entre extremos de felicidade e tristeza, o que lhe torna uma pessoa difícil de entender e conviver.
-
-Detém uma grande capacidade de raciocínio, mas normalmente age e julga com os sentimentos. A menos que desenvolva seus próprios critérios de julgamento e aprenda a formar sua própria opinião, será um escravo da opinião de outras pessoas.`,
-
-    
-    30:`Teimoso - Dia 30
-
-É teimoso! Tem sua própria opinião e estará sempre convencido de que seu modo de fazer as coisas é o único certo!
-
-Tem um grande talento criativo, é altamente imaginativo, esperto, mas tende a falar mais do que o necessário devido a seu grande entusiasmo por tudo e por todos. Independentemente disso, é amigável, sociável e afetuoso; os outros lhe acham inspirador e carismático, apesar de às vezes se tornar cansativo.
-
-Nasceu dotado de especial imaginação, e é fácil perceber ser inútil qualquer tipo de discussão, já que suas ideias são enraizadas e jamais estará disposto a mudá-las, da mesma forma que não aceita receber ordens.
-
-É um vendedor de ideias e sonhos com personalidade forte que odeia ser criticado, pois muito teimoso não abre mão de seus princípios e ideais, tendendo à autoanulação, à autodesvalorização e podendo ser submisso ao extremo. Precisa constantemente se conscientizar de seu grande valor e de sua habilidade em superar dificuldades. Deve se impor a si próprio para depois conquistar o respeito e a admiração das pessoas.`,
-
-    
-    31:`Tradicionalista - Dia 31
-
-Pode ser teimoso e rígido, se recusando a permitir que ideias novas e criativas tenham lugar em seu apego rígido aos padrões pré-estabelecidos!
-
-Adora tudo que é comprovado e testado na prática. No entanto, possui uma quantidade considerável de talento inventivo que o leva a buscar soluções práticas, pois necessita de segurança econômica, dando mais valor às suas realizações do que a si mesmo.
-
-Com muita boa-fé, confia em todos e acaba enfrentando muitos obstáculos, acreditando que todos são honestos, retos e competentes, podendo enfrentar constantes problemas financeiros e profissionais, mas jamais esquece um favor ou uma ofensa.
-
-Muito sociável, é um excelente anfitrião e se compadece com os problemas alheios. Sua capacidade de irradiar calor humano atrai as pessoas, seja no trato individual ou público.
-
-É um organizador e gestor natural, com olho para os detalhes. Pode trabalhar duro, por muito tempo e com consciência. Enquanto estiver cuidando bem de si mesmo, terá uma concentração e força de vontade inabaláveis.`,   
-
+    1:`<p><strong>Desbravador - Dia 1</strong></p>
+<p>[NOME] é um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!</p>
+<p>É altamente independente e não gosta das restrições ou de ter que trabalhar com outras pessoas. [NOME] se frustra facilmente com a rotina, mas é muito criativo e geralmente rápido de raciocínio.</p>
+<p>Tem excelentes instintos principalmente para os negócios. [NOME] usa as informações para um propósito específico e normalmente em benefício próprio. A informação ou conhecimento são, para [NOME], um instrumento prático que permite obter suas realizações.</p>
+<p>Tem uma grande força de vontade e possui uma visão ampla com uma grande capacidade para motivar os outros, o que proporciona a [NOME] muitas oportunidades e lhe permite ter um grande poder sobre as pessoas. Em geral, [NOME] está aberto a novas ideias e opiniões, mas pode ser uma pessoa extremamente teimosa.</p>
+<p>Pelo lado negativo, quando [NOME] se sente frustrado ou vê que algo não se desenvolve como esperado, tende a agir de maneira afoita e forçar uma solução. Independentemente disso, sua determinação, força de vontade e inventividade são as chaves para o sucesso de [NOME] e provavelmente trarão muitas recompensas pessoais, assim como o sucesso financeiro.</p>`,
+
+    2:`<p><strong>Pacificador - Dia 2</strong></p>
+<p>[NOME] está ciente do que acontece ao seu redor e é facilmente influenciado pelas pessoas e pelo ambiente!</p>
+<p>É uma pessoa muito sensível, instintiva e diplomática, mas sua sensibilidade torna [NOME] altamente emotivo e vulnerável às frustrações e decepções, podendo levar à falta de confiança e autoestima.</p>
+<p>Os talentos de [NOME] estão na maneira como se relaciona com as pessoas e em sua flexibilidade. Consegue entender o que se passa na cabeça dos outros e geralmente pode se adaptar a fim de se manter em harmonia com elas, bem como ajudando outros a encontrarem uma área de concordância que satisfaça a todos. Sendo uma pessoa modesta e gentil, muito cooperativa e às vezes indecisa, [NOME] se desenvolve melhor em parcerias do que sozinho. Ao invés de ser o centro das atenções, [NOME] prefere estar nos bastidores e ser o "poder por trás do poder".</p>
+<p>[NOME] é bom para dar continuidade às coisas, não para iniciá-las. Está sempre atento aos detalhes, o que permite perceber o que outra pessoa quer antes mesmo de ela dizer; por outro lado, [NOME] precisa de ambientes harmoniosos e pacíficos para que possa desenvolver todo seu potencial. Do contrário, pode ficar facilmente estressado e tenso, perdendo a concentração e o desempenho.</p>`,
+
+    3:`<p><strong>Carismático - Dia 3</strong></p>
+<p>[NOME] é amigável e sociável, mas pode ser temperamental e sujeito a variações de humor instantâneas!</p>
+<p>É uma pessoa otimista, entusiasmada, muito imaginativa, esperta e que possui uma enorme habilidade para se expressar. Outros acham [NOME] inspirador e fascinante. [NOME] é um vendedor e um artista que pode se destacar em qualquer área que escolher, desde que não seja rotineira.</p>
+<p>Apesar de aparentar ser irresponsável para os que não conhecem [NOME] bem, possui muito carisma. Tem um ótimo senso de harmonia e humor, mas pode ser temperamental e sujeito a altos e baixos inesperados. [NOME] não aceita ser criticado e tende a se envolver em inúmeras atividades ao mesmo tempo. Porém, quase sempre as deixará pela metade, estando sujeito a muitas frustrações.</p>
+<p>Para ser feliz, [NOME] precisa apenas encontrar um meio de se exteriorizar; estar no meio de pessoas é essencial para sua realização. Mas [NOME] deve ter cuidado para não gastar tempo e energia em coisas banais e imediatistas, tendo como prioridade as realizações de longo prazo.</p>`,
+
+    4:`<p><strong>Disciplinado - Dia 4</strong></p>
+<p>[NOME] é altamente ético e possui princípios elevados. É uma pessoa disciplinada e responsável!</p>
+<p>É um trabalhador esforçado e uma pessoa digna. Sendo detalhista, sistemático e preciso, [NOME] cuida de tudo o que faz e leva suas obrigações muito a sério. Pode ser orgulhoso, mas não arrogante. [NOME] é geralmente justo e tem compaixão pelas pessoas; preza as tradições, a família, e é um aliado fiel e confiável. No entanto, não sendo muito sentimental, [NOME] dificilmente demonstra seu afeto e procura perseverar diante de obstáculos e deficiências de sua personalidade.</p>
+<p>O foco de [NOME] é seguir uma rotina. É alguém altamente racional e que não gosta de soluções geniais ou qualquer coisa que lhe pareça boa demais para ser verdade. A abordagem de [NOME] é tradicional, lenta e paciente, mas sólida e segura. [NOME] é um organizar e administrador nato. As pessoas confiam em sua regularidade e segurança, tanto que [NOME] é tido geralmente por todos como um porto seguro. Por outro lado, pode ser teimoso e inflexível. Sua natureza busca segurança, fazer o que pode e esperar, o que pode impedir [NOME] de aproveitar soluções ou ideias criativas.</p>`,
+
+    5:`<p><strong>Independente - Dia 5</strong></p>
+<p>[NOME] é altamente adaptável, curioso, se entedia facilmente e precisa aprender a ter disciplina e organização!</p>
+<p>Normalmente [NOME] é divertido e alegre, muito ousado e de imaginação fértil; é um amante da liberdade que adora mudanças, novidades e aventuras. Tem uma curiosidade enorme e está sempre em busca de algo que lhe permita alcançar seus objetivos de forma mais fácil. Como um entusiasta da vida, [NOME] vive intensamente cada minuto dela, gosta de pessoas e de conviver com elas, se ajustando muito bem em qualquer lugar e situação.</p>
+<p>O ambiente natural de [NOME] é o próprio mundo e, na sua visão, tudo é passageiro. É apenas uma questão de tempo até que [NOME] embarque em outra "aventura". Trabalha bem com os outros, desde que não haja muitas restrições. [NOME] pode ser um pouco irresponsável, impaciente e impulsivo, precisando aprender a ter disciplina e ordem para não exceder seus limites. Como tem uma mente rápida e analítica, pode ser muito confiante e obstinado, mas [NOME] é altamente criativo e pode encontrar soluções viáveis para a maioria dos problemas.</p>`,
+
+    6:`<p><strong>Zeloso - Dia 6</strong></p>
+<p>[NOME] é um zelador orientado para cuidar das pessoas e capaz de sacrificar seu próprio bem-estar para apoiá-las e ajudá-las!</p>
+<p>A atenção de [NOME] está voltada para os relacionamentos. Quer participar da vida das pessoas próximas e ajudá-las em suas dificuldades. Normalmente [NOME] é muito sentimental, mas equilibrado, compreensivo e apegado à família, casa, amigos e filhos. Tem talento para resolver disputas entre as pessoas e propor um meio termo que satisfaça a todos, mas [NOME] necessita de atenção, elogio e proteção.</p>
+<p>As críticas, por outro lado, causam em [NOME] uma impressão muito prejudicial. Precisa saber que é uma pessoa apreciada e que seu esforço é reconhecido. Sendo muito prático e econômico, [NOME] em geral é idealista, mas o medo da pobreza pode torná-lo muito cauteloso quanto a gastar, tornando-o muito apegado ao patrimônio pessoal. [NOME] é capaz de sacrificar seu próprio conforto para apoiar outros, mas as frustrações, principalmente as amorosas, podem ser muito prejudiciais.</p>`,
+
+    7:`<p><strong>Perfeccionista - Dia 7</strong></p>
+<p>[NOME] é exigente e difícil de se conhecer. Sendo introspectivo, tranquilo e analítico, o objetivo de [NOME] é sempre a perfeição!</p>
+<p>Procura ver sempre o que há de melhor nas coisas, por outro lado esse perfeccionismo torna [NOME], em certo ponto, arredio a novidades e a novas amizades. A orientação de [NOME] é mais filosófica e deve se especializar em algo específico para fazer pleno uso de suas habilidades e dons intelectuais.</p>
+<p>[NOME] tende a ser analítico, racional e desconfiado em suas abordagens. Para [NOME], as emoções são um terreno desconhecido no qual não se pode confiar, vendo as pessoas como imprevisíveis. Pode ser uma pessoa obstinada e teimosa. [NOME] tende a terminar tudo o que começa, mas prefere fazer tudo sozinho e definir seu próprio ritmo. Pode ser altamente crítico e egocêntrico, características que podem causar infelicidade a [NOME], especialmente nos relacionamentos. Sendo muito sensível, [NOME] se ressente profundamente, mas não compartilha seus sentimentos com facilidade.</p>`,
+
+    8:`<p><strong>Original - Dia 8</strong></p>
+<p>[NOME] é altamente competitivo e gosta de um desafio. As expectativas dos outros o estimulam, especialmente se duvidam de sua capacidade!</p>
+<p>Prático, justo e leal, com grande senso de justiça e competência, [NOME] também pode ser muito generoso. Tem talento para os negócios e um bom senso de dinheiro. A abordagem da vida de [NOME] é original, criativa e ousada.</p>
+<p>[NOME] tem muito bom senso, mas precisa de liberdade para exercê-lo, do contrário pode se tornar uma pessoa amarga e tirânica. É eficiente e pode lidar com grandes questões; com um caráter forte, [NOME] é realista, autoconfiante e voltado para objetivos. Mas se desenvolve melhor sozinho, pois parcerias limitam sua capacidade competitiva.</p>
+<p>As pessoas confiam no julgamento de [NOME], pois sabem que podem confiar em suas decisões. Por outro lado, [NOME] precisa de status e poder, podendo ser dominador. Tem pouca paciência com fraquezas, sejam suas ou de outras pessoas. A atitude de [NOME] em relação às dificuldades será a diferença entre o sucesso e o fracasso.</p>`,
+
+    9:`<p><strong>Universalista - Dia 9</strong></p>
+<p>[NOME] é liberal e idealista. O desafio de [NOME] é encontrar seu lugar no mundo e para onde direcionar seus esforços!</p>
+<p>Pode desempenhar um papel muito importante na sociedade, mas isso exigirá de [NOME] uma combinação de praticidade e ideologia. Sendo essencialmente impressionável, [NOME] se compadece por todos e, sendo generoso, deve tomar cuidado para não se doar em excesso a causas erradas. A orientação social permite que [NOME] se relacione com todos os tipos de pessoas, o que lhe dá o dom do encanto e o torna querido, mesmo que às vezes seja um pouco dramático.</p>
+<p>[NOME] tem uma visão ampla das coisas, por outro lado, sua autoconfiança normalmente o faz protelar tudo. O maior defeito de [NOME] são os apegos negativos com situações apenas porque sente que estão sendo injustiçadas. Se [NOME] for capaz de se desligar das interferências do ambiente para encontrar seu espaço, terá muitas realizações.</p>`,
+
+    10:`<p><strong>Ambicioso - Dia 10</strong></p>
+<p>[NOME] é audacioso, progressista, prestativo e independente. Está sempre disposto a ajudar àqueles que lhe pedem auxílio!</p>
+<p>Possui habilidades de liderança e um forte impulso para o sucesso. [NOME] é altamente ambicioso e anseia por independência. Consegue impulsionar quase tudo e, com sua determinação, encontra uma saída onde aparentemente não havia nenhuma. Para os outros, [NOME] parece dotado de grande força e poder, conseguindo assim a confiança de todos.</p>
+<p>É um bom planejador e organizador, mas [NOME] pode ser teimoso e rígido quando se trata de ideias pelas quais se sente atraído. Mesmo assim, é um amigo leal, porém altamente competitivo e pode sentir inveja quando se trata do sucesso alheio. O maior desafio de [NOME] é ser capaz de viver de acordo com seus ideais, tendo a coragem necessária para superar os obstáculos. [NOME] se frustra com rotinas e pode ficar entediado se estiver muito apegado aos pequenos detalhes.</p>`,
+
+    11:`<p><strong>Idealista - Dia 11</strong></p>
+<p>[NOME] é um bom conselheiro e curador. Possui as qualidades de um visionário que aprecia e motiva as pessoas!</p>
+<p>É uma pessoa idealista e instintiva. [NOME] pode ser muito inspirador, mas sendo altamente sensível e reativo, se magoa facilmente com críticas. Tem muita determinação e é capaz de entusiasmar outras pessoas com suas ideias. A presença de [NOME] é marcante; sendo um diplomata por excelência, possui o tato necessário para qualquer problema.</p>
+<p>[NOME] tem grandes ideais e ambições. Não precisa de um motivo para agir, faz tudo por impulso e com grande energia. Muito instintivo, [NOME] toma decisões rápidas, porém é mais sonhador do que realizador. Seus interesses são inconstantes e tende a mudar de ideia no meio do caminho. Essa sensibilidade e inconstância podem tornar a vida de [NOME] bastante turbulenta.</p>`,
+
+    12:`<p><strong>Comunicador - Dia 12</strong></p>
+<p>[NOME] é altamente imaginativo e talentoso, especialmente nas habilidades verbais e de escrita. Mas pode ser temperamental e evasivo!</p>
+<p>Possui um grande talento artístico que se manifesta em praticamente tudo o que faz. Para [NOME], a vida é literalmente uma festa. Tem muito entusiasmo, fica satisfeito com facilidade e tira o melhor proveito das situações.</p>
+<p>É um idealista de personalidade cordial, quase sempre de bom humor. Como um comunicador nato, [NOME] consegue convencer facilmente as pessoas, mas como gosta de ser popular, tende a assumir mais compromissos do que pode dar conta. Dessa maneira, [NOME] vive atarefado e, sendo naturalmente impaciente, pode se deixar dominar pelo nervosismo. Como é íntegro em seus propósitos e leal, [NOME] pode chegar às alturas se não deixar que sua natureza emotiva atrapalhe.</p>`,
+
+    13:`<p><strong>Prático - Dia 13</strong></p>
+<p>[NOME] é um organizador e gerente natural, focado nos detalhes. É dotado de considerável perseverança e determinação!</p>
+<p>Tem um grande apego à família e às tradições. [NOME] é uma pessoa prática que possui grande habilidade em transformar situações adversas, realizando sua parte com precisão. É meticuloso, autoritário, sistemático e econômico. Um trabalhador incansável, [NOME] está sempre lutando por seus objetivos e não poupa esforços para atingi-los.</p>
+<p>Todos reconhecem a disciplina de [NOME] e confiam em suas habilidades, mas muitas vezes acaba sendo mal compreendido e considerado uma pessoa áspera por sua dificuldade em expressar sentimentos. A ousadia de [NOME] o leva a tomar atitudes ao invés de esperar, porém é muito influenciável pelo ambiente e pode vivenciar conflitos, tornando-se uma pessoa temperamental diante das incertezas.</p>`,
+
+    14:`<p><strong>Aventureiro - Dia 14</strong></p>
+<p>[NOME] é altamente adaptável, mas fica entediado facilmente e precisa do novo para se sentir vivo!</p>
+<p>Adora mudanças e emoção. [NOME] é muito social e trabalha bem com os outros, desde que não haja restrições. Como é uma pessoa inquieta e volúvel, se desinteressa das coisas tão rápido quanto as deseja. É um jogador natural que pode ser muito confiante e teimoso.</p>
+<p>Por trás da inquietação de [NOME] se esconde a insegurança; apesar de sua aparente calma, existe muita turbulência emocional que se reflete em mudanças rápidas de humor. Existem poucas coisas que [NOME] não seja capaz de fazer, mas sua natureza alterna entre a razão e a imaginação. Sendo bondoso e emotivo, [NOME] pode ser presa fácil dos inescrupulosos, mas controlando a impulsividade, poderá ser muito bem-sucedido financeiramente.</p>`,
+
+    15:`<p><strong>Sedutor - Dia 15</strong></p>
+<p>[NOME] é muito sensível, não suporta ser criticado e, por isso, tende a apoiar os outros a ponto de negar a si mesmo!</p>
+<p>É uma pessoa altamente criativa, cooperativa e simpática. [NOME] gosta de ajudar e de assumir responsabilidades, porém é um ser indomável; quando reprimido, tem problemas de controle. [NOME] usa seu magnetismo ao extremo e todos acabam por achá-lo alguém afetuoso e interessante.</p>
+<p>Normalmente [NOME] é o alvo das atenções e muito invejado por isso. Com calor humano, gosta de estar cercado por pessoas e se ajusta facilmente ao ambiente. [NOME] quer o melhor em sua vida e se esforça por isso. Adora reuniões sociais e não se importa em gastar com o que traz realização. Age como um ímã, atraindo as coisas para si. O compromisso afetivo é fundamental para manter a harmonia na vida de [NOME].</p>`,
+
+    16:`<p><strong>Extremista - Dia 16</strong></p>
+<p>[NOME] pode perder facilmente o interesse em seus projetos e deve trabalhar muito para terminar o que começou!</p>
+<p>É uma pessoa analítica e cética; precisa ver para crer. [NOME] apresenta traços fortes de perfeccionismo e sua capacidade de compreensão lhe dá vantagem em desvendar situações. Sensível e inspirado, o grande defeito de [NOME] é querer que todos vivam conforme seus moldes, caso contrário torna-se mal-humorado e antipático. Esse temperamento faz com que [NOME] viva isolado, quando na verdade necessita de afeto.</p>
+<p>[NOME] não aceita que ninguém interfira na sua vida. É muito analítico e capaz de se aprofundar em qualquer assunto. A mente de [NOME] é sua maior vantagem e seu pior inimigo. A grande armadilha é a escolha de se tornar alguém indiferente ou crítico demais, se afastando da realidade.</p>`,
+
+    17:`<p><strong>Orgulhoso - Dia 17</strong></p>
+<p>[NOME] é muito ambicioso e independente. O desafio é evitar ficar obcecado com o próprio julgamento e se tornar um ditador!</p>
+<p>Muito independente, [NOME] tem um julgamento firme e equilibrado. Geralmente é bem-humorado e simpático. A abordagem de [NOME] para tudo é original, criativa e ousada. É um excelente administrador dotado da capacidade de ver o quadro geral.</p>
+<p>Guiado pela racionalidade, [NOME] é autoconfiante e tem grandes expectativas de si mesmo. As expectativas dos outros estimulam [NOME], mas se duvidam de sua competência, isso fere o seu ego a ponto de fazê-lo assumir todo o controle para si. [NOME] pode agir de forma dramática, principalmente quando o assunto é dinheiro; nesse caso, torna-se possessivo e não descansará até que prove o seu poder.</p>`,
+
+    18:`<p><strong>Contestador - Dia 18</strong></p>
+<p>[NOME] é capaz de organizar e inspirar outras pessoas; sua satisfação mais profunda é realizar algo que beneficie o próximo!</p>
+<p>É um líder natural e um gestor eficiente, podendo ser extremamente talentoso nas áreas política e social, pois [NOME] possui um excelente entendimento das pessoas. Dinâmico e ativo, deseja o poder e precisa de desafios constantes. [NOME] tem a mente aberta e um fascínio pelo mundo intelectual.</p>
+<p>Apresenta um lado emocional, mas ainda assim [NOME] sempre será um contestador; sendo muito crítico, é difícil de ser agradado. Usa de sua personalidade marcante para ajudar seus semelhantes e resolver problemas alheios. [NOME] precisará de experiência e convívio com diferentes tipos de pessoas até encontrar sua área. No fundo, é um idealista que deseja melhorar as condições das pessoas.</p>`,
+
+    19:`<p><strong>Individualista - Dia 19</strong></p>
+<p>[NOME] é muito determinado e independente; é altamente idealista, mas se seus ideais falharem, pode se tornar amargo!</p>
+<p>Anseia por independência e luta bravamente para alcançar a autossuficiência. O desafio de [NOME] é alcançar uma visão mais ampla sobre si mesmo e sobre os outros, superando a inclinação de se agarrar às ideias apenas por serem suas. A necessidade de ser alguém pode tornar [NOME] uma pessoa dramática, tentando ser sempre o centro das atenções.</p>
+<p>É altamente ambicioso, com um forte desejo de sucesso e poder, e embora seja autoconfiante, [NOME] precisa ser encorajado e pode ser teimoso. Sendo radical nas atitudes, está sujeito a variações de humor extremas. Muito emotivo, [NOME] vive à beira do abismo, mas tem inúmeras habilidades para enfrentar dificuldades. As pessoas são atraídas pelo compromisso e firmeza que [NOME] coloca no trabalho.</p>`,
+
+    20:`<p><strong>Consciente - Dia 20</strong></p>
+<p>[NOME] tem a capacidade de persuadir os outros sob o seu ponto de vista, usando meios gentis. É brilhante em fazer os outros pensarem que são brilhantes!</p>
+<p>É uma pessoa altamente sensível e consciente dos sentimentos alheios. Consequentemente, [NOME] é facilmente influenciado pelo ambiente e, sendo altamente emotivo, precisa desenvolver seu próprio centro. [NOME] dá carinho, mas precisa ser retribuído.</p>
+<p>O talento de [NOME] está na perspicácia e disposição para agir como conselheiro. Sendo um estrategista, nada escapa à sua atenção. É estrategicamente modesto e diplomático, tendo grande capacidade de persuasão. [NOME] sabe dar e receber afeição, mas deve evitar ser dominado pelas emoções para não ser visto como alguém volúvel. Cultivando a autoconfiança, [NOME] entenderá o quão necessário é para todos.</p>`,
+
+    21:`<p><strong>Disperso - Dia 21</strong></p>
+<pApesar de ser idealista e liberal, [NOME] necessita da companhia de outras pessoas, pois disso depende o seu bem-estar!</p>
+<p>É altamente criativo e muito sociável. Por outro lado, [NOME] não é muito discreto nem bom em guardar segredos, revelando tudo o que faz. Inspirador, [NOME] irradia vida e anima qualquer ambiente. É um excelente vendedor, mas como é muito disperso, o desafio de [NOME] é concentrar sua energia em algo específico.</p>
+<p>Sendo muito emotivo, [NOME] oscila entre os extremos e está sujeito à depressão. Essa inconstância pode colocar obstáculos no caminho, mas no final [NOME] terá sucesso, pois sendo positivo, tem a certeza de que tudo acabará de forma favorável.</p>`,
+
+    22:`<p><strong>Sonhador - Dia 22</strong></p>
+<p>[NOME] tem o dom de ver os detalhes de como tudo deve se desenvolver. Ordeiro e paciente, aborda tudo de maneira metódica!</p>
+<p>É um organizador com visão, mas contraditoriamente [NOME] pode ter um medo profundo de suas ambições. É detalhista, mas pouco prático. Tende a encontrar soluções únicas, mas [NOME] pode sentir que nada se compara à sua ideia original, duvidando da própria capacidade e abandonando coisas pela metade por medo do fracasso.</p>
+<p>O desafio de [NOME] é tomar medidas práticas para concluir o que inicia. É um sonhador cujas ideias o fazem querer explorar vastos horizontes. [NOME] precisará de disciplina para manter os pés no chão, pois seu pensamento está sempre no futuro. O perfeccionismo pode impedir [NOME] de aproveitar as alegrias do dia a dia.</p>`,
+
+    23:`<p><strong>Versátil - Dia 23</strong></p>
+<p>Para [NOME], a vida é uma aventura a ser vivida ao máximo; adora mudanças e precisa delas para se sentir vivo!</p>
+<p>É extremamente adaptável e tem um jeito fácil de se relacionar. [NOME] tem o dom de se comunicar e se promover, possuindo habilidade verbal e escrita. Trabalha bem com os outros, desde que não lhe imponham muitas regras. [NOME] é versátil, mas não muito persistente, pois fica inquieto facilmente.</p>
+<p>É uma pessoa muito criativa, mas propenso a se esquivar da responsabilidade e se deixar levar pelos prazeres. [NOME] deve trabalhar o lado compreensivo para viver de forma estável. No fundo, é um idealista que faz uso dos sentimentos para expressar tudo de forma dramática. A instabilidade de humor faz com que [NOME] enfrente mais turbulências do que o necessário.</p>`,
+
+    24:`<p><strong>Prestativo - Dia 24</strong></p>
+<p>[NOME] é enérgico, responsável e prestativo, mas sua natureza solidária pode fazer com que enfrente dificuldades!</p>
+<p>É uma pessoa dedicada às pessoas próximas e possui o dom de manter o equilíbrio entre elas. Sendo emotivo, [NOME] gosta de demonstrar afeto, às vezes de forma melodramática. Tende a aumentar os problemas, especialmente quando envolvem críticas pessoais, mas [NOME] está disposto a sacrificar o que for preciso pela harmonia.</p>
+<p>Por sua natureza dramática, [NOME] não é muito prático e pode complicar as coisas, precisando de orientação alheia. Apesar disso, [NOME] se sai bem nas empreitadas por ser uma pessoa sistemática, cuidadosa e paciente. É um bom amigo e companheiro fiel. O defeito de [NOME] é a ansiedade constante por querer realizar sempre o que parece certo.</p>`,
+
+    25:`<p><strong>Inconformado - Dia 25</strong></p>
+<p>O sucesso é indispensável para a autoestima de [NOME]. Estabelece padrões de perfeição e fica deprimido se não os alcança!</p>
+<p>É racional, lógico e quer saber tudo nos mínimos detalhes. [NOME] quer conhecer tudo profundamente e dificilmente toma decisões baseadas apenas nas aparências. Defende ferozmente suas convicções. Ambicioso, [NOME] luta para satisfazer seu desejo de moralidade e, sendo perfeccionista, acaba exigindo demais dos outros.</p>
+<p>[NOME] é um diplomata que age de forma enérgica se necessário. O perfeccionismo leva [NOME] a trabalhar duro, porém pode perder o controle e tornar-se impaciente se as coisas não saem como planejado. O hábito de não expressar sentimentos faz com que [NOME] seja mal compreendido. O desafio é ser racional sem negligenciar as qualidades humanas.</p>`,
+
+    26:`<p><strong>Controlador - Dia 26</strong></p>
+<p>[NOME] pode ser muito diplomático e convincente. Prefere ser persuasivo em vez de impositivo!</p>
+<p>É uma pessoa realista, autoconfiante e muito ambiciosa. [NOME] possui bom senso, mas quer estar no comando de tudo, pois pode ser dominador e autoritário. Tem pouca paciência com limitações alheias. [NOME] vê o potencial das coisas, mas pode negligenciar detalhes; às vezes se enche de entusiasmo, mas descobre que não será fácil terminar o que começou.</p>
+<p>[NOME] é eficiente e capaz de lidar com grandes projetos por ser perseverante. Aparenta ser uma pessoa fria, quando na realidade está sempre pronto a ajudar. [NOME] deve aprender a avaliar suas relações para não pensar pouco em si mesmo. O desafio é manter o equilíbrio entre objetivos materiais e qualidades humanas.</p>`,
+
+    27:`<p><strong>Político - Dia 27</strong></p>
+<p>[NOME] é idealista, sensível e analítico. Sua mente fértil impressiona as pessoas através de ideias inusitadas!</p>
+<p>Foi feito para guiar; [NOME] é um político nato, com equilíbrio entre instinto e razão. É alguém com visão incomum, original e criativo. [NOME] impressiona os outros por seus pensamentos, mas pode aparentar estar desconectado quando usa esse artifício para esconder conflitos internos.</p>
+<p>Age por impulsividade e pode tornar-se uma pessoa desconfiada com mudanças. [NOME] é pacífico e jamais procura problemas, mas se for injustiçado, pode se tornar agressivo. Com personalidade audaciosa e independente, [NOME] não aceita dar satisfação dos seus atos. Sabe se expressar bem, embora às vezes de forma dramática.</p>`,
+
+    28:`<p><strong>Obstinado - Dia 28</strong></p>
+<p>[NOME] é uma pessoa geniosa, controversa e aberta a novas ideias. Nasceu com o dom do querer e vive se queixando de tudo!</p>
+<p>Possui o dom de liderança através da persuasão. Extremamente ambicioso, independente e racional, [NOME] é um excelente planejador e possui autoconfiança, mas precisa de incentivo. Após iniciar algo, [NOME] prefere que outros deem continuidade, o que faz com que perca oportunidades satisfatórias por falta de manutenção dos projetos.</p>
+<p>Pode ir até as últimas consequências para ter sucesso, mas [NOME] geralmente se desvia dos propósitos no caminho. Sendo uma pessoa controversa, [NOME] é um ímã para problemas, mas com sua determinação, estará sempre pronto para o combate e disposto a novos desafios.</p>`,
+
+    29:`<p><strong>Instintivo - Dia 29</strong></p>
+<p>[NOME] vivencia muitas oscilações emocionais. Por sua tendência à vulnerabilidade, tende a ver tudo de forma exagerada!</p>
+<p>É altamente instintivo e criativo. A mente de [NOME] pensa em imagens e sua vida é conduzida mais pela inspiração do que pela razão. Este talvez seja o motivo pelo qual [NOME] acaba começando as coisas tardiamente e enfrenta frustrações pela aparente falta de progresso.</p>
+<p>No fundo, é um visionário extremamente sensível e facilmente influenciável pelas pessoas e pelo ambiente. Não há meio termo para [NOME]: ou é muito bom no que faz, ou é muito ruim. Sendo muito emotivo, [NOME] se magoa com facilidade, o que o torna uma pessoa difícil de conviver. A menos que desenvolva seus próprios critérios de julgamento, [NOME] será escravo da opinião alheia.</p>`,
+
+    30:`<p><strong>Teimoso - Dia 30</strong></p>
+<p>[NOME] é teimoso! Tem sua própria opinião e estará sempre convencido de que seu modo de fazer as coisas é o único certo!</p>
+<p>Tem um grande talento criativo e é altamente imaginativo, mas [NOME] tende a falar mais do que o necessário devido ao entusiasmo. Independentemente disso, é uma pessoa amigável e sociável; outros acham [NOME] carismático, embora às vezes cansativo.</p>
+<p>É inútil qualquer discussão com [NOME], já que suas ideias são enraizadas e jamais estará disposto a mudá-las, assim como não aceita ordens. [NOME] é um vendedor de sonhos que odeia ser criticado. Sendo muito teimoso, pode tender à autoanulação se não for ouvido. [NOME] precisa se conscientizar de seu valor e se impor para conquistar o respeito das pessoas.</p>`,
+
+    31:`<p><strong>Tradicionalista - Dia 31</strong></p>
+<p>[NOME] pode ser teimoso e rígido, recusando-se a permitir ideias novas em seu apego aos padrões pré-estabelecidos!</p>
+<p>Adora tudo o que é comprovado na prática. No entanto, [NOME] possui talento inventivo para buscar soluções práticas, pois necessita de segurança econômica. Com muita boa-fé, [NOME] confia em todos, acreditando na honestidade alheia, o que pode trazer problemas financeiros.</p>
+<p>Jamais esquece um favor ou uma ofensa. [NOME] é muito sociável, um excelente anfitrião e se compadece com os problemas alheios. A capacidade de irradiar calor humano atrai as pessoas para [NOME]. É um organizador natural que trabalha duro e com consciência, possuindo uma força de vontade inabalável.</p>`,   
   },
 
   // ======================
