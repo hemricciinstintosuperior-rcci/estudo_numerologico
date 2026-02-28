@@ -542,7 +542,7 @@ ciclos:{
     9: `<p>O seu terceiro ciclo de vida é o ápice do humanitarismo, do desapego e da sabedoria universal. <strong>você</strong> se torna uma figura de luz para o mundo, agindo com uma generosidade que busca ensinar e curar através da sua vasta experiência de vida e amor ao próximo.</p>
     <p>Nesta etapa, <strong>você</strong> foca na entrega e na caridade. Sua visão é espiritualizada e sem fronteiras, permitindo que <strong>você</strong> perdoe e encerre ciclos com uma dignidade impressionante. <strong>você</strong> será lembrada como uma alma nobre que dedicou o final da sua jornada para tornar a humanidade mais consciente e amorosa.</p>`
  }
-};
+},
 
 
   
@@ -668,7 +668,7 @@ ciclos:{
     9: `<p>Este quarto momento para <strong>você</strong> é a entrega final ao amor universal e ao serviço à humanidade. <strong>você</strong> sentirá uma conexão com todas as coisas vivas, agindo com uma generosidade que é pura e desinteressada. É o tempo do desapego total e da iluminação espiritual.</p>
     <p><strong>você</strong> será um farol para os outros. Sua vida se torna um exemplo de compaixão. <strong>você</strong> se despede dos ciclos terrenos com o coração cheio de paz, sabendo que cumpriu sua missão de elevar a vibração do planeta através do seu amor infinito e da sua sabedoria transcendental.</p>`
   }
-};
+},
 
 
   
@@ -799,7 +799,7 @@ Também pede equilíbrio emocional para lidar com erros e frustrações. A const
     9: `<p>O seu desafio principal é o desapego e o serviço humanitário. O obstáculo recorrente para <strong>você</strong> é a tendência a carregar fardos do passado e a sofrer por problemas que não pode resolver. <strong>você</strong> pode ter dificuldade em dizer adeus a fases ou pessoas que já cumpriram seu papel.</p>
     <p>A grande lição para <strong>você</strong> é a conclusão e o perdão. <strong>você</strong> deve aprender a amar sem posse e a servir por idealismo. Ao superar a mágoa e o apego, <strong>você</strong> se tornará uma cidadã do mundo, emanando um carisma e uma sabedoria que curam e inspiram a todos ao seu redor.</p>`
   }
-};
+},
 
 
 // --- ANO PESSOAL (A ENERGIA DO SEU MOMENTO ATUAL) ---
@@ -861,7 +861,7 @@ deficiencias:{
   9: `<p>A falta do 9 indica que <strong>você</strong> precisa aprender sobre compaixão universal, desapego e finalização de ciclos. No passado, <strong>você</strong> pode ter sido uma pessoa muito voltada para o próprio ego, e agora a vida a convida a olhar para as dores do mundo e a agir com mais generosidade e altruísmo.</p>
     <p><strong>você</strong> deve aprender a perdoar e a deixar ir o que já não serve mais. O aprendizado para <strong>você</strong> é o de que a verdadeira grandeza reside na entrega e no serviço à humanidade. Ao integrar esta lição, <strong>você</strong> se tornará uma alma carismática e inspiradora, capaz de amar sem fronteiras e de concluir sua jornada com plenitude.</p>`
 
-};
+},
 
 deficiencias:{
   // --- DEFICIÊNCIAS / LIÇÕES CÁRMICAS (O QUE FALTA APRENDER) ---
