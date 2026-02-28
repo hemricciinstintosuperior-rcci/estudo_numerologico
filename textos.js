@@ -412,7 +412,7 @@ const textos = {
   
   },
 // --- RELACIONAMENTO (COMO VOCÊ AMA E SE COMPORTA NO AMOR) ---
-  relacionamento: {
+  Relacionamento: {
     1: `<p>No amor, <strong>você</strong> busca um relacionamento que respeite a sua individualidade e a sua necessidade de liderança. <strong>você</strong> é uma parceira direta, leal e extremamente protetora, agindo com uma intensidade que não aceita meios-termos ou jogos sentimentais que limitem o seu crescimento pessoal.</p>
     <p><strong>você</strong> se sente atraída por pessoas fortes e independentes, mas que saibam admirar a sua força sem tentar competir com <strong>você</strong>. O seu maior desafio é aprender a ceder e a compartilhar o comando, entendendo que um relacionamento saudável exige que, às vezes, <strong>você</strong> deixe o outro tomar a iniciativa para que a parceria seja equilibrada.</p>
     <p>Para <strong>você</strong>, amar significa caminhar lado a lado com alguém que tenha a própria vida, mas que escolha estar ao seu lado para construir um império de realizações. <strong>você</strong> demonstra o seu afeto através do apoio aos sonhos do parceiro e da sua presença firme em todos os momentos decisivos da jornada a dois.</p>`,
