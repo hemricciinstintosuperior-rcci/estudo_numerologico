@@ -634,58 +634,44 @@ function obterPrimeiroNome(nomeCompleto) {
 
 const nomePersonalizado = obterPrimeiroNome(dados.nome);
 
-// Função para formatar o texto e substituir "você"
+// --- REVISOR AUTOMÁTICO DE GÊNERO (Limpa o texto para o Carlos) ---
 function processarTextoPremium(texto) {
     if (!texto) return "";
-    
     let t = texto;
-
-    // 1. Coloca o nome (ex: Carlos) em negrito
-    const regexNome = /você/gi;
-    t = t.replace(regexNome, `<strong>${nomePersonalizado}</strong>`);
-
-    // 2. O REVISOR AUTOMÁTICO (Limpa o gênero para o masculino)
-    t = t.replace(/\(a\)/gi, "");    // amado(a) -> amado
-    t = t.replace(/\(o\)/gi, "");    // amada(o) -> amada
-    t = t.replace(/\(as\)/gi, "");   // todas(as) -> todas
-    t = t.replace(/\(os\)/gi, "");   // todos(os) -> todos
-    t = t.replace(/\/a/gi, "");      // ele/a -> ele
-    t = t.replace(/\/o/gi, "");      // ela/o -> ela
-    t = t.replace(/o\/a/gi, "o");    // o/a -> o
-    t = t.replace(/a\/o/gi, "a");    // a/o -> a
-
-    // 3. Ajuste de Parágrafos para as 15 linhas ficarem bonitas
+    // 1. Nome em negrito
+    t = t.replace(/você/gi, `<strong>${nomePersonalizado}</strong>`);
+    // 2. Limpeza de Gênero (Remove (a), o/a, etc)
+    t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
+    t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
+    // 3. Formatação
     return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
 }
 
-// O comando que faz a mágica (Coloque isso logo aqui embaixo)
-preencher("{{QTD_DEFICIENCIAS}}", textoFinalQtd);
-
-// FUNÇÃO DE PREENCHIMENTO (Mantenha como está abaixo)
+// Função de preenchimento que não deixa o script quebrar
 function preencher(chave, valor, eTextoDinamico = false) {
-    let conteudo = valor;
+    let conteudo = valor || "";
     if (eTextoDinamico) {
         conteudo = processarTextoPremium(valor);
     }
+    // Faz a troca no HTML
     document.body.innerHTML = document.body.innerHTML.split(chave).join(conteudo);
 }
 
 // ============================================
-// ============================================
-// 2. EXECUÇÃO DO PREENCHIMENTO (Versão Corrigida)
+// 2. LÓGICA DE CONTAGEM E EXECUÇÃO
 // ============================================
 
-// --- PRIMEIRO: Calculamos a quantidade (sem escrever ainda) ---
+// Cálculo da quantidade de lições
 let listaDef = dados.resultados.listaDeficiencias || []; 
 let qtdTotal = listaDef.length;
-let textoQtd = (qtdTotal === 0) ? "Nenhuma Lição Cármica" : (qtdTotal === 1) ? "1 Lição Cármica" : qtdTotal + " Lições Cármicas";
+let textoQtd = (qtdTotal === 0) ? "Nenhuma Lição" : (qtdTotal === 1) ? "1 Lição Cármica" : qtdTotal + " Lições Cármicas";
 
-// --- SEGUNDO: Preenchemos NOME, DATA e a QUANTIDADE ---
+// PREENCHIMENTO DOS DADOS (ORDEM CORRETA)
 preencher("{{NOME}}", dados.nome);
 preencher("{{DATA}}", dados.data);
 preencher("{{QTD_DEFICIENCIAS}}", textoQtd); 
 
-// --- TERCEIRO: Todos os outros números ---
+// Preenche os Números
 preencher("{{DIA}}", dados.resultados.diaN || "");
 preencher("{{COMPORTAMENTO}}", dados.resultados.comportamento);
 preencher("{{MOTIVACAO}}", dados.resultados.motivacao);
@@ -696,7 +682,7 @@ preencher("{{MATURIDADE}}", dados.resultados.maturidade);
 preencher("{{RELACIONAMENTO}}", dados.resultados.relacionamento);
 preencher("{{ANO_PESSOAL_NUMERO}}", dados.resultados.anoPessoal);
 
-// --- QUARTO: Textos Interpretativos (Onde estava sumindo) ---
+// Preenche os Textos Longos (Com o revisor de gênero ativo)
 preencher("{{TEXTO_DIA}}", dados.textos.dia, true);
 preencher("{{TEXTO_COMPORTAMENTO}}", dados.textos.comportamento, true);
 preencher("{{TEXTO_MOTIVACAO}}", dados.textos.motivacao, true);
@@ -710,39 +696,27 @@ preencher("{{TEXTO_CICLO2}}", dados.textos.ciclo2, true);
 preencher("{{TEXTO_CICLO3}}", dados.textos.ciclo3, true);
 preencher("{{TEXTO_MD1}}", dados.textos.md1, true);
 preencher("{{TEXTO_MD2}}", dados.textos.md2, true);
-preencher("{{TEXTO_MD3}}", dados.textos.md3, true);
-preencher("{{TEXTO_MD4}}", dados.textos.md4, true);
 preencher("{{TEXTO_D1}}", dados.textos.d1, true);
 preencher("{{TEXTO_D2}}", dados.textos.d2, true);
-preencher("{{TEXTO_D3}}", dados.textos.d3, true);
 preencher("{{TEXTO_ANO_PESSOAL}}", dados.textos.anoPessoal, true);
 preencher("{{TEXTO_DEFICIENCIAS}}", dados.textos.deficiencias, true);
 
-// --- QUINTO: Períodos ---
+// Períodos
 preencher("{{PERIODO_C1}}", dados.periodos.ciclo1);
 preencher("{{PERIODO_C2}}", dados.periodos.ciclo2);
 preencher("{{PERIODO_C3}}", dados.periodos.ciclo3);
 preencher("{{PERIODO_MD1}}", dados.periodos.md1);
 preencher("{{PERIODO_MD2}}", dados.periodos.md2);
-preencher("{{PERIODO_MD3}}", dados.periodos.md3);
-preencher("{{PERIODO_MD4}}", dados.periodos.md4);
 preencher("{{PERIODO_D1}}", dados.periodos.ciclo1);
 preencher("{{PERIODO_D2}}", dados.periodos.ciclo2);
-preencher("{{PERIODO_D3}}", dados.periodos.ciclo3);
 
-// ============================================
-// 3. GERAÇÃO AUTOMÁTICA DO PDF E SEGURANÇA
-// ============================================
+// PDF AUTOMÁTICO
 function gerarPDF(){
   window.scrollTo(0,0);
-  setTimeout(()=>{
-    window.print();
-  }, 1000);
+  setTimeout(()=>{ window.print(); }, 1000);
 }
-
-window.onload = () => {
-    setTimeout(gerarPDF, 1500);
-};
+window.onload = () => { setTimeout(gerarPDF, 1500); };
+</script>
 
 document.oncontextmenu = () => false;
 document.onselectstart = () => false;
