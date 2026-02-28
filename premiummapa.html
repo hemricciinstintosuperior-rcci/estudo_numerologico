@@ -551,7 +551,7 @@ Compreender essa vibração permite agir com mais consciência, aproveitar oport
 
 </div>
 <div class="secao">
-<h2> Fraquezas e inibições
+<h2> Fraquezas e inibiçõespreencher("{{QTD_DEFICIENCIAS}}
 </h2>
  <div class="explicacao"> 
  Fraquezas e inibições  são comportamentos e habilidades que precisam ser tratados em sua personalidade. Essas características podem ser comparadas a uma caixa de ferramentas onde algumas ferramentas estão disponíveis para você e outras precisam ser adquiridas.
@@ -563,7 +563,7 @@ Corrigir nossas fraquezas e inibições faz parte de um aprendizado que leva a e
 É importante entender que na numerologia moderna o que é chamado de "lições cármicas" pela numerologia antiga e mítica; na realidade não são lições, mas sim necessidades que cada ser humano possui individualmente e que lhes permite tornar sua vida muito mais fácil, prática e prazerosa.
    </div>
 
-  <div class="numero">Número {{DEFICIENCIAS}}</div>
+ 
 <div>{{TEXTO_DEFICIENCIAS}}</div>
 </div>
 <!-- CABEÇALHO IMPRESSÃO -->
@@ -624,7 +624,23 @@ function processarTextoPremium(texto) {
     // Se o texto já vier com <p>, ele mantém a estrutura.
     return textoFiltrado.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
 }
+// ============================================
+// LÓGICA DE CONTAGEM DE DEFICIÊNCIAS
+// ============================================
 
+// Aqui assumimos que dados.resultados.listaDeficiencias é um array (ex: [1, 8])
+// Se o seu objeto de resultados for diferente, ajuste o caminho da variável.
+let listaDef = dados.resultados.listaDeficiencias || []; 
+let qtd = listaDef.length;
+let textoQtd = "";
+
+if (qtd === 0) {
+    textoQtd = "Nenhuma Lição Cármica";
+} else if (qtd === 1) {
+    textoQtd = "1 Lição Cármica";
+} else {
+    textoQtd = ${qtd} Lições Cármicas;
+}
 // Função de preenchimento inteligente
 function preencher(chave, valor, eTextoDinamico = false) {
     let conteudo = valor;
@@ -679,6 +695,7 @@ preencher("{{TEXTO_D3}}", dados.textos.d3, true);
 
 preencher("{{TEXTO_ANO_PESSOAL}}", dados.textos.anoPessoal, true);
 preencher("{{TEXTO_DEFICIENCIAS}}", dados.textos.deficiencias, true);
+preencher("{{QTD_DEFICIENCIAS}}", textoQtd);  
 
 // Períodos de Tempo
 preencher("{{PERIODO_C1}}", dados.periodos.ciclo1);
