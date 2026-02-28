@@ -131,1875 +131,635 @@ const textos = {
 
   },
 
-  // ======================
+// --- COMPORTAMENTO (NÚMERO PSÍQUICO) ---
   comportamento: {
-1: `COMPORTAMENTO 1 — Determinado e Convicto
-O 1 é o Número do Comportamento das pessoas nascidas nos dias 01, 10, 19 e 28 de cada mês. 
-O comportamento 1 revela uma mente independente, reservada e fortemente orientada à autonomia emocional. Pessoas com essa vibração tendem a lidar com dificuldades de forma solitária, preferindo encontrar soluções por conta própria em vez de pedir ajuda.
-Existe uma forte necessidade de controle sobre a própria vida e decisões. Internamente, essa pessoa busca provar a si mesma que é capaz de superar qualquer obstáculo sem depender dos outros.
+    1: `<p>O seu comportamento psíquico é marcado por uma autoconfiança inabalável e uma postura extremamente decidida diante da vida. <strong>você</strong> é o tipo de pessoa que prefere agir por conta própria a ter que esperar pelo tempo ou pela decisão alheia, demonstrando uma independência mental que impressiona a todos.</p>
+    <p>A sua forma de processar o mundo é direta e objetiva: <strong>você</strong> analisa os factos, toma uma decisão e segue em frente sem olhar para trás ou se perder em dúvidas paralisantes. Essa determinação faz com que <strong>você</strong> seja vista como uma pessoa forte, resolutiva e capaz de liderar em qualquer situação de crise ou incerteza.</p>
+    <p>No entanto, internamente, <strong>você</strong> sente que carregar essa postura exige muita energia, pois raramente se permite demonstrar vulnerabilidade ou pedir ajuda. O seu comportamento natural é de proteção e comando, agindo como um pilar de sustentação para os seus ideais e para as pessoas que <strong>você</strong> considera sob sua responsabilidade direta.</p>`,
 
-Potenciais positivos
-Grande força interior e capacidade de auto-superação
-Coragem para enfrentar desafios sem recuar
-Determinação, iniciativa e espírito de liderança
-Honestidade emocional e senso de responsabilidade
-Capacidade de resistir à pressão externa
-Essa vibração cria indivíduos resilientes, confiáveis e capazes de assumir responsabilidades difíceis quando necessário.
+    2: `<p>O seu comportamento psíquico revela uma alma diplomática, gentil e profundamente voltada para a cooperação e harmonia. <strong>você</strong> possui uma sensibilidade aguçada que lhe permite captar as emoções e intenções alheias antes mesmo que uma palavra seja dita, agindo sempre com uma cautela respeitosa.</p>
+    <p><strong>você</strong> evita conflitos directos e prefere resolver as situações através da persuasão suave e do equilíbrio. A sua mente busca constantemente o ponto de união entre as pessoas, tornando <strong>você</strong> uma excelente mediadora. O seu comportamento é o de quem sabe que a verdadeira força reside na união e não na força bruta ou na imposição de vontades.</p>
+    <p>O desafio do seu comportamento é não absorver as energias negativas do ambiente ou se tornar excessivamente dependente da aprovação dos outros. Quando <strong>você</strong> confia na sua intuição, o seu comportamento torna-se uma fonte de paz e estabilidade emocional para todos os que convivem com <strong>você</strong> no dia a dia.</p>`,
 
-Desafios emocionais
-Apesar da aparência forte, existe uma tendência à autocrítica severa e dificuldade em reconhecer fragilidades. Pedir ajuda pode ser interpretado como fraqueza, o que leva ao isolamento emocional.
-A teimosia e a rigidez mental podem dificultar mudanças necessárias, mantendo a pessoa presa a decisões que já não são benéficas.
+    3: `<p>O seu comportamento psíquico é vibrante, criativo e movido por uma necessidade intrínseca de expressão e interação social. <strong>você</strong> possui um otimismo natural que contagia os ambientes, agindo sempre com uma vivacidade que atrai as pessoas para perto da sua energia luminosa e comunicativa.</p>
+    <p>Para <strong>você</strong>, a vida é uma oportunidade constante de criar, aprender e partilhar ideias. O seu comportamento é o de uma pessoa curiosa, que gosta de estar informada e de participar ativamente nas conversas. <strong>você</strong> tem o dom da palavra e sabe como usar o seu carisma para abrir portas e motivar as pessoas ao seu redor de forma leve e divertida.</p>
+    <p>O cuidado que <strong>você</strong> deve ter é com a tendência a dispersar a sua atenção em muitas coisas ao mesmo tempo. Quando <strong>você</strong> foca o seu comportamento numa direção clara, a sua capacidade de realização torna-se brilhante, transformando a sua criatividade em resultados concretos e admiráveis para a sociedade.</p>`,
 
-Caminho de evolução
-O crescimento acontece quando aprende a confiar nos outros e dividir responsabilidades. A verdadeira força não está em fazer tudo sozinho, mas em saber quando permitir apoio.`,
+    4: `<p>O seu comportamento psíquico é pautado pela lógica, pela disciplina e por um senso de responsabilidade extremamente elevado. <strong>você</strong> é uma pessoa que valoriza a ordem, a pontualidade e a honestidade acima de tudo, agindo sempre com uma seriedade que transmite confiança e segurança absoluta a todos.</p>
+    <p>A sua mente busca segurança e estabilidade, por isso o seu comportamento é o de alguém que planeia cada passo com cuidado e prefere caminhos sólidos a aventuras arriscadas. <strong>você</strong> é a base onde as outras pessoas se apoiam, sendo reconhecida pela sua capacidade de trabalho árduo e pela sua lealdade inabalável aos seus princípios e à sua família.</p>
+    <p>O desafio do seu comportamento é não se tornar excessivamente rígida ou resistente a mudanças necessárias. Ao permitir que a flexibilidade entre na sua rotina, <strong>você</strong> une a sua incrível capacidade de construção com a inovação, tornando-se uma pessoa invencível na conquista dos seus objetivos de longo prazo.</p>`,
 
-2: `COMPORTAMENTO 2 — Romântico e Emotivo
-O 2 é o Número do Comportamento das pessoas nascidas nos dias 02, 11, 20 e 29 do mês. 
-O comportamento 2 representa uma mente sensível, diplomática e altamente emocional. Essa vibração reage aos conflitos buscando harmonia e evitando confrontos diretos.
-A pessoa sente profundamente o ambiente e as emoções alheias, muitas vezes absorvendo sentimentos como se fossem próprios.
+    5: `<p>O seu comportamento psíquico é marcado pela versatilidade, pela rapidez de pensamento e por uma busca incessante por liberdade e novas experiências. <strong>você</strong> possui uma mente inquieta que se aborrece facilmente com a rotina, agindo sempre com uma curiosidade que a leva a explorar o mundo e as pessoas sem medo.</p>
+    <p><strong>você</strong> adapta-se a qualquer situação com uma facilidade impressionante e possui um comportamento magnético que atrai mudanças constantes para a sua vida. O seu pensamento é progressista e <strong>você</strong> está sempre à frente do seu tempo, buscando novas formas de viver, de trabalhar e de se relacionar com a realidade que a rodeia.</p>
+    <p>O aprendizado para o seu comportamento é aprender a lidar com a impaciência e a ansiedade. Quando <strong>você</strong> consegue canalizar a sua energia vibrante para um propósito específico, <strong>você</strong> torna-se uma agente de transformação poderosa e uma pessoa que vive a vida em toda a sua plenitude e profundidade.</p>`,
 
-Potenciais positivos
-Empatia e capacidade natural de compreender os outros
-Diplomacia e talento para resolver conflitos
-Sensibilidade artística e emocional
-Facilidade para cooperação e trabalho em equipe
-Intuição aguçada
-São pessoas conciliadoras, que naturalmente buscam paz e equilíbrio nas relações.
+    6: `<p>O seu comportamento psíquico é profundamente maternal (ou paternal), protector e voltado para o bem-estar da família e dos entes queridos. <strong>você</strong> possui um senso de dever e justiça muito forte, agindo sempre como o coração do seu grupo social e buscando criar harmonia em todos os detalhes.</p>
+    <p><strong>você</strong> sente uma necessidade vital de ser útil e de aconselhar aqueles que estão em dificuldade. O seu comportamento é acolhedor e <strong>você</strong> valoriza imensamente a estética, a beleza e o conforto do lar. As pessoas sentem-se naturalmente atraídas pela sua energia bondosa e buscam em <strong>você</strong> o apoio emocional que só a sua compreensão pode oferecer.</p>
+    <p>O desafio para <strong>você</strong> é não se tornar excessivamente controladora ou perfeccionista com os outros. Ao entender que cada pessoa tem o seu próprio ritmo, <strong>você</strong> transforma o seu comportamento num exemplo de amor incondicional e sabedoria, tornando-se uma figura central e amada por todos.</p>`,
 
-Desafios emocionais
-A insegurança e a necessidade de aprovação podem gerar dependência emocional. O medo do conflito pode levar à fuga de problemas importantes.
-Existe tendência à preocupação excessiva, ansiedade e dificuldade em tomar decisões firmes.
+    7: `<p>O seu comportamento psíquico é introspectivo, analítico e voltado para a compreensão profunda dos mistérios da vida e da ciência. <strong>você</strong> possui uma mente que não se contenta com respostas superficiais, agindo sempre com uma cautela observadora que prefere o silêncio à conversa vazia.</p>
+    <p>Para <strong>você</strong>, o conhecimento e a verdade são os pilares da existência. O seu comportamento revela uma pessoa que valoriza a solidão como um espaço de crescimento espiritual e intelectual. <strong>você</strong> possui uma intuição refinada e um radar natural para detectar mentiras ou segundas intenções, o que a torna uma pessoa difícil de ser enganada.</p>
+    <p>O cuidado que <strong>você</strong> deve ter é para não se isolar demasiado ou se tornar excessivamente crítica com as falhas humanas. Ao partilhar a sua sabedoria com o mundo de forma generosa, o seu comportamento transforma-se num guia luminoso para aqueles que buscam a verdade e o autoconhecimento.</p>`,
 
-Caminho de evolução
-O crescimento surge quando aprende a confiar em si mesma e desenvolver firmeza emocional. A harmonia verdadeira exige coragem para enfrentar conflitos quando necessário.`,
+    8: `<p>O seu comportamento psíquico é marcado pela ambição, pelo pragmatismo e por uma visão executiva invejável da realidade. <strong>você</strong> é uma pessoa que entende as leis da causa e efeito e do mundo material, agindo sempre com uma determinação focada na conquista de autoridade e prosperidade.</p>
+    <p><strong>você</strong> não tem medo de desafios grandes e possui um comportamento que impõe respeito naturalmente. A sua mente é voltada para a gestão de recursos e pessoas, buscando sempre a eficiência e o resultado concreto. Para <strong>você</strong>, a vida é uma competição justa onde o mérito e o esforço disciplinado devem ser recompensados com o sucesso.</p>
+    <p>O aprendizado para <strong>você</strong> é equilibrar o poder com a compaixão. Quando <strong>você</strong> usa a sua força para construir algo que beneficia os outros e não apenas a si mesma, o seu comportamento atrai uma abundância inesgotável e <strong>você</strong> torna-se uma líder admirada e vitoriosa.</p>`,
 
-3: `COMPORTAMENTO 3 — Otimista e Despreocupado
-O 3 é o Número do Comportamento das pessoas nascidas nos dias 3, 12, 21 ou 30 do mês. 
-O comportamento 3 revela uma mente leve, criativa e orientada à expressão. Essa vibração reage aos desafios com entusiasmo, criatividade e comunicação.
-Dificuldades são frequentemente enfrentadas com humor, charme e capacidade de adaptação.
+    9: `<p>O seu comportamento psíquico é humanitário, altruísta e dotado de uma sensibilidade que abrange o mundo inteiro. <strong>você</strong> possui uma sabedoria que parece vir de outras épocas, agindo sempre com uma generosidade que não espera nada em troca e uma compreensão profunda das fraquezas humanas.</p>
+    <p><strong>você</strong> sente uma forte ligação com causas sociais e com a espiritualidade. O seu comportamento é o de uma pessoa que está sempre pronta para encerrar ciclos e perdoar, buscando a evolução da alma acima de qualquer ganho material. <strong>você</strong> possui um carisma universal que atrai pessoas de todas as origens para perto da sua luz.</p>
+    <p>O desafio para o seu comportamento é não se deixar abater pelo sofrimento alheio ou se perder em sonhos utópicos. Ao manter o foco na sua missão de ajudar e curar, <strong>você</strong> atinge uma paz interior inabalável e torna-se um exemplo vivo de bondade e transformação para a humanidade.</p>`
+  },
+// --- MOTIVAÇÃO (O DESEJO ÍNTIMO DA ALMA) ---
+  motivacao: {
+    1: `<p>A sua motivação mais profunda é a busca pela autonomia total e pelo reconhecimento da sua individualidade única. O que realmente impulsiona o seu coração, <strong>você</strong> sabe, é a sensação de ser a mestre absoluta do seu próprio destino, sem amarras, dependências ou submissões.</p>
+    <p><strong>você</strong> sente uma urgência interna de se destacar, não por mera vaidade, mas por uma necessidade vital de provar a si mesma que é capaz de conquistar o topo através do seu próprio mérito e originalidade. <strong>você</strong> detesta a mediocridade e a estagnação; qualquer situação que limite a sua liberdade de ação ou abafe o seu brilho pessoal gera uma profunda inquietação na sua alma.</p>
+    <p>O seu desejo íntimo é ser a primeira, a pioneira e a referência máxima em tudo o que se propõe a fazer. O sucesso, para <strong>você</strong>, só tem um sabor verdadeiro se for conquistado com a sua própria assinatura e através de um esforço pessoal inabalável, refletindo a sua coragem de ser quem <strong>você</strong> realmente é.</p>`,
 
-Potenciais positivos
-Comunicação natural e poder de persuasão
-Criatividade e pensamento flexível
-Capacidade de motivar e inspirar pessoas
-Otimismo diante das adversidades
-Facilidade de adaptação social
-Essa vibração favorece pessoas carismáticas e capazes de influenciar ambientes positivamente.
+    2: `<p>A sua motivação íntima é a busca pela paz, pela harmonia e pela conexão profunda com as pessoas ao seu redor. O que o seu coração mais deseja é viver em um ambiente onde o amor e a compreensão mútua prevaleçam sobre qualquer disputa de ego ou conflito desnecessário.</p>
+    <p><strong>você</strong> sente uma satisfação imensa quando consegue colaborar com os outros e ser a peça que une diferentes partes em um objetivo comum. O seu desejo secreto é ser amada, aceita e valorizada pela sua doçura e pela sua capacidade de ouvir e apoiar. <strong>você</strong> não busca o palco principal, mas sim a segurança de relacionamentos sólidos e de uma vida emocional equilibrada.</p>
+    <p>Para <strong>você</strong>, a felicidade reside nos pequenos gestos de carinho e na certeza de que <strong>você</strong> é útil e importante para aqueles que ama. A sua alma se nutre da beleza, da música e de tudo o que acalma os sentidos, buscando sempre a serenidade como o seu bem mais precioso.</p>`,
 
-Desafios emocionais
-Pode haver tendência à superficialidade, dispersão e procrastinação. Problemas podem ser evitados através de distrações em vez de enfrentamento direto.
-O excesso de otimismo pode gerar promessas não cumpridas e dificuldade de manter disciplina.
+    3: `<p>A sua motivação mais profunda é a necessidade de se expressar, de criar e de brilhar socialmente. O que realmente faz o seu coração vibrar é a oportunidade de transmitir suas ideias, seus sentimentos e sua alegria de viver para o maior número possível de pessoas, agindo com um entusiasmo contagiante.</p>
+    <p><strong>você</strong> deseja ser reconhecida pela sua inteligência, pelo seu bom humor e pela sua capacidade de tornar a vida mais leve e colorida. O isolamento ou a repressão da sua criatividade são as coisas que mais a sufocam, pois sua alma precisa de movimento, de conversas estimulantes e de aplausos (mesmo que discretos) pelo seu talento e carisma natural.</p>
+    <p>O seu desejo íntimo é viver a vida com prazer e entusiasmo, explorando todas as formas de comunicação e arte. <strong>você</strong> se sente realizada quando consegue motivar os outros a verem o lado positivo das situações, sendo uma fonte de luz e inspiração constante no seu círculo social.</p>`,
 
-Caminho de evolução
-O equilíbrio surge quando a criatividade é direcionada com foco e responsabilidade.`,
+    4: `<p>A sua motivação íntima é a busca pela segurança, pela ordem e pela construção de algo duradouro e digno de respeito. O que realmente impulsiona a sua alma é o desejo de ter os pés no chão e saber que <strong>você</strong> possui uma base sólida, tanto material quanto familiar, que nada pode abalar.</p>
+    <p><strong>você</strong> sente uma satisfação profunda no trabalho bem feito e na organização da sua rotina. O seu desejo secreto é ser vista como uma pessoa honrada, eficiente e indispensável. <strong>você</strong> valoriza a tradição, a pontualidade e a justiça, sentindo que a sua missão é trazer estrutura para o mundo e proteger aqueles que dependem da sua força e disciplina.</p>
+    <p>Para <strong>você</strong>, a felicidade não está em aventuras passageiras, mas na tranquilidade de uma casa bem cuidada, de uma carreira estável e da consciência limpa de quem cumpre com todos os seus deveres. A sua alma busca a perfeição nos detalhes e a solidez nos resultados a longo prazo.</p>`,
 
-4: `COMPORTAMENTO 4
-Prudente, observador e resistente
-O 4 é o Número do Comportamento das pessoas nascidas nos dias 4, 13, 22 e 31 do mês. 
-O Número do Comportamento 4 indica uma postura psicológica defensiva e analítica diante da vida. Quando confrontada com desafios, essa pessoa tende a reagir com cautela, disciplina e necessidade de segurança. Sua resposta emocional costuma ser baseada na lógica, na organização e na busca por estabilidade.
+    5: `<p>A sua motivação mais profunda é a liberdade absoluta de movimento e de pensamento. O que realmente faz a sua alma vibrar é a possibilidade de mudar, de viajar, de conhecer novas culturas e de experimentar sensações diferentes a cada dia, sem estar presa a rotinas sufocantes.</p>
+    <p><strong>você</strong> deseja viver a vida intensamente, explorando todos os seus sentidos e desafiando constantemente os seus próprios limites. O seu desejo íntimo é ser uma pessoa versátil, moderna e desimpedida, capaz de se adaptar a qualquer situação com rapidez e inteligência. A monotonia é o seu maior medo, e <strong>você</strong> está sempre em busca da próxima grande aventura.</p>
+    <p>Para <strong>você</strong>, a realização vem através do conhecimento direto e da experiência de mundo. <strong>você</strong> se sente viva quando pode expressar sua opinião livremente e quando sente que o amanhã é um mistério excitante a ser desvendado pela sua curiosidade sem fim.</p>`,
 
-Aspectos positivos
-Psicologicamente, o comportamento 4 reage às dificuldades com firmeza, responsabilidade e resistência emocional. Prefere enfrentar os problemas com planejamento e trabalho constante, acreditando que tudo pode ser resolvido com esforço e método.
+    6: `<p>A sua motivação íntima é o desejo de amar, de cuidar e de ser a protetora do seu lar e da sua comunidade. O que realmente impulsiona o seu coração é a busca pelo bem-estar dos outros e pela criação de um ambiente familiar onde reine a harmonia, a justiça e o conforto emocional.</p>
+    <p><strong>você</strong> se sente realizada quando assume responsabilidades em favor daqueles que ama. O seu desejo secreto é ser o porto seguro para os seus amigos e familiares, a pessoa a quem todos recorrem em busca de conselhos e acolhimento. <strong>você</strong> valoriza a beleza, a ética e a paz doméstica acima de qualquer ambição de poder ou fama solitária.</p>
+    <p>Para <strong>você</strong>, a felicidade plena é ver a sua família unida e próspera. A sua alma se nutre do serviço desinteressado e do carinho retribuído, buscando sempre transformar o mundo ao seu redor em um lugar mais humano, acolhedor e esteticamente agradável.</p>`,
 
-É alguém que:
-Observa antes de agir
-Analisa riscos cuidadosamente
-Valoriza estabilidade e previsibilidade
-Confia no esforço contínuo
-Prefere soluções práticas a soluções emocionais
+    7: `<p>A sua motivação mais profunda é a busca pelo conhecimento oculto, pela verdade espiritual e pela perfeição intelectual. O que realmente impulsiona a sua alma é o desejo de entender os "porquês" da existência e de atingir um nível de sabedoria que a coloque acima das futilidades do cotidiano.</p>
+    <p><strong>você</strong> deseja o silêncio, a privacidade e o tempo necessário para estudar e refletir sobre os mistérios da vida. O seu desejo íntimo é ser uma autoridade no campo que escolher, sendo respeitada pela sua profundidade e não pela sua aparência social. <strong>você</strong> possui um radar para a falsidade e busca desesperadamente a autenticidade em si mesma e nos outros.</p>
+    <p>Para <strong>você</strong>, a realização vem através da descoberta de respostas que a maioria das pessoas sequer ousa perguntar. A sua alma busca a conexão com o divino ou com a ciência pura, encontrando paz na solidão produtiva e na clareza de uma mente bem treinada.</p>`,
 
-Em momentos difíceis, tende a se fortalecer através da rotina, da disciplina e do trabalho. Sua segurança emocional nasce da sensação de controle e estrutura.
+    8: `<p>A sua motivação íntima é a conquista do poder material, da autoridade e do sucesso em grande escala. O que realmente impulsiona o seu coração é o desejo de gerir grandes recursos, liderar pessoas e ser reconhecida como uma pessoa influente, competente e vitoriosa no mundo dos negócios.</p>
+    <p><strong>você</strong> sente uma satisfação profunda quando vê os seus esforços se transformarem em prosperidade tangível. O seu desejo secreto é o controle sobre a sua realidade financeira e o reconhecimento social da sua força executiva. <strong>você</strong> não tem medo do trabalho duro, desde que ele a leve ao topo da pirâmide e permita que <strong>você</strong> exerça o seu senso de justiça e comando.</p>
+    <p>Para <strong>você</strong>, a felicidade está ligada à eficiência e à capacidade de realizar sonhos grandiosos. A sua alma busca a maestria sobre as leis da matéria, encontrando realização na construção de um império ou de um legado de abundância que beneficie a sua linhagem e a sociedade.</p>`,
 
-Aspectos negativos
-Quando em desequilíbrio, o comportamento 4 reage ao medo criando rigidez emocional. Pode se tornar:
-
-Excessivamente teimoso
-Defensivo e resistente a mudanças
-Desconfiado
-Crítico e pessimista
-Preso a padrões antigos
-
-Pode reagir às dificuldades tentando controlar tudo ao redor, desenvolvendo ansiedade quando as coisas saem do planejado.
-
-Desenvolvimento psicológico
-O aprendizado desse comportamento é desenvolver flexibilidade emocional.
-Quando aprende a confiar mais na vida e menos no controle absoluto, transforma sua resistência em verdadeira força interior.`,
-
-5: `COMPORTAMENTO 5
-Impulsivo, adaptável e inquieto
-O 5 é o Número do Comportamento das pessoas nascidas nos dias 5, 14 e 23 do mês. 
-O comportamento 5 reage à vida através do movimento, da curiosidade e da necessidade de liberdade. Diante de dificuldades, prefere agir rapidamente, experimentar e mudar de direção se necessário.
-
-Aspectos positivos
-Psicologicamente, esse comportamento responde ao estresse com ação e adaptação.
-Ao invés de se prender ao problema, busca novas possibilidades.
-
-É alguém que:
-Aprende com experiências
-Se adapta rapidamente a mudanças
-Mantém mente aberta
-Busca soluções criativas
-Não teme o desconhecido
-
-Sua força emocional está na capacidade de recomeçar sempre que necessário.
-Aspectos negativos
-Quando em desequilíbrio, reage com:
-
-Impulsividade
-Ansiedade
-Fuga de responsabilidades
-Instabilidade emocional
-Dificuldade de manter compromissos
-Pode evitar lidar profundamente com problemas, preferindo escapar através de distrações ou mudanças constantes.
-
-Desenvolvimento psicológico
-Seu crescimento está em aprender disciplina emocional.
-Quando equilibra liberdade com responsabilidade, transforma inquietação em evolução.`,
-
-6: `COMPORTAMENTO 6
-Afetivo, protetor e sensível
-O 6 é o Número do Comportamento das pessoas nascidas nos dias 6, 15 e 24 do mês. 
-O comportamento 6 responde às dificuldades através do cuidado, do afeto e da necessidade de proteger quem ama.
-
-Aspectos positivos
-Psicologicamente reage buscando harmonia e apoio emocional.
-Sua primeira reação diante de conflitos é tentar cuidar, conciliar e proteger.
-
-É alguém que:
-Busca segurança emocional
-Valoriza vínculos afetivos
-Se preocupa com o bem-estar dos outros
-Tem grande empatia
-Procura resolver conflitos com amor
-Sua força emocional está no sentimento de pertencimento.
-Aspectos negativos
-Quando em desequilíbrio, reage com:
-Dependência emocional
-Carência afetiva
-Necessidade excessiva de aprovação
-Ciúmes
-Sentimento de rejeição
-Pode assumir responsabilidades emocionais que não são suas.
-
-Desenvolvimento psicológico
-Precisa aprender autovalorização e limites emocionais.
-Quando equilibra cuidado com autonomia, transforma amor em força emocional.`,
-
-7: `COMPORTAMENTO 7
-Reservado, analítico e introspectivo
-O 7 é o Número do Comportamento das pessoas nascidas nos dias 7, 16 e 25 do mês. 
-O comportamento 7 reage às dificuldades através da introspecção, reflexão e necessidade de compreensão profunda.
-
-Aspectos positivos
-Psicologicamente prefere se afastar para pensar antes de agir.
-Busca compreender o significado das experiências.
-
-É alguém que:
-Analisa profundamente os problemas
-Busca respostas internas
-Desenvolve autocontrole emocional
-Valoriza conhecimento e sabedoria
-Sua força está na capacidade de observar antes de agir.
-Aspectos negativos
-Quando em desequilíbrio:
-Se isola emocionalmente
-Reprime sentimentos
-Desconfia das pessoas
-Torna-se excessivamente crítico
-Pode fugir de conflitos emocionais através do distanciamento.
-
-Desenvolvimento psicológico
-Precisa aprender conexão emocional e confiança.
-Quando equilibra mente e emoção, transforma análise em sabedoria.`,
-
-8: `COMPORTAMENTO 8
-Controlador, estratégico e resiliente
-O 8 é o Número do Comportamento das pessoas nascidas nos dias 8, 17 e 26 do mês. 
-O comportamento 8 reage às dificuldades buscando controle, poder pessoal e resultados concretos.
-
-Aspectos positivos
-Psicologicamente enfrenta desafios com determinação e resistência.
-Não foge de problemas — enfrenta e resolve.
-
-É alguém que:
-Assume responsabilidade
-Mantém autocontrole emocional
-Age com estratégia
-Busca segurança material e emocional
-Sua força está na capacidade de agir sob pressão.
-Aspectos negativos
-Quando em desequilíbrio:
-Torna-se controlador
-Autoritário
-Impaciente
-Obcecado por resultados
-Pode reagir ao medo tentando controlar tudo e todos.
-
-Desenvolvimento psicológico
-Precisa aprender confiança e flexibilidade emocional.
-Quando equilibra força com sensibilidade, torna-se líder equilibrado.`,
-
-9: `COMPORTAMENTO 9
-Intenso, idealista e emocional
-O 9 é o Número do Comportamento das pessoas nascidas nos dias 9, 18 e 27 do mês. 
-O comportamento 9 reage às dificuldades com intensidade emocional e forte senso de justiça.
-
-Aspectos positivos
-Psicologicamente enfrenta problemas movido por valores, ideais e emoções profundas.
-
-É alguém que:
-Busca sentido nas experiências
-Tem forte empatia
-Deseja ajudar os outros
-Reage com coragem às injustiças
-Sua força está na paixão pela vida e pelas pessoas.
-Aspectos negativos
-Quando em desequilíbrio:
-Reage com explosões emocionais
-Guarda ressentimentos
-Tem dificuldade em perdoar
-Vive oscilações emocionais
-Pode reagir de forma exagerada às frustrações.
-
-Desenvolvimento psicológico
-Precisa aprender equilíbrio emocional e desapego.
-Quando amadurece, transforma intensidade em sabedoria emocional.`
-
-
+    9: `<p>A sua motivação mais profunda é o desejo de servir à humanidade e de deixar um mundo melhor através da sua compaixão e generosidade. O que realmente impulsiona a sua alma é a busca pelo desapego, pelo perdão e pela compreensão universal das dores humanas, sem distinção de raça ou credo.</p>
+    <p><strong>você</strong> deseja viver uma vida com propósito espiritual e humanitário. O seu desejo íntimo é ser uma fonte de inspiração e cura para os outros, sentindo que a sua jornada só faz sentido se <strong>você</strong> puder aliviar o sofrimento de alguém. <strong>você</strong> valoriza o conhecimento de muitas vidas e busca a conclusão de ciclos com dignidade e sabedoria amorosa.</p>
+    <p>Para <strong>você</strong>, a realização plena vem da entrega total a uma causa nobre. A sua alma se nutre do altruísmo e da visão de um mundo mais justo, encontrando paz quando <strong>você</strong> consegue elevar a consciência daqueles que cruzam o seu caminho através do seu exemplo de amor incondicional.</p>`
+  
 
   },
 
-motivacao: {
-1: `Você possui uma necessidade profunda de independência e autonomia. Sua maior motivação é dirigir a própria vida e tomar decisões baseadas em suas convicções pessoais. Existe dentro de você um forte impulso de liderança e a sensação de que precisa estar no controle do próprio destino. Essa força interior lhe concede coragem para assumir responsabilidades, tomar decisões ousadas e iniciar caminhos que outras pessoas evitariam. Você não teme desafios e, muitas vezes, até se fortalece diante deles. 
+ // --- INFLUÊNCIA (A FORÇA DAS CONSOANTES / OPORTUNIDADES) ---
+  influencia: {
+    1: `<p>A sua influência no mundo é marcada por uma energia de pioneirismo e independência absoluta. <strong>você</strong> atrai oportunidades que exigem coragem, iniciativa e a capacidade de decidir sem depender do aval de terceiros, agindo como um motor de inovação constante.</p>
+    <p>A força da sua influência faz com que as portas se abram especialmente em cargos de liderança ou em projetos onde <strong>você</strong> possa imprimir a sua marca pessoal única. <strong>você</strong> influencia os outros através da sua determinação inabalável, mostrando que é possível vencer desafios aparentemente impossíveis através da autoconfiança.</p>
+    <p>No seu cotidiano, essa influência se traduz em um magnetismo que atrai situações onde <strong>você</strong> é chamada a ser a cabeça, o início e a direção. O mundo espera que <strong>você</strong> tome a frente, e sua capacidade de influenciar positivamente depende da sua coragem em aceitar o papel de protagonista da sua própria história.</p>`,
 
-A rotina, a limitação e a dependência emocional ou profissional tendem a sufocar sua energia. Quando acredita em algo, demonstra determinação incomum e capacidade de superar obstáculos com persistência admirável. No entanto, o excesso de autossuficiência pode torná-lo rígido, impaciente ou dominador. Seu desafio é equilibrar independência com cooperação, aprendendo a liderar sem isolar-se.`,
+    2: `<p>A sua influência é exercida através da diplomacia, da cooperação e do poder da persuasão suave. <strong>você</strong> possui a capacidade única de influenciar ambientes e pessoas sem precisar elevar o tom de voz, agindo como o "cimento" que une diferentes peças em uma estrutura sólida.</p>
+    <p>As oportunidades que surgem para <strong>você</strong> estão quase sempre ligadas a parcerias, mediação de conflitos e trabalhos que exigem um alto grau de sensibilidade e atenção aos detalhes. <strong>você</strong> influencia o mundo ao mostrar que a gentileza e a paciência são ferramentas de poder muito mais eficazes do que a força bruta.</p>
+    <p>As pessoas sentem-se naturalmente inclinadas a ouvir os seus conselhos porque percebem que a sua influência é pautada pelo equilíbrio e pelo desejo genuíno de harmonia. Sua presença é o ponto de paz em meio ao caos, e sua força reside na capacidade de fazer com que todos se sintam incluídos e valorizados.</p>`,
 
-2: `Sua motivação central é viver em harmonia, sentir-se amado e construir relações profundas e significativas. Você busca conexão emocional, parceria e reconhecimento afetivo. Existe uma necessidade genuína de ser útil, acolher, compreender e contribuir para a paz ao seu redor. Evitar conflitos é quase instintivo, pois a tensão emocional lhe causa grande desconforto. Essa sensibilidade faz de você um conciliador natural, capaz de perceber nuances emocionais que passam despercebidas para outros. Entretanto, o desejo de agradar pode levar à autonegação e à dificuldade de impor limites. 
+    3: `<p>A sua influência é vibrante, comunicativa e profundamente criativa. <strong>você</strong> possui o dom de influenciar as massas e os círculos sociais através da palavra, do entusiasmo e da alegria, transformando qualquer ambiente monótono em um espaço de troca e inspiração.</p>
+    <p>As portas se abrem para <strong>você</strong> em áreas que envolvem a expressão artística, a venda de ideias, o marketing e o entretenimento. <strong>você</strong> influencia as pessoas ao elevar o ânimo delas, fazendo com que vejam o lado positivo da vida e acreditem no próprio potencial criativo.</p>
+    <p>Sua influência é solar; onde <strong>você</strong> chega, a comunicação flui. <strong>você</strong> tem a capacidade de traduzir conceitos complexos de forma simples e encantadora, o que a torna uma figura central em qualquer rede de contatos. O seu brilho pessoal é a sua maior ferramenta de persuasão e sucesso.</p>`,
 
-Seu crescimento acontece quando aprende a confiar na própria força interior e a expressar suas necessidades com segurança. Quando encontra equilíbrio, torna-se um poderoso agente de união, empatia e cooperação.`,
+    4: `<p>A sua influência é pautada pela estabilidade, pela confiança e pelo respeito às regras e à ordem. <strong>você</strong> influencia o mundo ao seu redor através do exemplo de integridade e trabalho árduo, sendo a pessoa em quem todos confiam quando o assunto é seriedade e entrega de resultados.</p>
+    <p>As oportunidades que a vida lhe oferece estão ligadas à construção de bases sólidas, à administração de bens, à engenharia de processos ou a qualquer área que exija disciplina absoluta. <strong>você</strong> influencia as pessoas ao trazer segurança e estrutura para a vida delas, mostrando que o sucesso é filho da persistência.</p>
+    <p>No seu dia a dia, sua influência é percebida como um porto seguro. <strong>você</strong> não precisa de artifícios para convencer ninguém; a sua palavra é a sua lei e os seus resultados falam por <strong>você</strong>. O mundo a vê como uma força construtora essencial para a manutenção da ordem e do progresso real.</p>`,
 
-3: `Sua motivação é experimentar a alegria de viver, expressar sua criatividade e ser reconhecido pelo seu brilho pessoal. Existe um impulso forte para se comunicar, inspirar e compartilhar entusiasmo. Você deseja viver em ambientes agradáveis, cercado por pessoas e experiências que alimentem sua imaginação. 
+    5: `<p>A sua influência é magnética, rápida e voltada para a quebra de padrões obsoletos. <strong>você</strong> influencia as pessoas através da sua adaptabilidade e do seu espírito livre, agindo como um agente de mudança que desafia o status quo e aponta para o futuro.</p>
+    <p>As oportunidades fluem para <strong>você</strong> através das viagens, das trocas intelectuais, do comércio e de tudo o que envolve inovação e movimento. <strong>você</strong> influencia o mundo ao mostrar que a liberdade é um valor inegociável e que a vida é curta demais para ser vivida dentro de uma caixa de rotinas sufocantes.</p>
+    <p>Sua presença gera movimento; onde <strong>você</strong> atua, as coisas mudam de lugar. <strong>você</strong> tem o dom de convencer as pessoas a experimentarem o novo, agindo com uma versatilidade que a torna capaz de transitar por diferentes mundos com a mesma facilidade e inteligência.</p>`,
 
-Possui talento natural para expressão verbal, artística ou social, e encontra satisfação ao transmitir ideias, histórias e emoções. Porém, a dispersão e o excesso de interesses podem dificultar a continuidade de projetos. Seu maior aprendizado é desenvolver foco e disciplina sem perder a leveza e o entusiasmo que fazem parte da sua essência.`,
+    6: `<p>A sua influência é exercida através do amor, da responsabilidade e do desejo de cuidar do bem comum. <strong>você</strong> possui uma força de atração baseada na confiança e no senso de justiça, agindo como uma figura de autoridade moral que todos respeitam e buscam para obter orientação.</p>
+    <p>As melhores oportunidades para <strong>você</strong> surgem no serviço à comunidade, na educação, na saúde, na decoração ou em qualquer área onde o bem-estar humano seja o foco principal. <strong>você</strong> influencia as pessoas ao criar harmonia e ao mostrar que a dedicação aos outros é a forma mais elevada de realização pessoal.</p>
+    <p>Sua influência no lar e no trabalho é a de quem pacifica e protege. <strong>você</strong> atrai o respeito por ser uma pessoa íntegra, que valoriza a família e as tradições, mas que também sabe usar a beleza e a estética para elevar a vibração de tudo o que toca.</p>`,
 
-4: `Sua motivação principal é construir estabilidade, segurança e estrutura. Você sente necessidade de organizar, planejar e criar bases sólidas para o futuro. Existe um forte desejo de ser confiável, responsável e respeitado pelo seu esforço e dedicação. A previsibilidade lhe traz tranquilidade e a disciplina é sua aliada natural. Contudo, o excesso de rigidez pode limitar sua flexibilidade emocional e criatividade. 
+    7: `<p>A sua influência é profunda, intelectual e voltada para a busca da excelência e da verdade. <strong>você</strong> influencia o mundo através do seu conhecimento técnico, da sua sabedoria espiritual e da sua capacidade de analisar o que ninguém mais percebe, agindo com uma classe silenciosa.</p>
+    <p>As oportunidades batem à sua porta em áreas de pesquisa, ciência, espiritualidade, análise de sistemas ou consultoria especializada. <strong>você</strong> influencia as pessoas pelo seu padrão de qualidade e pela sua seriedade, sendo vista como uma autoridade que não se deixa levar por modismos ou opiniões superficiais.</p>
+    <p>Sua influência é mais mental do que física; <strong>você</strong> convence pelo argumento sólido e pela intuição refinada. O mundo respeita o seu silêncio e a sua privacidade, pois sabe que, quando <strong>você</strong> decide falar, o que sai da sua boca é fruto de uma reflexão profunda e valiosa.</p>`,
 
-Seu crescimento acontece quando aprende a equilibrar segurança com abertura ao novo.`,
+    8: `<p>A sua influência é executiva, poderosa e focada na realização material e na justiça. <strong>você</strong> influencia as pessoas através da sua capacidade de comando e da sua visão estratégica, agindo como uma força que organiza recursos e pessoas para atingir grandes metas econômicas e sociais.</p>
+    <p>As oportunidades que surgem para <strong>você</strong> estão ligadas a cargos de alta gestão, finanças, política ou grandes empreendimentos. <strong>você</strong> influencia o mundo ao demonstrar que é possível acumular poder e riqueza com ética e responsabilidade, sendo um exemplo de eficiência e pragmatismo.</p>
+    <p>Sua influência é imponente; <strong>você</strong> exala sucesso e autoridade. As pessoas sentem que <strong>você</strong> é a pessoa certa para liderar em tempos difíceis, pois sua determinação e seu senso de julgamento são inabaláveis. <strong>você</strong> é o motor que gera progresso e abundância tangível.</p>`,
 
-5: `Você é movido pela liberdade, pela variedade e pela experiência. A rotina prolongada gera inquietação e sensação de aprisionamento. Sua motivação é explorar, experimentar e viver intensamente. Mudanças e desafios estimulam sua mente e sua energia vital. 
-
-O risco existe quando a busca por novidades impede a constância necessária para concluir projetos. Seu aprendizado é encontrar equilíbrio entre aventura e compromisso.`,
-
-6: `Sua motivação nasce do desejo de amar, cuidar e proteger. Família, vínculos e responsabilidade emocional são pilares centrais. 
-
-Existe uma forte necessidade de sentir-se útil e necessário. Porém, o excesso de responsabilidade pode gerar sobrecarga emocional. Seu crescimento ocorre quando aprende a cuidar de si com a mesma dedicação que oferece aos outros.`,
-
-7: `Você é motivado pela busca do conhecimento, da verdade e da compreensão profunda da vida. Existe um impulso interior para analisar, estudar e compreender o mundo em níveis mais profundos. Valoriza o silêncio, a introspecção e a reflexão. Seu desafio é equilibrar razão e emoção, permitindo-se conectar mais profundamente com as pessoas.`,
-
-8: `Sua motivação está ligada ao sucesso, realização material e reconhecimento. Existe um forte impulso de conquistar resultados concretos e exercer liderança. 
-
-Você deseja deixar marcas visíveis no mundo. O desafio é equilibrar ambição com sensibilidade e propósito humano.`,
-
-9: `Sua motivação é servir, contribuir e causar impacto positivo no mundo. Existe uma forte inclinação humanitária e desejo de ajudar. Você sente satisfação ao contribuir para algo maior do que si mesmo. O aprendizado está em equilibrar altruísmo com limites saudáveis.`
-
+    9: `<p>A sua influência é universal, humanitária e profundamente inspiradora. <strong>você</strong> possui o talento de influenciar pessoas de todas as origens através do seu carisma desapegado e da sua visão de mundo sem fronteiras, agindo como uma ponte entre diferentes realidades.</p>
+    <p>As oportunidades de ouro para <strong>você</strong> estão no trabalho voluntário, nas artes, na diplomacia internacional ou em qualquer área que busque a elevação da consciência humana. <strong>você</strong> influencia o mundo ao ensinar o desapego e o amor incondicional, mostrando que a verdadeira grandeza reside na generosidade.</p>
+    <p>Sua influência é magnética de uma forma espiritual; <strong>você</strong> atrai as pessoas que buscam um sentido maior para a vida. <strong>você</strong> tem o dom de encerrar ciclos com dignidade e de inspirar os outros a lutarem por um mundo onde a compaixão seja a regra e não a exceção.</p>`
+  
 
   },
 
-  Influencia: {
-    1:`Influência 1 — Aparência de Liderança, Autoconfiança e Individualidade
-
-Você transmite a imagem de uma pessoa dinâmica, eficiente e extremamente segura. Em um primeiro contato, pode ser percebido tanto como alguém agressivo, individualista, egocêntrico e autocentrado, quanto como um líder natural, direto, decidido e com ideias originais. Sua presença sugere que você não se deixa intimidar facilmente e que possui controle emocional suficiente para enfrentar desafios com firmeza.
-
-A forma como você se apresenta ao mundo cria a impressão de uma pessoa capaz, determinada e independente. As pessoas tendem a enxergá-lo como alguém que sabe o que quer e que possui sua própria maneira de fazer as coisas. Sua influência faz com que seja percebido como pioneiro, inovador e criativo, alguém que não teme se arriscar nem se acovarda diante das dificuldades.
-
-Você aparenta possuir forte iniciativa e grande autoconfiança. Essa energia transmite coragem e espírito de liderança, despertando respeito e admiração. Ao mesmo tempo, essa postura pode gerar certo distanciamento emocional, pois algumas pessoas podem sentir que você parece inacessível ou excessivamente dominante.
-
-Existe em sua influência uma aura de comando natural. Os outros percebem que você não aceita facilmente pressão externa e que prefere agir de forma autônoma. Isso cria a imagem de alguém capaz de assumir responsabilidades e tomar decisões com rapidez.
-
-Aspectos positivos da influência:
-Você aparenta força, iniciativa, criatividade, liderança e independência. Inspira segurança, transmite firmeza nas decisões e demonstra coragem para enfrentar desafios. Sua imagem sugere competência, determinação e capacidade de abrir novos caminhos.
-
-Aspectos negativos da influência:
-Pode aparentar arrogância, impulsividade, autoritarismo ou excesso de individualismo. Algumas pessoas podem sentir que você parece competitivo demais, pouco receptivo ou excessivamente voltado para si mesmo.
-
-Aprendizado e equilíbrio:
-O principal desafio dessa influência é desenvolver sensibilidade emocional e capacidade de cooperação. Aprender a ouvir, compartilhar decisões e demonstrar receptividade torna sua imagem mais acessível e inspiradora. Quando equilibra liderança com empatia, você atrai pessoas dispostas a confiar em suas ideias e seguir sua orientação.`,
-
-    2:`Influência 2 — Aparência de Sensibilidade, Diplomacia e Receptividade
-
-Você transmite uma imagem sutil, gentil e cordial. As pessoas costumam percebê-lo como alguém educado, amistoso e fácil de se aproximar. Sua presença tende a despertar simpatia imediata, pois você aparenta ser acessível, compreensivo e disposto a cooperar. Em um primeiro contato, pode ser visto tanto como alguém tímido, passivo e indeciso, quanto como uma pessoa diplomática, equilibrada e profundamente sensível.
-
-Sua influência cria a impressão de alguém paciente e atencioso, capaz de ouvir com empatia e compreender diferentes pontos de vista. As pessoas costumam se sentir importantes e confortáveis ao seu lado, pois sua postura transmite acolhimento e respeito. Existe uma sensação de tranquilidade e segurança emocional associada à sua presença.
-
-Você aparenta ser um excelente ouvinte e alguém disposto a ajudar. Sua energia transmite suavidade e harmonia, fazendo com que os outros sintam que podem confiar em você. Essa característica faz com que seja visto como um mediador natural, alguém capaz de unir pessoas e amenizar conflitos.
-
-No entanto, essa mesma suavidade pode gerar interpretações equivocadas. Algumas pessoas podem enxergar em você falta de iniciativa ou excesso de dependência. Pode parecer que você evita confrontos ou que prefere seguir decisões alheias em vez de impor sua própria vontade.
-
-Aspectos positivos da influência:
-Você aparenta gentileza, diplomacia, paciência, empatia e capacidade de cooperação. Transmite harmonia, compreensão e sensibilidade emocional. É visto como alguém confiável, acessível e fácil de conviver.
-
-Aspectos negativos da influência:
-Pode aparentar insegurança, passividade, indecisão ou excesso de sensibilidade. Algumas pessoas podem subestimar sua força interior ou acreditar que você depende demais da opinião dos outros.
-
-Aprendizado e equilíbrio:
-O desafio dessa influência é desenvolver firmeza e autoconfiança sem perder a sensibilidade. Quando você aprende a se posicionar com segurança, mantendo sua diplomacia natural, passa a ser visto não apenas como alguém gentil, mas também como alguém forte e confiável.`,
-
-    3:`Influência 3 — Aparência de Carisma, Alegria e Expressividade
-
-Você transmite uma imagem vibrante, leve e cheia de vida. As pessoas costumam percebê-lo como alguém divertido, comunicativo e inspirador. Sua presença tende a chamar atenção naturalmente, pois você aparenta entusiasmo, criatividade e facilidade para se expressar. Em um primeiro contato, pode ser visto tanto como alguém disperso, inquieto e curioso, quanto como uma pessoa calorosa, otimista e extremamente sociável.
-
-Sua influência cria a impressão de alguém agradável de conviver, que sabe animar ambientes e trazer leveza às situações. Os outros frequentemente o enxergam como alguém confiante, espontâneo e capaz de enfrentar dificuldades com bom humor. Existe uma sensação de magnetismo pessoal que faz com que você seja percebido como interessante e envolvente.
-
-Você aparenta possuir grande capacidade de comunicação e persuasão. Sua forma de se expressar transmite convicção e entusiasmo, fazendo com que suas ideias pareçam inspiradoras. Muitas pessoas o enxergam como alguém criativo, expressivo e cheio de imaginação.
-
-Entretanto, essa mesma expressividade pode gerar interpretações equivocadas. Algumas pessoas podem sentir que você parece superficial, dramático ou disperso. Pode surgir a impressão de que você evita responsabilidades ou que depende demais da aprovação externa.
-
-Aspectos positivos da influência:
-Você aparenta alegria, carisma, criatividade, entusiasmo e sociabilidade. Inspira motivação, transmite leveza e desperta interesse nas pessoas. É visto como alguém comunicativo, divertido e cheio de energia.
-
-Aspectos negativos da influência:
-Pode aparentar superficialidade, exagero emocional, dispersão ou necessidade excessiva de atenção. Algumas pessoas podem acreditar que você evita profundidade ou compromissos.
-
-Aprendizado e equilíbrio:
-O desafio dessa influência é desenvolver foco e constância. Quando você equilibra entusiasmo com disciplina e profundidade, passa a ser visto não apenas como alguém carismático, mas também como alguém confiável e admirável.`,
-
-    4:`Influência 4 — Aparência de Segurança, Estabilidade e Confiabilidade
-
-Você transmite a imagem de uma pessoa séria, responsável e extremamente confiável. Desde o primeiro contato, as pessoas tendem a perceber em você alguém estável, disciplinado e digno de confiança. Sua presença sugere consistência, organização e compromisso com aquilo que assume.
-
-Os outros o veem como alguém em quem podem confiar para cumprir tarefas com precisão e responsabilidade. Sua influência cria a impressão de segurança, firmeza e respeito às regras. É comum que você seja percebido como uma figura protetora, que valoriza justiça, honestidade e estabilidade.
-
-Entretanto, essa mesma postura pode gerar a impressão de rigidez ou excesso de formalidade. Algumas pessoas podem vê-lo como inflexível, conservador ou resistente a mudanças.
-
-Aspectos positivos da influência:
-Transmite confiabilidade, responsabilidade, disciplina e senso de dever. Inspira segurança e respeito.
-
-Aspectos negativos da influência:
-Pode aparentar rigidez, conservadorismo, excesso de seriedade ou dificuldade em lidar com mudanças.
-
-Aprendizado e equilíbrio:
-O desafio é desenvolver flexibilidade e leveza. Quando equilibra disciplina com abertura, sua imagem torna-se ainda mais admirada.`,
-
-    5:`Influência 5 — Aparência de Liberdade, Versatilidade e Movimento
-
-Você transmite a imagem de alguém livre, moderno e cheio de energia. As pessoas o percebem como curioso, comunicativo e interessado em novidades. Sua presença sugere dinamismo, entusiasmo e facilidade de adaptação.
-
-Sua conversa costuma parecer envolvente e estimulante, despertando curiosidade e interesse. Os outros o veem como alguém carismático e versátil.
-
-Entretanto, essa energia pode gerar impressão de instabilidade ou inquietação. Algumas pessoas podem vê-lo como impulsivo ou pouco comprometido.
-
-Aspectos positivos:
-Carisma, adaptabilidade, entusiasmo e versatilidade.
-
-Aspectos negativos:
-Impulsividade, inquietação, dispersão.
-
-Aprendizado:
-Desenvolver constância e responsabilidade sem perder liberdade.`,
-
-    6:`Influência 6 — Aparência de Cuidado, Proteção e Responsabilidade Emocional
-
-Você transmite uma imagem acolhedora, calorosa e profundamente humana. Desde o primeiro contato, as pessoas costumam perceber em você alguém confiável, compreensivo e disposto a ajudar. Sua presença sugere empatia, responsabilidade afetiva e preocupação genuína com o bem-estar dos outros.
-
-Existe em sua influência uma aura de proteção e segurança emocional. As pessoas tendem a sentir que podem confiar em você, compartilhar problemas e buscar conselhos. É comum que seja visto como alguém que transmite conforto, estabilidade emocional e equilíbrio nas relações.
-
-Sua postura cria a impressão de alguém sociável, gentil e naturalmente disposto a cuidar. Muitos o percebem como conselheiro, orientador ou figura de apoio. Sua presença transmite a sensação de que você se preocupa mais com o coletivo do que com interesses individuais.
-
-Entretanto, essa mesma energia pode gerar interpretações equivocadas. Algumas pessoas podem enxergar em você excesso de responsabilidade, indecisão ou tendência a se sacrificar pelos outros. Pode parecer que você assume problemas que não são seus ou que se envolve emocionalmente além do necessário.
-
-Aspectos positivos da influência:
-Você aparenta generosidade, responsabilidade, empatia, equilíbrio e confiabilidade. Inspira conforto, transmite segurança emocional e desperta confiança nas pessoas.
-
-Aspectos negativos da influência:
-Pode aparentar excesso de preocupação, dificuldade em dizer não, tendência ao sacrifício ou necessidade de aprovação.
-
-Aprendizado e equilíbrio:
-O desafio é desenvolver limites emocionais saudáveis. Quando aprende a equilibrar cuidado com autonomia, sua imagem torna-se ainda mais forte, madura e admirada.`,
-
-    7:`Influência 7 — Aparência de Mistério, Intelecto e Profundidade
-
-Você transmite uma imagem reservada, observadora e profundamente intelectual. As pessoas costumam percebê-lo como alguém sério, introspectivo e seletivo em suas relações. Sua presença desperta curiosidade e respeito.
-
-Existe uma aura de mistério associada à sua influência. Os outros tendem a enxergá-lo como alguém analítico, reflexivo e interessado em compreender o significado das coisas. Você aparenta valorizar conhecimento, sabedoria e profundidade emocional.
-
-Entretanto, essa postura pode gerar a impressão de distanciamento ou frieza. Algumas pessoas podem acreditar que você é inacessível ou pouco interessado em interações superficiais.
-
-Aspectos positivos:
-Sabedoria, inteligência, profundidade e análise.
-
-Aspectos negativos:
-Isolamento, frieza aparente, dificuldade de aproximação.
-
-Aprendizado:
-Desenvolver abertura emocional e proximidade.`,
-
-    8:`Influência 8 — Aparência de Autoridade, Poder e Realização
-
-Você transmite a imagem de alguém forte, ambicioso e determinado. As pessoas o veem como alguém capaz de liderar, conquistar e alcançar resultados concretos.
-
-Sua presença sugere competência, segurança e domínio. É comum que seja visto como alguém influente e capaz de assumir responsabilidades importantes.
-
-Aspectos positivos:
-Liderança, poder pessoal, determinação.
-
-Aspectos negativos:
-Rigidez, controle excessivo, frieza emocional.
-
-Aprendizado:
-Equilibrar poder com empatia.`,
-
-    9:`Influência 9 — Aparência de Humanitarismo, Carisma e Idealismo
-
-Você transmite generosidade, sensibilidade e visão ampla da vida. As pessoas o percebem como alguém carismático, inspirador e preocupado com o bem coletivo.
-
-Sua influência cria a impressão de alguém humanitário, compreensivo e capaz de enxergar além das diferenças.
-
-Aspectos positivos:
-Empatia, inspiração, generosidade.
-
-Aspectos negativos:
-Idealismo excessivo, distanciamento emocional.
-
-Aprendizado:
-Equilibrar idealismo com praticidade.`
-
-  },
-
+// --- PERSONALIDADE (A EXPRESSÃO EXTERNA / COMO O MUNDO VÊ VOCÊ) ---
   Personalidade: {
-    1:`Personalidade 1 — Ambição, Independência e Determinação
-
-Você possui uma personalidade forte, independente e extremamente determinada. Sua natureza é individualista e orientada para conquistas. Existe em você um impulso constante de liderança, autonomia e realização pessoal.
-
-Você é naturalmente autossuficiente, confiante e cheio de energia. Sente necessidade de liberdade para agir de acordo com suas próprias ideias e convicções. Quando pode tomar decisões por conta própria, tende a expressar o melhor de si e alcançar resultados expressivos.
-
-Sua ambição é intensa e sua coragem o impulsiona a enfrentar desafios sem medo das consequências. Você não teme correr riscos e demonstra disposição para explorar caminhos pouco convencionais quando acredita em seus objetivos.
-
-Possui grande capacidade de influenciar pessoas e formar opiniões. Sua presença costuma ser marcante, inspirando admiração em alguns e resistência em outros. Sua forte personalidade pode gerar tanto respeito quanto oposição.
-
-Entretanto, o lado desafiador dessa personalidade pode levá-lo ao egocentrismo, à impaciência e à tendência de dominar situações e pessoas. Seu desejo de decidir e controlar pode gerar conflitos e criar obstáculos em sua trajetória.
-
-Aspectos positivos:
-Independência, coragem, liderança, iniciativa e originalidade.
-
-Aspectos negativos:
-Impulsividade, autoritarismo, egocentrismo e dificuldade em aceitar opiniões.
-
-Aprendizado e equilíbrio:
-Seu sucesso depende diretamente do equilíbrio entre liderança e cooperação. Desenvolver empatia, escuta e flexibilidade permitirá que sua força se transforme em realização verdadeira.`,
-
-    2:`Personalidade 2 — Sensibilidade, Cooperação e Diplomacia
-
-Você possui uma personalidade sensível, receptiva e profundamente voltada para o relacionamento humano. Sua natureza é cooperativa, paciente e conciliadora, com grande habilidade para lidar com pessoas e compreender emoções.
-
-Você demonstra tato, delicadeza e percepção refinada das situações. Possui a capacidade de perceber nuances emocionais e “ler nas entrelinhas”, compreendendo necessidades e interesses alheios com facilidade. Essa habilidade faz de você um mediador natural e excelente negociador.
-
-Sua personalidade se desenvolve melhor em ambientes colaborativos. Trabalhar em parceria ou atuar nos bastidores costuma trazer melhores resultados do que assumir posições de liderança direta, pois sua sensibilidade o torna altamente influenciável pelo ambiente emocional.
-
-Entretanto, essa mesma sensibilidade pode gerar insegurança e indecisão. Você tende a evitar conflitos e pode adiar decisões importantes por medo de desagradar ou causar desequilíbrio.
-
-Aspectos positivos:
-Empatia, diplomacia, cooperação, sensibilidade e capacidade de mediação.
-
-Aspectos negativos:
-Indecisão, insegurança, dependência emocional e dificuldade em se posicionar.
-
-Aprendizado e equilíbrio:
-Desenvolver autoconfiança e firmeza permitirá que sua sensibilidade se transforme em grande força de influência.`,
-
-    3:`Personalidade 3 — Expressividade, Otimismo e Inspiração
-
-Você possui uma personalidade expansiva, comunicativa e inspiradora. Sua energia é criativa, entusiasmada e naturalmente voltada para a expressão de ideias e sentimentos.
-
-Você se comunica com facilidade e possui talento para inspirar e motivar pessoas. Age com espontaneidade e entusiasmo, especialmente quando acredita no que faz.
-
-Entretanto, pode dispersar energia em muitos interesses ao mesmo tempo, faltando disciplina para concluir projetos.
-
-Aspectos positivos:
-Criatividade, comunicação, entusiasmo e inspiração.
-
-Aspectos negativos:
-Dispersão, falta de disciplina e tendência à procrastinação.
-
-Aprendizado:
-Desenvolver foco e constância.`,
-
-4:`Personalidade 4 — Disciplina, Estrutura e Pragmatismo
-
-Você possui uma personalidade fundamentada na estabilidade, na organização e no senso de responsabilidade. Sua forma de agir é prática, cautelosa e orientada para resultados concretos. Existe em você uma necessidade profunda de segurança, previsibilidade e construção de bases sólidas para o futuro.
-
-Você tende a encarar a vida com seriedade e comprometimento. Suas atitudes são guiadas pela lógica, pelo planejamento e pelo desejo de fazer tudo da maneira correta. As pessoas o percebem como alguém confiável, persistente e digno de confiança, alguém que cumpre promessas e leva compromissos até o fim.
-
-Sua personalidade valoriza esforço, disciplina e constância. Você não teme o trabalho árduo e entende que conquistas duradouras exigem dedicação e paciência. Possui grande capacidade de concentração e perseverança, características que o tornam capaz de construir projetos de longo prazo com solidez.
-
-Você prefere seguir métodos seguros e comprovados. Mudanças repentinas ou situações imprevisíveis podem gerar desconforto, pois sua natureza busca estabilidade e controle. Sua prudência o protege de riscos desnecessários, mas também pode limitar oportunidades quando o medo do erro se torna excessivo.
-
-Sua integridade é um dos seus maiores valores. Honestidade, justiça e responsabilidade são princípios que orientam sua conduta. As pessoas tendem a enxergá-lo como alguém correto, confiável e consistente em suas atitudes.
-
-Entretanto, o excesso de cautela pode levar à rigidez. Você pode se tornar resistente a novas ideias, conservador em excesso ou crítico demais consigo mesmo e com os outros. Sua necessidade de controle pode transformar desafios em fontes de ansiedade e frustração.
-
-Aspectos positivos:
-Disciplina, persistência, organização, responsabilidade, confiabilidade e forte ética de trabalho.
-
-Aspectos negativos:
-Rigidez, teimosia, conservadorismo, excesso de preocupação e dificuldade em lidar com mudanças.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a confiar mais na flexibilidade e na criatividade. Ao permitir-se experimentar novas possibilidades, sua disciplina se transforma em uma poderosa ferramenta de realização e evolução pessoal.`,
-
-
-5:`Personalidade 5 — Liberdade, Movimento e Versatilidade
-
-Você possui uma personalidade marcada pelo dinamismo, pela curiosidade e pela necessidade constante de movimento. Sua forma de agir é espontânea, adaptável e aberta às experiências da vida. Existe em você uma forte necessidade de liberdade, variedade e expansão de horizontes.
-
-Você se sente motivado quando a vida oferece mudanças, desafios e novas possibilidades. Rotina excessiva, repetição e ambientes restritivos podem gerar inquietação e sensação de aprisionamento. Sua natureza busca novidade, aventura e aprendizado através da experiência direta.
-
-As pessoas o percebem como alguém carismático, comunicativo e cheio de energia. Sua presença costuma trazer entusiasmo, leveza e movimento aos ambientes. Você tem facilidade para interagir com diferentes tipos de pessoas e adaptar-se a diferentes contextos sociais.
-
-Sua personalidade é extremamente versátil. Você aprende rápido, se ajusta com facilidade e costuma encontrar soluções criativas para situações inesperadas. Mudanças não o intimidam; pelo contrário, costumam estimular sua motivação e sua criatividade.
-
-Você possui forte ligação com os sentidos e com a experiência prática da vida. Gosta de explorar, experimentar e viver intensamente o presente. Essa característica o torna uma pessoa vibrante, curiosa e aberta ao mundo.
-
-No entanto, o excesso de liberdade pode gerar dispersão. Existe tendência a iniciar muitos projetos e ter dificuldade em concluí-los. A impaciência pode levá-lo a buscar resultados rápidos ou abandonar tarefas quando perdem o estímulo inicial.
-
-A disciplina pode parecer limitadora, mas é justamente ela que transforma seu potencial em conquistas concretas. Sem direção, sua energia pode se dissipar em múltiplos interesses sem resultados duradouros.
-
-Aspectos positivos:
-Versatilidade, adaptabilidade, comunicação, carisma, criatividade e espírito aventureiro.
-
-Aspectos negativos:
-Impulsividade, dispersão, instabilidade, dificuldade com rotina e tendência a evitar responsabilidades.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a equilibrar liberdade com disciplina. Ao canalizar sua energia e manter foco, você transforma sua versatilidade em realização e expansão verdadeira.`,
-
-
-6:`Personalidade 6 — Responsabilidade, Amor e Compromisso
-
-Você possui uma personalidade marcada pelo senso de responsabilidade, cuidado e dedicação ao bem-estar das pessoas ao seu redor. Sua atitude natural diante da vida é proteger, acolher e contribuir para a harmonia dos ambientes em que vive.
-
-Existe em você uma forte necessidade de criar vínculos, cuidar das relações e construir ambientes seguros e equilibrados. Sua forma de agir costuma ser guiada pelo coração, pela empatia e pelo desejo de ajudar.
-
-As pessoas o percebem como alguém confiável, generoso e disposto a assumir responsabilidades. Sua presença transmite segurança emocional, acolhimento e estabilidade, o que faz com que muitos procurem seu apoio e orientação.
-
-Você possui um profundo senso de dever. Frequentemente sente que precisa cuidar das pessoas, resolver conflitos e manter a harmonia nos relacionamentos. Essa característica faz de você um conselheiro natural.
-
-Existe também uma forte ligação com valores familiares, afetivos e comunitários. A necessidade de sentir que é útil e importante para os outros é um dos motores de sua personalidade.
-
-Sua criatividade pode se manifestar em diversas áreas, especialmente naquelas que envolvem estética, arte, cuidado ou organização de ambientes. Você busca beleza, conforto e equilíbrio.
-
-Entretanto, o excesso de responsabilidade pode transformar cuidado em sobrecarga. Há tendência a assumir problemas que não são seus ou a se sacrificar além do necessário.
-
-Quando desequilibrado, pode tornar-se controlador, possessivo ou excessivamente crítico, tentando impor sua visão de cuidado e proteção aos outros.
-
-Aspectos positivos:
-Amor, empatia, responsabilidade, generosidade, senso de justiça e capacidade de acolhimento.
-
-Aspectos negativos:
-Controle excessivo, ciúme, interferência na vida alheia, auto-sacrifício exagerado e dificuldade em estabelecer limites.
-
-Aprendizado e equilíbrio:
-Seu crescimento ocorre quando aprende a cuidar sem se sobrecarregar. Ao equilibrar amor próprio e cuidado com os outros, sua personalidade se torna uma poderosa fonte de harmonia e equilíbrio.`,
-
-
-    7:`Personalidade 7 — Conhecimento, Profundidade e Interiorização
-
-Você possui uma personalidade profundamente analítica, introspectiva e orientada pela busca da verdade. Sua forma de agir é guiada pela necessidade de compreender a vida em níveis mais profundos, indo além das aparências e do superficial.
-
-Existe em você uma inclinação natural para a reflexão, o estudo e a observação. Antes de agir, prefere analisar, questionar e compreender todos os aspectos possíveis de uma situação.
-
-Sua mente é investigativa, curiosa e seletiva. Você busca conhecimento, sabedoria e entendimento genuíno, e raramente aceita explicações superficiais.
-
-As pessoas o percebem como alguém reservado, sério e intelectualmente profundo. Sua postura transmite discrição, autocontrole e independência emocional.
-
-Você valoriza sua privacidade e necessita de momentos de silêncio e solitude para reorganizar seus pensamentos e emoções. O excesso de estímulos pode gerar desgaste e ansiedade.
-
-Existe uma forte necessidade de compreender o sentido da vida, o funcionamento das pessoas e os mistérios da existência. Filosofia, espiritualidade, ciência ou psicologia costumam exercer forte atração sobre você.
-
-Sua prudência faz com que evite decisões impulsivas. Prefere amadurecer ideias antes de agir, buscando segurança e clareza.
-
-Entretanto, o excesso de análise pode gerar procrastinação e dificuldade de ação. Às vezes pensa demais e age de menos.
-
-Quando desequilibrado, pode tornar-se distante, crítico, cético ou emocionalmente fechado, dificultando vínculos afetivos.
-
-Aspectos positivos:
-Sabedoria, introspecção, capacidade analítica, prudência, profundidade intelectual e discernimento.
-
-Aspectos negativos:
-Isolamento, excesso de crítica, pessimismo, dificuldade de confiar e tendência ao distanciamento emocional.
-
-Aprendizado e equilíbrio:
-Seu crescimento ocorre quando aprende a equilibrar razão e emoção, pensamento e ação. Ao compartilhar sua sabedoria com o mundo, sua personalidade se torna fonte de conhecimento e orientação.`,
-
-    8:`Personalidade 8 — Poder, Realização e Liderança Material
-
-Você possui uma personalidade forte, determinada e orientada para conquistas concretas. Sua forma de agir é marcada pela ambição, pela organização e pela busca de resultados tangíveis.
-
-Existe em você uma poderosa necessidade de realização, reconhecimento e crescimento material. Você entende a vida como um campo de desafios a serem superados por meio de estratégia, disciplina e perseverança.
-
-Sua postura transmite autoridade, firmeza e segurança. As pessoas tendem a enxergar você como alguém confiável, competente e capaz de assumir responsabilidades importantes.
-
-Você possui visão prática e estratégica, sendo naturalmente inclinado a planejar, organizar e estruturar projetos e objetivos de longo prazo.
-
-A liderança surge como consequência natural da sua capacidade de tomar decisões, assumir riscos e conduzir situações com firmeza.
-
-Existe grande facilidade para lidar com recursos materiais, administração, negócios e ambientes competitivos.
-
-Você costuma enxergar a vida sob uma perspectiva ampla e realista, buscando sempre crescimento, progresso e estabilidade.
-
-Entretanto, o foco excessivo em resultados pode levar ao distanciamento emocional e à dificuldade de demonstrar vulnerabilidade.
-
-Quando desequilibrado, pode tornar-se autoritário, controlador, rígido ou excessivamente materialista, valorizando apenas conquistas externas.
-
-Aspectos positivos:
-Liderança, disciplina, ambição saudável, capacidade de realização, senso estratégico e responsabilidade.
-
-Aspectos negativos:
-Autoritarismo, rigidez, excesso de controle, materialismo e dificuldade de lidar com emoções.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a equilibrar poder e sensibilidade, sucesso material e realização emocional. Ao integrar força e humanidade, sua personalidade se torna uma poderosa força de construção e transformação.`,
-
-    9:`Personalidade 9 — Humanitarismo, Idealismo e Consciência Universal
-
-Você possui uma personalidade marcada pela sensibilidade, pela compaixão e por um profundo senso de justiça. Sua maneira de agir demonstra forte preocupação com o coletivo e com o bem-estar das pessoas ao seu redor.
-
-Existe em você uma tendência natural a enxergar a vida sob uma perspectiva ampla e universal. Seus valores vão além do interesse pessoal, buscando significado, propósito e contribuição para algo maior.
-
-Sua presença transmite generosidade, compreensão e abertura emocional. Muitas pessoas percebem em você alguém capaz de ouvir, acolher e compreender sem julgamentos.
-
-Você possui forte inclinação para causas sociais, humanitárias ou espirituais. Existe uma necessidade interna de contribuir para a melhoria do mundo e das relações humanas.
-
-Sua personalidade carrega um senso profundo de missão, como se houvesse sempre algo maior guiando suas ações e escolhas.
-
-Você demonstra grande empatia, sensibilidade e capacidade de se colocar no lugar do outro. Isso torna sua presença reconfortante e inspiradora.
-
-Ao mesmo tempo, existe uma necessidade de reconhecimento e validação emocional. Você deseja que suas ações sejam compreendidas e valorizadas.
-
-Quando equilibrado, torna-se uma personalidade inspiradora, generosa e capaz de influenciar positivamente muitas pessoas.
-
-Porém, quando desequilibrado, pode tornar-se idealista em excesso, ingênuo, emocionalmente sobrecarregado ou frustrado com a realidade.
-
-Pode sentir que dá mais do que recebe, o que gera decepções e desânimo.
-
-Aspectos positivos:
-Empatia, altruísmo, compaixão, generosidade, visão humanitária e capacidade de inspirar.
-
-Aspectos negativos:
-Idealismo excessivo, frustração emocional, tendência ao sacrifício exagerado, necessidade de reconhecimento e sensibilidade intensa.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a ajudar sem se anular, a servir sem se sacrificar excessivamente e a equilibrar idealismo com realidade. Ao fazer isso, sua personalidade se torna uma poderosa força de transformação e inspiração coletiva.`
+    1: `<p>A imagem que <strong>você</strong> projeta para o mundo é de uma pessoa poderosa, dinâmica e extremamente competente. Quando <strong>você</strong> entra em um ambiente, as pessoas percebem imediatamente a sua autoridade natural e a sua confiança, vendo em <strong>você</strong> alguém que sabe exatamente o que quer e como chegar lá.</p>
+    <p><strong>você</strong> se expressa de maneira direta, assertiva e muitas vezes é admirada pela sua coragem de tomar decisões rápidas sob pressão. A sua personalidade exterior não aceita facilmente o papel de seguidora; <strong>você</strong> prefere criar as suas próprias regras e liderar pelo exemplo de eficiência e força de vontade inabalável.</p>
+    <p>Muitas vezes, essa fachada de força pode fazer com que os outros a vejam como alguém um pouco distante ou excessivamente séria, mas isso é apenas o reflexo do seu foco intenso na realização. <strong>você</strong> valoriza a inteligência e a autonomia, e o mundo a respeita como uma líder nata e uma realizadora de grandes feitos.</p>`,
+
+    2: `<p>A imagem que <strong>você</strong> projeta para a sociedade é a de uma pessoa extremamente gentil, diplomática e acolhedora. As pessoas veem em <strong>você</strong> uma presença harmoniosa, alguém que sabe ouvir e que possui um tato social refinado para lidar com qualquer tipo de temperamento ou situação delicada.</p>
+    <p>Sua expressão externa transmite tranquilidade e cooperação. <strong>você</strong> é vista como a parceira ideal, a conselheira prudente e a pessoa que traz equilíbrio para os grupos em que circula. <strong>você</strong> prefere roupas e modos que reflitam bom gosto e suavidade, evitando qualquer tipo de ostentação agressiva ou comportamento barulhento.</p>
+    <p>Essa postura faz com que as pessoas se sintam seguras ao seu lado, confiando segredos e buscando o seu apoio emocional. O mundo percebe <strong>você</strong> como uma alma pacífica, atenta aos detalhes e profundamente preocupada com o bem-estar e a justiça nas relações humanas.</p>`,
+
+    3: `<p>A imagem que <strong>você</strong> projeta para o mundo é vibrante, criativa e repleta de carisma. As pessoas percebem <strong>você</strong> como uma figura solar, dotada de um magnetismo social que atrai amizades e oportunidades através da sua facilidade de comunicação e do seu senso de humor contagiante.</p>
+    <p>Sua expressão externa é a de uma pessoa entusiasmada, que gosta de se vestir com estilo e de participar ativamente da vida social. <strong>você</strong> é vista como alguém multitalentoso, capaz de entreter e motivar os outros com facilidade, transformando qualquer encontro comum em um evento especial através da sua presença luminosa.</p>
+    <p>O mundo vê em <strong>você</strong> a personificação da alegria e da imaginação. <strong>você</strong> é admirada pela sua agilidade mental e pela forma leve como encara os desafios, sendo sempre lembrada como aquela pessoa que traz cor, inspiração e boas conversas para a vida de todos.</p>`,
+
+    4: `<p>A imagem que <strong>você</strong> projeta para a sociedade é de uma pessoa sólida, confiável e extremamente trabalhadora. As pessoas veem em <strong>você</strong> alguém que possui os pés no chão, que valoriza a tradição e que nunca foge de suas responsabilidades, agindo com uma integridade que impõe respeito imediato.</p>
+    <p>Sua expressão externa transmite ordem, disciplina e seriedade. <strong>você</strong> é vista como o pilar de qualquer estrutura, seja na família ou no trabalho, a pessoa que planeja com cuidado e executa com perfeição. <strong>você</strong> prefere o que é prático, duradouro e honesto, evitando futilidades ou exibições vazias de ego.</p>
+    <p>Para o mundo, <strong>você</strong> é o porto seguro, a rocha que permanece firme em meio às tempestades. <strong>você</strong> é admirada pela sua persistência e pela sua capacidade de construir resultados concretos através do esforço honesto e da organização impecável da realidade.</p>`,
+
+    5: `<p>A imagem que <strong>você</strong> projeta para o mundo é a de uma pessoa moderna, versátil e cheia de energia vital. As pessoas veem em <strong>você</strong> uma alma livre e progressista, alguém que está sempre em movimento, acompanhando as novidades e pronta para se adaptar a qualquer mudança com um sorriso no rosto.</p>
+    <p>Sua expressão externa é magnética e jovial. <strong>você</strong> atrai a atenção pela sua curiosidade intelectual e pela coragem de experimentar o novo, seja em viagens, carreiras ou estilos de vida. O mundo a percebe como uma pessoa desimpedida, inteligente e capaz de se comunicar com todos os níveis da sociedade de forma fluida.</p>
+    <p><strong>você</strong> é admirada pela sua independência e pela forma como desafia as convenções rotineiras. Para os outros, <strong>você</strong> representa a aventura e o dinamismo, sendo vista como uma pessoa que vive a vida com intensidade e que nunca para de evoluir e se transformar.</p>`,
+
+    6: `<p>A imagem que <strong>você</strong> projeta para a sociedade é a de uma pessoa calorosa, responsável e profundamente voltada para o cuidado e para a família. As pessoas veem em <strong>você</strong> uma figura de proteção e consolo, alguém que valoriza a harmonia doméstica, a estética e os laços afetivos acima de tudo.</p>
+    <p>Sua expressão externa transmite equilíbrio e dignidade. <strong>você</strong> é vista como a pessoa que torna os ambientes mais bonitos e acolhedores, agindo com um senso de justiça e dever que a torna o centro emocional do seu grupo. <strong>você</strong> é admirada pela sua capacidade de aconselhar e pela sua dedicação incansável ao bem-estar dos outros.</p>
+    <p>Para o mundo, <strong>você</strong> é o exemplo da bondade e da responsabilidade social. As pessoas buscam a sua companhia porque se sentem amparadas pela sua vibração de amor e estabilidade, vendo em <strong>você</strong> alguém que realmente se importa com o coração das pessoas.</p>`,
+
+    7: `<p>A imagem que <strong>você</strong> projeta para o mundo é de uma pessoa culta, reservada e dotada de uma inteligência profunda e misteriosa. As pessoas veem em <strong>você</strong> uma aura de sabedoria e dignidade, alguém que não se mistura com a superficialidade e que prefere a observação atenta ao barulho social.</p>
+    <p>Sua expressão externa transmite autoridade intelectual e espiritual. <strong>você</strong> é percebida como uma pessoa analítica, que pensa antes de falar e que possui um padrão de exigência e perfeccionismo muito elevado. <strong>você</strong> emana uma classe natural e uma seriedade que faz com que os outros a respeitem e, por vezes, sintam uma certa reverência.</p>
+    <p>O mundo a vê como uma especialista, uma investigadora da verdade ou uma mística moderna. <strong>você</strong> é admirada pela sua integridade e pela coragem de seguir o seu próprio caminho interior, independentemente das modas passageiras ou das opiniões da massa.</p>`,
+
+    8: `<p>A imagem que <strong>você</strong> projeta para a sociedade é a de uma pessoa poderosa, influente e bem-sucedida. As pessoas veem em <strong>você</strong> uma figura executiva, alguém que nasceu para o comando e que possui a capacidade natural de gerir grandes recursos e liderar organizações com eficiência e pragmatismo.</p>
+    <p>Sua expressão externa transmite ambição, autoconfiança e autoridade material. <strong>você</strong> se veste e se comporta de maneira que reflete o seu status e a sua competência, sendo admirada pela sua visão de negócios e pelo seu senso de justiça rigoroso. <strong>você</strong> é percebida como uma pessoa que obtém resultados e que sabe lidar com o poder sem hesitação.</p>
+    <p>Para o mundo, <strong>você</strong> é a vencedora, a pessoa que conquista o topo através da disciplina e do pensamento estratégico. As pessoas confiam na sua liderança porque veem em <strong>você</strong> a força necessária para construir impérios e garantir a prosperidade daqueles que a seguem.</p>`,
+
+    9: `<p>A imagem que <strong>você</strong> projeta para o mundo é de uma pessoa generosa, sábia e com uma visão humanitária abrangente. As pessoas veem em <strong>você</strong> uma alma carismática e altruísta, alguém que está além das fronteiras comuns e que possui uma compreensão profunda da vida e do sofrimento humano.</p>
+    <p>Sua expressão externa transmite tolerância e idealismo. <strong>você</strong> é vista como uma guia, uma professora ou uma artista que usa o seu talento para elevar a consciência coletiva. Sua presença é reconfortante e inspiradora, atraindo pessoas de todas as origens que buscam na sua experiência um pouco de luz e direção.</p>
+    <p>O mundo a percebe como uma pessoa desapegada e íntegra, capaz de grandes sacrifícios por uma causa nobre. <strong>você</strong> é admirada pela sua coragem moral e pela forma como trata a todos com a mesma dignidade, sendo vista como uma cidadã do mundo que veio para curar e transformar.</p>`
+  
 
   },
 
+// --- CAMINHO DE VIDA (DESTINO / ESTRADA DA VIDA) ---
   CaminhodeVida: {
-    1:`Ser autossuficiente e independente
-Caminho de Vida 1
-
-O número um indica alguém com energia forte. Este é o caminho da coragem, determinação e honestidade. Uma pessoa número um está frequentemente à frente do seu tempo. A humanidade pode beneficiar muito com esses inovadores e com as suas ideias surpreendentes. Eles seguem o seu caminho sozinhos, indivíduos liderados por sua voz interior. Demonstram total determinação e persistência em seguir as suas ideias. Pode-se dizer que o número um é privilegiado desde o nascimento porque a sorte os segue.
-
-Estas pessoas não toleram injustiça. Enquanto outros ficam estáticos, o número um será o primeiro a levantar-se e tentar mudar as coisas. Não conseguem entender como algumas pessoas ficam felizes por serem meras espectadoras. Aqui reside o seu grande talento: a predisposição para serem líderes. A sua paixão, energia e entusiasmo são altamente contagiosos. São racionais, críticos e diligentes e reconhecem rapidamente o caminho certo.
-
-O número um destaca-se devido à sua elevada energia. São autoritários e influentes. Precisam estar no centro das atenções e almejam reconhecimento constante. Ressentem-se quando outros se intrometem no que estão a fazer e não aceitam críticas facilmente. A sua principal característica é a atitude positiva perante a vida.
-
-O número um ama os seus amigos. São generosos e atenciosos. Fazem amizades com facilidade e raramente terminam relacionamentos.
-
-A vida trará fracassos para muitos número um. Precisam experimentar o fracasso para melhorar e trabalhar em si mesmos. Devem ver todos os fracassos como um passo mais perto do sucesso. A pior coisa para um número um seria perder a confiança, pois isso bloquearia as suas capacidades criativas.
-
-Lado sombrio  
-Um número um desarmonioso é egoísta, teimoso e dominador. Pode tornar-se manipulador, impiedoso e competitivo em excesso.
-
-Trabalho  
-São diligentes, ambiciosos e líderes naturais. Frequentemente iniciam os seus próprios negócios.
-
-Amor  
-Querem liderar no amor e precisam de liberdade e reconhecimento.
-
-Saúde  
-Devem cuidar do coração, pressão arterial e evitar stress.
-
-Realização  
-Devem permanecer fiéis a si mesmos e ouvir a sua voz interior.`,
-
-2:`Ser cooperativo e discreto
-Caminho de Vida 2
-
-Se tivéssemos de descrever o número dois numa palavra, seria cooperação. São diplomatas naturais, conciliadores e pacificadores. Pensam antes de agir e procuram harmonia em todas as situações.
-
-Preferem trabalhar nos bastidores e evitam os holofotes. Sentem-se mais confortáveis apoiando do que liderando. São o mecanismo oculto que mantém a máquina a funcionar.
-
-Possuem grande capacidade de adaptação. Conseguem compreender profundamente as pessoas e assumir diferentes papéis para criar harmonia. No entanto, devem ter cuidado para não perder a própria identidade.
-
-O número dois é altruísta e cheio de amor. A família é extremamente importante. Precisam de um parceiro e prosperam em relações de parceria.
-
-O lado negativo inclui indecisão, dependência emocional e necessidade de aprovação.
-
-Trabalho  
-Excelentes mediadores, negociadores e comunicadores. Funcionam melhor com orientação.
-
-Amor  
-Românticos, sensíveis e dedicados. Procuram harmonia e estabilidade.
-
-Saúde  
-Devem cuidar do coração, estômago e sistema emocional.
-
-Realização  
-Devem desenvolver independência e confiar em si mesmos.`,
-
-3:`Ser comprometido e compenetrado
-Caminho de Vida 3
-
-O número três é o número da criatividade, da expressão e da alegria de viver. Pessoas com esta vibração possuem imaginação fértil, entusiasmo e uma energia naturalmente contagiante. São comunicativas, espontâneas e gostam de partilhar ideias, emoções e experiências.
-
-Têm grande capacidade de inspirar outras pessoas e normalmente são vistas como companhia agradável e motivadora. A sua leveza e humor ajudam a ultrapassar momentos difíceis.
-
-O número três é ativo, ambicioso e deseja deixar marca no mundo. Procura reconhecimento e gosta de estar rodeado de pessoas de sucesso. São guiados pelo sentimento e pela intuição, o que pode torná-los sensíveis e facilmente magoados.
-
-O lado negativo manifesta-se através da dispersão, falta de disciplina, promessas não cumpridas e dificuldade em concluir projetos.
-
-Trabalho  
-Podem destacar-se como comunicadores, artistas, professores, escritores ou empreendedores.
-
-Amor  
-Românticos, intensos e emocionais. Precisam sentir-se amados e valorizados.
-
-Saúde  
-Devem cuidar do sistema nervoso e emocional.
-
-Realização  
-Devem aprender a concluir o que começam e confiar na própria criatividade.`,
-
-4:`Ser prático e organizado
-Caminho de Vida 4
-
-O número quatro representa estrutura, disciplina e construção. É o pilar da sociedade, ligado ao trabalho duro, responsabilidade e estabilidade. Pessoas com esta vibração são confiáveis, persistentes e metódicas.
-
-Planeiam, organizam e cumprem as suas obrigações até ao fim. Gostam de rotinas, regras e segurança. A autodisciplina é uma das suas maiores forças.
-
-A vida do número quatro exige esforço e persistência. Raramente recebem resultados fáceis, mas quando perseveram são recompensados com segurança e estabilidade.
-
-Podem ser rígidos, teimosos e excessivamente conservadores quando em desequilíbrio.
-
-Trabalho  
-Excelentes organizadores, gestores, engenheiros, arquitetos e profissionais técnicos.
-
-Amor  
-Fiéis, leais e comprometidos com a família.
-
-Saúde  
-Devem cuidar dos ossos, dentes e sistema digestivo.
-
-Realização  
-Devem aprender a equilibrar trabalho e prazer e permitir-se viver com mais leveza.`,
-
- 5:`Ser livre e experimentar a vida
-Caminho de Vida 5
-
-O número cinco simboliza liberdade, movimento, curiosidade e expansão através das experiências. Pessoas com esta vibração possuem uma energia inquieta e dinâmica, que as impulsiona a buscar constantemente novidades, mudanças e desafios. São naturalmente curiosas e desejam conhecer o mundo em todas as suas formas, culturas e possibilidades.
-
-A rotina pode ser extremamente limitante para o número cinco, pois sua natureza precisa de estímulos constantes para se sentir viva e motivada. São comunicativas, carismáticas e possuem grande facilidade para se adaptar a ambientes e pessoas diferentes. Mudanças inesperadas raramente as assustam; pelo contrário, costumam vê-las como oportunidades.
-
-Possuem grande versatilidade e aprendem rapidamente. São excelentes divulgadores de ideias, inovadores e inspiradores. Sua mente é aberta, flexível e criativa, o que lhes permite enxergar soluções onde outros veem obstáculos.
-
-No lado negativo, podem apresentar impulsividade, inquietação e dificuldade em manter compromissos de longo prazo. Existe tendência a excessos, dispersão de energia e busca constante por prazer imediato. Podem iniciar muitos projetos e concluir poucos se não desenvolverem disciplina.
-
-Trabalho  
-Destacam-se em áreas que envolvem comunicação, viagens, marketing, vendas, tecnologia, mídia, eventos e inovação. Precisam de liberdade e autonomia para prosperar.
-
-Amor  
-São apaixonados, intensos e sedutores. Precisam de espaço e independência para manter relacionamentos saudáveis.
-
-Saúde  
-Devem cuidar do sistema nervoso e evitar excessos e hábitos impulsivos.
-
-Realização  
-O aprendizado principal é transformar liberdade em responsabilidade e experiência em sabedoria.`,
-
-6:`Ser proficiente e solidário
-Caminho de Vida 6
-
-O número seis representa amor, responsabilidade, cuidado e compromisso com os outros. Pessoas com esta vibração possuem um forte senso de dever, proteção e dedicação aos relacionamentos, especialmente familiares. A família, o lar e a harmonia emocional são pilares fundamentais da sua vida.
-
-São naturalmente generosas, empáticas e acolhedoras. Possuem grande capacidade de escuta e aconselhamento, tornando-se frequentemente o apoio emocional das pessoas ao seu redor. Buscam ambientes harmoniosos, belos e organizados, valorizando conforto e estabilidade.
-
-Possuem senso de justiça e forte desejo de ajudar. Muitas vezes assumem responsabilidades que não são suas, movidas pelo desejo de proteger e cuidar. São confiáveis, leais e comprometidas com quem amam.
-
-No lado negativo, podem tornar-se controladoras, excessivamente responsáveis ou sacrificarem as próprias necessidades em prol dos outros. A necessidade de aprovação pode gerar frustrações e sobrecarga emocional.
-
-Trabalho  
-Destacam-se em áreas ligadas à educação, saúde, estética, psicologia, arte, decoração, cuidados e assistência social.
-
-Amor  
-Românticos, fiéis e dedicados, buscam relacionamentos estáveis e duradouros.
-
-Saúde  
-Devem cuidar do coração, sistema respiratório e equilíbrio emocional.
-
-Realização  
-O aprendizado principal é equilibrar o cuidado com os outros e o cuidado consigo mesmo.`,
-
-7:`Ser tolerante e desenvolver sabedoria interior
-Caminho de Vida 7
-
-O número sete simboliza conhecimento, introspecção, espiritualidade e busca pela verdade. Pessoas com esta vibração possuem uma mente investigativa, analítica e profundamente observadora. Sentem uma necessidade natural de compreender o sentido da vida, da existência e dos mistérios que cercam a realidade.
-
-São naturalmente introspectivas e reservadas, preferindo momentos de solitude para refletir, estudar e desenvolver seu mundo interior. A intuição é uma das maiores forças do número sete, mesmo quando inicialmente ignorada em favor da lógica e da razão.
-
-Possuem grande capacidade de análise, senso crítico e desejo constante de aprender. São atraídas por ciência, filosofia, espiritualidade e temas profundos. Muitas vezes sentem-se diferentes das outras pessoas, como se observassem o mundo de fora.
-
-No aspecto positivo, manifestam sabedoria, discernimento, percepção aguçada e capacidade de aconselhamento. No aspecto negativo, podem desenvolver isolamento, desconfiança, pessimismo e excesso de crítica.
-
-Trabalho  
-Destacam-se em pesquisa, ciência, tecnologia, espiritualidade, psicologia, filosofia e áreas intelectuais.
-
-Amor  
-Precisam de profundidade emocional e conexão mental; relacionamentos superficiais não os satisfazem.
-
-Saúde  
-Devem cuidar do sistema nervoso, mente e níveis de estresse.
-
-Realização  
-O aprendizado principal é equilibrar razão e espiritualidade, transformando conhecimento em sabedoria.`,
-
-8:`Ser capaz de manter o equilíbrio pessoal
-Caminho de Vida 8
-
-O número oito representa poder, autoridade, realização material, justiça e liderança. Pessoas com esta vibração possuem grande capacidade de organização, ambição e visão estratégica. São naturalmente voltadas para conquistas, resultados e construção de estabilidade financeira e profissional.
-
-Possuem forte senso de responsabilidade e capacidade de liderança. Sentem necessidade de construir algo duradouro e alcançar reconhecimento através do esforço e da disciplina. A energia do número oito busca equilíbrio entre o mundo material e o espiritual.
-
-No aspecto positivo, manifestam determinação, capacidade de gestão, foco, perseverança e senso de justiça. Possuem habilidade para lidar com desafios e superar obstáculos com resiliência.
-
-No aspecto negativo, podem desenvolver materialismo excessivo, rigidez, autoritarismo e dificuldade em expressar emoções. O excesso de ambição pode gerar estresse e sobrecarga.
-
-Trabalho  
-Destacam-se em negócios, administração, empreendedorismo, finanças, política e liderança.
-
-Amor  
-Precisam aprender a equilibrar vida profissional e afetiva, valorizando emoções e relações.
-
-Saúde  
-Devem cuidar do sistema digestivo, ossos e níveis de estresse.
-
-Realização  
-O aprendizado principal é usar poder e recursos com sabedoria, ética e equilíbrio.`,
-
-9:`Ser sensato, compassivo e humanitário
-Caminho de Vida 9
-
-O número nove simboliza compaixão, altruísmo, sabedoria emocional e conclusão de ciclos. Pessoas com esta vibração possuem forte senso humanitário e desejo de contribuir para o bem coletivo. São naturalmente empáticas, generosas e sensíveis às necessidades dos outros.
-
-Possuem visão ampla da vida e facilidade para compreender diferentes realidades e perspectivas. Sentem necessidade de ajudar, orientar e inspirar as pessoas ao seu redor. A energia do número nove está ligada ao desapego e à transformação.
-
-No aspecto positivo, manifestam generosidade, tolerância, empatia, criatividade e espiritualidade. Possuem grande capacidade de inspirar e influenciar positivamente.
-
-No aspecto negativo, podem desenvolver melancolia, idealismo excessivo, frustração e tendência ao isolamento emocional. Precisam aprender a equilibrar emoção e realidade.
-
-Trabalho  
-Destacam-se em áreas humanitárias, arte, educação, saúde, espiritualidade e assistência social.
-
-Amor  
-Buscam relações profundas, sinceras e baseadas em valores e propósito.
-
-Saúde  
-Devem cuidar da saúde emocional e evitar sobrecarga mental.
-
-Realização  
-O aprendizado principal é praticar desapego, compaixão e servir ao coletivo com equilíbrio.`
-
+    1: `<p>O seu caminho de vida é uma estrada de superação, pioneirismo e conquista definitiva da independência. O seu destino foi desenhado para que <strong>você</strong> aprenda a confiar plenamente em si mesma e a assumir riscos que a maioria das pessoas teria receio de enfrentar, agindo como uma desbravadora de novas realidades.</p>
+    <p>Ao longo da sua trajetória, a vida trará constantemente situações que a forçarão a se colocar em primeiro lugar e a decidir sem o apoio ou a aprovação alheia. O seu sucesso está diretamente ligado à sua coragem de ser quem <strong>você</strong> realmente é, desenvolvendo uma personalidade forte que não se curva diante das dificuldades ou das críticas dos mais conservadores.</p>
+    <p><strong>você</strong> encontrará grandes oportunidades em cargos de comando, no empreendedorismo ou em áreas onde a inovação seja a chave do progresso. O seu destino não é o da estabilidade monótona, mas o da evolução constante através da ação deliberada. <strong>você</strong> veio ao mundo para deixar uma marca única e mostrar que a força individual pode transformar o destino de muitos.</p>`,
+
+    2: `<p>O seu caminho de vida é uma trilha de diplomacia, cooperação e busca incessante pela harmonia e pelo equilíbrio. O seu destino foi traçado para que <strong>você</strong> aprenda a arte de viver em parceria, desenvolvendo uma sensibilidade e uma paciência que a tornarão uma peça essencial em qualquer grupo ou relacionamento.</p>
+    <p>Durante a sua jornada, a vida a colocará em posições onde a mediação e o tato social serão as suas ferramentas de vitória. <strong>você</strong> descobrirá que sua maior força não está na imposição da vontade, mas na persuasão suave e na capacidade de unir lados opostos. O sucesso para <strong>você</strong> virá através da colaboração e da sua habilidade em perceber os detalhes que os outros ignoram.</p>
+    <p><strong>você</strong> encontrará realização em atividades que exijam apoio, consultoria ou trabalho em equipe. O seu destino é ser o suporte e a ponte que traz paz aos ambientes. Ao abraçar a sua natureza receptiva, <strong>você</strong> construirá uma trajetória repleta de amizades leais, amores profundos e um respeito silencioso, mas muito sólido, de todos ao redor.</p>`,
+
+    3: `<p>O seu caminho de vida é uma estrada iluminada pela criatividade, pela comunicação e pela alegria de viver. O seu destino foi desenhado para que <strong>você</strong> aprenda a expressar a sua verdade interior de forma leve e inspiradora, tornando-se uma fonte de entusiasmo para o mundo que a cerca.</p>
+    <p>Ao longo da sua trajetória, <strong>você</strong> será atraída por situações que exijam magnetismo social, imaginação e o dom da palavra. A vida lhe dará inúmeras oportunidades para brilhar, seja nas artes, no ensino ou em qualquer área onde a interação humana seja o foco principal. O seu sucesso depende da sua coragem em ser autêntica e em não permitir que a sua luz seja abafada pelo pessimismo alheio.</p>
+    <p><strong>você</strong> terá uma vida social movimentada e cheia de conexões interessantes. O seu destino é mostrar que a felicidade é um ingrediente essencial para o progresso humano. Ao usar seu carisma para elevar o espírito das pessoas, <strong>você</strong> colherá reconhecimento e viverá experiências ricas, coloridas e profundamente gratificantes.</p>`,
+
+    4: `<p>O seu caminho de vida é uma trilha de construção, esforço disciplinado e estabelecimento de bases sólidas. O seu destino foi traçado para que <strong>você</strong> aprenda o valor da persistência e da organização, transformando o caos em estrutura através da sua dedicação incansável e do seu senso prático.</p>
+    <p>Durante a sua jornada, a vida trará desafios que testarão a sua paciência e a sua capacidade de planejar a longo prazo. <strong>você</strong> entenderá que as conquistas mais valiosas são construídas tijolo por tijolo, sem atalhos. O sucesso para <strong>você</strong> está no trabalho bem executado, na lealdade aos seus princípios e na criação de segurança para si mesma e para a sua família.</p>
+    <p><strong>você</strong> encontrará realização em profissões técnicas, administrativas ou em áreas que exijam alta responsabilidade e honestidade. O seu destino é ser o alicerce onde outros podem construir seus sonhos. Ao aceitar sua missão de estabilidade, <strong>você</strong> deixará um legado de respeito e conquistas materiais inabaláveis.</p>`,
+
+    5: `<p>O seu caminho de vida é uma estrada de mudanças constantes, aventuras e busca pela liberdade absoluta. O seu destino foi desenhado para que <strong>você</strong> aprenda a se adaptar a qualquer circunstância, desenvolvendo uma versatilidade e uma rapidez de pensamento que a tornarão uma pessoa à frente do seu tempo.</p>
+    <p>Ao longo da sua trajetória, <strong>você</strong> passará por diversas transformações de carreira, residência e interesses. A rotina será a sua maior adversária, e a vida lhe trará viagens, novos idiomas e encontros inesperados para manter sua mente estimulada. O seu sucesso virá da sua capacidade de abraçar o novo sem medo, agindo como um agente de progresso e inovação.</p>
+    <p><strong>você</strong> brilhará em áreas que envolvam comunicação de massa, vendas, tecnologia ou qualquer campo que permita movimento e autonomia. O seu destino é experimentar a vida em todas as suas facetas. Ao manter sua curiosidade viva, <strong>você</strong> se tornará uma pessoa sábia, cosmopolita e profundamente livre.</p>`,
+
+    6: `<p>O seu caminho de vida é uma trilha de amor, responsabilidade familiar e serviço à comunidade. O seu destino foi traçado para que <strong>você</strong> aprenda a importância da harmonia, do sacrifício pessoal em favor do coletivo e da criação de ambientes acolhedores e esteticamente agradáveis.</p>
+    <p>Durante a sua jornada, a vida a colocará em posições de cuidado e aconselhamento. <strong>você</strong> sentirá o peso das responsabilidades domésticas e sociais, mas descobrirá que é justamente nessas tarefas que reside a sua maior satisfação. O sucesso para <strong>você</strong> virá através da justiça, da ética e da sua capacidade de resolver conflitos com compaixão e sabedoria.</p>
+    <p><strong>você</strong> encontrará realização no ensino, na saúde, nas artes ou na gestão de lares e instituições. O seu destino é ser o coração pulsante do seu círculo social. Ao abraçar seu papel de protetora, <strong>você</strong> construirá uma vida repleta de gratidão, beleza e laços afetivos que o tempo jamais poderá apagar.</p>`,
+
+    7: `<p>O seu caminho de vida é uma estrada de busca intelectual, espiritualidade e refinamento da mente. O seu destino foi desenhado para que <strong>você</strong> aprenda a mergulhar nas profundezas do conhecimento, desenvolvendo uma intuição analítica que a permita compreender o que está oculto para a maioria.</p>
+    <p>Ao longo da sua trajetória, a vida a convidará ao estudo, à introspecção e à especialização. <strong>você</strong> sentirá a necessidade de passar tempos sozinha para processar suas descobertas e recarregar suas energias. O seu sucesso virá da sua autoridade técnica ou espiritual, sendo reconhecida como uma pessoa de sabedoria superior e integridade inquestionável.</p>
+    <p><strong>você</strong> brilhará na pesquisa científica, na filosofia, na escrita ou na consultoria especializada. O seu destino é ser uma mestre da verdade. Ao confiar na sua voz interior e não se deixar levar pelas distrações do mundo material, <strong>você</strong> alcançará um nível de paz e maestria que poucos conseguem atingir.</p>`,
+
+    8: `<p>O seu caminho de vida é uma trilha de poder, autoridade material e grandes conquistas financeiras e executivas. O seu destino foi traçado para que <strong>você</strong> aprenda a lidar com as leis do mundo material, desenvolvendo uma capacidade de liderança e um senso de justiça que a colocarão no topo da sua área de atuação.</p>
+    <p>Durante a sua jornada, a vida a testará com grandes desafios de gestão e poder. <strong>você</strong> terá que aprender a equilibrar sua ambição com a ética, entendendo que o verdadeiro sucesso deve beneficiar a todos. O sucesso para <strong>você</strong> virá através da eficiência, do pensamento estratégico e da coragem de assumir grandes responsabilidades profissionais.</p>
+    <p><strong>você</strong> encontrará realização nos negócios, na política, nas finanças ou na administração de grandes corporações. O seu destino é manifestar a abundância. Ao usar sua força para construir progresso real e justo, <strong>você</strong> se tornará uma figura influente, respeitada e detentora de um patrimônio sólido e duradouro.</p>`,
+
+    9: `<p>O seu caminho de vida é uma estrada de humanitarismo, altruísmo e conclusão de grandes ciclos evolutivos. O seu destino foi desenhado para que <strong>você</strong> aprenda a amar o próximo de forma incondicional, desenvolvendo uma visão de mundo que ultrapassa as barreiras do ego e dos interesses puramente materiais.</p>
+    <p>Ao longo da sua trajetória, <strong>você</strong> enfrentará situações que exigirão desapego e perdão. A vida a chamará para servir, para ensinar e para curar, oferecendo sua sabedoria para aqueles que sofrem. O seu sucesso virá da sua integridade moral e da sua capacidade de inspirar multidões através do seu exemplo de generosidade e compreensão universal.</p>
+    <p><strong>você</strong> brilhará em causas sociais, nas artes humanitárias, na diplomacia ou na espiritualidade. O seu destino é ser uma cidadã do mundo. Ao entregar seus talentos para o bem da humanidade, <strong>você</strong> encontrará uma realização espiritual profunda e um reconhecimento que transcende os limites do tempo e do espaço.</p>`
+  
   },
 
+// --- PROPÓSITO (MISSÃO DE VIDA) ---
   Propósito: {
-1:`Conhecer seus limites
-Propósito de Vida 1
+    1: `<p>O seu propósito nesta existência é o desenvolvimento de uma autoconfiança inabalável e a manifestação da liderança consciente. <strong>você</strong> veio ao mundo para aprender a usar o seu poder pessoal sem cair no egoísmo, mas também sem nunca mais permitir que a sua voz seja silenciada por terceiros.</p>
+    <p>A sua missão envolve ser uma bússola para os outros, abrindo caminhos e inspirando as pessoas através do seu exemplo vivo de coragem e originalidade. <strong>você</strong> deve aprender a equilibrar o seu forte impulso de independência com a sabedoria de que, embora possa caminhar sozinha, sua liderança se torna magnífica quando beneficia o coletivo.</p>
+    <p>Realizar o seu propósito significa chegar ao final da jornada sabendo que <strong>você</strong> não apenas viveu a vida, mas que a criou ativamente, sendo a protagonista absoluta de cada capítulo. <strong>você</strong> veio para ser a semente de novas ideias e o motor de arranque de transformações que exigem uma força que só <strong>você</strong> possui.</p>`,
 
-Você precisa viver sua vida com originalidade e coragem. Seja uma pessoa firme, decidida e independente para ter autonomia e liberdade de agir sozinho, sem ter que depender de outras pessoas. Para ter o controle de sua vida e dos caminhos que segue, deve agir com confiança e determinação. Precisará aprender a dominar o ego e a expor seus sentimentos com maturidade e clareza.
+    2: `<p>O seu propósito de vida é tornar-se uma mestra da diplomacia, da paz e da cooperação mútua. <strong>você</strong> veio para este plano com a missão de curar divisões, unir pessoas e mostrar ao mundo que a verdadeira força reside na suavidade, na escuta ativa e na empatia profunda.</p>
+    <p>A sua missão envolve o suporte e o aconselhamento; <strong>você</strong> deve aprender a ser o ponto de equilíbrio em ambientes de conflito, usando a sua intuição aguçada para perceber o que não é dito. <strong>você</strong> realiza o seu propósito quando consegue criar harmonia onde antes havia caos, agindo nos bastidores com uma eficácia que sustenta grandes estruturas.</p>
+    <p>Para <strong>você</strong>, cumprir a sua missão significa desenvolver a paciência e a autovalorização, entendendo que o seu papel de mediadora é vital para a evolução humana. <strong>você</strong> veio para ensinar que o amor e a parceria são os únicos caminhos reais para uma paz duradoura e verdadeira.</p>`,
 
-Você tem grandes qualidades; no entanto, controlar sua rigidez, opiniões e crenças enraizadas lhe ajudará a alcançar a felicidade com mais facilidade. Você é um indivíduo único e seu objetivo de vida deve se basear em ser capaz de se definir como tal. Deve agir de forma audaciosa, com autenticidade e personalidade, buscando novas perspectivas e tendo coragem para descobrir e seguir novos caminhos sem se deixar abater pelas derrotas.
+    3: `<p>O seu propósito nesta vida é a expansão da alegria, da comunicação e da expressão criativa da alma. <strong>você</strong> veio ao mundo para ser um canal de luz, usando as suas palavras, os seus talentos artísticos ou o seu carisma social para elevar a vibração de todos os que cruzarem o seu caminho.</p>
+    <p>A sua missão é combater o pessimismo e a rigidez através do entusiasmo e da imaginação. <strong>você</strong> deve aprender a comunicar a sua verdade de forma que inspire esperança e criatividade nos outros. <strong>você</strong> realiza o seu propósito quando se permite brilhar sem medo de julgamentos, transformando a sua vida em uma obra de arte viva e pulsante.</p>
+    <p>Cumprir a sua missão significa espalhar a beleza e o bom humor, mostrando que a vida deve ser celebrada em cada detalhe. <strong>você</strong> veio para ser a voz que motiva e o sorriso que acolhe, provando que a expressão autêntica do ser é a chave para a liberdade espiritual e para o sucesso social.</p>`,
 
-Suas ações devem ser orientadas pela razão e pela consciência. Deve saber se impor pela competência, obtendo respeito e reconhecimento sem se tornar intolerante, autoritário ou controlador. O equilíbrio entre liderança e sensibilidade será essencial para sua evolução.
+    4: `<p>O seu propósito de vida é a manifestação da ordem, da segurança e da construção de bases sólidas para a sociedade. <strong>você</strong> veio para este plano com a missão de trazer estrutura para o caos, agindo com uma integridade, disciplina e honestidade que servem de exemplo para todos os que a rodeiam.</p>
+    <p>A sua missão envolve o trabalho dedicado e a responsabilidade prática; <strong>você</strong> deve aprender a transformar sonhos abstratos em realidades concretas através do esforço organizado. <strong>você</strong> realiza o seu propósito quando constrói algo duradouro, seja uma família estruturada, uma empresa sólida ou uma carreira baseada em valores éticos inabaláveis.</p>
+    <p>Para <strong>você</strong>, cumprir a missão significa ser a rocha onde os outros se apoiam. <strong>você</strong> veio para ensinar o valor da persistência e da paciência, mostrando que o sucesso real é fruto de uma fundação bem feita e de um caráter que não se corrompe diante das facilidades do mundo.</p>`,
 
-Aprenda a conhecer seus limites e a resolver seus próprios problemas sem esperar que alguém faça isso por você. A maturidade trará mais confiança, experiência e estabilidade emocional. Desenvolver autoconfiança, persistência e equilíbrio interior será essencial para alcançar suas realizações.`,
+    5: `<p>O seu propósito nesta existência é a exploração da liberdade, da versatilidade e do progresso através da experiência direta. <strong>você</strong> veio ao mundo para ser uma agente de mudança, desafiando tradições obsoletas e mostrando que a evolução humana depende da nossa capacidade de adaptação e renovação constante.</p>
+    <p>A sua missão envolve a quebra de correntes e a busca pelo conhecimento multissensorial; <strong>você</strong> deve aprender a viver sem amarras, usando a sua inteligência rápida para navegar por diferentes culturas e ideias. <strong>você</strong> realiza o seu propósito quando inspira os outros a buscarem a própria autonomia e a não temerem o desconhecido.</p>
+    <p>Realizar o seu propósito significa ser o movimento em meio à estagnação. <strong>você</strong> veio para ensinar que a vida é uma aventura vasta e que a verdadeira segurança reside na nossa habilidade de mudar. <strong>você</strong> é a ponte para o futuro, trazendo frescor e inovação para tudo o que toca.</p>`,
 
-2:`Confiar em seu potencial
-Propósito de Vida 2
+    6: `<p>O seu propósito de vida é o exercício do amor incondicional, da responsabilidade social e da cura através da harmonia. <strong>você</strong> veio para este plano com a missão de ser a protetora e a educadora, criando espaços de beleza e conforto emocional onde as pessoas possam se sentir seguras e amadas.</p>
+    <p>A sua missão envolve o serviço à família e à comunidade; <strong>você</strong> deve aprender a aconselhar e a cuidar sem se tornar excessivamente controladora, agindo com uma justiça que vem do coração. <strong>você</strong> realiza o seu propósito quando consegue transformar um ambiente comum em um lar espiritual, onde o dever e o prazer de servir caminham juntos.</p>
+    <p>Cumprir a sua missão significa ser o pilar afetivo do seu círculo. <strong>você</strong> veio para ensinar que a compaixão e a responsabilidade pelos outros são as forças que realmente mantêm o mundo unido. <strong>você</strong> é a personificação da harmonia e da ética aplicada ao cotidiano.</p>`,
 
-Seja um conciliador sem se subestimar ou se deixar influenciar pelas circunstâncias ou pelas pessoas. Seja realista e aja por seus princípios, não apenas para agradar os outros. Use sua sensibilidade e gentileza para unir pessoas e criar cooperação em torno de seus objetivos.
+    7: `<p>O seu propósito nesta existência é a busca pela verdade absoluta, pelo autoconhecimento e pela especialização da mente. <strong>você</strong> veio ao mundo para ser uma investigadora da alma ou da ciência, desenvolvendo uma sabedoria profunda que serve de guia para aqueles que buscam respostas além do óbvio material.</p>
+    <p>A sua missão envolve o estudo, a meditação e a análise rigorosa; <strong>você</strong> deve aprender a confiar na sua intuição refinada e a compartilhar as suas descobertas com integridade. <strong>você</strong> realiza o seu propósito quando atinge a maestria intelectual ou espiritual, tornando-se uma autoridade respeitada pela profundidade do seu pensamento e não pela sua fama externa.</p>
+    <p>Realizar o seu propósito significa ser a luz da razão e da espiritualidade em um mundo muitas vezes cego. <strong>você</strong> veio para ensinar que o silêncio e a reflexão são portais para o poder real. <strong>você</strong> é a mestre da verdade, aquela que enxerga o que está oculto e revela o caminho da sabedoria.</p>`,
 
-Seja participativo e colaborador, mas não tente ser o centro das atenções ou se colocar em evidência. Você precisa de harmonia para evoluir, portanto permita que pessoas mais extrovertidas ocupem os holofotes enquanto você atua com sabedoria nos bastidores.
+    8: `<p>O seu propósito de vida é a manifestação da abundância, da justiça e do poder executivo equilibrado. <strong>você</strong> veio para este plano com a missão de gerir grandes recursos e liderar organizações ou projetos que tragam progresso material e estabilidade econômica para a sociedade.</p>
+    <p>A sua missão envolve o domínio das leis da matéria e da causa e efeito; <strong>você</strong> deve aprender a liderar com autoridade, mas sempre pautada por um senso de justiça rigoroso. <strong>você</strong> realiza o seu propósito quando cria riqueza e sucesso que beneficiam não apenas a si mesma, mas uma rede inteira de pessoas e instituições.</p>
+    <p>Para <strong>você</strong>, cumprir a missão significa ser o motor da prosperidade. <strong>você</strong> veio para ensinar que o dinheiro e o poder, quando usados com ética e disciplina, são ferramentas divinas de transformação. <strong>você</strong> é a realizadora que transforma visão em impérios e esforço em legado tangível.</p>`,
 
-Tenha como objetivo de vida ser equilibrado, cooperativo, paciente e compreensivo. Confie em seu potencial e aprenda a esperar o momento certo para agir, sem ansiedade ou insegurança. Evite permitir manipulações ou influências negativas que possam abalar sua autoestima.
-
-Utilize sua diplomacia para alcançar seus objetivos com serenidade. Ouça opiniões, mas absorva apenas o que for útil e verdadeiro para sua evolução. O autoconhecimento e a autoconfiança serão fundamentais para evitar frustrações e fortalecer sua jornada.`,
-
-3:`Ser modesto e criativo
-Propósito de Vida 3
-
-Use sua criatividade e suas experiências para tomar decisões. Busque se destacar com autenticidade, sem exibicionismo. Explore sua capacidade de comunicação e sociabilidade sem se deixar levar por ilusões ou pela opinião alheia.
-
-Existe em sua natureza uma inquietação e necessidade de movimento. Mantenha-se alegre e confiante, evitando que frustrações apaguem seu brilho. Você possui a habilidade de enxergar o lado positivo da vida e encontrar soluções criativas.
-
-Seu objetivo deve ser levar alegria às pessoas por meio da criatividade e da autoexpressão. Desenvolver talentos artísticos, comunicativos e criativos abrirá caminhos importantes para sua evolução.
-
-Aprender a se expressar com clareza será essencial para alcançar suas realizações. Evite dispersar sua energia e concentre-se no que realmente é produtivo e significativo.`,
-
-4:`Ser estável e confiável
-Propósito de Vida 4
-
-Seja organizado, estável e confiável. Crie bases sólidas para enfrentar a vida com disciplina, precisão e responsabilidade. O trabalho constante e a persistência serão fundamentais para suas conquistas.
-
-Você prospera por meio da organização, planejamento e objetivos claros. Evite criar expectativas irreais e concentre-se no desenvolvimento prático e consistente.
-
-Seus resultados virão através de esforço, dedicação e disciplina. Evite riscos desnecessários e mantenha o foco em caminhos seguros e estruturados.
-
-Expresse suas ideias, mas não fique preso a pequenos detalhes. Aprenda a equilibrar responsabilidade com leveza para aproveitar melhor a vida.`,
-
-5:`Ser adaptável e disciplinado
-Propósito de Vida 5
-
-Este objetivo de vida exige abertura para experiências e aceitação das mudanças. A curiosidade e a coragem serão fundamentais para explorar novos caminhos e aproveitar oportunidades.
-
-Seu caminho envolve liberdade com responsabilidade. Haverá muitas oportunidades, mas será necessário evitar dispersão e excesso de compromissos.
-
-Aprenda a controlar impulsos e agir com maturidade. Desenvolver disciplina será essencial para transformar oportunidades em conquistas reais.
-
-Cultive independência, mas respeite regras e opiniões. O equilíbrio entre liberdade e responsabilidade será o segredo do sucesso.`,
-
-6:`Ser zeloso e pacificador
-Propósito de Vida 6
-
-Seu objetivo é criar harmonia e equilíbrio nos relacionamentos. Seja confiável, sereno e responsável, mas evite sacrificar suas necessidades pessoais.
-
-Desenvolva empatia, generosidade e compreensão sem absorver os problemas alheios. Aprenda a ajudar sem assumir responsabilidades que não são suas.
-
-A honestidade e a disposição para ajudar serão grandes diferenciais. Busque equilíbrio emocional e estabilidade nos relacionamentos.
-
-Construa relações saudáveis baseadas em respeito, amor e compreensão.`,
-
-7:`Ser sociável e se integrar com as pessoas
-Propósito de Vida 7
-
-Existe uma forte necessidade de autoconhecimento e busca por sabedoria. Compartilhe conhecimento e supere preconceitos.
-
-Evite isolamento excessivo e permita que as pessoas se aproximem de você. A comunicação emocional será essencial para evitar solidão.
-
-Seja tolerante com limitações alheias e aprenda a expressar sentimentos com clareza.
-
-A integração social será parte essencial da sua evolução.`,
-
-8:`Ser justo e estratégico
-Propósito de Vida 8
-
-Assuma responsabilidades com disciplina e comprometimento. Use sua autoridade com sabedoria e equilíbrio.
-
-Planejamento, estratégia e justiça serão fundamentais para suas conquistas materiais e profissionais.
-
-Evite rigidez, prepotência e excesso de ambição. Desenvolva paciência e tolerância.
-
-Seu caminho envolve liderança equilibrada e integridade.`,
-
-9:`Ser realista
-Propósito de Vida 9
-
-Compartilhe conhecimento, leve esperança e inspire pessoas. Desenvolva visão humanitária e mente aberta.
-
-Evite idealismo excessivo e mantenha os pés no chão. Inspire sem impor ideias.
-
-Ajude sem esperar reconhecimento. Aprenda a equilibrar altruísmo e necessidades pessoais.
-
-Seu desafio é agir com compaixão e realismo ao mesmo tempo.`
-
+    9: `<p>O seu propósito nesta existência é a conclusão de um ciclo evolutivo através do humanitarismo, do desapego e do amor universal. <strong>você</strong> veio ao mundo com a missão de servir à humanidade, oferecendo a sua sabedoria e compaixão para aliviar o sofrimento alheio e elevar a consciência do planeta.</p>
+    <p>A sua missão envolve o altruísmo e a capacidade de perdoar; <strong>você</strong> deve aprender a deixar ir o que não serve mais e a ver o mundo sem as fronteiras do ego. <strong>você</strong> realiza o seu propósito quando se torna um exemplo de integridade moral e generosidade, inspirando multidões a buscarem um sentido espiritual para a vida.</p>
+    <p>Realizar o seu propósito significa ser a cidadã do mundo que cura e ensina pelo exemplo. <strong>você</strong> veio para mostrar que a verdadeira grandeza reside na entrega e que o amor incondicional é a única força capaz de encerrar conflitos milenares. <strong>você</strong> é a luz do fim do caminho, que aponta para um novo e mais brilhante recomeço.</p>`
+  
   },
 
+// --- MATURIDADE (O SEGUNDO FÔLEGO / O LEGADO DA VIDA) ---
   maturidade: {
-1:`Maturidade 1
-Com o amadurecimento cresce a necessidade de independência, liderança e reconhecimento. A confiança nos próprios instintos aumenta e o desejo de progresso se intensifica. Você tende a assumir o comando das situações e buscar recompensas pelo esforço realizado. Deve evitar arrogância, rigidez e impaciência com limitações. 
+    1: `<p>A sua maturidade será marcada por uma explosão de independência e uma renovação total da sua força de vontade. Nesta fase da vida, <strong>você</strong> sentirá um impulso irresistível para iniciar projetos inteiramente novos, deixando para trás qualquer sombra de insegurança ou dependência que possa ter existido na juventude.</p>
+    <p>O destino reserva para <strong>você</strong> um período de grande liderança e originalidade. <strong>você</strong> se tornará uma referência de autossuficiência, sendo procurada por outras pessoas que buscam a sua coragem como fonte de inspiração. É o momento em que <strong>você</strong> assume o comando definitivo da sua história, agindo com uma autoridade que é natural e respeitada por todos.</p>
+    <p>Colher o sucesso na maturidade para <strong>você</strong> significa olhar para o espelho e reconhecer uma mulher (ou homem) que não teve medo de se reinventar. A sua herança será o exemplo de que nunca é tarde para ser a pioneira e para conquistar o topo através do seu brilho pessoal e da sua iniciativa inabalável.</p>`,
 
-A iniciativa e determinação tornam-se cada vez mais fortes. Construir relações e alianças será essencial para o equilíbrio. Muitos 1’s indicam cuidado com autoritarismo e egoísmo. Poucos 1’s indicam fortalecimento da autonomia e do sucesso pessoal.`,
+    2: `<p>A sua maturidade trará um período de profunda paz, refinamento e colheita emocional através das parcerias que <strong>você</strong> cultivou. Nesta fase, <strong>você</strong> se tornará uma mestra na arte da convivência, sendo reconhecida pela sua diplomacia, sabedoria e pela capacidade de manter a harmonia em qualquer ambiente.</p>
+    <p>O destino reserva para <strong>você</strong> um papel de conselheira e mediadora. As pessoas buscarão a sua companhia pela serenidade que <strong>você</strong> emana. É um tempo de colher os frutos da sua gentileza, onde <strong>você</strong> descobrirá que sua maior força reside na união e no apoio mútuo, vivendo relacionamentos muito mais profundos e equilibrados.</p>
+    <p>Viver a maturidade plenamente para <strong>você</strong> significa desfrutar do conforto e da segurança afetiva. Seu legado será a prova de que a suavidade e a cooperação constroem bases muito mais duradouras do que a disputa, tornando <strong>você</strong> uma figura essencial e amada por todos os que a cercam.</p>`,
 
-2:`Maturidade 2
-A maturidade fortalece a habilidade de cooperação, diplomacia e sensibilidade emocional. Cresce a necessidade de conexão e harmonia nos relacionamentos. A percepção das motivações alheias torna-se mais clara e o talento para mediação aumenta. 
+    3: `<p>A sua maturidade será uma fase de intensa expressão criativa, alegria social e expansão da sua rede de contatos. <strong>você</strong> descobrirá que os anos trouxeram ainda mais brilho ao seu carisma, permitindo que <strong>você</strong> se comunique com uma clareza e um magnetismo que encantam todas as gerações.</p>
+    <p>O destino reserva para <strong>você</strong> oportunidades de se destacar através das artes, da escrita ou de atividades que envolvam o público e o lazer. <strong>você</strong> se sentirá mais jovem do que nunca, agindo com um otimismo que renova o ambiente ao seu redor. É o momento de desfrutar dos prazeres da vida e de ver suas ideias sendo aplaudidas e valorizadas.</p>
+    <p>Atingir a plenitude nesta fase para <strong>você</strong> significa não ter medo de se expressar. Seu legado será a alegria que <strong>você</strong> espalhou e a capacidade de transformar a rotina em celebração, sendo lembrada como uma pessoa que soube viver com entusiasmo e inspirou outros a fazerem o mesmo.</p>`,
 
-É importante desenvolver autoconfiança e limites emocionais. A influência acontece mais pela persuasão do que pela imposição. Pode haver pouca valorização externa, mas grande satisfação em conquistas coletivas. Muitos 2’s indicam sensibilidade excessiva. Poucos 2’s indicam crescimento da capacidade de trabalhar em equipe.`,
+    4: `<p>A sua maturidade será o período de maior estabilidade, segurança material e respeito social da sua vida. Nesta fase, <strong>você</strong> colherá os resultados concretos de todo o trabalho árduo e da disciplina que plantou anteriormente, agindo com a tranquilidade de quem construiu um império sólido sobre rocha.</p>
+    <p>O destino reserva para <strong>você</strong> uma posição de autoridade moral e financeira dentro da sua família ou comunidade. <strong>você</strong> será o alicerce onde os mais jovens buscarão abrigo e orientação. É o tempo de organizar o seu legado e desfrutar da ordem e da eficiência que <strong>você</strong> tanto valoriza, vendo cada esforço se transformar em patrimônio real.</p>
+    <p>O sucesso na maturidade para <strong>você</strong> é a paz de espírito vinda do dever cumprido. Seu legado será a estrutura inabalável que <strong>você</strong> deixou, sendo reconhecida como uma pessoa íntegra, honesta e trabalhadora que provou que a persistência é o único caminho para a vitória verdadeira.</p>`,
 
-3:`Maturidade 3
-Com o tempo surge maior extroversão, criatividade e desejo de prazer e socialização. A comunicação melhora e a popularidade tende a crescer. Há busca por leveza, diversão e expressão pessoal. O desafio é evitar dispersão, superficialidade e falta de disciplina. 
+    5: `<p>A sua maturidade será uma fase de renovação constante, viagens e uma liberdade que <strong>você</strong> talvez nunca tenha experimentado antes. Nesta etapa da vida, <strong>você</strong> se sentirá impelida a quebrar velhas rotinas, buscando novos conhecimentos e experiências que mantenham a sua mente vibrante e curiosa.</p>
+    <p>O destino reserva para <strong>você</strong> um caminho dinâmico, onde <strong>você</strong> poderá atuar como uma agente de mudança e inovação. <strong>você</strong> será vista como uma pessoa moderna, versátil e cheia de vida, agindo com uma agilidade mental que desafia a idade cronológica. É o momento de explorar o mundo e de compartilhar a sua visão progressista com todos.</p>
+    <p>Viver a maturidade para <strong>você</strong> significa não se prender a nada que limite o seu crescimento. Seu legado será a sua coragem de mudar e a sua capacidade de se adaptar, mostrando que a vida é uma aventura sem fim para quem mantém o espírito livre e o coração aberto ao novo.</p>`,
 
-A maturidade traz mais alegria e vida social ativa. Desenvolver foco e priorização será essencial. Muitos 3’s indicam tendência à irresponsabilidade. Poucos 3’s indicam relaxamento e maior capacidade de aproveitar a vida.`,
+    6: `<p>A sua maturidade será o auge da sua realização afetiva e do seu papel como centro harmonizador do seu clã. Nesta fase, <strong>você</strong> se dedicará plenamente ao bem-estar dos seus entes queridos e à beleza do seu ambiente, agindo com um amor e uma responsabilidade que a tornam o coração da sua família.</p>
+    <p>O destino reserva para <strong>você</strong> um período de grande conforto doméstico e respeito social. <strong>você</strong> será a grande conselheira e protetora, sendo procurada para resolver conflitos e trazer paz. É o tempo de colher a gratidão daqueles que <strong>você</strong> ajudou a formar e de ver a harmonia que <strong>você</strong> plantou florescer em todas as áreas da sua vida.</p>
+    <p>Atingir a plenitude nesta fase para <strong>você</strong> significa viver cercada de beleza e afeto. Seu legado será o exemplo de dedicação e justiça, sendo lembrada como a pessoa que transformou a vida de muitos através do cuidado, da educação e do amor incondicional.</p>`,
 
-4:`Maturidade 4
-A maturidade fortalece praticidade, organização e realismo. Cresce a necessidade de rotina, estabilidade e realização através do esforço. Pode surgir medo de mudanças e tendência à rigidez. É importante manter abertura para oportunidades e espontaneidade. 
+    7: `<p>A sua maturidade será uma fase de profunda sabedoria, especialização intelectual e conexão espiritual. Nesta etapa, <strong>você</strong> se sentirá mais inclinada ao estudo, à meditação e à busca pelas verdades ocultas da existência, agindo com um refinamento mental que a coloca em um patamar superior de consciência.</p>
+    <p>O destino reserva para <strong>você</strong> o papel de mestre ou autoridade em um campo específico do conhecimento. <strong>você</strong> valorizará o silêncio e a privacidade, usando seu tempo para produzir obras ou pensamentos de valor duradouro. É o momento de atingir a perfeição naquilo que faz e de encontrar a paz interior através do autoconhecimento profundo.</p>
+    <p>Viver a maturidade plenamente para <strong>você</strong> significa ter clareza absoluta sobre quem <strong>você</strong> é. Seu legado será a sabedoria que <strong>você</strong> deixará para o mundo, sendo respeitada como uma pessoa de integridade inquestionável e de uma profundidade de alma que poucos conseguem alcançar.</p>`,
 
-A fase madura favorece conquistas concretas e segurança para família e amigos. Desenvolver empatia e flexibilidade será essencial. Muitos 4’s indicam risco de teimosia e intolerância. Poucos 4’s indicam aprendizado sobre disciplina e organização.`,
+    8: `<p>A sua maturidade será o período de maior poder, reconhecimento público e sucesso executivo da sua jornada. Nesta fase, <strong>você</strong> terá a maestria necessária para liderar grandes empreendimentos e gerir recursos com uma eficiência extraordinária, agindo como uma força motriz de progresso e justiça material.</p>
+    <p>O destino reserva para <strong>você</strong> a colheita da abundância e do status. <strong>você</strong> será vista como uma líder influente, capaz de tomar decisões difíceis que beneficiam a coletividade. É o momento de consolidar o seu patrimônio e de usar a sua autoridade para construir um legado de prosperidade que perdurará por muitas gerações da sua linhagem.</p>
+    <p>O sucesso na maturidade para <strong>você</strong> é a manifestação do seu poder pessoal no mundo real. Seu legado será o império (seja ele grande ou pequeno) que <strong>você</strong> construiu com ética e determinação, sendo lembrada como uma realizadora vitoriosa e uma gestora impecável da vida.</p>`,
 
-5:`Maturidade 5
-Com o passar dos anos cresce o desejo de liberdade, variedade e novas experiências. A curiosidade e a vontade de viajar e conhecer pessoas aumentam. Pode surgir inquietação com rotina e compromissos rígidos. A criatividade e o carisma tornam-se mais fortes. 
-
-O desafio é manter disciplina e foco. Existe tendência a iniciar projetos e perder interesse rapidamente. Muitos 5’s indicam dispersão de energia. Poucos 5’s indicam maior adaptação às mudanças e disposição para riscos.`,
-
-6:`Maturidade 6
-A maturidade amplia o desejo de cuidar, proteger e orientar pessoas próximas. Cresce o senso de responsabilidade com família e relações. Surge o papel natural de conselheiro e apoio emocional. O desafio é evitar sobrecarga e perfeccionismo. 
-
-É importante cuidar de si com a mesma dedicação dada aos outros. Muitos 6’s indicam idealismo e exigência excessiva. Poucos 6’s indicam fortalecimento dos vínculos afetivos.`,
-
-7:`Maturidade 7
-Com a maturidade aumenta a busca por conhecimento, sentido e autoconhecimento. Cresce o interesse por filosofia, espiritualidade e estudo profundo. Surge maior necessidade de privacidade e reflexão. O desafio é evitar isolamento e excesso de crítica. 
-
-A sabedoria interior torna-se mais evidente com o tempo. Muitos 7’s indicam tendência ao isolamento. Poucos 7’s indicam aprofundamento intelectual e especialização.`,
-
-8:`MT 8
-A maturidade reduz a obsessão por sucesso material e aumenta o foco no equilíbrio pessoal. Cresce o desejo de usar poder e recursos para beneficiar outros. Surge maior reconhecimento e influência social. O desafio é evitar arrogância e apego ao dinheiro. 
-
-Integridade e justiça tornam-se fundamentais. Muitos 8’s indicam risco de ganância. Poucos 8’s indicam oportunidade de estabilidade e tranquilidade.`,
-
-9:`Maturidade 9
-Com o tempo cresce o desejo de contribuir para o bem coletivo e deixar legado positivo. A sensibilidade social e o idealismo aumentam. Surge forte interesse por cultura, arte e causas humanitárias. O desafio é equilibrar generosidade com autocuidado. 
-
-Evite impor ajuda ou negligenciar suas próprias necessidades. Muitos 9’s indicam risco de arrogância e alienação. Poucos 9’s indicam sensação de pertencimento e realização.`
-
+    9: `<p>A sua maturidade será uma fase de profunda espiritualidade, humanitarismo e desapego sábio. Nesta etapa, <strong>você</strong> sentirá o desejo de retribuir ao mundo tudo o que aprendeu, agindo como uma guia espiritual, uma artista inspiradora ou uma cidadã do mundo dedicada a causas nobres e altruístas.</p>
+    <p>O destino reserva para <strong>você</strong> um papel de liderança moral e carismática. <strong>você</strong> será procurada por pessoas de todas as origens em busca de luz e direção. É o momento de encerrar ciclos com dignidade e de ensinar o amor incondicional através do seu exemplo de vida, transcendendo as barreiras do ego e dos interesses materiais.</p>
+    <p>Atingir a plenitude na maturidade para <strong>você</strong> significa sentir-se conectada com o todo. Seu legado será a transformação que <strong>você</strong> operou no coração das pessoas e a consciência de que <strong>você</strong> deixou o mundo um lugar muito melhor do que o encontrou ao chegar.</p>`
+  
   },
-
+// --- RELACIONAMENTO (COMO VOCÊ AMA E SE COMPORTA NO AMOR) ---
   relacionamento: {
-   1:`A vibração 1 está ligada a pessoas intensas, apaixonadas e imaginativas. Seus sentimentos costumam nascer de sonhos, fantasias e idealizações, podendo ser muito fortes no início, mas tendem a enfraquecer quando não encontram base racional e estabilidade emocional.
-Mesmo possuindo grande magnetismo pessoal e capacidade de convencer e influenciar o parceiro, quem possui essa vibração costuma demonstrar indecisão no campo afetivo. 
+    1: `<p>No amor, <strong>você</strong> busca um relacionamento que respeite a sua individualidade e a sua necessidade de liderança. <strong>você</strong> é uma parceira direta, leal e extremamente protetora, agindo com uma intensidade que não aceita meios-termos ou jogos sentimentais que limitem o seu crescimento pessoal.</p>
+    <p><strong>você</strong> se sente atraída por pessoas fortes e independentes, mas que saibam admirar a sua força sem tentar competir com <strong>você</strong>. O seu maior desafio é aprender a ceder e a compartilhar o comando, entendendo que um relacionamento saudável exige que, às vezes, <strong>você</strong> deixe o outro tomar a iniciativa para que a parceria seja equilibrada.</p>
+    <p>Para <strong>você</strong>, amar significa caminhar lado a lado com alguém que tenha a própria vida, mas que escolha estar ao seu lado para construir um império de realizações. <strong>você</strong> demonstra o seu afeto através do apoio aos sonhos do parceiro e da sua presença firme em todos os momentos decisivos da jornada a dois.</p>`,
 
-Existe facilidade tanto para atrair pessoas fiéis e benéficas quanto relacionamentos marcados por ciúme e conflitos. 
+    2: `<p>No amor, <strong>você</strong> é a personificação da doçura, da paciência e da dedicação. <strong>você</strong> busca uma união profunda, onde a troca emocional e a harmonia sejam as prioridades absolutas. <strong>você</strong> não gosta de ficar sozinha e sente que a vida só faz sentido quando compartilhada com uma alma gêmea que compreenda a sua sensibilidade.</p>
+    <p><strong>você</strong> é uma parceira extremamente atenta aos detalhes, agindo sempre com diplomacia para evitar conflitos e manter a paz no lar. O seu desafio é não se anular demais em favor do outro ou se tornar dependente da aprovação constante. <strong>você</strong> precisa de um parceiro que valorize a sua delicadeza e que ofereça a segurança emocional que o seu coração tanto busca.</p>
+    <p>Para <strong>você</strong>, o relacionamento é um porto seguro, um jardim que deve ser cultivado diariamente com carinho e conversas suaves. <strong>você</strong> demonstra o seu amor através do cuidado constante, da fidelidade inabalável e da sua capacidade única de ler os sentimentos do parceiro apenas pelo olhar.</p>`,
 
-A busca constante por novidade desperta o desejo de variedade e experiências diferentes, o que pode gerar tentações repentinas e paixões intensas.
+    3: `<p>No amor, <strong>você</strong> busca alegria, diversão e uma conexão intelectual vibrante. <strong>você</strong> encara os relacionamentos como uma extensão da sua criatividade, agindo com um carisma que mantém a chama da paixão sempre acesa através de boas risadas, viagens e uma vida social movimentada.</p>
+    <p><strong>você</strong> precisa de um parceiro que seja também o seu melhor amigo, alguém que aceite a sua necessidade de brilhar e que não tente prender o seu espírito livre com ciúmes excessivos. O seu desafio é aprofundar as emoções e não ficar apenas na superfície do prazer imediato. <strong>você</strong> é atraída por pessoas inteligentes, otimistas e que saibam apreciar a sua versatilidade.</p>
+    <p>Para <strong>você</strong>, o relacionamento ideal é aquele que nunca cai na rotina. <strong>você</strong> demonstra o seu afeto através do entusiasmo, de elogios sinceros e da sua capacidade de transformar qualquer problema em uma oportunidade para um novo começo cheio de esperança e criatividade.</p>`,
 
-Essa inquietação pode dificultar a construção de vínculos duradouros se não houver dedicação e compromisso.
-É comum sentir necessidade de liberdade e espaço dentro da relação.
-Por isso, é essencial cultivar lealdade, disciplina emocional e responsabilidade afetiva.
+    4: `<p>No amor, <strong>você</strong> busca estabilidade, lealdade e a construção de uma família sólida. <strong>você</strong> não é fã de aventuras passageiras; o seu foco está em encontrar alguém com valores tradicionais e que esteja disposto a trabalhar duro ao seu lado para garantir um futuro seguro e confortável para ambos.</p>
+    <p><strong>você</strong> é uma parceira prática, honesta e extremamente dedicada às responsabilidades do lar. O seu desafio é aprender a demonstrar os sentimentos de forma mais aberta e romântica, já que <strong>você</strong> tende a focar muito na provisão material e pouco na expressão emocional. <strong>você</strong> precisa de um parceiro que entenda que a sua dedicação é a sua maior prova de amor.</p>
+    <p>Para <strong>você</strong>, amar é construir um castelo sobre rocha firme. <strong>você</strong> demonstra o seu afeto através da proteção constante, do cumprimento rigoroso das promessas e da manutenção de uma rotina familiar que traga paz e segurança para todos os envolvidos.</p>`,
 
-Casamentos e uniões costumam surgir de forma inesperada e em contextos variados.
+    5: `<p>No amor, <strong>você</strong> busca aventura, paixão e uma renovação constante de estímulos. <strong>você</strong> é uma parceira magnética e atraente, agindo com uma curiosidade que a faz querer explorar todas as facetas do relacionamento, detestando qualquer tipo de monotonia ou controle possessivo.</p>
+    <p><strong>você</strong> precisa de liberdade para ser quem é, e se sente atraída por pessoas dinâmicas, modernas e que tenham um ritmo de vida tão acelerado quanto o seu. O seu desafio é cultivar a paciência e a estabilidade para que o relacionamento dure mais do que a fase da novidade. <strong>você</strong> valoriza a troca intelectual e a química física acima de tudo.</p>
+    <p>Para <strong>você</strong>, o relacionamento deve ser uma jornada excitante ao redor do mundo (ou da mente). <strong>você</strong> demonstra o seu amor através da partilha de novas experiências, da sua adaptabilidade aos desejos do parceiro e da sua coragem em manter a relação sempre jovem e estimulante.</p>`,
 
-Relacionamentos podem começar em viagens, eventos, estudos ou encontros casuais.
+    6: `<p>No amor, <strong>você</strong> é o coração do relacionamento, agindo com um senso de responsabilidade e carinho que envolve o parceiro em uma aura de proteção. <strong>você</strong> nasceu para amar e ser amada, buscando um ideal de perfeição doméstica e harmonia afetiva que poucas pessoas conseguem atingir.</p>
+    <p><strong>você</strong> se sente realizada quando pode cuidar, aconselhar e criar um ambiente de beleza e paz para a sua família. O seu desafio é não se tornar sufocante ou perfeccionista demais com o outro, aprendendo que o amor também aceita as falhas humanas. <strong>você</strong> atrai pessoas que buscam o seu colo e a sua sabedoria emocional.</p>
+    <p>Para <strong>você</strong>, a vida a dois é o centro do universo. <strong>você</strong> demonstra o seu afeto através do serviço desinteressado, da criação de um lar acolhedor e da sua dedicação total ao bem-estar e à felicidade daqueles que <strong>você</strong> escolheu para caminhar ao seu lado.</p>`,
 
-A estabilidade amorosa depende do esforço consciente em evitar impulsos passageiros.
-Quando há maturidade emocional, a vibração 1 pode construir relações intensas e inspiradoras.
+    7: `<p>No amor, <strong>você</strong> busca uma conexão de alma e uma cumplicidade intelectual profunda. <strong>você</strong> é uma parceira reservada, que leva tempo para confiar, mas quando se entrega, faz isso com uma fidelidade e uma seriedade inabaláveis, agindo com uma classe que impõe respeito.</p>
+    <p><strong>você</strong> precisa de muito espaço para o seu silêncio e para os seus estudos, por isso sente-se atraída por parceiros cultos, discretos e que respeitem a sua privacidade. O seu desafio é permitir que o parceiro entre no seu mundo interior sem medo, compartilhando as suas fraquezas tanto quanto a sua sabedoria. <strong>você</strong> valoriza a qualidade sobre a quantidade.</p>
+    <p>Para <strong>você</strong>, o relacionamento é um refúgio sagrado contra a barulheira do mundo. <strong>você</strong> demonstra o seu afeto através da lealdade absoluta, de conversas profundas sobre o sentido da vida e da sua capacidade de entender o parceiro sem que ele precise dizer uma única palavra.</p>`,
 
-O desafio é equilibrar liberdade com compromisso.
+    8: `<p>No amor, <strong>você</strong> busca um parceiro de poder, alguém que compartilhe as suas ambições e que esteja disposto a construir um império material e social ao seu lado. <strong>você</strong> é uma parceira imponente, decidida e extremamente generosa com os recursos que conquista, agindo com uma autoridade que protege a relação.</p>
+    <p><strong>você</strong> se sente atraída por pessoas competentes, bem-sucedidas e que possuam um forte senso de justiça. O seu desafio é não transformar o relacionamento em uma empresa e lembrar que o afeto não pode ser medido apenas por resultados materiais. <strong>você</strong> precisa de um parceiro que respeite a sua força, mas que também saiba relaxar ao seu lado.</p>
+    <p>Para <strong>você</strong>, amar significa formar uma dupla vitoriosa. <strong>você</strong> demonstra o seu afeto através da segurança financeira que proporciona, do apoio estratégico aos projetos do parceiro e da sua lealdade férrea em todas as batalhas que o casal enfrentar no mundo exterior.</p>`,
 
-A fidelidade nasce da escolha consciente e não da ausência de oportunidades.
-
-Com equilíbrio, pode viver relações cheias de paixão e crescimento mútuo.`,
-
-    2:`A vibração 2 representa pessoas seletivas, sensíveis e criteriosas na escolha de parceiros. 
-    
-São românticas, afetuosas e valorizam relações baseadas em harmonia, segurança e estabilidade emocional.
-
-Buscam vínculos duradouros e costumam investir profundamente quando encontram alguém confiável.
-
-Possuem forte necessidade de estabilidade financeira e emocional para se sentirem seguras.
-
-São pessoas encantadoras e atraentes, mas não gostam de ser controladas.
-Apesar disso, podem ser influenciáveis e precisam evitar interferências externas no relacionamento.
-A imaginação fértil pode levar a idealizações ou paixões difíceis de concretizar.
-Quando não controladas, essas ilusões podem gerar conflitos e frustrações conjugais.
-Valorizam parceiros inteligentes, mas principalmente práticos e responsáveis.
-
-Precisam aprender a fortalecer a autonomia emocional.
-
-O desafio é equilibrar romantismo com realismo.
-
-Relacionamentos prosperam quando há diálogo, confiança e limites claros.
-A maturidade traz maior estabilidade afetiva.
-
-Quando equilibrada, essa vibração favorece relações profundas e duradouras.
-
-O amor é vivido como parceria, cumplicidade e apoio constante.`,
-
-    3:`A vibração 3 está associada ao charme, sociabilidade e forte vida social. 
-    
-Essas pessoas costumam ser muito atraentes e cercadas por amizades e oportunidades amorosas.
-
-Existe grande tendência a iniciar novos relacionamentos ao longo da vida.
-
-Podem cometer erros nas escolhas afetivas e perder tempo em envolvimentos inadequados.
-
-Às vezes, quando encontram a pessoa ideal, as circunstâncias já são complexas.
-
-Possuem forte intuição para compreender motivações humanas.
-
-Geralmente acabam se unindo a parceiros com interesses semelhantes.
-
-Precisam de alguém que compreenda sua sensibilidade e emotividade.
-
-Costumam evitar expor problemas conjugais a terceiros.
-
-Isso pode levá-las a relações desequilibradas se não houver cuidado.
-
-Devem evitar parceiros possessivos ou exploradores.
-
-A estabilidade surge quando aprendem a expressar sentimentos com clareza.
-A comunicação é essencial para a felicidade amorosa.
-
-Com maturidade, encontram vínculos duradouros e enriquecedores.
-
-O amor precisa caminhar junto com leveza e compreensão.`,
-
-  4:`A vibração 4 revela forte necessidade emocional de estabilidade e segurança no amor. 
+    9: `<p>No amor, <strong>você</strong> busca uma conexão espiritual e humanitária que ultrapasse os limites do cotidiano. <strong>você</strong> é uma parceira generosa, compreensiva e dotada de um amor universal que a faz perdoar e entender as falhas do outro com uma sabedoria que parece vir de muitas vidas.</p>
+    <p><strong>você</strong> se sente atraída por pessoas idealistas, artistas ou que tenham um propósito maior na vida. O seu desafio é não se sacrificar demais pelo parceiro a ponto de esquecer as suas próprias necessidades. <strong>você</strong> precisa de alguém que compartilhe a sua visão de um mundo melhor e que saiba valorizar a sua alma desapegada e carismática.</p>
+    <p>Para <strong>você</strong>, o relacionamento é um caminho de evolução mútua e serviço ao próximo. <strong>você</strong> demonstra o seu afeto através da compaixão infinita, da inspiração constante que oferece e da sua capacidade de amar o parceiro por quem ele realmente é na essência, sem máscaras.</p>`
   
-Existe grande valorização do casamento e de relações duradouras.
-Homens tendem a ser protetores e dedicados; mulheres mais acessíveis e práticas.
-
-Buscam vínculos sólidos e estruturados.
-
-Podem enfrentar inveja ou interferências externas por falta de discrição.
-
-Há forte valorização da aparência física, o que pode levar a escolhas equivocadas.
-
-Essas escolhas podem gerar decepções e aprendizados importantes.
-Desejam parceiros ativos e fortes.
-
-Cobranças excessivas podem gerar conflitos frequentes.
-
-Precisam desenvolver flexibilidade emocional.
-
-Relacionamentos prosperam com diálogo e equilíbrio.
-
-A segurança emocional é prioridade absoluta.
-
-Com maturidade, constroem relações firmes e confiáveis.
-
-O amor é visto como compromisso e parceria.
-
-A estabilidade afetiva é o maior objetivo.`,
-
-
-    5:`A vibração 5 simboliza inquietação, liberdade e desejo de experiências. 
-    
-Existe forte necessidade de novidades, viagens e mudanças.
-
-Podem viver mais de uma união ao longo da vida.
-
-Possuem carisma e facilidade para conquistar pessoas.
-
-Podem se tornar controladoras se não equilibrar emoções.
-
-Precisam de parceiros compreensivos e flexíveis.
-
-Na juventude, tendem a relacionamentos instáveis.
-
-A maturidade traz maior estabilidade afetiva.
-
-Geralmente casam após os 30 anos.
-
-A amizade costuma permanecer mesmo após separações.
-
-Podem desenvolver parcerias profissionais com ex-companheiros.
-
-Precisam trabalhar constância e compromisso.
-
-A liberdade precisa coexistir com responsabilidade.
-
-Relacionamentos amadurecem com o tempo.
-
-A felicidade surge quando aprendem a equilibrar emoção e disciplina.`,
-
-    6:`A vibração 6 demonstra romantismo, sensibilidade e necessidade de amor. 
-    
-Mesmo apaixonadas, podem ser tímidas na expressão emocional.
-
-Buscam a pessoa ideal com persistência.
-
-Podem enfrentar relacionamentos difíceis até amadurecerem.
-
-São dedicadas, carinhosas e leais.
-
-Precisam de companheirismo constante.
-
-Têm forte necessidade de sentir-se amadas.
-
-Podem desenvolver possessividade se inseguras.
-
-Relacionamentos se estabilizam após os 30 anos.
-
-Precisam aprender a confiar e equilibrar emoções.
-
-A intuição é guia importante no amor.
-
-Com maturidade, vivem relações profundas e duradouras.
-
-A família torna-se prioridade central.
-
-A estabilidade emocional cresce com o tempo.
-
-O amor é vivido com intensidade e dedicação.`,
-
-    7:`A vibração 7 indica dificuldade em encontrar o parceiro ideal. 
-São companheiras e dedicadas, mas seletivas.
-
-Costumam casar jovens e se separar depois.
-
-Podem ter mais de uma união ao longo da vida.
-
-Precisam conhecer profundamente o parceiro antes do compromisso.
-
-Valorizam liberdade e individualidade.
-
-Não lidam bem com separações.
-
-Têm dificuldade em se adaptar a novos relacionamentos.
-
-Podem viver muitos envolvimentos ao longo da vida.
-
-Nem sempre buscam aventuras, mas acabam vivenciando experiências intensas.
-
-A maturidade traz maior clareza emocional.
-
-Relacionamentos tornam-se mais estáveis após os 30 anos.
-
-Precisam equilibrar independência e parceria.
-
-O autoconhecimento é essencial no amor.
-
-A felicidade surge com escolhas conscientes.`,
-
-    8:`A vibração 8 demonstra forte necessidade de segurança emocional. 
-Valorizam estabilidade e compromisso duradouro.
-
-Podem ser dominadoras quando contrariadas.
-
-São sinceras e leais nos relacionamentos.
-
-Buscam uniões definitivas.
-
-Separações costumam ocorrer antes do casamento.
-
-Demoram a superar decepções amorosas.
-
-Dificilmente se casam novamente após separação.
-
-Possuem forte desejo sexual, mas são cautelosas.
-
-Precisam de companheirismo e parceria.
-
-Valorizam relações sólidas e estruturadas.
-
-A estabilidade é prioridade máxima.
-
-Relacionamentos tendem a ser duradouros.
-
-O amor é conduzido com seriedade.
-
-A fidelidade é uma característica marcante.`,
-
-    9:`A vibração 9 vê o casamento como grande objetivo de vida. 
-São capazes de sacrificar sonhos pelo amor.
-
-Buscam amor intenso e verdadeiro.
-
-Podem sofrer desilusões amorosas.
-
-Tendem a idealizar o parceiro.
-
-Na juventude, sentem atração por pessoas mais velhas.
-
-Na maturidade, preferem parceiros mais jovens.
-
-Precisam alinhar vida profissional e afetiva.
-
-Incompatibilidades geram frustrações.
-
-Precisam aprender a equilibrar expectativas.
-
-O amor é vivido com profundidade emocional.
-
-Buscam relações significativas e verdadeiras.
-
-Devem evitar idealizações excessivas.
-
-A maturidade traz maior equilíbrio afetivo.
-
-A felicidade surge quando alinham amor e realidade.`
 
   },
 
-ciclos:{ 1:{
-  1:`Este período representa a fase inicial de formação da individualidade e da autonomia. A pessoa aprende a afirmar sua identidade, desenvolver iniciativa e construir autoconfiança desde cedo. A infância e a juventude exigem equilíbrio entre liberdade e orientação, permitindo a construção de responsabilidade e maturidade emocional. A presença de figuras de autoridade confiáveis torna-se essencial para servir de modelo e referência. Surge a necessidade de descobrir desejos, talentos e vocação, iniciando a construção da identidade profissional. A disciplina deve existir sem excesso de rigidez, favorecendo a autonomia consciente. Experiências dessa fase moldam fortemente o caráter e a estabilidade futura. Quando bem orientada, a pessoa inicia a vida adulta com iniciativa, liderança e segurança. Caso contrário, podem surgir dúvidas, instabilidade emocional e dificuldade de definição profissional. Este ciclo incentiva coragem, independência e autodescoberta. É uma fase de aprendizado prático e construção do caráter. As bases do futuro são estabelecidas aqui. A consciência dos próprios limites deve ser desenvolvida. A busca por autonomia é constante. O desenvolvimento pessoal torna-se prioridade.`,
-
-2:`Este ciclo enfatiza sensibilidade, cooperação e desenvolvimento emocional. A infância tende a ser marcada por forte influência familiar e necessidade de proteção, exigindo equilíbrio entre autonomia e apoio. Surge a necessidade de construir autoconfiança e capacidade de decisão. A pessoa aprende paciência, empatia e flexibilidade nas relações. Pode demonstrar timidez ou insegurança ao expressar opiniões, refletindo a busca por identidade emocional. A fase favorece introspecção e autoconhecimento, permitindo descobertas importantes para a vida adulta. Relações afetivas exercem grande impacto no desenvolvimento psicológico. O estímulo à independência é fundamental para evitar dependência excessiva. Desenvolve-se o senso de cooperação e sensibilidade social. A maturidade emocional começa a ser construída gradualmente. A busca por harmonia torna-se central. O ambiente familiar influencia profundamente as decisões futuras. A pessoa aprende a confiar em sua percepção. O crescimento acontece de forma gradual e sensível. Este período fortalece vínculos e inteligência emocional.`,
-
-3:`Este ciclo simboliza alegria, criatividade e sociabilidade. A infância e juventude são marcadas por leveza, entusiasmo e necessidade de expressão. A pessoa demonstra carisma, imaginação e forte necessidade de interação social. A busca por diversão pode reduzir o foco em responsabilidades e estudos. Surge a necessidade de aprender disciplina e compromisso. A criatividade e a comunicação se destacam intensamente. Este período favorece descobertas, amizades e expansão social. A pessoa aprende a expressar emoções e ideias com liberdade. A responsabilidade deve ser desenvolvida gradualmente. É uma fase de experimentação e aprendizado social. A motivação vem da alegria e da convivência. A construção de compromissos torna-se necessária. O desenvolvimento artístico pode ser estimulado. A fase favorece autoconhecimento emocional. A base da comunicação futura é construída aqui.`,
-
-4:`Este ciclo exige disciplina, responsabilidade e organização. A infância pode trazer limitações e necessidade de regras claras. Surge o aprendizado sobre esforço, rotina e persistência. A pessoa aprende a respeitar limites e desenvolver autodisciplina. O excesso de rigidez pode gerar resistência ou insegurança. O equilíbrio entre disciplina e liberdade é essencial. A fase favorece construção de bases materiais e educacionais. O esforço dedicado aos estudos torna-se fundamental. A responsabilidade cresce gradualmente. A pessoa aprende a valorizar estabilidade e segurança. Surge a necessidade de planejamento e foco. A maturidade é construída por meio do trabalho e da dedicação. A autonomia é conquistada progressivamente. A base da vida profissional começa a se formar. Este ciclo constrói estrutura e estabilidade para o futuro.`,
-
-5:`Este ciclo é marcado por movimento, liberdade e mudanças constantes. A pessoa aprende a lidar com novas experiências e desafios. Surge forte necessidade de autonomia e experimentação. A supervisão familiar torna-se essencial para evitar excessos. A energia física e mental é intensa. O período favorece aprendizado por experiências práticas. Mudanças e transformações são frequentes. A pessoa busca novas ideias e pessoas inspiradoras. O desafio é desenvolver responsabilidade e constância. Pode haver dificuldade em manter foco e estabilidade. A orientação adequada garante segurança futura. A curiosidade e o dinamismo são características marcantes. A fase estimula independência e adaptação. A busca por liberdade deve ser equilibrada com compromisso. O aprendizado vem da experiência direta com a vida.`,
-
-6:`Este ciclo destaca responsabilidade, família e cooperação. A pessoa aprende a assumir deveres gradualmente. Surge a necessidade de sentir pertencimento e harmonia familiar. Pode haver dificuldade inicial de adaptação social. A fase favorece desenvolvimento de empatia e compromisso. A convivência com pessoas inspiradoras torna-se essencial. O apoio emocional influencia profundamente o crescimento. A vocação começa a se revelar. O senso de responsabilidade se fortalece progressivamente. A pessoa aprende a equilibrar necessidades pessoais e coletivas. Surge o desejo de contribuir com o grupo. A maturidade emocional cresce lentamente. O ambiente familiar exerce forte influência. A fase favorece estabilidade emocional futura. A base da vida afetiva é construída aqui.`,
-
-7:`Este ciclo representa introspecção, sensibilidade e autoconhecimento. A pessoa pode demonstrar timidez e necessidade de isolamento. Surge a busca por compreensão interior e reflexão profunda. O incentivo à socialização é essencial para equilíbrio emocional. Pode haver dificuldade em expressar sentimentos. A autoestima precisa ser fortalecida. O apoio familiar torna-se fundamental. A fase favorece desenvolvimento intelectual e espiritual. A pessoa aprende a confiar em si mesma. O isolamento excessivo deve ser evitado. A introspecção pode gerar sabedoria e maturidade. O estímulo ao diálogo é essencial. A conexão com o mundo exterior precisa ser cultivada. A fase desenvolve consciência emocional profunda. O crescimento ocorre de forma interiorizada.`,
-
-8:`Este ciclo simboliza ambição, poder pessoal e desenvolvimento material. A pessoa demonstra liderança e senso de justiça desde cedo. Surge interesse por conquistas e responsabilidades. A fase favorece construção de valores e capacidade de julgamento. A disciplina torna-se essencial para o sucesso futuro. O jovem busca reconhecimento e espaço social. A orientação adequada define resultados futuros. A ambição precisa ser equilibrada com ética. A capacidade de decisão cresce intensamente. A pessoa aprende a lidar com poder e responsabilidade. O foco material pode se intensificar. O equilíbrio emocional garante estabilidade futura. A fase desenvolve senso de autoridade e liderança. A base das conquistas é construída aqui. O crescimento ocorre por meio da responsabilidade.`,
-
-9:`Este ciclo é marcado por sensibilidade, compaixão e transformações profundas. A pessoa desenvolve empatia e visão humanitária. Pode sentir-se incompreendida ou deslocada. A criatividade e a sensibilidade emocional são intensas. Surge necessidade de propósito e significado. A fase exige orientação emocional cuidadosa. Pode haver sensação de solidão ou confusão. O desenvolvimento espiritual e emocional é intenso. A pessoa aprende tolerância e aceitação. A busca por vocação pode ser desafiadora. Grandes mudanças e adaptações marcam o período. A maturidade emocional cresce lentamente. A fase prepara para profundas transformações futuras. O crescimento ocorre por meio da compreensão da vida. Este ciclo encerra a fase formativa com forte aprendizado emocional.` },
-
-2:{ 1:`Este ciclo marca o início das grandes realizações e da busca por independência. A pessoa passa a confirmar se as escolhas feitas anteriormente estão corretas e começa a estruturar sua carreira e estabilidade financeira. Surge a necessidade de assumir responsabilidades e construir o próprio caminho com autonomia. É uma fase de grande energia, ambição e iniciativa. As conquistas dependem principalmente do esforço pessoal e da determinação. O reconhecimento profissional tende a crescer gradualmente. Este período exige coragem para enfrentar desafios e superar obstáculos. A autoconfiança se fortalece através das realizações. O objetivo é chegar ao próximo ciclo com estabilidade e direção definida. A independência torna-se prioridade. O trabalho intenso traz recompensas. O desenvolvimento pessoal ganha destaque. A construção do futuro se torna concreta. A iniciativa determina os resultados. É uma fase de afirmação e conquistas.`,
-
-2:`Este ciclo enfatiza cooperação, diplomacia e trabalho em equipe. Surge a necessidade de alinhar objetivos pessoais com interesses coletivos. A paciência e a sensibilidade tornam-se fundamentais para alcançar metas. A pessoa aprende a negociar, conciliar e construir parcerias. O crescimento ocorre por meio da colaboração e do apoio mútuo. É importante evitar dependência excessiva ou submissão. O equilíbrio emocional favorece conquistas duradouras. O sucesso surge através de estratégias e planejamento. A fase pede discrição e observação. O progresso acontece de forma gradual e constante. A diplomacia abre oportunidades. A convivência social ganha importância. A realidade deve ser encarada com maturidade. O trabalho em equipe impulsiona resultados. Este período fortalece vínculos e cooperação.`,
-
-3:`Este ciclo traz leveza, expansão e expressão pessoal. A pessoa sente maior alegria, criatividade e sociabilidade. Surge o desejo de se comunicar, aprender e desenvolver talentos. A vida social tende a se expandir e novas oportunidades surgem. É um período favorável ao crescimento intelectual e artístico. A autoconfiança aumenta com a expressão das ideias. O desafio é evitar dispersão e superficialidade. A criatividade deve ser direcionada a objetivos concretos. O entusiasmo favorece novas conquistas. O prazer em viver se intensifica. A comunicação torna-se ferramenta essencial. Novas experiências ampliam horizontes. O aprendizado ocorre com facilidade. A felicidade motiva o crescimento. Este ciclo incentiva criatividade e expansão pessoal.`,
-
-4:`Este ciclo exige dedicação, planejamento e construção de bases sólidas. A prioridade passa a ser estabilidade profissional e segurança material. O trabalho disciplinado torna-se essencial para alcançar objetivos. A pessoa aprende a valorizar organização e persistência. O progresso ocorre através do esforço constante. A rotina torna-se necessária para crescimento estruturado. Este é um período de consolidação e amadurecimento. A responsabilidade aumenta significativamente. A construção de um legado torna-se prioridade. A disciplina garante resultados duradouros. A motivação deve vir do propósito pessoal. O foco substitui a impulsividade. A estabilidade começa a se formar. O crescimento é gradual e seguro. Este ciclo constrói segurança e estrutura.`,
-
-5:`Este é um ciclo de mudanças intensas e oportunidades inesperadas. A vida torna-se dinâmica, exigindo adaptação constante. A pessoa aprende a lidar com liberdade e responsabilidade. Novas experiências ampliam a visão de mundo. A flexibilidade torna-se essencial para o sucesso. Mudanças repentinas podem ocorrer com frequência. A fase favorece expansão pessoal e profissional. A curiosidade impulsiona novas descobertas. O desafio é evitar impulsividade e instabilidade. A liberdade deve ser usada com sabedoria. O crescimento ocorre por meio da experiência. Novas oportunidades surgem rapidamente. A capacidade de adaptação define resultados. Este ciclo ensina o valor da liberdade consciente. A transformação torna-se constante.`,
-
-6:`Este ciclo destaca responsabilidade afetiva, parcerias e compromissos. Surge a necessidade de cooperação e equilíbrio nas relações. A pessoa aprende a compartilhar responsabilidades. O desenvolvimento acontece através da união com outras pessoas. Parcerias podem trazer crescimento significativo. O individualismo deve dar lugar à colaboração. A harmonia torna-se essencial para o progresso. O compromisso fortalece conquistas. A vida afetiva ganha importância. O equilíbrio emocional favorece estabilidade. O sucesso vem do esforço conjunto. A flexibilidade melhora relacionamentos. A maturidade emocional se intensifica. Este ciclo fortalece vínculos e responsabilidades.`,
-
-7:`Este ciclo favorece introspecção, estudo e autoconhecimento. A pessoa sente necessidade de compreender sua essência. Surge o desejo de aperfeiçoamento pessoal e intelectual. O crescimento ocorre por meio da reflexão. A busca por conhecimento se intensifica. A disciplina mental torna-se essencial. O sucesso depende de concentração e foco. A intuição se fortalece gradualmente. O isolamento pode ser necessário para crescimento interior. O aprendizado profundo traz sabedoria. As oportunidades surgem naturalmente. A pessoa aprende a confiar em si mesma. O desenvolvimento ocorre de dentro para fora. Este ciclo fortalece autoconfiança e maturidade.`,
-
-8:`Este ciclo está ligado às conquistas materiais e ao poder de realização. A dedicação ao trabalho e aos objetivos financeiros aumenta. O senso de justiça e responsabilidade torna-se essencial. As recompensas são proporcionais ao esforço. O equilíbrio emocional garante sucesso. O autocontrole evita perdas e impulsividade. Grandes oportunidades podem surgir. A liderança se fortalece naturalmente. A confiança impulsiona conquistas. O planejamento financeiro torna-se importante. O sucesso exige ética e disciplina. A ambição deve ser equilibrada com sabedoria. Este ciclo favorece prosperidade e estabilidade.`,
-
-9:`Este ciclo representa transformação, desapego e amadurecimento emocional. A pessoa desenvolve empatia e visão humanitária. Surge a necessidade de reavaliar valores e objetivos. O desapego de mágoas e frustrações torna-se necessário. A maturidade emocional se fortalece. Mudanças profundas podem ocorrer. A vida pede renovação e crescimento interior. O passado deve ser compreendido e superado. A compaixão ganha destaque. O desenvolvimento espiritual se intensifica. Este período prepara para novas fases da vida. A transformação traz sabedoria. O crescimento ocorre por meio do desapego. Este ciclo encerra uma etapa com evolução e consciência.` },
-
-3:{ 1:`No terceiro ciclo de vida, o número 1 representa uma fase de renovação, autonomia e redescoberta da própria identidade. Surge uma nova percepção sobre a vida, sobre si mesmo e sobre as decisões tomadas ao longo da jornada. A pessoa passa a compreender melhor suas motivações, suas qualidades e a influência de suas escolhas no caminho percorrido. É um período de iniciativa, coragem e autoconfiança, no qual o desejo de continuar realizando e conquistando permanece forte. Quando a trajetória anterior foi produtiva, há sensação de realização, vitalidade e disposição para continuar evoluindo. Caso contrário, podem surgir frustrações, arrependimentos e sensação de oportunidades perdidas. Este ciclo incentiva novos objetivos, independência emocional e continuidade do crescimento pessoal. É momento de assumir a própria história, reconhecer conquistas e buscar novos desafios com maturidade, determinação e confiança nas próprias capacidades.`,
-
-2:`Neste ciclo, o número 2 traz uma fase de harmonia emocional, aproximação afetiva e fortalecimento dos vínculos sociais. A pessoa tende a sentir maior conexão com os outros e consigo mesma, tornando-se mais sensível, espontânea e receptiva. Surge a oportunidade de expressar sentimentos com mais naturalidade, superar inseguranças e desenvolver relações mais profundas e verdadeiras. Quando a vida foi conduzida de forma equilibrada, há sensação de paz interior, satisfação emocional e convivência harmoniosa. Caso contrário, podem surgir sentimentos de mágoa, ressentimento ou comparação com conquistas alheias. Este período favorece empatia, diplomacia, cooperação e reconciliação. A maturidade emocional torna-se uma ferramenta poderosa para viver relações mais saudáveis e significativas. É uma fase de sensibilidade, compreensão e crescimento através das relações humanas.`,
-
-3:`O número 3 representa uma fase de expressão, criatividade e redescoberta da alegria de viver. Surge a necessidade de compartilhar sentimentos, ideias e experiências, fortalecendo a comunicação e o contato social. A criatividade se expande e pode trazer novas atividades, amizades e interesses. Quando a trajetória foi bem construída, há entusiasmo, leveza e prazer em viver novas experiências. Caso contrário, podem surgir sentimentos de rejeição, impulsividade ou falta de direção. O desafio é manter o foco e evitar desperdício de energia em atividades sem propósito. Este ciclo incentiva autenticidade, convivência social e desenvolvimento de talentos. É uma fase de redescoberta emocional e de valorização da vida através da criatividade, comunicação e alegria.`,
-
-4:`O número 4 traz um período de continuidade, responsabilidade e senso de dever cumprido. A pessoa sente necessidade de manter-se ativa, produtiva e útil, buscando estabilidade e segurança. Surge maior preocupação com justiça, valores morais e organização da vida. Quando a jornada anterior foi bem conduzida, há sensação de realização e satisfação com o caminho percorrido. Caso contrário, podem surgir frustração, ressentimento ou sensação de falta de conquistas. Este ciclo reforça disciplina, perseverança e construção de legado. É uma fase de maturidade prática, comprometimento e fortalecimento das bases construídas ao longo da vida.`,
-
-5:`O número 5 indica um período de movimento, mudanças e adaptação. Mesmo na maturidade, surgem novas oportunidades, experiências e desafios que exigem flexibilidade e prudência. A pessoa busca segurança, mas também deseja continuar evoluindo e explorando novas possibilidades. Quando a vida foi bem conduzida, há entusiasmo, abertura para mudanças e vontade de continuar crescendo. Caso contrário, podem surgir insegurança, apego ao passado ou falta de motivação. Este ciclo incentiva liberdade consciente, adaptação e aproveitamento das oportunidades. É uma fase de transformação e expansão contínua.`,
-
-6:`O número 6 representa uma fase de harmonia, vínculos afetivos e realização emocional. As relações ganham grande importância, trazendo sensação de pertencimento e apoio. Quando a trajetória foi equilibrada, há sentimento de ser amado, respeitado e valorizado. Caso contrário, podem surgir sentimentos de inutilidade ou solidão. Este ciclo estimula amor, cooperação e equilíbrio emocional. É um período de estabilidade afetiva, convivência familiar e satisfação pessoal através das relações.`,
-
-7:`O número 7 simboliza a fase de introspecção, sabedoria e autoconhecimento. É um período de reflexão, aprendizado e crescimento interior. Quando a vida foi bem conduzida, há serenidade, compreensão e desejo de compartilhar conhecimento. Caso contrário, podem surgir isolamento, tristeza ou sensação de vazio. Este ciclo favorece espiritualidade, aprendizado e reconexão com a essência. É uma fase de sabedoria e evolução interior.`,
-
-8:`O número 8 representa a fase das recompensas e compensações. As conquistas materiais e profissionais tornam-se evidentes, refletindo escolhas passadas. Quando a trajetória foi correta, há prosperidade, reconhecimento e sensação de poder pessoal. Caso contrário, podem surgir perdas, frustrações ou arrependimentos. Este ciclo reforça justiça, responsabilidade e colheita dos resultados da vida. É a fase das recompensas e aprendizados finais.`,
-
-9:`O número 9 marca a fase de reflexão profunda, desapego e compreensão da vida. Surge o desejo de contribuir com o mundo e buscar significado maior. Quando a vida foi bem conduzida, há sensação de realização e paz interior. Caso contrário, podem surgir arrependimentos e sensação de tempo perdido. Este ciclo incentiva compaixão, sabedoria e aceitação. É o encerramento da jornada com aprendizado, maturidade e compreensão do sentido da vida.`}
-
-
-},
-  
-  
- momentos:{
-
+ciclos:{
+  // --- 1º CICLO (FORMAÇÃO / JUVENTUDE) ---
 1:{
-1:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 1
-
-O desafio deste período é desenvolver força de vontade. A criança deve ser incentivada desde cedo a fazer escolhas e tomar decisões próprias, para que futuramente saiba avaliar o momento certo de agir e compreenda que caberá a ela colocar seus projetos em prática.
-
-Este é o momento de aprender o valor da independência e da iniciativa. Toda a juventude deve ser dedicada ao desenvolvimento das próprias ideias, evitando egoísmo, teimosia e egocentrismo.
-
-É uma fase essencial para desenvolver liderança e individualidade. As amizades formadas aqui influenciarão profundamente o futuro, sendo fundamental escolher pessoas confiáveis.
-
-Este período exige coragem, determinação e confiança. O sucesso dependerá principalmente da própria iniciativa.`,
-
-2:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 2
-
-O desafio deste período é desenvolver paciência. A criança não deve ser protegida em excesso, pois isso pode gerar dificuldade em lidar com a realidade no futuro.
-
-Este período exige cooperação, sensibilidade e orientação adequada. A personalidade e o temperamento estão sendo formados, definindo a forma de reagir à vida.
-
-Aprender a cooperar, analisar decisões com cuidado e cultivar amizades sinceras será essencial para o desenvolvimento emocional equilibrado.`,
-
-3:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 3
-
-O desafio deste período é refinar a autoexpressão. Trata-se de uma fase criativa e social, mas que exige disciplina para evitar dispersão.
-
-É importante aprender a controlar emoções, fazer escolhas responsáveis e desenvolver concentração.
-
-A vida pode parecer leve e fácil, porém a seriedade será essencial para construir conquistas duradouras.`,
-
-4:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 4
-
-O desafio deste período é organizar o futuro. É o momento de aprender responsabilidade, disciplina e valor do esforço.
-
-A educação recebida aqui define a estrutura das conquistas futuras.
-
-Com dedicação, planejamento e persistência, será possível construir bases sólidas para a vida adulta.`,
-
-5:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 5
-
-O desafio é aprender a aproveitar oportunidades com responsabilidade. É um período de experiências, mudanças e aprendizado.
-
-A criança deve aprender a respeitar regras, limites e autoridade, desenvolvendo maturidade emocional.
-
-A liberdade deve ser equilibrada com responsabilidade para garantir estabilidade futura.`,
-
-6:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 6
-
-O desafio é desenvolver responsabilidade emocional. Este período ensina convivência, cooperação e equilíbrio nas relações.
-
-É importante aprender a cuidar dos outros sem abandonar as próprias necessidades.
-
-Diplomacia, empatia e cordialidade devem ser desenvolvidas desde cedo.`,
-
-7:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 7
-
-O desafio é desenvolver autoconfiança e autoestima. A criança deve ser incentivada a se relacionar e evitar isolamento.
-
-É fundamental desenvolver interesse pela vida prática e aprender a enfrentar desafios com segurança.
-
-Este período constrói valores e a base da maturidade futura.`,
-
-8:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 8
-
-O desafio é desenvolver senso de justiça e equilíbrio. Este período exige estudo, disciplina e organização.
-
-É importante aprender a lidar com responsabilidades e desenvolver autocontrole.
-
-Uma boa formação permitirá alcançar objetivos ainda no início da vida adulta.`,
-
-9:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 9
-
-O desafio é desenvolver empatia e visão humanitária. Este pode ser um período sensível, exigindo compreensão e tolerância.
-
-A convivência com diferentes pessoas e experiências desenvolve maturidade emocional.
-
-É uma fase de descobertas que prepara para os próximos ciclos da vida.`
-
+    1: `<p>O seu primeiro ciclo de vida foi marcado por uma forte necessidade de autoafirmação e independência precoce. Desde cedo, <strong>você</strong> sentiu o impulso de trilhar o seu próprio caminho, muitas vezes tendo que desenvolver coragem e autossuficiência antes mesmo do esperado pelos outros ao seu redor.</p>
+    <p>Esta fase exigiu que <strong>você</strong> aprendesse a confiar nos seus próprios instintos e a tomar a iniciativa em situações desafiadoras. <strong>você</strong> viveu este período como um despertar para o seu poder pessoal, entendendo que a sua vontade é o motor principal das suas conquistas e que a semente da liderança foi plantada para florescer pelo resto da sua vida.</p>`,
+    
+    2: `<p>O seu primeiro ciclo foi vivido sob a influência da sensibilidade, da cooperação e do aprendizado emocional através dos relacionamentos. Na sua juventude, <strong>você</strong> foi uma pessoa atenta às necessidades alheias, agindo com uma diplomacia natural para manter a harmonia nos ambientes em que circulava.</p>
+    <p>Esta fase ensinou a <strong>você</strong> o valor da paciência e da escuta ativa. <strong>você</strong> pode ter se sentido mais confortável atuando nos bastidores ou em parceria, desenvolvendo uma intuição aguçada sobre as pessoas. O foco deste período foi a compreensão de que a união e a gentileza são ferramentas poderosas de crescimento.</p>`,
+    
+    3: `<p>O seu primeiro ciclo de vida foi vibrante, criativo e voltado para a autoexpressão e comunicação social. Na juventude, <strong>você</strong> sentiu uma necessidade imensa de compartilhar suas ideias e talentos, sendo vista como uma pessoa carismática, otimista e dotada de uma imaginação fértil.</p>
+    <p>Esta fase foi um período de muitos contatos sociais e descobertas artísticas ou intelectuais. <strong>você</strong> aprendeu a usar o seu charme e a sua fala para abrir portas, descobrindo que a alegria é uma força magnética. O aprendizado central foi entender que a sua luz pessoal tem o poder de inspirar e motivar todos ao seu redor.</p>`,
+    
+    4: `<p>O seu primeiro ciclo de vida foi pautado pela disciplina, pelo senso de dever e pela necessidade de construir bases seguras. Desde cedo, <strong>você</strong> demonstrou uma maturidade acima da média, agindo com uma responsabilidade prática que trazia confiança para a sua família e amigos.</p>
+    <p>Esta fase exigiu muito esforço e dedicação de <strong>você</strong>. O aprendizado foi focado na organização, no respeito às regras e na persistência diante dos obstáculos. <strong>você</strong> descobriu que nada se conquista sem trabalho árduo, e essa fundação sólida tornou <strong>você</strong> uma pessoa extremamente confiável e resiliente.</p>`,
+    
+    5: `<p>O seu primeiro ciclo de vida foi marcado pela versatilidade, curiosidade e por uma busca incessante por liberdade e novas experiências. Na juventude, <strong>você</strong> sentiu um desejo de explorar o mundo, mudar de ideias e experimentar de tudo um pouco, detestando qualquer tipo de rotina sufocante.</p>
+    <p>Esta fase trouxe muitas mudanças e aprendizados rápidos para <strong>você</strong>. <strong>você</strong> aprendeu a se adaptar a diferentes ambientes e pessoas com agilidade mental. O foco deste período foi o desenvolvimento da independência através da aventura e do questionamento de padrões antigos, tornando <strong>você</strong> uma pessoa progressista.</p>`,
+    
+    6: `<p>O seu primeiro ciclo de vida foi voltado para as responsabilidades familiares, o cuidado com os outros e a busca pela harmonia no lar. Desde cedo, <strong>você</strong> assumiu o papel de protetora ou conselheira, agindo com um senso de justiça e amor que a tornou o centro afetivo do seu grupo.</p>
+    <p>Esta fase ensinou a <strong>você</strong> o valor do serviço e do sacrifício pessoal em favor de quem ama. <strong>você</strong> desenvolveu um olhar estético apurado e uma necessidade de equilíbrio emocional. O aprendizado central foi entender que a sua felicidade está ligada à qualidade dos seus laços afetivos e à sua capacidade de harmonizar conflitos.</p>`,
+    
+    7: `<p>O seu primeiro ciclo de vida foi introspectivo, intelectual e voltado para a busca de respostas profundas sobre a existência. Na juventude, <strong>você</strong> pode ter se sentido um pouco "diferente" dos outros, preferindo o estudo, a leitura ou a reflexão solitária à agitação social superficial.</p>
+    <p>Esta fase desenvolveu em <strong>você</strong> uma mente analítica e uma intuição poderosa. <strong>você</strong> aprendeu a observar antes de agir e a buscar a perfeição em tudo o que faz. O foco deste período foi o autoconhecimento e a descoberta de que o conhecimento é o seu maior escudo e sua ferramenta mais valiosa de poder pessoal.</p>`,
+    
+    8: `<p>O seu primeiro ciclo de vida trouxe desafios relacionados ao poder, à autoridade e à gestão de recursos materiais. Desde cedo, <strong>você</strong> demonstrou uma ambição saudável e um senso prático apurado, agindo com uma determinação focada em conquistar o seu próprio espaço e sucesso.</p>
+    <p>Esta fase exigiu que <strong>você</strong> aprendesse a lidar com a autoridade e com as leis do mundo material. <strong>você</strong> descobriu que possui uma força executiva natural e que o sucesso vem através da disciplina e da justiça. O aprendizado foi entender como equilibrar o desejo de conquista com a integridade ética.</p>`,
+    
+    9: `<p>O seu primeiro ciclo de vida foi marcado por uma sensibilidade humanitária, generosidade e vivências emocionais intensas. Na juventude, <strong>você</strong> demonstrou uma compreensão do mundo que ia além da sua idade, agindo com uma compaixão que a fazia se importar profundamente com o próximo.</p>
+    <p>Esta fase trouxe lições sobre desapego e finalização de ciclos para <strong>você</strong>. <strong>você</strong> aprendeu a perdoar e a enxergar a vida de uma perspectiva universal. O foco deste período foi o despertar de uma consciência espiritual ou artística, mostrando que <strong>você</strong> veio para servir e inspirar através do amor incondicional.</p>`
   },
 
+  // --- 2º CICLO (MATURIDADE / PRODUÇÃO) ---
 2:{
-1:`2º Momento Decisivo —
-Este período marca uma fase de escolhas importantes, maior autonomia e aumento das responsabilidades pessoais. O desenvolvimento individual passa a exigir atitude, coragem e posicionamento diante da vida.
+    1: `<p>O seu segundo ciclo de vida, a fase de maior produção, exige que <strong>você</strong> assuma o comando total das suas ambições. Este é o momento em que a vida a convoca para liderar, inovar e colocar em prática projetos autorais que reflitam a sua visão única, sem depender do aval de ninguém.</p>
+    <p>Nesta fase, <strong>você</strong> não deve ter medo de arriscar ou de começar do zero se necessário. A energia deste ciclo favorece a iniciativa individual e o sucesso através do mérito pessoal. <strong>você</strong> se sentirá motivada para se destacar e para consolidar a sua autonomia absoluta, agindo como a protagonista definitiva da sua própria história profissional e pessoal.</p>`,
 
-O desafio deste período é manter entusiasmo, autoconfiança e iniciativa.  
-É um momento que exige coragem para agir e assumir o controle da própria trajetória. A pessoa deve confiar em suas ideias e acreditar em sua capacidade de realização.  
-As decisões tomadas agora terão impacto direto no futuro, por isso é essencial agir com firmeza e determinação.  
-A independência deve ser desenvolvida com responsabilidade e maturidade.  
-É importante aprender a lidar com obstáculos sem perder a motivação.  
-A autossuficiência emocional se torna um objetivo importante.  
-Este é o momento de iniciar projetos e assumir riscos calculados.  
-A coragem será uma aliada essencial.  
-O excesso de dúvida pode gerar perdas de oportunidades.  
-A persistência será recompensada.  
-A autoconfiança deve ser fortalecida diariamente.  
-A iniciativa pessoal será determinante para o sucesso.  
-A vida exige ação e posicionamento.  
-É o início da consolidação da identidade adulta.  
-A determinação moldará os resultados futuros.`,
+    2: `<p>O seu segundo ciclo de vida é um período voltado para a consolidação através da cooperação, das parcerias e da diplomacia. É o momento de colher resultados agindo com tato e equilíbrio, entendendo que a sua força agora reside na sua capacidade de unir pessoas e mediar interesses.</p>
+    <p>Nesta fase, <strong>você</strong> terá sucesso se souber ouvir e colaborar. As oportunidades virão através de associações e relacionamentos sólidos. <strong>você</strong> deve cultivar a paciência e a atenção aos detalhes, agindo como o elo de ligação que traz harmonia e eficiência para os projetos em que está envolvida.</p>`,
 
-2:`2º Momento Decisivo —
-Esta fase simboliza um período de amadurecimento emocional, cooperação e desenvolvimento das relações humanas.
+    3: `<p>O seu segundo ciclo de vida é uma fase de grande expansão criativa, comunicação social e brilho pessoal. Este é o momento de <strong>você</strong> colocar seus talentos para fora e se expressar com entusiasmo, aproveitando a facilidade de atrair pessoas e oportunidades através do seu carisma.</p>
+    <p>Nesta fase, a vida pede que <strong>você</strong> seja mais otimista e socialmente ativa. O sucesso virá através da sua capacidade de transmitir ideias, vender projetos ou atuar em áreas que envolvam o público e a criatividade. <strong>você</strong> deve focar na alegria de realizar, tornando a sua jornada produtiva muito mais leve e inspiradora.</p>`,
 
-O desafio deste período é agir com estratégia e paciência.  
-A diplomacia torna-se fundamental para o crescimento.  
-Parcerias e relações ganham importância significativa.  
-A pessoa aprende a trabalhar em equipe e compartilhar responsabilidades.  
-É essencial desenvolver sensibilidade emocional e capacidade de negociação.  
-Decisões precipitadas devem ser evitadas.  
-O sucesso virá através da cooperação e do equilíbrio.  
-A empatia facilita oportunidades e alianças importantes.  
-O crescimento ocorre de forma gradual e constante.  
-A intuição deve ser equilibrada com a razão.  
-Aprender a esperar o momento certo é essencial.  
-O apoio de outras pessoas pode abrir caminhos importantes.  
-A maturidade emocional fortalece resultados duradouros.  
-A harmonia nas relações favorece o progresso.  
-O equilíbrio será a chave deste período.`,
+    4: `<p>O seu segundo ciclo de vida foca na construção de bases sólidas, na disciplina absoluta e no trabalho sistemático para garantir o futuro. <strong>você</strong> sente uma necessidade profunda de organizar a sua realidade, agindo com uma responsabilidade que a torna o pilar de sustentação para todos.</p>
+    <p>Nesta fase, o progresso vem através da persistência e da atenção aos fatos concretos. <strong>você</strong> será testada na sua capacidade de planejar e executar com perfeição. É o momento de estabelecer raízes profundas, economizar com sabedoria e construir um patrimônio estável através do esforço honesto e ininterrupto.</p>`,
 
-3:`2º Momento Decisivo —
-Esta etapa traz expansão social, criatividade e necessidade de expressão pessoal.
+    5: `<p>O seu segundo ciclo de vida é marcado por um ritmo acelerado, mudanças de direção e uma busca por inovação constante. Este é o momento de <strong>você</strong> se adaptar a novas tecnologias, novas ideias e novas formas de viver, agindo com uma versatilidade que a mantém sempre à frente do tempo.</p>
+    <p>Nesta fase, <strong>você</strong> deve evitar a estagnação e abraçar as viagens e as trocas intelectuais. As oportunidades surgirão do inesperado e da sua capacidade de se comunicar com diversos tipos de pessoas. <strong>você</strong> aprende que a liberdade de movimento é o seu maior trunfo para prosperar em um mundo em constante transformação.</p>`,
 
-O desafio é manter foco e disciplina.  
-A criatividade se intensifica e novas oportunidades surgem.  
-A vida social tende a se expandir rapidamente.  
-É importante evitar dispersão e superficialidade.  
-Talentos comunicativos podem se desenvolver com facilidade.  
-A expressão pessoal torna-se essencial.  
-A motivação cresce através da interação com pessoas.  
-A alegria pode impulsionar conquistas importantes.  
-É necessário direcionar energia para objetivos concretos.  
-A disciplina garante resultados duradouros.  
-O excesso de entusiasmo pode gerar instabilidade.  
-O aprendizado ocorre por meio da experiência.  
-A comunicação abre portas e oportunidades.  
-A organização transforma ideias em realidade.  
-O equilíbrio entre prazer e responsabilidade será essencial.`,
+    6: `<p>O seu segundo ciclo de vida é voltado para as grandes responsabilidades familiares e sociais. Este é o momento em que <strong>você</strong> se torna a figura central de cuidado e aconselhamento, agindo com um senso de dever que busca criar harmonia e beleza em tudo o que toca.</p>
+    <p>Nesta fase, o sucesso está ligado à sua ética e à sua capacidade de servir ao próximo com amor. <strong>você</strong> poderá se destacar em áreas que envolvam educação, saúde, artes ou justiça social. <strong>você</strong> realiza o seu potencial quando consegue equilibrar o trabalho com o conforto do lar, sendo o suporte emocional do seu grupo.</p>`,
 
-4:`2º Momento Decisivo —
-Este período representa construção, disciplina e preparação para estabilidade futura.
+    7: `<p>O seu segundo ciclo de vida exige um mergulho profundo no conhecimento especializado e na busca pela perfeição técnica ou espiritual. Este é o momento de <strong>você</strong> se tornar uma autoridade naquilo que faz, agindo com uma cautela analítica e um foco que não aceita superficialidades.</p>
+    <p>Nesta fase, a vida pode pedir períodos de mais introspecção e estudo para <strong>você</strong>. O sucesso virá da sua sabedoria e da sua integridade intelectual. <strong>você</strong> deve confiar na sua intuição e buscar a verdade acima de tudo, tornando-se uma guia ou especialista respeitada pela profundidade do seu saber.</p>`,
 
-O desafio é construir bases sólidas.  
-O trabalho passa a exigir dedicação e persistência.  
-A responsabilidade aumenta significativamente.  
-A organização torna-se essencial para o sucesso.  
-A disciplina será a principal aliada.  
-Resultados surgem através do esforço constante.  
-É um período de consolidação e amadurecimento.  
-A rotina pode se tornar necessária para crescimento.  
-O foco deve substituir a impulsividade.  
-O planejamento garante segurança futura.  
-A estabilidade começa a se formar.  
-A paciência se torna fundamental.  
-O progresso é gradual e seguro.  
-A determinação constrói conquistas duradouras.  
-A consistência define os resultados.`,
+    8: `<p>O seu segundo ciclo de vida é o período de maior realização material, exercício de poder e autoridade executiva. Este é o momento em que a vida a convoca para gerir grandes recursos e liderar organizações, agindo com um pragmatismo focado em resultados concretos e justiça material.</p>
+    <p>Nesta fase, <strong>você</strong> deve ser ambiciosa e disciplinada. As oportunidades estão no mundo dos negócios e das finanças. <strong>você</strong> aprende a lidar com o dinheiro e com o comando de forma eficiente, entendendo que a sua força de realização é capaz de construir impérios e garantir a prosperidade de muitos.</p>`,
 
-5:`2º Momento Decisivo —
-Esta fase simboliza mudanças, liberdade e necessidade de adaptação.
+    9: `<p>O seu segundo ciclo de vida é voltado para o humanitarismo, para o ensino e para a entrega a causas que ultrapassam o interesse pessoal. Este é o momento de <strong>você</strong> usar a sua vasta experiência para ajudar os outros, agindo com uma generosidade desapegada e um carisma inspirador.</p>
+    <p>Nesta fase, <strong>você</strong> poderá atuar em áreas de cura, artes ou assistência social em larga escala. <strong>você</strong> realiza o seu propósito quando consegue ver o mundo como uma única família. O sucesso virá da sua integridade moral e da sua capacidade de deixar um impacto positivo na consciência das pessoas.</p>`
+  },
 
-O desafio é aprender a se libertar com responsabilidade.  
-Mudanças inesperadas podem ocorrer com frequência.  
-A flexibilidade torna-se essencial.  
-A vida pede adaptação constante.  
-Novas experiências ampliam a visão de mundo.  
-O impulso por liberdade cresce intensamente.  
-É importante evitar impulsividade excessiva.  
-A curiosidade impulsiona descobertas importantes.  
-A transformação é inevitável.  
-A instabilidade deve ser administrada com sabedoria.  
-A experiência se torna a maior fonte de aprendizado.  
-O crescimento surge através das mudanças.  
-A coragem favorece novas oportunidades.  
-O equilíbrio evita perdas desnecessárias.  
-A liberdade consciente conduz ao progresso.`,
+  // --- 3º CICLO (TERCEIRA IDADE / SABEDORIA) ---
+  3:{
+    1: `<p>O seu terceiro ciclo de vida traz uma surpreendente renovação de energia e um desejo de se reinventar. Longe de ser um período de descanso passivo, <strong>você</strong> sentirá uma vontade vibrante de iniciar novos hobbies, estudos ou até novos empreendimentos que expressem a sua autonomia total.</p>
+    <p>Nesta etapa, <strong>você</strong> desfruta da independência absoluta. A sua liderança agora é baseada na maturidade, agindo com uma autoridade calma que inspira as gerações mais jovens. <strong>você</strong> prova que a coragem de ser quem <strong>você</strong> é não tem idade, encerrando sua jornada como uma pioneira do seu próprio destino.</p>`,
 
-6:`2º Momento Decisivo —
-Esta etapa destaca responsabilidade afetiva, vínculos e compromissos.
+    2: `<p>O seu terceiro ciclo de vida é um tempo de profunda serenidade, paz e colheita emocional através dos relacionamentos. <strong>você</strong> se torna a grande conselheira e pacificadora, agindo com uma doçura e sabedoria que tornam a sua presença o ponto de equilíbrio para toda a família.</p>
+    <p>Nesta fase, o prazer está nas pequenas coisas e nas parcerias leais. <strong>você</strong> desfruta de um ambiente harmonioso e de amizades sólidas, sendo reconhecida pela sua diplomacia e sensibilidade. <strong>você</strong> vive este período com a tranquilidade de quem sabe que a união é o maior tesouro que se pode acumular.</p>`,
 
-O desafio é manter harmonia com as pessoas.  
-Relacionamentos ganham importância significativa.  
-A cooperação se torna essencial.  
-A pessoa aprende a compartilhar responsabilidades.  
-O compromisso fortalece conquistas.  
-A vida afetiva ganha destaque.  
-A maturidade emocional cresce intensamente.  
-É importante manter equilíbrio nas relações.  
-A empatia favorece oportunidades.  
-O individualismo deve ser reduzido.  
-A colaboração impulsiona o crescimento.  
-A harmonia cria estabilidade emocional.  
-O apoio mútuo gera segurança.  
-As parcerias trazem aprendizado valioso.  
-O equilíbrio emocional garante progresso.`,
+    3: `<p>O seu terceiro ciclo de vida é uma fase de intensa alegria, vida social e expressão criativa. <strong>você</strong> manterá o seu espírito jovem e comunicativo, agindo como uma fonte de luz e entretenimento para todos que a cercam, compartilhando suas histórias e experiências com muito bom humor.</p>
+    <p>Nesta fase, <strong>você</strong> deve se permitir brilhar e desfrutar dos prazeres sociais. Sua mente continuará criativa, e <strong>você</strong> poderá se dedicar a artes ou atividades de lazer que tragam prazer para si e para os outros. <strong>você</strong> será lembrada como alguém que soube viver a vida com cor e entusiasmo até o fim.</p>`,
 
-7:`2º Momento Decisivo —
-Este período favorece introspecção, aprendizado e redefinição de objetivos.
+    4: `<p>O seu terceiro ciclo de vida é o período de maior segurança, estabilidade e respeito pelos resultados alcançados. <strong>você</strong> colhe os frutos da sua organização e disciplina, agindo com a tranquilidade de quem construiu uma base sólida para si e para os seus descendentes.</p>
+    <p>Nesta etapa, <strong>você</strong> valoriza a ordem, a tradição e a honestidade. Sua palavra é lei e sua presença transmite uma segurança inabalável. <strong>você</strong> se sente realizada ao ver que o seu esforço se transformou em um legado concreto de respeito e proteção para as gerações que seguem os seus passos.</p>`,
 
-O desafio é agir com praticidade.  
-A busca por conhecimento se intensifica.  
-O autoconhecimento torna-se essencial.  
-A reflexão orienta decisões importantes.  
-É necessário evitar isolamento excessivo.  
-A disciplina mental fortalece resultados.  
-A concentração se torna indispensável.  
-O desenvolvimento ocorre de dentro para fora.  
-A intuição cresce gradualmente.  
-O foco direciona o crescimento.  
-O aprendizado profundo traz sabedoria.  
-A preparação para novas fases se inicia.  
-O silêncio pode favorecer decisões importantes.  
-A mente busca respostas e direção.  
-A maturidade intelectual se fortalece.`,
+    5: `<p>O seu terceiro ciclo de vida é marcado por uma liberdade renovada e pelo prazer de continuar aprendendo e mudando. <strong>você</strong> não se conformará com a inatividade, agindo sempre com uma curiosidade que a levará a novas viagens, leituras ou descobertas tecnológicas constantes.</p>
+    <p>Nesta fase, <strong>você</strong> será vista como uma pessoa moderna e desimpedida. <strong>você</strong> ensinará aos mais novos que a vida é um movimento contínuo e que a mente não envelhece se mantivermos o interesse pelo novo. Sua colheita é a versatilidade e a riqueza de uma vida cheia de experiências variadas.</p>`,
 
-8:`2º Momento Decisivo —
-Esta fase está ligada à realização material, poder e conquistas.
+    6: `<p>O seu terceiro ciclo de vida é o auge da realização afetiva e do seu papel como o coração protetor do seu clã. <strong>você</strong> se dedicará plenamente ao bem-estar dos seus filhos, netos ou comunidade, agindo com um amor e responsabilidade que a tornam uma figura inesquecível.</p>
+    <p>Nesta fase, <strong>você</strong> desfruta da beleza e do conforto do lar que construiu. Sua missão agora é aconselhar com sabedoria e manter a harmonia entre todos. <strong>você</strong> se sente plena ao ver que o amor incondicional que <strong>você</strong> plantou floresceu em uma rede de afeto e respeito mútuo.</p>`,
 
-O desafio é agir com ética e responsabilidade.  
-O trabalho ganha intensidade.  
-A ambição cresce naturalmente.  
-A liderança se fortalece gradualmente.  
-O planejamento financeiro se torna essencial.  
-O autocontrole evita perdas.  
-Grandes oportunidades podem surgir.  
-A disciplina garante resultados concretos.  
-A confiança impulsiona conquistas.  
-O equilíbrio emocional favorece o sucesso.  
-A justiça torna-se fundamental.  
-A responsabilidade aumenta significativamente.  
-O esforço traz recompensas proporcionais.  
-A visão estratégica orienta decisões.  
-A prosperidade depende da disciplina.`,
+    7: `<p>O seu terceiro ciclo de vida é uma fase de profunda sabedoria, introspecção e conexão espiritual definitiva. <strong>você</strong> sentirá o desejo de se afastar do barulho do mundo para processar tudo o que viveu, agindo com um refinamento mental que a coloca como uma mestre da vida.</p>
+    <p>Nesta etapa, o estudo e a meditação são suas maiores fontes de prazer. <strong>você</strong> será respeitada pela sua profundidade e por verdades que só a experiência real pode trazer. <strong>você</strong> encontra a paz interior na compreensão dos mistérios da alma, sendo um exemplo de integridade e sabedoria para todos.</p>`,
 
-9:`2º Momento Decisivo —
-Este período representa transformação, desapego e amadurecimento emocional.
+    8: `<p>O seu terceiro ciclo de vida traz a colheita da autoridade material e do sucesso executivo. <strong>você</strong> será a grande gestora do patrimônio e dos negócios da família, agindo com um senso de justiça e eficiência que garante a prosperidade de todos ao seu redor.</p>
+    <p>Nesta fase, <strong>você</strong> desfruta do status e do respeito conquistados. <strong>você</strong> é vista como uma vencedora que sabe usar o poder com responsabilidade. Sua colheita é a abundância tangível e a certeza de que a sua liderança e trabalho árduo criaram um legado de vitória e segurança financeira duradoura.</p>`,
 
-O desafio é encerrar ciclos com sabedoria.  
-Mudanças profundas podem ocorrer.  
-A empatia se fortalece gradualmente.  
-O passado deve ser compreendido e superado.  
-A compaixão ganha destaque.  
-O crescimento interior se intensifica.  
-A maturidade emocional se amplia.  
-A vida pede renovação e evolução.  
-É momento de rever valores e objetivos.  
-O desapego traz libertação.  
-A consciência se expande.  
-A espiritualidade pode ganhar importância.  
-A transformação traz aprendizado profundo.  
-O encerramento prepara novos começos.  
-A evolução emocional se torna evidente.`
-},
+    9: `<p>O seu terceiro ciclo de vida é o ápice do humanitarismo, do desapego e da sabedoria universal. <strong>você</strong> se torna uma figura de luz para o mundo, agindo com uma generosidade que busca ensinar e curar através da sua vasta experiência de vida e amor ao próximo.</p>
+    <p>Nesta etapa, <strong>você</strong> foca na entrega e na caridade. Sua visão é espiritualizada e sem fronteiras, permitindo que <strong>você</strong> perdoe e encerre ciclos com uma dignidade impressionante. <strong>você</strong> será lembrada como uma alma nobre que dedicou o final da sua jornada para tornar a humanidade mais consciente e amorosa.</p>`
+ }
+};
+
+
+  
   
 
-3:{
-1:`3º Momento Decisivo —
-Nesta fase a maturidade já está consolidada e os resultados passam a depender diretamente da sua iniciativa, foco e determinação.
+ // --- 1º MOMENTO (A PRIMAVERA DA VIDA / JUVENTUDE) ---
+   momentos:{
+  1:{
+    1: `<p>Neste seu primeiro momento decisivo, a vida exige que <strong>você</strong> desenvolva uma independência precoce. É uma fase de descoberta do próprio "eu", onde <strong>você</strong> será impelida a tomar iniciativas e a confiar na sua capacidade de liderar o seu destino sem depender excessivamente da aprovação dos pais ou da família.</p>
+    <p>O desafio para <strong>você</strong> é superar a insegurança e agir com coragem. Este período planta a semente da ambição e da originalidade, forçando <strong>você</strong> a se destacar da multidão. O sucesso aqui virá através da sua ousadia em ser diferente e da sua determinação em conquistar o seu espaço no mundo logo cedo.</p>`,
+    
+    2: `<p>Este primeiro momento para <strong>você</strong> é marcado pela necessidade de cooperação e sensibilidade. A vida a coloca em situações onde <strong>você</strong> precisará aprender a arte da paciência e da diplomacia. É uma fase de muitos aprendizados emocionais através dos relacionamentos e da convivência em grupo.</p>
+    <p><strong>você</strong> sentirá que as coisas fluem melhor quando <strong>você</strong> atua em parceria ou nos bastidores. O aprendizado central para <strong>você</strong> é a harmonia; saber ouvir e mediar conflitos será a sua maior ferramenta de crescimento pessoal nesta etapa da juventude.</p>`,
+    
+    3: `<p>O seu primeiro momento decisivo é uma explosão de criatividade e vida social. <strong>você</strong> sentirá uma necessidade imensa de se expressar, seja pelas artes, pela escrita ou pela fala. É um período de muita alegria, festas e conexões, onde o seu brilho pessoal atrairá muitas pessoas para o seu círculo.</p>
+    <p><strong>você</strong> deve aproveitar esta fase para desenvolver seus talentos comunicativos. O risco é a dispersão, por isso, <strong>você</strong> terá sucesso se conseguir focar sua energia criativa em algo construtivo. O mundo a verá como uma pessoa carismática e cheia de potencial inspirador.</p>`,
+    
+    4: `<p>Este período inicial para <strong>você</strong> exige muito trabalho, disciplina e senso prático. Diferente de outros jovens, <strong>você</strong> sentirá o peso da responsabilidade e a necessidade de construir algo sólido desde cedo. É uma fase de "mão na massa", focada em estudos técnicos ou em aprender um ofício com rigor.</p>
+    <p><strong>você</strong> será testada na sua persistência e organização. A vida não lhe dará nada de mão beijada neste momento, mas cada esforço feito por <strong>você</strong> agora servirá como um alicerce inabalável para o resto da sua existência. A honestidade e o método serão seus melhores aliados.</p>`,
+    
+    5: `<p>O seu primeiro momento é uma fase de muitas mudanças, viagens e instabilidade produtiva. <strong>você</strong> sentirá uma sede de liberdade incontrolável, querendo experimentar tudo o que o mundo tem a oferecer. É um período de transições frequentes de escola, cidade ou interesses.</p>
+    <p><strong>você</strong> desenvolverá uma versatilidade incrível nesta fase. O desafio é não se perder na busca por prazeres sensoriais e manter um mínimo de foco. <strong>você</strong> aprenderá a se comunicar com todos os tipos de pessoas, tornando-se uma alma cosmopolita e desimpedida logo cedo.</p>`,
+    
+    6: `<p>Este primeiro momento para <strong>você</strong> é voltado para o lar e para as responsabilidades familiares. <strong>você</strong> poderá assumir obrigações domésticas ou de cuidado com irmãos e parentes antes do previsto. É uma fase de despertar para o amor, para a estética e para a justiça social.</p>
+    <p><strong>você</strong> será procurada como conselheira e protetora. O aprendizado para <strong>você</strong> é encontrar o equilíbrio entre cuidar dos outros e não esquecer dos seus próprios sonhos. A harmonia do seu ambiente será a sua prioridade absoluta nesta etapa da vida.</p>`,
+    
+    7: `<p>O seu primeiro momento decisivo é introspectivo e voltado para o estudo e para a espiritualidade. <strong>você</strong> poderá se sentir uma pessoa solitária ou incompreendida pelos colegas, preferindo o silêncio e a análise profunda ao barulho social. É uma fase de grande amadurecimento mental.</p>
+    <p><strong>você</strong> deve usar este tempo para se especializar em algo que exija profundidade. A vida a convida a buscar a verdade por trás das aparências. <strong>você</strong> descobrirá que sua intuição e sua inteligência analítica são seus maiores tesouros, preparando <strong>você</strong> para ser uma mestre no futuro.</p>`,
+    
+    8: `<p>Este primeiro momento para <strong>você</strong> foca no mundo material, no poder e no dinheiro. <strong>você</strong> demonstrará uma ambição incomum para a idade, buscando independência financeira ou posições de autoridade. É uma fase de aprender a lidar com o comando e com a eficiência executiva.</p>
+    <p><strong>você</strong> enfrentará desafios que exigirão um julgamento justo e uma organização impecável. O sucesso material é possível se <strong>você</strong> agir com ética e pragmatismo. A vida está treinando <strong>você</strong> para gerir grandes recursos e para entender as leis do sucesso no mundo real.</p>`,
+    
+    9: `<p>O seu primeiro momento é marcado pelo idealismo e pela sensibilidade humanitária. <strong>você</strong> sentirá o desejo de ajudar o mundo ou de se envolver em causas nobres. É um período de finalizações de ciclos e de um despertar espiritual ou artístico muito intenso na juventude.</p>
+    <p><strong>você</strong> aprenderá sobre a generosidade e o desapego. Pode ser uma fase de viagens para lugares distantes ou de encontros com culturas diferentes. <strong>você</strong> brilha quando coloca o amor ao próximo acima dos interesses pessoais, inspirando todos com sua alma antiga e sábia.</p>`
+  },
 
-3º Momento n°1
-É hora de sair da inércia e agir com coragem para realizar planos.  
-O período exige atenção ao ambiente e às oportunidades.  
-Será necessário reavaliar conquistas e redefinir objetivos.  
-As bases construídas anteriormente devem ser colocadas em prática.  
-O crescimento depende da disposição para se arriscar.  
-O desenvolvimento de habilidades continua essencial.  
-As relações sociais ganham importância estratégica.  
-Algumas amizades contribuirão, outras poderão prejudicar.  
-É necessário avaliar influências com cuidado.  
-A expansão social pode abrir novos caminhos.  
-O aperfeiçoamento constante será indispensável.  
-Os resultados serão proporcionais ao esforço aplicado.  
-A persistência fortalece as conquistas.  
-O foco determina o sucesso deste período.  
-A determinação conduz à realização.`,
+  // --- 2º MOMENTO (O VERÃO DA VIDA / ADULTA JOVEM) ---
+2:{
+    1: `<p>Neste segundo momento decisivo, <strong>você</strong> entra em uma fase de plena liderança. A vida a convoca a ser a cabeça de novos projetos. Não é mais tempo de seguir, mas de abrir caminhos. <strong>você</strong> sentirá uma força extra para se desvincular de parcerias que já não fazem sentido.</p>
+    <p>A originalidade será sua marca registrada. <strong>você</strong> deve confiar na sua visão singular e não ter medo da solidão que a liderança às vezes impõe. É o momento ideal para <strong>você</strong> lançar novos empreendimentos ou mudar drasticamente de carreira, confiando apenas no seu talento.</p>`,
+    
+    2: `<p>O seu segundo momento é pautado pela diplomacia e pelas parcerias estratégicas. Diferente da fase anterior, agora <strong>você</strong> alcançará o sucesso através da colaboração. É um período excelente para casamentos, sociedades e para o desenvolvimento de habilidades de mediação.</p>
+    <p><strong>você</strong> deve aprender a ler nas entrelinhas. A sua intuição estará no auge, ajudando <strong>você</strong> a evitar conflitos desnecessários. A força deste período para <strong>você</strong> reside na doçura e na capacidade de fazer com que todos se sintam parte de algo maior.</p>`,
+    
+    3: `<p>Este segundo momento para <strong>você</strong> é a hora de colher através da comunicação. O mundo espera que <strong>você</strong> mostre sua criatividade e alegria. É um período de expansão social, onde <strong>você</strong> poderá ter sucesso em vendas, artes, palestras ou qualquer área que envolva o público.</p>
+    <p><strong>você</strong> terá facilidade em atrair amizades influentes. Aproveite para desfrutar da vida, pois a energia é de otimismo e leveza. O segredo para <strong>você</strong> nesta fase é não levar a vida tão a sério e permitir que sua criança interior guie suas decisões mais brilhantes.</p>`,
+    
+    4: `<p>O seu segundo momento decisivo foca na estabilidade absoluta. A vida exige que <strong>você</strong> coloque ordem na sua vida material e familiar. É o tempo de comprar a casa própria, de consolidar a carreira e de agir com uma rotina impecável. O trabalho duro será a regra, mas a recompensa será sólida.</p>
+    <p><strong>você</strong> será vista como o porto seguro de todos. Não tente atalhos; <strong>você</strong> vencerá pelo método e pela persistência. É uma fase de pouca diversão e muito resultado, onde <strong>você</strong> provará sua competência e ganhará o respeito de seus pares pela sua integridade inabalável.</p>`,
+    
+    5: `<p>Este segundo momento para <strong>você</strong> traz uma lufada de ar fresco e mudanças radicais. Se a sua vida estava estagnada, agora tudo vai mudar. <strong>você</strong> sentirá necessidade de viajar, mudar de profissão ou explorar novos estilos de vida. A palavra de ordem para <strong>você</strong> é adaptabilidade.</p>
+    <p>Surgirão oportunidades de expansão através de novas tecnologias ou contatos com o exterior. <strong>você</strong> deve ser rápida nas decisões e não ter medo de soltar o que é velho. Sua inteligência estará voltada para o progresso e para a quebra de tradições que já não a servem mais.</p>`,
+    
+    6: `<p>O seu segundo momento é focado na harmonia e na responsabilidade afetiva. <strong>você</strong> poderá ser o centro de uma grande família ou de um projeto comunitário importante. É uma fase de beleza, onde o conforto do lar e o bem-estar das pessoas queridas tornam-se o motor das suas ações.</p>
+    <p><strong>você</strong> será exigida a agir com justiça e compaixão. É um período fértil para a educação e para as artes. <strong>você</strong> encontrará sua realização servindo aos outros, agindo como a protetora que traz equilíbrio emocional para todos os ambientes por onde <strong>você</strong> passar.</p>`,
+    
+    7: `<p>Neste segundo momento, <strong>você</strong> é convidada a se especializar e a buscar a perfeição. A vida a afasta um pouco do barulho social para que <strong>você</strong> possa focar na sua evolução intelectual ou espiritual. É um período de pesquisa, escrita, meditação e descobertas científicas ou místicas.</p>
+    <p><strong>você</strong> deve valorizar a qualidade em vez da quantidade. Sua mente estará analítica e <strong>você</strong> não aceitará respostas superficiais. O mundo respeitará o seu silêncio, pois saberá que <strong>você</strong> está gestando uma sabedoria que será fundamental para todos no futuro próximo.</p>`,
+    
+    8: `<p>O seu segundo momento decisivo é de grande expansão financeira e poder executivo. <strong>você</strong> terá a oportunidade de liderar grandes empresas ou de gerir quantias significativas de dinheiro. É a fase do sucesso material e do reconhecimento da sua autoridade e competência.</p>
+    <p><strong>você</strong> deve agir com um senso de justiça rigoroso. O poder testará seu caráter. <strong>você</strong> vencerá se for organizada e eficiente, agindo com a mente fria para os negócios e o coração quente para a ética. É a hora de <strong>você</strong> consolidar sua posição de destaque na sociedade.</p>`,
+    
+    9: `<p>Este segundo momento para <strong>você</strong> é de natureza humanitária e conclusiva. <strong>você</strong> poderá se envolver em grandes causas sociais ou em projetos artísticos de impacto universal. É uma fase de soltar preconceitos e de amar a humanidade como um todo, agindo com uma generosidade sem limites.</p>
+    <p><strong>você</strong> pode sentir que alguns ciclos estão terminando para que o novo surja. O sucesso para <strong>você</strong> não virá do acúmulo de bens, mas da influência positiva que <strong>você</strong> exerce sobre a vida das pessoas. Sua aura será de sabedoria e acolhimento, atraindo admiração de todos.</p>`
+  },
 
-2:`3º Momento Decisivo —
-Este período exige equilíbrio emocional, cooperação e confiança para consolidar conquistas e seguir avançando.
+  // --- 3º MOMENTO (O OUTONO DA VIDA / MATURIDADE) ---
+  3:{
+    1: `<p>No terceiro momento, <strong>você</strong> experimenta uma renovação total. Quando muitos estão parando, <strong>você</strong> está começando algo novo e revolucionário. É uma fase de pioneirismo tardio que traz muita vitalidade e entusiasmo para a sua vida madura.</p>
+    <p><strong>você</strong> não aceitará ficar na sombra de ninguém. Sua liderança será baseada na experiência, o que a torna ainda mais poderosa. É o momento de <strong>você</strong> lançar aquele projeto que sempre foi um sonho individual e mostrar ao mundo que sua força de vontade continua intacta.</p>`,
+    
+    2: `<p>O seu terceiro momento é marcado pela suavidade e pela paz nas relações. <strong>você</strong> valorizará a companhia de amigos leais e do parceiro acima de tudo. É uma fase de colheita diplomática, onde os conflitos do passado se dissolvem através da sua sabedoria em ouvir.</p>
+    <p><strong>você</strong> será a mediadora da família e dos negócios. O sucesso virá da sua paciência. <strong>você</strong> descobrirá que ser receptiva é uma forma de poder, e que a harmonia que <strong>você</strong> cultiva agora é o que garantirá uma maturidade tranquila e repleta de apoio mútuo.</p>`,
+    
+    3: `<p>Este terceiro momento para <strong>você</strong> é um período de celebração e popularidade. <strong>você</strong> será mais requisitada socialmente do que nunca. É o tempo de escrever suas memórias, de se dedicar ao teatro, à pintura ou de viajar para se divertir e conhecer gente nova.</p>
+    <p><strong>você</strong> contagiará os mais jovens com seu otimismo. Sua mente estará criativa e leve. Aproveite para expressar tudo o que <strong>você</strong> guardou ao longo dos anos; o mundo está ansioso para ouvir a sua voz e rir com o seu senso de humor único e refinado.</p>`,
+    
+    4: `<p>O seu terceiro momento decisivo foca na segurança e no legado sólido. <strong>você</strong> se dedicará a organizar o seu patrimônio e a garantir que tudo esteja em ordem para o futuro. É uma fase de grande respeitabilidade, onde <strong>você</strong> é vista como a guardiã dos valores e da estabilidade familiar.</p>
+    <p><strong>você</strong> pode se envolver em construção civil, gestão de terras ou administração rigorosa. O esforço continuará sendo necessário, mas <strong>você</strong> já conhece o caminho. Sua satisfação virá de ver que o que <strong>você</strong> construiu tem raízes profundas e não será abalado por tempestades.</p>`,
+    
+    5: `<p>Este terceiro momento para <strong>você</strong> traz uma quebra na rotina da maturidade. <strong>você</strong> pode decidir vender tudo e viajar, ou mudar de vida radicalmente para algo mais emocionante. É um período de rejuvenescimento mental e de curiosidade por novas tecnologias e filosofias.</p>
+    <p><strong>você</strong> será o exemplo de que a vida não para. Sua versatilidade será sua maior ferramenta. Aproveite para se libertar de obrigações que <strong>você</strong> carregou por anos. Agora é a sua hora de voar, experimentar novos sabores e conhecer lugares que <strong>você</strong> só via nos mapas.</p>`,
+    
+    6: `<p>O seu terceiro momento é voltado para o serviço amoroso e para a harmonia do clã. <strong>você</strong> se tornará a grande matriarca ou patriarca, o ponto de união entre todas as gerações. É uma fase de beleza artística e de cuidado com o próximo, onde <strong>você</strong> se sente plena ao ser útil.</p>
+    <p><strong>você</strong> investirá tempo na decoração do lar e no conforto dos seus. Sua responsabilidade será natural e gratificante. O mundo ao seu redor se tornará mais pacífico porque <strong>você</strong> emana uma justiça amorosa que cura as feridas daqueles que se aproximam de <strong>você</strong>.</p>`,
+    
+    7: `<p>Neste terceiro momento, <strong>você</strong> se volta inteiramente para a busca da alma e da sabedoria superior. É o período de escrita de livros, de meditação profunda ou de dedicação a um conhecimento técnico muito especializado. <strong>você</strong> buscará a solidão produtiva para se conectar com o divino.</p>
+    <p><strong>você</strong> será vista como uma sábia. Sua intuição será infalível. Não se preocupe em ser sociável; a sua missão agora é ser o farol que ilumina as trevas da ignorância alheia. <strong>você</strong> encontrará paz na clareza mental e na certeza de que a verdade está dentro de <strong>você</strong>.</p>`,
+    
+    8: `<p>O seu terceiro momento decisivo é de colheita material abundante e autoridade respeitada. <strong>você</strong> poderá assumir a liderança de grandes causas ou organizações beneficentes com o mesmo rigor que usava nos negócios. É a fase de desfrutar do poder que a competência lhe deu.</p>
+    <p><strong>você</strong> deve usar seu status para influenciar o mundo para melhor. A gestão de recursos será sua diversão. <strong>você</strong> será reconhecida como uma figura de sucesso inquestionável, agindo com a mente estratégica de quem sabe exatamente como o mundo funciona e como vencer nele.</p>`,
+    
+    9: `<p>Este terceiro momento para <strong>você</strong> é o ápice do desapego e do amor universal. <strong>você</strong> se sentirá um cidadão do mundo, sem fronteiras ou preconceitos. É o período de deixar um legado espiritual ou artístico para a humanidade, agindo com uma generosidade que emociona a todos.</p>
+    <p><strong>você</strong> perdoará o passado e olhará para o futuro com esperança. O sucesso para <strong>você</strong> agora é ver o bem que <strong>você</strong> fez. Sua aura de compaixão será tão forte que <strong>você</strong> será lembrada como uma alma que passou pela Terra para iluminar e elevar a consciência coletiva.</p>`
+  },
 
-3º Momento n°2
-Podem surgir dúvidas se a autoestima não estiver fortalecida.  
-Será necessário manter a individualidade com flexibilidade.  
-Parcerias e cooperação tornam-se essenciais.  
-A paciência facilitará conquistas importantes.  
-Relacionamentos podem impulsionar resultados.  
-A impaciência poderá gerar atrasos e conflitos.  
-É momento de avaliar a realidade com clareza.  
-Evite ilusões e promessas vazias.  
-Aprenda com erros e aproveite acertos passados.  
-Este período separa passado e futuro.  
-A análise da própria trajetória será essencial.  
-A cooperação facilitará o crescimento.  
-A maturidade emocional favorece decisões.  
-A disciplina fortalece resultados.  
-A clareza conduz ao progresso.`,
+  // --- 4º MOMENTO (O INVERNO DA VIDA / TERCEIRA IDADE) ---
+  4:{
+    1: `<p>No seu quarto e último momento decisivo, a energia é de uma nova e vibrante independência. <strong>você</strong> termina a vida com o espírito de um iniciador. É um tempo de autossuficiência e de não precisar de ninguém para se sentir completa, agindo com uma dignidade soberana.</p>
+    <p><strong>você</strong> será lembrada pela sua coragem de ter sido fiel a si mesma até o fim. Este período traz uma clareza mental que permite a <strong>você</strong> liderar sua própria vida com uma força que impressiona as gerações mais jovens, mostrando que a vontade de vencer é eterna.</p>`,
+    
+    2: `<p>O seu quarto momento é de paz absoluta e cooperação. <strong>você</strong> viverá cercada de afeto e de pessoas que valorizam sua companhia gentil. É o tempo de desfrutar da harmonia conquistada, sendo a conselheira silenciosa cujas palavras trazem equilíbrio imediato a qualquer ambiente.</p>
+    <p><strong>você</strong> encontrará prazer na música, na arte e na convivência pacífica. Sua sensibilidade estará refinada ao máximo. O mundo a verá como um exemplo de que a suavidade e a parceria são o caminho mais curto para a felicidade duradoura e para um encerramento de ciclo sereno.</p>`,
+    
+    3: `<p>Este quarto momento para <strong>você</strong> é de pura expressão e alegria. <strong>você</strong> será aquela pessoa idosa cheia de vida, histórias engraçadas e uma rede social ativa. É o tempo de brilhar através da comunicação, deixando um rastro de sorrisos e criatividade por onde <strong>você</strong> passar.</p>
+    <p><strong>você</strong> desfrutará do reconhecimento social. Não haverá espaço para a tristeza, pois sua mente estará focada no lado bom da vida. Sua missão final para <strong>você</strong> é ensinar aos outros que a alegria é uma escolha e que a criatividade não tem data de validade.</p>`,
+    
+    4: `<p>O seu quarto momento decisivo é de estabilidade total e respeito à tradição. <strong>você</strong> terá a satisfação de ver que tudo o que construiu permanece firme. É um período de pouca mudança e muita segurança, onde <strong>você</strong> desfruta dos frutos materiais e morais do seu trabalho duro.</p>
+    <p><strong>você</strong> será a rocha da família. Sua rotina será sua paz. O mundo a respeitará pela sua integridade inabalável. <strong>você</strong> encerra sua jornada com a consciência tranquila de quem cumpriu todos os deveres e deixou um legado de ordem e segurança para os seus descendentes.</p>`,
+    
+    5: `<p>Este quarto momento para <strong>você</strong> é de liberdade e movimento. <strong>você</strong> não aceitará limitações e continuará buscando novidades até o último dia. É uma fase de mente aberta, viagens e curiosidade intelectual, agindo como um elo entre o passado e o futuro tecnológico.</p>
+    <p><strong>você</strong> será a prova viva de que a alma nunca envelhece. Sua versatilidade será inspiradora. Aproveite cada segundo para descobrir algo novo, pois para <strong>você</strong> a vida é uma aventura que só termina quando <strong>você</strong> decidir que já conheceu o bastante deste mundo vasto.</p>`,
+    
+    6: `<p>O seu quarto momento é voltado para o amor incondicional e para o cuidado familiar. <strong>você</strong> será a alma da casa, a pessoa que todos amam visitar para receber um conselho ou um abraço. É uma fase de beleza interior refletida no exterior, agindo com uma justiça que acolhe.</p>
+    <p><strong>você</strong> se sentirá plena ao ver a união de sua família. Sua responsabilidade agora é apenas amar. <strong>você</strong> deixa um legado de harmonia e de serviço ao próximo, sendo lembrada como a pessoa que transformou o mundo em um lugar mais doce através do seu exemplo de dedicação.</p>`,
+    
+    7: `<p>Neste quarto momento, <strong>você</strong> atinge o ápice da sabedoria espiritual e intelectual. É um período de grande profundidade e misticismo, onde <strong>você</strong> compreende perfeitamente os mistérios da vida. Sua solidão será preenchida por uma paz que ultrapassa todo o entendimento.</p>
+    <p><strong>você</strong> será vista como uma autoridade sagrada. Suas palavras terão o peso da verdade absoluta. <strong>você</strong> se sentirá em casa no mundo das ideias e da alma, preparando-se para o final do ciclo com uma clareza e uma serenidade que só os grandes mestres possuem.</p>`,
+    
+    8: `<p>O seu quarto momento decisivo é de autoridade e reconhecimento material final. <strong>você</strong> desfruta de um status elevado e da gestão do seu legado financeiro. É a fase em que <strong>você</strong> usa seu poder para garantir que suas conquistas continuem beneficiando a sociedade e sua família.</p>
+    <p><strong>você</strong> será respeitada como uma vencedora. Sua mente estratégica continuará ativa, garantindo que a justiça e a eficiência imperem nos seus domínios. <strong>você</strong> encerra sua jornada com a certeza de que conquistou o mundo material e manteve sua dignidade e autoridade intactas.</p>`,
+    
+    9: `<p>Este quarto momento para <strong>você</strong> é a entrega final ao amor universal e ao serviço à humanidade. <strong>você</strong> sentirá uma conexão com todas as coisas vivas, agindo com uma generosidade que é pura e desinteressada. É o tempo do desapego total e da iluminação espiritual.</p>
+    <p><strong>você</strong> será um farol para os outros. Sua vida se torna um exemplo de compaixão. <strong>você</strong> se despede dos ciclos terrenos com o coração cheio de paz, sabendo que cumpriu sua missão de elevar a vibração do planeta através do seu amor infinito e da sua sabedoria transcendental.</p>`
+  }
+};
 
-3:`3º Momento Decisivo —
-O foco e a disciplina tornam-se fundamentais para aproveitar oportunidades e alcançar reconhecimento.
 
-3º Momento n°3
-A concentração será a chave do sucesso.  
-Evite dispersar energia em atividades improdutivas.  
-É momento de expandir e ocupar novos espaços.  
-A sociabilidade pode abrir portas importantes.  
-A cooperação favorece conquistas.  
-Selecione bem amizades e parcerias.  
-Não force situações, permita que fluam naturalmente.  
-A organização evita sobrecarga e desgaste.  
-A responsabilidade precisa ser assumida.  
-A vida pede reorganização produtiva.  
-A experiência acumulada deve ser utilizada.  
-A disciplina garante estabilidade.  
-O crescimento depende da constância.  
-O equilíbrio evita desgaste emocional.  
-O foco conduz à realização.`,
-
-4:`3º Momento Decisivo —
-Este período favorece a construção definitiva de bases sólidas e duradouras para o futuro.
-
-3º Momento n°4
-Disciplina e dedicação serão essenciais.  
-Encare dificuldades de forma prática e realista.  
-Não permita que limitações impeçam o progresso.  
-O esforço contínuo trará resultados concretos.  
-A responsabilidade define os caminhos futuros.  
-Aprender a lidar com pressão será necessário.  
-Os resultados dependerão da dedicação aplicada.  
-A vida será vista de forma mais realista.  
-A confiança deve ser mantida.  
-A persistência gera conquistas duradouras.  
-O trabalho consistente fortalece a estabilidade.  
-O compromisso garante progresso.  
-A maturidade favorece segurança.  
-A determinação impulsiona resultados.  
-A dedicação conduz ao sucesso.`,
-
-5:`3º Momento Decisivo —
-Esta fase exige adaptação, mudanças e abertura para novas oportunidades.
-
-3º Momento n°5
-Será necessário abandonar o que já não serve.  
-Mudanças trarão crescimento e expansão.  
-A liberdade será conquistada através da adaptação.  
-Novas experiências ampliarão a visão de mundo.  
-Evite agir impulsivamente.  
-Mudanças podem ocorrer inesperadamente.  
-A prudência será essencial nas decisões.  
-A flexibilidade facilita o progresso.  
-A cautela evita instabilidade.  
-A experiência orienta escolhas importantes.  
-O equilíbrio emocional reduz riscos.  
-A adaptação fortalece o crescimento.  
-A mudança pode gerar oportunidades.  
-A calma favorece decisões assertivas.  
-A prudência garante estabilidade.`,
-
-6:`3º Momento Decisivo —
-Este período representa encerramentos, transições e preparação para uma nova etapa de vida.
-
-3º Momento n°6
-Novas ideias e conceitos devem ser incorporados.  
-Mudanças podem ocorrer de forma significativa.  
-A serenidade será essencial para o progresso.  
-O foco deve estar na felicidade e segurança.  
-Novas oportunidades podem surgir.  
-O equilíbrio emocional será indispensável.  
-A cooperação favorece resultados positivos.  
-Ajude sem abrir mão da individualidade.  
-Evite negligenciar suas necessidades.  
-O período favorece crescimento emocional.  
-A harmonia fortalece conquistas.  
-A adaptação facilita a evolução.  
-A experiência traz maturidade.  
-O equilíbrio conduz à estabilidade.  
-A transição prepara novos caminhos.`,
-
-7:`3º Momento Decisivo —
-Este momento pede propósito, autoconhecimento e renovação pessoal.
-
-3º Momento n°7
-É hora de redefinir valores e prioridades.  
-Deixe para trás o que não faz mais sentido.  
-Velhos hábitos e relações devem ser reavaliados.  
-Evite excesso de introspecção.  
-Aja com praticidade nas questões materiais.  
-Resolva pendências gradualmente.  
-Liberte-se de frustrações e ressentimentos.  
-Seja participativo e menos crítico.  
-A paciência será essencial.  
-A organização facilita o progresso.  
-Encare desafios com confiança.  
-O autoconhecimento fortalece decisões.  
-A disciplina garante evolução.  
-A persistência evita retrocessos.  
-O propósito conduz à transformação.`,
-
-8:`3º Momento Decisivo —
-Este pode ser um período de grandes conquistas e reconhecimento.
-
-3º Momento n°8
-Planejamento e organização serão essenciais.  
-O sucesso dependerá da dedicação.  
-A liderança ganha destaque.  
-Evite apego excessivo ao material.  
-A ganância pode gerar prejuízos.  
-Escolha bem parcerias e colaboradores.  
-A racionalidade favorece resultados.  
-A disciplina garante progresso.  
-A prudência evita problemas.  
-A maturidade fortalece decisões.  
-O esforço traz reconhecimento.  
-A ética protege conquistas.  
-A perseverança gera prosperidade.  
-O equilíbrio evita desgaste.  
-A dedicação conduz à realização.`,
-
-9:`3º Momento Decisivo —
-Este período favorece reflexão, encerramentos e fortalecimento dos valores pessoais.
-
-3º Momento n°9
-É hora de consolidar aprendizados.  
-Novas oportunidades podem surgir.  
-O reconhecimento será resultado das atitudes.  
-Relacione-se de forma mais humana e empática.  
-Resgate valores e relações importantes.  
-Finalize pendências do passado.  
-Evite julgamentos e preconceitos.  
-Busque crescimento pessoal e espiritual.  
-Promova mudanças positivas ao seu redor.  
-Valorize a condição humana.  
-A maturidade favorece sabedoria.  
-A experiência fortalece decisões.  
-O desapego traz liberdade emocional.  
-O encerramento prepara novos ciclos.  
-A evolução conduz à plenitude.`
-},
- 
-
-4:{
-1:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito, a direção e a intencionalidade da própria jornada. Surge uma percepção profunda de significado, realização e consciência pessoal. Este é o momento das recompensas, da serenidade e da sabedoria.
-
-Quarto Momento  n°1
-Agora você possui condições de reunir suas ideias e agir com consciência do momento certo. Esta é a fase de assumir as consequências e colher os resultados das decisões tomadas anteriormente. Nada é irreversível, mas daqui em diante os resultados dependerão essencialmente de sua atitude. Será necessário manter foco absoluto em seus objetivos e promover mudanças necessárias para continuar avançando. Muitas vezes será preciso revisitar o passado, reavaliar ideias e atitudes para identificar o que ainda pode ser realizado e quais desafios permanecem. Este é o momento de sair da zona de conforto e agir com coragem. As bases já foram construídas; agora é hora de colocá-las em prática. Caso contrário, poderá surgir sensação de repetição e estagnação. Será preciso enfrentar limitações, retomar caminhos interrompidos e superar obstáculos antigos. O sucesso dependerá da sua iniciativa, determinação e capacidade de assumir a própria história com responsabilidade.`,
-
-2:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito, a direção e a intencionalidade da própria jornada.
-
-Quarto Momento  n°2
-Este período simboliza a chegada do futuro que antes parecia distante e pode trazer insegurança diante do que ainda está por vir. Será necessário equilíbrio entre conquistas e sensibilidade nas relações. É um momento para fortalecer parcerias, aceitar ajuda e agir com cooperação. Se cultivar paciência e participação ativa na vida das pessoas, poderá viver fase de grandes realizações. Caso contrário, impaciência poderá gerar conflitos e atrasos. Este é um período de transição definitiva entre passado e futuro. Avalie sua trajetória para não repetir erros. Não é hora de buscar destaque individual, mas de construir alianças e concluir objetivos pendentes. Confie na criatividade, mas evite ilusões. Observe a realidade com clareza antes de decidir. Ouça conselhos, mas valorize apenas o que for útil.`,
-
-3:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito, a direção e a intencionalidade da própria jornada.
-
-Quarto Momento  n°3
-Se a vida foi conduzida com sabedoria, este pode ser um período extremamente agradável. Surge satisfação com conquistas e liberdade para expressar ideias e sentimentos. Há energia, sociabilidade e sensação de reconhecimento. A prosperidade pode crescer em diversas áreas da vida. O desafio será compreender que a realização é consequência da superação dos obstáculos. É momento de ocupar a posição desejada, ampliar contatos e aproveitar a vida. Entretanto, será necessário organização para não acumular responsabilidades. Delegar tarefas será essencial. Este é o momento de valorizar conquistas e expressar sua experiência com maturidade e entusiasmo.`,
-
-4:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito e a direção da própria jornada.
-
-Quarto Momento  n°4
-Este será um período de paciência, dedicação e realismo. Será necessário enfrentar limitações com coragem e perseverança. Agora você encara a realidade de forma mais clara, reconhecendo quem realmente é. Este é o momento de cumprir obrigações e assumir responsabilidades com maturidade. Os resultados serão proporcionais ao esforço aplicado. Apoiar familiares e pessoas próximas será importante, mas sem negligenciar suas próprias necessidades. Aprender a lidar com pressão sem perder a autoconfiança será fundamental. Com persistência, será possível conquistar objetivos ainda não alcançados.`,
-
-5:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase surge uma compreensão profunda da jornada.
-
-Quarto Momento  n°5
-Este pode ser um período libertador. Surge a necessidade de abandonar o que se tornou obsoleto e iniciar novas experiências. Mudanças poderão parecer difíceis no início, mas trarão benefícios futuros. A liberdade aumenta, mas exige responsabilidade e prudência. Evite impulsividade e excessos. O equilíbrio será essencial para aproveitar as oportunidades. É momento de desenvolver habilidades negligenciadas e dar continuidade ao que foi iniciado anteriormente. O crescimento virá da adaptação consciente às mudanças.`,
-
-6:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. A maturidade permite compreender novas responsabilidades.
-
-Quarto Momento  n°6
-Este período encerra uma fase importante e inicia outra. Parte das expectativas já foi alcançada, mas novos aprendizados surgem. Pode ser fase serena e harmoniosa se responsabilidades foram bem conduzidas. Caso contrário, poderá trazer desafios emocionais. É momento de cooperação, apoio e equilíbrio nas relações. Novas oportunidades surgem quando valores esquecidos são resgatados. A harmonia será alcançada ao ajudar os outros sem se anular. O equilíbrio entre dever e felicidade será a chave.`,
-
-7:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida e revela a essência construída ao longo da jornada.
-
-Quarto Momento  n°7
-Este período marca a busca pelo verdadeiro sentido da vida. Velhos hábitos e relações que perderam significado devem ser deixados para trás. Será necessário desapego e renovação interior. Determinação será essencial para concluir projetos abandonados. Resolver pendências será prioridade. Este é o momento de libertar-se de ressentimentos e seguir com leveza. A sabedoria adquirida permitirá redefinir prioridades e seguir confiante.`,
-
-8:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida e o momento das grandes realizações.
-Quarto Momento  n°8
-
-Este pode ser um período de reconhecimento e conquistas materiais. O controle da própria vida torna-se evidente. Será necessário planejamento, organização e disciplina para alcançar objetivos. Evite orgulho e ganância. O sucesso verdadeiro depende de ética e equilíbrio. Se agir com prudência e justiça, poderá alcançar reconhecimento duradouro e satisfação pessoal.`,
-
-9:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida e representa sabedoria e realização interior.
-Quarto Momento  n°9
-
-Este é um período de reconhecimento e crescimento espiritual. Você será valorizado por quem é, não pelo que aparenta. O momento favorece reconciliações, novos relacionamentos e expansão de horizontes. É tempo de encerrar pendências e libertar-se de julgamentos e preconceitos. A generosidade e a compreensão tornam-se prioridades. A maturidade permite aproveitar oportunidades com serenidade e discernimento.`
-
-}
-
-},
   
 
-desafios:{
-1:{
+ desafios:{
+  // --- 1º DESAFIO (FASE INICIAL / JUVENTUDE) ---
+ 1:{
+
+   0:`Desafio 0 — O Desafio da Escolha
+
+Neste primeiro período da vida, a pessoa está em fase de formação do caráter e descoberta da própria identidade. Não existe um desafio único dominante, pois o maior aprendizado é justamente aprender a escolher. Desde cedo surgem pequenas decisões que começam a moldar o futuro e influenciar a personalidade. 
+
+A criança e o jovem são fortemente influenciados pelo ambiente, pela família e pelas experiências iniciais. Por isso, a indecisão e o desânimo podem surgir com facilidade. 
+
+O desafio aqui é desenvolver força de vontade, senso de direção e capacidade de tomar decisões conscientes. A pessoa precisa aprender a confiar em si mesma e compreender que toda escolha gera consequências.
+
+É necessário aprender a agir com autonomia, mesmo diante de dúvidas e inseguranças. Este desafio exige o desenvolvimento gradual da iniciativa, da disciplina e da responsabilidade. 
+
+Também pede equilíbrio emocional para lidar com erros e frustrações. A construção da identidade depende diretamente da capacidade de decidir e agir. Este período prepara a base do caráter e da maturidade futura.`,
+    1: `<p>Neste primeiro desafio, a vida exige que <strong>você</strong> aprenda a desenvolver a sua autoconfiança e iniciativa. O obstáculo aqui é a tendência à dependência ou ao medo de agir sozinha. <strong>você</strong> pode se sentir pressionada por personalidades fortes, e o seu trabalho interno é não se anular para agradar aos outros.</p>
+    <p>O aprendizado para <strong>você</strong> é o da coragem. <strong>você</strong> deve aprender a dizer "não" e a trilhar o seu próprio caminho, mesmo que sinta medo. Ao superar a insegurança, <strong>você</strong> descobrirá uma força de liderança que será a base para todas as suas conquistas futuras.</p>`,
+
+    2: `<p>O seu primeiro desafio é lidar com a hipersensibilidade e a timidez. <strong>você</strong> pode se sentir facilmente ferida por críticas ou se perder em dúvidas constantes na hora de decidir. O obstáculo é a tendência a se envolver em detalhes irrelevantes ou se tornar excessivamente dependente da aprovação alheia.</p>
+    <p>A lição para <strong>você</strong> é a do equilíbrio emocional e da cooperação sem submissão. <strong>você</strong> precisa aprender a confiar na sua intuição e a não absorver a negatividade dos ambientes. Ao dominar este desafio, <strong>você</strong> se tornará uma mestra na diplomacia e no tato social.</p>`,
+
+    3: `<p>Este desafio inicial foca na sua capacidade de expressão. O obstáculo para <strong>você</strong> é a dispersão de energia ou o medo de ser julgada pelo que diz ou cria. <strong>você</strong> pode oscilar entre o desejo de brilhar e a tendência a se esconder, ou acabar gastando seu talento em futilidades.</p>
+    <p>O trabalho para <strong>você</strong> é aprender a focar a sua criatividade. <strong>você</strong> deve evitar o pessimismo e a fofoca, buscando uma comunicação mais profunda e autêntica. Superar este desafio transformará <strong>você</strong> em uma fonte de inspiração e alegria genuína para o mundo.</p>`,
+
+    4: `<p>O seu primeiro desafio é a construção de disciplina e senso prático. O obstáculo para <strong>você</strong> é a tendência à preguiça, à desorganização ou, no extremo oposto, a um rigor excessivo que a torna teimosa. <strong>você</strong> pode sentir que a vida exige muito esforço e que as coisas demoram a acontecer.</p>
+    <p>A lição para <strong>você</strong> é a da persistência. <strong>você</strong> precisa aprender a valorizar os detalhes e a rotina, entendendo que o sucesso é construído tijolo por tijolo. Ao superar a resistência ao trabalho duro, <strong>você</strong> se tornará uma pessoa extremamente sólida e respeitada.</p>`,
+
+    5: `<p>Este desafio inicial traz a lição da liberdade com responsabilidade. O obstáculo para <strong>você</strong> é a inquietude excessiva, o desejo de fugir das obrigações ou a impulsividade que a faz mudar de direção constantemente sem concluir nada.</p>
+    <p>O aprendizado para <strong>você</strong> é o foco em meio à mudança. <strong>você</strong> deve aprender a não se perder em prazeres sensoriais passageiros e a usar sua versatilidade de forma construtiva. Ao dominar a sua impaciência, <strong>você</strong> ganhará uma inteligência adaptável capaz de vencer qualquer crise.</p>`,
+
+    6: `<p>O seu primeiro desafio está ligado às responsabilidades afetivas e familiares. O obstáculo para <strong>você</strong> é a tendência a ser excessivamente crítica, mandona ou a carregar o mundo nas costas, sofrendo pelos problemas alheios. <strong>você</strong> pode se sentir sufocada por deveres domésticos.</p>
+    <p>A lição para <strong>você</strong> é a do amor sem controle. <strong>você</strong> precisa aprender que não pode salvar todo mundo e que a harmonia começa com a aceitação das imperfeições alheias. Superar este desafio trará a <strong>você</strong> uma sabedoria emocional profunda e relacionamentos muito mais leves.</p>`,
+
+    7: `<p>Este desafio inicial foca na superação do medo e da desconfiança. O obstáculo para <strong>você</strong> é a tendência ao isolamento melancólico ou ao ceticismo exagerado. <strong>você</strong> pode ter dificuldade em expressar seus sentimentos, preferindo se esconder atrás de uma intelectualidade fria.</p>
+    <p>O aprendizado para <strong>você</strong> é o da fé e do autoconhecimento. <strong>você</strong> deve aprender a equilibrar a razão com a intuição, sem medo de mergulhar nas profundezas da alma. Ao superar a barreira do silêncio, <strong>você</strong> se tornará uma autoridade espiritual ou técnica inquestionável.</p>`,
+
+    8: `<p>O seu primeiro desafio lida com o mundo material e a autoridade. O obstáculo para <strong>você</strong> é o medo do fracasso financeiro ou, por outro lado, uma ambição desmedida que ignora os sentimentos. <strong>você</strong> pode ter problemas com figuras de poder ou dificuldade em gerir seus próprios recursos.</p>
+    <p>A lição para <strong>você</strong> é a da eficiência com ética. <strong>você</strong> precisa aprender a lidar com o dinheiro e o poder de forma equilibrada, entendendo as leis da causa e efeito. Ao superar este desafio, <strong>você</strong> terá a capacidade de realizar grandes conquistas e acumular prosperidade real.</p>`,
+
+    9: `<p>Este desafio inicial é sobre o desapego e a compaixão universal. O obstáculo para <strong>você</strong> é a tendência a sofrer intensamente pelas perdas ou a se perder em dramas idealistas sem solução prática. <strong>você</strong> pode se sentir sobrecarregada pelas dores do mundo.</p>
+    <p>O aprendizado para <strong>você</strong> é o do amor incondicional. <strong>você</strong> deve aprender a deixar ir o que não serve mais e a perdoar o passado. Superar este desafio transformará <strong>você</strong> em uma alma sábia e carismática, pronta para ajudar a humanidade de forma ampla e desinteressada.</p>`
+  },
+
+  // --- 2º DESAFIO (MATURIDADE / FASE INTERMEDIÁRIA) ---
+2:{
+
+  0:`Desafio 0 — O Desafio da Escolha
+
+Neste primeiro período da vida, a pessoa está em fase de formação do caráter e descoberta da própria identidade. Não existe um desafio único dominante, pois o maior aprendizado é justamente aprender a escolher. Desde cedo surgem pequenas decisões que começam a moldar o futuro e influenciar a personalidade. 
+
+A criança e o jovem são fortemente influenciados pelo ambiente, pela família e pelas experiências iniciais. Por isso, a indecisão e o desânimo podem surgir com facilidade. 
+
+O desafio aqui é desenvolver força de vontade, senso de direção e capacidade de tomar decisões conscientes. A pessoa precisa aprender a confiar em si mesma e compreender que toda escolha gera consequências.
+
+É necessário aprender a agir com autonomia, mesmo diante de dúvidas e inseguranças. Este desafio exige o desenvolvimento gradual da iniciativa, da disciplina e da responsabilidade. 
+
+Também pede equilíbrio emocional para lidar com erros e frustrações. A construção da identidade depende diretamente da capacidade de decidir e agir. Este período prepara a base do caráter e da maturidade futura.`,
+    1: `<p>Neste segundo desafio, a vida volta a testar a sua capacidade de liderança e individualidade. O obstáculo agora é o medo de se destacar ou a arrogância de achar que <strong>você</strong> não precisa de ninguém. <strong>você</strong> pode enfrentar situações que a forçam a recomeçar do zero.</p>
+    <p>O aprendizado para <strong>você</strong> é a afirmação do "eu" consciente. <strong>você</strong> deve aprender a liderar sem tiranizar e a agir com originalidade. Ao superar a necessidade de aprovação externa, <strong>você</strong> consolidará a sua marca única no mundo e conquistará a sua verdadeira autonomia.</p>`,
+
+    2: `<p>O seu segundo desafio exige que <strong>você</strong> aprenda a trabalhar em parcerias sem se anular. O obstáculo é a dependência emocional ou a dificuldade em lidar com detalhes técnicos e burocráticos. <strong>você</strong> pode se sentir presa a situações que exigem uma paciência que <strong>você</strong> julga não ter.</p>
+    <p>A lição para <strong>você</strong> é a da diplomacia refinada. <strong>você</strong> deve aprender a ouvir as entrelinhas e a cooperar com inteligência. Ao dominar este desafio, <strong>você</strong> descobrirá que sua maior força de realização vem da união estratégica e do tato social impecável.</p>`,
+
+    3: `<p>Este segundo desafio foca na sua comunicação e criatividade social. O obstáculo para <strong>você</strong> é a superficialidade ou a tendência a desperdiçar oportunidades por falta de foco. <strong>você</strong> pode se sentir frustrada se não conseguir expressar seus talentos de forma clara e profissional.</p>
+    <p>O trabalho para <strong>você</strong> é dar profundidade à sua expressão. <strong>você</strong> deve aprender a usar as palavras para construir e não para dispersar. Ao superar o medo da crítica, <strong>você</strong> se tornará uma comunicadora magnética, capaz de influenciar grandes grupos com o seu entusiasmo.</p>`,
+
+    4: `<p>O seu segundo desafio exige organização extrema e pé no chão. O obstáculo para <strong>você</strong> é a resistência às mudanças ou a dificuldade em lidar com as limitações materiais da realidade. <strong>você</strong> pode se sentir sobrecarregada por rotinas que parecem não trazer resultados imediatos.</p>
+    <p>A lição para <strong>você</strong> é o valor da estrutura. <strong>você</strong> precisa aprender a ser prática e a não fugir das responsabilidades. Ao superar a impaciência com o tempo das coisas, <strong>você</strong> construirá uma base de segurança e respeito que será o alicerce do seu sucesso duradouro.</p>`,
+
+    5: `<p>Este segundo desafio traz a necessidade de adaptação rápida. O obstáculo para <strong>você</strong> é o medo da mudança ou, inversamente, uma busca por prazeres sensoriais que a distrai dos seus objetivos reais. <strong>você</strong> pode enfrentar instabilidades na carreira ou na vida pessoal.</p>
+    <p>O aprendizado para <strong>você</strong> é o uso inteligente da liberdade. <strong>você</strong> deve aprender a ser versátil sem ser volúvel. Ao dominar o medo do novo e a inquietude da mente, <strong>você</strong> se tornará uma agente de inovação capaz de prosperar em qualquer cenário de incerteza.</p>`,
+
+    6: `<p>O seu segundo desafio foca no equilíbrio entre dar e receber. O obstáculo para <strong>você</strong> é a tendência a se intrometer na vida dos outros sob o pretexto de ajudar, ou a cobrança de gratidão. <strong>você</strong> pode enfrentar conflitos domésticos que exigem muita maturidade.</p>
+    <p>A lição para <strong>você</strong> é a da responsabilidade amorosa sem apego. <strong>você</strong> deve aprender a aconselhar sem impor a sua vontade. Superar este desafio trará a <strong>você</strong> uma autoridade moral e um ambiente familiar muito mais pacífico e verdadeiramente harmonioso.</p>`,
+
+    7: `<p>Este segundo desafio exige um aprofundamento intelectual ou espiritual. O obstáculo para <strong>você</strong> é a fuga da realidade através do isolamento ou o medo de encarar suas próprias sombras. <strong>você</strong> pode ter dificuldade em confiar nas pessoas e se fechar em um mundo de teorias frias.</p>
+    <p>O aprendizado para <strong>você</strong> é a sabedoria da alma. <strong>você</strong> deve aprender a meditar e a buscar respostas dentro de si mesma. Ao superar o ceticismo e a solidão defensiva, <strong>você</strong> atingirá um nível de clareza mental que a tornará uma mestre respeitada em sua área.</p>`,
+
+    8: `<p>O seu segundo desafio lida com a ambição e o julgamento. O obstáculo para <strong>você</strong> é o uso indevido do poder ou a obsessão por status e bens materiais. <strong>você</strong> pode enfrentar altos e baixos financeiros que testam a sua integridade e sua capacidade de gestão.</p>
+    <p>A lição para <strong>você</strong> é a da mestria material. <strong>você</strong> precisa aprender a governar com justiça e a entender que o dinheiro é um fluxo de energia. Ao superar o medo da escassez ou a ganância, <strong>você</strong> conquistará uma posição de influência real e prosperidade estável.</p>`,
+
+    9: `<p>Este segundo desafio foca no humanitarismo e na finalização de ciclos. O obstáculo para <strong>você</strong> é o apego emocional a situações ou pessoas que já deveriam ter partido da sua vida. <strong>você</strong> pode se sentir emocionalmente exausta por tentar carregar as dores do mundo.</p>
+    <p>O aprendizado para <strong>você</strong> é a generosidade desapegada. <strong>você</strong> deve aprender a servir por um propósito maior, sem esperar reconhecimento. Superar este desafio trará a <strong>você</strong> um carisma universal e uma paz interior que emana de uma alma que compreendeu o sentido da vida.</p>`
+  },
+
+  // --- 3º DESAFIO (PRINCIPAL / LONGO PRAZO) ---
+ 3:{
 0:`Desafio 0 — O Desafio da Escolha
 
 Neste primeiro período da vida, a pessoa está em fase de formação do caráter e descoberta da própria identidade. Não existe um desafio único dominante, pois o maior aprendizado é justamente aprender a escolher. Desde cedo surgem pequenas decisões que começam a moldar o futuro e influenciar a personalidade. 
@@ -2011,395 +771,125 @@ O desafio aqui é desenvolver força de vontade, senso de direção e capacidade
 É necessário aprender a agir com autonomia, mesmo diante de dúvidas e inseguranças. Este desafio exige o desenvolvimento gradual da iniciativa, da disciplina e da responsabilidade. 
 
 Também pede equilíbrio emocional para lidar com erros e frustrações. A construção da identidade depende diretamente da capacidade de decidir e agir. Este período prepara a base do caráter e da maturidade futura.`,
+   
+    1: `<p>O seu desafio principal, que a acompanhará por toda a vida, é a conquista da independência real e da liderança consciente. O obstáculo recorrente para <strong>você</strong> é a luta entre o desejo de ser livre e o medo de não ser capaz de sustentar suas próprias decisões.</p>
+    <p>A grande lição para <strong>você</strong> é a autossuficiência. <strong>você</strong> veio para aprender que sua força não vem dos outros, mas da sua conexão com sua essência única. Ao vencer a insegurança de ser a pioneira, <strong>você</strong> deixará um legado de coragem e inovação que inspirará gerações.</p>`,
 
-1:`Desafio 1 — Desenvolver a Iniciativa
+    2: `<p>O seu desafio principal é a maestria na diplomacia e na harmonia das relações. O obstáculo constante para <strong>você</strong> é a sensibilidade exagerada e a tendência a se envolver em dramas emocionais que drenam sua energia. <strong>você</strong> pode sentir dificuldade em encontrar o seu espaço em parcerias.</p>
+    <p>A grande lição para <strong>você</strong> é a cooperação equilibrada. <strong>você</strong> deve aprender a ser gentil sem ser fraca e a ouvir sem se perder. Ao superar a necessidade de aceitação, <strong>você</strong> se tornará o ponto de paz em qualquer ambiente, sendo reconhecida pela sua sabedoria em unir opostos.</p>`,
 
-Durante a infância e a juventude surge a necessidade de aprender independência e autoconfiança. A pessoa será colocada em situações que exigirão posicionamento e defesa das próprias ideias. Será necessário escolher entre agradar os outros ou seguir suas convicções. 
+    3: `<p>O seu desafio principal foca na autoexpressão e no uso da palavra. O obstáculo para <strong>você</strong> é o medo do ridículo, a timidez ou a tendência a falar demais sem dizer nada importante. <strong>você</strong> pode sentir que seu talento criativo é bloqueado por autocrítica excessiva.</p>
+    <p>A grande lição para <strong>você</strong> é a alegria autêntica. <strong>você</strong> deve aprender a comunicar a sua verdade com leveza e otimismo. Ao superar a barreira da timidez e da dispersão, <strong>você</strong> se transformará em uma voz poderosa que motiva e cura através do entusiasmo e da criatividade.</p>`,
 
-Este desafio exige coragem para agir e assumir responsabilidades desde cedo. O jovem aprende a lidar com frustrações e a fortalecer a própria vontade. Muitas experiências serão baseadas em tentativa e erro. A iniciativa precisa ser desenvolvida gradualmente. A timidez e a dependência devem ser superadas. 
+    4: `<p>O seu desafio principal é a construção de uma base sólida e o respeito à ordem. O obstáculo constante para <strong>você</strong> é a resistência à disciplina e ao método, ou a sensação de que a vida é um fardo pesado de obrigações. <strong>você</strong> pode lutar contra a rotina por muito tempo.</p>
+    <p>A grande lição para <strong>você</strong> é a paciência e a estabilidade. <strong>você</strong> veio para aprender que a verdadeira liberdade vem da estrutura bem construída. Ao superar a preguiça ou a rigidez mental, <strong>você</strong> se tornará a rocha inabalável da sua família e uma referência de integridade profissional.</p>`,
 
-É importante aprender a agir sem esperar aprovação constante. A confiança no próprio julgamento torna-se essencial. Este desafio ensina liderança interior e determinação. O respeito próprio nasce da ação consciente. A autonomia emocional começa a se formar. Este período prepara a base da identidade pessoal.`,
+    5: `<p>O seu desafio principal é o equilíbrio entre a liberdade e o excesso. O obstáculo recorrente para <strong>você</strong> é a instabilidade emocional e a busca por prazeres sensoriais que a impedem de construir algo duradouro. <strong>você</strong> pode ter medo de se comprometer com metas de longo prazo.</p>
+    <p>A grande lição para <strong>você</strong> é a liberdade com propósito. <strong>você</strong> deve aprender a usar sua versatilidade para evoluir e não apenas para fugir da rotina. Ao dominar sua inquietude, <strong>você</strong> se tornará uma mestre da adaptação, capaz de encontrar oportunidades onde todos veem apenas caos.</p>`,
 
-2:`Desafio 2 — Desenvolver a Autoconfiança
+    6: `<p>O seu desafio principal lida com o idealismo e a responsabilidade social. O obstáculo constante para <strong>você</strong> é o perfeccionismo e a tendência a querer controlar a vida das pessoas que ama "para o bem delas". <strong>você</strong> pode se sentir frustrada quando os outros não seguem seus padrões.</p>
+    <p>A grande lição para <strong>você</strong> é o amor incondicional e a aceitação. <strong>você</strong> deve aprender que cada um tem seu ritmo e que a beleza reside na diversidade. Ao superar a necessidade de ser a dona da verdade, <strong>você</strong> se tornará um exemplo vivo de harmonia, justiça e proteção.</p>`,
 
-Na fase inicial da vida, a sensibilidade é intensa e a autoestima ainda está sendo construída. A pessoa pode sentir insegurança e medo de julgamento. Este desafio exige vencer inibições e fortalecer a confiança interior. Será necessário aprender a confiar nos próprios instintos e habilidades. 
+    7: `<p>O seu desafio principal é o mergulho nas profundezas do ser e da verdade. O obstáculo recorrente para <strong>você</strong> é o medo do desconhecido e a tendência a se isolar do mundo por desconfiança ou frieza emocional. <strong>você</strong> pode lutar contra uma sensação de solidão interior.</p>
+    <p>A grande lição para <strong>você</strong> é a fé e a partilha do conhecimento. <strong>você</strong> deve aprender que a sabedoria só é completa quando serve para iluminar os outros. Ao superar o medo da vulnerabilidade, <strong>você</strong> se tornará uma guia espiritual ou intelectual respeitada pela sua profundidade de alma.</p>`,
 
-Situações surgirão para testar a capacidade emocional. A comparação com outras pessoas pode gerar dúvidas. Por isso, a autovalorização deve ser desenvolvida gradualmente. A pessoa aprende a tomar decisões sem depender da aprovação externa. A timidez deve ser superada com prática e experiência. O equilíbrio emocional torna-se fundamental. Este desafio ensina segurança interior e confiança nas próprias capacidades.`,
+    8: `<p>O seu desafio principal lida com o equilíbrio entre o espiritual e o material. O obstáculo constante para <strong>você</strong> é a relação com o poder e com o dinheiro, podendo oscilar entre a ganância e o total descaso com as finanças. <strong>você</strong> pode enfrentar lutas de poder intensas.</p>
+    <p>A grande lição para <strong>você</strong> é a justiça e a eficiência. <strong>você</strong> veio para aprender a manifestar abundância com integridade. Ao superar o medo do fracasso e a sede de controle, <strong>você</strong> se tornará uma líder poderosa, capaz de gerir recursos que trarão progresso para toda a sociedade.</p>`,
 
-3:`Desafio 3 — Desenvolver a Competência
+    9: `<p>O seu desafio principal é o desapego e o serviço humanitário. O obstáculo recorrente para <strong>você</strong> é a tendência a carregar fardos do passado e a sofrer por problemas que não pode resolver. <strong>você</strong> pode ter dificuldade em dizer adeus a fases ou pessoas que já cumpriram seu papel.</p>
+    <p>A grande lição para <strong>você</strong> é a conclusão e o perdão. <strong>você</strong> deve aprender a amar sem posse e a servir por idealismo. Ao superar a mágoa e o apego, <strong>você</strong> se tornará uma cidadã do mundo, emanando um carisma e uma sabedoria que curam e inspiram a todos ao seu redor.</p>`
+  }
+};
 
-Este desafio aparece durante o período escolar e social. A pessoa aprende a organizar ideias e desenvolver talentos. Surge a necessidade de expressar criatividade e inteligência. O desafio é aprender a concluir o que começa. A dispersão e a procrastinação devem ser controladas. 
 
-A responsabilidade cresce gradualmente. A disciplina começa a ser exigida. A pessoa aprende a lidar com críticas e expectativas. O reconhecimento vem com esforço e dedicação. Este desafio ensina organização, foco e produtividade.`,
+// --- ANO PESSOAL (A ENERGIA DO SEU MOMENTO ATUAL) ---
+  AnoPessoal: {
+    1: `<p>Este é o início de um ciclo de nove anos para <strong>você</strong>. É um período de plantio, de novos começos e de muita coragem. <strong>você</strong> sentirá um impulso renovado para tirar projetos da gaveta, mudar de hábitos ou iniciar uma nova fase na carreira. A energia pede que <strong>você</strong> confie na sua individualidade e tome a iniciativa sem medo.</p>
+    <p>O foco agora deve ser <strong>você</strong> mesma. Não espere pelos outros; este é o ano de ser a pioneira. <strong>você</strong> poderá sentir uma certa solidão, mas ela é necessária para que <strong>você</strong> descubra a sua própria força. É o momento de plantar as sementes que <strong>você</strong> deseja colher nos próximos oito anos, agindo com determinação e foco absoluto.</p>`,
 
-4:`Desafio 4 — Desenvolver a Disciplina
+    2: `<p>Após a agitação do ano anterior, este é um ano de paciência, diplomacia e espera. Para <strong>você</strong>, a palavra de ordem é cooperação. As coisas podem parecer lentas, mas estão se consolidando nos bastidores. É um excelente período para fortalecer parcerias, buscar sociedades ou cuidar da vida afetiva com mais carinho e dedicação.</p>
+    <p><strong>você</strong> deve aprender a arte de ouvir e de mediar. Evite confrontos diretos e busque o equilíbrio. A sua intuição estará muito aguçada, e <strong>você</strong> terá sucesso se souber agir com tato e sensibilidade. É o momento de nutrir o que foi plantado, entendendo que cada semente precisa de tempo e cuidado para brotar com força.</p>`,
 
-Durante a infância e juventude, a disciplina precisa ser construída através de hábitos e rotina. A pessoa deve aprender organização, responsabilidade e constância. O desafio é evitar preguiça, desorganização e falta de foco. A persistência torna-se essencial para alcançar objetivos. O esforço contínuo gera resultados duradouros. A disciplina prepara para a vida adulta. Este desafio constrói estabilidade e responsabilidade.`,
-  
-5:`Desafio 5 — Desenvolver a Responsabilidade
+    3: `<p>Este é o ano da expansão, da criatividade e da vida social para <strong>você</strong>. A energia é de alegria e autoexpressão. <strong>você</strong> sentirá vontade de sair, viajar, conhecer pessoas novas e se comunicar de forma mais aberta. É um período fértil para as artes, para o marketing e para qualquer atividade que envolva o público e o magnetismo pessoal.</p>
+    <p>Aproveite para brilhar e se divertir, mas tome cuidado com a dispersão. <strong>você</strong> pode ter tantas ideias que corre o risco de não finalizar nenhuma. O segredo para <strong>você</strong> neste ano é usar o seu otimismo para atrair oportunidades, mantendo um mínimo de foco para que a sua luz produza resultados concretos e reconhecimento social.</p>`,
 
-Durante a infância e a juventude surge o desejo de liberdade, curiosidade e experimentação. A pessoa sente necessidade de explorar o mundo e viver novas experiências, mas ainda não compreende totalmente as consequências de suas escolhas. Este desafio ensina a equilibrar liberdade e responsabilidade desde cedo. A impulsividade, a ansiedade e o desejo de prazer imediato precisam ser compreendidos e controlados. A criança e o jovem aprendem gradualmente que toda ação gera consequências e que escolhas impensadas podem trazer dificuldades futuras. Será necessário aprender limites, disciplina emocional e compromisso com aquilo que se inicia. 
+    4: `<p>Este é um ano de "pés no chão", trabalho duro e organização para <strong>você</strong>. Após a expansão do ano anterior, a vida exige que <strong>você</strong> coloque ordem na casa. É o momento de focar na saúde, nas finanças e na estrutura da sua carreira. <strong>você</strong> sentirá que as responsabilidades aumentaram, exigindo disciplina e método em cada ação.</p>
+    <p>Não conte com a sorte neste período; conte com o esforço. <strong>você</strong> terá a oportunidade de construir bases sólidas para o seu futuro. É um excelente ano para investir em imóveis, cursos técnicos ou para consolidar projetos de longo prazo. A sua persistência será testada, mas a segurança que <strong>você</strong> construirá agora será inabalável.</p>`,
 
-A pessoa precisa compreender que liberdade verdadeira exige maturidade e autocontrole. Este período ensina a importância de assumir compromissos, respeitar regras e desenvolver estabilidade emocional. Também é necessário aprender a lidar com frustrações sem fugir das responsabilidades. A formação do caráter depende da capacidade de assumir deveres desde cedo. Este desafio prepara a transição para a vida adulta com mais equilíbrio e consciência.`,
+    5: `<p>Prepare-se para um ano de mudanças rápidas, viagens e muita liberdade. Para <strong>você</strong>, este é um período de quebra de rotinas e de busca pelo novo. <strong>você</strong> sentirá uma inquietude que a levará a explorar horizontes diferentes, seja mudando de emprego, de residência ou de filosofia de vida. A versatilidade será a sua maior ferramenta.</p>
+    <p><strong>você</strong> deve estar aberta ao inesperado. Novas pessoas e oportunidades surgirão de onde <strong>você</strong> menos imagina. O desafio é não se perder na impulsividade ou nos excessos sensoriais. Use a sua inteligência para se adaptar às transformações e <strong>você</strong> sairá deste ano com uma visão de mundo muito mais ampla e moderna.</p>`,
 
-6:`Desafio 6 — Desenvolver a Tolerância
+    6: `<p>O foco deste ano para <strong>você</strong> é a família, o lar e as responsabilidades comunitárias. É um período de ajustes afetivos, onde <strong>você</strong> será chamada a ser a conselheira, a protetora e a mediadora de conflitos. A energia favorece o casamento, o nascimento de filhos e a melhoria do conforto doméstico e da estética ao seu redor.</p>
+    <p><strong>você</strong> sentirá uma necessidade maior de harmonia e justiça. Pode haver cobranças por parte de pessoas queridas, exigindo que <strong>você</strong> aprenda a servir com amor, mas sem se anular. É um excelente ano para cuidar da beleza, da saúde emocional e para fortalecer os laços que realmente importam para o seu coração.</p>`,
 
-Desde os primeiros anos de vida surgem as experiências de convivência com família, escola e sociedade. A criança aprende que nem sempre o mundo funciona conforme seus desejos. Este desafio ensina empatia, compreensão e respeito pelas diferenças. 
+    7: `<p>Este é um ano de introspecção, estudo e refinamento espiritual para <strong>você</strong>. A vida a convida a dar um passo atrás da agitação material para buscar respostas dentro de si mesma. É um período excelente para fazer cursos de especialização, escrever, meditar ou se dedicar a hobbies que exijam profundidade intelectual.</p>
+    <p><strong>você</strong> pode se sentir mais reservada e preferir a solidão produtiva ao barulho social. Não force o progresso material agora; o foco é o seu crescimento interior. A sua intuição estará no nível máximo, e <strong>você</strong> terá insights valiosos sobre o seu propósito. É o momento de <strong>você</strong> se tornar uma especialista na sua própria alma.</p>`,
 
-A pessoa pode sentir frustração ao perceber que não pode controlar tudo ao seu redor. Será necessário aprender a ouvir, ceder e conviver de forma harmoniosa com outras pessoas. O excesso de exigência e perfeccionismo deve ser suavizado com compreensão e flexibilidade. 
+    8: `<p>Este é o ano da colheita material, do poder e do reconhecimento para <strong>você</strong>. Após o ano de reflexão anterior, agora é hora de agir com autoridade e foco nos resultados. <strong>você</strong> terá oportunidades de expansão financeira, promoções ou de gerir grandes recursos. A energia é de eficiência, julgamento e justiça.</p>
+    <p><strong>você</strong> deve ser ambiciosa, mas ética. O seu poder de manifestação está muito forte, e o que <strong>você</strong> trabalhou nos últimos anos tende a dar frutos agora. É um excelente momento para lidar com negócios, processos jurídicos e para consolidar o seu status. Aja com autoconfiança e <strong>você</strong> conquistará o topo que almeja.</p>`,
 
-Este período ensina que cada pessoa possui suas próprias ideias e valores. A tolerância começa a se desenvolver através da convivência e da cooperação. A pessoa aprende a respeitar limites e a agir com equilíbrio emocional. Este desafio constrói maturidade afetiva e capacidade de relacionamento saudável. A base da vida social é construída aqui.`,
-
-7:`Desafio 7 — Desenvolver a Confiança Interior
-
-Durante a infância e adolescência surgem medos, inseguranças e dúvidas sobre o próprio valor. A pessoa pode sentir necessidade de se proteger ou se isolar diante de dificuldades. Este desafio ensina a confiar em si mesma e desenvolver autoestima. Situações surgirão para fortalecer a coragem e a segurança emocional. 
-
-Será necessário aprender a lidar com críticas, frustrações e momentos de solidão. A confiança interior cresce com experiências e superação de obstáculos. A pessoa aprende a reconhecer suas qualidades e limitações. O medo deve ser transformado em aprendizado e crescimento. Este período constrói força emocional e autonomia psicológica. A confiança adquirida aqui será essencial na vida adulta.`,
-
-8:`Desafio 8 — Desenvolver o Equilíbrio e os Valores
-
-Na fase inicial da vida surgem os primeiros aprendizados sobre valores, justiça e responsabilidade. A pessoa começa a compreender o valor das conquistas e dos recursos materiais. Este desafio ensina equilíbrio entre desejo e consciência. A criança e o jovem precisam aprender que conquistas exigem esforço e dedicação. O senso de justiça e responsabilidade começa a se formar. 
-
-A pessoa aprende a lidar com recompensas, limites e consequências. É importante desenvolver ética, respeito e equilíbrio emocional. Este período prepara a base para lidar com poder, dinheiro e responsabilidades futuras. A maturidade começa a se consolidar através da compreensão de valores. Este desafio constrói caráter, equilíbrio e senso de justiça.`  
-
+    9: `<p>Este é o ano da limpeza, da conclusão e do desapego para <strong>você</strong>. <strong>você</strong> está encerrando um ciclo de nove anos e precisa abrir espaço para o novo que virá no próximo ano. É o momento de finalizar projetos, perdoar mágoas antigas e se livrar de tudo o que não serve mais, sejam objetos, hábitos ou relacionamentos tóxicos.</p>
+    <p><strong>você</strong> sentirá uma sensibilidade humanitária maior, querendo ajudar os outros e se envolver em causas nobres. É um período de balanço emocional. Não inicie nada de longo prazo agora; prefira concluir o que está pendente. Ao soltar o passado com gratidão, <strong>você</strong> se sentirá leve e pronta para a nova vida que começará em breve.</p>`
   },
 
-2:{
-0:`Desafio 0 — O Desafio da Escolha (Fase Adulta)
+deficiencias:{
+  // --- DEFICIÊNCIAS / LIÇÕES CÁRMICAS (O QUE FALTA APRENDER) ---
+  1: `<p>A ausência desta vibração indica que <strong>você</strong> precisa aprender a ter mais iniciativa e autoconfiança. Em experiências passadas, <strong>você</strong> pode ter se encostado na vontade alheia, e agora a vida exige que <strong>você</strong> tome as rédeas do seu próprio destino sem medo de ser a pioneira.</p>
+    <p>O desafio para <strong>você</strong> é superar a insegurança e a procrastinação. <strong>você</strong> deve treinar a sua capacidade de decisão individual e aprender que a sua opinião tem valor. Ao integrar esta lição, <strong>você</strong> descobrirá uma força de liderança que antes parecia adormecida, tornando-se uma pessoa muito mais independente e decidida.</p>`,
 
-Na fase adulta, o desafio da escolha ganha um peso ainda maior. A vida já apresenta caminhos definidos, responsabilidades assumidas e consequências reais para cada decisão. Este período exige maturidade para escolher com consciência e responsabilidade. 
+  2: `<p>Esta lição indica que <strong>você</strong> precisa desenvolver o tato, a diplomacia e a paciência. No passado, <strong>você</strong> pode ter agido de forma impaciente ou egocêntrica, e agora a vida a convida a entender o valor das parcerias e da colaboração mútua, agindo com mais suavidade nas relações.</p>
+    <p><strong>você</strong> será testada em situações que exigem espera e atenção aos detalhes. O aprendizado para <strong>você</strong> é saber ouvir e cooperar sem querer o protagonismo o tempo todo. Ao dominar esta deficiência, <strong>você</strong> se tornará uma mediadora brilhante, capaz de criar harmonia onde antes só havia conflito e incompreensão.</p>`,
 
-A pessoa aprende que cada escolha molda diretamente o futuro. Surge a necessidade de alinhar decisões com valores pessoais. O desafio é manter foco, direção e coerência de propósito. 
+  3: `<p>A falta desta energia sugere que <strong>você</strong> precisa aprender a se expressar e a expandir a sua criatividade sem medo do julgamento. No passado, <strong>você</strong> pode ter reprimido suas palavras ou talentos, e agora a vida pede que <strong>você</strong> seja mais otimista, social e comunicativa.</p>
+    <p><strong>você</strong> deve evitar o isolamento e a timidez excessiva. A lição para <strong>você</strong> é encontrar alegria nas pequenas coisas e compartilhar o seu brilho com o mundo. Ao superar este bloqueio, <strong>você</strong> descobrirá que a sua fala e o seu entusiasmo são ferramentas magnéticas que abrem portas e inspiram a felicidade nas pessoas ao seu redor.</p>`,
 
-A indecisão pode gerar estagnação e frustração. A maturidade exige assumir consequências com coragem. Este período fortalece autonomia, clareza e responsabilidade nas escolhas.`,
-  
- 1:`Desafio 1 — Desenvolver a Iniciativa (Fase Adulta)
+  4: `<p>Esta lição cármica indica que <strong>você</strong> precisa aprender o valor da disciplina, do trabalho árduo e da organização material. Talvez em outras vivências <strong>você</strong> tenha evitado responsabilidades práticas, e agora a vida exige que <strong>você</strong> construa suas bases com método e persistência.</p>
+    <p><strong>você</strong> sentirá que as coisas exigem mais esforço para acontecer, e isso é um convite para <strong>você</strong> não desistir no meio do caminho. O aprendizado foca na paciência e no respeito às regras. Ao integrar esta força, <strong>você</strong> se tornará uma pessoa extremamente sólida, capaz de manifestar segurança e estabilidade duradoura.</p>`,
 
-Na fase adulta a vida exige decisões concretas, independência e posicionamento firme diante das circunstâncias. Este desafio marca o momento em que a pessoa deixa definitivamente a dependência emocional do passado e passa a assumir o controle da própria vida. As escolhas tornam-se mais sérias e as consequências mais visíveis. 
+  5: `<p>A ausência do 5 indica que <strong>você</strong> precisa aprender a lidar com as mudanças e a valorizar a liberdade com inteligência. No passado, <strong>você</strong> pode ter sido uma pessoa muito rígida ou medrosa diante do novo, e agora a vida a empurra para experiências que exigem versatilidade e adaptação.</p>
+    <p><strong>você</strong> deve aprender a não se prender excessivamente a rotinas sufocantes. A lição para <strong>você</strong> é entender que a mudança é a única constante e que a curiosidade é um combustível para a alma. Ao superar este medo, <strong>você</strong> se tornará uma pessoa desimpedida, cosmopolita e pronta para aproveitar as aventuras da vida.</p>`,
 
-Será necessário agir com coragem, assumir responsabilidades e confiar no próprio julgamento. Situações surgirão exigindo liderança, iniciativa e capacidade de decisão. A pessoa aprenderá que não pode esperar aprovação constante dos outros para agir. O medo de errar deve ser substituído pela coragem de tentar. Este período exige autonomia, autoconfiança e atitude prática. 
+  6: `<p>Esta deficiência aponta para a necessidade de aprender sobre responsabilidade afetiva, dever familiar e serviço amoroso. No passado, <strong>você</strong> pode ter negligenciado laços domésticos, e agora a vida a coloca em situações onde cuidar dos outros e manter a harmonia é essencial.</p>
+    <p><strong>você</strong> precisa aprender a ser mais compreensiva e a assumir o seu papel de equilibradora no lar. A lição para <strong>você</strong> é a do amor incondicional sem cobranças de gratidão. Ao integrar esta vibração, <strong>você</strong> se tornará um pilar de afeto e justiça, sendo profundamente respeitada e amada por todos no seu círculo social.</p>`,
 
-A vida pede ação, movimento e coragem para iniciar novos projetos. O crescimento depende da capacidade de assumir riscos calculados. Este desafio fortalece identidade, liderança e independência.`,
+  7: `<p>A lição do 7 indica que <strong>você</strong> precisa desenvolver a fé, o autoconhecimento e a análise profunda da vida. No passado, <strong>você</strong> pode ter sido excessivamente materialista ou superficial, e agora a vida a convida a buscar respostas que não estão na superfície, agindo com mais espiritualidade.</p>
+    <p><strong>você</strong> deve aprender a confiar na sua intuição e a buscar momentos de silêncio e estudo. O aprendizado para <strong>você</strong> é não aceitar tudo de forma literal, mas investigar a verdade das coisas. Ao superar esta lacuna, <strong>você</strong> se tornará uma pessoa de sabedoria superior, reconhecida pela sua profundidade de pensamento.</p>`,
 
-2:`Desafio 2 — Desenvolver a Autoconfiança (Fase Adulta)
+  8: `<p>Esta lição cármica lida com o poder material, o dinheiro e a capacidade executiva. No passado, <strong>você</strong> pode ter tido má gestão financeira ou medo de assumir autoridade, e agora a vida exige que <strong>você</strong> aprenda a lidar com as leis do sucesso com ética e pragmatismo.</p>
+    <p><strong>você</strong> deve superar o medo do fracasso e aprender a organizar grandes recursos. A lição para <strong>você</strong> é a de que o poder deve ser usado com justiça e eficiência. Ao dominar este aprendizado, <strong>você</strong> terá a capacidade de realizar grandes obras e de garantir a sua prosperidade e a de muitos outros através da sua liderança.</p>`,
 
-Durante a vida adulta surgem pressões sociais, profissionais e emocionais que testam a autoconfiança. A pessoa é desafiada a confiar em sua capacidade de decisão e julgamento. 
+  9: `<p>A falta do 9 indica que <strong>você</strong> precisa aprender sobre compaixão universal, desapego e finalização de ciclos. No passado, <strong>você</strong> pode ter sido uma pessoa muito voltada para o próprio ego, e agora a vida a convida a olhar para as dores do mundo e a agir com mais generosidade e altruísmo.</p>
+    <p><strong>você</strong> deve aprender a perdoar e a deixar ir o que já não serve mais. O aprendizado para <strong>você</strong> é o de que a verdadeira grandeza reside na entrega e no serviço à humanidade. Ao integrar esta lição, <strong>você</strong> se tornará uma alma carismática e inspiradora, capaz de amar sem fronteiras e de concluir sua jornada com plenitude.</p>`
 
-Será necessário aprender a manter segurança emocional mesmo diante de críticas ou oposição. Este período exige equilíbrio entre sensibilidade e firmeza. 
+};
 
-A pessoa aprende a confiar em suas competências e habilidades adquiridas ao longo da vida. Relações profissionais e pessoais exigirão diplomacia e maturidade emocional. O desafio é agir com segurança sem perder a empatia. 
+deficiencias:{
+  // --- DEFICIÊNCIAS / LIÇÕES CÁRMICAS (O QUE FALTA APRENDER) ---
+  1: `<p>A ausência desta vibração indica que <strong>você</strong> precisa aprender a ter mais iniciativa e autoconfiança. Em experiências passadas, <strong>você</strong> pode ter se encostado na vontade alheia, e agora a vida exige que <strong>você</strong> tome as rédeas do seu próprio destino sem medo de ser a pioneira.</p>
+    <p>O desafio para <strong>você</strong> é superar a insegurança e a procrastinação. <strong>você</strong> deve treinar a sua capacidade de decisão individual e aprender que a sua opinião tem valor. Ao integrar esta lição, <strong>você</strong> descobrirá uma força de liderança que antes parecia adormecida, tornando-se uma pessoa muito mais independente e decidida.</p>`,
 
-A confiança passa a ser construída através das experiências e conquistas. A insegurança deve ser transformada em aprendizado. Este período fortalece autoestima, estabilidade emocional e confiança nas próprias escolhas.`,
+  2: `<p>Esta lição indica que <strong>você</strong> precisa desenvolver o tato, a diplomacia e a paciência. No passado, <strong>você</strong> pode ter agido de forma impaciente ou egocêntrica, e agora a vida a convida a entender o valor das parcerias e da colaboração mútua, agindo com mais suavidade nas relações.</p>
+    <p><strong>você</strong> será testada em situações que exigem espera e atenção aos detalhes. O aprendizado para <strong>você</strong> é saber ouvir e cooperar sem querer o protagonismo o tempo todo. Ao dominar esta deficiência, <strong>você</strong> se tornará uma mediadora brilhante, capaz de criar harmonia onde antes só havia conflito e incompreensão.</p>`,
 
-3:`Desafio 3 — Desenvolver a Competência (Fase Adulta)
+  3: `<p>A falta desta energia sugere que <strong>você</strong> precisa aprender a se expressar e a expandir a sua criatividade sem medo do julgamento. No passado, <strong>você</strong> pode ter reprimido suas palavras ou talentos, e agora a vida pede que <strong>você</strong> seja mais otimista, social e comunicativa.</p>
+    <p><strong>você</strong> deve evitar o isolamento e a timidez excessiva. A lição para <strong>você</strong> é encontrar alegria nas pequenas coisas e compartilhar o seu brilho com o mundo. Ao superar este bloqueio, <strong>você</strong> descobrirá que a sua fala e o seu entusiasmo são ferramentas magnéticas que abrem portas e inspiram a felicidade nas pessoas ao seu redor.</p>`,
 
-A vida adulta exige produtividade, responsabilidade e eficiência. Este desafio ensina a organizar talentos e direcionar energia para objetivos concretos. A pessoa aprende a valorizar suas habilidades e a utilizá-las de forma prática. 
+  4: `<p>Esta lição cármica indica que <strong>você</strong> precisa aprender o valor da disciplina, do trabalho árduo e da organização material. Talvez em outras vivências <strong>você</strong> tenha evitado responsabilidades práticas, e agora a vida exige que <strong>você</strong> construa suas bases com método e persistência.</p>
+    <p><strong>você</strong> sentirá que as coisas exigem mais esforço para acontecer, e isso é um convite para <strong>você</strong> não desistir no meio do caminho. O aprendizado foca na paciência e no respeito às regras. Ao integrar esta força, <strong>você</strong> se tornará uma pessoa extremamente sólida, capaz de manifestar segurança e estabilidade duradoura.</p>`,
 
-O excesso de autocrítica pode gerar insegurança e bloqueios. Será necessário desenvolver disciplina mental e foco. O desafio pede equilíbrio entre responsabilidade e leveza emocional. 
+  5: `<p>A ausência do 5 indica que <strong>você</strong> precisa aprender a lidar com as mudanças e a valorizar a liberdade com inteligência. No passado, <strong>você</strong> pode ter sido uma pessoa muito rígida ou medrosa diante do novo, e agora a vida a empurra para experiências que exigem versatilidade e adaptação.</p>
+    <p><strong>você</strong> deve aprender a não se prender excessivamente a rotinas sufocantes. A lição para <strong>você</strong> é entender que a mudança é a única constante e que a curiosidade é um combustível para a alma. Ao superar este medo, <strong>você</strong> se tornará uma pessoa desimpedida, cosmopolita e pronta para aproveitar as aventuras da vida.</p>`,
 
-A pessoa deve aprender a administrar tempo, energia e prioridades. 
+  6: `<p>Esta deficiência aponta para a necessidade de aprender sobre responsabilidade afetiva, dever familiar e serviço amoroso. No passado, <strong>você</strong> pode ter negligenciado laços domésticos, e agora a vida a coloca em situações onde cuidar dos outros e manter a harmonia é essencial.</p>
+    <p><strong>você</strong> precisa aprender a ser mais compreensiva e a assumir o seu papel de equilibradora no lar. A lição para <strong>você</strong> é a do amor incondicional sem cobranças de gratidão. Ao integrar esta vibração, <strong>você</strong> se tornará um pilar de afeto e justiça, sendo profundamente respeitada e amada por todos no seu círculo social.</p>`,
 
-A maturidade profissional cresce através da experiência. Este período exige organização, planejamento e constância. A competência se desenvolve com prática e dedicação contínua. Este desafio fortalece eficiência, responsabilidade e realização profissional.`,
+  7: `<p>A lição do 7 indica que <strong>você</strong> precisa desenvolver a fé, o autoconhecimento e a análise profunda da vida. No passado, <strong>você</strong> pode ter sido excessivamente materialista ou superficial, e agora a vida a convida a buscar respostas que não estão na superfície, agindo com mais espiritualidade.</p>
+    <p><strong>você</strong> deve aprender a confiar na sua intuição e a buscar momentos de silêncio e estudo. O aprendizado para <strong>você</strong> é não aceitar tudo de forma literal, mas investigar a verdade das coisas. Ao superar esta lacuna, <strong>você</strong> se tornará uma pessoa de sabedoria superior, reconhecida pela sua profundidade de pensamento.</p>`,
 
-4:`Desafio 4 — Desenvolver a Disciplina (Fase Adulta)
+  8: `<p>Esta lição cármica lida com o poder material, o dinheiro e a capacidade executiva. No passado, <strong>você</strong> pode ter tido má gestão financeira ou medo de assumir autoridade, e agora a vida exige que <strong>você</strong> aprenda a lidar com as leis do sucesso com ética e pragmatismo.</p>
+    <p><strong>você</strong> deve superar o medo do fracasso e aprender a organizar grandes recursos. A lição para <strong>você</strong> é a de que o poder deve ser usado com justiça e eficiência. Ao dominar este aprendizado, <strong>você</strong> terá a capacidade de realizar grandes obras e de garantir a sua prosperidade e a de muitos outros através da sua liderança.</p>`,
 
-A fase adulta exige estrutura, organização e compromisso com objetivos de longo prazo. Este desafio representa a construção de estabilidade material e profissional. A pessoa aprende a valorizar planejamento, constância e esforço contínuo. 
-
-A vida pede responsabilidade, foco e persistência. A procrastinação e a dispersão devem ser superadas. Será necessário criar rotinas produtivas e manter consistência nas ações. O crescimento acontece através do trabalho disciplinado. Este período exige perseverança e visão prática da realidade. 
-
-A disciplina torna-se a base das conquistas futuras. Este desafio constrói segurança, estabilidade e realização duradoura.`,
-  
-5:`Desafio 5 — Desenvolver a Responsabilidade (Fase Adulta)
-
-Na fase adulta a liberdade precisa caminhar junto com responsabilidade. Este desafio ensina a equilibrar desejos pessoais com compromissos assumidos. A pessoa aprende que decisões impulsivas podem gerar consequências duradouras. A vida exige maturidade emocional e estabilidade nas escolhas. Será necessário aprender a administrar mudanças com prudência. 
-
-O desafio pede controle da impulsividade e equilíbrio emocional. Relacionamentos e carreira exigirão compromisso e constância. A pessoa aprende a construir bases sólidas para o futuro. A liberdade deixa de ser fuga e passa a ser escolha consciente. Este período fortalece maturidade, equilíbrio e responsabilidade nas decisões.`,
-
-6:`Desafio 6 — Desenvolver a Tolerância (Fase Adulta)
-
-A vida adulta traz convivência intensa com pessoas diferentes, exigindo compreensão e empatia. Este desafio ensina a respeitar opiniões, limites e diferenças. A pessoa aprende que não possui todas as respostas. Será necessário desenvolver flexibilidade emocional e maturidade nas relações. 
-
-O perfeccionismo e a rigidez devem ser transformados em compreensão. Este período pede equilíbrio entre idealismo e realidade. Relações familiares e profissionais exigirão cooperação. O desafio é agir com empatia sem perder identidade. A tolerância torna-se essencial para a harmonia emocional. Este período fortalece compreensão, empatia e maturidade nas relações.`,
-
-7:`Desafio 7 — Desenvolver a Confiança (Fase Adulta)
-
-Na vida adulta surgem situações que testam fé, coragem e autoconhecimento. Este desafio ensina a confiar em si mesmo e na vida. A pessoa aprende a superar medos e inseguranças acumuladas. Será necessário enfrentar dúvidas e incertezas com maturidade. 
-
-A introspecção torna-se ferramenta de crescimento pessoal. Este período exige equilíbrio entre razão e intuição. A pessoa aprende a pedir ajuda e aceitar apoio. A confiança se fortalece através das experiências vividas. O desafio é transformar medo em sabedoria. Este período fortalece autoconhecimento, confiança e maturidade emocional.`,
-
-8:`Desafio 8 — Desenvolver a Modéstia (Fase Adulta)
-
-Este desafio ensina a lidar com poder, dinheiro e conquistas com equilíbrio. A pessoa aprende a usar recursos de forma ética e responsável. O sucesso deve ser acompanhado de humildade e consciência. Será necessário evitar orgulho excessivo e materialismo. O desafio pede equilíbrio entre ambição e valores humanos. 
-
-A pessoa aprende a compartilhar conquistas e valorizar parcerias. O poder deve ser usado com sabedoria e justiça. Este período fortalece ética, equilíbrio e responsabilidade social. A verdadeira realização surge quando o sucesso beneficia também outras pessoas.`  
-  },
-
-3:{
-0:`Desafio 0 — O Desafio da Escolha (Fase Final da Vida)
-
-Na fase final da vida, o desafio da escolha assume um significado mais profundo e reflexivo. A pessoa passa a compreender que todas as decisões tomadas ao longo da existência construíram a realidade presente. Surge a necessidade de avaliar o caminho percorrido com honestidade e maturidade. Este período convida à sabedoria, ao desapego e à aceitação das próprias escolhas. É o momento de compreender que cada experiência teve um propósito no desenvolvimento pessoal. 
-
-A reflexão torna-se ferramenta essencial para encontrar paz interior. O desafio consiste em aceitar erros, valorizar acertos e compreender a própria história. A vida pede serenidade, compreensão e equilíbrio emocional. Surge a oportunidade de fortalecer o caráter e a consciência espiritual. 
-
-A pessoa aprende a escolher com base na sabedoria acumulada. O foco deixa de ser conquista e passa a ser significado. A clareza de valores torna-se prioridade. A aceitação substitui a ansiedade. O perdão torna-se libertador. A escolha consciente conduz à paz e à plenitude interior.`,
-
-1:`Desafio 1 — Desenvolver a Iniciativa (Fase Final da Vida)
-
-Neste período, o desafio da iniciativa assume um caráter de autonomia emocional e espiritual. A pessoa aprende a confiar plenamente em si mesma e em sua trajetória. Surge a necessidade de reafirmar a própria identidade com maturidade. 
-
-A independência torna-se interna e emocional. O desafio é manter coragem para continuar evoluindo e tomando decisões conscientes. A pessoa aprende que nunca é tarde para agir. Este período exige determinação para concluir projetos e resolver pendências. A autoconfiança deve ser mantida mesmo diante das limitações naturais da idade. O aprendizado consiste em agir com sabedoria e segurança. 
-
-A vida pede decisões firmes e coerentes com os próprios valores. Surge a necessidade de fortalecer a autoestima. O passado deixa de ser peso e torna-se aprendizado. A coragem transforma arrependimentos em crescimento. O objetivo é manter autonomia emocional. A iniciativa torna-se símbolo de liberdade interior.`,
-
-2:`Desafio 2 — Desenvolver a Autoconfiança (Fase Final da Vida)
-
-Na maturidade avançada, o desafio da autoconfiança torna-se essencial para manter a serenidade. A pessoa aprende a confiar em sua experiência e sabedoria acumuladas. Surge a necessidade de abandonar inseguranças e comparações. O desafio é reconhecer o próprio valor independentemente de reconhecimento externo. 
-
-A vida pede tranquilidade emocional e equilíbrio interior. A confiança deve vir da consciência de tudo o que foi vivido. Este período favorece a aceitação de si mesmo. A pessoa aprende a valorizar suas conquistas e aprendizados. 
-
-A insegurança dá lugar à sabedoria. O objetivo é fortalecer a paz interior. A maturidade traz clareza e discernimento. Surge a capacidade de confiar no próprio julgamento. A experiência torna-se fonte de segurança. A serenidade substitui a ansiedade. A autoconfiança torna-se base para viver com dignidade e equilíbrio.`,
-
-3:`Desafio 3 — Desenvolver a Competência (Fase Final da Vida)
-
-Neste período, a competência assume a forma de sabedoria prática e emocional. A pessoa aprende a utilizar sua experiência para orientar e inspirar outras pessoas. O desafio é valorizar a própria trajetória e reconhecer suas habilidades. Surge a necessidade de compartilhar conhecimento e aprendizados. A maturidade pede organização emocional e clareza mental. O objetivo é manter a mente ativa e produtiva. 
-
-A pessoa aprende a expressar ideias com segurança e serenidade. A experiência torna-se ferramenta de contribuição social. O desafio é evitar autocrítica excessiva e valorizar conquistas. A vida pede equilíbrio entre ação e reflexão. A competência torna-se legado. Surge o desejo de contribuir com o coletivo. 
-
-A sabedoria substitui a necessidade de aprovação. O aprendizado transforma-se em orientação para outros. A realização surge ao compartilhar conhecimento e experiência.`,
-
-4:`Desafio 4 — Desenvolver a Disciplina (Fase Final da Vida)
-
-Na fase final da vida, a disciplina torna-se sinônimo de equilíbrio e constância. A pessoa aprende a organizar sua vida com serenidade e propósito. Surge a necessidade de manter hábitos saudáveis e rotina equilibrada. O desafio é preservar a estabilidade emocional e mental. 
-
-A disciplina torna-se ferramenta de qualidade de vida. A maturidade exige responsabilidade consigo mesmo. O foco passa a ser bem-estar e harmonia. A pessoa aprende a valorizar o tempo de forma consciente. A organização traz tranquilidade e segurança. O objetivo é manter equilíbrio físico, mental e emocional. 
-
-A disciplina fortalece a autonomia e a independência. Surge a necessidade de simplificar a vida. O essencial ganha mais importância que o urgente. A constância gera estabilidade e paz interior. A disciplina torna-se base para uma vida serena e equilibrada.`,
-
-5:`Desafio 5 — Desenvolver a Responsabilidade (Fase Final da Vida)
-
-Neste período da vida, o desafio da responsabilidade ganha um significado mais profundo e consciente. A pessoa compreende que todas as experiências vividas exigem agora maturidade emocional para serem integradas com equilíbrio. Surge a necessidade de assumir plenamente as consequências das escolhas feitas ao longo da jornada. 
-
-O desafio é manter estabilidade emocional e agir com prudência diante das mudanças naturais da vida. A liberdade passa a ser vivida com responsabilidade e serenidade. É o momento de valorizar segurança, estabilidade e equilíbrio nas decisões. A pessoa aprende a lidar com mudanças sem impulsividade. A maturidade convida ao autocontrole e à reflexão antes de agir. O passado deixa de ser peso e torna-se aprendizado. 
-
-O objetivo é viver com consciência e responsabilidade emocional. Surge a necessidade de preservar relações importantes e manter harmonia. A estabilidade torna-se prioridade. A responsabilidade fortalece a segurança interior. O equilíbrio substitui a impulsividade. A vida pede prudência, maturidade e sabedoria.`,
-
-6:`Desafio 6 — Desenvolver a Tolerância (Fase Final da Vida)
-
-Na fase final da vida, o desafio da tolerância torna-se essencial para a paz interior. A pessoa aprende a aceitar diferenças e compreender as imperfeições humanas. Surge a necessidade de abandonar julgamentos rígidos e expectativas irreais. 
-
-O desafio é cultivar empatia e compreensão nas relações. A maturidade ensina que cada pessoa possui sua própria jornada. O objetivo é viver com mais leveza e aceitação. A tolerância fortalece vínculos e evita conflitos desnecessários. A pessoa aprende a valorizar o amor e a harmonia familiar. 
-
-O perdão torna-se ferramenta de libertação emocional. A vida pede compreensão e generosidade. Surge a necessidade de enxergar o mundo com mais compaixão. 
-
-O equilíbrio emocional substitui a crítica excessiva. A tolerância traz serenidade e paz interior. O aprendizado transforma-se em sabedoria emocional. A vida torna-se mais leve quando existe compreensão.`,
-
-7:`Desafio 7 — Desenvolver a Confiança (Fase Final da Vida)
-
-Este período traz o desafio de confiar na própria jornada e nos aprendizados adquiridos. A pessoa aprende a superar medos e inseguranças acumulados ao longo da vida. Surge a necessidade de fortalecer a fé em si mesma e na vida. 
-
-O desafio é abandonar o ceticismo e cultivar confiança interior. A maturidade convida à reflexão e ao autoconhecimento. A pessoa aprende a valorizar silêncio, introspecção e espiritualidade. 
-
-O objetivo é encontrar paz interior e significado. A confiança torna-se base para viver com serenidade. Surge a necessidade de aceitar o fluxo natural da vida. O autoconhecimento traz segurança emocional. 
-
-A sabedoria substitui a dúvida constante. A pessoa aprende a confiar na própria intuição. O passado transforma-se em fonte de aprendizado. A confiança interior fortalece a estabilidade emocional. A vida pede serenidade, fé e aceitação.`,
-
-8:`Desafio 8 — Desenvolver a Modéstia (Fase Final da Vida)
-
-Na maturidade, o desafio da modéstia convida à reflexão sobre o verdadeiro valor das conquistas. A pessoa aprende a enxergar poder e recursos com equilíbrio e sabedoria. Surge a necessidade de utilizar experiência e conhecimento para beneficiar outras pessoas. 
-
-O desafio é abandonar orgulho excessivo e cultivar humildade. A vida pede simplicidade e gratidão. A maturidade ensina que reconhecimento verdadeiro vem da contribuição ao coletivo. 
-
-O objetivo é valorizar o legado construído. A pessoa aprende a compartilhar conhecimento e experiências. O sucesso passa a ser medido pela contribuição humana. Surge a necessidade de agir com justiça e generosidade. A modéstia fortalece relações e traz equilíbrio emocional. 
-
-O poder torna-se ferramenta de auxílio e orientação. A sabedoria substitui a ambição excessiva. A vida pede equilíbrio, dignidade e generosidade. A modéstia conduz à realização e à paz interior.`
-}
-},
-
-anoPessoal:{
-1:`ANO PESSOAL 1 — INÍCIO DE CICLO, AÇÃO E RENOVAÇÃO
-
-Este é o ano que marca o início de um novo ciclo de nove anos. A energia da renovação se torna evidente e tudo começa a se reorganizar para um novo direcionamento de vida. Este período estabelece as bases de tudo aquilo que será construído nos próximos anos, portanto cada decisão tomada agora terá impacto direto no futuro. É o momento de agir, iniciar projetos e assumir o protagonismo da própria história. A vida pede coragem, independência e determinação.
-
-Surge uma necessidade natural de mudança, de romper com padrões antigos e iniciar caminhos diferentes. Este é o momento ideal para começar projetos, mudar hábitos, assumir novas responsabilidades e tomar decisões importantes. A energia favorece atitudes ousadas e independentes. A iniciativa será recompensada. A passividade será penalizada.
-
-Este ano exige autoconfiança e força de vontade. Muitas situações testarão sua coragem e sua capacidade de agir sozinho. O universo impulsiona a autonomia, a liderança e a iniciativa pessoal. O aprendizado principal deste período é descobrir quem você é e qual caminho deseja seguir.
-
-Evite procrastinação, insegurança e medo de errar. A falta de iniciativa pode atrasar todo o ciclo de nove anos. Este é um período de plantio. Tudo o que for iniciado agora tende a crescer e se desenvolver com o tempo.
-
-Novas oportunidades surgirão inesperadamente. Mudanças profissionais, pessoais ou emocionais podem ocorrer. Confie na sua intuição. Desenvolva sua identidade, fortaleça sua individualidade e estabeleça metas claras.
-
-Este é o ano da ação, da coragem e da construção do futuro. Coloque-se em movimento e inicie a nova fase da sua vida.`,
-
-2:`ANO PESSOAL 2 — PACIÊNCIA, RELAÇÕES E PREPARAÇÃO
-
-Após o impulso do ano 1, o ano 2 traz um ritmo mais lento e sensível. Este período pede paciência, cooperação e equilíbrio emocional. Em vez de agir impulsivamente, será necessário observar, esperar e desenvolver relações. Este é um ano de preparação e amadurecimento emocional.
-
-As oportunidades surgem através de parcerias, amizades e relacionamentos. A diplomacia será essencial. O crescimento ocorre nos bastidores. Muitas situações exigirão sensibilidade e compreensão. Este é um período de aprendizado emocional profundo.
-
-A vida pede calma e paciência. Forçar acontecimentos pode gerar frustrações. O progresso ocorre de forma gradual e silenciosa. Este é o momento de fortalecer vínculos e cultivar alianças importantes.
-
-Pode haver maior sensibilidade emocional. A necessidade de afeto e compreensão aumenta. Evite conflitos desnecessários e aprenda a ouvir mais do que falar.
-
-Este é o ano em que passado, presente e futuro começam a se conectar. O aprendizado obtido agora será essencial para os próximos anos do ciclo.
-
-A cooperação trará oportunidades futuras. A paciência será recompensada. O crescimento acontece lentamente, mas com segurança.`,
-
-3:`ANO PESSOAL 3 — EXPANSÃO, CRIATIVIDADE E SOCIALIZAÇÃO
-
-Este é um ano de expansão, alegria e expressão pessoal. A energia favorece comunicação, criatividade e vida social. Surge uma forte necessidade de viver experiências novas, desenvolver talentos e ampliar horizontes.
-
-A vida se torna mais dinâmica e cheia de oportunidades. Este é um período favorável para estudos, viagens, projetos criativos e novas amizades. O carisma aumenta e a comunicação se torna mais fácil.
-
-A criatividade deve ser usada de forma produtiva. Evite dispersão e superficialidade. A energia deste ano pode gerar excesso de entusiasmo e impulsividade.
-
-Este é um período de crescimento pessoal e expansão social. O sucesso vem através da comunicação e da expressão.
-
-Relacionamentos podem ganhar destaque. Novas conexões surgem com facilidade. Aproveite a fase, mas mantenha equilíbrio.
-
-A felicidade cresce quando você permite que sua criatividade se manifeste. Este é um ano leve, positivo e cheio de oportunidades.`,
-
-4:`ANO PESSOAL 4 — TRABALHO, ESTRUTURA E CONSTRUÇÃO
-
-Este é um ano de esforço, disciplina e organização. Após a expansão do ano 3, surge a necessidade de estruturar e consolidar conquistas. Este período exige foco, planejamento e responsabilidade.
-
-O progresso ocorre através do trabalho constante e da dedicação. Este é um ano de construção de bases sólidas para o futuro. O crescimento pode parecer lento, mas será consistente.
-
-A vida pede organização financeira, planejamento profissional e estabilidade emocional. É o momento de estabelecer prioridades e eliminar distrações.
-
-A disciplina será essencial. Evite atalhos ou soluções fáceis. O sucesso virá através da persistência.
-
-Este ano traz maturidade, responsabilidade e estabilidade. A construção do futuro acontece agora.`,
-
-5:`ANO PESSOAL 5 — MUDANÇAS, LIBERDADE E TRANSFORMAÇÃO
-
-Este é o ano mais dinâmico do ciclo. Mudanças inesperadas podem acontecer em várias áreas da vida. A energia favorece movimento, liberdade e transformação.
-
-A rotina tende a ser quebrada. Novas oportunidades surgem rapidamente. Este é um período de adaptação e crescimento através da experiência.
-
-A liberdade aumenta, mas exige responsabilidade. Evite impulsividade e decisões precipitadas.
-
-Este é o momento de rever metas e ajustar o caminho. A vida pede flexibilidade e coragem para mudar.
-
-Mudanças podem abrir portas importantes. O crescimento ocorre fora da zona de conforto.
-
-Este é um ano de transformação profunda e expansão pessoal.`,
-
-6:`ANO PESSOAL 6 — RESPONSABILIDADES, AMOR E EQUILÍBRIO
-
-Este é um dos anos mais importantes emocionalmente dentro do ciclo de nove anos. A vibração 6 está profundamente ligada ao amor, à família, às responsabilidades e aos vínculos afetivos. Durante este período, os relacionamentos ganham destaque e passam a ocupar posição central em sua vida. Surge uma forte necessidade de equilíbrio emocional, estabilidade e compromisso.
-
-Muitas decisões importantes envolvendo família, casa, casamento ou relacionamentos tendem a acontecer. Este é um ano de compromisso e responsabilidade afetiva. A vida pede maturidade emocional, cuidado com os outros e dedicação às pessoas próximas. É comum sentir necessidade de cuidar, proteger ou apoiar alguém.
-
-Você pode ser chamado a assumir responsabilidades que antes evitava. Este é um período de amadurecimento emocional e crescimento através do amor e das relações. O aprendizado principal deste ano está ligado ao equilíbrio entre suas necessidades e as necessidades das pessoas ao seu redor.
-
-A harmonia será fundamental para o sucesso deste período. Conflitos familiares ou emocionais podem surgir para ensinar sobre empatia, compreensão e responsabilidade. Este é um ano de decisões importantes que podem impactar o futuro afetivo.
-
-Também é um período favorável para casamento, formação de família, mudança de residência ou fortalecimento de vínculos importantes. A vida pede estabilidade, compromisso e responsabilidade.
-
-O desafio será evitar cobranças excessivas, idealizações e expectativas irreais sobre os outros. Aprenda a amar com maturidade e equilíbrio. Este é o ano de construir segurança emocional e afetiva.`,
-
-7:`ANO PESSOAL 7 — INTROSPECÇÃO, ESPIRITUALIDADE E AUTOCONHECIMENTO
-
-Este é o ano mais introspectivo de todo o ciclo. Após anos de ação e responsabilidade, chega o momento de pausa, reflexão e autoconhecimento. A vida desacelera para permitir crescimento interior.
-
-A vibração 7 favorece estudos, espiritualidade, análise e busca por sentido. Surge uma forte necessidade de isolamento, silêncio e reflexão. Este é um período de crescimento interior profundo.
-
-O foco deixa de ser o mundo exterior e passa a ser o mundo interior. A intuição se fortalece. O autoconhecimento se torna essencial. Este é o momento de compreender a própria vida e reavaliar objetivos.
-
-Pode ser um ano de afastamento social, mudanças internas e questionamentos existenciais. Muitas respostas surgirão através da introspecção.
-
-Evite decisões impulsivas ou mudanças radicais. Este é um ano de preparação interna. O crescimento ocorre de dentro para fora.
-
-O aprendizado principal é confiar na intuição e desenvolver sabedoria interior. Este período prepara o terreno para grandes conquistas futuras.`,
-
-8:`ANO PESSOAL 8 — REALIZAÇÃO, PODER E RESULTADOS
-
-Este é o ano das conquistas materiais e da realização profissional. A vibração 8 representa poder, prosperidade, reconhecimento e recompensas pelos esforços dos anos anteriores.
-
-Tudo o que foi plantado nos anos anteriores começa a gerar resultados concretos. Este é um período de crescimento financeiro, profissional e material. O foco está em conquistas, liderança e realização.
-
-O sucesso dependerá de disciplina, organização e responsabilidade. Grandes oportunidades podem surgir. Este é um ano de expansão financeira e profissional.
-
-A vida pede ambição equilibrada com ética. O poder deve ser usado com sabedoria. Este é um período de colheita e realização.
-
-O aprendizado principal é lidar com poder, dinheiro e sucesso de forma equilibrada. Este é o ano da prosperidade e das recompensas.`,
-
-9:`ANO PESSOAL 9 — FINALIZAÇÕES, DESAPEGO E TRANSFORMAÇÃO
-
-Este é o último ano do ciclo de nove anos. Representa encerramentos, desapego e preparação para um novo começo. Tudo o que não faz mais sentido tende a ser finalizado.
-
-Relacionamentos, projetos e situações podem chegar ao fim. Este é um período de limpeza emocional e espiritual. O objetivo é liberar espaço para um novo ciclo.
-
-A vida pede desapego, compaixão e compreensão. Este é um ano de conclusões e aprendizado emocional profundo.
-
-Evite resistir às mudanças. Finalizações são necessárias para novos começos.
-
-Este é o ano de encerramento, cura e preparação para uma nova fase da vida.`  
-  },
-
-  deficiencias: {
-    1:`Deficiência n°1
- Você precisa desenvolver mais iniciativa e determinação em sua vida. A vontade deve ser fortalecida, aprendendo a agir com independência e segurança. Será necessário defender suas ideias e tomar decisões próprias com firmeza. 
- 
- A vida colocará pessoas fortes em seu caminho para que aprenda a se posicionar e se impor. Trabalhe sua autoconfiança e confie mais em suas habilidades. 
-    
-Evite procrastinar e não se anule diante das opiniões alheias. Aprenda a agir sem medo do julgamento. Fortaleça sua coragem para iniciar novos projetos. Evite depender de outras pessoas para agir. Acredite no próprio potencial e desenvolva autonomia emocional.
-
-Consequências: até aprender essa lição poderá sentir desmotivação, indecisão e medo de arriscar. Pode tornar-se dependente de orientação externa, submisso e inseguro para tomar decisões importantes.`,
-2:`Deficiência n°2
-Você deve desenvolver diplomacia, flexibilidade e cooperação. Aprenda a trabalhar em equipe e agir com sensibilidade às necessidades dos outros. Nem sempre será necessário receber reconhecimento por tudo que faz. 
-
-Desenvolva empatia, escuta e capacidade de conciliar ideias. Evite impor suas opiniões de forma rígida. Aprenda a colaborar, fazer parcerias e agir com equilíbrio emocional. Seja mais sociável e aberto a relacionamentos. Trabalhe a confiança nas interações humanas. 
-
-A diplomacia será essencial para alcançar seus objetivos.
-Consequências: até aprender essa lição poderá evitar interações sociais, sentir timidez e isolamento, dificultando projetos e realizações pessoais.`,
-3:`Deficiência n°3
-Você precisa aprender a se expressar com leveza e confiança. A autocrítica excessiva pode gerar insegurança e timidez. Evite buscar perfeição impossível em tudo que faz. 
-
-Desenvolva alegria, espontaneidade e comunicação aberta. Aprenda a ouvir críticas sem se sentir atacado. Permita-se ser mais descontraído e bem-humorado. Trabalhe a expressão de ideias e emoções com naturalidade. Desenvolva confiança ao falar e se posicionar. 
-Aceite suas imperfeições com maturidade.
-
-Consequências: até aprender essa lição poderá sentir-se inibido, irritadiço e incompreendido, prejudicando relações e oportunidades profissionais.`,
-4:`Deficiência n°4
-Você precisa desenvolver disciplina, organização e perseverança. É necessário construir bases sólidas para sua vida. Aprenda a aceitar regras e cumprir responsabilidades com dedicação. 
-
-Desenvolva paciência e constância nos projetos. Aja com método, planejamento e responsabilidade. Seja coerente e persistente em seus objetivos. Trabalhe a organização e o foco nas tarefas. Aprenda a valorizar rotina e estabilidade.
-
-Consequências: até aprender essa lição poderá sentir-se perdido, desmotivado e frustrado, trabalhando muito para obter poucos resultados.`,
-5:`Deficiência n°5
-Você precisa aprender a arriscar mais e viver novas experiências. Supere o medo da mudança e da liberdade. Amplie sua visão de mundo e desenvolva adaptabilidade. 
-
-Aprenda com experiências ao invés de agir impulsivamente. Controle a impulsividade e busque equilíbrio. Seja mais sociável e aberto ao novo. Desenvolva coragem para explorar oportunidades. Aprenda a lidar com mudanças com maturidade.
-
-Consequências: até aprender essa lição poderá enfrentar instabilidade, frustrações e dificuldade em se firmar profissionalmente.`,
-6:`Deficiência n°6
-Você precisa desenvolver comprometimento emocional e responsabilidade afetiva. Aprenda a demonstrar sentimentos e estabelecer vínculos duradouros. Desenvolva empatia, carinho e compreensão. 
-
-Evite controlar pessoas ou relações. Trabalhe a maturidade emocional e a aceitação das diferenças. 
-
-Desenvolva relações sinceras e equilibradas. Aprenda a lidar com responsabilidades afetivas com serenidade.
-
-Consequências: até aprender essa lição poderá sentir solidão, carência afetiva e dificuldades em manter relacionamentos estáveis.`,
-7:`Deficiência n°7
-Você precisa aprofundar conhecimentos e confiar mais nas pessoas. Evite isolamento excessivo e desconfiança constante. Desenvolva comunicação emocional e expressão de sentimentos. 
-
-Aprenda a equilibrar introspecção com convivência social. Busque autoconhecimento sem se afastar da realidade. Trabalhe a confiança e a objetividade nas decisões.
-
-Consequências: até aprender essa lição poderá sentir indecisão, insegurança e dificuldade em realizar sonhos e objetivos.`,
-8:`Deficiência n°8
-Você precisa desenvolver prudência e responsabilidade com recursos materiais. Aprenda a administrar bens com equilíbrio e honestidade. Valorize disciplina financeira e organização. 
-
-Evite decisões impulsivas relacionadas ao dinheiro. Desenvolva responsabilidade e visão prática.
-
-Consequências: até aprender essa lição poderá enfrentar instabilidade financeira e dificuldades em administrar recursos e oportunidades.`,
-9:`Deficiência n°9
-Você precisa desenvolver altruísmo e compaixão. Aprenda a enxergar a vida de forma mais ampla e generosa. 
-
-Desenvolva tolerância, empatia e solidariedade. Aprenda a abrir mão do orgulho e perdoar. 
-
-Trabalhe a compreensão e a visão humanitária.
-
-Consequências: enfrentará desafios emocionais que estimularão crescimento espiritual e sensibilidade humana.`
-
+  9: `<p>A falta do 9 indica que <strong>você</strong> precisa aprender sobre compaixão universal, desapego e finalização de ciclos. No passado, <strong>você</strong> pode ter sido uma pessoa muito voltada para o próprio ego, e agora a vida a convida a olhar para as dores do mundo e a agir com mais generosidade e altruísmo.</p>
+    <p><strong>você</strong> deve aprender a perdoar e a deixar ir o que já não serve mais. O aprendizado para <strong>você</strong> é o de que a verdadeira grandeza reside na entrega e no serviço à humanidade. Ao integrar esta lição, <strong>você</strong> se tornará uma alma carismática e inspiradora, capaz de amar sem fronteiras e de concluir sua jornada com plenitude.</p>`
 }
 };
