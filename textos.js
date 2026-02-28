@@ -803,7 +803,7 @@ Também pede equilíbrio emocional para lidar com erros e frustrações. A const
 
 
 // --- ANO PESSOAL (A ENERGIA DO SEU MOMENTO ATUAL) ---
-  anoPessoal: {
+  anoPessoal:{
     1: `<p>Este é o início de um ciclo de nove anos para <strong>você</strong>. É um período de plantio, de novos começos e de muita coragem. <strong>você</strong> sentirá um impulso renovado para tirar projetos da gaveta, mudar de hábitos ou iniciar uma nova fase na carreira. A energia pede que <strong>você</strong> confie na sua individualidade e tome a iniciativa sem medo.</p>
     <p>O foco agora deve ser <strong>você</strong> mesma. Não espere pelos outros; este é o ano de ser a pioneira. <strong>você</strong> poderá sentir uma certa solidão, mas ela é necessária para que <strong>você</strong> descubra a sua própria força. É o momento de plantar as sementes que <strong>você</strong> deseja colher nos próximos oito anos, agindo com determinação e foco absoluto.</p>`,
 
