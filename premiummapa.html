@@ -618,6 +618,7 @@ box-sizing:border-box;
 // ============================================
 // 1. RECUPERAÇÃO E TRATAMENTO DE DADOS
 // ============================================
+// 1. RECUPERAÇÃO DOS DADOS
 const dados = JSON.parse(localStorage.getItem("dadosMapaPremium"));
 
 if(!dados){
@@ -625,96 +626,78 @@ if(!dados){
   throw new Error("Sem dados");
 }
 
-// Extrai o primeiro nome para personalização
-function obterPrimeiroNome(nomeCompleto) {
-    if (!nomeCompleto) return "você";
-    let primeiroNome = nomeCompleto.trim().split(' ')[0];
-    return primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
-}
-
-const nomePersonalizado = obterPrimeiroNome(dados.nome);
-
-// --- REVISOR AUTOMÁTICO DE GÊNERO (Limpa o texto para o Carlos) ---
-function processarTextoPremium(texto) {
+// 2. FUNÇÃO DE LIMPEZA (CARLOS) - Não mexe nas suas introduções fixas
+function limparTextoPremium(texto) {
     if (!texto) return "";
+    let primeiroNome = dados.nome.trim().split(' ')[0];
+    let nomeP = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
+
     let t = texto;
-    // 1. Nome em negrito
-    t = t.replace(/você/gi, `<strong>${nomePersonalizado}</strong>`);
-    // 2. Limpeza de Gênero (Remove (a), o/a, etc)
+    // Nome em negrito onde houver "você"
+    t = t.replace(/você/gi, <strong>${nomeP}</strong>);
+    // Remove marcas de gênero
     t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
     t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
-    // 3. Formatação
+    // Formatação de parágrafos
     return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
 }
 
-// Função de preenchimento que não deixa o script quebrar
-function preencher(chave, valor, eTextoDinamico = false) {
-    let conteudo = valor || "";
-    if (eTextoDinamico) {
-        conteudo = processarTextoPremium(valor);
-    }
-    // Faz a troca no HTML
-    document.body.innerHTML = document.body.innerHTML.split(chave).join(conteudo);
+// 3. MAPA DE SUBSTITUIÇÃO (INCLUINDO MD3, MD4 E D3)
+const mapaSubstituicao = {
+    "{{NOME}}": dados.nome,
+    "{{DATA}}": dados.data,
+    "{{DIA}}": dados.resultados.diaN || "",
+    "{{COMPORTAMENTO}}": dados.resultados.comportamento,
+    "{{MOTIVACAO}}": dados.resultados.motivacao,
+    "{{EXPRESSAO}}": dados.resultados.personalidade,
+    "{{DESTINO}}": dados.resultados.caminhoVida,
+    "{{MISSAO}}": dados.resultados.missao,
+    "{{MATURIDADE}}": dados.resultados.maturidade,
+    "{{RELACIONAMENTO}}": dados.resultados.relacionamento,
+    "{{ANO_PESSOAL_NUMERO}}": dados.resultados.anoPessoal,
+    "{{QTD_DEFICIENCIAS}}": (dados.resultados.listaDeficiencias || []).length + " Lições Cármicas",
+
+    // Textos Dinâmicos com Limpeza de Gênero
+    "{{TEXTO_DIA}}": limparTextoPremium(dados.textos.dia),
+    "{{TEXTO_COMPORTAMENTO}}": limparTextoPremium(dados.textos.comportamento),
+    "{{TEXTO_MOTIVACAO}}": limparTextoPremium(dados.textos.motivacao),
+    "{{TEXTO_EXPRESSAO}}": limparTextoPremium(dados.textos.expressao),
+    "{{TEXTO_DESTINO}}": limparTextoPremium(dados.textos.destino),
+    "{{TEXTO_MISSAO}}": limparTextoPremium(dados.textos.missao),
+    "{{TEXTO_MATURIDADE}}": limparTextoPremium(dados.textos.maturidade),
+    "{{TEXTO_RELACIONAMENTO}}": limparTextoPremium(dados.textos.relacionamento),
+    "{{TEXTO_CICLO1}}": limparTextoPremium(dados.textos.ciclo1),
+    "{{TEXTO_CICLO2}}": limparTextoPremium(dados.textos.ciclo2),
+    "{{TEXTO_CICLO3}}": limparTextoPremium(dados.textos.ciclo3),
+    "{{TEXTO_MD1}}": limparTextoPremium(dados.textos.md1),
+    "{{TEXTO_MD2}}": limparTextoPremium(dados.textos.md2),
+    "{{TEXTO_MD3}}": limparTextoPremium(dados.textos.md3),
+    "{{TEXTO_MD4}}": limparTextoPremium(dados.textos.md4),
+    "{{TEXTO_D1}}": limparTextoPremium(dados.textos.d1),
+    "{{TEXTO_D2}}": limparTextoPremium(dados.textos.d2),
+    "{{TEXTO_D3}}": limparTextoPremium(dados.textos.d3),
+    "{{TEXTO_ANO_PESSOAL}}": limparTextoPremium(dados.textos.anoPessoal),
+    "{{TEXTO_DEFICIENCIAS}}": limparTextoPremium(dados.textos.deficiencias),
+
+    // Períodos
+    "{{PERIODO_C1}}": dados.periodos.ciclo1,
+    "{{PERIODO_C2}}": dados.periodos.ciclo2,
+    "{{PERIODO_C3}}": dados.periodos.ciclo3,
+    "{{PERIODO_MD1}}": dados.periodos.md1,
+    "{{PERIODO_MD2}}": dados.periodos.md2,
+    "{{PERIODO_MD3}}": dados.periodos.md3,
+    "{{PERIODO_MD4}}": dados.periodos.md4,
+    "{{PERIODO_D1}}": dados.periodos.ciclo1,
+    "{{PERIODO_D2}}": dados.periodos.ciclo2,
+    "{{PERIODO_D3}}": dados.periodos.ciclo3
+};
+
+// 4. EXECUÇÃO DA TROCA (FEITA DE UMA VEZ SÓ PARA NÃO BUGAR)
+let corpoHTML = document.body.innerHTML;
+for (const [chave, valor] of Object.entries(mapaSubstituicao)) {
+    corpoHTML = corpoHTML.split(chave).join(valor || "");
 }
-
-// ============================================
-// 2. LÓGICA DE CONTAGEM E EXECUÇÃO
-// ============================================
-
-// Cálculo da quantidade de lições
-let listaDef = dados.resultados.listaDeficiencias || []; 
-let qtdTotal = listaDef.length;
-let textoQtd = (qtdTotal === 0) ? "Nenhuma Lição" : (qtdTotal === 1) ? "1 Lição Cármica" : qtdTotal + " Lições Cármicas";
-
-// PREENCHIMENTO DOS DADOS (ORDEM CORRETA)
-preencher("{{NOME}}", dados.nome);
-preencher("{{DATA}}", dados.data);
-preencher("{{QTD_DEFICIENCIAS}}", textoQtd); 
-
-// Preenche os Números
-// --- PREENCHIMENTO DOS TEXTOS (AGORA COMPLETO: 1 A 4) ---
-preencher("{{TEXTO_DIA}}", dados.textos.dia, true);
-preencher("{{TEXTO_COMPORTAMENTO}}", dados.textos.comportamento, true);
-preencher("{{TEXTO_MOTIVACAO}}", dados.textos.motivacao, true);
-preencher("{{TEXTO_EXPRESSAO}}", dados.textos.expressao, true);
-preencher("{{TEXTO_DESTINO}}", dados.textos.destino, true);
-preencher("{{TEXTO_MISSAO}}", dados.textos.missao, true);
-preencher("{{TEXTO_MATURIDADE}}", dados.textos.maturidade, true);
-preencher("{{TEXTO_RELACIONAMENTO}}", dados.textos.relacionamento, true);
-
-// Ciclos
-preencher("{{TEXTO_CICLO1}}", dados.textos.ciclo1, true);
-preencher("{{TEXTO_CICLO2}}", dados.textos.ciclo2, true);
-preencher("{{TEXTO_CICLO3}}", dados.textos.ciclo3, true);
-
-// Momentos Decisivos (TODOS OS 4)
-preencher("{{TEXTO_MD1}}", dados.textos.md1, true);
-preencher("{{TEXTO_MD2}}", dados.textos.md2, true);
-preencher("{{TEXTO_MD3}}", dados.textos.md3, true); // <--- Voltou!
-preencher("{{TEXTO_MD4}}", dados.textos.md4, true); // <--- Voltou!
-
-// Desafios (TODOS OS 3)
-preencher("{{TEXTO_D1}}", dados.textos.d1, true);
-preencher("{{TEXTO_D2}}", dados.textos.d2, true);
-preencher("{{TEXTO_D3}}", dados.textos.d3, true); // <--- Voltou!
-
-// Ano Pessoal e Deficiências
-preencher("{{TEXTO_ANO_PESSOAL}}", dados.textos.anoPessoal, true);
-preencher("{{TEXTO_DEFICIENCIAS}}", dados.textos.deficiencias, true);
-
-// --- PREENCHIMENTO DOS PERÍODOS (COMPLETO) ---
-preencher("{{PERIODO_C1}}", dados.periodos.ciclo1);
-preencher("{{PERIODO_C2}}", dados.periodos.ciclo2);
-preencher("{{PERIODO_C3}}", dados.periodos.ciclo3);
-
-preencher("{{PERIODO_MD1}}", dados.periodos.md1);
-preencher("{{PERIODO_MD2}}", dados.periodos.md2);
-preencher("{{PERIODO_MD3}}", dados.periodos.md3); // <--- Adicionado
-preencher("{{PERIODO_MD4}}", dados.periodos.md4); // <--- Adicionado
-
-preencher("{{PERIODO_D1}}", dados.periodos.ciclo1);
-preencher("{{PERIODO_D2}}", dados.periodos.ciclo2);
-preencher("{{PERIODO_D3}}", dados.periodos.ciclo3); // <--- Adicionado
+document.body.innerHTML = corpoHTML;
 
 // PDF AUTOMÁTICO
 function gerarPDF(){
