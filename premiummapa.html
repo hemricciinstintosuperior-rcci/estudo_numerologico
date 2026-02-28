@@ -620,29 +620,19 @@ function processarTextoPremium(texto) {
     return textoFiltrado.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
 }
 
-// --- LÓGICA DE CONTAGEM DE DEFICIÊNCIAS ---
-// --- LÓGICA DE CONTAGEM PELO TEXTO (Mais segura) ---
+// --- LÓGICA DE CONTAGEM DE DEFICIÊNCIAS (SUBSTITUIR AQUI) ---
 let textoBruto = dados.textos.deficiencias || "";
-// Esta linha abaixo conta quantos números (1 a 9) aparecem no seu texto de deficiências
+// Conta quantos números de 1 a 9 existem no texto das deficiências
 let encontrados = textoBruto.match(/\d/g); 
-let qtd = encontrados ? encontrados.length : 0;
-let textoQtd = "";
+let qtdTotal = encontrados ? encontrados.length : 0;
+let textoQtd = (qtdTotal === 0) ? "Nenhuma Lição Cármica" : (qtdTotal === 1) ? "1 Lição Cármica" : qtdTotal + " Lições Cármicas";
 
-if (qtd === 0) {
-    textoQtd = "Nenhuma Lição Cármica";
-} else if (qtd === 1) {
-    textoQtd = "1 Lição Cármica";
-} else {
-    textoQtd = qtd + " Lições Cármicas";
-}
-
-// Função de preenchimento inteligente
+// FUNÇÃO DE PREENCHIMENTO (Mantenha como está abaixo)
 function preencher(chave, valor, eTextoDinamico = false) {
     let conteudo = valor;
     if (eTextoDinamico) {
         conteudo = processarTextoPremium(valor);
     }
-    // O split/join é usado aqui para substituir todas as ocorrências da chave no HTML
     document.body.innerHTML = document.body.innerHTML.split(chave).join(conteudo);
 }
 
