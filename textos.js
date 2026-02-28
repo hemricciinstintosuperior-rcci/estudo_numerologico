@@ -371,856 +371,202 @@ const textos = {
 <p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é equilibrar seus grandes ideais com a praticidade necessária para realizá-los no dia a dia.</p>`
   },
 
+// ======================
+  // PERSONALIDADE (1–9)
+  // ======================
   Personalidade: {
-    1:`Personalidade 1 — Ambição, Independência e Determinação
-
-Você possui uma personalidade forte, independente e extremamente determinada. Sua natureza é individualista e orientada para conquistas. Existe em você um impulso constante de liderança, autonomia e realização pessoal.
-
-Você é naturalmente autossuficiente, confiante e cheio de energia. Sente necessidade de liberdade para agir de acordo com suas próprias ideias e convicções. Quando pode tomar decisões por conta própria, tende a expressar o melhor de si e alcançar resultados expressivos.
-
-Sua ambição é intensa e sua coragem o impulsiona a enfrentar desafios sem medo das consequências. Você não teme correr riscos e demonstra disposição para explorar caminhos pouco convencionais quando acredita em seus objetivos.
-
-Possui grande capacidade de influenciar pessoas e formar opiniões. Sua presença costuma ser marcante, inspirando admiração em alguns e resistência em outros. Sua forte personalidade pode gerar tanto respeito quanto oposição.
-
-Entretanto, o lado desafiador dessa personalidade pode levá-lo ao egocentrismo, à impaciência e à tendência de dominar situações e pessoas. Seu desejo de decidir e controlar pode gerar conflitos e criar obstáculos em sua trajetória.
-
-Aspectos positivos:
-Independência, coragem, liderança, iniciativa e originalidade.
-
-Aspectos negativos:
-Impulsividade, autoritarismo, egocentrismo e dificuldade em aceitar opiniões.
-
-Aprendizado e equilíbrio:
-Seu sucesso depende diretamente do equilíbrio entre liderança e cooperação. Desenvolver empatia, escuta e flexibilidade permitirá que sua força se transforme em realização verdadeira.`,
-
-    2:`Personalidade 2 — Sensibilidade, Cooperação e Diplomacia
-
-Você possui uma personalidade sensível, receptiva e profundamente voltada para o relacionamento humano. Sua natureza é cooperativa, paciente e conciliadora, com grande habilidade para lidar com pessoas e compreender emoções.
-
-Você demonstra tato, delicadeza e percepção refinada das situações. Possui a capacidade de perceber nuances emocionais e “ler nas entrelinhas”, compreendendo necessidades e interesses alheios com facilidade. Essa habilidade faz de você um mediador natural e excelente negociador.
-
-Sua personalidade se desenvolve melhor em ambientes colaborativos. Trabalhar em parceria ou atuar nos bastidores costuma trazer melhores resultados do que assumir posições de liderança direta, pois sua sensibilidade o torna altamente influenciável pelo ambiente emocional.
-
-Entretanto, essa mesma sensibilidade pode gerar insegurança e indecisão. Você tende a evitar conflitos e pode adiar decisões importantes por medo de desagradar ou causar desequilíbrio.
-
-Aspectos positivos:
-Empatia, diplomacia, cooperação, sensibilidade e capacidade de mediação.
-
-Aspectos negativos:
-Indecisão, insegurança, dependência emocional e dificuldade em se posicionar.
-
-Aprendizado e equilíbrio:
-Desenvolver autoconfiança e firmeza permitirá que sua sensibilidade se transforme em grande força de influência.`,
-
-    3:`Personalidade 3 — Expressividade, Otimismo e Inspiração
-
-Você possui uma personalidade expansiva, comunicativa e inspiradora. Sua energia é criativa, entusiasmada e naturalmente voltada para a expressão de ideias e sentimentos.
-
-Você se comunica com facilidade e possui talento para inspirar e motivar pessoas. Age com espontaneidade e entusiasmo, especialmente quando acredita no que faz.
-
-Entretanto, pode dispersar energia em muitos interesses ao mesmo tempo, faltando disciplina para concluir projetos.
-
-Aspectos positivos:
-Criatividade, comunicação, entusiasmo e inspiração.
-
-Aspectos negativos:
-Dispersão, falta de disciplina e tendência à procrastinação.
-
-Aprendizado:
-Desenvolver foco e constância.`,
-
-4:`Personalidade 4 — Disciplina, Estrutura e Pragmatismo
-
-Você possui uma personalidade fundamentada na estabilidade, na organização e no senso de responsabilidade. Sua forma de agir é prática, cautelosa e orientada para resultados concretos. Existe em você uma necessidade profunda de segurança, previsibilidade e construção de bases sólidas para o futuro.
-
-Você tende a encarar a vida com seriedade e comprometimento. Suas atitudes são guiadas pela lógica, pelo planejamento e pelo desejo de fazer tudo da maneira correta. As pessoas o percebem como alguém confiável, persistente e digno de confiança, alguém que cumpre promessas e leva compromissos até o fim.
-
-Sua personalidade valoriza esforço, disciplina e constância. Você não teme o trabalho árduo e entende que conquistas duradouras exigem dedicação e paciência. Possui grande capacidade de concentração e perseverança, características que o tornam capaz de construir projetos de longo prazo com solidez.
-
-Você prefere seguir métodos seguros e comprovados. Mudanças repentinas ou situações imprevisíveis podem gerar desconforto, pois sua natureza busca estabilidade e controle. Sua prudência o protege de riscos desnecessários, mas também pode limitar oportunidades quando o medo do erro se torna excessivo.
-
-Sua integridade é um dos seus maiores valores. Honestidade, justiça e responsabilidade são princípios que orientam sua conduta. As pessoas tendem a enxergá-lo como alguém correto, confiável e consistente em suas atitudes.
-
-Entretanto, o excesso de cautela pode levar à rigidez. Você pode se tornar resistente a novas ideias, conservador em excesso ou crítico demais consigo mesmo e com os outros. Sua necessidade de controle pode transformar desafios em fontes de ansiedade e frustração.
-
-Aspectos positivos:
-Disciplina, persistência, organização, responsabilidade, confiabilidade e forte ética de trabalho.
-
-Aspectos negativos:
-Rigidez, teimosia, conservadorismo, excesso de preocupação e dificuldade em lidar com mudanças.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a confiar mais na flexibilidade e na criatividade. Ao permitir-se experimentar novas possibilidades, sua disciplina se transforma em uma poderosa ferramenta de realização e evolução pessoal.`,
-
-
-5:`Personalidade 5 — Liberdade, Movimento e Versatilidade
-
-Você possui uma personalidade marcada pelo dinamismo, pela curiosidade e pela necessidade constante de movimento. Sua forma de agir é espontânea, adaptável e aberta às experiências da vida. Existe em você uma forte necessidade de liberdade, variedade e expansão de horizontes.
-
-Você se sente motivado quando a vida oferece mudanças, desafios e novas possibilidades. Rotina excessiva, repetição e ambientes restritivos podem gerar inquietação e sensação de aprisionamento. Sua natureza busca novidade, aventura e aprendizado através da experiência direta.
-
-As pessoas o percebem como alguém carismático, comunicativo e cheio de energia. Sua presença costuma trazer entusiasmo, leveza e movimento aos ambientes. Você tem facilidade para interagir com diferentes tipos de pessoas e adaptar-se a diferentes contextos sociais.
-
-Sua personalidade é extremamente versátil. Você aprende rápido, se ajusta com facilidade e costuma encontrar soluções criativas para situações inesperadas. Mudanças não o intimidam; pelo contrário, costumam estimular sua motivação e sua criatividade.
-
-Você possui forte ligação com os sentidos e com a experiência prática da vida. Gosta de explorar, experimentar e viver intensamente o presente. Essa característica o torna uma pessoa vibrante, curiosa e aberta ao mundo.
-
-No entanto, o excesso de liberdade pode gerar dispersão. Existe tendência a iniciar muitos projetos e ter dificuldade em concluí-los. A impaciência pode levá-lo a buscar resultados rápidos ou abandonar tarefas quando perdem o estímulo inicial.
-
-A disciplina pode parecer limitadora, mas é justamente ela que transforma seu potencial em conquistas concretas. Sem direção, sua energia pode se dissipar em múltiplos interesses sem resultados duradouros.
-
-Aspectos positivos:
-Versatilidade, adaptabilidade, comunicação, carisma, criatividade e espírito aventureiro.
-
-Aspectos negativos:
-Impulsividade, dispersão, instabilidade, dificuldade com rotina e tendência a evitar responsabilidades.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a equilibrar liberdade com disciplina. Ao canalizar sua energia e manter foco, você transforma sua versatilidade em realização e expansão verdadeira.`,
-
-
-6:`Personalidade 6 — Responsabilidade, Amor e Compromisso
-
-Você possui uma personalidade marcada pelo senso de responsabilidade, cuidado e dedicação ao bem-estar das pessoas ao seu redor. Sua atitude natural diante da vida é proteger, acolher e contribuir para a harmonia dos ambientes em que vive.
-
-Existe em você uma forte necessidade de criar vínculos, cuidar das relações e construir ambientes seguros e equilibrados. Sua forma de agir costuma ser guiada pelo coração, pela empatia e pelo desejo de ajudar.
-
-As pessoas o percebem como alguém confiável, generoso e disposto a assumir responsabilidades. Sua presença transmite segurança emocional, acolhimento e estabilidade, o que faz com que muitos procurem seu apoio e orientação.
-
-Você possui um profundo senso de dever. Frequentemente sente que precisa cuidar das pessoas, resolver conflitos e manter a harmonia nos relacionamentos. Essa característica faz de você um conselheiro natural.
-
-Existe também uma forte ligação com valores familiares, afetivos e comunitários. A necessidade de sentir que é útil e importante para os outros é um dos motores de sua personalidade.
-
-Sua criatividade pode se manifestar em diversas áreas, especialmente naquelas que envolvem estética, arte, cuidado ou organização de ambientes. Você busca beleza, conforto e equilíbrio.
-
-Entretanto, o excesso de responsabilidade pode transformar cuidado em sobrecarga. Há tendência a assumir problemas que não são seus ou a se sacrificar além do necessário.
-
-Quando desequilibrado, pode tornar-se controlador, possessivo ou excessivamente crítico, tentando impor sua visão de cuidado e proteção aos outros.
-
-Aspectos positivos:
-Amor, empatia, responsabilidade, generosidade, senso de justiça e capacidade de acolhimento.
-
-Aspectos negativos:
-Controle excessivo, ciúme, interferência na vida alheia, auto-sacrifício exagerado e dificuldade em estabelecer limites.
-
-Aprendizado e equilíbrio:
-Seu crescimento ocorre quando aprende a cuidar sem se sobrecarregar. Ao equilibrar amor próprio e cuidado com os outros, sua personalidade se torna uma poderosa fonte de harmonia e equilíbrio.`,
-
-
-    7:`Personalidade 7 — Conhecimento, Profundidade e Interiorização
-
-Você possui uma personalidade profundamente analítica, introspectiva e orientada pela busca da verdade. Sua forma de agir é guiada pela necessidade de compreender a vida em níveis mais profundos, indo além das aparências e do superficial.
-
-Existe em você uma inclinação natural para a reflexão, o estudo e a observação. Antes de agir, prefere analisar, questionar e compreender todos os aspectos possíveis de uma situação.
-
-Sua mente é investigativa, curiosa e seletiva. Você busca conhecimento, sabedoria e entendimento genuíno, e raramente aceita explicações superficiais.
-
-As pessoas o percebem como alguém reservado, sério e intelectualmente profundo. Sua postura transmite discrição, autocontrole e independência emocional.
-
-Você valoriza sua privacidade e necessita de momentos de silêncio e solitude para reorganizar seus pensamentos e emoções. O excesso de estímulos pode gerar desgaste e ansiedade.
-
-Existe uma forte necessidade de compreender o sentido da vida, o funcionamento das pessoas e os mistérios da existência. Filosofia, espiritualidade, ciência ou psicologia costumam exercer forte atração sobre você.
-
-Sua prudência faz com que evite decisões impulsivas. Prefere amadurecer ideias antes de agir, buscando segurança e clareza.
-
-Entretanto, o excesso de análise pode gerar procrastinação e dificuldade de ação. Às vezes pensa demais e age de menos.
-
-Quando desequilibrado, pode tornar-se distante, crítico, cético ou emocionalmente fechado, dificultando vínculos afetivos.
-
-Aspectos positivos:
-Sabedoria, introspecção, capacidade analítica, prudência, profundidade intelectual e discernimento.
-
-Aspectos negativos:
-Isolamento, excesso de crítica, pessimismo, dificuldade de confiar e tendência ao distanciamento emocional.
-
-Aprendizado e equilíbrio:
-Seu crescimento ocorre quando aprende a equilibrar razão e emoção, pensamento e ação. Ao compartilhar sua sabedoria com o mundo, sua personalidade se torna fonte de conhecimento e orientação.`,
-
-    8:`Personalidade 8 — Poder, Realização e Liderança Material
-
-Você possui uma personalidade forte, determinada e orientada para conquistas concretas. Sua forma de agir é marcada pela ambição, pela organização e pela busca de resultados tangíveis.
-
-Existe em você uma poderosa necessidade de realização, reconhecimento e crescimento material. Você entende a vida como um campo de desafios a serem superados por meio de estratégia, disciplina e perseverança.
-
-Sua postura transmite autoridade, firmeza e segurança. As pessoas tendem a enxergar você como alguém confiável, competente e capaz de assumir responsabilidades importantes.
-
-Você possui visão prática e estratégica, sendo naturalmente inclinado a planejar, organizar e estruturar projetos e objetivos de longo prazo.
-
-A liderança surge como consequência natural da sua capacidade de tomar decisões, assumir riscos e conduzir situações com firmeza.
-
-Existe grande facilidade para lidar com recursos materiais, administração, negócios e ambientes competitivos.
-
-Você costuma enxergar a vida sob uma perspectiva ampla e realista, buscando sempre crescimento, progresso e estabilidade.
-
-Entretanto, o foco excessivo em resultados pode levar ao distanciamento emocional e à dificuldade de demonstrar vulnerabilidade.
-
-Quando desequilibrado, pode tornar-se autoritário, controlador, rígido ou excessivamente materialista, valorizando apenas conquistas externas.
-
-Aspectos positivos:
-Liderança, disciplina, ambição saudável, capacidade de realização, senso estratégico e responsabilidade.
-
-Aspectos negativos:
-Autoritarismo, rigidez, excesso de controle, materialismo e dificuldade de lidar com emoções.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a equilibrar poder e sensibilidade, sucesso material e realização emocional. Ao integrar força e humanidade, sua personalidade se torna uma poderosa força de construção e transformação.`,
-
-    9:`Personalidade 9 — Humanitarismo, Idealismo e Consciência Universal
-
-Você possui uma personalidade marcada pela sensibilidade, pela compaixão e por um profundo senso de justiça. Sua maneira de agir demonstra forte preocupação com o coletivo e com o bem-estar das pessoas ao seu redor.
-
-Existe em você uma tendência natural a enxergar a vida sob uma perspectiva ampla e universal. Seus valores vão além do interesse pessoal, buscando significado, propósito e contribuição para algo maior.
-
-Sua presença transmite generosidade, compreensão e abertura emocional. Muitas pessoas percebem em você alguém capaz de ouvir, acolher e compreender sem julgamentos.
-
-Você possui forte inclinação para causas sociais, humanitárias ou espirituais. Existe uma necessidade interna de contribuir para a melhoria do mundo e das relações humanas.
-
-Sua personalidade carrega um senso profundo de missão, como se houvesse sempre algo maior guiando suas ações e escolhas.
-
-Você demonstra grande empatia, sensibilidade e capacidade de se colocar no lugar do outro. Isso torna sua presença reconfortante e inspiradora.
-
-Ao mesmo tempo, existe uma necessidade de reconhecimento e validação emocional. Você deseja que suas ações sejam compreendidas e valorizadas.
-
-Quando equilibrado, torna-se uma personalidade inspiradora, generosa e capaz de influenciar positivamente muitas pessoas.
-
-Porém, quando desequilibrado, pode tornar-se idealista em excesso, ingênuo, emocionalmente sobrecarregado ou frustrado com a realidade.
-
-Pode sentir que dá mais do que recebe, o que gera decepções e desânimo.
-
-Aspectos positivos:
-Empatia, altruísmo, compaixão, generosidade, visão humanitária e capacidade de inspirar.
-
-Aspectos negativos:
-Idealismo excessivo, frustração emocional, tendência ao sacrifício exagerado, necessidade de reconhecimento e sensibilidade intensa.
-
-Aprendizado e equilíbrio:
-Seu crescimento acontece quando aprende a ajudar sem se anular, a servir sem se sacrificar excessivamente e a equilibrar idealismo com realidade. Ao fazer isso, sua personalidade se torna uma poderosa força de transformação e inspiração coletiva.`
-
+    1: `<p><strong>[NOME]</strong> possui uma personalidade forte, independente e extremamente determinada. Sua natureza é individualista e orientada para conquistas, com um impulso constante de liderança.</p>
+<p>Naturalmente autossuficiente e confiante, <strong>[NOME]</strong> sente necessidade de liberdade para agir de acordo com suas próprias convicções. Quando pode decidir por conta própria, expressa o melhor de seu potencial.</p>
+<p><strong>Aspectos positivos:</strong> Independência, coragem, originalidade e iniciativa marcante.</p>
+<p><strong>Aspectos negativos:</strong> Impulsividade e uma tendência a dominar situações, o que pode gerar resistências.</p>
+<p><strong>Aprendizado:</strong> O sucesso de <strong>[NOME]</strong> depende do equilíbrio entre liderança e cooperação.</p>`,
+
+    2: `<p><strong>[NOME]</strong> possui uma personalidade sensível e voltada para o relacionamento humano. Sua natureza é cooperativa e conciliadora, com grande habilidade para compreender emoções alheias.</p>
+<p>Com um tato refinado, <strong>[NOME]</strong> consegue "ler nas entrelinhas", sendo um mediador natural. Sua personalidade floresce melhor em ambientes colaborativos do que em posições de comando direto.</p>
+<p><strong>Aspectos positivos:</strong> Empatia, diplomacia, paciência e grande capacidade de mediação.</p>
+<p><strong>Aspectos negativos:</strong> Indecisão e uma tendência a evitar conflitos necessários para não desagradar os outros.</p>
+<p><strong>Aprendizado:</strong> Desenvolver autoconfiança permitirá que a sensibilidade de <strong>[NOME]</strong> se torne uma força de influência real.</p>`,
+
+    3: `<p><strong>[NOME]</strong> possui uma personalidade expansiva, comunicativa e inspiradora. Sua energia é criativa e naturalmente voltada para a expressão de ideias e sentimentos de forma entusiasta.</p>
+<p>Com facilidade para motivar pessoas, <strong>[NOME]</strong> age com espontaneidade. No entanto, pode dispersar energia em muitos interesses ao mesmo tempo, faltando disciplina para concluir o que começa.</p>
+<p><strong>Aspectos positivos:</strong> Criatividade vibrante, comunicação fluida e otimismo contagiante.</p>
+<p><strong>Aspectos negativos:</strong> Dispersão e tendência à procrastinação quando o entusiasmo inicial diminui.</p>
+<p><strong>Aprendizado:</strong> O crescimento de <strong>[NOME]</strong> vem do desenvolvimento do foco e da constância em seus projetos.</p>`,
+
+    4: `<p>A personalidade de <strong>[NOME]</strong> é fundamentada na estabilidade, organização e responsabilidade. Sua forma de agir é prática e orientada para resultados concretos e seguros.</p>
+<p><strong>[NOME]</strong> encara a vida com comprometimento, sendo percebido como alguém extremamente confiável e digno de confiança. Valoriza o esforço e entende que conquistas duradouras exigem paciência.</p>
+<p><strong>Aspectos positivos:</strong> Disciplina, persistência, forte ética de trabalho e organização impecável.</p>
+<p><strong>Aspectos negativos:</strong> Rigidez e certa resistência a mudanças repentinas ou ideias muito abstratas.</p>
+<p><strong>Aprendizado:</strong> <strong>[NOME]</strong> cresce quando aprende a confiar na flexibilidade e abre espaço para a criatividade.</p>`,
+
+    5: `<p><strong>[NOME]</strong> possui uma personalidade marcada pelo dinamismo e pela necessidade constante de movimento. Sua forma de agir é espontânea e aberta às variadas experiências da vida.</p>
+<p>Rotinas excessivas podem gerar em <strong>[NOME]</strong> uma sensação de aprisionamento. Seu carisma e energia trazem leveza aos ambientes, facilitando a adaptação a diferentes contextos sociais e desafios.</p>
+<p><strong>Aspectos positivos:</strong> Versatilidade, espírito aventureiro, adaptabilidade e magnetismo pessoal.</p>
+<p><strong>Aspectos negativos:</strong> Instabilidade e dificuldade em manter o foco em tarefas repetitivas ou de longo prazo.</p>
+<p><strong>Aprendizado:</strong> O segredo do sucesso para <strong>[NOME]</strong> está em equilibrar sua sede de liberdade com a disciplina necessária.</p>`,
+
+    6: `<p><strong>[NOME]</strong> possui uma personalidade marcada pelo senso de responsabilidade e dedicação ao bem-estar alheio. Sua atitude natural é proteger e contribuir para a harmonia coletiva.</p>
+<p>Guiado pela empatia, <strong>[NOME]</strong> é frequentemente procurado como conselheiro. Existe uma ligação profunda com valores familiares e afetivos, buscando sempre o equilíbrio nas relações.</p>
+<p><strong>Aspectos positivos:</strong> Amorosidade, senso de justiça, generosidade e grande capacidade de acolhimento.</p>
+<p><strong>Aspectos negativos:</strong> Tendência ao autossacrifício exagerado e dificuldade em estabelecer limites para não se sobrecarregar.</p>
+<p><strong>Aprendizado:</strong> <strong>[NOME]</strong> evolui quando aprende a cuidar de si com a mesma intensidade que dedica aos outros.</p>`,
+
+    7: `<p><strong>[NOME]</strong> possui uma personalidade analítica, introspectiva e orientada pela busca da verdade. Sua forma de agir é guiada pela necessidade de compreender a vida em níveis profundos.</p>
+<p>Sua mente investigativa prefere o estudo e a observação antes de qualquer ação. <strong>[NOME]</strong> valoriza a privacidade e momentos de solitude para organizar seus pensamentos e intuições.</p>
+<p><strong>Aspectos positivos:</strong> Sabedoria, profundidade intelectual, discernimento e prudência nas escolhas.</p>
+<p><strong>Aspectos negativos:</strong> Isolamento emocional e uma tendência a ser excessivamente crítico ou cético.</p>
+<p><strong>Aprendizado:</strong> O crescimento de <strong>[NOME]</strong> ocorre ao equilibrar a razão com a emoção, compartilhando sua sabedoria.</p>`,
+
+    8: `<p><strong>[NOME]</strong> possui uma personalidade forte e orientada para conquistas concretas. Sua atuação no mundo é marcada pela ambição saudável, organização e busca por resultados tangíveis.</p>
+<p>Sua postura transmite autoridade e segurança, tornando a liderança uma consequência natural de sua capacidade de gestão. <strong>[NOME]</strong> tem facilidade para lidar com desafios e ambientes competitivos.</p>
+<p><strong>Aspectos positivos:</strong> Visão estratégica, determinação, eficiência e senso de responsabilidade.</p>
+<p><strong>Aspectos negativos:</strong> Foco excessivo em resultados materiais, podendo parecer frio ou controlador em momentos de estresse.</p>
+<p><strong>Aprendizado:</strong> <strong>[NOME]</strong> alcança a plenitude ao equilibrar o sucesso material com a realização emocional.</p>`,
+
+    9: `<p><strong>[NOME]</strong> possui uma personalidade marcada pela compaixão e por um profundo senso de justiça universal. Sua maneira de agir demonstra preocupação genuína com o bem-estar coletivo.</p>
+<p>Com uma visão ampla da vida, <strong>[NOME]</strong> busca propósito em tudo o que faz. Sua presença é inspiradora e reconfortante, transmitindo uma abertura emocional que acolhe sem julgamentos.</p>
+<p><strong>Aspectos positivos:</strong> Altruísmo, empatia vasta, visão humanitária e capacidade de inspirar multidões.</p>
+<p><strong>Aspectos negativos:</strong> Idealismo excessivo que pode levar à frustração com a realidade prática do mundo.</p>
+<p><strong>Aprendizado:</strong> <strong>[NOME]</strong> cresce ao aprender a ajudar o mundo sem anular suas próprias necessidades básicas.</p>`
   },
 
+  // ======================
+  // CAMINHO DE VIDA (1–9)
+  // ======================
   CaminhodeVida: {
-    1:`Ser autossuficiente e independente
-Caminho de Vida 1
-
-O número um indica alguém com energia forte. Este é o caminho da coragem, determinação e honestidade. Uma pessoa número um está frequentemente à frente do seu tempo. A humanidade pode beneficiar muito com esses inovadores e com as suas ideias surpreendentes. Eles seguem o seu caminho sozinhos, indivíduos liderados por sua voz interior. Demonstram total determinação e persistência em seguir as suas ideias. Pode-se dizer que o número um é privilegiado desde o nascimento porque a sorte os segue.
-
-Estas pessoas não toleram injustiça. Enquanto outros ficam estáticos, o número um será o primeiro a levantar-se e tentar mudar as coisas. Não conseguem entender como algumas pessoas ficam felizes por serem meras espectadoras. Aqui reside o seu grande talento: a predisposição para serem líderes. A sua paixão, energia e entusiasmo são altamente contagiosos. São racionais, críticos e diligentes e reconhecem rapidamente o caminho certo.
-
-O número um destaca-se devido à sua elevada energia. São autoritários e influentes. Precisam estar no centro das atenções e almejam reconhecimento constante. Ressentem-se quando outros se intrometem no que estão a fazer e não aceitam críticas facilmente. A sua principal característica é a atitude positiva perante a vida.
-
-O número um ama os seus amigos. São generosos e atenciosos. Fazem amizades com facilidade e raramente terminam relacionamentos.
-
-A vida trará fracassos para muitos número um. Precisam experimentar o fracasso para melhorar e trabalhar em si mesmos. Devem ver todos os fracassos como um passo mais perto do sucesso. A pior coisa para um número um seria perder a confiança, pois isso bloquearia as suas capacidades criativas.
-
-Lado sombrio  
-Um número um desarmonioso é egoísta, teimoso e dominador. Pode tornar-se manipulador, impiedoso e competitivo em excesso.
-
-Trabalho  
-São diligentes, ambiciosos e líderes naturais. Frequentemente iniciam os seus próprios negócios.
-
-Amor  
-Querem liderar no amor e precisam de liberdade e reconhecimento.
-
-Saúde  
-Devem cuidar do coração, pressão arterial e evitar stress.
-
-Realização  
-Devem permanecer fiéis a si mesmos e ouvir a sua voz interior.`,
-
-2:`Ser cooperativo e discreto
-Caminho de Vida 2
-
-Se tivéssemos de descrever o número dois numa palavra, seria cooperação. São diplomatas naturais, conciliadores e pacificadores. Pensam antes de agir e procuram harmonia em todas as situações.
-
-Preferem trabalhar nos bastidores e evitam os holofotes. Sentem-se mais confortáveis apoiando do que liderando. São o mecanismo oculto que mantém a máquina a funcionar.
-
-Possuem grande capacidade de adaptação. Conseguem compreender profundamente as pessoas e assumir diferentes papéis para criar harmonia. No entanto, devem ter cuidado para não perder a própria identidade.
-
-O número dois é altruísta e cheio de amor. A família é extremamente importante. Precisam de um parceiro e prosperam em relações de parceria.
-
-O lado negativo inclui indecisão, dependência emocional e necessidade de aprovação.
-
-Trabalho  
-Excelentes mediadores, negociadores e comunicadores. Funcionam melhor com orientação.
-
-Amor  
-Românticos, sensíveis e dedicados. Procuram harmonia e estabilidade.
-
-Saúde  
-Devem cuidar do coração, estômago e sistema emocional.
-
-Realização  
-Devem desenvolver independência e confiar em si mesmos.`,
-
-3:`Ser comprometido e compenetrado
-Caminho de Vida 3
-
-O número três é o número da criatividade, da expressão e da alegria de viver. Pessoas com esta vibração possuem imaginação fértil, entusiasmo e uma energia naturalmente contagiante. São comunicativas, espontâneas e gostam de partilhar ideias, emoções e experiências.
-
-Têm grande capacidade de inspirar outras pessoas e normalmente são vistas como companhia agradável e motivadora. A sua leveza e humor ajudam a ultrapassar momentos difíceis.
-
-O número três é ativo, ambicioso e deseja deixar marca no mundo. Procura reconhecimento e gosta de estar rodeado de pessoas de sucesso. São guiados pelo sentimento e pela intuição, o que pode torná-los sensíveis e facilmente magoados.
-
-O lado negativo manifesta-se através da dispersão, falta de disciplina, promessas não cumpridas e dificuldade em concluir projetos.
-
-Trabalho  
-Podem destacar-se como comunicadores, artistas, professores, escritores ou empreendedores.
-
-Amor  
-Românticos, intensos e emocionais. Precisam sentir-se amados e valorizados.
-
-Saúde  
-Devem cuidar do sistema nervoso e emocional.
-
-Realização  
-Devem aprender a concluir o que começam e confiar na própria criatividade.`,
-
-4:`Ser prático e organizado
-Caminho de Vida 4
-
-O número quatro representa estrutura, disciplina e construção. É o pilar da sociedade, ligado ao trabalho duro, responsabilidade e estabilidade. Pessoas com esta vibração são confiáveis, persistentes e metódicas.
-
-Planeiam, organizam e cumprem as suas obrigações até ao fim. Gostam de rotinas, regras e segurança. A autodisciplina é uma das suas maiores forças.
-
-A vida do número quatro exige esforço e persistência. Raramente recebem resultados fáceis, mas quando perseveram são recompensados com segurança e estabilidade.
-
-Podem ser rígidos, teimosos e excessivamente conservadores quando em desequilíbrio.
-
-Trabalho  
-Excelentes organizadores, gestores, engenheiros, arquitetos e profissionais técnicos.
-
-Amor  
-Fiéis, leais e comprometidos com a família.
-
-Saúde  
-Devem cuidar dos ossos, dentes e sistema digestivo.
-
-Realização  
-Devem aprender a equilibrar trabalho e prazer e permitir-se viver com mais leveza.`,
-
- 5:`Ser livre e experimentar a vida
-Caminho de Vida 5
-
-O número cinco simboliza liberdade, movimento, curiosidade e expansão através das experiências. Pessoas com esta vibração possuem uma energia inquieta e dinâmica, que as impulsiona a buscar constantemente novidades, mudanças e desafios. São naturalmente curiosas e desejam conhecer o mundo em todas as suas formas, culturas e possibilidades.
-
-A rotina pode ser extremamente limitante para o número cinco, pois sua natureza precisa de estímulos constantes para se sentir viva e motivada. São comunicativas, carismáticas e possuem grande facilidade para se adaptar a ambientes e pessoas diferentes. Mudanças inesperadas raramente as assustam; pelo contrário, costumam vê-las como oportunidades.
-
-Possuem grande versatilidade e aprendem rapidamente. São excelentes divulgadores de ideias, inovadores e inspiradores. Sua mente é aberta, flexível e criativa, o que lhes permite enxergar soluções onde outros veem obstáculos.
-
-No lado negativo, podem apresentar impulsividade, inquietação e dificuldade em manter compromissos de longo prazo. Existe tendência a excessos, dispersão de energia e busca constante por prazer imediato. Podem iniciar muitos projetos e concluir poucos se não desenvolverem disciplina.
-
-Trabalho  
-Destacam-se em áreas que envolvem comunicação, viagens, marketing, vendas, tecnologia, mídia, eventos e inovação. Precisam de liberdade e autonomia para prosperar.
-
-Amor  
-São apaixonados, intensos e sedutores. Precisam de espaço e independência para manter relacionamentos saudáveis.
-
-Saúde  
-Devem cuidar do sistema nervoso e evitar excessos e hábitos impulsivos.
-
-Realização  
-O aprendizado principal é transformar liberdade em responsabilidade e experiência em sabedoria.`,
-
-6:`Ser proficiente e solidário
-Caminho de Vida 6
-
-O número seis representa amor, responsabilidade, cuidado e compromisso com os outros. Pessoas com esta vibração possuem um forte senso de dever, proteção e dedicação aos relacionamentos, especialmente familiares. A família, o lar e a harmonia emocional são pilares fundamentais da sua vida.
-
-São naturalmente generosas, empáticas e acolhedoras. Possuem grande capacidade de escuta e aconselhamento, tornando-se frequentemente o apoio emocional das pessoas ao seu redor. Buscam ambientes harmoniosos, belos e organizados, valorizando conforto e estabilidade.
-
-Possuem senso de justiça e forte desejo de ajudar. Muitas vezes assumem responsabilidades que não são suas, movidas pelo desejo de proteger e cuidar. São confiáveis, leais e comprometidas com quem amam.
-
-No lado negativo, podem tornar-se controladoras, excessivamente responsáveis ou sacrificarem as próprias necessidades em prol dos outros. A necessidade de aprovação pode gerar frustrações e sobrecarga emocional.
-
-Trabalho  
-Destacam-se em áreas ligadas à educação, saúde, estética, psicologia, arte, decoração, cuidados e assistência social.
-
-Amor  
-Românticos, fiéis e dedicados, buscam relacionamentos estáveis e duradouros.
-
-Saúde  
-Devem cuidar do coração, sistema respiratório e equilíbrio emocional.
-
-Realização  
-O aprendizado principal é equilibrar o cuidado com os outros e o cuidado consigo mesmo.`,
-
-7:`Ser tolerante e desenvolver sabedoria interior
-Caminho de Vida 7
-
-O número sete simboliza conhecimento, introspecção, espiritualidade e busca pela verdade. Pessoas com esta vibração possuem uma mente investigativa, analítica e profundamente observadora. Sentem uma necessidade natural de compreender o sentido da vida, da existência e dos mistérios que cercam a realidade.
-
-São naturalmente introspectivas e reservadas, preferindo momentos de solitude para refletir, estudar e desenvolver seu mundo interior. A intuição é uma das maiores forças do número sete, mesmo quando inicialmente ignorada em favor da lógica e da razão.
-
-Possuem grande capacidade de análise, senso crítico e desejo constante de aprender. São atraídas por ciência, filosofia, espiritualidade e temas profundos. Muitas vezes sentem-se diferentes das outras pessoas, como se observassem o mundo de fora.
-
-No aspecto positivo, manifestam sabedoria, discernimento, percepção aguçada e capacidade de aconselhamento. No aspecto negativo, podem desenvolver isolamento, desconfiança, pessimismo e excesso de crítica.
-
-Trabalho  
-Destacam-se em pesquisa, ciência, tecnologia, espiritualidade, psicologia, filosofia e áreas intelectuais.
-
-Amor  
-Precisam de profundidade emocional e conexão mental; relacionamentos superficiais não os satisfazem.
-
-Saúde  
-Devem cuidar do sistema nervoso, mente e níveis de estresse.
-
-Realização  
-O aprendizado principal é equilibrar razão e espiritualidade, transformando conhecimento em sabedoria.`,
-
-8:`Ser capaz de manter o equilíbrio pessoal
-Caminho de Vida 8
-
-O número oito representa poder, autoridade, realização material, justiça e liderança. Pessoas com esta vibração possuem grande capacidade de organização, ambição e visão estratégica. São naturalmente voltadas para conquistas, resultados e construção de estabilidade financeira e profissional.
-
-Possuem forte senso de responsabilidade e capacidade de liderança. Sentem necessidade de construir algo duradouro e alcançar reconhecimento através do esforço e da disciplina. A energia do número oito busca equilíbrio entre o mundo material e o espiritual.
-
-No aspecto positivo, manifestam determinação, capacidade de gestão, foco, perseverança e senso de justiça. Possuem habilidade para lidar com desafios e superar obstáculos com resiliência.
-
-No aspecto negativo, podem desenvolver materialismo excessivo, rigidez, autoritarismo e dificuldade em expressar emoções. O excesso de ambição pode gerar estresse e sobrecarga.
-
-Trabalho  
-Destacam-se em negócios, administração, empreendedorismo, finanças, política e liderança.
-
-Amor  
-Precisam aprender a equilibrar vida profissional e afetiva, valorizando emoções e relações.
-
-Saúde  
-Devem cuidar do sistema digestivo, ossos e níveis de estresse.
-
-Realização  
-O aprendizado principal é usar poder e recursos com sabedoria, ética e equilíbrio.`,
-
-9:`Ser sensato, compassivo e humanitário
-Caminho de Vida 9
-
-O número nove simboliza compaixão, altruísmo, sabedoria emocional e conclusão de ciclos. Pessoas com esta vibração possuem forte senso humanitário e desejo de contribuir para o bem coletivo. São naturalmente empáticas, generosas e sensíveis às necessidades dos outros.
-
-Possuem visão ampla da vida e facilidade para compreender diferentes realidades e perspectivas. Sentem necessidade de ajudar, orientar e inspirar as pessoas ao seu redor. A energia do número nove está ligada ao desapego e à transformação.
-
-No aspecto positivo, manifestam generosidade, tolerância, empatia, criatividade e espiritualidade. Possuem grande capacidade de inspirar e influenciar positivamente.
-
-No aspecto negativo, podem desenvolver melancolia, idealismo excessivo, frustração e tendência ao isolamento emocional. Precisam aprender a equilibrar emoção e realidade.
-
-Trabalho  
-Destacam-se em áreas humanitárias, arte, educação, saúde, espiritualidade e assistência social.
-
-Amor  
-Buscam relações profundas, sinceras e baseadas em valores e propósito.
-
-Saúde  
-Devem cuidar da saúde emocional e evitar sobrecarga mental.
-
-Realização  
-O aprendizado principal é praticar desapego, compaixão e servir ao coletivo com equilíbrio.`
-
+    1: `<p>O Caminho de Vida de <strong>[NOME]</strong> é marcado pela autossuficiência. É a trilha da coragem e da honestidade, onde <strong>[NOME]</strong> frequentemente se vê à frente de seu tempo como um inovador.</p>
+<p>Sua paixão e entusiasmo são contagiosos, mas <strong>[NOME]</strong> precisa de reconhecimento constante. O fracasso deve ser visto como um degrau para o aprimoramento. No amor, <strong>[NOME]</strong> busca liderar, mas deve respeitar a liberdade do parceiro.</p>
+<p><strong>Foco:</strong> Permanecer fiel à voz interior e evitar o autoritarismo.</p>`,
+
+    2: `<p>Para <strong>[NOME]</strong>, este caminho se resume em cooperação. <strong>[NOME]</strong> atua como um diplomata natural, buscando harmonia e preferindo os bastidores aos holofotes.</p>
+<p>O apoio e a parceria são essenciais para que <strong>[NOME]</strong> prospere. No entanto, é preciso cuidado para não se tornar dependente da aprovação alheia. A família é o alicerce central deste caminho.</p>
+<p><strong>Foco:</strong> Desenvolver independência emocional e confiar no próprio potencial de mediação.</p>`,
+
+    3: `<p>O caminho de <strong>[NOME]</strong> é vibrante, focado na criatividade e na expressão da alegria. <strong>[NOME]</strong> possui uma energia contagiante que motiva e inspira quem está ao redor.</p>
+<p>Guiado pela intuição, <strong>[NOME]</strong> busca o sucesso social, mas deve lutar contra a dispersão. O desafio é concluir o que começa sem perder a leveza natural.</p>
+<p><strong>Foco:</strong> Transformar o talento comunicativo em realizações concretas com disciplina.</p>`,
+
+    4: `<p>Este caminho exige de <strong>[NOME]</strong> construção e disciplina. <strong>[NOME]</strong> é o pilar que sustenta projetos através do trabalho duro, da responsabilidade e do método.</p>
+<p>A segurança e a rotina são aliadas de <strong>[NOME]</strong>, mas a rigidez pode ser um obstáculo. Resultados sólidos virão através da persistência contínua.</p>
+<p><strong>Foco:</strong> Equilibrar o trabalho árduo com momentos de leveza e prazer pessoal.</p>`,
+
+    5: `<p>A liberdade é o guia de <strong>[NOME]</strong> neste caminho. É uma jornada de movimento, curiosidade e expansão através de experiências diretas e mudanças constantes.</p>
+<p><strong>[NOME]</strong> adapta-se rapidamente, mas precisa evitar a busca por prazer imediato que gera dispersão. A versatilidade de <strong>[NOME]</strong> é sua maior ferramenta de inovação.</p>
+<p><strong>Foco:</strong> Aprender que a verdadeira liberdade caminha junto com a responsabilidade.</p>`,
+
+    6: `<p>O caminho de <strong>[NOME]</strong> é o do amor e da solidariedade. Existe um forte senso de dever em relação à família e à comunidade, tornando <strong>[NOME]</strong> um porto seguro para os outros.</p>
+<p>A harmonia emocional é fundamental. <strong>[NOME]</strong> deve ter cuidado para não assumir pesos que não lhe pertencem, evitando a sobrecarga.</p>
+<p><strong>Foco:</strong> Equilibrar a doação aos outros com o autocuidado essencial.</p>`,
+
+    7: `<p>Este é o caminho da sabedoria interior para <strong>[NOME]</strong>. É uma jornada de introspecção, estudo e busca por verdades profundas que explicam a existência.</p>
+<p>A intuição de <strong>[NOME]</strong> é aguçada, mas o isolamento excessivo pode ser um risco. O conhecimento acumulado deve servir para iluminar o caminho de <strong>[NOME]</strong> e dos outros.</p>
+<p><strong>Foco:</strong> Integrar a razão e a espiritualidade no cotidiano prático.</p>`,
+
+    8: `<p>O caminho de <strong>[NOME]</strong> envolve poder, autoridade e liderança material. É uma trilha de ambição estratégica, onde a gestão de recursos e pessoas é o ponto central.</p>
+<p><strong>[NOME]</strong> possui resiliência para superar obstáculos, mas deve evitar que o materialismo sufoque sua expressão emocional.</p>
+<p><strong>Foco:</strong> Exercer a liderança com ética, justiça e equilíbrio humano.</p>`,
+
+    9: `<p><strong>[NOME]</strong> percorre um caminho humanitário e compassivo. É a trilha do desapego, da sabedoria emocional e da conclusão de ciclos importantes.</p>
+<p>A empatia de <strong>[NOME]</strong> permite compreender diferentes realidades. O desafio é não se deixar abater pelo idealismo excessivo quando a realidade se mostra dura.</p>
+<p><strong>Foco:</strong> Praticar a compaixão universal mantendo o equilíbrio emocional próprio.</p>`
   },
 
+  // ======================
+  // PROPÓSITO (1–9)
+  // ======================
   Propósito: {
-1:`Conhecer seus limites
-Propósito de Vida 1
+    1: `<p>O propósito de <strong>[NOME]</strong> é viver com originalidade e coragem. <strong>[NOME]</strong> deve buscar autonomia para agir sem depender dos outros, liderando sua própria história.</p>
+<p>Aprender a dominar o ego e expor sentimentos com clareza será o diferencial para que <strong>[NOME]</strong> alcance a felicidade real e o respeito por sua competência.</p>`,
 
-Você precisa viver sua vida com originalidade e coragem. Seja uma pessoa firme, decidida e independente para ter autonomia e liberdade de agir sozinho, sem ter que depender de outras pessoas. Para ter o controle de sua vida e dos caminhos que segue, deve agir com confiança e determinação. Precisará aprender a dominar o ego e a expor seus sentimentos com maturidade e clareza.
+    2: `<p>O propósito de <strong>[NOME]</strong> é ser um conciliador que confia no próprio potencial. <strong>[NOME]</strong> deve usar sua gentileza para unir pessoas, sem se anular ou se deixar manipular.</p>
+<p>Atuar com sabedoria nos bastidores trará a <strong>[NOME]</strong> a harmonia necessária para sua evolução pessoal e profissional.</p>`,
 
-Você tem grandes qualidades; no entanto, controlar sua rigidez, opiniões e crenças enraizadas lhe ajudará a alcançar a felicidade com mais facilidade. Você é um indivíduo único e seu objetivo de vida deve se basear em ser capaz de se definir como tal. Deve agir de forma audaciosa, com autenticidade e personalidade, buscando novas perspectivas e tendo coragem para descobrir e seguir novos caminhos sem se deixar abater pelas derrotas.
+    3: `<p>O propósito de <strong>[NOME]</strong> é levar alegria e criatividade ao mundo. <strong>[NOME]</strong> deve se expressar com autenticidade, evitando o exibicionismo e focando no que é realmente produtivo.</p>
+<p>Ao usar sua comunicação de forma construtiva, <strong>[NOME]</strong> abrirá portas valiosas para si e para os outros.</p>`,
 
-Suas ações devem ser orientadas pela razão e pela consciência. Deve saber se impor pela competência, obtendo respeito e reconhecimento sem se tornar intolerante, autoritário ou controlador. O equilíbrio entre liderança e sensibilidade será essencial para sua evolução.
+    4: `<p>O propósito de <strong>[NOME]</strong> é construir estabilidade. <strong>[NOME]</strong> deve ser o exemplo de confiabilidade, criando bases sólidas através da disciplina e do planejamento constante.</p>
+<p>Ao equilibrar a responsabilidade com a leveza, <strong>[NOME]</strong> transformará seu esforço em um legado duradouro.</p>`,
 
-Aprenda a conhecer seus limites e a resolver seus próprios problemas sem esperar que alguém faça isso por você. A maturidade trará mais confiança, experiência e estabilidade emocional. Desenvolver autoconfiança, persistência e equilíbrio interior será essencial para alcançar suas realizações.`,
+    5: `<p>O propósito de <strong>[NOME]</strong> é a adaptabilidade. <strong>[NOME]</strong> deve estar aberto a mudanças e novas experiências, aprendendo a controlar impulsos para agir com maturidade.</p>
+<p>Desenvolver disciplina permitirá que <strong>[NOME]</strong> transforme as múltiplas oportunidades que surgem em conquistas reais.</p>`,
 
-2:`Confiar em seu potencial
-Propósito de Vida 2
+    6: `<p>O propósito de <strong>[NOME]</strong> é ser um pacificador zeloso. <strong>[NOME]</strong> deve criar harmonia nos relacionamentos, oferecendo apoio sem absorver os problemas alheios como se fossem seus.</p>
+<p>A honestidade e o equilíbrio emocional serão as chaves para que <strong>[NOME]</strong> encontre estabilidade e paz.</p>`,
 
-Seja um conciliador sem se subestimar ou se deixar influenciar pelas circunstâncias ou pelas pessoas. Seja realista e aja por seus princípios, não apenas para agradar os outros. Use sua sensibilidade e gentileza para unir pessoas e criar cooperação em torno de seus objetivos.
+    7: `<p>O propósito de <strong>[NOME]</strong> é a integração social e a busca pela sabedoria. <strong>[NOME]</strong> deve compartilhar seu conhecimento e permitir que as pessoas se aproximem de seu mundo interno.</p>
+<p>Superar o isolamento e expressar sentimentos com clareza são os passos essenciais para a evolução de <strong>[NOME]</strong>.</p>`,
 
-Seja participativo e colaborador, mas não tente ser o centro das atenções ou se colocar em evidência. Você precisa de harmonia para evoluir, portanto permita que pessoas mais extrovertidas ocupem os holofotes enquanto você atua com sabedoria nos bastidores.
+    8: `<p>O propósito de <strong>[NOME]</strong> é a liderança justa e estratégica. <strong>[NOME]</strong> deve assumir responsabilidades com compromisso, usando sua autoridade para construir progresso com integridade.</p>
+<p>Evitar a prepotência e cultivar a paciência garantirá que o sucesso material de <strong>[NOME]</strong> seja sustentável.</p>`,
 
-Tenha como objetivo de vida ser equilibrado, cooperativo, paciente e compreensivo. Confie em seu potencial e aprenda a esperar o momento certo para agir, sem ansiedade ou insegurança. Evite permitir manipulações ou influências negativas que possam abalar sua autoestima.
-
-Utilize sua diplomacia para alcançar seus objetivos com serenidade. Ouça opiniões, mas absorva apenas o que for útil e verdadeiro para sua evolução. O autoconhecimento e a autoconfiança serão fundamentais para evitar frustrações e fortalecer sua jornada.`,
-
-3:`Ser modesto e criativo
-Propósito de Vida 3
-
-Use sua criatividade e suas experiências para tomar decisões. Busque se destacar com autenticidade, sem exibicionismo. Explore sua capacidade de comunicação e sociabilidade sem se deixar levar por ilusões ou pela opinião alheia.
-
-Existe em sua natureza uma inquietação e necessidade de movimento. Mantenha-se alegre e confiante, evitando que frustrações apaguem seu brilho. Você possui a habilidade de enxergar o lado positivo da vida e encontrar soluções criativas.
-
-Seu objetivo deve ser levar alegria às pessoas por meio da criatividade e da autoexpressão. Desenvolver talentos artísticos, comunicativos e criativos abrirá caminhos importantes para sua evolução.
-
-Aprender a se expressar com clareza será essencial para alcançar suas realizações. Evite dispersar sua energia e concentre-se no que realmente é produtivo e significativo.`,
-
-4:`Ser estável e confiável
-Propósito de Vida 4
-
-Seja organizado, estável e confiável. Crie bases sólidas para enfrentar a vida com disciplina, precisão e responsabilidade. O trabalho constante e a persistência serão fundamentais para suas conquistas.
-
-Você prospera por meio da organização, planejamento e objetivos claros. Evite criar expectativas irreais e concentre-se no desenvolvimento prático e consistente.
-
-Seus resultados virão através de esforço, dedicação e disciplina. Evite riscos desnecessários e mantenha o foco em caminhos seguros e estruturados.
-
-Expresse suas ideias, mas não fique preso a pequenos detalhes. Aprenda a equilibrar responsabilidade com leveza para aproveitar melhor a vida.`,
-
-5:`Ser adaptável e disciplinado
-Propósito de Vida 5
-
-Este objetivo de vida exige abertura para experiências e aceitação das mudanças. A curiosidade e a coragem serão fundamentais para explorar novos caminhos e aproveitar oportunidades.
-
-Seu caminho envolve liberdade com responsabilidade. Haverá muitas oportunidades, mas será necessário evitar dispersão e excesso de compromissos.
-
-Aprenda a controlar impulsos e agir com maturidade. Desenvolver disciplina será essencial para transformar oportunidades em conquistas reais.
-
-Cultive independência, mas respeite regras e opiniões. O equilíbrio entre liberdade e responsabilidade será o segredo do sucesso.`,
-
-6:`Ser zeloso e pacificador
-Propósito de Vida 6
-
-Seu objetivo é criar harmonia e equilíbrio nos relacionamentos. Seja confiável, sereno e responsável, mas evite sacrificar suas necessidades pessoais.
-
-Desenvolva empatia, generosidade e compreensão sem absorver os problemas alheios. Aprenda a ajudar sem assumir responsabilidades que não são suas.
-
-A honestidade e a disposição para ajudar serão grandes diferenciais. Busque equilíbrio emocional e estabilidade nos relacionamentos.
-
-Construa relações saudáveis baseadas em respeito, amor e compreensão.`,
-
-7:`Ser sociável e se integrar com as pessoas
-Propósito de Vida 7
-
-Existe uma forte necessidade de autoconhecimento e busca por sabedoria. Compartilhe conhecimento e supere preconceitos.
-
-Evite isolamento excessivo e permita que as pessoas se aproximem de você. A comunicação emocional será essencial para evitar solidão.
-
-Seja tolerante com limitações alheias e aprenda a expressar sentimentos com clareza.
-
-A integração social será parte essencial da sua evolução.`,
-
-8:`Ser justo e estratégico
-Propósito de Vida 8
-
-Assuma responsabilidades com disciplina e comprometimento. Use sua autoridade com sabedoria e equilíbrio.
-
-Planejamento, estratégia e justiça serão fundamentais para suas conquistas materiais e profissionais.
-
-Evite rigidez, prepotência e excesso de ambição. Desenvolva paciência e tolerância.
-
-Seu caminho envolve liderança equilibrada e integridade.`,
-
-9:`Ser realista
-Propósito de Vida 9
-
-Compartilhe conhecimento, leve esperança e inspire pessoas. Desenvolva visão humanitária e mente aberta.
-
-Evite idealismo excessivo e mantenha os pés no chão. Inspire sem impor ideias.
-
-Ajude sem esperar reconhecimento. Aprenda a equilibrar altruísmo e necessidades pessoais.
-
-Seu desafio é agir com compaixão e realismo ao mesmo tempo.`
-
+    9: `<p>O propósito de <strong>[NOME]</strong> é agir com compaixão e realismo. <strong>[NOME]</strong> deve inspirar pessoas e levar esperança, mantendo os pés no chão para que seu idealismo gere frutos práticos.</p>
+<p>Ao ajudar sem esperar reconhecimento, <strong>[NOME]</strong> cumprirá sua missão humanitária com plenitude.</p>`
   },
 
+  // ======================
+  // MATURIDADE (1–9)
+  // ======================
   maturidade: {
-1:`Maturidade 1
-Com o amadurecimento cresce a necessidade de independência, liderança e reconhecimento. A confiança nos próprios instintos aumenta e o desejo de progresso se intensifica. Você tende a assumir o comando das situações e buscar recompensas pelo esforço realizado. Deve evitar arrogância, rigidez e impaciência com limitações. 
+    1: `<p>Na maturidade de <strong>[NOME]</strong>, a necessidade de independência e o instinto de liderança tornam-se centrais. <strong>[NOME]</strong> sentirá um impulso renovado para assumir o comando de sua própria vida.</p>
+<p>É um período para colher recompensas pela iniciativa. O desafio para <strong>[NOME]</strong> será evitar a rigidez e a impaciência com quem não acompanha seu ritmo.</p>`,
 
-A iniciativa e determinação tornam-se cada vez mais fortes. Construir relações e alianças será essencial para o equilíbrio. Muitos 1’s indicam cuidado com autoritarismo e egoísmo. Poucos 1’s indicam fortalecimento da autonomia e do sucesso pessoal.`,
+    2: `<p>A fase madura de <strong>[NOME]</strong> fortalece a diplomacia e a sensibilidade. <strong>[NOME]</strong> sentirá uma necessidade maior de harmonia nas conexões pessoais e um talento natural para mediar conflitos.</p>
+<p>Para <strong>[NOME]</strong>, a influência virá mais pela persuasão gentil do que pela imposição de vontades.</p>`,
 
-2:`Maturidade 2
-A maturidade fortalece a habilidade de cooperação, diplomacia e sensibilidade emocional. Cresce a necessidade de conexão e harmonia nos relacionamentos. A percepção das motivações alheias torna-se mais clara e o talento para mediação aumenta. 
+    3: `<p>Com o tempo, <strong>[NOME]</strong> sentirá um florescimento da criatividade e do desejo de socializar. A maturidade traz para <strong>[NOME]</strong> uma fase de maior extroversão e busca por prazeres intelectuais e sociais.</p>
+<p>O desafio será manter o foco para não dispersar essa energia vibrante em atividades superficiais.</p>`,
 
-É importante desenvolver autoconfiança e limites emocionais. A influência acontece mais pela persuasão do que pela imposição. Pode haver pouca valorização externa, mas grande satisfação em conquistas coletivas. Muitos 2’s indicam sensibilidade excessiva. Poucos 2’s indicam crescimento da capacidade de trabalhar em equipe.`,
+    4: `<p>A maturidade de <strong>[NOME]</strong> traz realismo e organização. É um tempo de consolidar conquistas concretas e garantir a segurança daqueles que <strong>[NOME]</strong> ama.</p>
+<p>Embora a rotina traga conforto, <strong>[NOME]</strong> deve se policiar para não se tornar excessivamente teimoso ou resistente ao novo.</p>`,
 
-3:`Maturidade 3
-Com o tempo surge maior extroversão, criatividade e desejo de prazer e socialização. A comunicação melhora e a popularidade tende a crescer. Há busca por leveza, diversão e expressão pessoal. O desafio é evitar dispersão, superficialidade e falta de disciplina. 
+    5: `<p>Na maturidade, <strong>[NOME]</strong> sentirá um forte desejo de renovação. A vontade de viajar, conhecer novas culturas e experimentar a liberdade será o motor de <strong>[NOME]</strong>.</p>
+<p>O carisma de <strong>[NOME]</strong> estará no auge, sendo essencial canalizar essa inquietude para projetos que tragam significado real.</p>`,
 
-A maturidade traz mais alegria e vida social ativa. Desenvolver foco e priorização será essencial. Muitos 3’s indicam tendência à irresponsabilidade. Poucos 3’s indicam relaxamento e maior capacidade de aproveitar a vida.`,
+    6: `<p>A fase madura amplia o papel de <strong>[NOME]</strong> como orientador e protetor. <strong>[NOME]</strong> será o pilar emocional da família e dos amigos próximos.</p>
+<p>É vital que <strong>[NOME]</strong> aprenda a cuidar de si mesmo com a mesma dedicação que oferece generosamente ao seu círculo afetivo.</p>`,
 
-4:`Maturidade 4
-A maturidade fortalece praticidade, organização e realismo. Cresce a necessidade de rotina, estabilidade e realização através do esforço. Pode surgir medo de mudanças e tendência à rigidez. É importante manter abertura para oportunidades e espontaneidade. 
+    7: `<p>A maturidade de <strong>[NOME]</strong> é marcada por um profundo mergulho no autoconhecimento. O interesse por filosofia e espiritualidade se torna a base da vida de <strong>[NOME]</strong>.</p>
+<p>Sua sabedoria interior se tornará evidente para todos, desde que <strong>[NOME]</strong> evite o isolamento excessivo.</p>`,
 
-A fase madura favorece conquistas concretas e segurança para família e amigos. Desenvolver empatia e flexibilidade será essencial. Muitos 4’s indicam risco de teimosia e intolerância. Poucos 4’s indicam aprendizado sobre disciplina e organização.`,
+    8: `<p>Na maturidade, <strong>[NOME]</strong> equilibrará o sucesso material com um propósito maior. O foco deixa de ser apenas a conquista pessoal e passa a ser o benefício coletivo.</p>
+<p>A integridade e o senso de justiça de <strong>[NOME]</strong> serão as marcas registradas de sua influência social nesta fase.</p>`,
 
-5:`Maturidade 5
-Com o passar dos anos cresce o desejo de liberdade, variedade e novas experiências. A curiosidade e a vontade de viajar e conhecer pessoas aumentam. Pode surgir inquietação com rotina e compromissos rígidos. A criatividade e o carisma tornam-se mais fortes. 
-
-O desafio é manter disciplina e foco. Existe tendência a iniciar projetos e perder interesse rapidamente. Muitos 5’s indicam dispersão de energia. Poucos 5’s indicam maior adaptação às mudanças e disposição para riscos.`,
-
-6:`Maturidade 6
-A maturidade amplia o desejo de cuidar, proteger e orientar pessoas próximas. Cresce o senso de responsabilidade com família e relações. Surge o papel natural de conselheiro e apoio emocional. O desafio é evitar sobrecarga e perfeccionismo. 
-
-É importante cuidar de si com a mesma dedicação dada aos outros. Muitos 6’s indicam idealismo e exigência excessiva. Poucos 6’s indicam fortalecimento dos vínculos afetivos.`,
-
-7:`Maturidade 7
-Com a maturidade aumenta a busca por conhecimento, sentido e autoconhecimento. Cresce o interesse por filosofia, espiritualidade e estudo profundo. Surge maior necessidade de privacidade e reflexão. O desafio é evitar isolamento e excesso de crítica. 
-
-A sabedoria interior torna-se mais evidente com o tempo. Muitos 7’s indicam tendência ao isolamento. Poucos 7’s indicam aprofundamento intelectual e especialização.`,
-
-8:`MT 8
-A maturidade reduz a obsessão por sucesso material e aumenta o foco no equilíbrio pessoal. Cresce o desejo de usar poder e recursos para beneficiar outros. Surge maior reconhecimento e influência social. O desafio é evitar arrogância e apego ao dinheiro. 
-
-Integridade e justiça tornam-se fundamentais. Muitos 8’s indicam risco de ganância. Poucos 8’s indicam oportunidade de estabilidade e tranquilidade.`,
-
-9:`Maturidade 9
-Com o tempo cresce o desejo de contribuir para o bem coletivo e deixar legado positivo. A sensibilidade social e o idealismo aumentam. Surge forte interesse por cultura, arte e causas humanitárias. O desafio é equilibrar generosidade com autocuidado. 
-
-Evite impor ajuda ou negligenciar suas próprias necessidades. Muitos 9’s indicam risco de arrogância e alienação. Poucos 9’s indicam sensação de pertencimento e realização.`
-
+    9: `<p>O amadurecimento traz para <strong>[NOME]</strong> o desejo de deixar um legado positivo para a humanidade. A sensibilidade social e o altruísmo de <strong>[NOME]</strong> estarão muito presentes.</p>
+<p><strong>[NOME]</strong> encontrará realização ao servir ao próximo, equilibrando essa doação com o necessário autocuidado.</p>`
   },
 
+  // ======================
+  // RELACIONAMENTO (1–9)
+  // ======================
   relacionamento: {
-   1:`A vibração 1 está ligada a pessoas intensas, apaixonadas e imaginativas. Seus sentimentos costumam nascer de sonhos, fantasias e idealizações, podendo ser muito fortes no início, mas tendem a enfraquecer quando não encontram base racional e estabilidade emocional.
-Mesmo possuindo grande magnetismo pessoal e capacidade de convencer e influenciar o parceiro, quem possui essa vibração costuma demonstrar indecisão no campo afetivo. 
+    1: `<p>No amor, <strong>[NOME]</strong> é intenso e apaixonado. Seus sentimentos nascem de ideais fortes e magnetismo pessoal. Embora <strong>[NOME]</strong> atraia parceiros facilmente, pode enfrentar momentos de indecisão afetiva.</p>
+<p>A necessidade de liberdade é vital para <strong>[NOME]</strong>. A felicidade conjugal virá quando <strong>[NOME]</strong> aprender a equilibrar seus impulsos por novidade com o compromisso e a responsabilidade afetiva.</p>`,
 
-Existe facilidade tanto para atrair pessoas fiéis e benéficas quanto relacionamentos marcados por ciúme e conflitos. 
+    2: `<p><strong>[NOME]</strong> é criterioso e sensível nas escolhas amorosas, valorizando a harmonia e a estabilidade emocional acima de tudo. O romantismo é uma marca forte de <strong>[NOME]</strong>.</p>
+<p>Para prosperar, <strong>[NOME]</strong> precisa de um parceiro prático que ofereça segurança. O desafio de <strong>[NOME]</strong> é fortalecer sua autonomia emocional para não se tornar influenciável demais no relacionamento.</p>`,
 
-A busca constante por novidade desperta o desejo de variedade e experiências diferentes, o que pode gerar tentações repentinas e paixões intensas.
+    3: `<p>Com charme e sociabilidade, <strong>[NOME]</strong> costuma ter uma vida afetiva movimentada. <strong>[NOME]</strong> busca parceiros que compartilhem de sua sensibilidade e interesses intelectuais.</p>
+<p>A comunicação clara é o segredo para <strong>[NOME]</strong> evitar mal-entendidos. Ao amadurecer, <strong>[NOME]</strong> encontra vínculos profundos baseados na compreensão mútua e na leveza.</p>`,
 
-Essa inquietação pode dificultar a construção de vínculos duradouros se não houver dedicação e compromisso.
-É comum sentir necessidade de liberdade e espaço dentro da relação.
-Por isso, é essencial cultivar lealdade, disciplina emocional e responsabilidade afetiva.
+    4: `<p>Para <strong>[NOME]</strong>, a segurança emocional é a prioridade absoluta no amor. <strong>[NOME]</strong> valoriza o compromisso duradouro e vê o casamento como uma estrutura sólida a ser construída com zelo.</p>
+<p><strong>[NOME]</strong> é protetor e dedicado, mas deve evitar cobranças excessivas sobre o parceiro. O amor de <strong>[NOME]</strong> é provado através da lealdade e da constância no dia a dia.</p>`,
 
-Casamentos e uniões costumam surgir de forma inesperada e em contextos variados.
+    5: `<p>O relacionamento para <strong>[NOME]</strong> precisa ser uma aventura constante. <strong>[NOME]</strong> tem pavor da rotina e busca parceiros flexíveis que respeitem seu espaço e sua sede de experiências.</p>
+<p>A maturidade traz para <strong>[NOME]</strong> uma estabilidade maior, muitas vezes transformando antigas paixões em amizades duradouras. A felicidade de <strong>[NOME]</strong> surge ao unir emoção com disciplina.</p>`,
 
-Relacionamentos podem começar em viagens, eventos, estudos ou encontros casuais.
+    6: `<p><strong>[NOME]</strong> vive o amor com dedicação e lealdade total. Mesmo com certa timidez inicial, <strong>[NOME]</strong> busca a pessoa ideal com persistência e investe tudo na harmonia do lar.</p>
+<p>A necessidade de se sentir amado é o motor de <strong>[NOME]</strong>. Ao equilibrar a possessividade com a confiança, <strong>[NOME]</strong> constrói relações de cumplicidade profunda.</p>`,
 
-A estabilidade amorosa depende do esforço consciente em evitar impulsos passageiros.
-Quando há maturidade emocional, a vibração 1 pode construir relações intensas e inspiradoras.
+    7: `<p>No campo afetivo, <strong>[NOME]</strong> é seletivo e valoriza a conexão mental profunda. <strong>[NOME]</strong> precisa conhecer bem o parceiro antes de se entregar ao compromisso.</p>
+<p>A individualidade de <strong>[NOME]</strong> deve ser respeitada. A maturidade traz a <strong>[NOME]</strong> a clareza necessária para escolher relações que respeitem seu silêncio e sua busca por sentido.</p>`,
 
-O desafio é equilibrar liberdade com compromisso.
+    8: `<p><strong>[NOME]</strong> encara o amor com seriedade e busca uniões definitivas. Valoriza a sinceridade e a fidelidade, sendo um parceiro extremamente leal e focado na estabilidade da relação.</p>
+<p><strong>[NOME]</strong> pode ter um perfil dominador, por isso deve exercitar a parceria real. A segurança financeira e emocional caminham juntas para a felicidade de <strong>[NOME]</strong>.</p>`,
 
-A fidelidade nasce da escolha consciente e não da ausência de oportunidades.
-
-Com equilíbrio, pode viver relações cheias de paixão e crescimento mútuo.`,
-
-    2:`A vibração 2 representa pessoas seletivas, sensíveis e criteriosas na escolha de parceiros. 
-    
-São românticas, afetuosas e valorizam relações baseadas em harmonia, segurança e estabilidade emocional.
-
-Buscam vínculos duradouros e costumam investir profundamente quando encontram alguém confiável.
-
-Possuem forte necessidade de estabilidade financeira e emocional para se sentirem seguras.
-
-São pessoas encantadoras e atraentes, mas não gostam de ser controladas.
-Apesar disso, podem ser influenciáveis e precisam evitar interferências externas no relacionamento.
-A imaginação fértil pode levar a idealizações ou paixões difíceis de concretizar.
-Quando não controladas, essas ilusões podem gerar conflitos e frustrações conjugais.
-Valorizam parceiros inteligentes, mas principalmente práticos e responsáveis.
-
-Precisam aprender a fortalecer a autonomia emocional.
-
-O desafio é equilibrar romantismo com realismo.
-
-Relacionamentos prosperam quando há diálogo, confiança e limites claros.
-A maturidade traz maior estabilidade afetiva.
-
-Quando equilibrada, essa vibração favorece relações profundas e duradouras.
-
-O amor é vivido como parceria, cumplicidade e apoio constante.`,
-
-    3:`A vibração 3 está associada ao charme, sociabilidade e forte vida social. 
-    
-Essas pessoas costumam ser muito atraentes e cercadas por amizades e oportunidades amorosas.
-
-Existe grande tendência a iniciar novos relacionamentos ao longo da vida.
-
-Podem cometer erros nas escolhas afetivas e perder tempo em envolvimentos inadequados.
-
-Às vezes, quando encontram a pessoa ideal, as circunstâncias já são complexas.
-
-Possuem forte intuição para compreender motivações humanas.
-
-Geralmente acabam se unindo a parceiros com interesses semelhantes.
-
-Precisam de alguém que compreenda sua sensibilidade e emotividade.
-
-Costumam evitar expor problemas conjugais a terceiros.
-
-Isso pode levá-las a relações desequilibradas se não houver cuidado.
-
-Devem evitar parceiros possessivos ou exploradores.
-
-A estabilidade surge quando aprendem a expressar sentimentos com clareza.
-A comunicação é essencial para a felicidade amorosa.
-
-Com maturidade, encontram vínculos duradouros e enriquecedores.
-
-O amor precisa caminhar junto com leveza e compreensão.`,
-
-  4:`A vibração 4 revela forte necessidade emocional de estabilidade e segurança no amor. 
-  
-Existe grande valorização do casamento e de relações duradouras.
-Homens tendem a ser protetores e dedicados; mulheres mais acessíveis e práticas.
-
-Buscam vínculos sólidos e estruturados.
-
-Podem enfrentar inveja ou interferências externas por falta de discrição.
-
-Há forte valorização da aparência física, o que pode levar a escolhas equivocadas.
-
-Essas escolhas podem gerar decepções e aprendizados importantes.
-Desejam parceiros ativos e fortes.
-
-Cobranças excessivas podem gerar conflitos frequentes.
-
-Precisam desenvolver flexibilidade emocional.
-
-Relacionamentos prosperam com diálogo e equilíbrio.
-
-A segurança emocional é prioridade absoluta.
-
-Com maturidade, constroem relações firmes e confiáveis.
-
-O amor é visto como compromisso e parceria.
-
-A estabilidade afetiva é o maior objetivo.`,
-
-
-    5:`A vibração 5 simboliza inquietação, liberdade e desejo de experiências. 
-    
-Existe forte necessidade de novidades, viagens e mudanças.
-
-Podem viver mais de uma união ao longo da vida.
-
-Possuem carisma e facilidade para conquistar pessoas.
-
-Podem se tornar controladoras se não equilibrar emoções.
-
-Precisam de parceiros compreensivos e flexíveis.
-
-Na juventude, tendem a relacionamentos instáveis.
-
-A maturidade traz maior estabilidade afetiva.
-
-Geralmente casam após os 30 anos.
-
-A amizade costuma permanecer mesmo após separações.
-
-Podem desenvolver parcerias profissionais com ex-companheiros.
-
-Precisam trabalhar constância e compromisso.
-
-A liberdade precisa coexistir com responsabilidade.
-
-Relacionamentos amadurecem com o tempo.
-
-A felicidade surge quando aprendem a equilibrar emoção e disciplina.`,
-
-    6:`A vibração 6 demonstra romantismo, sensibilidade e necessidade de amor. 
-    
-Mesmo apaixonadas, podem ser tímidas na expressão emocional.
-
-Buscam a pessoa ideal com persistência.
-
-Podem enfrentar relacionamentos difíceis até amadurecerem.
-
-São dedicadas, carinhosas e leais.
-
-Precisam de companheirismo constante.
-
-Têm forte necessidade de sentir-se amadas.
-
-Podem desenvolver possessividade se inseguras.
-
-Relacionamentos se estabilizam após os 30 anos.
-
-Precisam aprender a confiar e equilibrar emoções.
-
-A intuição é guia importante no amor.
-
-Com maturidade, vivem relações profundas e duradouras.
-
-A família torna-se prioridade central.
-
-A estabilidade emocional cresce com o tempo.
-
-O amor é vivido com intensidade e dedicação.`,
-
-    7:`A vibração 7 indica dificuldade em encontrar o parceiro ideal. 
-São companheiras e dedicadas, mas seletivas.
-
-Costumam casar jovens e se separar depois.
-
-Podem ter mais de uma união ao longo da vida.
-
-Precisam conhecer profundamente o parceiro antes do compromisso.
-
-Valorizam liberdade e individualidade.
-
-Não lidam bem com separações.
-
-Têm dificuldade em se adaptar a novos relacionamentos.
-
-Podem viver muitos envolvimentos ao longo da vida.
-
-Nem sempre buscam aventuras, mas acabam vivenciando experiências intensas.
-
-A maturidade traz maior clareza emocional.
-
-Relacionamentos tornam-se mais estáveis após os 30 anos.
-
-Precisam equilibrar independência e parceria.
-
-O autoconhecimento é essencial no amor.
-
-A felicidade surge com escolhas conscientes.`,
-
-    8:`A vibração 8 demonstra forte necessidade de segurança emocional. 
-Valorizam estabilidade e compromisso duradouro.
-
-Podem ser dominadoras quando contrariadas.
-
-São sinceras e leais nos relacionamentos.
-
-Buscam uniões definitivas.
-
-Separações costumam ocorrer antes do casamento.
-
-Demoram a superar decepções amorosas.
-
-Dificilmente se casam novamente após separação.
-
-Possuem forte desejo sexual, mas são cautelosas.
-
-Precisam de companheirismo e parceria.
-
-Valorizam relações sólidas e estruturadas.
-
-A estabilidade é prioridade máxima.
-
-Relacionamentos tendem a ser duradouros.
-
-O amor é conduzido com seriedade.
-
-A fidelidade é uma característica marcante.`,
-
-    9:`A vibração 9 vê o casamento como grande objetivo de vida. 
-São capazes de sacrificar sonhos pelo amor.
-
-Buscam amor intenso e verdadeiro.
-
-Podem sofrer desilusões amorosas.
-
-Tendem a idealizar o parceiro.
-
-Na juventude, sentem atração por pessoas mais velhas.
-
-Na maturidade, preferem parceiros mais jovens.
-
-Precisam alinhar vida profissional e afetiva.
-
-Incompatibilidades geram frustrações.
-
-Precisam aprender a equilibrar expectativas.
-
-O amor é vivido com profundidade emocional.
-
-Buscam relações significativas e verdadeiras.
-
-Devem evitar idealizações excessivas.
-
-A maturidade traz maior equilíbrio afetivo.
-
-A felicidade surge quando alinham amor e realidade.`
-
-  },
+    9: `<p>Para <strong>[NOME]</strong>, o amor verdadeiro é um grande objetivo de vida. <strong>[NOME]</strong> é capaz de grandes sacrifícios por quem ama, mas deve ter cuidado para não idealizar demais o parceiro.</p>
+<p>O equilíbrio entre as expectativas e a realidade permitirá que <strong>[NOME]</strong> viva relações intensas, humanitárias e cheias de propósito emocional.</p>`
+  }
+};
 
 ciclos:{ 1:{
   1:`Este período representa a fase inicial de formação da individualidade e da autonomia. A pessoa aprende a afirmar sua identidade, desenvolver iniciativa e construir autoconfiança desde cedo. A infância e a juventude exigem equilíbrio entre liberdade e orientação, permitindo a construção de responsabilidade e maturidade emocional. A presença de figuras de autoridade confiáveis torna-se essencial para servir de modelo e referência. Surge a necessidade de descobrir desejos, talentos e vocação, iniciando a construção da identidade profissional. A disciplina deve existir sem excesso de rigidez, favorecendo a autonomia consciente. Experiências dessa fase moldam fortemente o caráter e a estabilidade futura. Quando bem orientada, a pessoa inicia a vida adulta com iniciativa, liderança e segurança. Caso contrário, podem surgir dúvidas, instabilidade emocional e dificuldade de definição profissional. Este ciclo incentiva coragem, independência e autodescoberta. É uma fase de aprendizado prático e construção do caráter. As bases do futuro são estabelecidas aqui. A consciência dos próprios limites deve ser desenvolvida. A busca por autonomia é constante. O desenvolvimento pessoal torna-se prioridade.`,
