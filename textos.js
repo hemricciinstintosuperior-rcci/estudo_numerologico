@@ -167,242 +167,97 @@ const textos = {
 <p>Jamais esquece um favor ou uma ofensa. [NOME] é muito sociável, um excelente anfitrião e se compadece com os problemas alheios. A capacidade de irradiar calor humano atrai as pessoas para [NOME]. É um organizador natural que trabalha duro e com consciência, possuindo uma força de vontade inabalável.</p>`,   
   },
 
+// ======================
+  // COMPORTAMENTO (1–9)
+  // Adaptado com Placeholder [NOME] e Tags <p>
   // ======================
   comportamento: {
-1: `COMPORTAMENTO 1 — Determinado e Convicto
-O 1 é o Número do Comportamento das pessoas nascidas nos dias 01, 10, 19 e 28 de cada mês. 
-O comportamento 1 revela uma mente independente, reservada e fortemente orientada à autonomia emocional. Pessoas com essa vibração tendem a lidar com dificuldades de forma solitária, preferindo encontrar soluções por conta própria em vez de pedir ajuda.
-Existe uma forte necessidade de controle sobre a própria vida e decisões. Internamente, essa pessoa busca provar a si mesma que é capaz de superar qualquer obstáculo sem depender dos outros.
+    1: `<p><strong>COMPORTAMENTO 1 — Determinado e Convicto</strong></p>
+<p>O comportamento de [NOME] revela uma mente independente, reservada e fortemente orientada à autonomia emocional. [NOME] tende a lidar com dificuldades de forma solitária, preferindo encontrar soluções por conta própria em vez de pedir ajuda.</p>
+<p>Existe uma forte necessidade de controle sobre a própria vida e decisões. Internamente, [NOME] busca provar a si mesmo que é capaz de superar qualquer obstáculo sem depender dos outros.</p>
+<p><strong>Potenciais positivos:</strong></p>
+<p>[NOME] possui grande força interior e capacidade de autossuperação, demonstrando coragem para enfrentar desafios sem recuar. Sua determinação, iniciativa e espírito de liderança fazem de [NOME] uma pessoa resiliente, honesta em suas emoções e capaz de assumir responsabilidades difíceis quando necessário.</p>
+<p><strong>Desafios emocionais:</strong></p>
+<p>Apesar da aparência forte, [NOME] tem tendência à autocrítica severa e dificuldade em reconhecer fragilidades. Para [NOME], pedir ajuda pode ser interpretado como fraqueza, o que leva ao isolamento emocional. A teimosia pode dificultar mudanças necessárias.</p>
+<p><strong>Caminho de evolução:</strong></p>
+<p>O crescimento de [NOME] acontece quando aprende a confiar nos outros e dividir responsabilidades. A verdadeira força de [NOME] não está em fazer tudo sozinho, mas em saber quando permitir apoio.</p>`,
 
-Potenciais positivos
-Grande força interior e capacidade de auto-superação
-Coragem para enfrentar desafios sem recuar
-Determinação, iniciativa e espírito de liderança
-Honestidade emocional e senso de responsabilidade
-Capacidade de resistir à pressão externa
-Essa vibração cria indivíduos resilientes, confiáveis e capazes de assumir responsabilidades difíceis quando necessário.
+    2: `<p><strong>COMPORTAMENTO 2 — Romântico e Emotivo</strong></p>
+<p>O comportamento de [NOME] representa uma mente sensível, diplomática e altamente emocional. [NOME] reage aos conflitos buscando harmonia e evitando confrontos diretos.</p>
+<p>[NOME] sente profundamente o ambiente e as emoções alheias, muitas vezes absorvendo sentimentos como se fossem próprios.</p>
+<p><strong>Potenciais positivos:</strong></p>
+<p>[NOME] tem uma empatia admirável e capacidade natural de compreender os outros. Com talento para a diplomacia e uma intuição aguçada, [NOME] facilita a cooperação e o trabalho em equipe, sendo uma pessoa conciliadora que busca paz e equilíbrio nas relações.</p>
+<p><strong>Desafios emocionais:</strong></p>
+<p>A insegurança e a necessidade de aprovação podem gerar dependência emocional em [NOME]. O medo do conflito pode levar [NOME] a fugir de problemas importantes, gerando ansiedade ou dificuldade em tomar decisões firmes.</p>
+<p><strong>Caminho de evolução:</strong></p>
+<p>O crescimento de [NOME] surge quando aprende a confiar em si mesmo e desenvolver firmeza emocional. A harmonia verdadeira exigirá de [NOME] coragem para enfrentar conflitos quando necessário.</p>`,
 
-Desafios emocionais
-Apesar da aparência forte, existe uma tendência à autocrítica severa e dificuldade em reconhecer fragilidades. Pedir ajuda pode ser interpretado como fraqueza, o que leva ao isolamento emocional.
-A teimosia e a rigidez mental podem dificultar mudanças necessárias, mantendo a pessoa presa a decisões que já não são benéficas.
+    3: `<p><strong>COMPORTAMENTO 3 — Otimista e Despreocupado</strong></p>
+<p>O comportamento de [NOME] revela uma mente leve, criativa e orientada à expressão. [NOME] reage aos desafios com entusiasmo, criatividade e excelente comunicação.</p>
+<p>As dificuldades são frequentemente enfrentadas por [NOME] com humor, charme e uma grande capacidade de adaptação.</p>
+<p><strong>Potenciais positivos:</strong></p>
+<p>[NOME] possui um poder de persuasão natural e pensamento flexível. Capaz de motivar e inspirar pessoas, [NOME] demonstra um otimismo contagiante diante das adversidades, sendo uma presença carismática que influencia qualquer ambiente positivamente.</p>
+<p><strong>Desafios emocionais:</strong></p>
+<p>[NOME] pode apresentar tendência à superficialidade ou dispersão. Às vezes, [NOME] evita encarar problemas diretamente, preferindo distrações. O excesso de otimismo pode fazer com que [NOME] tenha dificuldade em manter a disciplina.</p>
+<p><strong>Caminho de evolução:</strong></p>
+<p>O equilíbrio para [NOME] surge quando a sua criatividade transbordante é direcionada com foco, responsabilidade e persistência.</p>`,
 
-Caminho de evolução
-O crescimento acontece quando aprende a confiar nos outros e dividir responsabilidades. A verdadeira força não está em fazer tudo sozinho, mas em saber quando permitir apoio.`,
+    4: `<p><strong>COMPORTAMENTO 4 — Prudente, Observador e Resistente</strong></p>
+<p>O comportamento de [NOME] indica uma postura psicológica analítica diante da vida. Quando confrontado com desafios, [NOME] tende a reagir com cautela, disciplina e necessidade de segurança. Sua resposta emocional é baseada na lógica e na busca por estabilidade.</p>
+<p><strong>Aspectos positivos:</strong></p>
+<p>Psicologicamente, [NOME] reage às dificuldades com firmeza e resistência emocional. [NOME] prefere enfrentar os problemas com planejamento e acredita no esforço contínuo. É alguém que observa antes de agir, valoriza a previsibilidade e prefere soluções práticas.</p>
+<p>Em momentos difíceis, [NOME] se fortalece através da rotina e da organização. Sua segurança emocional nasce da sensação de estrutura.</p>
+<p><strong>Aspectos negativos:</strong></p>
+<p>Quando em desequilíbrio, [NOME] reage ao medo criando rigidez emocional. Pode se tornar uma pessoa excessivamente teimosa, defensiva ou pessimista. [NOME] pode tentar controlar tudo ao redor, desenvolvendo ansiedade quando as coisas saem do planejado.</p>
+<p><strong>Desenvolvimento psicológico:</strong></p>
+<p>O aprendizado de [NOME] é desenvolver flexibilidade emocional. Quando [NOME] aprende a confiar mais na vida e menos no controle absoluto, transforma sua resistência em verdadeira força interior.</p>`,
 
-2: `COMPORTAMENTO 2 — Romântico e Emotivo
-O 2 é o Número do Comportamento das pessoas nascidas nos dias 02, 11, 20 e 29 do mês. 
-O comportamento 2 representa uma mente sensível, diplomática e altamente emocional. Essa vibração reage aos conflitos buscando harmonia e evitando confrontos diretos.
-A pessoa sente profundamente o ambiente e as emoções alheias, muitas vezes absorvendo sentimentos como se fossem próprios.
+    5: `<p><strong>COMPORTAMENTO 5 — Impulsivo, Adaptável e Inquieto</strong></p>
+<p>O comportamento de [NOME] reage à vida através do movimento, da curiosidade e da necessidade de liberdade. Diante de dificuldades, [NOME] prefere agir rapidamente, experimentar e mudar de direção se necessário.</p>
+<p><strong>Aspectos positivos:</strong></p>
+<p>Psicologicamente, [NOME] responde ao estresse com ação e adaptação. Ao invés de se prender ao problema, [NOME] busca novas possibilidades. É alguém de mente aberta que aprende com as experiências e não teme o desconhecido. A força emocional de [NOME] está na capacidade de recomeçar sempre.</p>
+<p><strong>Aspectos negativos:</strong></p>
+<p>Em desequilíbrio, [NOME] pode reagir com impulsividade e instabilidade emocional. Existe o risco de [NOME] evitar lidar profundamente com problemas, preferindo escapar através de distrações ou mudanças constantes e impensadas.</p>
+<p><strong>Desenvolvimento psicológico:</strong></p>
+<p>O crescimento de [NOME] está em aprender disciplina emocional. Quando [NOME] equilibra sua sede de liberdade com responsabilidade, transforma sua inquietação em evolução contínua.</p>`,
 
-Potenciais positivos
-Empatia e capacidade natural de compreender os outros
-Diplomacia e talento para resolver conflitos
-Sensibilidade artística e emocional
-Facilidade para cooperação e trabalho em equipe
-Intuição aguçada
-São pessoas conciliadoras, que naturalmente buscam paz e equilíbrio nas relações.
+    6: `<p><strong>COMPORTAMENTO 6 — Afetivo, Protetor e Sensível</strong></p>
+<p>O comportamento de [NOME] responde às dificuldades através do cuidado, do afeto e da necessidade de proteger quem ama.</p>
+<p><strong>Aspectos positivos:</strong></p>
+<p>Psicologicamente, [NOME] reage buscando harmonia. Sua primeira reação diante de conflitos é tentar cuidar, conciliar e proteger. [NOME] valoriza profundamente os vínculos afetivos, tem grande empatia e procura resolver qualquer impasse com amor e acolhimento.</p>
+<p>A força emocional de [NOME] está diretamente ligada ao seu sentimento de pertencimento e família.</p>
+<p><strong>Aspectos negativos:</strong></p>
+<p>Quando em desequilíbrio, [NOME] pode manifestar dependência emocional ou necessidade excessiva de aprovação. [NOME] pode se sentir rejeitado com facilidade ou assumir responsabilidades emocionais que não lhe pertencem, sobrecarregando-se.</p>
+<p><strong>Desenvolvimento psicológico:</strong></p>
+<p>[NOME] precisa aprender autovalorização e limites. Quando [NOME] equilibra o cuidado com os outros com a própria autonomia, transforma seu amor em uma força emocional inabalável.</p>`,
 
-Desafios emocionais
-A insegurança e a necessidade de aprovação podem gerar dependência emocional. O medo do conflito pode levar à fuga de problemas importantes.
-Existe tendência à preocupação excessiva, ansiedade e dificuldade em tomar decisões firmes.
+    7: `<p><strong>COMPORTAMENTO 7 — Reservado, Analítico e Introspectivo</strong></p>
+<p>O comportamento de [NOME] reage às dificuldades através da introspecção, reflexão e necessidade de compreensão profunda.</p>
+<p><strong>Aspectos positivos:</strong></p>
+<p>Psicologicamente, [NOME] prefere se afastar para pensar antes de agir. Busca compreender o significado oculto das experiências. [NOME] analisa profundamente os problemas, desenvolve um forte autocontrole e valoriza a sabedoria. Sua força está na capacidade de observar o que os outros não veem.</p>
+<p><strong>Aspectos negativos:</strong></p>
+<p>Quando em desequilíbrio, [NOME] pode se isolar emocionalmente ou reprimir demais seus sentimentos. [NOME] pode tornar-se uma pessoa excessivamente crítica ou desconfiada, usando o distanciamento como uma armadura contra conflitos.</p>
+<p><strong>Desenvolvimento psicológico:</strong></p>
+<p>[NOME] precisa aprender a conexão emocional e a confiança. Quando [NOME] equilibra sua mente brilhante com a emoção, transforma sua capacidade de análise em pura sabedoria de vida.</p>`,
 
-Caminho de evolução
-O crescimento surge quando aprende a confiar em si mesma e desenvolver firmeza emocional. A harmonia verdadeira exige coragem para enfrentar conflitos quando necessário.`,
+    8: `<p><strong>COMPORTAMENTO 8 — Controlador, Estratégico e Resiliente</strong></p>
+<p>O comportamento de [NOME] reage às dificuldades buscando controle, poder pessoal e resultados concretos.</p>
+<p><strong>Aspectos positivos:</strong></p>
+<p>Psicologicamente, [NOME] enfrenta desafios com determinação e uma resistência invejável. [NOME] não foge de problemas — encara e resolve. Age com estratégia, mantém o autocontrole sob pressão e busca segurança tanto material quanto emocional.</p>
+<p>A força de [NOME] reside na sua capacidade executiva e na sua resiliência diante das crises.</p>
+<p><strong>Aspectos negativos:</strong></p>
+<p>Em desequilíbrio, [NOME] pode tornar-se uma pessoa controladora, autoritária ou impaciente. [NOME] corre o risco de ficar obcecado por resultados, tentando controlar as pessoas ao redor como forma de lidar com seus próprios receios.</p>
+<p><strong>Desenvolvimento psicológico:</strong></p>
+<p>[NOME] precisa aprender confiança e flexibilidade. Quando [NOME] equilibra sua força e autoridade com sensibilidade, torna-se um líder equilibrado e admirado.</p>`,
 
-3: `COMPORTAMENTO 3 — Otimista e Despreocupado
-O 3 é o Número do Comportamento das pessoas nascidas nos dias 3, 12, 21 ou 30 do mês. 
-O comportamento 3 revela uma mente leve, criativa e orientada à expressão. Essa vibração reage aos desafios com entusiasmo, criatividade e comunicação.
-Dificuldades são frequentemente enfrentadas com humor, charme e capacidade de adaptação.
-
-Potenciais positivos
-Comunicação natural e poder de persuasão
-Criatividade e pensamento flexível
-Capacidade de motivar e inspirar pessoas
-Otimismo diante das adversidades
-Facilidade de adaptação social
-Essa vibração favorece pessoas carismáticas e capazes de influenciar ambientes positivamente.
-
-Desafios emocionais
-Pode haver tendência à superficialidade, dispersão e procrastinação. Problemas podem ser evitados através de distrações em vez de enfrentamento direto.
-O excesso de otimismo pode gerar promessas não cumpridas e dificuldade de manter disciplina.
-
-Caminho de evolução
-O equilíbrio surge quando a criatividade é direcionada com foco e responsabilidade.`,
-
-4: `COMPORTAMENTO 4
-Prudente, observador e resistente
-O 4 é o Número do Comportamento das pessoas nascidas nos dias 4, 13, 22 e 31 do mês. 
-O Número do Comportamento 4 indica uma postura psicológica defensiva e analítica diante da vida. Quando confrontada com desafios, essa pessoa tende a reagir com cautela, disciplina e necessidade de segurança. Sua resposta emocional costuma ser baseada na lógica, na organização e na busca por estabilidade.
-
-Aspectos positivos
-Psicologicamente, o comportamento 4 reage às dificuldades com firmeza, responsabilidade e resistência emocional. Prefere enfrentar os problemas com planejamento e trabalho constante, acreditando que tudo pode ser resolvido com esforço e método.
-
-É alguém que:
-Observa antes de agir
-Analisa riscos cuidadosamente
-Valoriza estabilidade e previsibilidade
-Confia no esforço contínuo
-Prefere soluções práticas a soluções emocionais
-
-Em momentos difíceis, tende a se fortalecer através da rotina, da disciplina e do trabalho. Sua segurança emocional nasce da sensação de controle e estrutura.
-
-Aspectos negativos
-Quando em desequilíbrio, o comportamento 4 reage ao medo criando rigidez emocional. Pode se tornar:
-
-Excessivamente teimoso
-Defensivo e resistente a mudanças
-Desconfiado
-Crítico e pessimista
-Preso a padrões antigos
-
-Pode reagir às dificuldades tentando controlar tudo ao redor, desenvolvendo ansiedade quando as coisas saem do planejado.
-
-Desenvolvimento psicológico
-O aprendizado desse comportamento é desenvolver flexibilidade emocional.
-Quando aprende a confiar mais na vida e menos no controle absoluto, transforma sua resistência em verdadeira força interior.`,
-
-5: `COMPORTAMENTO 5
-Impulsivo, adaptável e inquieto
-O 5 é o Número do Comportamento das pessoas nascidas nos dias 5, 14 e 23 do mês. 
-O comportamento 5 reage à vida através do movimento, da curiosidade e da necessidade de liberdade. Diante de dificuldades, prefere agir rapidamente, experimentar e mudar de direção se necessário.
-
-Aspectos positivos
-Psicologicamente, esse comportamento responde ao estresse com ação e adaptação.
-Ao invés de se prender ao problema, busca novas possibilidades.
-
-É alguém que:
-Aprende com experiências
-Se adapta rapidamente a mudanças
-Mantém mente aberta
-Busca soluções criativas
-Não teme o desconhecido
-
-Sua força emocional está na capacidade de recomeçar sempre que necessário.
-Aspectos negativos
-Quando em desequilíbrio, reage com:
-
-Impulsividade
-Ansiedade
-Fuga de responsabilidades
-Instabilidade emocional
-Dificuldade de manter compromissos
-Pode evitar lidar profundamente com problemas, preferindo escapar através de distrações ou mudanças constantes.
-
-Desenvolvimento psicológico
-Seu crescimento está em aprender disciplina emocional.
-Quando equilibra liberdade com responsabilidade, transforma inquietação em evolução.`,
-
-6: `COMPORTAMENTO 6
-Afetivo, protetor e sensível
-O 6 é o Número do Comportamento das pessoas nascidas nos dias 6, 15 e 24 do mês. 
-O comportamento 6 responde às dificuldades através do cuidado, do afeto e da necessidade de proteger quem ama.
-
-Aspectos positivos
-Psicologicamente reage buscando harmonia e apoio emocional.
-Sua primeira reação diante de conflitos é tentar cuidar, conciliar e proteger.
-
-É alguém que:
-Busca segurança emocional
-Valoriza vínculos afetivos
-Se preocupa com o bem-estar dos outros
-Tem grande empatia
-Procura resolver conflitos com amor
-Sua força emocional está no sentimento de pertencimento.
-Aspectos negativos
-Quando em desequilíbrio, reage com:
-Dependência emocional
-Carência afetiva
-Necessidade excessiva de aprovação
-Ciúmes
-Sentimento de rejeição
-Pode assumir responsabilidades emocionais que não são suas.
-
-Desenvolvimento psicológico
-Precisa aprender autovalorização e limites emocionais.
-Quando equilibra cuidado com autonomia, transforma amor em força emocional.`,
-
-7: `COMPORTAMENTO 7
-Reservado, analítico e introspectivo
-O 7 é o Número do Comportamento das pessoas nascidas nos dias 7, 16 e 25 do mês. 
-O comportamento 7 reage às dificuldades através da introspecção, reflexão e necessidade de compreensão profunda.
-
-Aspectos positivos
-Psicologicamente prefere se afastar para pensar antes de agir.
-Busca compreender o significado das experiências.
-
-É alguém que:
-Analisa profundamente os problemas
-Busca respostas internas
-Desenvolve autocontrole emocional
-Valoriza conhecimento e sabedoria
-Sua força está na capacidade de observar antes de agir.
-Aspectos negativos
-Quando em desequilíbrio:
-Se isola emocionalmente
-Reprime sentimentos
-Desconfia das pessoas
-Torna-se excessivamente crítico
-Pode fugir de conflitos emocionais através do distanciamento.
-
-Desenvolvimento psicológico
-Precisa aprender conexão emocional e confiança.
-Quando equilibra mente e emoção, transforma análise em sabedoria.`,
-
-8: `COMPORTAMENTO 8
-Controlador, estratégico e resiliente
-O 8 é o Número do Comportamento das pessoas nascidas nos dias 8, 17 e 26 do mês. 
-O comportamento 8 reage às dificuldades buscando controle, poder pessoal e resultados concretos.
-
-Aspectos positivos
-Psicologicamente enfrenta desafios com determinação e resistência.
-Não foge de problemas — enfrenta e resolve.
-
-É alguém que:
-Assume responsabilidade
-Mantém autocontrole emocional
-Age com estratégia
-Busca segurança material e emocional
-Sua força está na capacidade de agir sob pressão.
-Aspectos negativos
-Quando em desequilíbrio:
-Torna-se controlador
-Autoritário
-Impaciente
-Obcecado por resultados
-Pode reagir ao medo tentando controlar tudo e todos.
-
-Desenvolvimento psicológico
-Precisa aprender confiança e flexibilidade emocional.
-Quando equilibra força com sensibilidade, torna-se líder equilibrado.`,
-
-9: `COMPORTAMENTO 9
-Intenso, idealista e emocional
-O 9 é o Número do Comportamento das pessoas nascidas nos dias 9, 18 e 27 do mês. 
-O comportamento 9 reage às dificuldades com intensidade emocional e forte senso de justiça.
-
-Aspectos positivos
-Psicologicamente enfrenta problemas movido por valores, ideais e emoções profundas.
-
-É alguém que:
-Busca sentido nas experiências
-Tem forte empatia
-Deseja ajudar os outros
-Reage com coragem às injustiças
-Sua força está na paixão pela vida e pelas pessoas.
-Aspectos negativos
-Quando em desequilíbrio:
-Reage com explosões emocionais
-Guarda ressentimentos
-Tem dificuldade em perdoar
-Vive oscilações emocionais
-Pode reagir de forma exagerada às frustrações.
-
-Desenvolvimento psicológico
-Precisa aprender equilíbrio emocional e desapego.
-Quando amadurece, transforma intensidade em sabedoria emocional.`
-
-
-
+    9: `<p><strong>COMPORTAMENTO 9 — Intenso, Idealista e Emocional</strong></p>
+<p>O comportamento de [NOME] reage às dificuldades com intensidade emocional e um forte senso de justiça.</p>
+<p><strong>Aspectos positivos:</strong></p>
+<p>Psicologicamente, [NOME] enfrenta problemas movido por valores e ideais profundos. [NOME] possui uma empatia vasta, deseja genuinamente ajudar o próximo e reage com coragem a qualquer injustiça. Sua força está na paixão que dedica à vida e às pessoas.</p>
+<p><strong>Aspectos negativos:</strong></p>
+<p>Quando em desequilíbrio, [NOME] pode ter explosões emocionais ou guardar ressentimentos. [NOME] pode sofrer com oscilações de humor e ter dificuldade em desapegar de situações passadas, reagindo de forma exagerada às frustrações.</p>
+<p><strong>Desenvolvimento psicológico:</strong></p>
+<p>[NOME] precisa aprender o equilíbrio emocional e a arte do desapego. Quando [NOME] amadurece essa intensidade, transforma seus sentimentos em uma profunda sabedoria humanitária.</p>`
   },
 
 motivacao: {
