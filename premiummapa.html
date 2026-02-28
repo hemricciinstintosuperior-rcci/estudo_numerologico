@@ -615,98 +615,89 @@ box-sizing:border-box;
 "></div>
 
 <script>
-// ============================================
-// 1. RECUPERAÇÃO E TRATAMENTO DE DADOS
-// ============================================
-// 1. RECUPERAÇÃO DOS DADOS
-const dados = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+// 1. PEGA OS DADOS (SEM ERRO)
+const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
 
-if(!dados){
-  document.body.innerHTML = "<h2 style='text-align:center;margin-top:120px'>Primeiro gere seu mapa no site.</h2>";
-  throw new Error("Sem dados");
+if (!dadosPortal) {
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Gere o mapa no site primeiro.</h2>";
+} else {
+
+    // 2. FUNÇÃO QUE LIMPA O GÊNERO (PRO CARLOS)
+    function limparParaHomem(texto) {
+        if (!texto) return "";
+        let pNome = dadosPortal.nome.trim().split(' ')[0];
+        let nomeFormatado = pNome.charAt(0).toUpperCase() + pNome.slice(1).toLowerCase();
+
+        let t = texto;
+        t = t.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
+        // Limpa (a), /a, o/a
+        t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
+        t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
+        return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
+    }
+
+    // 3. LISTA DE TUDO QUE TEM QUE TROCAR (MD3, MD4 E D3 ESTÃO AQUI)
+    const trocas = {
+        "{{NOME}}": dadosPortal.nome,
+        "{{DATA}}": dadosPortal.data,
+        "{{DIA}}": dadosPortal.resultados.diaN,
+        "{{COMPORTAMENTO}}": dadosPortal.resultados.comportamento,
+        "{{MOTIVACAO}}": dadosPortal.resultados.motivacao,
+        "{{EXPRESSAO}}": dadosPortal.resultados.personalidade,
+        "{{DESTINO}}": dadosPortal.resultados.caminhoVida,
+        "{{MISSAO}}": dadosPortal.resultados.missao,
+        "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
+        "{{RELACIONAMENTO}}": dadosPortal.resultados.relacionamento,
+        "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
+        "{{QTD_DEFICIENCIAS}}": (dadosPortal.resultados.listaDeficiencias || []).length + " Lições Cármicas",
+        
+        // Textos Interpretativos
+        "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
+        "{{TEXTO_COMPORTAMENTO}}": limparParaHomem(dadosPortal.textos.comportamento),
+        "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
+        "{{TEXTO_EXPRESSAO}}": limparParaHomem(dadosPortal.textos.expressao),
+        "{{TEXTO_DESTINO}}": limparParaHomem(dadosPortal.textos.destino),
+        "{{TEXTO_MISSAO}}": limparParaHomem(dadosPortal.textos.missao),
+        "{{TEXTO_MATURIDADE}}": limparParaHomem(dadosPortal.textos.maturidade),
+        "{{TEXTO_RELACIONAMENTO}}": limparParaHomem(dadosPortal.textos.relacionamento),
+        "{{TEXTO_CICLO1}}": limparParaHomem(dadosPortal.textos.ciclo1),
+        "{{TEXTO_CICLO2}}": limparParaHomem(dadosPortal.textos.ciclo2),
+        "{{TEXTO_CICLO3}}": limparParaHomem(dadosPortal.textos.ciclo3),
+        "{{TEXTO_MD1}}": limparParaHomem(dadosPortal.textos.md1),
+        "{{TEXTO_MD2}}": limparParaHomem(dadosPortal.textos.md2),
+        "{{TEXTO_MD3}}": limparParaHomem(dadosPortal.textos.md3),
+        "{{TEXTO_MD4}}": limparParaHomem(dadosPortal.textos.md4),
+        "{{TEXTO_D1}}": limparParaHomem(dadosPortal.textos.d1),
+        "{{TEXTO_D2}}": limparParaHomem(dadosPortal.textos.d2),
+        "{{TEXTO_D3}}": limparParaHomem(dadosPortal.textos.d3),
+        "{{TEXTO_ANO_PESSOAL}}": limparParaHomem(dadosPortal.textos.anoPessoal),
+        "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
+
+        // Períodos
+        "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
+        "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
+        "{{PERIODO_C3}}": dadosPortal.periodos.ciclo3,
+        "{{PERIODO_MD1}}": dadosPortal.periodos.md1,
+        "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
+        "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
+        "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
+        "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
+        "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
+        "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
+    };
+
+    // 4. APLICA AS MUDANÇAS NO HTML (UMA ÚNICA VEZ PARA NÃO SUMIR NADA)
+    let htmlFinal = document.body.innerHTML;
+    Object.keys(trocas).forEach(chave => {
+        htmlFinal = htmlFinal.split(chave).join(trocas[chave] || "");
+    });
+    document.body.innerHTML = htmlFinal;
+
+    // 5. CHAMA A IMPRESSÃO
+    window.onload = () => { setTimeout(() => { window.print(); }, 1200); };
 }
 
-// 2. FUNÇÃO DE LIMPEZA (CARLOS) - Não mexe nas suas introduções fixas
-function limparTextoPremium(texto) {
-    if (!texto) return "";
-    let primeiroNome = dados.nome.trim().split(' ')[0];
-    let nomeP = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
-
-    let t = texto;
-    // Nome em negrito onde houver "você"
-    t = t.replace(/você/gi, <strong>${nomeP}</strong>);
-    // Remove marcas de gênero
-    t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
-    t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
-    // Formatação de parágrafos
-    return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
-}
-
-// 3. MAPA DE SUBSTITUIÇÃO (INCLUINDO MD3, MD4 E D3)
-const mapaSubstituicao = {
-    "{{NOME}}": dados.nome,
-    "{{DATA}}": dados.data,
-    "{{DIA}}": dados.resultados.diaN || "",
-    "{{COMPORTAMENTO}}": dados.resultados.comportamento,
-    "{{MOTIVACAO}}": dados.resultados.motivacao,
-    "{{EXPRESSAO}}": dados.resultados.personalidade,
-    "{{DESTINO}}": dados.resultados.caminhoVida,
-    "{{MISSAO}}": dados.resultados.missao,
-    "{{MATURIDADE}}": dados.resultados.maturidade,
-    "{{RELACIONAMENTO}}": dados.resultados.relacionamento,
-    "{{ANO_PESSOAL_NUMERO}}": dados.resultados.anoPessoal,
-    "{{QTD_DEFICIENCIAS}}": (dados.resultados.listaDeficiencias || []).length + " Lições Cármicas",
-
-    // Textos Dinâmicos com Limpeza de Gênero
-    "{{TEXTO_DIA}}": limparTextoPremium(dados.textos.dia),
-    "{{TEXTO_COMPORTAMENTO}}": limparTextoPremium(dados.textos.comportamento),
-    "{{TEXTO_MOTIVACAO}}": limparTextoPremium(dados.textos.motivacao),
-    "{{TEXTO_EXPRESSAO}}": limparTextoPremium(dados.textos.expressao),
-    "{{TEXTO_DESTINO}}": limparTextoPremium(dados.textos.destino),
-    "{{TEXTO_MISSAO}}": limparTextoPremium(dados.textos.missao),
-    "{{TEXTO_MATURIDADE}}": limparTextoPremium(dados.textos.maturidade),
-    "{{TEXTO_RELACIONAMENTO}}": limparTextoPremium(dados.textos.relacionamento),
-    "{{TEXTO_CICLO1}}": limparTextoPremium(dados.textos.ciclo1),
-    "{{TEXTO_CICLO2}}": limparTextoPremium(dados.textos.ciclo2),
-    "{{TEXTO_CICLO3}}": limparTextoPremium(dados.textos.ciclo3),
-    "{{TEXTO_MD1}}": limparTextoPremium(dados.textos.md1),
-    "{{TEXTO_MD2}}": limparTextoPremium(dados.textos.md2),
-    "{{TEXTO_MD3}}": limparTextoPremium(dados.textos.md3),
-    "{{TEXTO_MD4}}": limparTextoPremium(dados.textos.md4),
-    "{{TEXTO_D1}}": limparTextoPremium(dados.textos.d1),
-    "{{TEXTO_D2}}": limparTextoPremium(dados.textos.d2),
-    "{{TEXTO_D3}}": limparTextoPremium(dados.textos.d3),
-    "{{TEXTO_ANO_PESSOAL}}": limparTextoPremium(dados.textos.anoPessoal),
-    "{{TEXTO_DEFICIENCIAS}}": limparTextoPremium(dados.textos.deficiencias),
-
-    // Períodos
-    "{{PERIODO_C1}}": dados.periodos.ciclo1,
-    "{{PERIODO_C2}}": dados.periodos.ciclo2,
-    "{{PERIODO_C3}}": dados.periodos.ciclo3,
-    "{{PERIODO_MD1}}": dados.periodos.md1,
-    "{{PERIODO_MD2}}": dados.periodos.md2,
-    "{{PERIODO_MD3}}": dados.periodos.md3,
-    "{{PERIODO_MD4}}": dados.periodos.md4,
-    "{{PERIODO_D1}}": dados.periodos.ciclo1,
-    "{{PERIODO_D2}}": dados.periodos.ciclo2,
-    "{{PERIODO_D3}}": dados.periodos.ciclo3
-};
-
-// 4. EXECUÇÃO DA TROCA (FEITA DE UMA VEZ SÓ PARA NÃO BUGAR)
-let corpoHTML = document.body.innerHTML;
-for (const [chave, valor] of Object.entries(mapaSubstituicao)) {
-    corpoHTML = corpoHTML.split(chave).join(valor || "");
-}
-document.body.innerHTML = corpoHTML;
-
-// PDF AUTOMÁTICO
-function gerarPDF(){
-  window.scrollTo(0,0);
-  setTimeout(()=>{ window.print(); }, 1000);
-}
-window.onload = () => { setTimeout(gerarPDF, 1500); };
-</script>
-
+// Proteção
 document.oncontextmenu = () => false;
 document.onselectstart = () => false;
 </script>
