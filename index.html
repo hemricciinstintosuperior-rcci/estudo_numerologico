@@ -121,13 +121,13 @@ function gerarMapa() {
   const nome = nomeInput.toUpperCase();
   const [ano, mes, dia] = dataInput.split("-").map(Number);
 
-  // Cálculos de Nome
+  // --- Cálculos de Nome ---
   let somaV = 0, somaC = 0, usados = new Set();
   for (let l of nome) {
     const valor = calcularValorComAcentos(l);
     if (!valor) continue;
     const base = l.normalize("NFD")[0];
-    usados.add(tabela[base]);
+    usados.add(tabela[base] || 0);
     vogais.includes(base) ? somaV += valor : somaC += valor;
   }
 
@@ -135,55 +135,83 @@ function gerarMapa() {
   const influencia = reduzir(somaC);
   const personalidade = reduzir(somaV + somaC);
 
-  // Cálculos de Data
+  // --- Cálculos de Data ---
   const diaN = dia;
   const comportamento = reduzir(dia);
   const caminhoVida = reduzir(dia + mes + ano);
   const missao = reduzir(caminhoVida + personalidade);
-  const maturidade = missao;
-  const relacionamento = missao;
+  const maturidade = reduzir(missao + personalidade);
+  const relacionamento = missao; // Ou lógica específica de relacionamento
 
-  // Ciclos e Momentos (Cálculo de idades)
+  // --- Ciclos, Momentos e Desafios ---
   const fim1 = 37 - caminhoVida;
   const fim2 = fim1 + 27;
+  
   const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
   const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
   const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
 
   const anoAtual = new Date().getFullYear();
-  const anoPessoal = reduzir(dia + mes + anoAtual);
+  const anoPessoalNum = reduzir(dia + mes + anoAtual);
+  
+  // Lições Cármicas (Deficiências)
   let faltantes = [];
-  for (let i=1;i<=9;i++) if(!usados.has(i)) faltantes.push(i);
+  for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
+  const textoDeficiencias = faltantes.map(num => textos.deficiencias[num]).join("");
 
-  // Salvar para o Premium
+  // --- Salvar Objeto Completo para o Premium ---
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
-    // Aqui você mapeia todos os campos para o premium.html ler depois
     resultados: {
-        motivacao, influencia, personalidade, caminhoVida, missao, comportamento, diaN, anoPessoal
+        diaN, comportamento, motivacao, personalidade, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
+    },
+    periodos: {
+        ciclo1: `0 aos ${fim1} anos`,
+        ciclo2: `${fim1 + 1} aos ${fim2} anos`,
+        ciclo3: `Acima de ${fim2} anos`,
+        md1: `0 aos ${fim1} anos`,
+        md2: `${fim1 + 1} aos ${fim1 + 9} anos`,
+        md3: `${fim1 + 10} aos ${fim1 + 18} anos`,
+        md4: `Acima de ${fim2} anos`
     },
     textos: {
+        dia: textos.dia[diaN],
+        comportamento: textos.comportamento[comportamento],
         motivacao: textos.motivacao[motivacao],
-        destino: textos.CaminhodeVida[caminhoVida],
         expressao: textos.Personalidade[personalidade],
-        missao: textos.Propósito[missao]
-        // ... adicione os demais conforme o textos.js
+        destino: textos.CaminhodeVida[caminhoVida],
+        missao: textos.Propósito[missao],
+        maturidade: textos.Maturidade[maturidade],
+        relacionamento: textos.Relacionamento[relacionamento],
+        ciclo1: textos.primeiroCiclo[ciclo1],
+        ciclo2: textos.segundoCiclo[ciclo2],
+        ciclo3: textos.terceiroCiclo[ciclo3],
+        md1: textos.primeiroMomento[md1],
+        md2: textos.segundoMomento[md2],
+        md3: textos.terceiroMomento[md3],
+        md4: textos.quartoMomento[md4],
+        d1: textos.primeiroDesafio[d1],
+        d2: textos.segundoDesafio[d2],
+        d3: textos.terceiroDesafio[d3],
+        anoPessoal: textos.anoPessoal[anoPessoalNum],
+        deficiencias: textoDeficiencias
     }
   };
+  
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
 
-  // Renderização na Tela
+  // --- Renderização Gratuita na Tela ---
   document.getElementById("resultado").innerHTML = `
     ${card("Dia de Nascimento", "Talentos Naturais", diaN, textos.dia[diaN])}
     ${card("Comportamento", "Número Psíquico", comportamento, textos.comportamento[comportamento])}
     ${card("Motivação", "Seu Desejo Íntimo", motivacao, textos.motivacao[motivacao])}
     ${card("Personalidade", "Sua Expressão", personalidade, textos.Personalidade[personalidade])}
     ${card("Caminho de Vida", "Seu Destino", caminhoVida, textos.CaminhodeVida[caminhoVida])}
-    ${card("Ano Pessoal", "Sua energia em " + anoAtual, anoPessoal, textos.anoPessoal[anoPessoal])}
+    ${card("Ano Pessoal", "Sua energia em " + anoAtual, anoPessoalNum, textos.anoPessoal[anoPessoalNum])}
     
-    <div class="card" style="background: #fee2e2; border: 2px dashed #ef4444; text-align: center;">
-        <p><strong>Os Ciclos de Vida, Momentos Decisivos e Desafios estão disponíveis apenas no Relatório Premium abaixo.</strong></p>
+    <div class="card" style="background: #fee2e2; border: 2px dashed #ef4444; text-align: center; max-width: 600px;">
+        <p><strong>Ciclos de Vida, Momentos Decisivos, Desafios e Lições Cármicas estão disponíveis apenas no Relatório Premium abaixo.</strong></p>
     </div>
   `;
 }
