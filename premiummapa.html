@@ -620,12 +620,28 @@ function processarTextoPremium(texto) {
     return textoFiltrado.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
 }
 
-// --- LÓGICA DE CONTAGEM DE DEFICIÊNCIAS (SUBSTITUIR AQUI) ---
-let textoBruto = dados.textos.deficiencias || "";
-// Conta quantos números de 1 a 9 existem no texto das deficiências
-let encontrados = textoBruto.match(/\d/g); 
-let qtdTotal = encontrados ? encontrados.length : 0;
-let textoQtd = (qtdTotal === 0) ? "Nenhuma Lição Cármica" : (qtdTotal === 1) ? "1 Lição Cármica" : qtdTotal + " Lições Cármicas";
+// --- LÓGICA DE CONTAGEM SIMPLIFICADA ---
+let textoDasDeficiencias = dados.textos.deficiencias || "";
+let textoFinalQtd = "Nenhuma Lição Cármica";
+
+// Se o texto das deficiências existir e for grande, vamos contar quantos blocos tem
+if (textoDasDeficiencias.length > 10) {
+    // Conta quantas vezes a palavra "Lição" ou números aparecem no texto
+    let totalLicoes = (textoDasDeficiencias.match(/Lição|Número|Cármica/gi) || []).length;
+    
+    // Se ele achou palavras mas não contou certo, vamos forçar um número padrão ou apenas mudar o texto
+    if (totalLicoes > 0) {
+        textoFinalQtd = totalLicoes + " Lições Cármicas";
+    } else {
+        // Se houver texto mas a contagem falhar, ele coloca esse aviso
+        textoFinalQtd = "Lições Cármicas Ativas";
+    }
+} else {
+    textoFinalQtd = "Nenhuma Lição Cármica";
+}
+
+// O comando que faz a mágica (Coloque isso logo aqui embaixo)
+preencher("{{QTD_DEFICIENCIAS}}", textoFinalQtd);
 
 // FUNÇÃO DE PREENCHIMENTO (Mantenha como está abaixo)
 function preencher(chave, valor, eTextoDinamico = false) {
