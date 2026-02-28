@@ -615,12 +615,13 @@ const nomePersonalizado = obterPrimeiroNome(dados.nome);
 function processarTextoPremium(texto) {
     if (!texto) return "";
     const regexNome = /você/gi;
-    let textoFiltrado = texto.replace(regexNome, <strong>${nomePersonalizado}</strong>);
+    // CORREÇÃO AQUI: Adicionei as aspas crases ` ` ao redor do strong
+    let textoFiltrado = texto.replace(regexNome, `<strong>${nomePersonalizado}</strong>`);
     return textoFiltrado.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
 }
 
-// --- LÓGICA DE CONTAGEM DE DEFICIÊNCIAS (Corrigida) ---
-let listaDef = dados.resultados.listaDeficiencias || []; 
+// --- LÓGICA DE CONTAGEM DE DEFICIÊNCIAS ---
+let listaDef = (dados.resultados && dados.resultados.listaDeficiencias) ? dados.resultados.listaDeficiencias : []; 
 let qtd = listaDef.length;
 let textoQtd = "";
 
@@ -629,7 +630,7 @@ if (qtd === 0) {
 } else if (qtd === 1) {
     textoQtd = "1 Lição Cármica";
 } else {
-    textoQtd = qtd + " Lições Cármicas"; // Corrigido aqui
+    textoQtd = qtd + " Lições Cármicas";
 }
 
 // Função de preenchimento inteligente
@@ -638,6 +639,7 @@ function preencher(chave, valor, eTextoDinamico = false) {
     if (eTextoDinamico) {
         conteudo = processarTextoPremium(valor);
     }
+    // O split/join é usado aqui para substituir todas as ocorrências da chave no HTML
     document.body.innerHTML = document.body.innerHTML.split(chave).join(conteudo);
 }
 
@@ -645,10 +647,10 @@ function preencher(chave, valor, eTextoDinamico = false) {
 // 2. EXECUÇÃO DO PREENCHIMENTO
 // ============================================
 
-// Dados Básicos e Contagem
+// Dados Básicos e Contagem (Sempre primeiro)
 preencher("{{NOME}}", dados.nome);
 preencher("{{DATA}}", dados.data);
-preencher("{{QTD_DEFICIENCIAS}}", textoQtd); // Escreve o número no título
+preencher("{{QTD_DEFICIENCIAS}}", textoQtd); 
 
 // Resultados Numéricos
 preencher("{{DIA}}", dados.resultados.diaN || "");
@@ -696,7 +698,7 @@ preencher("{{PERIODO_D2}}", dados.periodos.ciclo2);
 preencher("{{PERIODO_D3}}", dados.periodos.ciclo3);
 
 // ============================================
-// 3. GERAÇÃO AUTOMÁTICA DO PDF
+// 3. GERAÇÃO AUTOMÁTICA DO PDF E SEGURANÇA
 // ============================================
 function gerarPDF(){
   window.scrollTo(0,0);
@@ -705,12 +707,10 @@ function gerarPDF(){
   }, 1000);
 }
 
-// Inicia a impressão automática após o carregamento
 window.onload = () => {
     setTimeout(gerarPDF, 1500);
 };
 
-// Bloqueios de segurança
 document.oncontextmenu = () => false;
 document.onselectstart = () => false;
 </script>
