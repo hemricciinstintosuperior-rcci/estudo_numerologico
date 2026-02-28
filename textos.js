@@ -832,36 +832,7 @@ Também pede equilíbrio emocional para lidar com erros e frustrações. A const
     <p><strong>você</strong> sentirá uma sensibilidade humanitária maior, querendo ajudar os outros e se envolver em causas nobres. É um período de balanço emocional. Não inicie nada de longo prazo agora; prefira concluir o que está pendente. Ao soltar o passado com gratidão, <strong>você</strong> se sentirá leve e pronta para a nova vida que começará em breve.</p>`
   },
 
-deficiencias:{
-  // --- DEFICIÊNCIAS / LIÇÕES CÁRMICAS (O QUE FALTA APRENDER) ---
-  1: `<p>A ausência desta vibração indica que <strong>você</strong> precisa aprender a ter mais iniciativa e autoconfiança. Em experiências passadas, <strong>você</strong> pode ter se encostado na vontade alheia, e agora a vida exige que <strong>você</strong> tome as rédeas do seu próprio destino sem medo de ser a pioneira.</p>
-    <p>O desafio para <strong>você</strong> é superar a insegurança e a procrastinação. <strong>você</strong> deve treinar a sua capacidade de decisão individual e aprender que a sua opinião tem valor. Ao integrar esta lição, <strong>você</strong> descobrirá uma força de liderança que antes parecia adormecida, tornando-se uma pessoa muito mais independente e decidida.</p>`,
 
-  2: `<p>Esta lição indica que <strong>você</strong> precisa desenvolver o tato, a diplomacia e a paciência. No passado, <strong>você</strong> pode ter agido de forma impaciente ou egocêntrica, e agora a vida a convida a entender o valor das parcerias e da colaboração mútua, agindo com mais suavidade nas relações.</p>
-    <p><strong>você</strong> será testada em situações que exigem espera e atenção aos detalhes. O aprendizado para <strong>você</strong> é saber ouvir e cooperar sem querer o protagonismo o tempo todo. Ao dominar esta deficiência, <strong>você</strong> se tornará uma mediadora brilhante, capaz de criar harmonia onde antes só havia conflito e incompreensão.</p>`,
-
-  3: `<p>A falta desta energia sugere que <strong>você</strong> precisa aprender a se expressar e a expandir a sua criatividade sem medo do julgamento. No passado, <strong>você</strong> pode ter reprimido suas palavras ou talentos, e agora a vida pede que <strong>você</strong> seja mais otimista, social e comunicativa.</p>
-    <p><strong>você</strong> deve evitar o isolamento e a timidez excessiva. A lição para <strong>você</strong> é encontrar alegria nas pequenas coisas e compartilhar o seu brilho com o mundo. Ao superar este bloqueio, <strong>você</strong> descobrirá que a sua fala e o seu entusiasmo são ferramentas magnéticas que abrem portas e inspiram a felicidade nas pessoas ao seu redor.</p>`,
-
-  4: `<p>Esta lição cármica indica que <strong>você</strong> precisa aprender o valor da disciplina, do trabalho árduo e da organização material. Talvez em outras vivências <strong>você</strong> tenha evitado responsabilidades práticas, e agora a vida exige que <strong>você</strong> construa suas bases com método e persistência.</p>
-    <p><strong>você</strong> sentirá que as coisas exigem mais esforço para acontecer, e isso é um convite para <strong>você</strong> não desistir no meio do caminho. O aprendizado foca na paciência e no respeito às regras. Ao integrar esta força, <strong>você</strong> se tornará uma pessoa extremamente sólida, capaz de manifestar segurança e estabilidade duradoura.</p>`,
-
-  5: `<p>A ausência do 5 indica que <strong>você</strong> precisa aprender a lidar com as mudanças e a valorizar a liberdade com inteligência. No passado, <strong>você</strong> pode ter sido uma pessoa muito rígida ou medrosa diante do novo, e agora a vida a empurra para experiências que exigem versatilidade e adaptação.</p>
-    <p><strong>você</strong> deve aprender a não se prender excessivamente a rotinas sufocantes. A lição para <strong>você</strong> é entender que a mudança é a única constante e que a curiosidade é um combustível para a alma. Ao superar este medo, <strong>você</strong> se tornará uma pessoa desimpedida, cosmopolita e pronta para aproveitar as aventuras da vida.</p>`,
-
-  6: `<p>Esta deficiência aponta para a necessidade de aprender sobre responsabilidade afetiva, dever familiar e serviço amoroso. No passado, <strong>você</strong> pode ter negligenciado laços domésticos, e agora a vida a coloca em situações onde cuidar dos outros e manter a harmonia é essencial.</p>
-    <p><strong>você</strong> precisa aprender a ser mais compreensiva e a assumir o seu papel de equilibradora no lar. A lição para <strong>você</strong> é a do amor incondicional sem cobranças de gratidão. Ao integrar esta vibração, <strong>você</strong> se tornará um pilar de afeto e justiça, sendo profundamente respeitada e amada por todos no seu círculo social.</p>`,
-
-  7: `<p>A lição do 7 indica que <strong>você</strong> precisa desenvolver a fé, o autoconhecimento e a análise profunda da vida. No passado, <strong>você</strong> pode ter sido excessivamente materialista ou superficial, e agora a vida a convida a buscar respostas que não estão na superfície, agindo com mais espiritualidade.</p>
-    <p><strong>você</strong> deve aprender a confiar na sua intuição e a buscar momentos de silêncio e estudo. O aprendizado para <strong>você</strong> é não aceitar tudo de forma literal, mas investigar a verdade das coisas. Ao superar esta lacuna, <strong>você</strong> se tornará uma pessoa de sabedoria superior, reconhecida pela sua profundidade de pensamento.</p>`,
-
-  8: `<p>Esta lição cármica lida com o poder material, o dinheiro e a capacidade executiva. No passado, <strong>você</strong> pode ter tido má gestão financeira ou medo de assumir autoridade, e agora a vida exige que <strong>você</strong> aprenda a lidar com as leis do sucesso com ética e pragmatismo.</p>
-    <p><strong>você</strong> deve superar o medo do fracasso e aprender a organizar grandes recursos. A lição para <strong>você</strong> é a de que o poder deve ser usado com justiça e eficiência. Ao dominar este aprendizado, <strong>você</strong> terá a capacidade de realizar grandes obras e de garantir a sua prosperidade e a de muitos outros através da sua liderança.</p>`,
-
-  9: `<p>A falta do 9 indica que <strong>você</strong> precisa aprender sobre compaixão universal, desapego e finalização de ciclos. No passado, <strong>você</strong> pode ter sido uma pessoa muito voltada para o próprio ego, e agora a vida a convida a olhar para as dores do mundo e a agir com mais generosidade e altruísmo.</p>
-    <p><strong>você</strong> deve aprender a perdoar e a deixar ir o que já não serve mais. O aprendizado para <strong>você</strong> é o de que a verdadeira grandeza reside na entrega e no serviço à humanidade. Ao integrar esta lição, <strong>você</strong> se tornará uma alma carismática e inspiradora, capaz de amar sem fronteiras e de concluir sua jornada com plenitude.</p>`
-
-},
 
 deficiencias:{
   // --- DEFICIÊNCIAS / LIÇÕES CÁRMICAS (O QUE FALTA APRENDER) ---
