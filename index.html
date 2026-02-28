@@ -46,20 +46,32 @@
 // 1. FUNÇÕES DE PERSONALIZAÇÃO E FILTRO
 // ============================================
 
+// ============================================
+// 1. FUNÇÕES DE PERSONALIZAÇÃO E FILTRO
+// ============================================
+
 function formatarNomeDinamico() {
     let nomeInput = document.getElementById("nome").value.trim();
-    if (!nomeInput) return "Você";
+    if (!nomeInput) return "você"; // Retorno padrão minúsculo para manter fluidez se vazio
+    
+    // Pega apenas o primeiro nome
     let primeiroNome = nomeInput.split(' ')[0];
+    
+    // Retorna Capitalizado (Ex: João)
     return primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
 }
 
 function aplicarFiltroTexto(texto) {
     if (!texto) return "";
     let nome = formatarNomeDinamico();
-    // Substitui "você" por "Nome" em negrito
-    return texto.replace(/você/gi, `<strong>${nome}</strong>`);
+    
+    // Criamos uma expressão regular que busca a palavra "você" (com ou sem acento, case insensitive)
+    // O modificador 'g' garante que mude todas as vezes que aparecer no texto
+    const regex = /você/gi;
+    
+    // Substitui por <strong>Nome</strong>
+    return texto.replace(regex, `<strong>${nome}</strong>`);
 }
-
 // ============================================
 // 2. MOTOR DE CÁLCULO (TABELA CABALÍSTICA)
 // ============================================
