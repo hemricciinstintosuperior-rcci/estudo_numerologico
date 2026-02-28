@@ -637,30 +637,25 @@ const nomePersonalizado = obterPrimeiroNome(dados.nome);
 // Função para formatar o texto e substituir "você"
 function processarTextoPremium(texto) {
     if (!texto) return "";
-    const regexNome = /você/gi;
-    // CORREÇÃO AQUI: Adicionei as aspas crases ` ` ao redor do strong
-    let textoFiltrado = texto.replace(regexNome, `<strong>${nomePersonalizado}</strong>`);
-    return textoFiltrado.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
-}
-
-// --- LÓGICA DE CONTAGEM SIMPLIFICADA ---
-let textoDasDeficiencias = dados.textos.deficiencias || "";
-let textoFinalQtd = "Nenhuma Lição Cármica";
-
-// Se o texto das deficiências existir e for grande, vamos contar quantos blocos tem
-if (textoDasDeficiencias.length > 10) {
-    // Conta quantas vezes a palavra "Lição" ou números aparecem no texto
-    let totalLicoes = (textoDasDeficiencias.match(/Lição|Número|Cármica/gi) || []).length;
     
-    // Se ele achou palavras mas não contou certo, vamos forçar um número padrão ou apenas mudar o texto
-    if (totalLicoes > 0) {
-        textoFinalQtd = totalLicoes + " Lições Cármicas";
-    } else {
-        // Se houver texto mas a contagem falhar, ele coloca esse aviso
-        textoFinalQtd = "Lições Cármicas Ativas";
-    }
-} else {
-    textoFinalQtd = "Nenhuma Lição Cármica";
+    let t = texto;
+
+    // 1. Coloca o nome (ex: Carlos) em negrito
+    const regexNome = /você/gi;
+    t = t.replace(regexNome, `<strong>${nomePersonalizado}</strong>`);
+
+    // 2. O REVISOR AUTOMÁTICO (Limpa o gênero para o masculino)
+    t = t.replace(/\(a\)/gi, "");    // amado(a) -> amado
+    t = t.replace(/\(o\)/gi, "");    // amada(o) -> amada
+    t = t.replace(/\(as\)/gi, "");   // todas(as) -> todas
+    t = t.replace(/\(os\)/gi, "");   // todos(os) -> todos
+    t = t.replace(/\/a/gi, "");      // ele/a -> ele
+    t = t.replace(/\/o/gi, "");      // ela/o -> ela
+    t = t.replace(/o\/a/gi, "o");    // o/a -> o
+    t = t.replace(/a\/o/gi, "a");    // a/o -> a
+
+    // 3. Ajuste de Parágrafos para as 15 linhas ficarem bonitas
+    return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
 }
 
 // O comando que faz a mágica (Coloque isso logo aqui embaixo)
