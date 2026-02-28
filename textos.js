@@ -568,993 +568,980 @@ const textos = {
   }
 };
 
-ciclos:{ 1:{
-  1:`Este período representa a fase inicial de formação da individualidade e da autonomia. A pessoa aprende a afirmar sua identidade, desenvolver iniciativa e construir autoconfiança desde cedo. A infância e a juventude exigem equilíbrio entre liberdade e orientação, permitindo a construção de responsabilidade e maturidade emocional. A presença de figuras de autoridade confiáveis torna-se essencial para servir de modelo e referência. Surge a necessidade de descobrir desejos, talentos e vocação, iniciando a construção da identidade profissional. A disciplina deve existir sem excesso de rigidez, favorecendo a autonomia consciente. Experiências dessa fase moldam fortemente o caráter e a estabilidade futura. Quando bem orientada, a pessoa inicia a vida adulta com iniciativa, liderança e segurança. Caso contrário, podem surgir dúvidas, instabilidade emocional e dificuldade de definição profissional. Este ciclo incentiva coragem, independência e autodescoberta. É uma fase de aprendizado prático e construção do caráter. As bases do futuro são estabelecidas aqui. A consciência dos próprios limites deve ser desenvolvida. A busca por autonomia é constante. O desenvolvimento pessoal torna-se prioridade.`,
-
-2:`Este ciclo enfatiza sensibilidade, cooperação e desenvolvimento emocional. A infância tende a ser marcada por forte influência familiar e necessidade de proteção, exigindo equilíbrio entre autonomia e apoio. Surge a necessidade de construir autoconfiança e capacidade de decisão. A pessoa aprende paciência, empatia e flexibilidade nas relações. Pode demonstrar timidez ou insegurança ao expressar opiniões, refletindo a busca por identidade emocional. A fase favorece introspecção e autoconhecimento, permitindo descobertas importantes para a vida adulta. Relações afetivas exercem grande impacto no desenvolvimento psicológico. O estímulo à independência é fundamental para evitar dependência excessiva. Desenvolve-se o senso de cooperação e sensibilidade social. A maturidade emocional começa a ser construída gradualmente. A busca por harmonia torna-se central. O ambiente familiar influencia profundamente as decisões futuras. A pessoa aprende a confiar em sua percepção. O crescimento acontece de forma gradual e sensível. Este período fortalece vínculos e inteligência emocional.`,
-
-3:`Este ciclo simboliza alegria, criatividade e sociabilidade. A infância e juventude são marcadas por leveza, entusiasmo e necessidade de expressão. A pessoa demonstra carisma, imaginação e forte necessidade de interação social. A busca por diversão pode reduzir o foco em responsabilidades e estudos. Surge a necessidade de aprender disciplina e compromisso. A criatividade e a comunicação se destacam intensamente. Este período favorece descobertas, amizades e expansão social. A pessoa aprende a expressar emoções e ideias com liberdade. A responsabilidade deve ser desenvolvida gradualmente. É uma fase de experimentação e aprendizado social. A motivação vem da alegria e da convivência. A construção de compromissos torna-se necessária. O desenvolvimento artístico pode ser estimulado. A fase favorece autoconhecimento emocional. A base da comunicação futura é construída aqui.`,
-
-4:`Este ciclo exige disciplina, responsabilidade e organização. A infância pode trazer limitações e necessidade de regras claras. Surge o aprendizado sobre esforço, rotina e persistência. A pessoa aprende a respeitar limites e desenvolver autodisciplina. O excesso de rigidez pode gerar resistência ou insegurança. O equilíbrio entre disciplina e liberdade é essencial. A fase favorece construção de bases materiais e educacionais. O esforço dedicado aos estudos torna-se fundamental. A responsabilidade cresce gradualmente. A pessoa aprende a valorizar estabilidade e segurança. Surge a necessidade de planejamento e foco. A maturidade é construída por meio do trabalho e da dedicação. A autonomia é conquistada progressivamente. A base da vida profissional começa a se formar. Este ciclo constrói estrutura e estabilidade para o futuro.`,
-
-5:`Este ciclo é marcado por movimento, liberdade e mudanças constantes. A pessoa aprende a lidar com novas experiências e desafios. Surge forte necessidade de autonomia e experimentação. A supervisão familiar torna-se essencial para evitar excessos. A energia física e mental é intensa. O período favorece aprendizado por experiências práticas. Mudanças e transformações são frequentes. A pessoa busca novas ideias e pessoas inspiradoras. O desafio é desenvolver responsabilidade e constância. Pode haver dificuldade em manter foco e estabilidade. A orientação adequada garante segurança futura. A curiosidade e o dinamismo são características marcantes. A fase estimula independência e adaptação. A busca por liberdade deve ser equilibrada com compromisso. O aprendizado vem da experiência direta com a vida.`,
-
-6:`Este ciclo destaca responsabilidade, família e cooperação. A pessoa aprende a assumir deveres gradualmente. Surge a necessidade de sentir pertencimento e harmonia familiar. Pode haver dificuldade inicial de adaptação social. A fase favorece desenvolvimento de empatia e compromisso. A convivência com pessoas inspiradoras torna-se essencial. O apoio emocional influencia profundamente o crescimento. A vocação começa a se revelar. O senso de responsabilidade se fortalece progressivamente. A pessoa aprende a equilibrar necessidades pessoais e coletivas. Surge o desejo de contribuir com o grupo. A maturidade emocional cresce lentamente. O ambiente familiar exerce forte influência. A fase favorece estabilidade emocional futura. A base da vida afetiva é construída aqui.`,
-
-7:`Este ciclo representa introspecção, sensibilidade e autoconhecimento. A pessoa pode demonstrar timidez e necessidade de isolamento. Surge a busca por compreensão interior e reflexão profunda. O incentivo à socialização é essencial para equilíbrio emocional. Pode haver dificuldade em expressar sentimentos. A autoestima precisa ser fortalecida. O apoio familiar torna-se fundamental. A fase favorece desenvolvimento intelectual e espiritual. A pessoa aprende a confiar em si mesma. O isolamento excessivo deve ser evitado. A introspecção pode gerar sabedoria e maturidade. O estímulo ao diálogo é essencial. A conexão com o mundo exterior precisa ser cultivada. A fase desenvolve consciência emocional profunda. O crescimento ocorre de forma interiorizada.`,
-
-8:`Este ciclo simboliza ambição, poder pessoal e desenvolvimento material. A pessoa demonstra liderança e senso de justiça desde cedo. Surge interesse por conquistas e responsabilidades. A fase favorece construção de valores e capacidade de julgamento. A disciplina torna-se essencial para o sucesso futuro. O jovem busca reconhecimento e espaço social. A orientação adequada define resultados futuros. A ambição precisa ser equilibrada com ética. A capacidade de decisão cresce intensamente. A pessoa aprende a lidar com poder e responsabilidade. O foco material pode se intensificar. O equilíbrio emocional garante estabilidade futura. A fase desenvolve senso de autoridade e liderança. A base das conquistas é construída aqui. O crescimento ocorre por meio da responsabilidade.`,
-
-9:`Este ciclo é marcado por sensibilidade, compaixão e transformações profundas. A pessoa desenvolve empatia e visão humanitária. Pode sentir-se incompreendida ou deslocada. A criatividade e a sensibilidade emocional são intensas. Surge necessidade de propósito e significado. A fase exige orientação emocional cuidadosa. Pode haver sensação de solidão ou confusão. O desenvolvimento espiritual e emocional é intenso. A pessoa aprende tolerância e aceitação. A busca por vocação pode ser desafiadora. Grandes mudanças e adaptações marcam o período. A maturidade emocional cresce lentamente. A fase prepara para profundas transformações futuras. O crescimento ocorre por meio da compreensão da vida. Este ciclo encerra a fase formativa com forte aprendizado emocional.` },
-
-2:{ 1:`Este ciclo marca o início das grandes realizações e da busca por independência. A pessoa passa a confirmar se as escolhas feitas anteriormente estão corretas e começa a estruturar sua carreira e estabilidade financeira. Surge a necessidade de assumir responsabilidades e construir o próprio caminho com autonomia. É uma fase de grande energia, ambição e iniciativa. As conquistas dependem principalmente do esforço pessoal e da determinação. O reconhecimento profissional tende a crescer gradualmente. Este período exige coragem para enfrentar desafios e superar obstáculos. A autoconfiança se fortalece através das realizações. O objetivo é chegar ao próximo ciclo com estabilidade e direção definida. A independência torna-se prioridade. O trabalho intenso traz recompensas. O desenvolvimento pessoal ganha destaque. A construção do futuro se torna concreta. A iniciativa determina os resultados. É uma fase de afirmação e conquistas.`,
-
-2:`Este ciclo enfatiza cooperação, diplomacia e trabalho em equipe. Surge a necessidade de alinhar objetivos pessoais com interesses coletivos. A paciência e a sensibilidade tornam-se fundamentais para alcançar metas. A pessoa aprende a negociar, conciliar e construir parcerias. O crescimento ocorre por meio da colaboração e do apoio mútuo. É importante evitar dependência excessiva ou submissão. O equilíbrio emocional favorece conquistas duradouras. O sucesso surge através de estratégias e planejamento. A fase pede discrição e observação. O progresso acontece de forma gradual e constante. A diplomacia abre oportunidades. A convivência social ganha importância. A realidade deve ser encarada com maturidade. O trabalho em equipe impulsiona resultados. Este período fortalece vínculos e cooperação.`,
-
-3:`Este ciclo traz leveza, expansão e expressão pessoal. A pessoa sente maior alegria, criatividade e sociabilidade. Surge o desejo de se comunicar, aprender e desenvolver talentos. A vida social tende a se expandir e novas oportunidades surgem. É um período favorável ao crescimento intelectual e artístico. A autoconfiança aumenta com a expressão das ideias. O desafio é evitar dispersão e superficialidade. A criatividade deve ser direcionada a objetivos concretos. O entusiasmo favorece novas conquistas. O prazer em viver se intensifica. A comunicação torna-se ferramenta essencial. Novas experiências ampliam horizontes. O aprendizado ocorre com facilidade. A felicidade motiva o crescimento. Este ciclo incentiva criatividade e expansão pessoal.`,
-
-4:`Este ciclo exige dedicação, planejamento e construção de bases sólidas. A prioridade passa a ser estabilidade profissional e segurança material. O trabalho disciplinado torna-se essencial para alcançar objetivos. A pessoa aprende a valorizar organização e persistência. O progresso ocorre através do esforço constante. A rotina torna-se necessária para crescimento estruturado. Este é um período de consolidação e amadurecimento. A responsabilidade aumenta significativamente. A construção de um legado torna-se prioridade. A disciplina garante resultados duradouros. A motivação deve vir do propósito pessoal. O foco substitui a impulsividade. A estabilidade começa a se formar. O crescimento é gradual e seguro. Este ciclo constrói segurança e estrutura.`,
-
-5:`Este é um ciclo de mudanças intensas e oportunidades inesperadas. A vida torna-se dinâmica, exigindo adaptação constante. A pessoa aprende a lidar com liberdade e responsabilidade. Novas experiências ampliam a visão de mundo. A flexibilidade torna-se essencial para o sucesso. Mudanças repentinas podem ocorrer com frequência. A fase favorece expansão pessoal e profissional. A curiosidade impulsiona novas descobertas. O desafio é evitar impulsividade e instabilidade. A liberdade deve ser usada com sabedoria. O crescimento ocorre por meio da experiência. Novas oportunidades surgem rapidamente. A capacidade de adaptação define resultados. Este ciclo ensina o valor da liberdade consciente. A transformação torna-se constante.`,
-
-6:`Este ciclo destaca responsabilidade afetiva, parcerias e compromissos. Surge a necessidade de cooperação e equilíbrio nas relações. A pessoa aprende a compartilhar responsabilidades. O desenvolvimento acontece através da união com outras pessoas. Parcerias podem trazer crescimento significativo. O individualismo deve dar lugar à colaboração. A harmonia torna-se essencial para o progresso. O compromisso fortalece conquistas. A vida afetiva ganha importância. O equilíbrio emocional favorece estabilidade. O sucesso vem do esforço conjunto. A flexibilidade melhora relacionamentos. A maturidade emocional se intensifica. Este ciclo fortalece vínculos e responsabilidades.`,
-
-7:`Este ciclo favorece introspecção, estudo e autoconhecimento. A pessoa sente necessidade de compreender sua essência. Surge o desejo de aperfeiçoamento pessoal e intelectual. O crescimento ocorre por meio da reflexão. A busca por conhecimento se intensifica. A disciplina mental torna-se essencial. O sucesso depende de concentração e foco. A intuição se fortalece gradualmente. O isolamento pode ser necessário para crescimento interior. O aprendizado profundo traz sabedoria. As oportunidades surgem naturalmente. A pessoa aprende a confiar em si mesma. O desenvolvimento ocorre de dentro para fora. Este ciclo fortalece autoconfiança e maturidade.`,
-
-8:`Este ciclo está ligado às conquistas materiais e ao poder de realização. A dedicação ao trabalho e aos objetivos financeiros aumenta. O senso de justiça e responsabilidade torna-se essencial. As recompensas são proporcionais ao esforço. O equilíbrio emocional garante sucesso. O autocontrole evita perdas e impulsividade. Grandes oportunidades podem surgir. A liderança se fortalece naturalmente. A confiança impulsiona conquistas. O planejamento financeiro torna-se importante. O sucesso exige ética e disciplina. A ambição deve ser equilibrada com sabedoria. Este ciclo favorece prosperidade e estabilidade.`,
-
-9:`Este ciclo representa transformação, desapego e amadurecimento emocional. A pessoa desenvolve empatia e visão humanitária. Surge a necessidade de reavaliar valores e objetivos. O desapego de mágoas e frustrações torna-se necessário. A maturidade emocional se fortalece. Mudanças profundas podem ocorrer. A vida pede renovação e crescimento interior. O passado deve ser compreendido e superado. A compaixão ganha destaque. O desenvolvimento espiritual se intensifica. Este período prepara para novas fases da vida. A transformação traz sabedoria. O crescimento ocorre por meio do desapego. Este ciclo encerra uma etapa com evolução e consciência.` },
-
-3:{ 1:`No terceiro ciclo de vida, o número 1 representa uma fase de renovação, autonomia e redescoberta da própria identidade. Surge uma nova percepção sobre a vida, sobre si mesmo e sobre as decisões tomadas ao longo da jornada. A pessoa passa a compreender melhor suas motivações, suas qualidades e a influência de suas escolhas no caminho percorrido. É um período de iniciativa, coragem e autoconfiança, no qual o desejo de continuar realizando e conquistando permanece forte. Quando a trajetória anterior foi produtiva, há sensação de realização, vitalidade e disposição para continuar evoluindo. Caso contrário, podem surgir frustrações, arrependimentos e sensação de oportunidades perdidas. Este ciclo incentiva novos objetivos, independência emocional e continuidade do crescimento pessoal. É momento de assumir a própria história, reconhecer conquistas e buscar novos desafios com maturidade, determinação e confiança nas próprias capacidades.`,
-
-2:`Neste ciclo, o número 2 traz uma fase de harmonia emocional, aproximação afetiva e fortalecimento dos vínculos sociais. A pessoa tende a sentir maior conexão com os outros e consigo mesma, tornando-se mais sensível, espontânea e receptiva. Surge a oportunidade de expressar sentimentos com mais naturalidade, superar inseguranças e desenvolver relações mais profundas e verdadeiras. Quando a vida foi conduzida de forma equilibrada, há sensação de paz interior, satisfação emocional e convivência harmoniosa. Caso contrário, podem surgir sentimentos de mágoa, ressentimento ou comparação com conquistas alheias. Este período favorece empatia, diplomacia, cooperação e reconciliação. A maturidade emocional torna-se uma ferramenta poderosa para viver relações mais saudáveis e significativas. É uma fase de sensibilidade, compreensão e crescimento através das relações humanas.`,
-
-3:`O número 3 representa uma fase de expressão, criatividade e redescoberta da alegria de viver. Surge a necessidade de compartilhar sentimentos, ideias e experiências, fortalecendo a comunicação e o contato social. A criatividade se expande e pode trazer novas atividades, amizades e interesses. Quando a trajetória foi bem construída, há entusiasmo, leveza e prazer em viver novas experiências. Caso contrário, podem surgir sentimentos de rejeição, impulsividade ou falta de direção. O desafio é manter o foco e evitar desperdício de energia em atividades sem propósito. Este ciclo incentiva autenticidade, convivência social e desenvolvimento de talentos. É uma fase de redescoberta emocional e de valorização da vida através da criatividade, comunicação e alegria.`,
-
-4:`O número 4 traz um período de continuidade, responsabilidade e senso de dever cumprido. A pessoa sente necessidade de manter-se ativa, produtiva e útil, buscando estabilidade e segurança. Surge maior preocupação com justiça, valores morais e organização da vida. Quando a jornada anterior foi bem conduzida, há sensação de realização e satisfação com o caminho percorrido. Caso contrário, podem surgir frustração, ressentimento ou sensação de falta de conquistas. Este ciclo reforça disciplina, perseverança e construção de legado. É uma fase de maturidade prática, comprometimento e fortalecimento das bases construídas ao longo da vida.`,
-
-5:`O número 5 indica um período de movimento, mudanças e adaptação. Mesmo na maturidade, surgem novas oportunidades, experiências e desafios que exigem flexibilidade e prudência. A pessoa busca segurança, mas também deseja continuar evoluindo e explorando novas possibilidades. Quando a vida foi bem conduzida, há entusiasmo, abertura para mudanças e vontade de continuar crescendo. Caso contrário, podem surgir insegurança, apego ao passado ou falta de motivação. Este ciclo incentiva liberdade consciente, adaptação e aproveitamento das oportunidades. É uma fase de transformação e expansão contínua.`,
-
-6:`O número 6 representa uma fase de harmonia, vínculos afetivos e realização emocional. As relações ganham grande importância, trazendo sensação de pertencimento e apoio. Quando a trajetória foi equilibrada, há sentimento de ser amado, respeitado e valorizado. Caso contrário, podem surgir sentimentos de inutilidade ou solidão. Este ciclo estimula amor, cooperação e equilíbrio emocional. É um período de estabilidade afetiva, convivência familiar e satisfação pessoal através das relações.`,
-
-7:`O número 7 simboliza a fase de introspecção, sabedoria e autoconhecimento. É um período de reflexão, aprendizado e crescimento interior. Quando a vida foi bem conduzida, há serenidade, compreensão e desejo de compartilhar conhecimento. Caso contrário, podem surgir isolamento, tristeza ou sensação de vazio. Este ciclo favorece espiritualidade, aprendizado e reconexão com a essência. É uma fase de sabedoria e evolução interior.`,
-
-8:`O número 8 representa a fase das recompensas e compensações. As conquistas materiais e profissionais tornam-se evidentes, refletindo escolhas passadas. Quando a trajetória foi correta, há prosperidade, reconhecimento e sensação de poder pessoal. Caso contrário, podem surgir perdas, frustrações ou arrependimentos. Este ciclo reforça justiça, responsabilidade e colheita dos resultados da vida. É a fase das recompensas e aprendizados finais.`,
-
-9:`O número 9 marca a fase de reflexão profunda, desapego e compreensão da vida. Surge o desejo de contribuir com o mundo e buscar significado maior. Quando a vida foi bem conduzida, há sensação de realização e paz interior. Caso contrário, podem surgir arrependimentos e sensação de tempo perdido. Este ciclo incentiva compaixão, sabedoria e aceitação. É o encerramento da jornada com aprendizado, maturidade e compreensão do sentido da vida.`}
-
-
-},
-  
-  
- momentos:{
-
+​Ciclos:{
 1:{
-1:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 1
-
-O desafio deste período é desenvolver força de vontade. A criança deve ser incentivada desde cedo a fazer escolhas e tomar decisões próprias, para que futuramente saiba avaliar o momento certo de agir e compreenda que caberá a ela colocar seus projetos em prática.
-
-Este é o momento de aprender o valor da independência e da iniciativa. Toda a juventude deve ser dedicada ao desenvolvimento das próprias ideias, evitando egoísmo, teimosia e egocentrismo.
-
-É uma fase essencial para desenvolver liderança e individualidade. As amizades formadas aqui influenciarão profundamente o futuro, sendo fundamental escolher pessoas confiáveis.
-
-Este período exige coragem, determinação e confiança. O sucesso dependerá principalmente da própria iniciativa.`,
-
-2:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 2
-
-O desafio deste período é desenvolver paciência. A criança não deve ser protegida em excesso, pois isso pode gerar dificuldade em lidar com a realidade no futuro.
-
-Este período exige cooperação, sensibilidade e orientação adequada. A personalidade e o temperamento estão sendo formados, definindo a forma de reagir à vida.
-
-Aprender a cooperar, analisar decisões com cuidado e cultivar amizades sinceras será essencial para o desenvolvimento emocional equilibrado.`,
-
-3:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 3
-
-O desafio deste período é refinar a autoexpressão. Trata-se de uma fase criativa e social, mas que exige disciplina para evitar dispersão.
-
-É importante aprender a controlar emoções, fazer escolhas responsáveis e desenvolver concentração.
-
-A vida pode parecer leve e fácil, porém a seriedade será essencial para construir conquistas duradouras.`,
-
-4:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 4
-
-O desafio deste período é organizar o futuro. É o momento de aprender responsabilidade, disciplina e valor do esforço.
-
-A educação recebida aqui define a estrutura das conquistas futuras.
-
-Com dedicação, planejamento e persistência, será possível construir bases sólidas para a vida adulta.`,
-
-5:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 5
-
-O desafio é aprender a aproveitar oportunidades com responsabilidade. É um período de experiências, mudanças e aprendizado.
-
-A criança deve aprender a respeitar regras, limites e autoridade, desenvolvendo maturidade emocional.
-
-A liberdade deve ser equilibrada com responsabilidade para garantir estabilidade futura.`,
-
-6:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 6
-
-O desafio é desenvolver responsabilidade emocional. Este período ensina convivência, cooperação e equilíbrio nas relações.
-
-É importante aprender a cuidar dos outros sem abandonar as próprias necessidades.
-
-Diplomacia, empatia e cordialidade devem ser desenvolvidas desde cedo.`,
-
-7:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 7
-
-O desafio é desenvolver autoconfiança e autoestima. A criança deve ser incentivada a se relacionar e evitar isolamento.
-
-É fundamental desenvolver interesse pela vida prática e aprender a enfrentar desafios com segurança.
-
-Este período constrói valores e a base da maturidade futura.`,
-
-8:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 8
-
-O desafio é desenvolver senso de justiça e equilíbrio. Este período exige estudo, disciplina e organização.
-
-É importante aprender a lidar com responsabilidades e desenvolver autocontrole.
-
-Uma boa formação permitirá alcançar objetivos ainda no início da vida adulta.`,
-
-9:`1º MOMENTO DECISIVO — INÍCIO DA VIDA
-
-Reflete o início da vida, época em que a pessoa se encontra mais influenciável.
-
-MOMENTO DECISIVO 9
-
-O desafio é desenvolver empatia e visão humanitária. Este pode ser um período sensível, exigindo compreensão e tolerância.
-
-A convivência com diferentes pessoas e experiências desenvolve maturidade emocional.
-
-É uma fase de descobertas que prepara para os próximos ciclos da vida.`
-
-  },
-
-2:{
-1:`2º Momento Decisivo —
-Este período marca uma fase de escolhas importantes, maior autonomia e aumento das responsabilidades pessoais. O desenvolvimento individual passa a exigir atitude, coragem e posicionamento diante da vida.
-
-O desafio deste período é manter entusiasmo, autoconfiança e iniciativa.  
-É um momento que exige coragem para agir e assumir o controle da própria trajetória. A pessoa deve confiar em suas ideias e acreditar em sua capacidade de realização.  
-As decisões tomadas agora terão impacto direto no futuro, por isso é essencial agir com firmeza e determinação.  
-A independência deve ser desenvolvida com responsabilidade e maturidade.  
-É importante aprender a lidar com obstáculos sem perder a motivação.  
-A autossuficiência emocional se torna um objetivo importante.  
-Este é o momento de iniciar projetos e assumir riscos calculados.  
-A coragem será uma aliada essencial.  
-O excesso de dúvida pode gerar perdas de oportunidades.  
-A persistência será recompensada.  
-A autoconfiança deve ser fortalecida diariamente.  
-A iniciativa pessoal será determinante para o sucesso.  
-A vida exige ação e posicionamento.  
-É o início da consolidação da identidade adulta.  
-A determinação moldará os resultados futuros.`,
-
-2:`2º Momento Decisivo —
-Esta fase simboliza um período de amadurecimento emocional, cooperação e desenvolvimento das relações humanas.
-
-O desafio deste período é agir com estratégia e paciência.  
-A diplomacia torna-se fundamental para o crescimento.  
-Parcerias e relações ganham importância significativa.  
-A pessoa aprende a trabalhar em equipe e compartilhar responsabilidades.  
-É essencial desenvolver sensibilidade emocional e capacidade de negociação.  
-Decisões precipitadas devem ser evitadas.  
-O sucesso virá através da cooperação e do equilíbrio.  
-A empatia facilita oportunidades e alianças importantes.  
-O crescimento ocorre de forma gradual e constante.  
-A intuição deve ser equilibrada com a razão.  
-Aprender a esperar o momento certo é essencial.  
-O apoio de outras pessoas pode abrir caminhos importantes.  
-A maturidade emocional fortalece resultados duradouros.  
-A harmonia nas relações favorece o progresso.  
-O equilíbrio será a chave deste período.`,
-
-3:`2º Momento Decisivo —
-Esta etapa traz expansão social, criatividade e necessidade de expressão pessoal.
-
-O desafio é manter foco e disciplina.  
-A criatividade se intensifica e novas oportunidades surgem.  
-A vida social tende a se expandir rapidamente.  
-É importante evitar dispersão e superficialidade.  
-Talentos comunicativos podem se desenvolver com facilidade.  
-A expressão pessoal torna-se essencial.  
-A motivação cresce através da interação com pessoas.  
-A alegria pode impulsionar conquistas importantes.  
-É necessário direcionar energia para objetivos concretos.  
-A disciplina garante resultados duradouros.  
-O excesso de entusiasmo pode gerar instabilidade.  
-O aprendizado ocorre por meio da experiência.  
-A comunicação abre portas e oportunidades.  
-A organização transforma ideias em realidade.  
-O equilíbrio entre prazer e responsabilidade será essencial.`,
-
-4:`2º Momento Decisivo —
-Este período representa construção, disciplina e preparação para estabilidade futura.
-
-O desafio é construir bases sólidas.  
-O trabalho passa a exigir dedicação e persistência.  
-A responsabilidade aumenta significativamente.  
-A organização torna-se essencial para o sucesso.  
-A disciplina será a principal aliada.  
-Resultados surgem através do esforço constante.  
-É um período de consolidação e amadurecimento.  
-A rotina pode se tornar necessária para crescimento.  
-O foco deve substituir a impulsividade.  
-O planejamento garante segurança futura.  
-A estabilidade começa a se formar.  
-A paciência se torna fundamental.  
-O progresso é gradual e seguro.  
-A determinação constrói conquistas duradouras.  
-A consistência define os resultados.`,
-
-5:`2º Momento Decisivo —
-Esta fase simboliza mudanças, liberdade e necessidade de adaptação.
-
-O desafio é aprender a se libertar com responsabilidade.  
-Mudanças inesperadas podem ocorrer com frequência.  
-A flexibilidade torna-se essencial.  
-A vida pede adaptação constante.  
-Novas experiências ampliam a visão de mundo.  
-O impulso por liberdade cresce intensamente.  
-É importante evitar impulsividade excessiva.  
-A curiosidade impulsiona descobertas importantes.  
-A transformação é inevitável.  
-A instabilidade deve ser administrada com sabedoria.  
-A experiência se torna a maior fonte de aprendizado.  
-O crescimento surge através das mudanças.  
-A coragem favorece novas oportunidades.  
-O equilíbrio evita perdas desnecessárias.  
-A liberdade consciente conduz ao progresso.`,
-
-6:`2º Momento Decisivo —
-Esta etapa destaca responsabilidade afetiva, vínculos e compromissos.
-
-O desafio é manter harmonia com as pessoas.  
-Relacionamentos ganham importância significativa.  
-A cooperação se torna essencial.  
-A pessoa aprende a compartilhar responsabilidades.  
-O compromisso fortalece conquistas.  
-A vida afetiva ganha destaque.  
-A maturidade emocional cresce intensamente.  
-É importante manter equilíbrio nas relações.  
-A empatia favorece oportunidades.  
-O individualismo deve ser reduzido.  
-A colaboração impulsiona o crescimento.  
-A harmonia cria estabilidade emocional.  
-O apoio mútuo gera segurança.  
-As parcerias trazem aprendizado valioso.  
-O equilíbrio emocional garante progresso.`,
-
-7:`2º Momento Decisivo —
-Este período favorece introspecção, aprendizado e redefinição de objetivos.
-
-O desafio é agir com praticidade.  
-A busca por conhecimento se intensifica.  
-O autoconhecimento torna-se essencial.  
-A reflexão orienta decisões importantes.  
-É necessário evitar isolamento excessivo.  
-A disciplina mental fortalece resultados.  
-A concentração se torna indispensável.  
-O desenvolvimento ocorre de dentro para fora.  
-A intuição cresce gradualmente.  
-O foco direciona o crescimento.  
-O aprendizado profundo traz sabedoria.  
-A preparação para novas fases se inicia.  
-O silêncio pode favorecer decisões importantes.  
-A mente busca respostas e direção.  
-A maturidade intelectual se fortalece.`,
-
-8:`2º Momento Decisivo —
-Esta fase está ligada à realização material, poder e conquistas.
-
-O desafio é agir com ética e responsabilidade.  
-O trabalho ganha intensidade.  
-A ambição cresce naturalmente.  
-A liderança se fortalece gradualmente.  
-O planejamento financeiro se torna essencial.  
-O autocontrole evita perdas.  
-Grandes oportunidades podem surgir.  
-A disciplina garante resultados concretos.  
-A confiança impulsiona conquistas.  
-O equilíbrio emocional favorece o sucesso.  
-A justiça torna-se fundamental.  
-A responsabilidade aumenta significativamente.  
-O esforço traz recompensas proporcionais.  
-A visão estratégica orienta decisões.  
-A prosperidade depende da disciplina.`,
-
-9:`2º Momento Decisivo —
-Este período representa transformação, desapego e amadurecimento emocional.
-
-O desafio é encerrar ciclos com sabedoria.  
-Mudanças profundas podem ocorrer.  
-A empatia se fortalece gradualmente.  
-O passado deve ser compreendido e superado.  
-A compaixão ganha destaque.  
-O crescimento interior se intensifica.  
-A maturidade emocional se amplia.  
-A vida pede renovação e evolução.  
-É momento de rever valores e objetivos.  
-O desapego traz libertação.  
-A consciência se expande.  
-A espiritualidade pode ganhar importância.  
-A transformação traz aprendizado profundo.  
-O encerramento prepara novos começos.  
-A evolução emocional se torna evidente.`
+1:`<p><strong>CICLO 1 — Formação da Individualidade e Autonomia</strong></p>
+​<p>Este período representa para [NOME] a fase inicial de formação da individualidade e da autonomia.</p>
+<p>[NOME] aprende a afirmar sua identidade, desenvolver iniciativa e construir autoconfiança desde cedo.</p>
+<p>A infância e a juventude de [NOME] exigem equilíbrio entre liberdade e orientação, permitindo a construção de responsabilidade e maturidade emocional.</p>
+<p>A presença de figuras de autoridade confiáveis torna-se essencial para servir de modelo e referência para [NOME].</p>
+<p>Surge a necessidade de [NOME] descobrir desejos, talentos e vocação, iniciando a construção da identidade profissional.</p>
+<p>A disciplina deve existir sem excesso de rigidez para [NOME], favorecendo a autonomia consciente.</p>
+<p>Experiências dessa fase moldam fortemente o caráter e a estabilidade futura de [NOME].</p>
+<p>Quando bem orientada, [NOME] inicia a vida adulta com iniciativa, liderança e segurança.</p>
+<p>Caso contrário, podem surgir para [NOME] dúvidas, instabilidade emocional e dificuldade de definição profissional.</p>
+<p>Este ciclo incentiva em [NOME] coragem, independência e autodescoberta.</p>
+<p>É uma fase de aprendizado prático e construção do caráter para [NOME].</p>
+<p>As bases do futuro de [NOME] são estabelecidas aqui.</p>
+<p>A consciência dos próprios limites deve ser desenvolvida por [NOME].</p>
+<p>A busca por autonomia de [NOME] é constante.</p>
+<p>O desenvolvimento pessoal de [NOME] torna-se prioridade.</p>`,
+​2:`<p><strong>CICLO 2 — Sensibilidade e Cooperação</strong></p>
+​<p>Este ciclo enfatiza em [NOME] a sensibilidade, cooperação e desenvolvimento emocional.</p>
+<p>A infância de [NOME] tende a ser marcada por forte influência familiar e necessidade de proteção, exigindo equilíbrio entre autonomia e apoio.</p>
+<p>Surge para [NOME] a necessidade de construir autoconfiança e capacidade de decisão.</p>
+<p>[NOME] aprende paciência, empatia e flexibilidade nas relações.</p>
+<p>[NOME] pode demonstrar timidez ou insegurança ao expressar opiniões, refletindo a busca por identidade emocional.</p>
+<p>A fase favorece em [NOME] a introspecção e autoconhecimento, permitindo descobertas importantes para a vida adulta.</p>
+<p>Relações afetivas exercem grande impacto no desenvolvimento psicológico de [NOME].</p>
+<p>O estímulo à independência é fundamental para evitar dependência excessiva em [NOME].</p>
+<p>Desenvolve-se em [NOME] o senso de cooperação e sensibilidade social.</p>
+<p>A maturidade emocional de [NOME] começa a ser construída gradualmente.</p>
+<p>A busca por harmonia torna-se central para [NOME].</p>
+<p>O ambiente familiar influencia profundamente as decisões futuras de [NOME].</p>
+<p>[NOME] aprende a confiar em sua percepção.</p>
+<p>O crescimento de [NOME] acontece de forma gradual e sensível.</p>
+<p>Este período fortalece em [NOME] os vínculos e a inteligência emocional.</p>`,
+​3:`<p><strong>CICLO 3 — Alegria e Criatividade</strong></p>
+​<p>Este ciclo simboliza para [NOME] a alegria, criatividade e sociabilidade.</p>
+<p>A infância e juventude de [NOME] são marcadas por leveza, entusiasmo e necessidade de expressão.</p>
+<p>[NOME] demonstra carisma, imaginação e forte necessidade de interação social.</p>
+<p>A busca por diversão pode reduzir o foco de [NOME] em responsabilidades e estudos.</p>
+<p>Surge para [NOME] a necessidade de aprender disciplina e compromisso.</p>
+<p>A criatividade e a comunicação de [NOME] se destacam intensamente.</p>
+<p>Este período favorece para [NOME] descobertas, amizades e expansão social.</p>
+<p>[NOME] aprende a expressar emoções e ideias com liberdade.</p>
+<p>A responsabilidade de [NOME] deve ser desenvolvida gradualmente.</p>
+<p>É uma fase de experimentação e aprendizado social para [NOME].</p>
+<p>A motivação de [NOME] vem da alegria e da convivência.</p>
+<p>A construção de compromissos torna-se necessária para [NOME].</p>
+<p>O desenvolvimento artístico de [NOME] pode ser estimulado.</p>
+<p>A fase favorece em [NOME] o autoconhecimento emocional.</p>
+<p>A base da comunicação futura de [NOME] é construída aqui.</p>`,
+​4:`<p><strong>CICLO 4 — Disciplina e Organização</strong></p>
+​<p>Este ciclo exige de [NOME] disciplina, responsabilidade e organização.</p>
+<p>A infância de [NOME] pode trazer limitações e necessidade de regras claras.</p>
+<p>Surge para [NOME] o aprendizado sobre esforço, rotina e persistência.</p>
+<p>[NOME] aprende a respeitar limites e desenvolver autodisciplina.</p>
+<p>O excesso de rigidez pode gerar em [NOME] resistência ou insegurança.</p>
+<p>O equilíbrio entre disciplina e liberdade é essencial para [NOME].</p>
+<p>A fase favorece para [NOME] a construção de bases materiais e educacionais.</p>
+<p>O esforço de [NOME] dedicado aos estudos torna-se fundamental.</p>
+<p>A responsabilidade de [NOME] cresce gradualmente.</p>
+<p>[NOME] aprende a valorizar estabilidade e segurança.</p>
+<p>Surge para [NOME] a necessidade de planejamento e foco.</p>
+<p>A maturidade de [NOME] é construída por meio do trabalho e da dedicação.</p>
+<p>A autonomia de [NOME] é conquistada progressivamente.</p>
+<p>A base da vida profissional de [NOME] começa a se formar.</p>
+<p>Este ciclo constrói para [NOME] estrutura e estabilidade para o futuro.</p>`,
+​5:`<p><strong>CICLO 5 — Movimento e Mudança</strong></p>
+​<p>Este ciclo é marcado para [NOME] por movimento, liberdade e mudanças constantes.</p>
+<p>[NOME] aprende a lidar com novas experiências e desafios.</p>
+<p>Surge em [NOME] uma forte necessidade de autonomia e experimentação.</p>
+<p>A supervisão familiar torna-se essencial para [NOME] evitar excessos.</p>
+<p>A energia física e mental de [NOME] é intensa.</p>
+<p>O período favorece para [NOME] o aprendizado por experiências práticas.</p>
+<p>Mudanças e transformações são frequentes na vida de [NOME].</p>
+<p>[NOME] busca novas ideias e pessoas inspiradoras.</p>
+<p>O desafio de [NOME] é desenvolver responsabilidade e constância.</p>
+<p>[NOME] pode ter dificuldade em manter foco e estabilidade.</p>
+<p>A orientação adequada garante para [NOME] a segurança futura.</p>
+<p>A curiosidade e o dinamismo de [NOME] são características marcantes.</p>
+<p>A fase estimula em [NOME] a independência e adaptação.</p>
+<p>A busca por liberdade deve ser equilibrada por [NOME] com compromisso.</p>
+<p>O aprendizado de [NOME] vem da experiência direta com a vida.</p>`,
+​6:`<p><strong>CICLO 6 — Responsabilidade e Família</strong></p>
+​<p>Este ciclo destaca para [NOME] a responsabilidade, família e cooperação.</p>
+<p>[NOME] aprende a assumir deveres gradualmente.</p>
+<p>Surge para [NOME] a necessidade de sentir pertencimento e harmonia familiar.</p>
+<p>[NOME] pode ter dificuldade inicial de adaptação social.</p>
+<p>A fase favorece em [NOME] o desenvolvimento de empatia e compromisso.</p>
+<p>A convivência com pessoas inspiradoras torna-se essencial para [NOME].</p>
+<p>O apoio emocional influencia profundamente o crescimento de [NOME].</p>
+<p>A vocação de [NOME] começa a se revelar.</p>
+<p>O senso de responsabilidade de [NOME] se fortalece progressivamente.</p>
+<p>[NOME] aprende a equilibrar necessidades pessoais e coletivas.</p>
+<p>Surge em [NOME] o desejo de contribuir com o grupo.</p>
+<p>A maturidade emocional de [NOME] cresce lentamente.</p>
+<p>O ambiente familiar exerce forte influência sobre [NOME].</p>
+<p>A fase favorece para [NOME] a estabilidade emocional futura.</p>
+<p>A base da vida afetiva de [NOME] é construída aqui.</p>`,
+​7:`<p><strong>CICLO 7 — Introspecção e Autoconhecimento</strong></p>
+​<p>Este ciclo representa para [NOME] introspecção, sensibilidade e autoconhecimento.</p>
+<p>[NOME] pode demonstrar timidez e necessidade de isolamento.</p>
+<p>Surge para [NOME] a busca por compreensão interior e reflexão profunda.</p>
+<p>O incentivo à socialização é essencial para o equilíbrio emocional de [NOME].</p>
+<p>[NOME] pode ter dificuldade em expressar sentimentos.</p>
+<p>A autoestima de [NOME] precisa ser fortalecida.</p>
+<p>O apoio familiar torna-se fundamental para [NOME].</p>
+<p>A fase favorece em [NOME] o desenvolvimento intelectual e espiritual.</p>
+<p>[NOME] aprende a confiar em si mesma.</p>
+<p>O isolamento excessivo deve ser evitado por [NOME].</p>
+<p>A introspecção pode gerar em [NOME] sabedoria e maturidade.</p>
+<p>O estímulo ao diálogo é essencial para [NOME].</p>
+<p>A conexão com o mundo exterior precisa ser cultivada por [NOME].</p>
+<p>A fase desenvolve em [NOME] uma consciência emocional profunda.</p>
+<p>O crescimento de [NOME] ocorre de forma interiorizada.</p>`,
+​8:`<p><strong>CICLO 8 — Poder e Realização Material</strong></p>
+​<p>Este ciclo simboliza para [NOME] a ambição, poder pessoal e desenvolvimento material.</p>
+<p>[NOME] demonstra liderança e senso de justiça desde cedo.</p>
+<p>Surge em [NOME] interesse por conquistas e responsabilidades.</p>
+<p>A fase favorece em [NOME] a construção de valores e capacidade de julgamento.</p>
+<p>A disciplina torna-se essencial para o sucesso futuro de [NOME].</p>
+<p>[NOME] busca reconhecimento e espaço social.</p>
+<p>A orientação adequada define os resultados futuros de [NOME].</p>
+<p>A ambição de [NOME] precisa ser equilibrada com ética.</p>
+<p>A capacidade de decisão de [NOME] cresce intensamente.</p>
+<p>[NOME] aprende a lidar com poder e responsabilidade.</p>
+<p>O foco material de [NOME] pode se intensificar.</p>
+<p>O equilíbrio emocional garante a [NOME] estabilidade futura.</p>
+<p>A fase desenvolve em [NOME] o senso de autoridade e liderança.</p>
+<p>A base das conquistas de [NOME] é construída aqui.</p>
+<p>O crescimento de [NOME] ocorre por meio da responsabilidade.</p>`,
+​9:`<p><strong>CICLO 9 — Compaixão e Transformação</strong></p>
+​<p>Este ciclo é marcado em [NOME] por sensibilidade, compaixão e transformações profundas.</p>
+<p>[NOME] desenvolve empatia e visão humanitária.</p>
+<p>[NOME] pode sentir-se incompreendida ou deslocada.</p>
+<p>A criatividade e a sensibilidade emocional de [NOME] são intensas.</p>
+<p>Surge para [NOME] a necessidade de propósito e significado.</p>
+<p>A fase exige de [NOME] orientação emocional cuidadosa.</p>
+<p>[NOME] pode ter sensação de solidão ou confusão.</p>
+<p>O desenvolvimento espiritual e emocional de [NOME] é intenso.</p>
+<p>[NOME] aprende tolerância e aceitação.</p>
+<p>A busca por vocação pode ser desafiadora para [NOME].</p>
+<p>Grandes mudanças e adaptações marcam o período de [NOME].</p>
+<p>A maturidade emocional de [NOME] cresce lentamente.</p>
+<p>A fase prepara [NOME] para profundas transformações futuras.</p>
+<p>O crescimento de [NOME] ocorre por meio da compreensão da vida.</p>
+<p>Este ciclo encerra a fase formativa de [NOME] com forte aprendizado emocional.</p>`
 },
-  
-
-3:{
-1:`3º Momento Decisivo —
-Nesta fase a maturidade já está consolidada e os resultados passam a depender diretamente da sua iniciativa, foco e determinação.
-
-3º Momento n°1
-É hora de sair da inércia e agir com coragem para realizar planos.  
-O período exige atenção ao ambiente e às oportunidades.  
-Será necessário reavaliar conquistas e redefinir objetivos.  
-As bases construídas anteriormente devem ser colocadas em prática.  
-O crescimento depende da disposição para se arriscar.  
-O desenvolvimento de habilidades continua essencial.  
-As relações sociais ganham importância estratégica.  
-Algumas amizades contribuirão, outras poderão prejudicar.  
-É necessário avaliar influências com cuidado.  
-A expansão social pode abrir novos caminhos.  
-O aperfeiçoamento constante será indispensável.  
-Os resultados serão proporcionais ao esforço aplicado.  
-A persistência fortalece as conquistas.  
-O foco determina o sucesso deste período.  
-A determinação conduz à realização.`,
-
-2:`3º Momento Decisivo —
-Este período exige equilíbrio emocional, cooperação e confiança para consolidar conquistas e seguir avançando.
-
-3º Momento n°2
-Podem surgir dúvidas se a autoestima não estiver fortalecida.  
-Será necessário manter a individualidade com flexibilidade.  
-Parcerias e cooperação tornam-se essenciais.  
-A paciência facilitará conquistas importantes.  
-Relacionamentos podem impulsionar resultados.  
-A impaciência poderá gerar atrasos e conflitos.  
-É momento de avaliar a realidade com clareza.  
-Evite ilusões e promessas vazias.  
-Aprenda com erros e aproveite acertos passados.  
-Este período separa passado e futuro.  
-A análise da própria trajetória será essencial.  
-A cooperação facilitará o crescimento.  
-A maturidade emocional favorece decisões.  
-A disciplina fortalece resultados.  
-A clareza conduz ao progresso.`,
-
-3:`3º Momento Decisivo —
-O foco e a disciplina tornam-se fundamentais para aproveitar oportunidades e alcançar reconhecimento.
-
-3º Momento n°3
-A concentração será a chave do sucesso.  
-Evite dispersar energia em atividades improdutivas.  
-É momento de expandir e ocupar novos espaços.  
-A sociabilidade pode abrir portas importantes.  
-A cooperação favorece conquistas.  
-Selecione bem amizades e parcerias.  
-Não force situações, permita que fluam naturalmente.  
-A organização evita sobrecarga e desgaste.  
-A responsabilidade precisa ser assumida.  
-A vida pede reorganização produtiva.  
-A experiência acumulada deve ser utilizada.  
-A disciplina garante estabilidade.  
-O crescimento depende da constância.  
-O equilíbrio evita desgaste emocional.  
-O foco conduz à realização.`,
-
-4:`3º Momento Decisivo —
-Este período favorece a construção definitiva de bases sólidas e duradouras para o futuro.
-
-3º Momento n°4
-Disciplina e dedicação serão essenciais.  
-Encare dificuldades de forma prática e realista.  
-Não permita que limitações impeçam o progresso.  
-O esforço contínuo trará resultados concretos.  
-A responsabilidade define os caminhos futuros.  
-Aprender a lidar com pressão será necessário.  
-Os resultados dependerão da dedicação aplicada.  
-A vida será vista de forma mais realista.  
-A confiança deve ser mantida.  
-A persistência gera conquistas duradouras.  
-O trabalho consistente fortalece a estabilidade.  
-O compromisso garante progresso.  
-A maturidade favorece segurança.  
-A determinação impulsiona resultados.  
-A dedicação conduz ao sucesso.`,
-
-5:`3º Momento Decisivo —
-Esta fase exige adaptação, mudanças e abertura para novas oportunidades.
-
-3º Momento n°5
-Será necessário abandonar o que já não serve.  
-Mudanças trarão crescimento e expansão.  
-A liberdade será conquistada através da adaptação.  
-Novas experiências ampliarão a visão de mundo.  
-Evite agir impulsivamente.  
-Mudanças podem ocorrer inesperadamente.  
-A prudência será essencial nas decisões.  
-A flexibilidade facilita o progresso.  
-A cautela evita instabilidade.  
-A experiência orienta escolhas importantes.  
-O equilíbrio emocional reduz riscos.  
-A adaptação fortalece o crescimento.  
-A mudança pode gerar oportunidades.  
-A calma favorece decisões assertivas.  
-A prudência garante estabilidade.`,
-
-6:`3º Momento Decisivo —
-Este período representa encerramentos, transições e preparação para uma nova etapa de vida.
-
-3º Momento n°6
-Novas ideias e conceitos devem ser incorporados.  
-Mudanças podem ocorrer de forma significativa.  
-A serenidade será essencial para o progresso.  
-O foco deve estar na felicidade e segurança.  
-Novas oportunidades podem surgir.  
-O equilíbrio emocional será indispensável.  
-A cooperação favorece resultados positivos.  
-Ajude sem abrir mão da individualidade.  
-Evite negligenciar suas necessidades.  
-O período favorece crescimento emocional.  
-A harmonia fortalece conquistas.  
-A adaptação facilita a evolução.  
-A experiência traz maturidade.  
-O equilíbrio conduz à estabilidade.  
-A transição prepara novos caminhos.`,
-
-7:`3º Momento Decisivo —
-Este momento pede propósito, autoconhecimento e renovação pessoal.
-
-3º Momento n°7
-É hora de redefinir valores e prioridades.  
-Deixe para trás o que não faz mais sentido.  
-Velhos hábitos e relações devem ser reavaliados.  
-Evite excesso de introspecção.  
-Aja com praticidade nas questões materiais.  
-Resolva pendências gradualmente.  
-Liberte-se de frustrações e ressentimentos.  
-Seja participativo e menos crítico.  
-A paciência será essencial.  
-A organização facilita o progresso.  
-Encare desafios com confiança.  
-O autoconhecimento fortalece decisões.  
-A disciplina garante evolução.  
-A persistência evita retrocessos.  
-O propósito conduz à transformação.`,
-
-8:`3º Momento Decisivo —
-Este pode ser um período de grandes conquistas e reconhecimento.
-
-3º Momento n°8
-Planejamento e organização serão essenciais.  
-O sucesso dependerá da dedicação.  
-A liderança ganha destaque.  
-Evite apego excessivo ao material.  
-A ganância pode gerar prejuízos.  
-Escolha bem parcerias e colaboradores.  
-A racionalidade favorece resultados.  
-A disciplina garante progresso.  
-A prudência evita problemas.  
-A maturidade fortalece decisões.  
-O esforço traz reconhecimento.  
-A ética protege conquistas.  
-A perseverança gera prosperidade.  
-O equilíbrio evita desgaste.  
-A dedicação conduz à realização.`,
-
-9:`3º Momento Decisivo —
-Este período favorece reflexão, encerramentos e fortalecimento dos valores pessoais.
-
-3º Momento n°9
-É hora de consolidar aprendizados.  
-Novas oportunidades podem surgir.  
-O reconhecimento será resultado das atitudes.  
-Relacione-se de forma mais humana e empática.  
-Resgate valores e relações importantes.  
-Finalize pendências do passado.  
-Evite julgamentos e preconceitos.  
-Busque crescimento pessoal e espiritual.  
-Promova mudanças positivas ao seu redor.  
-Valorize a condição humana.  
-A maturidade favorece sabedoria.  
-A experiência fortalece decisões.  
-O desapego traz liberdade emocional.  
-O encerramento prepara novos ciclos.  
-A evolução conduz à plenitude.`
+​2:{
+1:`<p><strong>CICLO 1 — Independência e Realização</strong></p>
+​<p>Este ciclo marca para [NOME] o início das grandes realizações e da busca por independência.</p>
+<p>[NOME] passa a confirmar se as escolhas feitas anteriormente estão corretas.</p>
+<p>[NOME] começa a estruturar sua carreira e estabilidade financeira.</p>
+<p>Surge para [NOME] a necessidade de assumir responsabilidades e construir o próprio caminho.</p>
+<p>É uma fase de grande energia, ambição e iniciativa para [NOME].</p>
+<p>As conquistas de [NOME] dependem principalmente do esforço pessoal e da determinação.</p>
+<p>O reconhecimento profissional de [NOME] tende a crescer gradualmente.</p>
+<p>Este período exige de [NOME] coragem para enfrentar desafios e superar obstáculos.</p>
+<p>A autoconfiança de [NOME] se fortalece através das realizações.</p>
+<p>O objetivo de [NOME] é chegar ao próximo ciclo com estabilidade.</p>
+<p>A independência de [NOME] torna-se prioridade.</p>
+<p>O trabalho intenso de [NOME] traz recompensas.</p>
+<p>O desenvolvimento pessoal de [NOME] ganha destaque.</p>
+<p>A construção do futuro de [NOME] se torna concreta.</p>
+<p>A iniciativa de [NOME] determina os resultados.</p>`,
+​2:`<p><strong>CICLO 2 — Diplomacia e Parceria</strong></p>
+​<p>Este ciclo enfatiza para [NOME] a cooperação, diplomacia e trabalho em equipe.</p>
+<p>Surge para [NOME] a necessidade de alinhar objetivos pessoais com interesses coletivos.</p>
+<p>A paciência e a sensibilidade tornam-se fundamentais para [NOME] alcançar metas.</p>
+<p>[NOME] aprende a negociar, conciliar e construir parcerias.</p>
+<p>O crescimento de [NOME] ocorre por meio da colaboração e do apoio mútuo.</p>
+<p>É importante [NOME] evitar dependência excessiva ou submissão.</p>
+<p>O equilíbrio emocional de [NOME] favorece conquistas duradouras.</p>
+<p>O sucesso de [NOME] surge através de estratégias e planejamento.</p>
+<p>A fase pede a [NOME] discrição e observação.</p>
+<p>O progresso de [NOME] acontece de forma gradual e constante.</p>
+<p>A diplomacia abre para [NOME] novas oportunidades.</p>
+<p>A convivência social de [NOME] ganha importância.</p>
+<p>A realidade deve ser encarada por [NOME] com maturidade.</p>
+<p>O trabalho em equipe impulsiona os resultados de [NOME].</p>`,
+​3:`<p><strong>CICLO 3 — Expressão e Expansão</strong></p>
+​<p>Este ciclo traz para [NOME] leveza, expansão e expressão pessoal.</p>
+<p>[NOME] sente maior alegria, criatividade e sociabilidade.</p>
+<p>Surge em [NOME] o desejo de se comunicar, aprender e desenvolver talentos.</p>
+<p>A vida social de [NOME] tende a se expandir e novas oportunidades surgem.</p>
+<p>É um período favorável para o crescimento intelectual e artístico de [NOME].</p>
+<p>A autoconfiança de [NOME] aumenta com a expressão das ideias.</p>
+<p>O desafio de [NOME] é evitar dispersão e superficialidade.</p>
+<p>A criatividade de [NOME] deve ser direcionada a objetivos concretos.</p>
+<p>O entusiasmo de [NOME] favorece novas conquistas.</p>
+<p>O prazer de [NOME] em viver se intensifica.</p>
+<p>A comunicação de [NOME] torna-se ferramenta essencial.</p>
+<p>Novas experiências ampliam os horizontes de [NOME].</p>
+<p>O aprendizado de [NOME] ocorre com facilidade.</p>
+<p>A felicidade de [NOME] motiva o crescimento.</p>`,
+​4:`<p><strong>CICLO 4 — Estabilidade e Trabalho</strong></p>
+​<p>Este ciclo exige de [NOME] dedicação, planejamento e construção de bases sólidas.</p>
+<p>A prioridade de [NOME] passa a ser estabilidade profissional e segurança material.</p>
+<p>O trabalho disciplinado de [NOME] torna-se essencial para alcançar objetivos.</p>
+<p>[NOME] aprende a valorizar organização e persistência.</p>
+<p>O progresso de [NOME] ocorre através do esforço constante.</p>
+<p>A rotina torna-se necessária para o crescimento estruturado de [NOME].</p>
+<p>Este é um período de consolidação e amadurecimento para [NOME].</p>
+<p>A responsabilidade de [NOME] aumenta significativamente.</p>
+<p>A construção de um legado torna-se prioridade para [NOME].</p>
+<p>A disciplina de [NOME] garante resultados duradouros.</p>
+<p>A motivação de [NOME] deve vir do propósito pessoal.</p>
+<p>O foco de [NOME] substitui a impulsividade.</p>
+<p>A estabilidade de [NOME] começa a se formar.</p>
+<p>O crescimento de [NOME] é gradual e seguro.</p>`,
+​5:`<p><strong>CICLO 5 — Mudança e Liberdade Consciente</strong></p>
+​<p>Este é para [NOME] um ciclo de mudanças intensas e oportunidades inesperadas.</p>
+<p>A vida de [NOME] torna-se dinâmica, exigindo adaptação constante.</p>
+<p>[NOME] aprende a lidar com liberdade e responsabilidade.</p>
+<p>Novas experiências ampliam a visão de mundo de [NOME].</p>
+<p>A flexibilidade torna-se essencial para o sucesso de [NOME].</p>
+<p>Mudanças repentinas podem ocorrer com frequência para [NOME].</p>
+<p>A fase favorece a expansão pessoal e profissional de [NOME].</p>
+<p>A curiosidade de [NOME] impulsiona novas descobertas.</p>
+<p>O desafio de [NOME] é evitar impulsividade e instabilidade.</p>
+<p>A liberdade de [NOME] deve ser usada com sabedoria.</p>
+<p>O crescimento de [NOME] ocorre por meio da experiência.</p>
+<p>Novas oportunidades surgem rapidamente para [NOME].</p>
+<p>A capacidade de adaptação de [NOME] define resultados.</p>
+<p>Este ciclo ensina a [NOME] o valor da liberdade consciente.</p>`,
+​6:`<p><strong>CICLO 6 — Equilíbrio e União</strong></p>
+​<p>Este ciclo destaca para [NOME] a responsabilidade afetiva, parcerias e compromissos.</p>
+<p>Surge para [NOME] a necessidade de cooperação e equilíbrio nas relações.</p>
+<p>[NOME] aprende a compartilhar responsabilidades.</p>
+<p>O desenvolvimento de [NOME] acontece através da união com outras pessoas.</p>
+<p>Parcerias podem trazer para [NOME] crescimento significativo.</p>
+<p>O individualismo de [NOME] deve dar lugar à colaboração.</p>
+<p>A harmonia torna-se essencial para o progresso de [NOME].</p>
+<p>O compromisso fortalece as conquistas de [NOME].</p>
+<p>A vida afetiva de [NOME] ganha importância.</p>
+<p>O equilíbrio emocional de [NOME] favorece estabilidade.</p>
+<p>O sucesso de [NOME] vem do esforço conjunto.</p>
+<p>A flexibilidade de [NOME] melhora relacionamentos.</p>
+<p>A maturidade emocional de [NOME] se intensifica.</p>`,
+​7:`<p><strong>CICLO 7 — Estudo e Autoconfiança</strong></p>
+​<p>Este ciclo favorece para [NOME] a introspecção, estudo e autoconhecimento.</p>
+<p>[NOME] sente necessidade de compreender sua essência.</p>
+<p>Surge em [NOME] o desejo de aperfeiçoamento pessoal e intelectual.</p>
+<p>O crescimento de [NOME] ocorre por meio da reflexão.</p>
+<p>A busca de [NOME] por conhecimento se intensifica.</p>
+<p>A disciplina mental de [NOME] torna-se essencial.</p>
+<p>O sucesso de [NOME] depende de concentração e foco.</p>
+<p>A intuição de [NOME] se fortalece gradualmente.</p>
+<p>O isolamento pode ser necessário para o crescimento interior de [NOME].</p>
+<p>O aprendizado profundo traz sabedoria para [NOME].</p>
+<p>As oportunidades para [NOME] surgem naturalmente.</p>
+<p>[NOME] aprende a confiar em si mesma.</p>
+<p>O desenvolvimento de [NOME] ocorre de dentro para fora.</p>`,
+​8:`<p><strong>CICLO 8 — Liderança e Prosperidade</strong></p>
+​<p>Este ciclo está ligado para [NOME] às conquistas materiais e ao poder de realização.</p>
+<p>A dedicação de [NOME] ao trabalho e aos objetivos financeiros aumenta.</p>
+<p>O senso de justiça e responsabilidade de [NOME] torna-se essencial.</p>
+<p>As recompensas de [NOME] são proporcionais ao esforço.</p>
+<p>O equilíbrio emocional de [NOME] garante sucesso.</p>
+<p>O autocontrole de [NOME] evita perdas e impulsividade.</p>
+<p>Grandes oportunidades podem surgir para [NOME].</p>
+<p>A liderança de [NOME] se fortalece naturalmente.</p>
+<p>A confiança de [NOME] impulsiona conquistas.</p>
+<p>O planejamento financeiro de [NOME] torna-se importante.</p>
+<p>O sucesso de [NOME] exige ética e disciplina.</p>`,
+​9:`<p><strong>CICLO 9 — Evolução e Desapego</strong></p>
+​<p>Este ciclo representa para [NOME] transformação, desapego e amadurecimento emocional.</p>
+<p>[NOME] desenvolve empatia e visão humanitária.</p>
+<p>Surge para [NOME] a necessidade de reavaliar valores e objetivos.</p>
+<p>O desapego de mágoas e frustrações torna-se necessário para [NOME].</p>
+<p>A maturidade emocional de [NOME] se fortalece.</p>
+<p>Mudanças profundas podem ocorrer na vida de [NOME].</p>
+<p>A vida pede a [NOME] renovação e crescimento interior.</p>
+<p>O passado deve ser compreendido e superado por [NOME].</p>
+<p>A compaixão ganha destaque para [NOME].</p>
+<p>O desenvolvimento espiritual de [NOME] se intensifica.</p>
+<p>Este período prepara [NOME] para novas fases da vida.</p>`
 },
- 
-
-4:{
-1:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito, a direção e a intencionalidade da própria jornada. Surge uma percepção profunda de significado, realização e consciência pessoal. Este é o momento das recompensas, da serenidade e da sabedoria.
-
-Quarto Momento  n°1
-Agora você possui condições de reunir suas ideias e agir com consciência do momento certo. Esta é a fase de assumir as consequências e colher os resultados das decisões tomadas anteriormente. Nada é irreversível, mas daqui em diante os resultados dependerão essencialmente de sua atitude. Será necessário manter foco absoluto em seus objetivos e promover mudanças necessárias para continuar avançando. Muitas vezes será preciso revisitar o passado, reavaliar ideias e atitudes para identificar o que ainda pode ser realizado e quais desafios permanecem. Este é o momento de sair da zona de conforto e agir com coragem. As bases já foram construídas; agora é hora de colocá-las em prática. Caso contrário, poderá surgir sensação de repetição e estagnação. Será preciso enfrentar limitações, retomar caminhos interrompidos e superar obstáculos antigos. O sucesso dependerá da sua iniciativa, determinação e capacidade de assumir a própria história com responsabilidade.`,
-
-2:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito, a direção e a intencionalidade da própria jornada.
-
-Quarto Momento  n°2
-Este período simboliza a chegada do futuro que antes parecia distante e pode trazer insegurança diante do que ainda está por vir. Será necessário equilíbrio entre conquistas e sensibilidade nas relações. É um momento para fortalecer parcerias, aceitar ajuda e agir com cooperação. Se cultivar paciência e participação ativa na vida das pessoas, poderá viver fase de grandes realizações. Caso contrário, impaciência poderá gerar conflitos e atrasos. Este é um período de transição definitiva entre passado e futuro. Avalie sua trajetória para não repetir erros. Não é hora de buscar destaque individual, mas de construir alianças e concluir objetivos pendentes. Confie na criatividade, mas evite ilusões. Observe a realidade com clareza antes de decidir. Ouça conselhos, mas valorize apenas o que for útil.`,
-
-3:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito, a direção e a intencionalidade da própria jornada.
-
-Quarto Momento  n°3
-Se a vida foi conduzida com sabedoria, este pode ser um período extremamente agradável. Surge satisfação com conquistas e liberdade para expressar ideias e sentimentos. Há energia, sociabilidade e sensação de reconhecimento. A prosperidade pode crescer em diversas áreas da vida. O desafio será compreender que a realização é consequência da superação dos obstáculos. É momento de ocupar a posição desejada, ampliar contatos e aproveitar a vida. Entretanto, será necessário organização para não acumular responsabilidades. Delegar tarefas será essencial. Este é o momento de valorizar conquistas e expressar sua experiência com maturidade e entusiasmo.`,
-
-4:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase a maturidade permite compreender com clareza o propósito e a direção da própria jornada.
-
-Quarto Momento  n°4
-Este será um período de paciência, dedicação e realismo. Será necessário enfrentar limitações com coragem e perseverança. Agora você encara a realidade de forma mais clara, reconhecendo quem realmente é. Este é o momento de cumprir obrigações e assumir responsabilidades com maturidade. Os resultados serão proporcionais ao esforço aplicado. Apoiar familiares e pessoas próximas será importante, mas sem negligenciar suas próprias necessidades. Aprender a lidar com pressão sem perder a autoconfiança será fundamental. Com persistência, será possível conquistar objetivos ainda não alcançados.`,
-
-5:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. Nesta fase surge uma compreensão profunda da jornada.
-
-Quarto Momento  n°5
-Este pode ser um período libertador. Surge a necessidade de abandonar o que se tornou obsoleto e iniciar novas experiências. Mudanças poderão parecer difíceis no início, mas trarão benefícios futuros. A liberdade aumenta, mas exige responsabilidade e prudência. Evite impulsividade e excessos. O equilíbrio será essencial para aproveitar as oportunidades. É momento de desenvolver habilidades negligenciadas e dar continuidade ao que foi iniciado anteriormente. O crescimento virá da adaptação consciente às mudanças.`,
-
-6:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida. A maturidade permite compreender novas responsabilidades.
-
-Quarto Momento  n°6
-Este período encerra uma fase importante e inicia outra. Parte das expectativas já foi alcançada, mas novos aprendizados surgem. Pode ser fase serena e harmoniosa se responsabilidades foram bem conduzidas. Caso contrário, poderá trazer desafios emocionais. É momento de cooperação, apoio e equilíbrio nas relações. Novas oportunidades surgem quando valores esquecidos são resgatados. A harmonia será alcançada ao ajudar os outros sem se anular. O equilíbrio entre dever e felicidade será a chave.`,
-
-7:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida e revela a essência construída ao longo da jornada.
-
-Quarto Momento  n°7
-Este período marca a busca pelo verdadeiro sentido da vida. Velhos hábitos e relações que perderam significado devem ser deixados para trás. Será necessário desapego e renovação interior. Determinação será essencial para concluir projetos abandonados. Resolver pendências será prioridade. Este é o momento de libertar-se de ressentimentos e seguir com leveza. A sabedoria adquirida permitirá redefinir prioridades e seguir confiante.`,
-
-8:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida e o momento das grandes realizações.
-Quarto Momento  n°8
-
-Este pode ser um período de reconhecimento e conquistas materiais. O controle da própria vida torna-se evidente. Será necessário planejamento, organização e disciplina para alcançar objetivos. Evite orgulho e ganância. O sucesso verdadeiro depende de ética e equilíbrio. Se agir com prudência e justiça, poderá alcançar reconhecimento duradouro e satisfação pessoal.`,
-
-9:`Quarto Momento Decisivo — Reflete o resultado de todas as decisões tomadas ao longo da vida e representa sabedoria e realização interior.
-Quarto Momento  n°9
-
-Este é um período de reconhecimento e crescimento espiritual. Você será valorizado por quem é, não pelo que aparenta. O momento favorece reconciliações, novos relacionamentos e expansão de horizontes. É tempo de encerrar pendências e libertar-se de julgamentos e preconceitos. A generosidade e a compreensão tornam-se prioridades. A maturidade permite aproveitar oportunidades com serenidade e discernimento.`
-
-}
-
-},
-  
-
-desafios:{
-1:{
-0:`Desafio 0 — O Desafio da Escolha
-
-Neste primeiro período da vida, a pessoa está em fase de formação do caráter e descoberta da própria identidade. Não existe um desafio único dominante, pois o maior aprendizado é justamente aprender a escolher. Desde cedo surgem pequenas decisões que começam a moldar o futuro e influenciar a personalidade. 
-
-A criança e o jovem são fortemente influenciados pelo ambiente, pela família e pelas experiências iniciais. Por isso, a indecisão e o desânimo podem surgir com facilidade. 
-
-O desafio aqui é desenvolver força de vontade, senso de direção e capacidade de tomar decisões conscientes. A pessoa precisa aprender a confiar em si mesma e compreender que toda escolha gera consequências.
-
-É necessário aprender a agir com autonomia, mesmo diante de dúvidas e inseguranças. Este desafio exige o desenvolvimento gradual da iniciativa, da disciplina e da responsabilidade. 
-
-Também pede equilíbrio emocional para lidar com erros e frustrações. A construção da identidade depende diretamente da capacidade de decidir e agir. Este período prepara a base do caráter e da maturidade futura.`,
-
-1:`Desafio 1 — Desenvolver a Iniciativa
-
-Durante a infância e a juventude surge a necessidade de aprender independência e autoconfiança. A pessoa será colocada em situações que exigirão posicionamento e defesa das próprias ideias. Será necessário escolher entre agradar os outros ou seguir suas convicções. 
-
-Este desafio exige coragem para agir e assumir responsabilidades desde cedo. O jovem aprende a lidar com frustrações e a fortalecer a própria vontade. Muitas experiências serão baseadas em tentativa e erro. A iniciativa precisa ser desenvolvida gradualmente. A timidez e a dependência devem ser superadas. 
-
-É importante aprender a agir sem esperar aprovação constante. A confiança no próprio julgamento torna-se essencial. Este desafio ensina liderança interior e determinação. O respeito próprio nasce da ação consciente. A autonomia emocional começa a se formar. Este período prepara a base da identidade pessoal.`,
-
-2:`Desafio 2 — Desenvolver a Autoconfiança
-
-Na fase inicial da vida, a sensibilidade é intensa e a autoestima ainda está sendo construída. A pessoa pode sentir insegurança e medo de julgamento. Este desafio exige vencer inibições e fortalecer a confiança interior. Será necessário aprender a confiar nos próprios instintos e habilidades. 
-
-Situações surgirão para testar a capacidade emocional. A comparação com outras pessoas pode gerar dúvidas. Por isso, a autovalorização deve ser desenvolvida gradualmente. A pessoa aprende a tomar decisões sem depender da aprovação externa. A timidez deve ser superada com prática e experiência. O equilíbrio emocional torna-se fundamental. Este desafio ensina segurança interior e confiança nas próprias capacidades.`,
-
-3:`Desafio 3 — Desenvolver a Competência
-
-Este desafio aparece durante o período escolar e social. A pessoa aprende a organizar ideias e desenvolver talentos. Surge a necessidade de expressar criatividade e inteligência. O desafio é aprender a concluir o que começa. A dispersão e a procrastinação devem ser controladas. 
-
-A responsabilidade cresce gradualmente. A disciplina começa a ser exigida. A pessoa aprende a lidar com críticas e expectativas. O reconhecimento vem com esforço e dedicação. Este desafio ensina organização, foco e produtividade.`,
-
-4:`Desafio 4 — Desenvolver a Disciplina
-
-Durante a infância e juventude, a disciplina precisa ser construída através de hábitos e rotina. A pessoa deve aprender organização, responsabilidade e constância. O desafio é evitar preguiça, desorganização e falta de foco. A persistência torna-se essencial para alcançar objetivos. O esforço contínuo gera resultados duradouros. A disciplina prepara para a vida adulta. Este desafio constrói estabilidade e responsabilidade.`,
-  
-5:`Desafio 5 — Desenvolver a Responsabilidade
-
-Durante a infância e a juventude surge o desejo de liberdade, curiosidade e experimentação. A pessoa sente necessidade de explorar o mundo e viver novas experiências, mas ainda não compreende totalmente as consequências de suas escolhas. Este desafio ensina a equilibrar liberdade e responsabilidade desde cedo. A impulsividade, a ansiedade e o desejo de prazer imediato precisam ser compreendidos e controlados. A criança e o jovem aprendem gradualmente que toda ação gera consequências e que escolhas impensadas podem trazer dificuldades futuras. Será necessário aprender limites, disciplina emocional e compromisso com aquilo que se inicia. 
-
-A pessoa precisa compreender que liberdade verdadeira exige maturidade e autocontrole. Este período ensina a importância de assumir compromissos, respeitar regras e desenvolver estabilidade emocional. Também é necessário aprender a lidar com frustrações sem fugir das responsabilidades. A formação do caráter depende da capacidade de assumir deveres desde cedo. Este desafio prepara a transição para a vida adulta com mais equilíbrio e consciência.`,
-
-6:`Desafio 6 — Desenvolver a Tolerância
-
-Desde os primeiros anos de vida surgem as experiências de convivência com família, escola e sociedade. A criança aprende que nem sempre o mundo funciona conforme seus desejos. Este desafio ensina empatia, compreensão e respeito pelas diferenças. 
-
-A pessoa pode sentir frustração ao perceber que não pode controlar tudo ao seu redor. Será necessário aprender a ouvir, ceder e conviver de forma harmoniosa com outras pessoas. O excesso de exigência e perfeccionismo deve ser suavizado com compreensão e flexibilidade. 
-
-Este período ensina que cada pessoa possui suas próprias ideias e valores. A tolerância começa a se desenvolver através da convivência e da cooperação. A pessoa aprende a respeitar limites e a agir com equilíbrio emocional. Este desafio constrói maturidade afetiva e capacidade de relacionamento saudável. A base da vida social é construída aqui.`,
-
-7:`Desafio 7 — Desenvolver a Confiança Interior
-
-Durante a infância e adolescência surgem medos, inseguranças e dúvidas sobre o próprio valor. A pessoa pode sentir necessidade de se proteger ou se isolar diante de dificuldades. Este desafio ensina a confiar em si mesma e desenvolver autoestima. Situações surgirão para fortalecer a coragem e a segurança emocional. 
-
-Será necessário aprender a lidar com críticas, frustrações e momentos de solidão. A confiança interior cresce com experiências e superação de obstáculos. A pessoa aprende a reconhecer suas qualidades e limitações. O medo deve ser transformado em aprendizado e crescimento. Este período constrói força emocional e autonomia psicológica. A confiança adquirida aqui será essencial na vida adulta.`,
-
-8:`Desafio 8 — Desenvolver o Equilíbrio e os Valores
-
-Na fase inicial da vida surgem os primeiros aprendizados sobre valores, justiça e responsabilidade. A pessoa começa a compreender o valor das conquistas e dos recursos materiais. Este desafio ensina equilíbrio entre desejo e consciência. A criança e o jovem precisam aprender que conquistas exigem esforço e dedicação. O senso de justiça e responsabilidade começa a se formar. 
-
-A pessoa aprende a lidar com recompensas, limites e consequências. É importante desenvolver ética, respeito e equilíbrio emocional. Este período prepara a base para lidar com poder, dinheiro e responsabilidades futuras. A maturidade começa a se consolidar através da compreensão de valores. Este desafio constrói caráter, equilíbrio e senso de justiça.`  
-
-  },
-
-2:{
-0:`Desafio 0 — O Desafio da Escolha (Fase Adulta)
-
-Na fase adulta, o desafio da escolha ganha um peso ainda maior. A vida já apresenta caminhos definidos, responsabilidades assumidas e consequências reais para cada decisão. Este período exige maturidade para escolher com consciência e responsabilidade. 
-
-A pessoa aprende que cada escolha molda diretamente o futuro. Surge a necessidade de alinhar decisões com valores pessoais. O desafio é manter foco, direção e coerência de propósito. 
-
-A indecisão pode gerar estagnação e frustração. A maturidade exige assumir consequências com coragem. Este período fortalece autonomia, clareza e responsabilidade nas escolhas.`,
-  
- 1:`Desafio 1 — Desenvolver a Iniciativa (Fase Adulta)
-
-Na fase adulta a vida exige decisões concretas, independência e posicionamento firme diante das circunstâncias. Este desafio marca o momento em que a pessoa deixa definitivamente a dependência emocional do passado e passa a assumir o controle da própria vida. As escolhas tornam-se mais sérias e as consequências mais visíveis. 
-
-Será necessário agir com coragem, assumir responsabilidades e confiar no próprio julgamento. Situações surgirão exigindo liderança, iniciativa e capacidade de decisão. A pessoa aprenderá que não pode esperar aprovação constante dos outros para agir. O medo de errar deve ser substituído pela coragem de tentar. Este período exige autonomia, autoconfiança e atitude prática. 
-
-A vida pede ação, movimento e coragem para iniciar novos projetos. O crescimento depende da capacidade de assumir riscos calculados. Este desafio fortalece identidade, liderança e independência.`,
-
-2:`Desafio 2 — Desenvolver a Autoconfiança (Fase Adulta)
-
-Durante a vida adulta surgem pressões sociais, profissionais e emocionais que testam a autoconfiança. A pessoa é desafiada a confiar em sua capacidade de decisão e julgamento. 
-
-Será necessário aprender a manter segurança emocional mesmo diante de críticas ou oposição. Este período exige equilíbrio entre sensibilidade e firmeza. 
-
-A pessoa aprende a confiar em suas competências e habilidades adquiridas ao longo da vida. Relações profissionais e pessoais exigirão diplomacia e maturidade emocional. O desafio é agir com segurança sem perder a empatia. 
-
-A confiança passa a ser construída através das experiências e conquistas. A insegurança deve ser transformada em aprendizado. Este período fortalece autoestima, estabilidade emocional e confiança nas próprias escolhas.`,
-
-3:`Desafio 3 — Desenvolver a Competência (Fase Adulta)
-
-A vida adulta exige produtividade, responsabilidade e eficiência. Este desafio ensina a organizar talentos e direcionar energia para objetivos concretos. A pessoa aprende a valorizar suas habilidades e a utilizá-las de forma prática. 
-
-O excesso de autocrítica pode gerar insegurança e bloqueios. Será necessário desenvolver disciplina mental e foco. O desafio pede equilíbrio entre responsabilidade e leveza emocional. 
-
-A pessoa deve aprender a administrar tempo, energia e prioridades. 
-
-A maturidade profissional cresce através da experiência. Este período exige organização, planejamento e constância. A competência se desenvolve com prática e dedicação contínua. Este desafio fortalece eficiência, responsabilidade e realização profissional.`,
-
-4:`Desafio 4 — Desenvolver a Disciplina (Fase Adulta)
-
-A fase adulta exige estrutura, organização e compromisso com objetivos de longo prazo. Este desafio representa a construção de estabilidade material e profissional. A pessoa aprende a valorizar planejamento, constância e esforço contínuo. 
-
-A vida pede responsabilidade, foco e persistência. A procrastinação e a dispersão devem ser superadas. Será necessário criar rotinas produtivas e manter consistência nas ações. O crescimento acontece através do trabalho disciplinado. Este período exige perseverança e visão prática da realidade. 
-
-A disciplina torna-se a base das conquistas futuras. Este desafio constrói segurança, estabilidade e realização duradoura.`,
-  
-5:`Desafio 5 — Desenvolver a Responsabilidade (Fase Adulta)
-
-Na fase adulta a liberdade precisa caminhar junto com responsabilidade. Este desafio ensina a equilibrar desejos pessoais com compromissos assumidos. A pessoa aprende que decisões impulsivas podem gerar consequências duradouras. A vida exige maturidade emocional e estabilidade nas escolhas. Será necessário aprender a administrar mudanças com prudência. 
-
-O desafio pede controle da impulsividade e equilíbrio emocional. Relacionamentos e carreira exigirão compromisso e constância. A pessoa aprende a construir bases sólidas para o futuro. A liberdade deixa de ser fuga e passa a ser escolha consciente. Este período fortalece maturidade, equilíbrio e responsabilidade nas decisões.`,
-
-6:`Desafio 6 — Desenvolver a Tolerância (Fase Adulta)
-
-A vida adulta traz convivência intensa com pessoas diferentes, exigindo compreensão e empatia. Este desafio ensina a respeitar opiniões, limites e diferenças. A pessoa aprende que não possui todas as respostas. Será necessário desenvolver flexibilidade emocional e maturidade nas relações. 
-
-O perfeccionismo e a rigidez devem ser transformados em compreensão. Este período pede equilíbrio entre idealismo e realidade. Relações familiares e profissionais exigirão cooperação. O desafio é agir com empatia sem perder identidade. A tolerância torna-se essencial para a harmonia emocional. Este período fortalece compreensão, empatia e maturidade nas relações.`,
-
-7:`Desafio 7 — Desenvolver a Confiança (Fase Adulta)
-
-Na vida adulta surgem situações que testam fé, coragem e autoconhecimento. Este desafio ensina a confiar em si mesmo e na vida. A pessoa aprende a superar medos e inseguranças acumuladas. Será necessário enfrentar dúvidas e incertezas com maturidade. 
-
-A introspecção torna-se ferramenta de crescimento pessoal. Este período exige equilíbrio entre razão e intuição. A pessoa aprende a pedir ajuda e aceitar apoio. A confiança se fortalece através das experiências vividas. O desafio é transformar medo em sabedoria. Este período fortalece autoconhecimento, confiança e maturidade emocional.`,
-
-8:`Desafio 8 — Desenvolver a Modéstia (Fase Adulta)
-
-Este desafio ensina a lidar com poder, dinheiro e conquistas com equilíbrio. A pessoa aprende a usar recursos de forma ética e responsável. O sucesso deve ser acompanhado de humildade e consciência. Será necessário evitar orgulho excessivo e materialismo. O desafio pede equilíbrio entre ambição e valores humanos. 
-
-A pessoa aprende a compartilhar conquistas e valorizar parcerias. O poder deve ser usado com sabedoria e justiça. Este período fortalece ética, equilíbrio e responsabilidade social. A verdadeira realização surge quando o sucesso beneficia também outras pessoas.`  
-  },
-
-3:{
-0:`Desafio 0 — O Desafio da Escolha (Fase Final da Vida)
-
-Na fase final da vida, o desafio da escolha assume um significado mais profundo e reflexivo. A pessoa passa a compreender que todas as decisões tomadas ao longo da existência construíram a realidade presente. Surge a necessidade de avaliar o caminho percorrido com honestidade e maturidade. Este período convida à sabedoria, ao desapego e à aceitação das próprias escolhas. É o momento de compreender que cada experiência teve um propósito no desenvolvimento pessoal. 
-
-A reflexão torna-se ferramenta essencial para encontrar paz interior. O desafio consiste em aceitar erros, valorizar acertos e compreender a própria história. A vida pede serenidade, compreensão e equilíbrio emocional. Surge a oportunidade de fortalecer o caráter e a consciência espiritual. 
-
-A pessoa aprende a escolher com base na sabedoria acumulada. O foco deixa de ser conquista e passa a ser significado. A clareza de valores torna-se prioridade. A aceitação substitui a ansiedade. O perdão torna-se libertador. A escolha consciente conduz à paz e à plenitude interior.`,
-
-1:`Desafio 1 — Desenvolver a Iniciativa (Fase Final da Vida)
-
-Neste período, o desafio da iniciativa assume um caráter de autonomia emocional e espiritual. A pessoa aprende a confiar plenamente em si mesma e em sua trajetória. Surge a necessidade de reafirmar a própria identidade com maturidade. 
-
-A independência torna-se interna e emocional. O desafio é manter coragem para continuar evoluindo e tomando decisões conscientes. A pessoa aprende que nunca é tarde para agir. Este período exige determinação para concluir projetos e resolver pendências. A autoconfiança deve ser mantida mesmo diante das limitações naturais da idade. O aprendizado consiste em agir com sabedoria e segurança. 
-
-A vida pede decisões firmes e coerentes com os próprios valores. Surge a necessidade de fortalecer a autoestima. O passado deixa de ser peso e torna-se aprendizado. A coragem transforma arrependimentos em crescimento. O objetivo é manter autonomia emocional. A iniciativa torna-se símbolo de liberdade interior.`,
-
-2:`Desafio 2 — Desenvolver a Autoconfiança (Fase Final da Vida)
-
-Na maturidade avançada, o desafio da autoconfiança torna-se essencial para manter a serenidade. A pessoa aprende a confiar em sua experiência e sabedoria acumuladas. Surge a necessidade de abandonar inseguranças e comparações. O desafio é reconhecer o próprio valor independentemente de reconhecimento externo. 
-
-A vida pede tranquilidade emocional e equilíbrio interior. A confiança deve vir da consciência de tudo o que foi vivido. Este período favorece a aceitação de si mesmo. A pessoa aprende a valorizar suas conquistas e aprendizados. 
-
-A insegurança dá lugar à sabedoria. O objetivo é fortalecer a paz interior. A maturidade traz clareza e discernimento. Surge a capacidade de confiar no próprio julgamento. A experiência torna-se fonte de segurança. A serenidade substitui a ansiedade. A autoconfiança torna-se base para viver com dignidade e equilíbrio.`,
-
-3:`Desafio 3 — Desenvolver a Competência (Fase Final da Vida)
-
-Neste período, a competência assume a forma de sabedoria prática e emocional. A pessoa aprende a utilizar sua experiência para orientar e inspirar outras pessoas. O desafio é valorizar a própria trajetória e reconhecer suas habilidades. Surge a necessidade de compartilhar conhecimento e aprendizados. A maturidade pede organização emocional e clareza mental. O objetivo é manter a mente ativa e produtiva. 
-
-A pessoa aprende a expressar ideias com segurança e serenidade. A experiência torna-se ferramenta de contribuição social. O desafio é evitar autocrítica excessiva e valorizar conquistas. A vida pede equilíbrio entre ação e reflexão. A competência torna-se legado. Surge o desejo de contribuir com o coletivo. 
-
-A sabedoria substitui a necessidade de aprovação. O aprendizado transforma-se em orientação para outros. A realização surge ao compartilhar conhecimento e experiência.`,
-
-4:`Desafio 4 — Desenvolver a Disciplina (Fase Final da Vida)
-
-Na fase final da vida, a disciplina torna-se sinônimo de equilíbrio e constância. A pessoa aprende a organizar sua vida com serenidade e propósito. Surge a necessidade de manter hábitos saudáveis e rotina equilibrada. O desafio é preservar a estabilidade emocional e mental. 
-
-A disciplina torna-se ferramenta de qualidade de vida. A maturidade exige responsabilidade consigo mesmo. O foco passa a ser bem-estar e harmonia. A pessoa aprende a valorizar o tempo de forma consciente. A organização traz tranquilidade e segurança. O objetivo é manter equilíbrio físico, mental e emocional. 
-
-A disciplina fortalece a autonomia e a independência. Surge a necessidade de simplificar a vida. O essencial ganha mais importância que o urgente. A constância gera estabilidade e paz interior. A disciplina torna-se base para uma vida serena e equilibrada.`,
-
-5:`Desafio 5 — Desenvolver a Responsabilidade (Fase Final da Vida)
-
-Neste período da vida, o desafio da responsabilidade ganha um significado mais profundo e consciente. A pessoa compreende que todas as experiências vividas exigem agora maturidade emocional para serem integradas com equilíbrio. Surge a necessidade de assumir plenamente as consequências das escolhas feitas ao longo da jornada. 
-
-O desafio é manter estabilidade emocional e agir com prudência diante das mudanças naturais da vida. A liberdade passa a ser vivida com responsabilidade e serenidade. É o momento de valorizar segurança, estabilidade e equilíbrio nas decisões. A pessoa aprende a lidar com mudanças sem impulsividade. A maturidade convida ao autocontrole e à reflexão antes de agir. O passado deixa de ser peso e torna-se aprendizado. 
-
-O objetivo é viver com consciência e responsabilidade emocional. Surge a necessidade de preservar relações importantes e manter harmonia. A estabilidade torna-se prioridade. A responsabilidade fortalece a segurança interior. O equilíbrio substitui a impulsividade. A vida pede prudência, maturidade e sabedoria.`,
-
-6:`Desafio 6 — Desenvolver a Tolerância (Fase Final da Vida)
-
-Na fase final da vida, o desafio da tolerância torna-se essencial para a paz interior. A pessoa aprende a aceitar diferenças e compreender as imperfeições humanas. Surge a necessidade de abandonar julgamentos rígidos e expectativas irreais. 
-
-O desafio é cultivar empatia e compreensão nas relações. A maturidade ensina que cada pessoa possui sua própria jornada. O objetivo é viver com mais leveza e aceitação. A tolerância fortalece vínculos e evita conflitos desnecessários. A pessoa aprende a valorizar o amor e a harmonia familiar. 
-
-O perdão torna-se ferramenta de libertação emocional. A vida pede compreensão e generosidade. Surge a necessidade de enxergar o mundo com mais compaixão. 
-
-O equilíbrio emocional substitui a crítica excessiva. A tolerância traz serenidade e paz interior. O aprendizado transforma-se em sabedoria emocional. A vida torna-se mais leve quando existe compreensão.`,
-
-7:`Desafio 7 — Desenvolver a Confiança (Fase Final da Vida)
-
-Este período traz o desafio de confiar na própria jornada e nos aprendizados adquiridos. A pessoa aprende a superar medos e inseguranças acumulados ao longo da vida. Surge a necessidade de fortalecer a fé em si mesma e na vida. 
-
-O desafio é abandonar o ceticismo e cultivar confiança interior. A maturidade convida à reflexão e ao autoconhecimento. A pessoa aprende a valorizar silêncio, introspecção e espiritualidade. 
-
-O objetivo é encontrar paz interior e significado. A confiança torna-se base para viver com serenidade. Surge a necessidade de aceitar o fluxo natural da vida. O autoconhecimento traz segurança emocional. 
-
-A sabedoria substitui a dúvida constante. A pessoa aprende a confiar na própria intuição. O passado transforma-se em fonte de aprendizado. A confiança interior fortalece a estabilidade emocional. A vida pede serenidade, fé e aceitação.`,
-
-8:`Desafio 8 — Desenvolver a Modéstia (Fase Final da Vida)
-
-Na maturidade, o desafio da modéstia convida à reflexão sobre o verdadeiro valor das conquistas. A pessoa aprende a enxergar poder e recursos com equilíbrio e sabedoria. Surge a necessidade de utilizar experiência e conhecimento para beneficiar outras pessoas. 
-
-O desafio é abandonar orgulho excessivo e cultivar humildade. A vida pede simplicidade e gratidão. A maturidade ensina que reconhecimento verdadeiro vem da contribuição ao coletivo. 
-
-O objetivo é valorizar o legado construído. A pessoa aprende a compartilhar conhecimento e experiências. O sucesso passa a ser medido pela contribuição humana. Surge a necessidade de agir com justiça e generosidade. A modéstia fortalece relações e traz equilíbrio emocional. 
-
-O poder torna-se ferramenta de auxílio e orientação. A sabedoria substitui a ambição excessiva. A vida pede equilíbrio, dignidade e generosidade. A modéstia conduz à realização e à paz interior.`
-}
-},
-
-anoPessoal:{
-1:`ANO PESSOAL 1 — INÍCIO DE CICLO, AÇÃO E RENOVAÇÃO
-
-Este é o ano que marca o início de um novo ciclo de nove anos. A energia da renovação se torna evidente e tudo começa a se reorganizar para um novo direcionamento de vida. Este período estabelece as bases de tudo aquilo que será construído nos próximos anos, portanto cada decisão tomada agora terá impacto direto no futuro. É o momento de agir, iniciar projetos e assumir o protagonismo da própria história. A vida pede coragem, independência e determinação.
-
-Surge uma necessidade natural de mudança, de romper com padrões antigos e iniciar caminhos diferentes. Este é o momento ideal para começar projetos, mudar hábitos, assumir novas responsabilidades e tomar decisões importantes. A energia favorece atitudes ousadas e independentes. A iniciativa será recompensada. A passividade será penalizada.
-
-Este ano exige autoconfiança e força de vontade. Muitas situações testarão sua coragem e sua capacidade de agir sozinho. O universo impulsiona a autonomia, a liderança e a iniciativa pessoal. O aprendizado principal deste período é descobrir quem você é e qual caminho deseja seguir.
-
-Evite procrastinação, insegurança e medo de errar. A falta de iniciativa pode atrasar todo o ciclo de nove anos. Este é um período de plantio. Tudo o que for iniciado agora tende a crescer e se desenvolver com o tempo.
-
-Novas oportunidades surgirão inesperadamente. Mudanças profissionais, pessoais ou emocionais podem ocorrer. Confie na sua intuição. Desenvolva sua identidade, fortaleça sua individualidade e estabeleça metas claras.
-
-Este é o ano da ação, da coragem e da construção do futuro. Coloque-se em movimento e inicie a nova fase da sua vida.`,
-
-2:`ANO PESSOAL 2 — PACIÊNCIA, RELAÇÕES E PREPARAÇÃO
-
-Após o impulso do ano 1, o ano 2 traz um ritmo mais lento e sensível. Este período pede paciência, cooperação e equilíbrio emocional. Em vez de agir impulsivamente, será necessário observar, esperar e desenvolver relações. Este é um ano de preparação e amadurecimento emocional.
-
-As oportunidades surgem através de parcerias, amizades e relacionamentos. A diplomacia será essencial. O crescimento ocorre nos bastidores. Muitas situações exigirão sensibilidade e compreensão. Este é um período de aprendizado emocional profundo.
-
-A vida pede calma e paciência. Forçar acontecimentos pode gerar frustrações. O progresso ocorre de forma gradual e silenciosa. Este é o momento de fortalecer vínculos e cultivar alianças importantes.
-
-Pode haver maior sensibilidade emocional. A necessidade de afeto e compreensão aumenta. Evite conflitos desnecessários e aprenda a ouvir mais do que falar.
-
-Este é o ano em que passado, presente e futuro começam a se conectar. O aprendizado obtido agora será essencial para os próximos anos do ciclo.
-
-A cooperação trará oportunidades futuras. A paciência será recompensada. O crescimento acontece lentamente, mas com segurança.`,
-
-3:`ANO PESSOAL 3 — EXPANSÃO, CRIATIVIDADE E SOCIALIZAÇÃO
-
-Este é um ano de expansão, alegria e expressão pessoal. A energia favorece comunicação, criatividade e vida social. Surge uma forte necessidade de viver experiências novas, desenvolver talentos e ampliar horizontes.
-
-A vida se torna mais dinâmica e cheia de oportunidades. Este é um período favorável para estudos, viagens, projetos criativos e novas amizades. O carisma aumenta e a comunicação se torna mais fácil.
-
-A criatividade deve ser usada de forma produtiva. Evite dispersão e superficialidade. A energia deste ano pode gerar excesso de entusiasmo e impulsividade.
-
-Este é um período de crescimento pessoal e expansão social. O sucesso vem através da comunicação e da expressão.
-
-Relacionamentos podem ganhar destaque. Novas conexões surgem com facilidade. Aproveite a fase, mas mantenha equilíbrio.
-
-A felicidade cresce quando você permite que sua criatividade se manifeste. Este é um ano leve, positivo e cheio de oportunidades.`,
-
-4:`ANO PESSOAL 4 — TRABALHO, ESTRUTURA E CONSTRUÇÃO
-
-Este é um ano de esforço, disciplina e organização. Após a expansão do ano 3, surge a necessidade de estruturar e consolidar conquistas. Este período exige foco, planejamento e responsabilidade.
-
-O progresso ocorre através do trabalho constante e da dedicação. Este é um ano de construção de bases sólidas para o futuro. O crescimento pode parecer lento, mas será consistente.
-
-A vida pede organização financeira, planejamento profissional e estabilidade emocional. É o momento de estabelecer prioridades e eliminar distrações.
-
-A disciplina será essencial. Evite atalhos ou soluções fáceis. O sucesso virá através da persistência.
-
-Este ano traz maturidade, responsabilidade e estabilidade. A construção do futuro acontece agora.`,
-
-5:`ANO PESSOAL 5 — MUDANÇAS, LIBERDADE E TRANSFORMAÇÃO
-
-Este é o ano mais dinâmico do ciclo. Mudanças inesperadas podem acontecer em várias áreas da vida. A energia favorece movimento, liberdade e transformação.
-
-A rotina tende a ser quebrada. Novas oportunidades surgem rapidamente. Este é um período de adaptação e crescimento através da experiência.
-
-A liberdade aumenta, mas exige responsabilidade. Evite impulsividade e decisões precipitadas.
-
-Este é o momento de rever metas e ajustar o caminho. A vida pede flexibilidade e coragem para mudar.
-
-Mudanças podem abrir portas importantes. O crescimento ocorre fora da zona de conforto.
-
-Este é um ano de transformação profunda e expansão pessoal.`,
-
-6:`ANO PESSOAL 6 — RESPONSABILIDADES, AMOR E EQUILÍBRIO
-
-Este é um dos anos mais importantes emocionalmente dentro do ciclo de nove anos. A vibração 6 está profundamente ligada ao amor, à família, às responsabilidades e aos vínculos afetivos. Durante este período, os relacionamentos ganham destaque e passam a ocupar posição central em sua vida. Surge uma forte necessidade de equilíbrio emocional, estabilidade e compromisso.
-
-Muitas decisões importantes envolvendo família, casa, casamento ou relacionamentos tendem a acontecer. Este é um ano de compromisso e responsabilidade afetiva. A vida pede maturidade emocional, cuidado com os outros e dedicação às pessoas próximas. É comum sentir necessidade de cuidar, proteger ou apoiar alguém.
-
-Você pode ser chamado a assumir responsabilidades que antes evitava. Este é um período de amadurecimento emocional e crescimento através do amor e das relações. O aprendizado principal deste ano está ligado ao equilíbrio entre suas necessidades e as necessidades das pessoas ao seu redor.
-
-A harmonia será fundamental para o sucesso deste período. Conflitos familiares ou emocionais podem surgir para ensinar sobre empatia, compreensão e responsabilidade. Este é um ano de decisões importantes que podem impactar o futuro afetivo.
-
-Também é um período favorável para casamento, formação de família, mudança de residência ou fortalecimento de vínculos importantes. A vida pede estabilidade, compromisso e responsabilidade.
-
-O desafio será evitar cobranças excessivas, idealizações e expectativas irreais sobre os outros. Aprenda a amar com maturidade e equilíbrio. Este é o ano de construir segurança emocional e afetiva.`,
-
-7:`ANO PESSOAL 7 — INTROSPECÇÃO, ESPIRITUALIDADE E AUTOCONHECIMENTO
-
-Este é o ano mais introspectivo de todo o ciclo. Após anos de ação e responsabilidade, chega o momento de pausa, reflexão e autoconhecimento. A vida desacelera para permitir crescimento interior.
-
-A vibração 7 favorece estudos, espiritualidade, análise e busca por sentido. Surge uma forte necessidade de isolamento, silêncio e reflexão. Este é um período de crescimento interior profundo.
-
-O foco deixa de ser o mundo exterior e passa a ser o mundo interior. A intuição se fortalece. O autoconhecimento se torna essencial. Este é o momento de compreender a própria vida e reavaliar objetivos.
-
-Pode ser um ano de afastamento social, mudanças internas e questionamentos existenciais. Muitas respostas surgirão através da introspecção.
-
-Evite decisões impulsivas ou mudanças radicais. Este é um ano de preparação interna. O crescimento ocorre de dentro para fora.
-
-O aprendizado principal é confiar na intuição e desenvolver sabedoria interior. Este período prepara o terreno para grandes conquistas futuras.`,
-
-8:`ANO PESSOAL 8 — REALIZAÇÃO, PODER E RESULTADOS
-
-Este é o ano das conquistas materiais e da realização profissional. A vibração 8 representa poder, prosperidade, reconhecimento e recompensas pelos esforços dos anos anteriores.
-
-Tudo o que foi plantado nos anos anteriores começa a gerar resultados concretos. Este é um período de crescimento financeiro, profissional e material. O foco está em conquistas, liderança e realização.
-
-O sucesso dependerá de disciplina, organização e responsabilidade. Grandes oportunidades podem surgir. Este é um ano de expansão financeira e profissional.
-
-A vida pede ambição equilibrada com ética. O poder deve ser usado com sabedoria. Este é um período de colheita e realização.
-
-O aprendizado principal é lidar com poder, dinheiro e sucesso de forma equilibrada. Este é o ano da prosperidade e das recompensas.`,
-
-9:`ANO PESSOAL 9 — FINALIZAÇÕES, DESAPEGO E TRANSFORMAÇÃO
-
-Este é o último ano do ciclo de nove anos. Representa encerramentos, desapego e preparação para um novo começo. Tudo o que não faz mais sentido tende a ser finalizado.
-
-Relacionamentos, projetos e situações podem chegar ao fim. Este é um período de limpeza emocional e espiritual. O objetivo é liberar espaço para um novo ciclo.
-
-A vida pede desapego, compaixão e compreensão. Este é um ano de conclusões e aprendizado emocional profundo.
-
-Evite resistir às mudanças. Finalizações são necessárias para novos começos.
-
-Este é o ano de encerramento, cura e preparação para uma nova fase da vida.`  
-  },
-
-  deficiencias: {
-    1:`Deficiência n°1
- Você precisa desenvolver mais iniciativa e determinação em sua vida. A vontade deve ser fortalecida, aprendendo a agir com independência e segurança. Será necessário defender suas ideias e tomar decisões próprias com firmeza. 
- 
- A vida colocará pessoas fortes em seu caminho para que aprenda a se posicionar e se impor. Trabalhe sua autoconfiança e confie mais em suas habilidades. 
-    
-Evite procrastinar e não se anule diante das opiniões alheias. Aprenda a agir sem medo do julgamento. Fortaleça sua coragem para iniciar novos projetos. Evite depender de outras pessoas para agir. Acredite no próprio potencial e desenvolva autonomia emocional.
-
-Consequências: até aprender essa lição poderá sentir desmotivação, indecisão e medo de arriscar. Pode tornar-se dependente de orientação externa, submisso e inseguro para tomar decisões importantes.`,
-2:`Deficiência n°2
-Você deve desenvolver diplomacia, flexibilidade e cooperação. Aprenda a trabalhar em equipe e agir com sensibilidade às necessidades dos outros. Nem sempre será necessário receber reconhecimento por tudo que faz. 
-
-Desenvolva empatia, escuta e capacidade de conciliar ideias. Evite impor suas opiniões de forma rígida. Aprenda a colaborar, fazer parcerias e agir com equilíbrio emocional. Seja mais sociável e aberto a relacionamentos. Trabalhe a confiança nas interações humanas. 
-
-A diplomacia será essencial para alcançar seus objetivos.
-Consequências: até aprender essa lição poderá evitar interações sociais, sentir timidez e isolamento, dificultando projetos e realizações pessoais.`,
-3:`Deficiência n°3
-Você precisa aprender a se expressar com leveza e confiança. A autocrítica excessiva pode gerar insegurança e timidez. Evite buscar perfeição impossível em tudo que faz. 
-
-Desenvolva alegria, espontaneidade e comunicação aberta. Aprenda a ouvir críticas sem se sentir atacado. Permita-se ser mais descontraído e bem-humorado. Trabalhe a expressão de ideias e emoções com naturalidade. Desenvolva confiança ao falar e se posicionar. 
-Aceite suas imperfeições com maturidade.
-
-Consequências: até aprender essa lição poderá sentir-se inibido, irritadiço e incompreendido, prejudicando relações e oportunidades profissionais.`,
-4:`Deficiência n°4
-Você precisa desenvolver disciplina, organização e perseverança. É necessário construir bases sólidas para sua vida. Aprenda a aceitar regras e cumprir responsabilidades com dedicação. 
-
-Desenvolva paciência e constância nos projetos. Aja com método, planejamento e responsabilidade. Seja coerente e persistente em seus objetivos. Trabalhe a organização e o foco nas tarefas. Aprenda a valorizar rotina e estabilidade.
-
-Consequências: até aprender essa lição poderá sentir-se perdido, desmotivado e frustrado, trabalhando muito para obter poucos resultados.`,
-5:`Deficiência n°5
-Você precisa aprender a arriscar mais e viver novas experiências. Supere o medo da mudança e da liberdade. Amplie sua visão de mundo e desenvolva adaptabilidade. 
-
-Aprenda com experiências ao invés de agir impulsivamente. Controle a impulsividade e busque equilíbrio. Seja mais sociável e aberto ao novo. Desenvolva coragem para explorar oportunidades. Aprenda a lidar com mudanças com maturidade.
-
-Consequências: até aprender essa lição poderá enfrentar instabilidade, frustrações e dificuldade em se firmar profissionalmente.`,
-6:`Deficiência n°6
-Você precisa desenvolver comprometimento emocional e responsabilidade afetiva. Aprenda a demonstrar sentimentos e estabelecer vínculos duradouros. Desenvolva empatia, carinho e compreensão. 
-
-Evite controlar pessoas ou relações. Trabalhe a maturidade emocional e a aceitação das diferenças. 
-
-Desenvolva relações sinceras e equilibradas. Aprenda a lidar com responsabilidades afetivas com serenidade.
-
-Consequências: até aprender essa lição poderá sentir solidão, carência afetiva e dificuldades em manter relacionamentos estáveis.`,
-7:`Deficiência n°7
-Você precisa aprofundar conhecimentos e confiar mais nas pessoas. Evite isolamento excessivo e desconfiança constante. Desenvolva comunicação emocional e expressão de sentimentos. 
-
-Aprenda a equilibrar introspecção com convivência social. Busque autoconhecimento sem se afastar da realidade. Trabalhe a confiança e a objetividade nas decisões.
-
-Consequências: até aprender essa lição poderá sentir indecisão, insegurança e dificuldade em realizar sonhos e objetivos.`,
-8:`Deficiência n°8
-Você precisa desenvolver prudência e responsabilidade com recursos materiais. Aprenda a administrar bens com equilíbrio e honestidade. Valorize disciplina financeira e organização. 
-
-Evite decisões impulsivas relacionadas ao dinheiro. Desenvolva responsabilidade e visão prática.
-
-Consequências: até aprender essa lição poderá enfrentar instabilidade financeira e dificuldades em administrar recursos e oportunidades.`,
-9:`Deficiência n°9
-Você precisa desenvolver altruísmo e compaixão. Aprenda a enxergar a vida de forma mais ampla e generosa. 
-
-Desenvolva tolerância, empatia e solidariedade. Aprenda a abrir mão do orgulho e perdoar. 
-
-Trabalhe a compreensão e a visão humanitária.
-
-Consequências: enfrentará desafios emocionais que estimularão crescimento espiritual e sensibilidade humana.`
-
+​3:{
+1:`<p><strong>CICLO 1 — Renovação e Maturidade</strong></p>
+​<p>No terceiro ciclo de vida, para [NOME], o número 1 representa uma fase de renovação.</p>
+<p>Surge para [NOME] uma nova percepção sobre a vida e sobre as decisões tomadas.</p>
+<p>[NOME] passa a compreender melhor suas motivações e qualidades.</p>
+<p>É um período de iniciativa, coragem e autoconfiança para [NOME].</p>
+<p>O desejo de [NOME] continuar realizando e conquistando permanece forte.</p>
+<p>Quando a trajetória de [NOME] foi produtiva, há sensação de realização.</p>
+<p>Caso contrário, podem surgir em [NOME] frustrações ou arrependimentos.</p>
+<p>Este ciclo incentiva em [NOME] novos objetivos e independência emocional.</p>
+<p>É momento de [NOME] assumir a própria história com maturidade.</p>`,
+​2:`<p><strong>CICLO 2 — Harmonia e Relações Humanas</strong></p>
+​<p>Neste ciclo, o número 2 traz para [NOME] uma fase de harmonia emocional.</p>
+<p>[NOME] tende a sentir maior conexão com os outros e consigo mesma.</p>
+<p>Surge para [NOME] a oportunidade de expressar sentimentos com naturalidade.</p>
+<p>[NOME] pode superar inseguranças e desenvolver relações profundas.</p>
+<p>Quando a vida de [NOME] foi equilibrada, há sensação de paz interior.</p>
+<p>Caso contrário, podem surgir em [NOME] sentimentos de mágoa ou comparação.</p>
+<p>Este período favorece em [NOME] a empatia, diplomacia e cooperação.</p>
+<p>A maturidade emocional de [NOME] torna-se uma ferramenta poderosa.</p>`,
+​3:`<p><strong>CICLO 3 — Autenticidade e Alegria</strong></p>
+​<p>O número 3 representa para [NOME] uma fase de expressão e criatividade.</p>
+<p>Surge para [NOME] a necessidade de compartilhar sentimentos e experiências.</p>
+<p>A criatividade de [NOME] se expande e traz novos interesses.</p>
+<p>Quando a trajetória de [NOME] foi bem construída, há entusiasmo e leveza.</p>
+<p>Caso contrário, podem surgir em [NOME] sentimentos de rejeição ou falta de direção.</p>
+<p>O desafio de [NOME] é manter o foco e evitar desperdício de energia.</p>
+<p>Este ciclo incentiva em [NOME] a autenticidade e convivência social.</p>
+<p>É uma fase de valorização da vida para [NOME].</p>`,
+​4:`<p><strong>CICLO 4 — Realização e Legado</strong></p>
+​<p>O número 4 traz para [NOME] um período de continuidade e responsabilidade.</p>
+<p>[NOME] sente necessidade de manter-se ativa, produtiva e útil.</p>
+<p>Surge em [NOME] maior preocupação com justiça e valores morais.</p>
+<p>Quando a jornada de [NOME] foi bem conduzida, há sensação de dever cumprido.</p>
+<p>Caso contrário, podem surgir em [NOME] frustração ou falta de conquistas.</p>
+<p>Este ciclo reforça em [NOME] a disciplina e construção de legado.</p>
+<p>É uma fase de maturidade prática para [NOME].</p>`,
+​5:`<p><strong>CICLO 5 — Transformação e Expansão</strong></p>
+​<p>O número 5 indica para [NOME] um período de movimento e mudanças.</p>
+<p>Mesmo na maturidade, surgem para [NOME] novas oportunidades e desafios.</p>
+<p>[NOME] busca segurança, mas deseja continuar explorando possibilidades.</p>
+<p>Quando a vida de [NOME] foi bem conduzida, há abertura para mudanças.</p>
+<p>Caso contrário, podem surgir em [NOME] insegurança ou apego ao passado.</p>
+<p>Este ciclo incentiva em [NOME] a liberdade consciente e adaptação.</p>`,
+​6:`<p><strong>CICLO 6 — Estabilidade Afetiva</strong></p>
+​<p>O número 6 representa para [NOME] uma fase de harmonia e vínculos afetivos.</p>
+<p>As relações ganham grande importância para [NOME], trazendo pertencimento.</p>
+<p>Quando a trajetória de [NOME] foi equilibrada, há sentimento de ser respeitada.</p>
+<p>Caso contrário, podem surgir em [NOME] sentimentos de inutilidade ou solidão.</p>
+<p>Este ciclo estimula em [NOME] o amor, cooperação e equilíbrio emocional.</p>
+<p>É um período de satisfação pessoal para [NOME].</p>`,
+​7:`<p><strong>CICLO 7 — Sabedoria Interior</strong></p>
+​<p>O número 7 simboliza para [NOME] a fase de introspecção e sabedoria.</p>
+<p>É um período de reflexão e crescimento interior para [NOME].</p>
+<p>Quando a vida de [NOME] foi bem conduzida, há serenidade e compreensão.</p>
+<p>Caso contrário, podem surgir em [NOME] isolamento ou sensação de vazio.</p>
+<p>Este ciclo favorece em [NOME] a espiritualidade e reconexão com a essência.</p>
+<p>É uma fase de evolução interior para [NOME].</p>`,
+​8:`<p><strong>CICLO 8 — Recompensa e Colheita</strong></p>
+​<p>O número 8 representa para [NOME] a fase das recompensas e compensações.</p>
+<p>Conquistas materiais e profissionais de [NOME] tornam-se evidentes.</p>
+<p>Quando a trajetória de [NOME] foi correta, há prosperidade e poder pessoal.</p>
+<p>Caso contrário, podem surgir em [NOME] perdas ou arrependimentos.</p>
+<p>Este ciclo reforça em [NOME] a justiça e responsabilidade.</p>
+<p>É a fase da colheita dos resultados da vida de [NOME].</p>`,
+​9:`<p><strong>CICLO 9 — Plenitude e Significado</strong></p>
+​<p>O número 9 marca para [NOME] a fase de reflexão profunda e desapego.</p>
+<p>Surge em [NOME] o desejo de contribuir com o mundo e buscar significado.</p>
+<p>Quando a vida de [NOME] foi bem conduzida, há sensação de paz interior.</p>
+<p>Caso contrário, podem surgir em [NOME] arrependimentos e tempo perdido.</p>
+<p>Este ciclo incentiva em [NOME] a compaixão e sabedoria.</p>
+<p>É o encerramento da jornada de [NOME] com plena consciência.</p>`
 }
 };
-
-
+​MOMENTOS DECISIVOS
+​momentos:{
+1:{
+1:`<p><strong>1º MOMENTO DECISIVO — Desenvolvimento da Vontade</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] neste período é desenvolver força de vontade.</p>
+<p>[NOME] deve ser incentivada desde cedo a fazer escolhas e tomar decisões.</p>
+<p>Isso permitirá que futuramente [NOME] saiba avaliar o momento certo de agir.</p>
+<p>[NOME] deve aprender o valor da independência e da iniciativa.</p>
+<p>A juventude de [NOME] deve ser dedicada ao desenvolvimento das próprias ideias.</p>
+<p>É fundamental [NOME] evitar egoísmo, teimosia e egocentrismo.</p>
+<p>As amizades formadas por [NOME] influenciarão profundamente o futuro.</p>
+<p>Este período exige de [NOME] coragem, determinação e confiança.</p>
+<p>O sucesso de [NOME] dependerá principalmente da própria iniciativa.</p>`,
+​2:`<p><strong>1º MOMENTO DECISIVO — Formação do Temperamento</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] neste período é desenvolver paciência.</p>
+<p>[NOME] não deve ser protegida em excesso para não gerar dificuldades futuras.</p>
+<p>Este período exige de [NOME] cooperação, sensibilidade e orientação adequada.</p>
+<p>A personalidade de [NOME] está sendo formada, definindo sua reação à vida.</p>
+<p>Aprender a cooperar será essencial para o desenvolvimento de [NOME].</p>
+<p>Cultivar amizades sinceras trará equilíbrio emocional para [NOME].</p>`,
+​3:`<p><strong>1º MOMENTO DECISIVO — Refinamento da Expressão</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] neste período é refinar a autoexpressão.</p>
+<p>Trata-se de uma fase criativa e social para [NOME], exigindo disciplina.</p>
+<p>É importante [NOME] aprender a controlar emoções e fazer escolhas responsáveis.</p>
+<p>A seriedade será essencial para [NOME] construir conquistas duradouras.</p>`,
+​4:`<p><strong>1º MOMENTO DECISIVO — Organização do Futuro</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] neste período é organizar o futuro.</p>
+<p>É o momento de [NOME] aprender responsabilidade, disciplina e valor do esforço.</p>
+<p>A educação recebida define a estrutura das conquistas futuras de [NOME].</p>
+<p>Com dedicação, [NOME] construirá bases sólidas para a vida adulta.</p>`,
+​5:`<p><strong>1º MOMENTO DECISIVO — Liberdade Responsável</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] é aprender a aproveitar oportunidades com responsabilidade.</p>
+<p>É um período de experiências, mudanças e aprendizado para [NOME].</p>
+<p>[NOME] deve aprender a respeitar regras, limites e autoridade.</p>
+<p>A liberdade deve ser equilibrada por [NOME] para garantir estabilidade.</p>`,
+​6:`<p><strong>1º MOMENTO DECISIVO — Responsabilidade Emocional</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] é desenvolver responsabilidade emocional.</p>
+<p>Este período ensina a [NOME] convivência, cooperação e equilíbrio.</p>
+<p>[NOME] deve aprender a cuidar dos outros sem abandonar as próprias necessidades.</p>
+<p>Diplomacia e empatia devem ser desenvolvidas por [NOME] desde cedo.</p>`,
+​7:`<p><strong>1º MOMENTO DECISIVO — Construção de Valores</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] é desenvolver autoconfiança e autoestima.</p>
+<p>[NOME] deve ser incentivada a se relacionar e evitar o isolamento.</p>
+<p>É fundamental [NOME] aprender a enfrentar desafios com segurança.</p>
+<p>Este período constrói para [NOME] a base da maturidade futura.</p>`,
+​8:`<p><strong>1º MOMENTO DECISIVO — Estudo e Disciplina</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] é desenvolver senso de justiça e equilíbrio.</p>
+<p>Este período exige de [NOME] estudo, disciplina e organização.</p>
+<p>É importante [NOME] aprender a lidar com responsabilidades e autocontrole.</p>
+<p>Uma boa formação permitirá a [NOME] alcançar objetivos precocemente.</p>`,
+​9:`<p><strong>1º MOMENTO DECISIVO — Descoberta e Empatia</strong></p>
+​<p>Este período reflete o início da vida de [NOME], época em que se encontra mais influenciável.</p>
+<p>O desafio de [NOME] é desenvolver empatia e visão humanitária.</p>
+<p>Este pode ser um período sensível para [NOME], exigindo compreensão.</p>
+<p>A convivência com diferentes pessoas desenvolve em [NOME] maturidade.</p>
+<p>É uma fase de descobertas que prepara [NOME] para o futuro.</p>`
+},
+​2:{
+1:`<p><strong>2º MOMENTO DECISIVO — Consolidação da Identidade</strong></p>
+​<p>Este período marca para [NOME] uma fase de escolhas importantes e maior autonomia.</p>
+<p>O desenvolvimento de [NOME] passa a exigir atitude, coragem e posicionamento.</p>
+<p>O desafio deste período é [NOME] manter entusiasmo e autoconfiança.</p>
+<p>É um momento que exige de [NOME] coragem para agir e assumir o controle.</p>
+<p>[NOME] deve confiar em suas ideias e acreditar em sua capacidade.</p>
+<p>As decisões tomadas agora terão impacto direto no futuro de [NOME].</p>
+<p>A independência de [NOME] deve ser desenvolvida com responsabilidade.</p>
+<p>É importante [NOME] aprender a lidar com obstáculos sem perder motivação.</p>
+<p>A autossuficiência emocional torna-se um objetivo importante para [NOME].</p>
+<p>Este é o momento de [NOME] iniciar projetos e assumir riscos.</p>
+<p>A iniciativa pessoal de [NOME] será determinante para o sucesso.</p>`,
+​2:`<p><strong>2º MOMENTO DECISIVO — Estratégia e Paciência</strong></p>
+​<p>Esta fase simboliza para [NOME] um período de amadurecimento emocional.</p>
+<p>O desafio deste período é [NOME] agir com estratégia e paciência.</p>
+<p>A diplomacia torna-se fundamental para o crescimento de [NOME].</p>
+<p>Parcerias e relações ganham importância significativa para [NOME].</p>
+<p>[NOME] aprende a trabalhar em equipe e compartilhar responsabilidades.</p>
+<p>É essencial [NOME] desenvolver sensibilidade e capacidade de negociação.</p>
+<p>Decisões precipitadas devem ser evitadas por [NOME].</p>
+<p>O sucesso de [NOME] virá através da cooperação e do equilíbrio.</p>
+<p>O crescimento de [NOME] ocorre de forma gradual e constante.</p>
+<p>A harmonia nas relações favorece o progresso de [NOME].</p>`,
+​3:`<p><strong>2º MOMENTO DECISIVO — Comunicação e Foco</strong></p>
+​<p>Esta etapa traz para [NOME] expansão social, criatividade e expressão.</p>
+<p>O desafio de [NOME] é manter foco e disciplina.</p>
+<p>A criatividade de [NOME] se intensifica e novas oportunidades surgem.</p>
+<p>A vida social de [NOME] tende a se expandir rapidamente.</p>
+<p>É importante [NOME] evitar dispersão e superficialidade.</p>
+<p>Talentos comunicativos de [NOME] podem se desenvolver com facilidade.</p>
+<p>A motivação de [NOME] cresce através da interação com pessoas.</p>
+<p>É necessário [NOME] direcionar energia para objetivos concretos.</p>
+<p>A organização transforma as ideias de [NOME] em realidade.</p>`,
+​4:`<p><strong>2º MOMENTO DECISIVO — Construção e Persistência</strong></p>
+​<p>Este período representa para [NOME] construção, disciplina e preparação.</p>
+<p>O desafio de [NOME] é construir bases sólidas.</p>
+<p>O trabalho de [NOME] passa a exigir dedicação e persistência.</p>
+<p>A responsabilidade de [NOME] aumenta significativamente.</p>
+<p>A organização torna-se essencial para o sucesso de [NOME].</p>
+<p>Resultados de [NOME] surgem através do esforço constante.</p>
+<p>O planejamento garante a [NOME] segurança futura.</p>
+<p>A determinação de [NOME] constrói conquistas duradouras.</p>`,
+​5:`<p><strong>2º MOMENTO DECISIVO — Adaptação e Transformação</strong></p>
+​<p>Esta fase simboliza para [NOME] mudanças, liberdade e necessidade de adaptação.</p>
+<p>O desafio de [NOME] é aprender a se libertar com responsabilidade.</p>
+<p>Mudanças inesperadas podem ocorrer com frequência para [NOME].</p>
+<p>A flexibilidade torna-se essencial para [NOME].</p>
+<p>Novas experiências ampliam a visão de mundo de [NOME].</p>
+<p>É importante [NOME] evitar a impulsividade excessiva.</p>
+<p>O crescimento de [NOME] surge através das mudanças.</p>
+<p>A liberdade consciente conduz [NOME] ao progresso.</p>`,
+​6:`<p><strong>2º MOMENTO DECISIVO — Compromisso e Harmonia</strong></p>
+​<p>Esta etapa destaca para [NOME] a responsabilidade afetiva e vínculos.</p>
+<p>O desafio de [NOME] é manter harmonia com as pessoas.</p>
+<p>Relacionamentos ganham importância significativa para [NOME].</p>
+<p>A cooperação se torna essencial para o progresso de [NOME].</p>
+<p>[NOME] aprende a compartilhar responsabilidades.</p>
+<p>A vida afetiva de [NOME] ganha destaque.</p>
+<p>A colaboração impulsiona o crescimento de [NOME].</p>
+<p>O equilíbrio emocional de [NOME] garante progresso.</p>`,
+​7:`<p><strong>2º MOMENTO DECISIVO — Conhecimento e Intuição</strong></p>
+​<p>Este período favorece para [NOME] a introspecção e aprendizado.</p>
+<p>O desafio de [NOME] é agir com praticidade.</p>
+<p>A busca por conhecimento se intensifica para [NOME].</p>
+<p>O autoconhecimento torna-se essencial para [NOME].</p>
+<p>É necessário [NOME] evitar o isolamento excessivo.</p>
+<p>A disciplina mental de [NOME] fortalece resultados.</p>
+<p>O desenvolvimento de [NOME] ocorre de dentro para fora.</p>
+<p>O aprendizado profundo traz sabedoria para [NOME].</p>`,
+​8:`<p><strong>2º MOMENTO DECISIVO — Realização e Estratégia</strong></p>
+​<p>Esta fase está ligada para [NOME] à realização material e poder.</p>
+<p>O desafio de [NOME] é agir com ética e responsabilidade.</p>
+<p>O trabalho de [NOME] ganha intensidade.</p>
+<p>A ambição de [NOME] cresce naturalmente.</p>
+<p>O planejamento financeiro se torna essencial para [NOME].</p>
+<p>A liderança de [NOME] se fortalece gradualmente.</p>
+<p>A disciplina garante a [NOME] resultados concretos.</p>
+<p>A visão estratégica de [NOME] orienta decisões.</p>`,
+​9:`<p><strong>2º MOMENTO DECISIVO — Renovação e Evolução</strong></p>
+​<p>Este período representa para [NOME] transformação e desapego.</p>
+<p>O desafio de [NOME] é encerrar ciclos com sabedoria.</p>
+<p>Mudanças profundas podem ocorrer na vida de [NOME].</p>
+<p>O passado deve ser compreendido e superado por [NOME].</p>
+<p>A maturidade emocional de [NOME] se amplia.</p>
+<p>A vida pede a [NOME] renovação e evolução.</p>
+<p>A transformação traz para [NOME] aprendizado profundo.</p>`
+},
+​3:{
+1:`<p><strong>3º MOMENTO DECISIVO — Determinação e Foco</strong></p>
+​<p>Nesta fase a maturidade de [NOME] já está consolidada.</p>
+<p>Os resultados passam a depender diretamente da iniciativa de [NOME].</p>
+<p>É hora de [NOME] sair da inércia e agir com coragem.</p>
+<p>O período exige de [NOME] atenção ao ambiente e às oportunidades.</p>
+<p>Será necessário [NOME] reavaliar conquistas e redefinir objetivos.</p>
+<p>O crescimento de [NOME] depende da disposição para se arriscar.</p>
+<p>As relações sociais de [NOME] ganham importância estratégica.</p>
+<p>A persistência fortalece as conquistas de [NOME].</p>
+<p>O foco de [NOME] determina o sucesso deste período.</p>`,
+​2:`<p><strong>3º MOMENTO DECISIVO — Equilíbrio e Parceria</strong></p>
+​<p>Este período exige de [NOME] equilíbrio emocional e cooperação.</p>
+<p>Será necessário [NOME] manter a individualidade com flexibilidade.</p>
+<p>Parcerias tornam-se essenciais para o progresso de [NOME].</p>
+<p>A paciência de [NOME] facilitará conquistas importantes.</p>
+<p>É momento de [NOME] avaliar a realidade com clareza.</p>
+<p>A cooperação facilitará o crescimento de [NOME].</p>
+<p>A maturidade emocional favorece as decisões de [NOME].</p>`,
+​3:`<p><strong>3º MOMENTO DECISIVO — Organização e Realização</strong></p>
+​<p>O foco e a disciplina tornam-se fundamentais para [NOME].</p>
+<p>A concentração será a chave do sucesso de [NOME].</p>
+<p>É momento de [NOME] expandir e ocupar novos espaços.</p>
+<p>A sociabilidade de [NOME] pode abrir portas importantes.</p>
+<p>A organização evita para [NOME] sobrecarga e desgaste.</p>
+<p>A experiência acumulada deve ser utilizada por [NOME].</p>
+<p>A disciplina garante a [NOME] estabilidade.</p>`,
+​4:`<p><strong>3º MOMENTO DECISIVO — Compromisso e Sucesso</strong></p>
+​<p>Este período favorece a construção de bases sólidas para [NOME].</p>
+<p>Disciplina e dedicação serão essenciais para [NOME].</p>
+<p>[NOME] deve encarar dificuldades de forma prática e realista.</p>
+<p>O esforço contínuo trará para [NOME] resultados concretos.</p>
+<p>A responsabilidade de [NOME] define os caminhos futuros.</p>
+<p>A persistência de [NOME] gera conquistas duradouras.</p>
+<p>A determinação impulsiona os resultados de [NOME].</p>`,
+​5:`<p><strong>3º MOMENTO DECISIVO — Prudência e Estabilidade</strong></p>
+​<p>Esta fase exige de [NOME] adaptação e abertura para o novo.</p>
+<p>Será necessário [NOME] abandonar o que já não serve.</p>
+<p>Mudanças trarão para [NOME] crescimento e expansão.</p>
+<p>A prudência será essencial nas decisões de [NOME].</p>
+<p>A flexibilidade de [NOME] facilita o progresso.</p>
+<p>O equilíbrio emocional de [NOME] reduz riscos.</p>
+<p>A calma favorece decisões assertivas de [NOME].</p>`,
+​6:`<p><strong>3º MOMENTO DECISIVO — Transição e Equilíbrio</strong></p>
+​<p>Este período representa para [NOME] encerramentos e transições.</p>
+<p>Novas ideias devem ser incorporadas por [NOME].</p>
+<p>A serenidade será essencial para o progresso de [NOME].</p>
+<p>O foco de [NOME] deve estar na felicidade e segurança.</p>
+<p>A cooperação favorece resultados positivos para [NOME].</p>
+<p>A harmonia fortalece as conquistas de [NOME].</p>
+<p>O equilíbrio de [NOME] conduz à estabilidade.</p>`,
+​7:`<p><strong>3º MOMENTO DECISIVO — Propósito e Transformação</strong></p>
+​<p>Este momento pede a [NOME] propósito e autoconhecimento.</p>
+<p>É hora de [NOME] redefinir valores e prioridades.</p>
+<p>Aja com praticidade, [NOME], nas questões materiais.</p>
+<p>Liberte-se, [NOME], de frustrações e ressentimentos.</p>
+<p>Encare desafios com a confiança de [NOME].</p>
+<p>O autoconhecimento fortalece as decisões de [NOME].</p>
+<p>O propósito conduz [NOME] à transformação.</p>`,
+​8:`<p><strong>3º MOMENTO DECISIVO — Liderança e Prosperidade</strong></p>
+​<p>Este pode ser um período de grandes conquistas para [NOME].</p>
+<p>Planejamento e organização serão essenciais para [NOME].</p>
+<p>O sucesso dependerá da dedicação de [NOME].</p>
+<p>A liderança de [NOME] ganha destaque.</p>
+<p>A racionalidade de [NOME] favorece resultados.</p>
+<p>O esforço de [NOME] traz reconhecimento.</p>
+<p>A perseverança gera prosperidade para [NOME].</p>`,
+​9:`<p><strong>3º MOMENTO DECISIVO — Evolução e Plenitude</strong></p>
+​<p>Este período favorece para [NOME] a reflexão e encerramentos.</p>
+<p>É hora de [NOME] consolidar aprendizados.</p>
+<p>O reconhecimento será resultado das atitudes de [NOME].</p>
+<p>Finalize, [NOME], pendências do passado.</p>
+<p>Busque crescimento pessoal e espiritual, [NOME].</p>
+<p>O desapego traz para [NOME] liberdade emocional.</p>
+<p>A evolução conduz [NOME] à plenitude.</p>`
+},
+​4:{
+1:`<p><strong>4º MOMENTO DECISIVO — Ação e Responsabilidade</strong></p>
+​<p>Nesta fase a maturidade permite a [NOME] compreender o propósito.</p>
+<p>Agora [NOME] possui condições de reunir ideias e agir com consciência.</p>
+<p>Esta é a fase de [NOME] assumir as consequências das decisões.</p>
+<p>Os resultados dependerão essencialmente da atitude de [NOME].</p>
+<p>Será necessário [NOME] manter foco absoluto nos objetivos.</p>
+<p>É momento de [NOME] sair da zona de conforto e agir com coragem.</p>
+<p>O sucesso de [NOME] dependerá da iniciativa e determinação.</p>`,
+​2:`<p><strong>4º MOMENTO DECISIVO — Transição e Realização</strong></p>
+​<p>Este período simboliza para [NOME] a chegada do futuro.</p>
+<p>Será necessário a [NOME] equilíbrio entre conquistas e relações.</p>
+<p>É momento para [NOME] fortalecer parcerias e agir com cooperação.</p>
+<p>Este é um período de transição definitiva para [NOME].</p>
+<p>Avalie sua trajetória, [NOME], para não repetir erros.</p>
+<p>Observe a realidade com clareza antes de [NOME] decidir.</p>`,
+​3:`<p><strong>4º MOMENTO DECISIVO — Valorização e Entusiasmo</strong></p>
+​<p>Este pode ser para [NOME] um período extremamente agradável.</p>
+<p>Surge satisfação com as conquistas e liberdade para [NOME].</p>
+<p>A prosperidade pode crescer em diversas áreas para [NOME].</p>
+<p>É momento de [NOME] ocupar a posição desejada e ampliar contatos.</p>
+<p>Será necessário organização para [NOME] não acumular tarefas.</p>
+<p>Valorize suas conquistas, [NOME], com maturidade e entusiasmo.</p>`,
+​4:`<p><strong>4º MOMENTO DECISIVO — Persistência e Segurança</strong></p>
+​<p>Este será para [NOME] um período de paciência e realismo.</p>
+<p>Será necessário [NOME] enfrentar limitações com coragem.</p>
+<p>É momento de [NOME] cumprir obrigações com maturidade.</p>
+<p>Os resultados de [NOME] serão proporcionais ao esforço.</p>
+<p>Aprender a lidar com pressão será fundamental para [NOME].</p>
+<p>Com persistência, [NOME] conquistará objetivos pendentes.</p>`,
+​5:`<p><strong>4º MOMENTO DECISIVO — Adaptação e Crescimento</strong></p>
+​<p>Este pode ser para [NOME] um período libertador.</p>
+<p>Surge a necessidade de [NOME] abandonar o que se tornou obsoleto.</p>
+<p>Mudanças trarão para [NOME] benefícios futuros.</p>
+<p>O equilíbrio será essencial para [NOME] aproveitar oportunidades.</p>
+<p>O crescimento de [NOME] virá da adaptação consciente.</p>`,
+​6:`<p><strong>4º MOMENTO DECISIVO — Harmonia e Estabilidade</strong></p>
+​<p>Este período encerra uma fase importante para [NOME].</p>
+<p>Pode ser uma fase serena se as responsabilidades de [NOME] foram conduzidas.</p>
+<p>É momento de cooperação e equilíbrio nas relações de [NOME].</p>
+<p>Novas oportunidades surgem quando [NOME] resgata valores.</p>
+<p>O equilíbrio entre dever e felicidade será a chave para [NOME].</p>`,
+​7:`<p><strong>4º MOMENTO DECISIVO — Sabedoria e Renovação</strong></p>
+​<p>Este período marca a busca de [NOME] pelo verdadeiro sentido.</p>
+<p>Velhos hábitos que perderam significado devem ser deixados por [NOME].</p>
+<p>Será necessário a [NOME] desapego e renovação interior.</p>
+<p>Projetos abandonados por [NOME] devem ser concluídos.</p>
+<p>A sabedoria permitirá a [NOME] redefinir as prioridades.</p>`,
+​8:`<p><strong>4º MOMENTO DECISIVO — Reconhecimento e Justiça</strong></p>
+​<p>Este pode ser para [NOME] um período de grandes realizações.</p>
+<p>O controle da própria vida torna-se evidente para [NOME].</p>
+<p>Será necessário planejamento e disciplina para [NOME].</p>
+<p>O sucesso verdadeiro de [NOME] depende de ética e equilíbrio.</p>
+<p>Se [NOME] agir com justiça, alcançará satisfação pessoal.</p>`,
+​9:`<p><strong>4º MOMENTO DECISIVO — Generosidade e Serenidade</strong></p>
+​<p>Este é para [NOME] um período de crescimento espiritual.</p>
+<p>[NOME] será valorizada por quem é de verdade.</p>
+<p>O momento favorece a [NOME] reconciliações e novos relacionamentos.</p>
+<p>É tempo de [NOME] encerrar pendências e libertar-se.</p>
+<p>A generosidade e a compreensão tornam-se prioridades de [NOME].</p>`
+}
+};
+​DESAFIOS
+​desafios:{
+1:{
+0:`<p><strong>DESAFIO 0 — Desenvolvimento da Força de Vontade</strong></p>
+​<p>Neste primeiro período, [NOME] está em fase de formação do caráter.</p>
+<p>O maior aprendizado de [NOME] é justamente aprender a escolher.</p>
+<p>O desafio de [NOME] aqui é desenvolver força de vontade e direção.</p>
+<p>[NOME] precisa aprender a confiar em si mesma.</p>
+<p>É necessário [NOME] agir com autonomia diante das inseguranças.</p>
+<p>O desenvolvimento da disciplina é fundamental para [NOME].</p>`,
+​1:`<p><strong>DESAFIO 1 — Desenvolvimento da Iniciativa</strong></p>
+​<p>Surge para [NOME] a necessidade de aprender independência.</p>
+<p>[NOME] será colocada em situações que exigirão posicionamento.</p>
+<p>Este desafio exige de [NOME] coragem para agir.</p>
+<p>A iniciativa de [NOME] precisa ser desenvolvida gradualmente.</p>
+<p>É importante [NOME] agir sem esperar aprovação constante.</p>
+<p>Este desafio ensina a [NOME] a liderança interior.</p>`,
+​2:`<p><strong>DESAFIO 2 — Desenvolvimento da Autoconfiança</strong></p>
+​<p>A sensibilidade de [NOME] é intensa nesta fase inicial.</p>
+<p>Este desafio exige de [NOME] fortalecer a confiança interior.</p>
+<p>Será necessário [NOME] aprender a confiar nos próprios instintos.</p>
+<p>A autovalorização de [NOME] deve ser desenvolvida gradualmente.</p>
+<p>O equilíbrio emocional torna-se fundamental para [NOME].</p>`,
+​3:`<p><strong>DESAFIO 3 — Desenvolvimento da Competência</strong></p>
+​<p>[NOME] aprende a organizar ideias e desenvolver talentos.</p>
+<p>Surge a necessidade de [NOME] expressar criatividade.</p>
+<p>O desafio de [NOME] é aprender a concluir o que começa.</p>
+<p>A responsabilidade de [NOME] cresce gradualmente.</p>
+<p>Este desafio ensina a [NOME] organização e foco.</p>`,
+​4:`<p><strong>DESAFIO 4 — Desenvolvimento da Disciplina</strong></p>
+​<p>A disciplina de [NOME] precisa ser construída por hábitos.</p>
+<p>[NOME] deve aprender organização e constância.</p>
+<p>O desafio de [NOME] é evitar a desorganização.</p>
+<p>A persistência torna-se essencial para [NOME].</p>
+<p>Este desafio constrói para [NOME] estabilidade futura.</p>`,
+​5:`<p><strong>DESAFIO 5 — Equilíbrio entre Liberdade e Dever</strong></p>
+​<p>Surge em [NOME] o desejo de liberdade e curiosidade.</p>
+<p>Este desafio ensina [NOME] a equilibrar liberdade e dever.</p>
+<p>A impulsividade e ansiedade de [NOME] precisam ser controladas.</p>
+<p>[NOME] aprende que toda ação gera consequências.</p>
+<p>A formação do caráter de [NOME] depende da responsabilidade.</p>`,
+​6:`<p><strong>DESAFIO 6 — Desenvolvimento da Tolerância</strong></p>
+​<p>[NOME] aprende que nem sempre o mundo funciona conforme deseja.</p>
+<p>Este desafio ensina a [NOME] empatia e compreensão.</p>
+<p>Será necessário [NOME] aprender a ouvir e cooperar.</p>
+<p>A tolerância de [NOME] se desenvolve através da convivência.</p>
+<p>Este desafio constrói em [NOME] maturidade afetiva.</p>`,
+​7:`<p><strong>DESAFIO 7 — Desenvolvimento da Confiança Interior</strong></p>
+​<p>Surgem medos e inseguranças sobre o valor de [NOME].</p>
+<p>Este desafio ensina [NOME] a confiar em si mesma.</p>
+<p>Será necessário [NOME] enfrentar desafios com segurança.</p>
+<p>A confiança de [NOME] cresce com a superação de obstáculos.</p>
+<p>Este período constrói para [NOME] força emocional.</p>`,
+​8:`<p><strong>DESAFIO 8 — Desenvolvimento do Equilíbrio</strong></p>
+​<p>Surgem os aprendizados de [NOME] sobre valores e justiça.</p>
+<p>Este desafio ensina a [NOME] o equilíbrio entre desejo e consciência.</p>
+<p>[NOME] deve aprender que conquistas exigem esforço.</p>
+<p>A maturidade de [NOME] se consolida através dos valores.</p>
+<p>Este desafio constrói em [NOME] o senso de justiça.</p>`
+},
+​2:{
+0:`<p><strong>DESAFIO 0 — Responsabilidade nas Escolhas</strong></p>
+​<p>Na fase adulta, o desafio da escolha de [NOME] ganha mais peso.</p>
+<p>A vida de [NOME] apresenta responsabilidades assumidas.</p>
+<p>Este período exige de [NOME] maturidade para decidir.</p>
+<p>O desafio de [NOME] é manter foco e coerência.</p>
+<p>A maturidade exige de [NOME] assumir as consequências.</p>`,
+​1:`<p><strong>DESAFIO 1 — Autonomia e Atitude</strong></p>
+​<p>A vida de [NOME] exige decisões concretas e independência.</p>
+<p>Este desafio marca a independência emocional de [NOME].</p>
+<p>Será necessário [NOME] agir com coragem e confiança.</p>
+<p>Situções exigirão de [NOME] liderança e iniciativa.</p>
+<p>Este desafio fortalece em [NOME] a identidade e liderança.</p>`,
+​2:`<p><strong>DESAFIO 2 — Estabilidade e Autoconfiança</strong></p>
+​<p>Pressões sociais testam a autoconfiança de [NOME].</p>
+<p>[NOME] é desafiada a confiar em sua capacidade de decisão.</p>
+<p>Será necessário [NOME] manter segurança diante de críticas.</p>
+<p>O desafio de [NOME] é agir com segurança e empatia.</p>
+<p>Este período fortalece em [NOME] a estabilidade emocional.</p>`,
+​3:`<p><strong>DESAFIO 3 — Eficiência e Planejamento</strong></p>
+​<p>A vida adulta exige de [NOME] produtividade e eficiência.</p>
+<p>Este desafio ensina [NOME] a organizar seus talentos.</p>
+<p>Será necessário [NOME] desenvolver disciplina mental.</p>
+<p>A maturidade profissional de [NOME] cresce com a prática.</p>
+<p>Este desafio fortalece a realização profissional de [NOME].</p>`,
+​4:`<p><strong>DESAFIO 4 — Construção de Estabilidade</strong></p>
+​<p>A fase adulta exige de [NOME] estrutura e compromisso.</p>
+<p>Este desafio representa a construção da estabilidade de [NOME].</p>
+<p>A procrastinação e a dispersão devem ser superadas por [NOME].</p>
+<p>A disciplina torna-se para [NOME] a base das conquistas.</p>
+<p>Este desafio constrói para [NOME] realização duradoura.</p>`,
+​5:`<p><strong>DESAFIO 5 — Maturidade e Escolha Consciente</strong></p>
+​<p>Na fase adulta, a liberdade de [NOME] exige responsabilidade.</p>
+<p>Este desafio ensina [NOME] a equilibrar desejos e compromissos.</p>
+<p>A vida exige de [NOME] maturidade emocional nas escolhas.</p>
+<p>A liberdade de [NOME] passa a ser uma escolha consciente.</p>
+<p>Este período fortalece em [NOME] o equilíbrio nas decisões.</p>`,
+​6:`<p><strong>DESAFIO 6 — Compreensão e Maturidade Afetiva</strong></p>
+​<p>A vida adulta traz para [NOME] convivência com o diferente.</p>
+<p>Este desafio ensina [NOME] a respeitar limites e opiniões.</p>
+<p>Será necessário [NOME] desenvolver flexibilidade emocional.</p>
+<p>O desafio de [NOME] é agir com empatia e identidade.</p>
+<p>Este período fortalece em [NOME] a compreensão nas relações.</p>`,
+​7:`<p><strong>DESAFIO 7 — Autoconhecimento e Sabedoria</strong></p>
+​<p>Surgem situações que testam fé e autoconhecimento em [NOME].</p>
+<p>Este desafio ensina [NOME] a confiar em si mesma e na vida.</p>
+<p>Será necessário [NOME] enfrentar dúvidas com maturidade.</p>
+<p>O desafio de [NOME] é transformar medo em sabedoria.</p>
+<p>Este período fortalece em [NOME] a maturidade emocional.</p>`,
+​8:`<p><strong>DESAFIO 8 — Ética e Responsabilidade Social</strong></p>
+​<p>Este desafio ensina [NOME] a lidar com poder e dinheiro.</p>
+<p>[NOME] aprende a usar recursos de forma ética.</p>
+<p>Será necessário [NOME] evitar o orgulho excessivo.</p>
+<p>O poder deve ser usado por [NOME] com sabedoria.</p>
+<p>Este desafio fortalece em [NOME] a responsabilidade social.</p>`
+},
+​3:{
+0:`<p><strong>DESAFIO 0 — Sabedoria e Aceitação</strong></p>
+​<p>Na fase final, o desafio da escolha de [NOME] é mais profundo.</p>
+<p>[NOME] compreende que todas as decisões construíram a realidade.</p>
+<p>Este período convida [NOME] à sabedoria e ao desapego.</p>
+<p>O desafio de [NOME] é aceitar erros e valorizar acertos.</p>
+<p>A aceitação de [NOME] conduz à paz e plenitude.</p>`,
+​1:`<p><strong>DESAFIO 1 — Liberdade Interior</strong></p>
+​<p>O desafio da iniciativa assume para [NOME] caráter emocional.</p>
+<p>[NOME] aprende a confiar plenamente em sua trajetória.</p>
+<p>A independência de [NOME] torna-se interna e emocional.</p>
+<p>O aprendizado de [NOME] consiste em agir com segurança.</p>
+<p>A iniciativa de [NOME] torna-se símbolo de liberdade.</p>`,
+​2:`<p><strong>DESAFIO 2 — Serenidade e Autoconfiança</strong></p>
+​<p>Na maturidade, a autoconfiança de [NOME] é essencial.</p>
+<p>[NOME] aprende a confiar em sua experiência acumulada.</p>
+<p>O desafio de [NOME] é reconhecer o próprio valor.</p>
+<p>A experiência de [NOME] torna-se fonte de segurança.</p>
+<p>A serenidade substitui em [NOME] a ansiedade.</p>`,
+​3:`<p><strong>DESAFIO 3 — Legado e Contribuição</strong></p>
+​<p>Neste período, a competência de [NOME] é sabedoria prática.</p>
+<p>[NOME] utiliza a experiência para orientar e inspirar.</p>
+<p>Surge a necessidade de [NOME] compartilhar conhecimento.</p>
+<p>A experiência de [NOME] torna-se uma ferramenta de legado.</p>
+<p>A realização de [NOME] surge ao compartilhar com os outros.</p>`,
+​4:`<p><strong>DESAFIO 4 — Qualidade de Vida e Constância</strong></p>
+​<p>A disciplina de [NOME] torna-se sinônimo de equilíbrio.</p>
+<p>[NOME] organiza sua vida com serenidade e propósito.</p>
+<p>A disciplina torna-se ferramenta de qualidade de vida para [NOME].</p>
+<p>A organização traz para [NOME] tranquilidade e segurança.</p>
+<p>A disciplina fortalece a autonomia de [NOME].</p>`,
+​5:`<p><strong>DESAFIO 5 — Consciência e Prudência</strong></p>
+​<p>O desafio da responsabilidade ganha para [NOME] significado.</p>
+<p>[NOME] compreende que experiências exigem maturidade.</p>
+<p>O desafio de [NOME] é manter estabilidade diante das mudanças.</p>
+<p>A vida de [NOME] pede prudência, maturidade e sabedoria.</p>
+<p>O equilíbrio substitui em [NOME] a impulsividade.</p>`,
+​6:`<p><strong>DESAFIO 6 — Sabedoria Emocional</strong></p>
+​<p>O desafio da tolerância é essencial para a paz de [NOME].</p>
+<p>[NOME] aprende a aceitar as imperfeições humanas.</p>
+<p>O desafio de [NOME] é cultivar empatia nas relações.</p>
+<p>O perdão torna-se para [NOME] libertação emocional.</p>
+<p>O aprendizado de [NOME] transforma-se em sabedoria.</p>`,
+​7:`<p><strong>DESAFIO 7 — Fé e Estabilidade Emocional</strong></p>
+​<p>Este período traz o desafio de [NOME] confiar na jornada.</p>
+<p>[NOME] aprende a superar medos e inseguranças acumulados.</p>
+<p>O desafio de [NOME] é cultivar a confiança interior.</p>
+<p>A sabedoria substitui em [NOME] a dúvida constante.</p>
+<p>A confiança interior fortalece a estabilidade de [NOME].</p>`,
+​8:`<p><strong>DESAFIO 8 — Dignidade e Generosidade</strong></p>
+​<p>O desafio da modéstia convida [NOME] à reflexão sobre o valor.</p>
+<p>[NOME] aprende a enxergar recursos com sabedoria.</p>
+<p>O desafio de [NOME] é abandonar o orgulho excessivo.</p>
+<p>O sucesso de [NOME] é medido pela contribuição humana.</p>
+<p>A modéstia conduz [NOME] à realização e paz interior.</p>`
+}
+};
+​ANO PESSOAL
+​anoPessoal:{
+1:`<p><strong>ANO PESSOAL 1 — Início de Ciclo e Renovação</strong></p>
+​<p>Este é o ano que marca para [NOME] o início de um novo ciclo.</p>
+<p>A energia da renovação se torna evidente na vida de [NOME].</p>
+<p>É o momento de [NOME] agir, iniciar projetos e assumir o comando.</p>
+<p>A vida pede a [NOME] coragem, independência e determinação.</p>
+<p>Este é o momento ideal para [NOME] começar projetos e mudar hábitos.</p>
+<p>A iniciativa de [NOME] será recompensada pelo universo.</p>
+<p>Este ano exige de [NOME] autoconfiança e força de vontade.</p>
+<p>O aprendizado principal de [NOME] é descobrir o caminho a seguir.</p>
+<p>Novas oportunidades surgirão inesperadamente para [NOME].</p>
+<p>Este é o ano de [NOME] construir o futuro com ação.</p>`,
+​2:`<p><strong>ANO PESSOAL 2 — Paciência e Preparação</strong></p>
+​<p>O ano 2 traz para [NOME] um ritmo mais lento e sensível.</p>
+<p>Este período pede a [NOME] paciência, cooperação e equilíbrio.</p>
+<p>Será necessário [NOME] observar, esperar e desenvolver relações.</p>
+<p>A diplomacia de [NOME] será essencial para o crescimento.</p>
+<p>Este é para [NOME] um período de aprendizado emocional profundo.</p>
+<p>A vida pede a [NOME] calma; forçar fatos gera frustração.</p>
+<p>O progresso de [NOME] ocorre de forma gradual e silenciosa.</p>
+<p>É o momento de [NOME] fortalecer os vínculos importantes.</p>
+<p>A paciência de [NOME] será recompensada no futuro.</p>`,
+​3:`<p><strong>ANO PESSOAL 3 — Expansão e Criatividade</strong></p>
+​<p>Este é para [NOME] um ano de alegria e expressão pessoal.</p>
+<p>A energia favorece a comunicação e criatividade de [NOME].</p>
+<p>Surge em [NOME] necessidade de viver experiências novas.</p>
+<p>A vida de [NOME] se torna mais dinâmica e cheia de chances.</p>
+<p>O carisma de [NOME] aumenta e a comunicação facilita.</p>
+<p>A criatividade de [NOME] deve ser usada de forma produtiva.</p>
+<p>Este é um período de crescimento pessoal para [NOME].</p>
+<p>Novas conexões surgem com facilidade para [NOME].</p>
+<p>A felicidade de [NOME] cresce com a manifestação criativa.</p>`,
+​4:`<p><strong>ANO PESSOAL 4 — Estrutura e Consolidação</strong></p>
+​<p>Este é para [NOME] um ano de esforço, disciplina e organização.</p>
+<p>Surge a necessidade de [NOME] estruturar as conquistas.</p>
+<p>Este período exige de [NOME] foco, planejamento e responsabilidade.</p>
+<p>O progresso de [NOME] ocorre através do trabalho constante.</p>
+<p>A vida pede a [NOME] organização financeira e estabilidade.</p>
+<p>É o momento de [NOME] estabelecer prioridades e foco.</p>
+<p>A disciplina de [NOME] será essencial para o sucesso.</p>
+<p>A construção do futuro de [NOME] acontece agora.</p>`,
+​5:`<p><strong>ANO PESSOAL 5 — Transformação e Movimento</strong></p>
+​<p>Este é o ano mais dinâmico do ciclo para [NOME].</p>
+<p>Mudanças inesperadas podem ocorrer para [NOME] em várias áreas.</p>
+<p>A energia favorece o movimento e a liberdade de [NOME].</p>
+<p>Este é um período de adaptação e crescimento para [NOME].</p>
+<p>A liberdade de [NOME] aumenta, mas exige responsabilidade.</p>
+<p>É o momento de [NOME] rever metas e ajustar o caminho.</p>
+<p>A vida pede a [NOME] flexibilidade e coragem para mudar.</p>
+<p>O crescimento de [NOME] ocorre fora da zona de conforto.</p>`,
+​6:`<p><strong>ANO PESSOAL 6 — Amor e Responsabilidade</strong></p>
+​<p>Este é um dos anos mais importantes para [NOME] emocionalmente.</p>
+<p>Os relacionamentos de [NOME] ganham destaque e posição central.</p>
+<p>Surge em [NOME] necessidade de equilíbrio e compromisso.</p>
+<p>Este é para [NOME] um ano de responsabilidade afetiva.</p>
+<p>A vida pede a [NOME] maturidade e dedicação às pessoas.</p>
+<p>[NOME] pode ser chamada a assumir novas responsabilidades.</p>
+<p>A harmonia será fundamental para o sucesso de [NOME].</p>
+<p>É um período favorável para [NOME] fortalecer os vínculos.</p>
+<p>A vida de [NOME] pede estabilidade e compromisso real.</p>`,
+​7:`<p><strong>ANO PESSOAL 7 — Reflexão e Autoconhecimento</strong></p>
+​<p>Este é o ano mais introspectivo do ciclo para [NOME].</p>
+<p>Chega o momento de pausa, reflexão e estudo para [NOME].</p>
+<p>A vida desacelera para permitir o crescimento de [NOME].</p>
+<p>Surge em [NOME] necessidade de isolamento e silêncio.</p>
+<p>O foco de [NOME] passa a ser o seu próprio mundo interior.</p>
+<p>O autoconhecimento de [NOME] se torna essencial agora.</p>
+<p>É o momento de [NOME] compreender a vida e reavaliar tudo.</p>
+<p>O crescimento de [NOME] ocorre de dentro para fora.</p>
+<p>Este período prepara o terreno para as conquistas de [NOME].</p>`,
+​8:`<p><strong>ANO PESSOAL 8 — Realização e Prosperidade</strong></p>
+​<p>Este é o ano das conquistas materiais para [NOME].</p>
+<p>A vibração 8 representa poder e reconhecimento para [NOME].</p>
+<p>O que [NOME] plantou antes começa a gerar resultados.</p>
+<p>Este é um período de crescimento profissional para [NOME].</p>
+<p>O sucesso dependerá da disciplina e organização de [NOME].</p>
+<p>Grandes oportunidades podem surgir para [NOME].</p>
+<p>A vida pede a [NOME] ambição equilibrada com ética.</p>
+<p>Este é para [NOME] o período de colheita e realização.</p>
+<p>O aprendizado de [NOME] é lidar com o sucesso com equilíbrio.</p>`,
+​9:`<p><strong>ANO PESSOAL 9 — Finalização e Desapego</strong></p>
+​<p>Este é o último ano do ciclo de nove anos para [NOME].</p>
+<p>Representa para [NOME] encerramentos e preparação para o novo.</p>
+<p>O que não faz mais sentido para [NOME] tende a finalizar.</p>
+<p>Este é um período de limpeza emocional para [NOME].</p>
+<p>O objetivo é [NOME] liberar espaço para o novo ciclo.</p>
+<p>A vida pede a [NOME] desapego, compaixão e compreensão.</p>
+<p>Este é um ano de conclusões para [NOME].</p>
+<p>Evite resistir, [NOME], às mudanças necessárias.</p>
+<p>Este é o ano de encerramento e cura para [NOME].</p>`
+};
+​DEFICIÊNCIAS
+​deficiencias: {
+1:`<p><strong>DEFICIÊNCIA 1 — Iniciativa e Autonomia</strong></p>
+​<p>[NOME] precisa desenvolver mais iniciativa e determinação.</p>
+<p>A vontade de [NOME] deve ser fortalecida com segurança.</p>
+<p>Será necessário [NOME] defender ideias e tomar decisões.</p>
+<p>A vida colocará pessoas fortes no caminho de [NOME].</p>
+<p>[NOME] deve trabalhar sua autoconfiança e potencial.</p>
+<p>Evite, [NOME], se anular diante das opiniões alheias.</p>
+<p>Fortaleça a coragem de [NOME] para iniciar novos projetos.</p>
+<p><strong>Consequências:</strong> até aprender, [NOME] sentirá indecisão e medo.</p>`,
+​2:`<p><strong>DEFICIÊNCIA 2 — Cooperação e Diplomacia</strong></p>
+​<p>[NOME] deve desenvolver diplomacia, flexibilidade e cooperação.</p>
+<p>Aprenda, [NOME], a trabalhar em equipe e agir com sensibilidade.</p>
+<p>Desenvolva em [NOME] empatia, escuta e capacidade de conciliar.</p>
+<p>Evite, [NOME], impor suas opiniões de forma rígida.</p>
+<p>A diplomacia será essencial para [NOME] alcançar objetivos.</p>
+<p><strong>Consequências:</strong> [NOME] pode sentir timidez e isolamento.</p>`,
+​3:`<p><strong>DEFICIÊNCIA 3 — Expressão e Confiança</strong></p>
+​<p>[NOME] precisa aprender a se expressar com leveza e confiança.</p>
+<p>A autocrítica excessiva pode gerar em [NOME] insegurança.</p>
+<p>Desenvolva em [NOME] alegria e comunicação aberta.</p>
+<p>Aprenda, [NOME], a ouvir críticas sem se sentir atacada.</p>
+<p>Trabalhe a expressão das emoções de [NOME] com naturalidade.</p>
+<p><strong>Consequências:</strong> [NOME] poderá sentir-se inibida e incompreendida.</p>`,
+​4:`<p><strong>DEFICIÊNCIA 4 — Disciplina e Persistência</strong></p>
+​<p>[NOME] precisa desenvolver disciplina, organização e perseverança.</p>
+<p>É necessário [NOME] construir bases sólidas para sua vida.</p>
+<p>Aprenda, [NOME], a aceitar regras e cumprir responsabilidades.</p>
+<p>Desenvolva em [NOME] paciência e constância nos projetos.</p>
+<p>Aja, [NOME], com método, planejamento e responsabilidade.</p>
+<p><strong>Consequências:</strong> [NOME] poderá sentir-se perdida e desmotivada.</p>`,
+​5:`<p><strong>DEFICIÊNCIA 5 — Adaptabilidade e Coragem</strong></p>
+​<p>[NOME] precisa aprender a arriscar mais e viver o novo.</p>
+<p>Supere, [NOME], o medo da mudança e da liberdade.</p>
+<p>Amplie a visão de mundo de [NOME] e desenvolva adaptabilidade.</p>
+<p>Controle a impulsividade e busque o equilíbrio para [NOME].</p>
+<p>Desenvolva em [NOME] coragem para explorar oportunidades.</p>
+<p><strong>Consequências:</strong> [NOME] enfrentará instabilidade e frustrações.</p>`,
+​6:`<p><strong>DEFICIÊNCIA 6 — Compromisso e Aceitação</strong></p>
+​<p>[NOME] precisa desenvolver comprometimento e responsabilidade.</p>
+<p>Aprenda, [NOME], a demonstrar sentimentos e estabelecer vínculos.</p>
+<p>Desenvolva em [NOME] empatia, carinho e compreensão.</p>
+<p>Evite, [NOME], controlar as pessoas ou as relações.</p>
+<p>Trabalhe em [NOME] a maturidade emocional e a aceitação.</p>
+<p><strong>Consequências:</strong> [NOME] poderá sentir solidão e carência.</p>`,
+​7:`<p><strong>DEFICIÊNCIA 7 — Confiança e Expressão</strong></p>
+​<p>[NOME] precisa aprofundar conhecimentos e confiar nas pessoas.</p>
+<p>Evite, [NOME], o isolamento excessivo e a desconfiança.</p>
+<p>Desenvolva em [NOME] a comunicação emocional dos sentimentos.</p>
+<p>Aprenda, [NOME], a equilibrar introspecção com convivência.</p>
+<p>Trabalhe em [NOME] a confiança e a objetividade nas decisões.</p>
+<p><strong>Consequências:</strong> [NOME] poderá sentir indecisão e insegurança.</p>`,
+​8:`<p><strong>DEFICIÊNCIA 8 — Prudência e Visão Prática</strong></p>
+​<p>[NOME] precisa desenvolver prudência e responsabilidade material.</p>
+<p>Aprenda, [NOME], a administrar bens com equilíbrio e honestidade.</p>
+<p>Valorize em [NOME] a disciplina financeira e organização.</p>
+<p>Desenvolva em [NOME] responsabilidade e visão prática.</p>
+<p><strong>Consequências:</strong> [NOME] enfrentará instabilidade financeira.</p>`,
+​9:`<p><strong>DEFICIÊNCIA 9 — Altruísmo e Humanitarismo</strong></p>
+​<p>[NOME] precisa desenvolver altruísmo e compaixão.</p>
+<p>Aprenda, [NOME], a enxergar a vida de forma generosa.</p>
+<p>Desenvolva em [NOME] tolerância, empatia e solidariedade.</p>
+<p>Aprenda, [NOME], a abrir mão do orgulho e perdoar.</p>
+<p>Trabalhe em [NOME] a compreensão e a visão humanitária.</p>
+<p><strong>Consequências:</strong> [NOME] enfrentará desafios que estimulam o crescimento.</p>`
+}
+};
+​
   
