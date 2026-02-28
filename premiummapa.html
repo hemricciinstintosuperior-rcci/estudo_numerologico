@@ -672,17 +672,7 @@ preencher("{{DATA}}", dados.data);
 preencher("{{QTD_DEFICIENCIAS}}", textoQtd); 
 
 // Preenche os Números
-preencher("{{DIA}}", dados.resultados.diaN || "");
-preencher("{{COMPORTAMENTO}}", dados.resultados.comportamento);
-preencher("{{MOTIVACAO}}", dados.resultados.motivacao);
-preencher("{{EXPRESSAO}}", dados.resultados.personalidade);
-preencher("{{DESTINO}}", dados.resultados.caminhoVida);
-preencher("{{MISSAO}}", dados.resultados.missao);
-preencher("{{MATURIDADE}}", dados.resultados.maturidade);
-preencher("{{RELACIONAMENTO}}", dados.resultados.relacionamento);
-preencher("{{ANO_PESSOAL_NUMERO}}", dados.resultados.anoPessoal);
-
-// Preenche os Textos Longos (Com o revisor de gênero ativo)
+// --- PREENCHIMENTO DOS TEXTOS (AGORA COMPLETO: 1 A 4) ---
 preencher("{{TEXTO_DIA}}", dados.textos.dia, true);
 preencher("{{TEXTO_COMPORTAMENTO}}", dados.textos.comportamento, true);
 preencher("{{TEXTO_MOTIVACAO}}", dados.textos.motivacao, true);
@@ -691,24 +681,40 @@ preencher("{{TEXTO_DESTINO}}", dados.textos.destino, true);
 preencher("{{TEXTO_MISSAO}}", dados.textos.missao, true);
 preencher("{{TEXTO_MATURIDADE}}", dados.textos.maturidade, true);
 preencher("{{TEXTO_RELACIONAMENTO}}", dados.textos.relacionamento, true);
+
+// Ciclos
 preencher("{{TEXTO_CICLO1}}", dados.textos.ciclo1, true);
 preencher("{{TEXTO_CICLO2}}", dados.textos.ciclo2, true);
 preencher("{{TEXTO_CICLO3}}", dados.textos.ciclo3, true);
+
+// Momentos Decisivos (TODOS OS 4)
 preencher("{{TEXTO_MD1}}", dados.textos.md1, true);
 preencher("{{TEXTO_MD2}}", dados.textos.md2, true);
+preencher("{{TEXTO_MD3}}", dados.textos.md3, true); // <--- Voltou!
+preencher("{{TEXTO_MD4}}", dados.textos.md4, true); // <--- Voltou!
+
+// Desafios (TODOS OS 3)
 preencher("{{TEXTO_D1}}", dados.textos.d1, true);
 preencher("{{TEXTO_D2}}", dados.textos.d2, true);
+preencher("{{TEXTO_D3}}", dados.textos.d3, true); // <--- Voltou!
+
+// Ano Pessoal e Deficiências
 preencher("{{TEXTO_ANO_PESSOAL}}", dados.textos.anoPessoal, true);
 preencher("{{TEXTO_DEFICIENCIAS}}", dados.textos.deficiencias, true);
 
-// Períodos
+// --- PREENCHIMENTO DOS PERÍODOS (COMPLETO) ---
 preencher("{{PERIODO_C1}}", dados.periodos.ciclo1);
 preencher("{{PERIODO_C2}}", dados.periodos.ciclo2);
 preencher("{{PERIODO_C3}}", dados.periodos.ciclo3);
+
 preencher("{{PERIODO_MD1}}", dados.periodos.md1);
 preencher("{{PERIODO_MD2}}", dados.periodos.md2);
+preencher("{{PERIODO_MD3}}", dados.periodos.md3); // <--- Adicionado
+preencher("{{PERIODO_MD4}}", dados.periodos.md4); // <--- Adicionado
+
 preencher("{{PERIODO_D1}}", dados.periodos.ciclo1);
 preencher("{{PERIODO_D2}}", dados.periodos.ciclo2);
+preencher("{{PERIODO_D3}}", dados.periodos.ciclo3); // <--- Adicionado
 
 // PDF AUTOMÁTICO
 function gerarPDF(){
