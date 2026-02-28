@@ -175,30 +175,38 @@ function gerarMapa() {
         md3: `${fim1 + 10} aos ${fim1 + 18} anos`,
         md4: `Acima de ${fim2} anos`
     },
-    textos: {
+  textos: {
         dia: textos.dia[diaN],
         comportamento: textos.comportamento[comportamento],
         motivacao: textos.motivacao[motivacao],
         expressao: textos.Personalidade[personalidade],
         destino: textos.CaminhodeVida[caminhoVida],
         missao: textos.Propósito[missao],
-        maturidade: textos.Maturidade[maturidade],
-        relacionamento: textos.Relacionamento[relacionamento],
-        ciclo1: textos.primeiroCiclo[ciclo1],
-        ciclo2: textos.segundoCiclo[ciclo2],
-        ciclo3: textos.terceiroCiclo[ciclo3],
-        md1: textos.primeiroMomento[md1],
-        md2: textos.segundoMomento[md2],
-        md3: textos.terceiroMomento[md3],
-        md4: textos.quartoMomento[md4],
-        d1: textos.primeiroDesafio[d1],
-        d2: textos.segundoDesafio[d2],
-        d3: textos.terceiroDesafio[d3],
+        
+        // Use Propósito caso Maturidade não exista como objeto separado
+        maturidade: (textos.Maturidade) ? textos.Maturidade[maturidade] : textos.Propósito[maturidade],
+        relacionamento: (textos.Relacionamento) ? textos.Relacionamento[relacionamento] : "",
+        
+        // Ajustado para o padrão da sua imagem (textos.ciclos[1][numero])
+        ciclo1: (textos.ciclos && textos.ciclos[1]) ? textos.ciclos[1][ciclo1] : "",
+        ciclo2: (textos.ciclos && textos.ciclos[2]) ? textos.ciclos[2][ciclo2] : "",
+        ciclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : "",
+        
+        // Momentos Decisivos (ajuste conforme o nome que você deu no textos.js)
+        md1: (textos.momentos) ? textos.momentos[1][md1] : "",
+        md2: (textos.momentos) ? textos.momentos[2][md2] : "",
+        md3: (textos.momentos) ? textos.momentos[3][md3] : "",
+        md4: (textos.momentos) ? textos.momentos[4][md4] : "",
+        
+        // Desafios (ajuste conforme o nome que você deu no textos.js)
+        d1: (textos.desafios) ? textos.desafios[1][d1] : "",
+        d2: (textos.desafios) ? textos.desafios[2][d2] : "",
+        d3: (textos.desafios) ? textos.desafios[3][d3] : "",
+        
         anoPessoal: textos.anoPessoal[anoPessoalNum],
         deficiencias: textoDeficiencias
     }
-  };
-  
+   },
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
 
   // --- Renderização Gratuita na Tela ---
