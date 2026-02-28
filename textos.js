@@ -1,588 +1,132 @@
-  const textos = {
+const textos = {
+  // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 31) ---
   dia: {
-    1: `DESBRAVADOR – DIA 1
-
-O nascimento no dia 1 revela uma essência pioneira. Este número simboliza o início, a individualidade e a força criadora. Representa a energia da liderança, da autonomia e da coragem de abrir caminhos onde antes não existiam.
-
-TALENTOS NATURAIS  
-Existe uma necessidade profunda de independência. Pessoas do dia 1 possuem impulso natural para liderar, iniciar projetos e assumir responsabilidades. Sua mente é rápida, estratégica e orientada para soluções. Existe forte instinto para negócios, tomada de decisões e empreendedorismo.
-
-FUNCIONAMENTO PSICOLÓGICO  
-O número 1 funciona a partir da autoafirmação. A identidade é construída através da conquista e da realização pessoal. Há grande necessidade de autonomia e liberdade de ação. Rotina excessiva, hierarquia rígida ou ambientes limitantes geram frustração e impaciência.
-
-POTENCIAL DE REALIZAÇÃO  
-Quando equilibrado, o dia 1 produz líderes, criadores, inventores e pessoas capazes de transformar ideias em realidade. A força de vontade, a coragem e a visão estratégica tornam possível alcançar prosperidade e reconhecimento.
-
-DESAFIOS E SOMBRA  
-O excesso de individualismo pode gerar autoritarismo, impaciência e dificuldade em trabalhar em equipe. Quando frustrado, pode agir de forma impulsiva e tentar forçar resultados. O orgulho pode dificultar pedidos de ajuda.
-
-CAMINHO DE EQUILÍBRIO  
-Aprender a cooperar sem perder a autonomia é a chave do sucesso. Quando integra liderança com sensibilidade, o número 1 alcança realização material e reconhecimento duradouro.`,
-    
-    2: `PACIFICADOR – DIA 2
-
-O nascimento no dia 2 revela uma natureza sensível, intuitiva e profundamente relacional. Este número simboliza cooperação, diplomacia e percepção emocional.
-
-TALENTOS NATURAIS  
-Grande capacidade de mediação, empatia e sensibilidade. Percebe ambientes, emoções e intenções com facilidade. Possui talento natural para relações humanas, parcerias e trabalhos em equipe.
-
-FUNCIONAMENTO PSICOLÓGICO  
-O número 2 busca harmonia. Existe forte necessidade de aceitação e pertencimento. Ambientes conflituosos afetam profundamente seu equilíbrio emocional.
-
-POTENCIAL DE REALIZAÇÃO  
-Pode se destacar como conselheiro, mediador, terapeuta, educador ou em áreas que envolvam pessoas. É o “poder por trás do poder”.
-
-DESAFIOS E SOMBRA  
-Excesso de sensibilidade pode gerar insegurança, dependência emocional e dificuldade de decisão. Tendência a absorver problemas alheios.
-
-CAMINHO DE EQUILÍBRIO  
-Desenvolver autoestima e confiança transforma a sensibilidade em grande força.`,
-    
-    3: `CARISMÁTICO – DIA 3
-
-O dia 3 representa expressão, criatividade e comunicação.
-
-TALENTOS NATURAIS  
-Talento artístico, comunicação, humor e carisma. Capacidade natural de inspirar e motivar pessoas.
-
-FUNCIONAMENTO PSICOLÓGICO  
-Precisa de estímulo e liberdade criativa. Rotina e monotonia geram desmotivação.
-
-POTENCIAL DE REALIZAÇÃO  
-Grande potencial em artes, comunicação, vendas, marketing e ensino.
-
-DESAFIOS E SOMBRA  
-Dispersão, procrastinação e dificuldade em finalizar projetos.
-
-CAMINHO DE EQUILÍBRIO  
-Disciplina transforma talento em realização.`,
-
-    4: `DISCIPLINADO – DIA 4
-
-O nascimento no dia 4 simboliza estrutura, estabilidade e construção sólida. Este número representa ordem, responsabilidade e confiabilidade.
-
-TALENTOS NATURAIS  
-Grande capacidade de organização, planejamento e disciplina. Pessoas do dia 4 são trabalhadoras, persistentes e confiáveis. Possuem talento natural para administração, engenharia, gestão e qualquer atividade que exija método e precisão.
-
-FUNCIONAMENTO PSICOLÓGICO  
-Busca segurança e estabilidade. Prefere caminhos seguros, estruturados e previsíveis. Valoriza tradição, família e responsabilidade.
-
-POTENCIAL DE REALIZAÇÃO  
-É capaz de construir patrimônios, carreiras sólidas e projetos duradouros. Sua constância é seu maior diferencial.
-
-DESAFIOS E SOMBRA  
-Rigidez, teimosia, excesso de controle e dificuldade em aceitar mudanças. Pode resistir a novas ideias.
-
-CAMINHO DE EQUILÍBRIO  
-Aprender a flexibilizar e aceitar o novo acelera o sucesso e evita frustrações desnecessárias.`,
-
-    5: `INDEPENDENTE – DIA 5
-
-O dia 5 representa liberdade, movimento e transformação.
-
-TALENTOS NATURAIS  
-Versatilidade, adaptabilidade e curiosidade intensa. Capacidade de aprender rapidamente e se reinventar.
-
-FUNCIONAMENTO PSICOLÓGICO  
-Precisa de liberdade e mudança constante. Rotina e limitação geram inquietação.
-
-POTENCIAL DE REALIZAÇÃO  
-Talento para comunicação, viagens, vendas, marketing, tecnologia e empreendedorismo.
-
-DESAFIOS E SOMBRA  
-Impulsividade, dispersão e dificuldade em manter disciplina.
-
-CAMINHO DE EQUILÍBRIO  
-Disciplina + liberdade = grande sucesso material e pessoal.`,
-
-    6: `ZELOSO – DIA 6
-
-Número do amor, cuidado e responsabilidade emocional.
-
-TALENTOS NATURAIS  
-Empatia, cuidado, senso de responsabilidade e forte vínculo familiar.
-
-FUNCIONAMENTO PSICOLÓGICO  
-Necessidade profunda de cuidar e proteger pessoas.
-
-POTENCIAL DE REALIZAÇÃO  
-Talento para educação, saúde, psicologia, terapias e mediação.
-
-DESAFIOS E SOMBRA  
-Carregar problemas alheios, excesso de cobrança e dependência emocional.
-
-CAMINHO DE EQUILÍBRIO  
-Aprender a cuidar sem se sacrificar.`,
-
-    7: `PERFECCIONISTA – DIA 7
-
-Número da introspecção, análise e espiritualidade.
-
-TALENTOS NATURAIS  
-Investigação, pesquisa, filosofia e conhecimento profundo.
-
-FUNCIONAMENTO PSICOLÓGICO  
-Precisa de solitude, silêncio e tempo para reflexão.
-
-POTENCIAL DE REALIZAÇÃO  
-Ciência, tecnologia, espiritualidade e pesquisa.
-
-DESAFIOS E SOMBRA  
-Isolamento, excesso de crítica e dificuldade emocional.
-
-CAMINHO DE EQUILÍBRIO  
-Aprender a confiar e compartilhar emoções.`,
-
-    8: `ORIGINAL – DIA 8
-
-Número do poder, ambição e realização material.
-
-TALENTOS NATURAIS  
-Liderança, estratégia, visão financeira e capacidade de gestão.
-
-FUNCIONAMENTO PSICOLÓGICO  
-Busca sucesso, status e reconhecimento.
-
-POTENCIAL DE REALIZAÇÃO  
-Negócios, finanças, liderança e empreendedorismo.
-
-DESAFIOS E SOMBRA  
-Autoritarismo, materialismo excessivo e rigidez emocional.
-
-CAMINHO DE EQUILÍBRIO  
-Usar poder com ética e propósito.`,
-
-    9: `UNIVERSALISTA – DIA 9
-
-Número do humanitarismo e visão coletiva.
-
-TALENTOS NATURAIS  
-Empatia universal, compaixão e inspiração.
-
-FUNCIONAMENTO PSICOLÓGICO  
-Busca propósito e significado.
-
-POTENCIAL DE REALIZAÇÃO  
-Artes, causas sociais, educação e espiritualidade.
-
-DESAFIOS E SOMBRA  
-Idealismo excessivo e dificuldade de desapego.
-
-CAMINHO DE EQUILÍBRIO  
-Equilibrar idealismo com praticidade.`,
-
-    10: `DIA 10 — O Ambicioso Visionário
-Essência: liderança ampliada, autonomia e realização material com propósito.
-Quem nasce no dia 10 carrega a vibração do pioneirismo do número 1 amplificada pelo zero, símbolo de potencial ilimitado. Trata-se de uma personalidade naturalmente voltada à liderança, à conquista e à construção de resultados concretos. Existe um impulso interno constante para avançar, evoluir e assumir o controle da própria trajetória.
-
-Potenciais e talentos
-O 10 indica iniciativa, coragem e forte capacidade de planejamento. Essas pessoas costumam enxergar caminhos onde outros veem obstáculos. São organizadoras, estrategistas e capazes de iniciar projetos que exigem determinação e visão de longo prazo.
-Há forte magnetismo pessoal e facilidade em conquistar confiança. Frequentemente são vistas como referência, guia ou exemplo dentro de ambientes profissionais e sociais. Existe também uma habilidade natural para empreender, administrar e estruturar projetos complexos.
-
-Desafios e sombras
-O lado desafiador surge quando a necessidade de controle se transforma em rigidez, competitividade excessiva ou dificuldade em aceitar ajuda. Pode haver impaciência com ritmos mais lentos e frustração quando os resultados não aparecem rapidamente.
-Também existe tendência a assumir responsabilidades demais e carregar o peso do mundo nas costas, o que pode gerar tensão, ansiedade ou esgotamento.
-
-Integração e evolução
-O aprendizado principal é equilibrar liderança com colaboração. Quando aprende a dividir responsabilidades e confiar nos outros, o nascido no dia 10 alcança realizações expressivas e duradouras.`,
-
-  11: `DIA 11 — O Idealista Inspirador
-Essência: intuição elevada, sensibilidade espiritual e missão de inspirar.
-O 11 é considerado um número mestre. Representa sensibilidade ampliada, percepção intuitiva e grande potencial de inspiração. Pessoas desse dia sentem que possuem uma missão maior, mesmo que nem sempre saibam explicá-la racionalmente.
-
-Potenciais e talentos
-Existe uma capacidade natural de motivar e despertar pessoas. O 11 possui carisma, empatia e sensibilidade emocional acima da média. Pode se destacar em aconselhamento, arte, comunicação, espiritualidade e áreas que envolvem orientação humana.
-Possui imaginação rica, visão idealista e capacidade de perceber nuances invisíveis aos demais.
-
-Desafios e sombras
-A intensidade emocional pode gerar ansiedade, insegurança ou sensação de inadequação. Muitas vezes o 11 sente que não pertence totalmente ao mundo prático.
-Pode oscilar entre entusiasmo e desânimo, entre confiança e dúvida. O excesso de sensibilidade também pode torná-lo vulnerável às críticas.
-
-Integração e evolução
-O grande aprendizado é transformar sensibilidade em força. Quando aprende a confiar na própria intuição, torna-se uma poderosa fonte de inspiração e orientação para outras pessoas.`,
-
-12: `DIA 12 — O Comunicador Criativo
-Essência: expressão, criatividade e influência social.
-O número 12 combina a iniciativa do 1 com a sensibilidade do 2, resultando em uma personalidade comunicativa, expressiva e altamente criativa.
-
-Potenciais e talentos
-É um comunicador nato. Possui talento para falar, escrever, ensinar, persuadir e transmitir ideias. Costuma ter humor leve, imaginação fértil e capacidade de animar ambientes.
-Pode brilhar em áreas artísticas, comunicação, marketing, educação e entretenimento.
-
-Desafios e sombras
-A dispersão é o principal desafio. Pode assumir compromissos demais e ter dificuldade em finalizar projetos. Existe tendência a buscar aprovação externa e medo de rejeição.
-Oscilações emocionais e impaciência podem gerar ansiedade.
-
-Integração e evolução
-O aprendizado é disciplina criativa: focar energia em poucos projetos e levá-los até o fim. Assim, transforma talento em realização concreta.`,
-
-13: `DIA 13 — O Construtor Transformador
-Essência: disciplina, estrutura e capacidade de reconstrução.
-O 13 é um número de transformação profunda. Representa trabalho, persistência e construção sólida.
-
-Potenciais e talentos
-Indica organização, disciplina e forte ética de trabalho. Pessoas do dia 13 possuem grande capacidade de reconstruir situações difíceis e transformar desafios em oportunidades.
-São confiáveis, resilientes e capazes de construir bases duradouras.
-
-Desafios e sombras
-Pode haver rigidez, excesso de controle e dificuldade em lidar com mudanças inesperadas. Às vezes sente que precisa trabalhar mais que os outros para alcançar reconhecimento.
-Também pode reprimir emoções e parecer distante.
-
-Integração e evolução
-O aprendizado é equilibrar disciplina com flexibilidade. Quando aprende a aceitar mudanças, torna-se uma força extraordinária de construção e estabilidade.`,
-
-14: `DIA 14 — O Espírito Livre
-Essência: movimento, liberdade e adaptação constante.
-O 14 carrega energia de mudança, versatilidade e expansão.
-
-Potenciais e talentos
-Pessoas desse dia são curiosas, adaptáveis e abertas a novas experiências. Possuem mente rápida, espírito aventureiro e facilidade para se reinventar.
-São ótimas em ambientes dinâmicos, viagens, comércio, comunicação e inovação.
-
-Desafios e sombras
-A busca constante por novidade pode gerar instabilidade, impulsividade e dificuldade em manter compromissos.
-Existe risco de excessos, dispersão e decisões precipitadas.
-
-Integração e evolução
-O aprendizado é desenvolver equilíbrio e disciplina. Quando aprende a canalizar sua energia, o 14 alcança grande sucesso e liberdade verdadeira.`,
-
-16: `DIA 16 — O BUSCADOR DA VERDADE
-Quem nasce no dia 16 carrega uma vibração profundamente mental, investigativa e transformadora. Este número representa a busca incessante pela verdade, pelo conhecimento oculto e pela compreensão da essência da vida. Existe aqui uma combinação poderosa de intelecto, sensibilidade e introspecção.
-
-Potencial positivo
-O 16 é um número de percepção elevada. Pessoas dessa vibração possuem mente analítica, capacidade investigativa e grande profundidade emocional. São naturalmente atraídas por filosofia, espiritualidade, psicologia, ciência, pesquisa e tudo que exige reflexão profunda.
-
-Possuem facilidade em perceber padrões ocultos e compreender aquilo que a maioria não enxerga. A mente funciona como um radar investigativo, sempre questionando e buscando respostas mais profundas.
-
-Existe também forte potencial para:
-
-estudos avançados
-autoconhecimento
-espiritualidade
-pesquisa científica
-investigação e análise
-
-Quando equilibradas, tornam-se sábias, lúcidas e extremamente conscientes.
-
-Desafios e sombra
-A vibração 16 traz lições intensas de desapego do ego. Pode existir tendência ao isolamento, ao perfeccionismo extremo e ao distanciamento emocional.
-
-Quando em desequilíbrio:
-tornam-se excessivamente críticas
-podem afastar pessoas por rigidez mental
-desenvolvem ceticismo exagerado
-tornam-se introspectivas demais
-podem cair em melancolia ou frustração
-
-A mente pode virar aliada ou inimiga. O maior desafio é aprender a equilibrar razão e emoção.
-
-Caminho evolutivo
-O aprendizado principal é desenvolver humildade emocional e abrir o coração tanto quanto abre a mente. Quando isso acontece, o 16 torna-se um verdadeiro sábio.`,
-
-17: `DIA 17 — O ESTRATEGISTA DO PODER
-O nascimento no dia 17 indica uma vibração extremamente ambiciosa, estratégica e voltada para realização material e reconhecimento social.
-
-Potencial positivo
-Este número une inteligência prática com visão de longo prazo. É uma vibração de liderança, gestão e capacidade de realização concreta.
-
-Indica talento para:
-administração
-empreendedorismo
-liderança
-gestão financeira
-tomada de decisões
-
-Possuem grande capacidade de planejar e enxergar o cenário completo antes de agir. Sabem estruturar projetos e alcançar metas com persistência.
-
-Desafios e sombra
-O principal desafio do 17 é o orgulho e o controle. Existe tendência a:
-
-excesso de rigidez
-dificuldade em aceitar opiniões
-centralização de poder
-apego ao status
-
-Quando em desequilíbrio, podem tornar-se autoritários ou obcecados por sucesso.
-
-Caminho evolutivo
-A grande lição é aprender a liderar sem dominar. Quando equilibrado, o 17 transforma ambição em legado.`,
-
-18: `DIA 18 — O LÍDER HUMANITÁRIO
-O dia 18 traz uma vibração de liderança voltada ao coletivo. É o número do idealismo aplicado à ação.
-
-Potencial positivo
-Existe forte vocação para ajudar pessoas, liderar grupos e promover mudanças sociais. Possuem empatia elevada e visão ampla da humanidade.
-
-Talentos naturais:
-liderança social
-política e causas coletivas
-ensino e orientação
-aconselhamento
-comunicação de ideias
-Possuem magnetismo e poder de influência.
-
-Desafios e sombra
-Podem tornar-se excessivamente críticos, exigentes e frustrados com o mundo. Tendência a:
-revolta com injustiças
-
-impaciência com limitações humanas
-excesso de responsabilidade emocional
-
-Caminho evolutivo
-Aprender a ajudar sem carregar o peso do mundo nas costas.`,
-
-19: `DIA 19 — O INDEPENDENTE ABSOLUTO
-O 19 representa autonomia, força pessoal e busca intensa por identidade própria.
-
-Potencial positivo
-Indica coragem, iniciativa e capacidade de superar desafios sozinho. Pessoas dessa vibração possuem espírito pioneiro e determinação extraordinária.
-
-Talentos:
-empreendedorismo
-liderança independente
-superação de desafios
-autonomia profissional
-
-Desafios e sombra
-O desafio é o ego e o isolamento emocional. Podem:
-
-resistir a ajuda
-afastar pessoas
-tornar-se teimosos
-sofrer com frustrações de expectativas
-
-Caminho evolutivo
-Aprender que independência não significa solidão.`,
-
-20: `DIA 20 — O DIPLOMATA EMOCIONAL
-O dia 20 carrega uma vibração de sensibilidade, diplomacia e percepção emocional elevada.
-
-Potencial positivo
-Possuem empatia profunda e habilidade natural para mediação de conflitos. São ótimos conselheiros e estrategistas sociais.
-
-Talentos:
-diplomacia
-aconselhamento
-mediação
-estratégia humana
-comunicação emocional
-Desafios e sombra
-
-Podem tornar-se excessivamente sensíveis e dependentes da aprovação externa.
-
-Tendências:
-insegurança emocional
-indecisão
-necessidade de validação
-medo de desapontar pessoas
-
-Caminho evolutivo
-Desenvolver autoconfiança emocional.`,
-
-21: `Versátil Inspirador — Dia 21
-
-O nascimento no dia 21 combina criatividade, sociabilidade e uma forte necessidade de expressão pessoal. Trata-se de uma vibração naturalmente expansiva, comunicativa e inspiradora, que encontra realização ao interagir com o mundo e compartilhar ideias, sentimentos e experiências.
-
-Aspectos positivos  
-Existe uma energia leve, carismática e motivadora que facilita conexões sociais e oportunidades. Pessoas deste dia costumam possuir facilidade para comunicação, vendas, ensino, arte, marketing ou qualquer área que envolva expressão e contato humano. São naturalmente otimistas e têm grande capacidade de entusiasmar os outros.
-
-Há uma forte criatividade e imaginação, acompanhadas por senso de humor, charme e habilidade social. Essa vibração costuma atrair amizades, parcerias e oportunidades com relativa facilidade. Quando direcionada, pode gerar grande sucesso profissional e reconhecimento público.
-
-Aspectos desafiadores  
-A dispersão é o principal desafio desta vibração. Existe tendência a iniciar muitas atividades ao mesmo tempo e dificuldade em manter foco até a conclusão. A necessidade constante de estímulo pode gerar inquietação, ansiedade e sensação de vazio quando a vida entra em rotina.
-
-Oscilações emocionais e períodos de desmotivação podem surgir quando expectativas não são atendidas rapidamente. Existe também tendência a prometer mais do que consegue cumprir.
-
-Aprendizado evolutivo  
-O grande crescimento ocorre quando aprende a disciplinar a própria criatividade. Ao unir foco com expressão, essa vibração pode transformar talento natural em realização concreta e duradoura.`,
-
-22: `Construtor Visionário — Dia 22
-
-O dia 22 carrega uma vibração de grande potencial de realização material e construção de projetos duradouros. É considerado um número mestre, associado à capacidade de transformar sonhos em realidade concreta.
-
-Aspectos positivos  
-Existe uma combinação rara entre visão e capacidade prática. Pessoas deste dia têm talento natural para planejar, estruturar e materializar ideias de grande escala. Possuem senso estratégico, disciplina e capacidade de trabalho acima da média.
-
-Podem se destacar em liderança, empreendedorismo, arquitetura, engenharia, gestão ou qualquer área que envolva organização e construção de algo sólido. Quando equilibradas, tornam-se verdadeiros realizadores de projetos importantes para a sociedade.
-
-Aspectos desafiadores  
-O medo do fracasso pode ser um bloqueio significativo. A consciência do próprio potencial pode gerar insegurança, procrastinação ou abandono de projetos antes da conclusão.
-
-A pressão interna por perfeição pode gerar ansiedade, autocobrança excessiva e sensação constante de responsabilidade.
-
-Aprendizado evolutivo  
-O crescimento ocorre quando confia em sua própria capacidade e aceita agir mesmo diante do medo. Ao unir visão, disciplina e coragem, essa vibração pode alcançar realizações extraordinárias.`,
-
-23: `Explorador Comunicador — Dia 23
-
-A vibração do dia 23 representa movimento, liberdade, comunicação e adaptabilidade. Existe uma energia curiosa, dinâmica e altamente versátil.
-
-Aspectos positivos  
-Possui grande facilidade para comunicação, aprendizado e adaptação a mudanças. Pessoas deste dia costumam ser criativas, rápidas mentalmente e com grande capacidade de improvisação.
-
-Existe talento natural para marketing, vendas, viagens, comércio, ensino, tecnologia e comunicação em geral. São carismáticas, sociáveis e capazes de lidar com diferentes ambientes e culturas com facilidade.
-
-Aspectos desafiadores  
-A inquietação pode levar à impulsividade e dificuldade de compromisso. Há tendência a evitar rotina, responsabilidades prolongadas ou situações que limitem a liberdade.
-
-Podem surgir dispersão, ansiedade e dificuldade de concluir projetos. O excesso de estímulos pode gerar instabilidade emocional.
-
-Aprendizado evolutivo  
-O desenvolvimento ocorre quando aprende a equilibrar liberdade com responsabilidade. Ao direcionar sua energia para objetivos claros, pode alcançar grande sucesso e realização pessoal.`,
-
-24: `Guardião Afetivo — Dia 24
-
-O dia 24 está profundamente ligado ao amor, cuidado, responsabilidade e construção de relações duradouras. É uma vibração de proteção, acolhimento e harmonia.
-
-Aspectos positivos  
-Existe forte senso de responsabilidade afetiva. Pessoas deste dia tendem a valorizar família, relacionamentos e estabilidade emocional. Possuem talento natural para cuidar, orientar e apoiar outras pessoas.
-
-São confiáveis, leais e dedicadas. Podem se destacar em áreas ligadas à educação, saúde, terapias, assistência social ou qualquer atividade voltada ao cuidado humano.
-
-Aspectos desafiadores  
-O excesso de responsabilidade emocional pode gerar sobrecarga, preocupação excessiva e tendência ao sacrifício pessoal. Existe risco de assumir problemas alheios e negligenciar as próprias necessidades.
-
-Podem surgir ansiedade, culpa e medo de desapontar as pessoas.
-
-Aprendizado evolutivo  
-O crescimento ocorre quando aprende a equilibrar cuidado com limites saudáveis. Ao cuidar de si com a mesma dedicação que oferece aos outros, alcança harmonia e realização emocional.`,
-
-25: `DIA 25 — O INVESTIGADOR (Refinado)
-O nascido no dia 25 carrega uma mente analítica, investigativa e profundamente intuitiva. Existe nele uma necessidade intensa de compreender o mundo em profundidade. Não se satisfaz com respostas superficiais; busca a verdade por trás das aparências.
-Possui natureza introspectiva e observadora. Prefere analisar antes de agir. Seu raciocínio combina lógica e intuição, o que lhe permite perceber padrões, comportamentos e intenções com grande precisão. Muitas vezes percebe o que os outros não conseguem explicar.
-Tem grande capacidade de aprendizado, pesquisa e especialização. Quando direciona sua mente para um objetivo, pode atingir níveis elevados de conhecimento.
-
-Potencial positivo
-• Inteligência analítica e investigativa
-• Intuição profunda
-• Capacidade de estudo e especialização
-• Discernimento e visão estratégica
-• Autonomia mental e independência
-
-Desafios e sombra
-O excesso de análise pode gerar insegurança e procrastinação. Pode duvidar demais de si mesmo e perder oportunidades por medo de errar.
-Tende ao isolamento emocional. Pode guardar sentimentos e parecer distante ou frio.
-Perfeccionismo intelectual pode gerar ansiedade, crítica excessiva e autossabotagem.
-
-Caminho de evolução
-Aprender a confiar mais em suas decisões e equilibrar razão com emoção. Quando aprende a agir com confiança, transforma-se em uma mente brilhante e orientadora.`,
-
-26: `DIA 26 — O CONSTRUTOR DO PODER
-O dia 26 combina liderança, ambição e capacidade administrativa. Existe forte energia de realização material e construção de estabilidade.
-Possui visão prática, senso estratégico e talento natural para organização, gestão e liderança.
-
-É alguém que deseja conquistar segurança, reconhecimento e prosperidade através do próprio esforço.
-
-Potencial positivo
-• Liderança natural
-• Disciplina e perseverança
-• Talento para negócios e finanças
-• Organização e planejamento
-• Responsabilidade e maturidade
-
-Desafios e sombra
-Pode tornar-se controlador, rígido ou excessivamente exigente.
-Medo de perder controle pode gerar ansiedade e tensão constante.
-Existe tendência a priorizar trabalho e resultados em detrimento da vida emocional.
-
-Caminho de evolução
-Aprender a equilibrar ambição com sensibilidade. Quando integra coração e razão, torna-se um grande realizador e líder confiável.`,
-
-27: `DIA 27 — O VISIONÁRIO HUMANITÁRIO
-O dia 27 representa sabedoria, sensibilidade e visão ampla da vida. Existe forte vocação humanitária e idealista.
-Possui mente criativa, sensível e filosófica. Tem facilidade para compreender pessoas e enxergar além do óbvio.
-
-Potencial positivo
-• Empatia e sensibilidade
-• Criatividade e inspiração
-• Intuição desenvolvida
-• Visão humanitária
-• Capacidade de aconselhamento
-
-Desafios e sombra
-Pode viver conflitos emocionais intensos e oscilações internas.
-Tendência a absorver problemas dos outros e esquecer de si.
-Idealismo excessivo pode gerar frustração com a realidade.
-
-Caminho de evolução
-Aprender a cuidar de si antes de salvar o mundo. Quando encontra equilíbrio emocional, torna-se guia e inspiração para muitos.`,
-
-28: `DIA 28 — O ESTRATEGISTA
-O dia 28 traz forte energia de liderança estratégica e independência.
-Possui mente empreendedora, visão prática e talento para iniciar projetos. Tem facilidade para enxergar oportunidades.
-
-Potencial positivo
-• Liderança e iniciativa
-• Autoconfiança e coragem
-• Capacidade de iniciar projetos
-• Espírito empreendedor
-• Independência e determinação
-
-Desafios e sombra
-Pode perder interesse rapidamente e abandonar projetos.
-Oscila entre entusiasmo e desmotivação.
-Precisa aprender constância e persistência.
-
-Caminho de evolução
-Disciplina e continuidade são a chave. Quando aprende a concluir o que começa, alcança grande sucesso.`,
-
-29: `DIA 29 — O SENSITIVO
-O dia 29 representa intensa sensibilidade emocional e intuição elevada.
-Possui imaginação rica, percepção profunda e forte conexão emocional com o mundo.
-
-Potencial positivo
-• Intuição poderosa
-• Sensibilidade e empatia
-• Criatividade emocional
-• Imaginação fértil
-• Capacidade de inspiração
-
-Desafios e sombra
-Oscilações emocionais podem gerar insegurança.
-Tendência à melancolia e ansiedade.
-Pode absorver energias e problemas externos.
-
-Caminho de evolução
-Fortalecer autoestima e estabilidade emocional. Quando aprende a confiar em si, transforma sensibilidade em força.`,
-
-30: `DIA 30 — O COMUNICADOR CRIATIVO
-O dia 30 traz energia criativa, comunicativa e imaginativa.
-Possui talento para expressão verbal, artística e social.
-
-Potencial positivo
-• Comunicação e criatividade
-• Carisma e sociabilidade
-• Imaginação fértil
-• Expressão artística
-• Inspiração social
-
-Desafios e sombra
-
-Pode dispersar energia e perder foco.
-Tendência à teimosia e resistência a críticas.
-Precisa desenvolver disciplina e foco.
-
-Caminho de evolução
-Canalizar criatividade com disciplina. Quando encontra direção, torna-se grande comunicador e inspirador.`,
-
-31: `DIA 31 — O CONSTRUTOR DA ESTABILIDADE
-O dia 31 representa disciplina, perseverança e construção sólida.
-Possui natureza prática, organizada e determinada.
-
-Potencial positivo
-• Persistência e disciplina
-• Organização e responsabilidade
-• Talento para planejamento
-• Confiabilidade e estabilidade
-• Capacidade de construção a longo prazo
-
-Desafios e sombra
-Pode tornar-se rígido e resistente a mudanças.
-Medo do novo pode limitar oportunidades.
-
-Caminho de evolução
-Equilibrar segurança com abertura ao novo. Quando integra inovação à disciplina, constrói legado duradouro.`,
-
+    1: `<p>O dia 1 traz para <strong>você</strong> uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. <strong>você</strong> nasceu com uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em todos os setores da vida.</p>
+    <p>Sua mente funciona de forma independente e <strong>você</strong> sente uma necessidade vital de estar no controle da sua própria jornada. Seu talento natural é a iniciativa; <strong>você</strong> não se sente confortável em seguir fórmulas prontas ou ordens que não façam sentido para a sua lógica pessoal, buscando sempre a sua própria verdade.</p>
+    <p>Na vida prática, <strong>você</strong> possui uma coragem que muitas vezes beira o pioneirismo, sendo aquela pessoa que dá o primeiro passo em projetos ousados e desafiadores. Seu desafio é equilibrar essa força de vontade para não parecer autoritária, transformando sua determinação em uma fonte de inspiração constante para todos ao seu redor.</p>`,
+
+    2: `<p>O dia 2 confere a <strong>você</strong> uma natureza extremamente diplomática, sensível e cooperativa. <strong>você</strong> possui o dom de perceber as nuances nos relacionamentos e no ambiente que a maioria das pessoas ignora, o que faz de <strong>você</strong> uma excelente mediadora.</p>
+    <p>Sua força não reside na agressividade, mas na persuasão suave e na capacidade de unir pessoas em torno de um objetivo comum. <strong>você</strong> trabalha melhor em parceria do que sozinha, e seu talento natural brilha quando <strong>você</strong> está em um ambiente harmonioso onde pode oferecer seu apoio e intuição aguçada.</p>
+    <p>O desafio para <strong>você</strong> é fortalecer sua autoconfiança para não se tornar dependente da opinião alheia. Quando <strong>você</strong> aprende a equilibrar sua sensibilidade com a firmeza, <strong>você</strong> se torna uma peça fundamental e indispensável em qualquer projeto ou família.</p>`,
+
+    3: `<p>O dia 3 traz para <strong>você</strong> o dom da comunicação, da expressão criativa e do carisma social. <strong>você</strong> é uma pessoa que possui uma luz própria e uma facilidade imensa em transmitir ideias, seja pela fala, pela escrita ou pelas artes em geral.</p>
+    <p>O otimismo é uma marca registrada da sua personalidade, e <strong>você</strong> tem o talento de elevar o espírito das pessoas ao seu redor. Para <strong>você</strong>, a vida é um palco onde a criatividade deve ser explorada ao máximo, e sua mente está sempre fervilhando com novas possibilidades e conexões sociais interessantes.</p>
+    <p>O cuidado que <strong>você</strong> deve ter é com a dispersão de energia; por ser multitalentosa, <strong>você</strong> pode começar muitas coisas e ter dificuldade em terminar. Focando sua expressão, <strong>você</strong> tem o poder de influenciar multidões e trazer alegria por onde passa.</p>`,
+
+    4: `<p>O dia 4 indica que <strong>você</strong> possui um talento natural para a organização, disciplina e construção de bases sólidas. <strong>você</strong> é a pessoa que traz estrutura para o caos, agindo com uma responsabilidade e honestidade que são raramente encontradas hoje em dia.</p>
+    <p>Sua abordagem da vida é prática e realista. <strong>você</strong> valoriza o trabalho árduo e entende que o sucesso duradouro é construído tijolo por tijolo. Para <strong>você</strong>, a segurança da família e a estabilidade financeira são prioridades que guiam suas decisões mais importantes.</p>
+    <p>O desafio para <strong>você</strong> é não se tornar rígida demais ou resistente às mudanças necessárias. Ao permitir que sua mente se abra para novas formas de fazer as coisas, <strong>você</strong> une sua incrível persistência com a inovação, tornando suas conquistas absolutamente inabaláveis.</p>`,
+
+    5: `<p>O dia 5 traz para <strong>você</strong> uma alma livre, versátil e amante das mudanças. <strong>você</strong> possui um talento natural para a adaptação e uma curiosidade intelectual que a leva a explorar novos horizontes, viagens e experiências sensoriais constantemente.</p>
+    <p>Sua energia é magnética e <strong>você</strong> aprende com uma rapidez impressionante, especialmente através da experiência direta com o mundo. <strong>você</strong> detesta a rotina e as limitações, pois sua mente precisa de estímulos constantes e de liberdade para voar alto e descobrir o que há além do horizonte.</p>
+    <p>O aprendizado para <strong>você</strong> é desenvolver o foco e a disciplina, para que sua busca por liberdade não se transforme em instabilidade. Quando <strong>você</strong> canaliza sua versatilidade para um propósito, <strong>você</strong> se torna uma pessoa brilhante e capaz de realizar transformações profundas na sociedade.</p>`,
+
+    6: `<p>O dia 6 confere a <strong>você</strong> um talento profundo para cuidar, aconselhar e criar harmonia nos ambientes em que vive. <strong>você</strong> é movida pelo amor, pela justiça e pelo senso de dever em relação à família e à comunidade, sendo um porto seguro para todos.</p>
+    <p>Sua sensibilidade estética e artística também é muito forte; <strong>você</strong> tem o dom de tornar tudo ao seu redor mais belo e acolhedor. Para <strong>você</strong>, o lar é o centro do seu universo, e <strong>você</strong> se sente realizada quando consegue ajudar alguém ou resolver um conflito através da sua compreensão e carinho.</p>
+    <p>O desafio de <strong>você</strong> é não se sobrecarregar com os problemas alheios ou se tornar excessivamente perfeccionista. Ao aprender a cuidar de si mesma com a mesma dedicação que cuida dos outros, <strong>você</strong> atinge uma plenitude emocional que irradia paz para o mundo.</p>`,
+
+    7: `<p>O dia 7 indica que <strong>você</strong> possui uma mente analítica, intuitiva e voltada para a busca da verdade interior. <strong>você</strong> é uma investigadora nata da vida, sentindo uma necessidade profunda de entender os mistérios da existência, da ciência ou da espiritualidade.</p>
+    <p>Sua natureza é mais introspectiva e <strong>você</strong> valoriza o silêncio e a solidão como ferramentas para recarregar suas energias e processar seus pensamentos complexos. <strong>você</strong> possui um "radar" para a falsidade e raramente se contenta com explicações superficiais sobre qualquer assunto.</p>
+    <p>O desafio para <strong>você</strong> é não se isolar excessivamente ou se tornar crítica demais com as imperfeições humanas. Ao compartilhar sua sabedoria e suas descobertas com o mundo, <strong>você</strong> se torna uma professora ou guia espiritual de grande profundidade e impacto.</p>`,
+
+    8: `<p>O dia 8 traz para <strong>você</strong> um talento natural para a gestão, para os negócios e para a realização material em larga escala. <strong>você</strong> possui uma visão executiva e um senso de justiça muito apurado, sabendo como organizar recursos e pessoas para atingir grandes metas.</p>
+    <p>Sua determinação é impressionante e <strong>você</strong> encara os desafios com uma seriedade profissional que impõe respeito. Para <strong>você</strong>, o sucesso é uma consequência natural do esforço disciplinado e da capacidade de liderar com autoridade e equilíbrio emocional.</p>
+    <p>O aprendizado de <strong>você</strong> é entender que o poder e o dinheiro são ferramentas para o bem, e não o fim em si mesmos. Quando <strong>você</strong> une sua ambição com a generosidade, <strong>você</strong> constrói um império de prosperidade que beneficia não apenas <strong>você</strong>, mas milhares de pessoas.</p>`,
+
+    9: `<p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e com uma visão de mundo muito ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar o mundo melhor do que o encontrou, agindo com altruísmo puro.</p>
+    <p>Sua intuição é fortíssima e <strong>você</strong> possui uma sabedoria que parece vir de muitas vidas. <strong>você</strong> é capaz de se sacrificar por causas nobres e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua compaixão e integridade.</p>
+    <p>O desafio para <strong>você</strong> é aprender a desapegar do passado e de situações que não pode mudar. Ao focar sua energia no serviço ao próximo e na sua própria evolução espiritual, <strong>você</strong> atinge um estado de plenitude e paz que é a verdadeira recompensa da sua jornada.</p>`,
+
+    10: `<p>O dia 10 traz para <strong>você</strong> a energia do "novo começo" com uma potência redobrada. <strong>você</strong> possui um talento nato para a liderança e uma capacidade única de se reinventar, não importa quantas vezes a vida a desafie a começar do zero.</p>
+    <p>Sua autoconfiança é o seu maior trunfo, e <strong>você</strong> possui uma coragem pioneira que a leva a explorar campos onde ninguém mais se atreve a ir. <strong>você</strong> é uma realizadora por excelência e sua presença é marcante, transmitindo uma vibração de sucesso e independência por onde passa.</p>
+    <p>O cuidado que <strong>você</strong> deve ter é com a impulsividade e o orgulho. Ao aprender a ouvir sua intuição e a planejar seus passos com sabedoria, <strong>você</strong> se torna uma força imparável da natureza, capaz de construir uma história de vida brilhante e inspiradora.</p>`,
+ 
+  // --- CONTINUAÇÃO DIA DE NASCIMENTO (11 AO 20) ---
+    11: `<p>O dia 11 traz para <strong>você</strong> a vibração de um Número Mestre, o que confere uma intuição extraordinária e uma sensibilidade espiritual muito acima da média. <strong>você</strong> funciona como um canal de inspiração para o mundo, possuindo ideais elevados e uma capacidade única de enxergar além das aparências materiais.</p>
+    <p>Sua presença é magnética e <strong>você</strong> tem o dom de iluminar a vida das pessoas com suas palavras e percepções profundas. No entanto, por ser uma vibração de alta voltagem, <strong>você</strong> pode sentir uma tensão nervosa constante ou uma cobrança interna muito forte para realizar algo grandioso pela humanidade.</p>
+    <p>O desafio para <strong>você</strong> é manter os pés no chão e aprender a confiar na sua voz interior sem se deixar levar pela ansiedade. Quando <strong>você</strong> equilibra sua mente visionária com a ação prática, <strong>você</strong> se torna uma líder espiritual ou intelectual capaz de transformar a consciência de todos ao seu redor.</p>`,
+
+    12: `<p>O dia 12 confere a <strong>você</strong> uma personalidade rica em criatividade, com uma habilidade de comunicação que une a lógica à sensibilidade. <strong>você</strong> possui um talento natural para as artes, para o ensino ou para qualquer profissão que exija expressar ideias de forma clara, equilibrada e convincente.</p>
+    <p>Sua mente é fértil e <strong>você</strong> tem a capacidade de ver os problemas sob diversos ângulos, o que faz de <strong>você</strong> uma excelente conselheira. <strong>você</strong> valoriza as amizades e o convívio social, possuindo um magnetismo que atrai pessoas interessadas na sua inteligência e no seu modo refinado de ver a vida.</p>
+    <p>O cuidado que <strong>você</strong> deve ter é para não se sacrificar demais pelos outros a ponto de se anular. Ao aprender a colocar limites saudáveis e a usar sua criatividade para sua própria realização, <strong>você</strong> brilha como uma pessoa versátil e profundamente admirada.</p>`,
+
+    13: `<p>O dia 13 traz para <strong>você</strong> uma energia de transformação profunda e de construção sólida. Apesar de ser um número muitas vezes incompreendido, ele confere a <strong>você</strong> uma capacidade de trabalho e uma determinação que poucas pessoas possuem, permitindo que <strong>você</strong> realize grandes feitos através do esforço.</p>
+    <p><strong>você</strong> é uma pessoa que não teme o trabalho duro e possui um talento natural para a organização e para a reestruturação de situações caóticas. Sua vida é marcada por ciclos de renovação, onde <strong>você</strong> aprende a deixar o velho para trás para construir algo muito mais forte e duradouro no lugar.</p>
+    <p>O desafio para <strong>você</strong> é aprender a expressar seus sentimentos de forma mais aberta, evitando a rigidez excessiva. Quando <strong>você</strong> aceita as mudanças com flexibilidade, <strong>você</strong> se torna uma força realizadora inabalável, capaz de erguer impérios com sua persistência.</p>`,
+
+    14: `<p>O dia 14 confere a <strong>você</strong> um talento nato para lidar com o público, com as vendas e com a comunicação de massa. <strong>você</strong> possui uma mente rápida, versátil e uma curiosidade que a leva a querer experimentar tudo o que a vida tem a oferecer, agindo com uma agilidade mental invejável.</p>
+    <p>Sua natureza é inquieta e <strong>você</strong> se adapta com extrema facilidade a novos ambientes e situações inesperadas. <strong>você</strong> possui o dom da persuasão e consegue vender ideias ou produtos com uma facilidade impressionante, pois as pessoas confiam na sua energia vibrante e na sua visão progressista.</p>
+    <p>O aprendizado para <strong>você</strong> é buscar a temperança e o equilíbrio, evitando comportamentos impulsivos ou excessos. Ao canalizar sua energia para objetivos claros, <strong>você</strong> se torna uma profissional de sucesso e uma pessoa que vive experiências ricas e transformadoras.</p>`,
+
+    15: `<p>O dia 15 traz para <strong>você</strong> um magnetismo pessoal fortíssimo, aliado a um talento para o ensino e para a cura através do amor e da generosidade. <strong>você</strong> possui uma natureza acolhedora e se sente realizada quando pode ajudar sua família ou a comunidade, sendo uma figura central de apoio.</p>
+    <p>Sua sensibilidade artística é aguçada e <strong>você</strong> tem o dom de atrair os recursos materiais necessários para viver com conforto e beleza. <strong>você</strong> é uma pessoa carismática e as pessoas naturalmente buscam sua companhia por se sentirem seguras e valorizadas ao seu lado, o que reforça sua liderança afetiva.</p>
+    <p>O desafio para <strong>você</strong> é não se deixar levar por manipulações ou pelo desejo de controle sobre os outros. Ao usar seu magnetismo para elevar as pessoas e criar harmonia, <strong>você</strong> atinge um nível de satisfação pessoal e prosperidade que é fruto direto da sua bondade.</p>`,
+
+    16: `<p>O dia 16 indica que <strong>você</strong> possui uma mente analítica e uma intuição muito profunda, voltada para a descoberta da verdade e da essência das coisas. Sua vida é pontuada por experiências que a levam a questionar os valores materiais, desenvolvendo em <strong>você</strong> uma sabedoria espiritual e intelectual rara.</p>
+    <p><strong>você</strong> tem o talento de enxergar através das máscaras sociais e possui um radar infalível para a falsidade. Embora <strong>você</strong> possa parecer reservada ou até misteriosa, sua profundidade de pensamento é o que a torna uma excelente estrategista, pesquisadora ou guia em assuntos complexos da alma humana.</p>
+    <p>O desafio para <strong>você</strong> é aprender a lidar com as perdas ou mudanças bruscas como oportunidades de evolução. Quando <strong>você</strong> entende que o desapego é o caminho para o verdadeiro poder, <strong>você</strong> se torna uma pessoa inabalável e dona de um conhecimento que poucos alcançam.</p>`,
+
+    17: `<p>O dia 17 confere a <strong>você</strong> uma vibração de sucesso, estrela e reconhecimento. <strong>você</strong> possui o talento de unir a espiritualidade com a capacidade executiva, o que permite que <strong>você</strong> alcance posições de destaque e prosperidade mantendo sua integridade e seus valores elevados.</p>
+    <p>Sua mente é organizada, lógica e <strong>você</strong> possui uma visão de longo alcance para os negócios e para a vida profissional. <strong>você</strong> é respeitada pela sua competência e pela forma ética como conduz seus projetos, agindo sempre com uma autoridade natural que não precisa ser imposta pela força.</p>
+    <p>O aprendizado para <strong>você</strong> é manter a humildade e a conexão com o seu propósito interior enquanto sobe os degraus da realização material. Quando <strong>você</strong> usa sua influência para o bem comum, <strong>você</strong> brilha como uma das vibrações mais afortunadas e vitoriosas da numerologia.</p>`,
+
+    18: `<p>O dia 18 traz para <strong>você</strong> uma natureza humanitária, combativa e dotada de uma grande força emocional. <strong>você</strong> é uma pessoa que se sente motivada a lutar por justiça e a ajudar os desprotegidos, possuindo um talento natural para liderar grandes movimentos ou causas sociais.</p>
+    <p>Sua intuição é muito forte e <strong>você</strong> possui uma capacidade de superação impressionante, conseguindo transformar crises em vitórias pessoais. <strong>você</strong> tem o dom de entender os processos finais e as transições, o que a torna capaz de encerrar ciclos com dignidade e iniciar novas etapas com coragem renovada.</p>
+    <p>O desafio para <strong>você</strong> é controlar a oscilação emocional e evitar o rancor. Ao focar sua energia na cura do mundo e no serviço desinteressado, <strong>você</strong> encontra uma paz profunda e um reconhecimento que vem do impacto positivo que <strong>você</strong> gera na vida das pessoas.</p>`,
+
+    19: `<p>O dia 19 confere a <strong>você</strong> uma energia de independência total, criatividade e brilho pessoal intenso. <strong>você</strong> é uma líder nata que possui a capacidade de realizar seus desejos através da força de vontade, mas a vida sempre a testará para que <strong>você</strong> aprenda a considerar o próximo.</p>
+    <p>Sua personalidade é vibrante e <strong>você</strong> tem o talento de começar novos empreendimentos com muito entusiasmo e originalidade. <strong>você</strong> nasceu para ser a protagonista da sua história e possui todas as ferramentas mentais para alcançar o topo, desde que aprenda a ouvir e a colaborar com os outros.</p>
+    <p>O aprendizado central de <strong>você</strong> é superar o egoísmo e entender que o verdadeiro poder vem da união. Quando <strong>você</strong> brilha sem apagar a luz alheia, <strong>você</strong> atinge uma realização plena e se torna uma fonte de luz e calor para todos que a seguem.</p>`,
+
+    20: `<p>O dia 20 traz para <strong>você</strong> a vibração da cooperação, da sensibilidade e da diplomacia em sua forma mais pura. <strong>você</strong> possui o dom da escuta e da empatia, sendo aquela pessoa que consegue pacificar conflitos e criar pontes de entendimento entre os lados mais opostos.</p>
+    <p>Sua força reside na suavidade e na paciência. <strong>você</strong> trabalha melhor em grupo e é uma parceira leal e confiável, valorizando a harmonia familiar e social acima de qualquer disputa por ego. Sua intuição é um guia constante que a ajuda a tomar decisões equilibradas e justas para todos.</p>
+    <p>O desafio para <strong>você</strong> é não se deixar levar pela insegurança ou pela passividade excessiva. Ao confiar no seu valor como mediadora e fortalecer sua voz própria, <strong>você</strong> se torna a peça essencial que mantém qualquer estrutura unida e funcionando em paz.</p>`,
+  
+// --- FINALIZAÇÃO DIA DE NASCIMENTO (21 AO 31) ---
+    21: `<p>O dia 21 traz para <strong>você</strong> uma vibração de expansão, sorte e grande capacidade de comunicação social. <strong>você</strong> possui um magnetismo natural que atrai oportunidades e pessoas influentes, agindo com uma alegria de viver que é contagiante para todos ao seu redor.</p>
+    <p>Sua mente é criativa e versátil, permitindo que <strong>você</strong> se destaque em profissões que envolvam o público, as artes ou a escrita. <strong>você</strong> tem o dom de transformar palavras em pontes para o sucesso, possuindo uma habilidade única de expressar seus desejos de forma clara e encantadora.</p>
+    <p>O desafio para <strong>você</strong> é evitar a dispersão de talentos e a ansiedade por resultados imediatos. Quando <strong>você</strong> foca sua energia em um objetivo central, <strong>você</strong> atinge uma colheita de sucesso e reconhecimento que parece vir naturalmente para a sua vida.</p>`,
+
+    22: `<p>O dia 22 é a vibração do "Mestre Construtor", o que confere a <strong>você</strong> o potencial de realizar projetos de escala monumental. <strong>você</strong> possui a intuição do número 11 combinada com a capacidade prática do número 4, permitindo que <strong>você</strong> transforme sonhos abstratos em realidades concretas.</p>
+    <p>Sua visão de mundo é ampla e <strong>você</strong> sente que nasceu para deixar um legado duradouro para a humanidade. <strong>você</strong> tem um talento natural para a organização de grandes sistemas, empresas ou movimentos sociais, agindo com uma responsabilidade e uma ética que inspiram confiança absoluta.</p>
+    <p>O aprendizado para <strong>você</strong> é lidar com a pressão que essa grande capacidade gera. Ao manter o equilíbrio emocional e a humildade, <strong>você</strong> se torna uma força realizadora capaz de mudar a estrutura do mundo ao seu redor para melhor.</p>`,
+
+    23: `<p>O dia 23 confere a <strong>você</strong> uma inteligência brilhante, versatilidade e uma facilidade incrível para aprender qualquer assunto. <strong>você</strong> possui o "toque de Midas" para a comunicação e para as vendas, conseguindo convencer as pessoas através da sua lógica rápida e do seu charme pessoal.</p>
+    <p>Sua natureza é curiosa e aventureira, e <strong>você</strong> se adapta a mudanças com uma agilidade que impressiona. <strong>você</strong> brilha em ambientes dinâmicos onde pode usar sua criatividade para resolver problemas complexos de forma inovadora e eficiente, sempre buscando novos horizontes.</p>
+    <p>O cuidado que <strong>você</strong> deve ter é para não se tornar excessivamente impaciente com quem não acompanha seu ritmo. Ao cultivar a persistência, <strong>você</strong> transforma sua agilidade mental em uma carreira de sucesso meteórico e uma vida repleta de experiências ricas.</p>`,
+
+    24: `<p>O dia 24 indica que <strong>você</strong> possui um talento nato para a diplomacia, para o cuidado familiar e para a cura através da presença. <strong>você</strong> é a "âncora" emocional do seu círculo social, possuindo uma responsabilidade e um senso de justiça que fazem de <strong>você</strong> uma conselheira muito procurada.</p>
+    <p>Sua energia é voltada para a criação de harmonia e beleza. <strong>você</strong> se sente realizada quando pode servir ao próximo ou cuidar do bem-estar daqueles que ama, agindo sempre com uma doçura que esconde uma grande força interior e uma determinação inabalável.</p>
+    <p>O desafio para <strong>você</strong> é não se anular em favor dos desejos alheios. Ao aprender a cuidar de si mesma com a mesma dedicação que dedica aos outros, <strong>você</strong> alcança uma estabilidade emocional e uma felicidade doméstica que são o alicerce da sua vida.</p>`,
+
+    25: `<p>O dia 25 traz para <strong>você</strong> uma mente investigativa, perfeccionista e dotada de uma intuição técnica muito aguçada. <strong>você</strong> possui o talento de analisar dados, comportamentos ou mistérios com uma profundidade que poucas pessoas conseguem alcançar, buscando sempre a perfeição.</p>
+    <p>Sua natureza é mais reservada e <strong>você</strong> valoriza o conhecimento acadêmico ou espiritual como base para suas decisões. <strong>você</strong> tem o dom da observação e raramente se engana sobre o caráter das pessoas, agindo com uma cautela que a protege de erros impulsivos e superficiais.</p>
+    <p>O aprendizado para <strong>você</strong> é aprender a confiar mais na sua intuição do que apenas na lógica fria. Quando <strong>você</strong> une sua capacidade analítica com a sabedoria do coração, <strong>você</strong> se torna uma especialista respeitada e uma pessoa de profunda paz interior.</p>`,
+
+    26: `<p>O dia 26 confere a <strong>você</strong> um talento excepcional para os negócios, para a gestão financeira e para a liderança executiva equilibrada. <strong>você</strong> possui uma visão prática da vida, mas não abre mão da diplomacia e da consideração pelo bem-estar das pessoas envolvidas nos seus projetos.</p>
+    <p>Sua capacidade de organização é aliada a um forte senso de justiça. <strong>você</strong> sabe como atrair a prosperidade e como gerir grandes recursos com eficiência, sendo muitas vezes o pilar financeiro da família ou de uma organização, agindo com autoridade e generosidade.</p>
+    <p>O desafio para <strong>você</strong> é equilibrar a ambição material com a vida emocional. Ao manter o foco no propósito maior e não apenas nos números, <strong>você</strong> constrói uma trajetória de sucesso sólido e um reconhecimento que atravessa gerações.</p>`,
+
+    27: `<p>O dia 27 traz para <strong>você</strong> uma vibração humanitária elevada, aliada a uma mente intelectualmente poderosa e independente. <strong>você</strong> possui o talento de compreender conceitos complexos e de aplicá-los para o benefício do coletivo, agindo como uma professora ou guia para muitos.</p>
+    <p>Sua visão é espiritualizada e <strong>você</strong> sente uma forte necessidade de se envolver em causas que tragam progresso para a humanidade. <strong>você</strong> é uma pessoa carismática e inspiradora, cuja integridade e sabedoria atraem a admiração de pessoas de todas as classes sociais e culturas.</p>
+    <p>O aprendizado de <strong>você</strong> é lidar com a sensibilidade aos problemas do mundo sem se deixar abater por eles. Ao focar na sua capacidade de cura e educação, <strong>você</strong> encontra a realização plena e deixa um rastro de luz e transformação por onde passa.</p>`,
+
+    28: `<p>O dia 28 indica que <strong>você</strong> possui uma liderança forte, mas que se manifesta de forma mais cooperativa e diplomática do que a do número 1 puro. <strong>você</strong> tem o talento de iniciar grandes projetos contando com o apoio de parceiros estratégicos que confiam na sua visão e garra.</p>
+    <p>Sua determinação é mesclada com uma intuição aguçada sobre as necessidades alheias. <strong>você</strong> é uma realizadora que busca o topo, mas que entende que a união de forças é o caminho mais curto para o sucesso sustentável, agindo com uma coragem que é ao mesmo tempo inteligente.</p>
+    <p>O desafio para <strong>você</strong> é não cair na teimosia ou no desejo de dominar os outros. Ao usar seu poder para empoderar sua equipe ou família, <strong>você</strong> se torna uma líder inesquecível e alcança uma prosperidade invejável e merecida.</p>`,
+
+    29: `<p>O dia 29 confere a <strong>você</strong> uma sensibilidade espiritual e mediúnica altíssima, sendo outra vibração que se assemelha ao Número Mestre 11. <strong>você</strong> possui uma mente visionária e uma capacidade de percepção que ultrapassa os limites do óbvio, agindo como um farol de consciência.</p>
+    <p>Sua vida é marcada por uma intensidade emocional profunda e <strong>você</strong> tem o dom de inspirar multidões através da sua fé ou das suas ideias inovadoras. <strong>você</strong> atrai os extremos e deve aprender a navegar entre a sua rica vida interior e as exigências do mundo material com equilíbrio.</p>
+    <p>O aprendizado para <strong>você</strong> é a estabilidade. Ao ancorar sua intuição em ações práticas e manter a confiança em si mesma, <strong>você</strong> se torna uma guia espiritual ou intelectual poderosa, capaz de realizar curas e transformações profundas na sociedade.</p>`,
+
+    30: `<p>O dia 30 traz para <strong>você</strong> o poder da autoexpressão absoluta, do otimismo e da alegria criativa. <strong>você</strong> possui o talento de ver o lado bom da vida e de comunicar essa vibração positiva através da fala, da arte ou de qualquer forma de entretenimento social.</p>
+    <p>Sua mente é brilhante e <strong>você</strong> possui um magnetismo que faz com que todos queiram estar perto de <strong>você</strong> para absorver sua energia vibrante. <strong>você</strong> tem o dom de tornar leves as situações pesadas e de encontrar soluções criativas onde outros veem apenas becos sem saída.</p>
+    <p>O desafio de <strong>você</strong> é evitar a superficialidade e a crítica excessiva aos outros. Ao usar sua comunicação para elevar e educar, <strong>você</strong> atinge uma realização social imensa e se torna uma figura querida e respeitada por todos que cruzam seu caminho.</p>`,
+
+    31: `<p>O dia 31 indica que <strong>você</strong> possui uma mente prática e organizada, mas com uma pitada de criatividade e originalidade que a diferencia da maioria. <strong>você</strong> é uma construtora que não tem medo de inovar, agindo com uma responsabilidade que garante a segurança do seu futuro.</p>
+    <p>Sua natureza é persistente e <strong>você</strong> valoriza a honestidade e os valores tradicionais, mas está sempre aberta a novas ideias que possam melhorar sua eficiência. <strong>você</strong> possui um talento natural para os negócios e para a estruturação de bases familiares sólidas e prósperas.</p>
+    <p>O aprendizado para <strong>você</strong> é aprender a relaxar e a aproveitar os frutos do seu trabalho árduo. Ao equilibrar sua disciplina com momentos de prazer e expansão criativa, <strong>você</strong> constrói uma vida de sucesso material estável e muita satisfação pessoal.</p>`
+  
 
 
   },
