@@ -621,8 +621,11 @@ function processarTextoPremium(texto) {
 }
 
 // --- LÓGICA DE CONTAGEM DE DEFICIÊNCIAS ---
-let listaDef = (dados.resultados && dados.resultados.listaDeficiencias) ? dados.resultados.listaDeficiencias : []; 
-let qtd = listaDef.length;
+// --- LÓGICA DE CONTAGEM PELO TEXTO (Mais segura) ---
+let textoBruto = dados.textos.deficiencias || "";
+// Esta linha abaixo conta quantos números (1 a 9) aparecem no seu texto de deficiências
+let encontrados = textoBruto.match(/\d/g); 
+let qtd = encontrados ? encontrados.length : 0;
 let textoQtd = "";
 
 if (qtd === 0) {
