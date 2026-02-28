@@ -260,200 +260,115 @@ const textos = {
 <p>[NOME] precisa aprender o equilíbrio emocional e a arte do desapego. Quando [NOME] amadurece essa intensidade, transforma seus sentimentos em uma profunda sabedoria humanitária.</p>`
   },
 
-motivacao: {
-1: `Você possui uma necessidade profunda de independência e autonomia. Sua maior motivação é dirigir a própria vida e tomar decisões baseadas em suas convicções pessoais. Existe dentro de você um forte impulso de liderança e a sensação de que precisa estar no controle do próprio destino. Essa força interior lhe concede coragem para assumir responsabilidades, tomar decisões ousadas e iniciar caminhos que outras pessoas evitariam. Você não teme desafios e, muitas vezes, até se fortalece diante deles. 
+// ======================
+  // MOTIVAÇÃO (1–9)
+  // Adaptado com Placeholder [NOME] e Tags <p>
+  // ======================
+  Motivacao: {
+    1: `<p><strong>[NOME]</strong> possui uma necessidade profunda de independência e autonomia. Sua maior motivação é dirigir a própria vida e tomar decisões baseadas em suas convicções pessoais.</p>
+<p>Existe dentro de <strong>[NOME]</strong> um forte impulso de liderança e a sensação de que precisa estar no controle do próprio destino. Essa força interior lhe concede coragem para assumir responsabilidades, tomar decisões ousadas e iniciar caminhos que outras pessoas evitariam. <strong>[NOME]</strong> não teme desafios e, muitas vezes, até se fortalece diante deles.</p>
+<p>A rotina e a dependência tendem a sufocar sua energia. Quando acredita em algo, <strong>[NOME]</strong> demonstra determinação incomum. No entanto, o excesso de autossuficiência pode torná-lo rígido. Seu desafio é equilibrar independência com cooperação, aprendendo a liderar sem se isolar.</p>`,
 
-A rotina, a limitação e a dependência emocional ou profissional tendem a sufocar sua energia. Quando acredita em algo, demonstra determinação incomum e capacidade de superar obstáculos com persistência admirável. No entanto, o excesso de autossuficiência pode torná-lo rígido, impaciente ou dominador. Seu desafio é equilibrar independência com cooperação, aprendendo a liderar sem isolar-se.`,
+    2: `<p>A motivação central de <strong>[NOME]</strong> é viver em harmonia, sentir-se amado e construir relações profundas e significativas. <strong>[NOME]</strong> busca conexão emocional, parceria e reconhecimento afetivo.</p>
+<p>Existe uma necessidade genuína de ser útil e contribuir para a paz ao seu redor. Evitar conflitos é quase instintivo para <strong>[NOME]</strong>, pois a tensão causa grande desconforto. Essa sensibilidade faz de <strong>[NOME]</strong> um conciliador natural, capaz de perceber nuances que passam despercebidas para outros.</p>
+<p>Seu crescimento acontece quando <strong>[NOME]</strong> aprende a confiar na própria força e a expressar suas necessidades com segurança, tornando-se um poderoso agente de união e empatia.</p>`,
 
-2: `Sua motivação central é viver em harmonia, sentir-se amado e construir relações profundas e significativas. Você busca conexão emocional, parceria e reconhecimento afetivo. Existe uma necessidade genuína de ser útil, acolher, compreender e contribuir para a paz ao seu redor. Evitar conflitos é quase instintivo, pois a tensão emocional lhe causa grande desconforto. Essa sensibilidade faz de você um conciliador natural, capaz de perceber nuances emocionais que passam despercebidas para outros. Entretanto, o desejo de agradar pode levar à autonegação e à dificuldade de impor limites. 
+    3: `<p>A motivação de <strong>[NOME]</strong> é experimentar a alegria de viver, expressar sua criatividade e ser reconhecido pelo seu brilho pessoal. Existe um impulso forte para se comunicar, inspirar e compartilhar entusiasmo.</p>
+<p><strong>[NOME]</strong> deseja viver em ambientes agradáveis, cercado por experiências que alimentem sua imaginação. Possui talento natural para a expressão e encontra satisfação ao transmitir ideias e emoções.</p>
+<p>O maior aprendizado para <strong>[NOME]</strong> é desenvolver foco e disciplina sem perder a leveza e o entusiasmo que fazem parte da sua essência fundamental.</p>`,
 
-Seu crescimento acontece quando aprende a confiar na própria força interior e a expressar suas necessidades com segurança. Quando encontra equilíbrio, torna-se um poderoso agente de união, empatia e cooperação.`,
+    4: `<p>A motivação principal de <strong>[NOME]</strong> é construir estabilidade, segurança e estrutura. <strong>[NOME]</strong> sente necessidade de organizar, planejar e criar bases sólidas para o futuro.</p>
+<p>Existe um forte desejo de ser confiável e respeitado pelo seu esforço. A previsibilidade traz tranquilidade para <strong>[NOME]</strong> e a disciplina é sua aliada natural. Contudo, o excesso de rigidez pode limitar sua flexibilidade emocional.</p>
+<p>O crescimento de <strong>[NOME]</strong> acontece quando aprende a equilibrar essa busca por segurança com uma maior abertura ao novo e ao inesperado.</p>`,
 
-3: `Sua motivação é experimentar a alegria de viver, expressar sua criatividade e ser reconhecido pelo seu brilho pessoal. Existe um impulso forte para se comunicar, inspirar e compartilhar entusiasmo. Você deseja viver em ambientes agradáveis, cercado por pessoas e experiências que alimentem sua imaginação. 
+    5: `<p><strong>[NOME]</strong> é movido pela liberdade, pela variedade e pela experiência direta. A rotina prolongada gera em <strong>[NOME]</strong> uma inquietação e sensação de aprisionamento.</p>
+<p>Sua motivação é explorar, experimentar e viver intensamente. Mudanças e desafios estimulam a mente e a energia vital de <strong>[NOME]</strong>. O risco existe quando a busca por novidades impede a conclusão de projetos.</p>
+<p>O aprendizado de <strong>[NOME]</strong> é encontrar o ponto de equilíbrio ideal entre a aventura que tanto ama e o compromisso necessário para suas realizações.</p>`,
 
-Possui talento natural para expressão verbal, artística ou social, e encontra satisfação ao transmitir ideias, histórias e emoções. Porém, a dispersão e o excesso de interesses podem dificultar a continuidade de projetos. Seu maior aprendizado é desenvolver foco e disciplina sem perder a leveza e o entusiasmo que fazem parte da sua essência.`,
+    6: `<p>A motivação de <strong>[NOME]</strong> nasce do desejo de amar, cuidar e proteger. Família, vínculos e responsabilidade emocional são os pilares centrais da vida de <strong>[NOME]</strong>.</p>
+<p>Existe uma forte necessidade de sentir-se útil e necessário para aqueles que ama. Porém, o excesso de responsabilidade pode gerar sobrecarga emocional em <strong>[NOME]</strong>.</p>
+<p>Seu crescimento ocorre quando <strong>[NOME]</strong> aprende a cuidar de si mesmo com a mesma dedicação e carinho que oferece generosamente aos outros.</p>`,
 
-4: `Sua motivação principal é construir estabilidade, segurança e estrutura. Você sente necessidade de organizar, planejar e criar bases sólidas para o futuro. Existe um forte desejo de ser confiável, responsável e respeitado pelo seu esforço e dedicação. A previsibilidade lhe traz tranquilidade e a disciplina é sua aliada natural. Contudo, o excesso de rigidez pode limitar sua flexibilidade emocional e criatividade. 
+    7: `<p><strong>[NOME]</strong> é motivado pela busca do conhecimento, da verdade e da compreensão profunda dos mistérios da vida. Existe um impulso interior para analisar e estudar o mundo em níveis mais profundos.</p>
+<p><strong>[NOME]</strong> valoriza o silêncio, a introspecção e a reflexão solitária. Sua mente busca respostas onde outros veem apenas o óbvio.</p>
+<p>O desafio para <strong>[NOME]</strong> é equilibrar a razão com a emoção, permitindo-se conectar de forma mais calorosa e profunda com as pessoas ao seu redor.</p>`,
 
-Seu crescimento acontece quando aprende a equilibrar segurança com abertura ao novo.`,
+    8: `<p>A motivação de <strong>[NOME]</strong> está ligada ao sucesso, à realização material e ao reconhecimento de suas capacidades. Existe um forte impulso de conquistar resultados concretos e exercer liderança.</p>
+<p><strong>[NOME]</strong> deseja deixar marcas visíveis e duradouras no mundo. Sua ambição é o motor que o impulsiona para grandes feitos.</p>
+<p>O desafio de <strong>[NOME]</strong> é equilibrar essa busca por poder e eficiência com a sensibilidade e um propósito humano mais elevado.</p>`,
 
-5: `Você é movido pela liberdade, pela variedade e pela experiência. A rotina prolongada gera inquietação e sensação de aprisionamento. Sua motivação é explorar, experimentar e viver intensamente. Mudanças e desafios estimulam sua mente e sua energia vital. 
-
-O risco existe quando a busca por novidades impede a constância necessária para concluir projetos. Seu aprendizado é encontrar equilíbrio entre aventura e compromisso.`,
-
-6: `Sua motivação nasce do desejo de amar, cuidar e proteger. Família, vínculos e responsabilidade emocional são pilares centrais. 
-
-Existe uma forte necessidade de sentir-se útil e necessário. Porém, o excesso de responsabilidade pode gerar sobrecarga emocional. Seu crescimento ocorre quando aprende a cuidar de si com a mesma dedicação que oferece aos outros.`,
-
-7: `Você é motivado pela busca do conhecimento, da verdade e da compreensão profunda da vida. Existe um impulso interior para analisar, estudar e compreender o mundo em níveis mais profundos. Valoriza o silêncio, a introspecção e a reflexão. Seu desafio é equilibrar razão e emoção, permitindo-se conectar mais profundamente com as pessoas.`,
-
-8: `Sua motivação está ligada ao sucesso, realização material e reconhecimento. Existe um forte impulso de conquistar resultados concretos e exercer liderança. 
-
-Você deseja deixar marcas visíveis no mundo. O desafio é equilibrar ambição com sensibilidade e propósito humano.`,
-
-9: `Sua motivação é servir, contribuir e causar impacto positivo no mundo. Existe uma forte inclinação humanitária e desejo de ajudar. Você sente satisfação ao contribuir para algo maior do que si mesmo. O aprendizado está em equilibrar altruísmo com limites saudáveis.`
-
-
+    9: `<p>A motivação de <strong>[NOME]</strong> é servir, contribuir e causar um impacto positivo e transformador no mundo. Existe uma forte inclinação humanitária e um desejo genuíno de ajudar.</p>
+<p><strong>[NOME]</strong> sente profunda satisfação ao contribuir para algo maior do que si mesmo, enxergando o sofrimento alheio como um chamado à ação.</p>
+<p>O aprendizado de <strong>[NOME]</strong> está em equilibrar esse altruísmo nobre com o estabelecimento de limites saudáveis para preservar sua própria energia.</p>`
   },
 
+  // ======================
+  // INFLUÊNCIA (1–9)
+  // Adaptado com Placeholder [NOME] e Tags <p>
+  // ======================
   Influencia: {
-    1:`Influência 1 — Aparência de Liderança, Autoconfiança e Individualidade
-
-Você transmite a imagem de uma pessoa dinâmica, eficiente e extremamente segura. Em um primeiro contato, pode ser percebido tanto como alguém agressivo, individualista, egocêntrico e autocentrado, quanto como um líder natural, direto, decidido e com ideias originais. Sua presença sugere que você não se deixa intimidar facilmente e que possui controle emocional suficiente para enfrentar desafios com firmeza.
-
-A forma como você se apresenta ao mundo cria a impressão de uma pessoa capaz, determinada e independente. As pessoas tendem a enxergá-lo como alguém que sabe o que quer e que possui sua própria maneira de fazer as coisas. Sua influência faz com que seja percebido como pioneiro, inovador e criativo, alguém que não teme se arriscar nem se acovarda diante das dificuldades.
-
-Você aparenta possuir forte iniciativa e grande autoconfiança. Essa energia transmite coragem e espírito de liderança, despertando respeito e admiração. Ao mesmo tempo, essa postura pode gerar certo distanciamento emocional, pois algumas pessoas podem sentir que você parece inacessível ou excessivamente dominante.
-
-Existe em sua influência uma aura de comando natural. Os outros percebem que você não aceita facilmente pressão externa e que prefere agir de forma autônoma. Isso cria a imagem de alguém capaz de assumir responsabilidades e tomar decisões com rapidez.
-
-Aspectos positivos da influência:
-Você aparenta força, iniciativa, criatividade, liderança e independência. Inspira segurança, transmite firmeza nas decisões e demonstra coragem para enfrentar desafios. Sua imagem sugere competência, determinação e capacidade de abrir novos caminhos.
-
-Aspectos negativos da influência:
-Pode aparentar arrogância, impulsividade, autoritarismo ou excesso de individualismo. Algumas pessoas podem sentir que você parece competitivo demais, pouco receptivo ou excessivamente voltado para si mesmo.
-
-Aprendizado e equilíbrio:
-O principal desafio dessa influência é desenvolver sensibilidade emocional e capacidade de cooperação. Aprender a ouvir, compartilhar decisões e demonstrar receptividade torna sua imagem mais acessível e inspiradora. Quando equilibra liderança com empatia, você atrai pessoas dispostas a confiar em suas ideias e seguir sua orientação.`,
-
-    2:`Influência 2 — Aparência de Sensibilidade, Diplomacia e Receptividade
-
-Você transmite uma imagem sutil, gentil e cordial. As pessoas costumam percebê-lo como alguém educado, amistoso e fácil de se aproximar. Sua presença tende a despertar simpatia imediata, pois você aparenta ser acessível, compreensivo e disposto a cooperar. Em um primeiro contato, pode ser visto tanto como alguém tímido, passivo e indeciso, quanto como uma pessoa diplomática, equilibrada e profundamente sensível.
-
-Sua influência cria a impressão de alguém paciente e atencioso, capaz de ouvir com empatia e compreender diferentes pontos de vista. As pessoas costumam se sentir importantes e confortáveis ao seu lado, pois sua postura transmite acolhimento e respeito. Existe uma sensação de tranquilidade e segurança emocional associada à sua presença.
-
-Você aparenta ser um excelente ouvinte e alguém disposto a ajudar. Sua energia transmite suavidade e harmonia, fazendo com que os outros sintam que podem confiar em você. Essa característica faz com que seja visto como um mediador natural, alguém capaz de unir pessoas e amenizar conflitos.
-
-No entanto, essa mesma suavidade pode gerar interpretações equivocadas. Algumas pessoas podem enxergar em você falta de iniciativa ou excesso de dependência. Pode parecer que você evita confrontos ou que prefere seguir decisões alheias em vez de impor sua própria vontade.
-
-Aspectos positivos da influência:
-Você aparenta gentileza, diplomacia, paciência, empatia e capacidade de cooperação. Transmite harmonia, compreensão e sensibilidade emocional. É visto como alguém confiável, acessível e fácil de conviver.
-
-Aspectos negativos da influência:
-Pode aparentar insegurança, passividade, indecisão ou excesso de sensibilidade. Algumas pessoas podem subestimar sua força interior ou acreditar que você depende demais da opinião dos outros.
-
-Aprendizado e equilíbrio:
-O desafio dessa influência é desenvolver firmeza e autoconfiança sem perder a sensibilidade. Quando você aprende a se posicionar com segurança, mantendo sua diplomacia natural, passa a ser visto não apenas como alguém gentil, mas também como alguém forte e confiável.`,
-
-    3:`Influência 3 — Aparência de Carisma, Alegria e Expressividade
-
-Você transmite uma imagem vibrante, leve e cheia de vida. As pessoas costumam percebê-lo como alguém divertido, comunicativo e inspirador. Sua presença tende a chamar atenção naturalmente, pois você aparenta entusiasmo, criatividade e facilidade para se expressar. Em um primeiro contato, pode ser visto tanto como alguém disperso, inquieto e curioso, quanto como uma pessoa calorosa, otimista e extremamente sociável.
-
-Sua influência cria a impressão de alguém agradável de conviver, que sabe animar ambientes e trazer leveza às situações. Os outros frequentemente o enxergam como alguém confiante, espontâneo e capaz de enfrentar dificuldades com bom humor. Existe uma sensação de magnetismo pessoal que faz com que você seja percebido como interessante e envolvente.
-
-Você aparenta possuir grande capacidade de comunicação e persuasão. Sua forma de se expressar transmite convicção e entusiasmo, fazendo com que suas ideias pareçam inspiradoras. Muitas pessoas o enxergam como alguém criativo, expressivo e cheio de imaginação.
-
-Entretanto, essa mesma expressividade pode gerar interpretações equivocadas. Algumas pessoas podem sentir que você parece superficial, dramático ou disperso. Pode surgir a impressão de que você evita responsabilidades ou que depende demais da aprovação externa.
-
-Aspectos positivos da influência:
-Você aparenta alegria, carisma, criatividade, entusiasmo e sociabilidade. Inspira motivação, transmite leveza e desperta interesse nas pessoas. É visto como alguém comunicativo, divertido e cheio de energia.
-
-Aspectos negativos da influência:
-Pode aparentar superficialidade, exagero emocional, dispersão ou necessidade excessiva de atenção. Algumas pessoas podem acreditar que você evita profundidade ou compromissos.
-
-Aprendizado e equilíbrio:
-O desafio dessa influência é desenvolver foco e constância. Quando você equilibra entusiasmo com disciplina e profundidade, passa a ser visto não apenas como alguém carismático, mas também como alguém confiável e admirável.`,
-
-    4:`Influência 4 — Aparência de Segurança, Estabilidade e Confiabilidade
-
-Você transmite a imagem de uma pessoa séria, responsável e extremamente confiável. Desde o primeiro contato, as pessoas tendem a perceber em você alguém estável, disciplinado e digno de confiança. Sua presença sugere consistência, organização e compromisso com aquilo que assume.
-
-Os outros o veem como alguém em quem podem confiar para cumprir tarefas com precisão e responsabilidade. Sua influência cria a impressão de segurança, firmeza e respeito às regras. É comum que você seja percebido como uma figura protetora, que valoriza justiça, honestidade e estabilidade.
-
-Entretanto, essa mesma postura pode gerar a impressão de rigidez ou excesso de formalidade. Algumas pessoas podem vê-lo como inflexível, conservador ou resistente a mudanças.
-
-Aspectos positivos da influência:
-Transmite confiabilidade, responsabilidade, disciplina e senso de dever. Inspira segurança e respeito.
-
-Aspectos negativos da influência:
-Pode aparentar rigidez, conservadorismo, excesso de seriedade ou dificuldade em lidar com mudanças.
-
-Aprendizado e equilíbrio:
-O desafio é desenvolver flexibilidade e leveza. Quando equilibra disciplina com abertura, sua imagem torna-se ainda mais admirada.`,
-
-    5:`Influência 5 — Aparência de Liberdade, Versatilidade e Movimento
-
-Você transmite a imagem de alguém livre, moderno e cheio de energia. As pessoas o percebem como curioso, comunicativo e interessado em novidades. Sua presença sugere dinamismo, entusiasmo e facilidade de adaptação.
-
-Sua conversa costuma parecer envolvente e estimulante, despertando curiosidade e interesse. Os outros o veem como alguém carismático e versátil.
-
-Entretanto, essa energia pode gerar impressão de instabilidade ou inquietação. Algumas pessoas podem vê-lo como impulsivo ou pouco comprometido.
-
-Aspectos positivos:
-Carisma, adaptabilidade, entusiasmo e versatilidade.
-
-Aspectos negativos:
-Impulsividade, inquietação, dispersão.
-
-Aprendizado:
-Desenvolver constância e responsabilidade sem perder liberdade.`,
-
-    6:`Influência 6 — Aparência de Cuidado, Proteção e Responsabilidade Emocional
-
-Você transmite uma imagem acolhedora, calorosa e profundamente humana. Desde o primeiro contato, as pessoas costumam perceber em você alguém confiável, compreensivo e disposto a ajudar. Sua presença sugere empatia, responsabilidade afetiva e preocupação genuína com o bem-estar dos outros.
-
-Existe em sua influência uma aura de proteção e segurança emocional. As pessoas tendem a sentir que podem confiar em você, compartilhar problemas e buscar conselhos. É comum que seja visto como alguém que transmite conforto, estabilidade emocional e equilíbrio nas relações.
-
-Sua postura cria a impressão de alguém sociável, gentil e naturalmente disposto a cuidar. Muitos o percebem como conselheiro, orientador ou figura de apoio. Sua presença transmite a sensação de que você se preocupa mais com o coletivo do que com interesses individuais.
-
-Entretanto, essa mesma energia pode gerar interpretações equivocadas. Algumas pessoas podem enxergar em você excesso de responsabilidade, indecisão ou tendência a se sacrificar pelos outros. Pode parecer que você assume problemas que não são seus ou que se envolve emocionalmente além do necessário.
-
-Aspectos positivos da influência:
-Você aparenta generosidade, responsabilidade, empatia, equilíbrio e confiabilidade. Inspira conforto, transmite segurança emocional e desperta confiança nas pessoas.
-
-Aspectos negativos da influência:
-Pode aparentar excesso de preocupação, dificuldade em dizer não, tendência ao sacrifício ou necessidade de aprovação.
-
-Aprendizado e equilíbrio:
-O desafio é desenvolver limites emocionais saudáveis. Quando aprende a equilibrar cuidado com autonomia, sua imagem torna-se ainda mais forte, madura e admirada.`,
-
-    7:`Influência 7 — Aparência de Mistério, Intelecto e Profundidade
-
-Você transmite uma imagem reservada, observadora e profundamente intelectual. As pessoas costumam percebê-lo como alguém sério, introspectivo e seletivo em suas relações. Sua presença desperta curiosidade e respeito.
-
-Existe uma aura de mistério associada à sua influência. Os outros tendem a enxergá-lo como alguém analítico, reflexivo e interessado em compreender o significado das coisas. Você aparenta valorizar conhecimento, sabedoria e profundidade emocional.
-
-Entretanto, essa postura pode gerar a impressão de distanciamento ou frieza. Algumas pessoas podem acreditar que você é inacessível ou pouco interessado em interações superficiais.
-
-Aspectos positivos:
-Sabedoria, inteligência, profundidade e análise.
-
-Aspectos negativos:
-Isolamento, frieza aparente, dificuldade de aproximação.
-
-Aprendizado:
-Desenvolver abertura emocional e proximidade.`,
-
-    8:`Influência 8 — Aparência de Autoridade, Poder e Realização
-
-Você transmite a imagem de alguém forte, ambicioso e determinado. As pessoas o veem como alguém capaz de liderar, conquistar e alcançar resultados concretos.
-
-Sua presença sugere competência, segurança e domínio. É comum que seja visto como alguém influente e capaz de assumir responsabilidades importantes.
-
-Aspectos positivos:
-Liderança, poder pessoal, determinação.
-
-Aspectos negativos:
-Rigidez, controle excessivo, frieza emocional.
-
-Aprendizado:
-Equilibrar poder com empatia.`,
-
-    9:`Influência 9 — Aparência de Humanitarismo, Carisma e Idealismo
-
-Você transmite generosidade, sensibilidade e visão ampla da vida. As pessoas o percebem como alguém carismático, inspirador e preocupado com o bem coletivo.
-
-Sua influência cria a impressão de alguém humanitário, compreensivo e capaz de enxergar além das diferenças.
-
-Aspectos positivos:
-Empatia, inspiração, generosidade.
-
-Aspectos negativos:
-Idealismo excessivo, distanciamento emocional.
-
-Aprendizado:
-Equilibrar idealismo com praticidade.`
-
+    1: `<p><strong>Influência 1 — Aparência de Liderança, Autoconfiança e Individualidade</strong></p>
+<p><strong>[NOME]</strong> transmite a imagem de uma pessoa dinâmica, eficiente e extremamente segura. Em um primeiro contato, pode ser percebido como um líder natural, direto e com ideias originais.</p>
+<p>A presença de <strong>[NOME]</strong> sugere que não se deixa intimidar facilmente e que possui controle para enfrentar desafios. Os outros enxergam <strong>[NOME]</strong> como alguém que sabe o que quer e que possui sua própria maneira de agir.</p>
+<p><strong>Aspectos positivos:</strong> <strong>[NOME]</strong> aparenta força, iniciativa e independência, inspirando firmeza nas decisões alheias.</p>
+<p><strong>Aspectos negativos:</strong> Pode aparentar arrogância ou excesso de individualismo. Algumas pessoas podem sentir que <strong>[NOME]</strong> parece inacessível.</p>
+<p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é desenvolver sensibilidade e cooperação, tornando sua imagem mais acolhedora.</p>`,
+
+    2: `<p><strong>Influência 2 — Aparência de Sensibilidade, Diplomacia e Receptividade</strong></p>
+<p><strong>[NOME]</strong> transmite uma imagem sutil, gentil e cordial. As pessoas costumam percebê-lo como alguém amigável e fácil de se aproximar, despertando simpatia imediata.</p>
+<p>Sua influência cria a impressão de alguém paciente, capaz de ouvir com empatia. As pessoas sentem-se confortáveis ao lado de <strong>[NOME]</strong>, pois sua postura transmite acolhimento e respeito.</p>
+<p><strong>Aspectos positivos:</strong> <strong>[NOME]</strong> aparenta gentileza, paciência e harmonia, sendo visto como um mediador natural.</p>
+<p><strong>Aspectos negativos:</strong> Pode aparentar insegurança ou passividade. Alguns podem subestimar a força interior de <strong>[NOME]</strong>.</p>
+<p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é desenvolver firmeza e autoconfiança sem perder sua diplomacia nata.</p>`,
+
+    3: `<p><strong>Influência 3 — Aparência de Carisma, Alegria e Expressividade</strong></p>
+<p><strong>[NOME]</strong> transmite uma imagem vibrante, leve e cheia de vida. As pessoas o percebem como alguém divertido, comunicativo e inspirador, chamando atenção naturalmente.</p>
+<p>A influência de <strong>[NOME]</strong> traz leveza aos ambientes. Os outros o enxergam como alguém espontâneo e capaz de enfrentar dificuldades com bom humor e magnetismo pessoal.</p>
+<p><strong>Aspectos positivos:</strong> <strong>[NOME]</strong> aparenta alegria, criatividade e entusiasmo, despertando interesse imediato nas pessoas.</p>
+<p><strong>Aspectos negativos:</strong> Pode aparentar superficialidade ou dispersão. Pode surgir a impressão de que <strong>[NOME]</strong> evita responsabilidades sérias.</p>
+<p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é desenvolver foco e constância para que seu carisma seja acompanhado de admiração profunda.</p>`,
+
+    4: `<p><strong>Influência 4 — Aparência de Segurança, Estabilidade e Confiabilidade</strong></p>
+<p><strong>[NOME]</strong> transmite a imagem de uma pessoa séria, responsável e extremamente confiável. Desde o primeiro contato, os outros percebem em <strong>[NOME]</strong> alguém estável e disciplinado.</p>
+<p>Sua influência sugere organização e compromisso. É comum que <strong>[NOME]</strong> seja visto como uma figura de proteção, que valoriza a justiça, a honestidade e a estabilidade prática.</p>
+<p><strong>Aspectos positivos:</strong> Transmite confiabilidade e senso de dever, inspirando profundo respeito e segurança.</p>
+<p><strong>Aspectos negativos:</strong> Pode aparentar rigidez, excesso de formalidade ou certa resistência a mudanças repentinas.</p>
+<p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é desenvolver flexibilidade. Quando equilibra disciplina com abertura, sua imagem torna-se ainda mais poderosa.</p>`,
+
+    5: `<p><strong>Influência 5 — Aparência de Liberdade, Versatilidade e Movimento</strong></p>
+<p><strong>[NOME]</strong> transmite a imagem de alguém livre, moderno e cheio de energia. As pessoas o percebem como um ser curioso, comunicativo e sempre interessado em novidades.</p>
+<p>A presença de <strong>[NOME]</strong> sugere dinamismo e facilidade de adaptação. Sua conversa costuma ser envolvente e estimulante, despertando a curiosidade de quem o rodeia.</p>
+<p><strong>Aspectos positivos:</strong> Carisma, adaptabilidade e versatilidade são as marcas registradas da imagem de <strong>[NOME]</strong>.</p>
+<p><strong>Aspectos negativos:</strong> Essa energia pode gerar uma impressão de instabilidade, inquietude ou falta de compromisso a longo prazo.</p>
+<p><strong>Equilíbrio:</strong> O aprendizado de <strong>[NOME]</strong> é demonstrar constância e responsabilidade sem precisar abrir mão de sua preciosa liberdade.</p>`,
+
+    6: `<p><strong>Influência 6 — Aparência de Cuidado, Proteção e Responsabilidade Emocional</strong></p>
+<p><strong>[NOME]</strong> transmite uma imagem acolhedora, calorosa e profundamente humana. As pessoas percebem em <strong>[NOME]</strong> alguém compreensivo e disposto a ajudar.</p>
+<p>Existe na influência de <strong>[NOME]</strong> uma aura de proteção. Os outros sentem que podem compartilhar problemas e buscar conselhos, vendo em <strong>[NOME]</strong> um porto seguro emocional.</p>
+<p><strong>Aspectos positivos:</strong> <strong>[NOME]</strong> aparenta generosidade, empatia e equilíbrio, transmitindo segurança nas relações.</p>
+<p><strong>Aspectos negativos:</strong> Pode aparentar excesso de preocupação ou dificuldade em dizer "não", sacrificando-se demais pelos outros.</p>
+<p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é estabelecer limites saudáveis para que seu cuidado não se torne uma sobrecarga pessoal.</p>`,
+
+    7: `<p><strong>Influência 7 — Aparência de Mistério, Intelecto e Profundidade</strong></p>
+<p><strong>[NOME]</strong> transmite uma imagem reservada, observadora e intelectual. As pessoas costumam percebê-lo como alguém sério, introspectivo e seletivo, o que desperta respeito.</p>
+<p>Existe uma aura de mistério em <strong>[NOME]</strong>. Os outros o enxergam como alguém analítico, que valoriza a sabedoria e não se contenta com conversas ou interações superficiais.</p>
+<p><strong>Aspectos positivos:</strong> Transmite sabedoria, inteligência profunda e uma capacidade de análise muito acima da média.</p>
+<p><strong>Aspectos negativos:</strong> Pode aparentar distanciamento ou frieza, fazendo com que <strong>[NOME]</strong> pareça inacessível para alguns.</p>
+<p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é desenvolver abertura emocional, permitindo que as pessoas se aproximem de sua mente brilhante.</p>`,
+
+    8: `<p><strong>Influência 8 — Aparência de Autoridade, Poder e Realização</strong></p>
+<p><strong>[NOME]</strong> transmite a imagem de alguém forte, ambicioso e determinado. As pessoas o veem como alguém capaz de liderar grandes projetos e alcançar resultados concretos.</p>
+<p>Sua presença sugere competência técnica e domínio das situações. É comum que <strong>[NOME]</strong> seja visto como alguém influente e apto a assumir grandes responsabilidades.</p>
+<p><strong>Aspectos positivos:</strong> Liderança nata, poder pessoal e uma determinação que impulsiona todos ao seu redor.</p>
+<p><strong>Aspectos negativos:</strong> Pode ser percebido como alguém de rigidez excessiva ou que foca demais nos resultados e pouco nas pessoas.</p>
+<p><strong>Equilíbrio:</strong> O aprendizado de <strong>[NOME]</strong> é equilibrar seu poder de realização com doses de empatia e sensibilidade humana.</p>`,
+
+    9: `<p><strong>Influência 9 — Aparência de Humanitarismo, Carisma e Idealismo</strong></p>
+<p><strong>[NOME]</strong> transmite generosidade, sensibilidade e uma visão ampla da vida. As pessoas o percebem como alguém inspirador e profundamente preocupado com o bem coletivo.</p>
+<p>A influência de <strong>[NOME]</strong> cria a imagem de alguém compreensivo e tolerante, capaz de enxergar além das aparências e das diferenças individuais.</p>
+<p><strong>Aspectos positivos:</strong> Empatia vasta e uma capacidade de inspirar os outros através de seu exemplo de generosidade.</p>
+<p><strong>Aspectos negativos:</strong> Pode aparentar um idealismo excessivo que, às vezes, parece desconectado das necessidades práticas do momento.</p>
+<p><strong>Equilíbrio:</strong> O desafio de <strong>[NOME]</strong> é equilibrar seus grandes ideais com a praticidade necessária para realizá-los no dia a dia.</p>`
   },
 
   Personalidade: {
