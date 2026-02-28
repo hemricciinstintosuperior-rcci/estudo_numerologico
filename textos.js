@@ -892,4 +892,4 @@ deficiencias:{
   9: `<p>A falta do 9 indica que <strong>você</strong> precisa aprender sobre compaixão universal, desapego e finalização de ciclos. No passado, <strong>você</strong> pode ter sido uma pessoa muito voltada para o próprio ego, e agora a vida a convida a olhar para as dores do mundo e a agir com mais generosidade e altruísmo.</p>
     <p><strong>você</strong> deve aprender a perdoar e a deixar ir o que já não serve mais. O aprendizado para <strong>você</strong> é o de que a verdadeira grandeza reside na entrega e no serviço à humanidade. Ao integrar esta lição, <strong>você</strong> se tornará uma alma carismática e inspiradora, capaz de amar sem fronteiras e de concluir sua jornada com plenitude.</p>`
 }
-};
+},
