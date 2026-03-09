@@ -164,7 +164,7 @@ function gerarMapa() {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
     resultados: {
-        diaN, comportamento, motivacao, personalidade, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
+        diaN, motivacao, influencia, personalidade, comportamento, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
     },
     periodos: {
         ciclo1: `0 aos ${fim1} anos`,
@@ -177,9 +177,10 @@ function gerarMapa() {
     },
 textos: {
         dia: textos.dia[diaN],
-        comportamento: textos.comportamento[comportamento],
         motivacao: textos.motivacao[motivacao],
+        influencia: textos.influencia[influencia],
         expressao: textos.Personalidade[personalidade],
+        comportamento: textos.comportamento[comportamento],
         destino: textos.CaminhodeVida[caminhoVida],
         missao: textos.Propósito[missao],
         
@@ -212,9 +213,10 @@ textos: {
   // --- Renderização Gratuita na Tela ---
   document.getElementById("resultado").innerHTML = `
     ${card("Dia de Nascimento", "Talentos Naturais", diaN, textos.dia[diaN])}
-    ${card("Comportamento", "Número Psíquico", comportamento, textos.comportamento[comportamento])}
+    ${card("influencia", "Aparencia", influencia, textos.influencia[influencia])}
     ${card("Motivação", "Seu Desejo Íntimo", motivacao, textos.motivacao[motivacao])}
     ${card("Personalidade", "Sua Expressão", personalidade, textos.Personalidade[personalidade])}
+     ${card("Comportamento", "Número Psíquico", comportamento, textos.comportamento[comportamento])}
     ${card("Caminho de Vida", "Seu Destino", caminhoVida, textos.CaminhodeVida[caminhoVida])}
     ${card("Ano Pessoal", "Sua energia em " + anoAtual, anoPessoalNum, textos.anoPessoal[anoPessoalNum])}
     
