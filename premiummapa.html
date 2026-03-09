@@ -266,15 +266,12 @@ h2{
 </div>
 
 <div class="secao">
-<h2>Comportamento</h2>
+<h2>Influencia</h2>
 <div class="explicacao">
-O Número do Comportamento revela como são as qualidades psíquicas que influenciam nas escolhas pessoais. As pessoas experimentam diferentes respostas internas aos desafios da vida. Alguns se retiram de situações difíceis para pensar sobre elas; outros se afastam de suas emoções, para tentar evitar sentir as emoções. Outros se apegam aos seus sentimentos e sentem dificuldade em deixar as coisas irem.
-  
-Muitas vezes, essas são respostas condicionadas ou emocionais surgem sem pensamento ou análise. A maturidade e o autodesenvolvimento nos ajudam a aprender novos e mais eficazes métodos de lidar com nosso mundo e os problemas que enfrentamos. O número do comportamento fornece orientação 
-sobre a melhor forma de lidar com situações difíceis ou ameaçadoras, pois que reflete certos padrões interiores comuns a grupos de pessoas nascidas em dias comuns entre si.
+Você influencia pessoas e tambem mostra para elas o que você aparenta ser.
 </div>
-<div class="numero">Número {{COMPORTAMENTO}}</div>
-<div>{{TEXTO_COMPORTAMENTO}}</div>
+<div class="numero">Número {{INFLUENCIA}}</div>
+<div>{{TEXTO_INFLUENCIA}}</div>
 </div>
 
 <div class="secao">
@@ -307,7 +304,19 @@ Personalidade
 <div class="numero">Número {{EXPRESSAO}}</div>
 <div>{{TEXTO_EXPRESSAO}}</div>
 </div>
-
+  
+<div class="secao">
+<h2>Comportamento</h2>
+<div class="explicacao">
+O Número do Comportamento revela como são as qualidades psíquicas que influenciam nas escolhas pessoais. As pessoas experimentam diferentes respostas internas aos desafios da vida. Alguns se retiram de situações difíceis para pensar sobre elas; outros se afastam de suas emoções, para tentar evitar sentir as emoções. Outros se apegam aos seus sentimentos e sentem dificuldade em deixar as coisas irem.
+  
+Muitas vezes, essas são respostas condicionadas ou emocionais surgem sem pensamento ou análise. A maturidade e o autodesenvolvimento nos ajudam a aprender novos e mais eficazes métodos de lidar com nosso mundo e os problemas que enfrentamos. O número do comportamento fornece orientação 
+sobre a melhor forma de lidar com situações difíceis ou ameaçadoras, pois que reflete certos padrões interiores comuns a grupos de pessoas nascidas em dias comuns entre si.
+</div>
+<div class="numero">Número {{COMPORTAMENTO}}</div>
+<div>{{TEXTO_COMPORTAMENTO}}</div>
+</div>
+  
 <div class="secao">
 <h2>Caminho de Vida</h2>
 <div class="explicacao">
@@ -628,9 +637,10 @@ if (!dadosPortal) {
         "{{NOME}}": dadosPortal.nome,
         "{{DATA}}": dadosPortal.data,
         "{{DIA}}": dadosPortal.resultados.diaN,
-        "{{COMPORTAMENTO}}": dadosPortal.resultados.comportamento,
+        "{{INFLUENCIA}}": dadosPortal.resultados.influencia,
         "{{MOTIVACAO}}": dadosPortal.resultados.motivacao,
         "{{EXPRESSAO}}": dadosPortal.resultados.personalidade,
+        "{{COMPORTAMENTO}}": dadosPortal.resultados.comportamento,
         "{{DESTINO}}": dadosPortal.resultados.caminhoVida,
         "{{MISSAO}}": dadosPortal.resultados.missao,
         "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
@@ -640,9 +650,10 @@ if (!dadosPortal) {
         
         // Textos Interpretativos
         "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
-        "{{TEXTO_COMPORTAMENTO}}": limparParaHomem(dadosPortal.textos.comportamento),
         "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
+        "{{TEXTO_INFLUENCIA}}": limparParaHomem(dadosPortal.textos.influencia),
         "{{TEXTO_EXPRESSAO}}": limparParaHomem(dadosPortal.textos.expressao),
+        "{{TEXTO_COMPORTAMENTO}}": limparParaHomem(dadosPortal.textos.comportamento),
         "{{TEXTO_DESTINO}}": limparParaHomem(dadosPortal.textos.destino),
         "{{TEXTO_MISSAO}}": limparParaHomem(dadosPortal.textos.missao),
         "{{TEXTO_MATURIDADE}}": limparParaHomem(dadosPortal.textos.maturidade),
