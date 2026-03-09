@@ -140,7 +140,7 @@ function gerarMapa() {
   const comportamento = reduzir(dia);
   const caminhoVida = reduzir(dia + mes + ano);
   const missao = reduzir(caminhoVida + personalidade);
-  const maturidade = reduzir(missao + personalidade);
+  const maturidade = reduzir(caminhoVida + personalidade);
   const relacionamento = missao; // Ou lógica específica de relacionamento
 
   // --- Ciclos, Momentos e Desafios ---
