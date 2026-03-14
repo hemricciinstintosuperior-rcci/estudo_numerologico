@@ -3,8 +3,8 @@
   "short_name": "Mapa Cabalístico",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#111827",
-  "theme_color": "#111827",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "orientation": "portrait",
   "icons": [
     {
