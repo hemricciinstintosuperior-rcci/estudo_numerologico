@@ -249,7 +249,9 @@ h2{
 </div>
 
 <!-- CONTEÚDO -->
+<div id="graficoPremium" class="secao"></div>
 
+  
 <div class="secao">
 <h2>Dia de Nascimento</h2>
 <div class="explicacao">
@@ -683,17 +685,31 @@ if (!dadosPortal) {
         "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
         "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
     };
+// Procure onde você pega os dadosPortal e adicione isso logo abaixo:
+const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+const graficoSalvo = localStorage.getItem("graficoParaOPremium"); // Pega o gráfico salvo
 
-    // 4. APLICA AS MUDANÇAS NO HTML (UMA ÚNICA VEZ PARA NÃO SUMIR NADA)
-    let htmlFinal = document.body.innerHTML;
-    Object.keys(trocas).forEach(chave => {
-        htmlFinal = htmlFinal.split(chave).join(trocas[chave] || "");
-    });
-    document.body.innerHTML = htmlFinal;
-
-    // 5. CHAMA A IMPRESSÃO
-    window.onload = () => { setTimeout(() => { window.print(); }, 1200); };
+if (graficoSalvo && document.getElementById("graficoPremium")) {
+    // Insere o gráfico e adiciona um título para ficar bonito no PDF
+    document.getElementById("graficoPremium").innerHTML = 
+        `<h2 style="text-align:center">Sua Orientação Vibracional</h2>` + graficoSalvo;
 }
+window.onload = () => {
+    let bodyHtml = document.body.innerHTML;
+    for (const [chave, valor] of Object.entries(trocas)) {
+        // Usa uma Expressão Regular para trocar todas as ocorrências de uma vez
+        const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+        bodyHtml = bodyHtml.replace(regex, valor || "");
+    }
+    document.body.innerHTML = bodyHtml;
+
+    // Aguarda as imagens carregarem antes de abrir a impressão
+    setTimeout(() => { 
+        // window.print(); // Descomente esta linha se quiser que abra o PDF automático
+    }, 1500); 
+};
+
+
 
 // Proteção
 document.oncontextmenu = () => false;
