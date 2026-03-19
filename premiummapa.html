@@ -613,12 +613,15 @@ box-sizing:border-box;
 <script>
 // 1. PEGA OS DADOS (SEM ERRO)
 const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+// PEGA O GRÁFICO QUE O INDEX SALVOU
+const htmlGraficoPrincipal = localStorage.getItem("graficoParaOPremium") || "";
+const htmlGraficoAnalise = localStorage.getItem("graficosAnalisePremium") || "";
 
 if (!dadosPortal) {
     document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Gere o mapa no site primeiro.</h2>";
 } else {
 
-    // 2. FUNÇÃO QUE LIMPA O GÊNERO (PRO CARLOS)
+    // 2. FUNÇÃO QUE LIMPA O GÊNERO
     function limparParaHomem(texto) {
         if (!texto) return "";
         let pNome = dadosPortal.nome.trim().split(' ')[0];
@@ -626,13 +629,12 @@ if (!dadosPortal) {
 
         let t = texto;
         t = t.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
-        // Limpa (a), /a, o/a
         t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
         t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
-    // 3. LISTA DE TUDO QUE TEM QUE TROCAR (MD3, MD4 E D3 ESTÃO AQUI)
+    // 3. LISTA DE TROCAS (MAPA COMPLETO)
     const trocas = {
         "{{NOME}}": dadosPortal.nome,
         "{{DATA}}": dadosPortal.data,
@@ -646,7 +648,6 @@ if (!dadosPortal) {
         "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
         "{{RELACIONAMENTO}}": dadosPortal.resultados.relacionamento,
         "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
-        "{{QTD_DEFICIENCIAS}}": (dadosPortal.resultados.listaDeficiencias || []).length + " Lições Cármicas",
         
         // Textos Interpretativos
         "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
@@ -679,23 +680,38 @@ if (!dadosPortal) {
         "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
         "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
         "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
-        "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
-        "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
-        "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
+        "{{PERIODO_D1}}": "Primeira Fase",
+        "{{PERIODO_D2}}": "Segunda Fase",
+        "{{PERIODO_D3}}": "Terceira Fase"
     };
 
-    // 4. APLICA AS MUDANÇAS NO HTML (UMA ÚNICA VEZ PARA NÃO SUMIR NADA)
+    // 4. APLICA AS MUDANÇAS NO HTML
     let htmlFinal = document.body.innerHTML;
     Object.keys(trocas).forEach(chave => {
         htmlFinal = htmlFinal.split(chave).join(trocas[chave] || "");
     });
+    
+    // ATENÇÃO: Aqui criamos a DIV do gráfico ANTES de atualizar o body
+    const placeholderGrafico = '<div id="graficoPremiumDinamico" class="secao" style="text-align:center;"></div>';
+    htmlFinal = htmlFinal.replace('<h2>Influencia</h2>', placeholderGrafico + '<h2>Influencia</h2>');
+
     document.body.innerHTML = htmlFinal;
 
-    // 5. CHAMA A IMPRESSÃO
-    window.onload = () => { setTimeout(() => { window.print(); }, 1200); };
+    // 5. INJETA O GRÁFICO NO LUGAR CERTO (AGORA ELE NÃO SOME)
+    const container = document.getElementById("graficoPremiumDinamico");
+    if (container && htmlGraficoPrincipal) {
+        container.innerHTML = "<h2>Sua Orientação Vibracional</h2>" + htmlGraficoPrincipal + htmlGraficoAnalise;
+    }
+
+    // 6. CHAMA A IMPRESSÃO
+    window.onload = () => { 
+        setTimeout(() => { 
+            // Se quiser que imprima automático, mantenha a linha abaixo
+            // window.print(); 
+        }, 1500); 
+    };
 }
 
-// Proteção
+// Proteção básica
 document.oncontextmenu = () => false;
-document.onselectstart = () => false;
 </script>
