@@ -673,16 +673,22 @@ if (!dadosPortal) {
         "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
 
         // Períodos
+// ... (resto dos textos acima)
+
+        // Períodos - PUXANDO AS DATAS REAIS DO SEU CÁLCULO
         "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
         "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
         "{{PERIODO_C3}}": dadosPortal.periodos.ciclo3,
+        
         "{{PERIODO_MD1}}": dadosPortal.periodos.md1,
         "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
         "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
         "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
-        "{{PERIODO_D1}}": "Primeira Fase",
-        "{{PERIODO_D2}}": "Segunda Fase",
-        "{{PERIODO_D3}}": "Terceira Fase"
+        
+        // CORREÇÃO DOS DESAFIOS (USANDO OS MESMOS PERÍODOS DOS CICLOS)
+        "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
+        "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
+        "{{PERIODO_D3}}": "Ao longo de toda a vida" 
     };
 
     // 4. APLICA AS MUDANÇAS NO HTML
