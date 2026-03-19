@@ -628,17 +628,17 @@ box-sizing:border-box;
 "></div>
 
 <script>
-// 1. Recupera os dados IMEDIATAMENTE antes de qualquer manipulação de DOM
+// 1. Recupera os dados do LocalStorage
 const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
 const graficoSalvo = localStorage.getItem("graficoParaOPremium") || "";
 const graficosAnalise = localStorage.getItem("graficosAnalisePremium") || "";
 
 if (!dadosPortal) {
-    document.body.innerHTML = "<h1 style='text-align:center; padding:50px;'>Dados não encontrados. Por favor, gere o mapa novamente no portal.</h1>";
+    document.body.innerHTML = "<h1 style='text-align:center; padding:50px;'>Dados não encontrados. Por favor, gere o mapa novamente.</h1>";
 } else {
-    // Função de limpeza de texto
+    // Função para limpar o texto e personalizar com o nome
     function limparParaHomem(texto) {
-        if (!texto) return "";
+        if (!texto) return "Texto não disponível para este número.";
         let pNome = dadosPortal.nome.trim().split(' ')[0];
         let nomeFormatado = pNome.charAt(0).toUpperCase() + pNome.slice(1).toLowerCase();
         let t = texto.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
@@ -646,6 +646,7 @@ if (!dadosPortal) {
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
+    // MAPEAMENTO DE TROCAS (Corrigido minúsculas/maiúsculas)
     const trocas = {
         "{{NOME}}": dadosPortal.nome,
         "{{DATA}}": dadosPortal.data,
@@ -659,6 +660,8 @@ if (!dadosPortal) {
         "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
         "{{RELACIONAMENTO}}": dadosPortal.resultados.relacionamento,
         "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
+        
+        // Textos Principais
         "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
         "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
         "{{TEXTO_INFLUENCIA}}": limparParaHomem(dadosPortal.textos.influencia),
@@ -668,6 +671,8 @@ if (!dadosPortal) {
         "{{TEXTO_MISSAO}}": limparParaHomem(dadosPortal.textos.missao),
         "{{TEXTO_MATURIDADE}}": limparParaHomem(dadosPortal.textos.maturidade),
         "{{TEXTO_RELACIONAMENTO}}": limparParaHomem(dadosPortal.textos.relacionamento),
+        
+        // Ciclos e Momentos
         "{{TEXTO_CICLO1}}": limparParaHomem(dadosPortal.textos.ciclo1),
         "{{TEXTO_CICLO2}}": limparParaHomem(dadosPortal.textos.ciclo2),
         "{{TEXTO_CICLO3}}": limparParaHomem(dadosPortal.textos.ciclo3),
@@ -675,11 +680,16 @@ if (!dadosPortal) {
         "{{TEXTO_MD2}}": limparParaHomem(dadosPortal.textos.md2),
         "{{TEXTO_MD3}}": limparParaHomem(dadosPortal.textos.md3),
         "{{TEXTO_MD4}}": limparParaHomem(dadosPortal.textos.md4),
+        
+        // DESAFIOS (Corrigido para bater com o objeto do Index)
         "{{TEXTO_D1}}": limparParaHomem(dadosPortal.textos.d1),
         "{{TEXTO_D2}}": limparParaHomem(dadosPortal.textos.d2),
         "{{TEXTO_D3}}": limparParaHomem(dadosPortal.textos.d3),
+        
         "{{TEXTO_ANO_PESSOAL}}": limparParaHomem(dadosPortal.textos.anoPessoal),
         "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
+        
+        // Períodos
         "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
         "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
         "{{PERIODO_C3}}": dadosPortal.periodos.ciclo3,
@@ -687,28 +697,30 @@ if (!dadosPortal) {
         "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
         "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
         "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
-        "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
-        "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
-        "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
+        "{{PERIODO_D1}}": "Fase Inicial",
+        "{{PERIODO_D2}}": "Fase Intermediária",
+        "{{PERIODO_D3}}": "Ao longo de toda a vida"
     };
 
-    // Executa a troca de textos e injeção de gráficos de forma segura
-    window.addEventListener("DOMContentLoaded", () => {
-        let conteudoHTML = document.body.innerHTML;
+    // Execução Segura
+    window.addEventListener("load", () => {
+        let htmlAtual = document.body.innerHTML;
 
-        // Substitui os placeholders pelos valores reais
+        // Substituição Global
         for (const [chave, valor] of Object.entries(trocas)) {
             const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-            conteudoHTML = conteudoHTML.replace(regex, valor || "");
+            htmlAtual = htmlAtual.replace(regex, valor || "");
         }
 
-        // Aplica o HTML processado de volta no body
-        document.body.innerHTML = conteudoHTML;
+        // Devolve o HTML processado para a página
+        document.body.innerHTML = htmlAtual;
 
-        // Injeta os gráficos na Div correta após a troca de textos
+        // Injeta os Gráficos na DIV correta (que agora já existe no novo body)
         const container = document.getElementById("graficoPremium");
         if (container) {
-            container.innerHTML = `<h2 style="text-align:center; color:#5d4037;">Sua Orientação Vibracional</h2>` + graficoSalvo + graficosAnalise;
+            container.innerHTML = `<h2 style="text-align:center; color:#5d4037; border:none;">Sua Orientação Vibracional</h2>` + 
+                                  graficoSalvo + 
+                                  graficosAnalise;
         }
     });
 }
