@@ -611,17 +611,16 @@ box-sizing:border-box;
 "></div>
 
 <script>
-// 1. PEGA OS DADOS (SEM ERRO)
+// 1. PEGA OS DADOS SALVOS NO LOCALSTORAGE
 const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
-// PEGA O GRÁFICO QUE O INDEX SALVOU
-const htmlGraficoPrincipal = localStorage.getItem("graficoParaOPremium") || "";
-const htmlGraficoAnalise = localStorage.getItem("graficosAnalisePremium") || "";
+const g1 = localStorage.getItem("graficoParaOPremium") || "";
+const g2 = localStorage.getItem("graficosAnalisePremium") || "";
 
 if (!dadosPortal) {
     document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Gere o mapa no site primeiro.</h2>";
 } else {
 
-    // 2. FUNÇÃO QUE LIMPA O GÊNERO
+    // 2. FUNÇÃO QUE LIMPA O GÊNERO E PERSONALIZA O NOME
     function limparParaHomem(texto) {
         if (!texto) return "";
         let pNome = dadosPortal.nome.trim().split(' ')[0];
@@ -634,7 +633,7 @@ if (!dadosPortal) {
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
-    // 3. LISTA DE TROCAS (MAPA COMPLETO)
+    // 3. LISTA DE TODAS AS TROCAS (TEXTOS E PERÍODOS REAIS)
     const trocas = {
         "{{NOME}}": dadosPortal.nome,
         "{{DATA}}": dadosPortal.data,
@@ -672,52 +671,46 @@ if (!dadosPortal) {
         "{{TEXTO_ANO_PESSOAL}}": limparParaHomem(dadosPortal.textos.anoPessoal),
         "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
 
-        // Períodos
-// ... (resto dos textos acima)
-
-        // Períodos - PUXANDO AS DATAS REAIS DO SEU CÁLCULO
+        // Períodos Automáticos (Vindos do seu cálculo no Index)
         "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
         "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
         "{{PERIODO_C3}}": dadosPortal.periodos.ciclo3,
-        
         "{{PERIODO_MD1}}": dadosPortal.periodos.md1,
         "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
         "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
         "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
-        
-        // CORREÇÃO DOS DESAFIOS (USANDO OS MESMOS PERÍODOS DOS CICLOS)
         "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
         "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
-        "{{PERIODO_D3}}": "Ao longo de toda a vida" 
+        "{{PERIODO_D3}}": "Ao longo de toda a vida"
     };
 
-    // 4. APLICA AS MUDANÇAS NO HTML
+    // 4. APLICA AS MUDANÇAS NO HTML E INJETA A DIV DO GRÁFICO
     let htmlFinal = document.body.innerHTML;
+    
+    // Faz as trocas das chaves {{NOME}}, etc.
     Object.keys(trocas).forEach(chave => {
         htmlFinal = htmlFinal.split(chave).join(trocas[chave] || "");
     });
     
-    // ATENÇÃO: Aqui criamos a DIV do gráfico ANTES de atualizar o body
-    const placeholderGrafico = '<div id="graficoPremiumDinamico" class="secao" style="text-align:center;"></div>';
-    htmlFinal = htmlFinal.replace('<h2>Influencia</h2>', placeholderGrafico + '<h2>Influencia</h2>');
+    // Injeta a DIV do gráfico ANTES do "Dia de Nascimento"
+    const divDoGrafico = '<div id="graficoPremiumDinamico" class="secao" style="text-align:center;"></div>';
+    htmlFinal = htmlFinal.replace('<h2>Dia de Nascimento</h2>', divDoGrafico + '<h2>Dia de Nascimento</h2>');
 
+    // Atualiza o corpo da página com os textos e a nova DIV
     document.body.innerHTML = htmlFinal;
 
-    // 5. INJETA O GRÁFICO NO LUGAR CERTO (AGORA ELE NÃO SOME)
-    const container = document.getElementById("graficoPremiumDinamico");
-    if (container && htmlGraficoPrincipal) {
-        container.innerHTML = "<h2>Sua Orientação Vibracional</h2>" + htmlGraficoPrincipal + htmlGraficoAnalise;
+    // 5. AGORA COLOCA O DESENHO DO GRÁFICO NA DIV QUE ACABAMOS DE CRIAR
+    const areaGrafico = document.getElementById("graficoPremiumDinamico");
+    if (areaGrafico && (g1 || g2)) {
+        areaGrafico.innerHTML = `<h2 style="border:none; margin-bottom:20px;">Sua Orientação Vibracional</h2>` + g1 + g2;
+    } else if (areaGrafico) {
+        areaGrafico.style.display = "none"; // Esconde se não houver gráfico
     }
 
-    // 6. CHAMA A IMPRESSÃO
-    window.onload = () => { 
-        setTimeout(() => { 
-            // Se quiser que imprima automático, mantenha a linha abaixo
-            // window.print(); 
-        }, 1500); 
-    };
+    // 6. COMANDO PARA IMPRESSÃO (OPCIONAL)
+    window.onload = () => { setTimeout(() => { /* window.print(); */ }, 1500); };
 }
 
-// Proteção básica
+// Desabilita clique direito para proteção do relatório
 document.oncontextmenu = () => false;
 </script>
