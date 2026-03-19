@@ -64,7 +64,19 @@ body > *{
   border-radius:10px;
   box-shadow:0 0 20px rgba(0,0,0,0.05);
 }
+/* Cores dos Gráficos que devem estar no seu CSS do Premium */
+.barra-potencial { background: linear-gradient(90deg, #dcfce7, #166534) !important; } 
+.barra-essencia { background: linear-gradient(90deg, #f3e8ff, #6b21a8) !important; }  
+.barra-capacidade { background: linear-gradient(90deg, #ffedd5, #ea580c) !important; } 
+.preenchimento { height: 100%; min-height: 14px; display: block; }
 
+/* Garante que o container do gráfico tenha cor de fundo no PDF */
+#graficoPremium { 
+    background: #fff; 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin-bottom: 20px;
+}
 /* TÍTULOS */
 h2{
   font-size:32px;
@@ -616,29 +628,23 @@ box-sizing:border-box;
 "></div>
 
 <script>
-// 1. PEGA OS DADOS (APENAS UMA VEZ)
 const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
-const graficoSalvo = localStorage.getItem("graficoParaOPremium"); // Gráfico das barrinhas
-const graficosAnalise = localStorage.getItem("graficosAnalisePremium"); // Gráficos coloridos
+const graficoSalvo = localStorage.getItem("graficoParaOPremium");
+const graficosAnalise = localStorage.getItem("graficosAnalisePremium");
 
 if (!dadosPortal) {
-    document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Gere o mapa no site primeiro.</h2>";
+    document.body.innerHTML = "<h1 style='text-align:center'>Dados não encontrados.</h1>";
 } else {
-
-    // 2. FUNÇÃO QUE LIMPA O GÊNERO
+    // Função de limpeza (mantenha a sua como está)
     function limparParaHomem(texto) {
         if (!texto) return "";
         let pNome = dadosPortal.nome.trim().split(' ')[0];
         let nomeFormatado = pNome.charAt(0).toUpperCase() + pNome.slice(1).toLowerCase();
-
-        let t = texto;
-        t = t.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
+        let t = texto.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
         t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
-        t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
-    // 3. PREPARA AS SUBSTITUIÇÕES
     const trocas = {
         "{{NOME}}": dadosPortal.nome,
         "{{DATA}}": dadosPortal.data,
@@ -652,8 +658,6 @@ if (!dadosPortal) {
         "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
         "{{RELACIONAMENTO}}": dadosPortal.resultados.relacionamento,
         "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
-        
-        // Textos
         "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
         "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
         "{{TEXTO_INFLUENCIA}}": limparParaHomem(dadosPortal.textos.influencia),
@@ -675,8 +679,6 @@ if (!dadosPortal) {
         "{{TEXTO_D3}}": limparParaHomem(dadosPortal.textos.d3),
         "{{TEXTO_ANO_PESSOAL}}": limparParaHomem(dadosPortal.textos.anoPessoal),
         "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
-
-        // Períodos
         "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
         "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
         "{{PERIODO_C3}}": dadosPortal.periodos.ciclo3,
@@ -690,22 +692,25 @@ if (!dadosPortal) {
     };
 
     window.onload = () => {
-        // Inserir os gráficos primeiro
-        if (graficoSalvo && document.getElementById("graficoPremium")) {
-            document.getElementById("graficoPremium").innerHTML = 
-                `<h2 style="text-align:center">Sua Orientação Vibracional</h2>` + graficoSalvo + (graficosAnalise || "");
-        }
-
-        // Fazer as trocas de texto no HTML
-        let conteudo = document.body.innerHTML;
+        // 1. Primeiro troca os textos
+        let htmlFinal = document.body.innerHTML;
         for (const [chave, valor] of Object.entries(trocas)) {
             const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-            conteudo = conteudo.replace(regex, valor || "");
+            htmlFinal = htmlFinal.replace(regex, valor || "");
         }
-        document.body.innerHTML = conteudo;
+        document.body.innerHTML = htmlFinal;
+
+        // 2. SÓ AGORA insere os gráficos nos lugares certos
+        setTimeout(() => {
+            const containerGrafico = document.getElementById("graficoPremium");
+            if (containerGrafico) {
+                // Junta o gráfico de barras + os gráficos coloridos
+                containerGrafico.innerHTML = 
+                    `<h2 style="text-align:center; color:#5d4037;">Sua Orientação Vibracional</h2>` + 
+                    (graficoSalvo || "") + 
+                    (graficosAnalise || "");
+            }
+        }, 100);
     };
 }
-
-// Proteção básica
-document.oncontextmenu = () => false;
 </script>
