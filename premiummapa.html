@@ -613,14 +613,16 @@ box-sizing:border-box;
 "></div>
 
 <script>
-// 1. PEGA OS DADOS (SEM ERRO)
+// 1. PEGA OS DADOS (APENAS UMA VEZ)
 const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+const graficoSalvo = localStorage.getItem("graficoParaOPremium"); // Gráfico das barrinhas
+const graficosAnalise = localStorage.getItem("graficosAnalisePremium"); // Gráficos coloridos
 
 if (!dadosPortal) {
     document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Gere o mapa no site primeiro.</h2>";
 } else {
 
-    // 2. FUNÇÃO QUE LIMPA O GÊNERO (PRO CARLOS)
+    // 2. FUNÇÃO QUE LIMPA O GÊNERO
     function limparParaHomem(texto) {
         if (!texto) return "";
         let pNome = dadosPortal.nome.trim().split(' ')[0];
@@ -628,13 +630,12 @@ if (!dadosPortal) {
 
         let t = texto;
         t = t.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
-        // Limpa (a), /a, o/a
         t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
         t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
-    // 3. LISTA DE TUDO QUE TEM QUE TROCAR (MD3, MD4 E D3 ESTÃO AQUI)
+    // 3. PREPARA AS SUBSTITUIÇÕES
     const trocas = {
         "{{NOME}}": dadosPortal.nome,
         "{{DATA}}": dadosPortal.data,
@@ -648,9 +649,8 @@ if (!dadosPortal) {
         "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
         "{{RELACIONAMENTO}}": dadosPortal.resultados.relacionamento,
         "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
-        "{{QTD_DEFICIENCIAS}}": (dadosPortal.resultados.listaDeficiencias || []).length + " Lições Cármicas",
         
-        // Textos Interpretativos
+        // Textos
         "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
         "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
         "{{TEXTO_INFLUENCIA}}": limparParaHomem(dadosPortal.textos.influencia),
@@ -685,33 +685,24 @@ if (!dadosPortal) {
         "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
         "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
     };
-// Procure onde você pega os dadosPortal e adicione isso logo abaixo:
-const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
-const graficoSalvo = localStorage.getItem("graficoParaOPremium"); // Pega o gráfico salvo
 
-if (graficoSalvo && document.getElementById("graficoPremium")) {
-    // Insere o gráfico e adiciona um título para ficar bonito no PDF
-    document.getElementById("graficoPremium").innerHTML = 
-        `<h2 style="text-align:center">Sua Orientação Vibracional</h2>` + graficoSalvo;
-}
-window.onload = () => {
-    let bodyHtml = document.body.innerHTML;
-    for (const [chave, valor] of Object.entries(trocas)) {
-        // Usa uma Expressão Regular para trocar todas as ocorrências de uma vez
-        const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-        bodyHtml = bodyHtml.replace(regex, valor || "");
-    }
-    document.body.innerHTML = bodyHtml;
+    window.onload = () => {
+        // Inserir os gráficos primeiro
+        if (graficoSalvo && document.getElementById("graficoPremium")) {
+            document.getElementById("graficoPremium").innerHTML = 
+                `<h2 style="text-align:center">Sua Orientação Vibracional</h2>` + graficoSalvo + (graficosAnalise || "");
+        }
 
-    // Aguarda as imagens carregarem antes de abrir a impressão
-    setTimeout(() => { 
-        // window.print(); // Descomente esta linha se quiser que abra o PDF automático
-    }, 1500); 
+        // Fazer as trocas de texto no HTML
+        let conteudo = document.body.innerHTML;
+        for (const [chave, valor] of Object.entries(trocas)) {
+            const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+            conteudo = conteudo.replace(regex, valor || "");
+        }
+        document.body.innerHTML = conteudo;
+    };
 }
 
-
-
-// Proteção
+// Proteção básica
 document.oncontextmenu = () => false;
-document.onselectstart = () => false;
 </script>
