@@ -628,14 +628,15 @@ box-sizing:border-box;
 "></div>
 
 <script>
+// 1. Recupera os dados IMEDIATAMENTE antes de qualquer manipulação de DOM
 const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
-const graficoSalvo = localStorage.getItem("graficoParaOPremium");
-const graficosAnalise = localStorage.getItem("graficosAnalisePremium");
+const graficoSalvo = localStorage.getItem("graficoParaOPremium") || "";
+const graficosAnalise = localStorage.getItem("graficosAnalisePremium") || "";
 
 if (!dadosPortal) {
-    document.body.innerHTML = "<h1 style='text-align:center'>Dados não encontrados.</h1>";
+    document.body.innerHTML = "<h1 style='text-align:center; padding:50px;'>Dados não encontrados. Por favor, gere o mapa novamente no portal.</h1>";
 } else {
-    // Função de limpeza (mantenha a sua como está)
+    // Função de limpeza de texto
     function limparParaHomem(texto) {
         if (!texto) return "";
         let pNome = dadosPortal.nome.trim().split(' ')[0];
@@ -691,37 +692,24 @@ if (!dadosPortal) {
         "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
     };
 
-window.onload = () => {
-    // 1. Pega os dados brutos
-    let htmlCorpo = document.body.innerHTML;
-    
-    // 2. Faz as substituições de texto ({{NOME}}, etc)
-    for (const [chave, valor] of Object.entries(trocas)) {
-        const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-        htmlCorpo = htmlCorpo.replace(regex, valor || "");
-    }
-    
-    // Atualiza o corpo da página com os textos novos
-    document.body.innerHTML = htmlCorpo;
+    // Executa a troca de textos e injeção de gráficos de forma segura
+    window.addEventListener("DOMContentLoaded", () => {
+        let conteudoHTML = document.body.innerHTML;
 
-    // 3. INJEÇÃO DOS GRÁFICOS (A parte que está falhando)
-    setTimeout(() => {
+        // Substitui os placeholders pelos valores reais
+        for (const [chave, valor] of Object.entries(trocas)) {
+            const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+            conteudoHTML = conteudoHTML.replace(regex, valor || "");
+        }
+
+        // Aplica o HTML processado de volta no body
+        document.body.innerHTML = conteudoHTML;
+
+        // Injeta os gráficos na Div correta após a troca de textos
         const container = document.getElementById("graficoPremium");
         if (container) {
-            // Tentativa A: Pega os HTMLs prontos que o Index enviou
-            const g1 = localStorage.getItem("graficoParaOPremium") || "";
-            const g2 = localStorage.getItem("graficosAnalisePremium") || "";
-            
-            if (g1 || g2) {
-                container.innerHTML = `<h2 style="text-align:center">Sua Orientação Vibracional</h2>` + g1 + g2;
-            } else {
-                // Tentativa B: Se o Index não mandou o HTML, o Premium tenta reconstruir do zero
-                const saldoRecuperado = JSON.parse(localStorage.getItem("saldoOrientacao"));
-                if (saldoRecuperado) {
-                    container.innerHTML = renderizarGraficoOrientacao(saldoRecuperado);
-                }
-            }
+            container.innerHTML = `<h2 style="text-align:center; color:#5d4037;">Sua Orientação Vibracional</h2>` + graficoSalvo + graficosAnalise;
         }
-    }, 200); // Pequeno atraso para garantir que o DOM está pronto
-};
+    });
+}
 </script>
