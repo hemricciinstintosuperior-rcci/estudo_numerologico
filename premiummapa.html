@@ -115,7 +115,10 @@ h2{
 .barra-essencia { background: linear-gradient(90deg, #f3e8ff, #6b21a8) !important; height: 100%; border-radius: 7px; }  
 .barra-capacidade { background: linear-gradient(90deg, #ffedd5, #ea580c) !important; height: 100%; border-radius: 7px; } 
 .preenchimento { height: 14px; min-height: 14px; display: block; }
-
+.barra-potencial, .barra-essencia, .barra-capacidade {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
 /* ======================================================
    CONFIGURAÇÃO PROFISSIONAL DE IMPRESSÃO (PDF)
    ====================================================== */
