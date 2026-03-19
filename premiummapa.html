@@ -64,19 +64,7 @@ body > *{
   border-radius:10px;
   box-shadow:0 0 20px rgba(0,0,0,0.05);
 }
-/* Cores dos Gráficos que devem estar no seu CSS do Premium */
-/* CORES DOS GRÁFICOS NO PREMIUM - COLE DENTRO DO <style> */
-.barra-potencial { background: linear-gradient(90deg, #dcfce7, #166534) !important; height: 100%; border-radius: 7px; } 
-.barra-essencia { background: linear-gradient(90deg, #f3e8ff, #6b21a8) !important; height: 100%; border-radius: 7px; }  
-.barra-capacidade { background: linear-gradient(90deg, #ffedd5, #ea580c) !important; height: 100%; border-radius: 7px; } 
-.preenchimento { height: 14px; min-height: 14px; display: block; }
-/* Garante que o container do gráfico tenha cor de fundo no PDF */
-#graficoPremium { 
-    background: #fff; 
-    padding: 20px; 
-    border-radius: 10px; 
-    margin-bottom: 20px;
-}
+
 /* TÍTULOS */
 h2{
   font-size:32px;
@@ -240,9 +228,6 @@ h2{
 <body>
 <div id="relatorio">  
 <div id="areaPDF"></div>
-     <div class="btn-container" style="text-align: center; margin-bottom: 40px;">
-        <button onclick="window.print()" style="padding: 15px 30px; cursor: pointer; background: #0f172a; color: white; border: none; border-radius: 8px;">📄 Gerar Documento PDF</button>
-    </div>
 <!-- CAPA -->
 <div class="capa">
 
@@ -264,9 +249,7 @@ h2{
 </div>
 
 <!-- CONTEÚDO -->
-<div id="graficoPremium" class="secao"></div>
 
-  
 <div class="secao">
 <h2>Dia de Nascimento</h2>
 <div class="explicacao">
@@ -628,25 +611,28 @@ box-sizing:border-box;
 "></div>
 
 <script>
-// 1. Recupera os dados do LocalStorage
+// 1. PEGA OS DADOS (SEM ERRO)
 const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
-const graficoSalvo = localStorage.getItem("graficoParaOPremium") || "";
-const graficosAnalise = localStorage.getItem("graficosAnalisePremium") || "";
 
 if (!dadosPortal) {
-    document.body.innerHTML = "<h1 style='text-align:center; padding:50px;'>Dados não encontrados. Por favor, gere o mapa novamente.</h1>";
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Gere o mapa no site primeiro.</h2>";
 } else {
-    // Função para limpar o texto e personalizar com o nome
+
+    // 2. FUNÇÃO QUE LIMPA O GÊNERO (PRO CARLOS)
     function limparParaHomem(texto) {
-        if (!texto) return "Texto não disponível para este número.";
+        if (!texto) return "";
         let pNome = dadosPortal.nome.trim().split(' ')[0];
         let nomeFormatado = pNome.charAt(0).toUpperCase() + pNome.slice(1).toLowerCase();
-        let t = texto.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
+
+        let t = texto;
+        t = t.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
+        // Limpa (a), /a, o/a
         t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
+        t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
-    // MAPEAMENTO DE TROCAS (Corrigido minúsculas/maiúsculas)
+    // 3. LISTA DE TUDO QUE TEM QUE TROCAR (MD3, MD4 E D3 ESTÃO AQUI)
     const trocas = {
         "{{NOME}}": dadosPortal.nome,
         "{{DATA}}": dadosPortal.data,
@@ -660,8 +646,9 @@ if (!dadosPortal) {
         "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
         "{{RELACIONAMENTO}}": dadosPortal.resultados.relacionamento,
         "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
+        "{{QTD_DEFICIENCIAS}}": (dadosPortal.resultados.listaDeficiencias || []).length + " Lições Cármicas",
         
-        // Textos Principais
+        // Textos Interpretativos
         "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
         "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
         "{{TEXTO_INFLUENCIA}}": limparParaHomem(dadosPortal.textos.influencia),
@@ -671,8 +658,6 @@ if (!dadosPortal) {
         "{{TEXTO_MISSAO}}": limparParaHomem(dadosPortal.textos.missao),
         "{{TEXTO_MATURIDADE}}": limparParaHomem(dadosPortal.textos.maturidade),
         "{{TEXTO_RELACIONAMENTO}}": limparParaHomem(dadosPortal.textos.relacionamento),
-        
-        // Ciclos e Momentos
         "{{TEXTO_CICLO1}}": limparParaHomem(dadosPortal.textos.ciclo1),
         "{{TEXTO_CICLO2}}": limparParaHomem(dadosPortal.textos.ciclo2),
         "{{TEXTO_CICLO3}}": limparParaHomem(dadosPortal.textos.ciclo3),
@@ -680,15 +665,12 @@ if (!dadosPortal) {
         "{{TEXTO_MD2}}": limparParaHomem(dadosPortal.textos.md2),
         "{{TEXTO_MD3}}": limparParaHomem(dadosPortal.textos.md3),
         "{{TEXTO_MD4}}": limparParaHomem(dadosPortal.textos.md4),
-        
-        // DESAFIOS (Corrigido para bater com o objeto do Index)
         "{{TEXTO_D1}}": limparParaHomem(dadosPortal.textos.d1),
         "{{TEXTO_D2}}": limparParaHomem(dadosPortal.textos.d2),
         "{{TEXTO_D3}}": limparParaHomem(dadosPortal.textos.d3),
-        
         "{{TEXTO_ANO_PESSOAL}}": limparParaHomem(dadosPortal.textos.anoPessoal),
         "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
-        
+
         // Períodos
         "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
         "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
@@ -697,31 +679,23 @@ if (!dadosPortal) {
         "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
         "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
         "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
-        "{{PERIODO_D1}}": "Fase Inicial",
-        "{{PERIODO_D2}}": "Fase Intermediária",
-        "{{PERIODO_D3}}": "Ao longo de toda a vida"
+        "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
+        "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
+        "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
     };
 
-    // Execução Segura
-    window.addEventListener("load", () => {
-        let htmlAtual = document.body.innerHTML;
-
-        // Substituição Global
-        for (const [chave, valor] of Object.entries(trocas)) {
-            const regex = new RegExp(chave.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
-            htmlAtual = htmlAtual.replace(regex, valor || "");
-        }
-
-        // Devolve o HTML processado para a página
-        document.body.innerHTML = htmlAtual;
-
-        // Injeta os Gráficos na DIV correta (que agora já existe no novo body)
-        const container = document.getElementById("graficoPremium");
-        if (container) {
-            container.innerHTML = `<h2 style="text-align:center; color:#5d4037; border:none;">Sua Orientação Vibracional</h2>` + 
-                                  graficoSalvo + 
-                                  graficosAnalise;
-        }
+    // 4. APLICA AS MUDANÇAS NO HTML (UMA ÚNICA VEZ PARA NÃO SUMIR NADA)
+    let htmlFinal = document.body.innerHTML;
+    Object.keys(trocas).forEach(chave => {
+        htmlFinal = htmlFinal.split(chave).join(trocas[chave] || "");
     });
+    document.body.innerHTML = htmlFinal;
+
+    // 5. CHAMA A IMPRESSÃO
+    window.onload = () => { setTimeout(() => { window.print(); }, 1200); };
 }
+
+// Proteção
+document.oncontextmenu = () => false;
+document.onselectstart = () => false;
 </script>
