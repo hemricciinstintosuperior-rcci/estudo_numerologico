@@ -51,55 +51,50 @@ const bancoAtributos = {
 };
   
 const bancoLegendasCompleto = {
-    // 1. POTENCIAIS DE REALIZAÇÃO (Foco em Carreira e Dinheiro)
-    "Liderança Executiva": { nums: [1, 8], cat: "Realização" },
-    "Visão Empreendedora": { nums: [1, 5, 8], cat: "Realização" },
-    "Autoridade e Comando": { nums: [1, 8], cat: "Realização" },
+    // REALIZAÇÃO
+    "Liderança": { nums: [1], cat: "Realização" },
+    "Visão Empreendedora": { nums: [1, 8], cat: "Realização" },
+    "Autoridade": { nums: [8], cat: "Realização" },
     "Foco em Resultados": { nums: [8, 4], cat: "Realização" },
-    "Capacidade de Realização": { nums: [8, 1, 4], cat: "Realização" },
-    "Gestão de Grandes Projetos": { nums: [8, 9, 4], cat: "Realização" },
-    "Independência Financeira": { nums: [8, 1, 5], cat: "Realização" },
-    "Estratégia de Negócios": { nums: [4, 7, 8], cat: "Realização" },
+    "Poder de Execução": { nums: [4, 8], cat: "Realização" },
+    "Independência": { nums: [1, 5], cat: "Realização" },
+    "Ambição": { nums: [8, 1], cat: "Realização" },
 
-    // 2. INTELIGÊNCIA E MENTALIDADE (Foco em Sabedoria e Lógica)
-    "Profundidade Analítica": { nums: [7, 4], cat: "Mentalidade" },
-    "Raciocínio Lógico e Estratégico": { nums: [4, 7, 8], cat: "Mentalidade" },
-    "Perfeccionismo e Detalhismo": { nums: [4, 7], cat: "Mentalidade" },
-    "Ceticismo Investigativo": { nums: [7, 1], cat: "Mentalidade" },
-    "Disciplina e Organização": { nums: [4, 8], cat: "Mentalidade" },
-    "Mente Visionária": { nums: [5, 9, 1], cat: "Mentalidade" },
-    "Sabedoria Prática": { nums: [7, 4, 8], cat: "Mentalidade" },
-    "Capacidade de Foco": { nums: [4, 7, 1], cat: "Mentalidade" },
+    // MENTALIDADE
+    "Análise": { nums: [7], cat: "Mentalidade" },
+    "Estratégia": { nums: [4, 7, 8], cat: "Mentalidade" },
+    "Perfeccionismo": { nums: [4], cat: "Mentalidade" },
+    "Discernimento": { nums: [7, 9], cat: "Mentalidade" },
+    "Organização": { nums: [4], cat: "Mentalidade" },
+    "Inovação": { nums: [5, 1], cat: "Mentalidade" },
+    "Disciplina": { nums: [4, 1], cat: "Mentalidade" },
 
-    // 3. HABILIDADES SOCIAIS E MAGNETISMO (Foco em Pessoas e Vendas)
-    "Magnetismo e Carisma": { nums: [3, 5, 1], cat: "Social" },
-    "Diplomacia e Mediação": { nums: [2, 6, 9], cat: "Social" },
-    "Comunicação Persuasiva": { nums: [3, 5, 8], cat: "Social" },
-    "Poder de Influência": { nums: [3, 8, 9], cat: "Social" },
-    "Habilidade de Vendas": { nums: [3, 5, 8, 1], cat: "Social" },
-    "Articulação Política": { nums: [2, 8, 3], cat: "Social" },
-    "Popularidade Natural": { nums: [3, 5, 6], cat: "Social" },
-    "Liderança de Equipes": { nums: [1, 6, 9], cat: "Social" },
+    // SOCIAL/COMUNICAÇÃO
+    "Magnetismo": { nums: [3, 5], cat: "Social" },
+    "Diplomacia": { nums: [2], cat: "Social" },
+    "Persuasão": { nums: [3, 8], cat: "Social" },
+    "Carisma": { nums: [3], cat: "Social" },
+    "Mediação": { nums: [2, 6], cat: "Social" },
+    "Eloquência": { nums: [3, 5], cat: "Social" },
+    "Influência": { nums: [8, 3, 9], cat: "Social" },
 
-    // 4. ESSÊNCIA E ESPIRITUALIDADE (Foco no Íntimo e Missão)
-    "Idealismo Humanitário": { nums: [9, 6], cat: "Essência" },
-    "Intuição e Percepção": { nums: [7, 9, 2], cat: "Essência" },
-    "Acolhimento e Empatia": { nums: [6, 2, 9], cat: "Essência" },
-    "Poder de Cura e Aconselhamento": { nums: [6, 9, 7], cat: "Essência" },
-    "Conexão com o Invisível": { nums: [7, 9, 11], cat: "Essência" },
-    "Equilíbrio Emocional": { nums: [6, 2, 4], cat: "Essência" },
-    "Elevação Mental": { nums: [9, 7], cat: "Essência" },
-    "Altruísmo": { nums: [9, 6, 2], cat: "Essência" },
+    // ESSÊNCIA/AFETO
+    "Empatia": { nums: [2, 9], cat: "Essência" },
+    "Acolhimento": { nums: [6], cat: "Essência" },
+    "Intuição": { nums: [7, 9, 11], cat: "Essência" },
+    "Altruísmo": { nums: [9], cat: "Essência" },
+    "Equilíbrio": { nums: [6, 2], cat: "Essência" },
+    "Sensibilidade": { nums: [2, 7], cat: "Essência" },
+    "Idealismo": { nums: [9, 6], cat: "Essência" },
 
-    // 5. ADAPTABILIDADE E EVOLUÇÃO (Foco em Mudança e Sorte)
-    "Versatilidade e Adaptação": { nums: [5, 2, 3], cat: "Evolução" },
-    "Faro para Oportunidades": { nums: [5, 8], cat: "Evolução" },
-    "Dinamismo e Rapidez": { nums: [5, 1], cat: "Evolução" },
-    "Habilidade Multitarefa": { nums: [5, 3], cat: "Evolução" },
-    "Quebra de Padrões": { nums: [5, 1, 7], cat: "Evolução" },
-    "Sorte e Oportunismo": { nums: [5, 3, 1], cat: "Evolução" },
-    "Resiliência e Superação": { nums: [9, 4, 8], cat: "Evolução" },
-    "Flexibilidade": { nums: [5, 2, 9], cat: "Evolução" }
+    // EVOLUÇÃO/ADAPTAÇÃO
+    "Versatilidade": { nums: [5], cat: "Evolução" },
+    "Adaptação": { nums: [5, 2], cat: "Evolução" },
+    "Dinamismo": { nums: [5, 1], cat: "Evolução" },
+    "Resiliência": { nums: [9, 4], cat: "Evolução" },
+    "Oportunismo": { nums: [5, 8], cat: "Evolução" }, // No sentido de ver a chance
+    "Ousadia": { nums: [1, 5], cat: "Evolução" },
+    "Flexibilidade": { nums: [5, 3], cat: "Evolução" }
 };
 function reduzir(n) {
   if (n === 0) return 0;
@@ -155,61 +150,65 @@ function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafio
 function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto) {
     let rankingGeral = [];
     
-    // 1. Processar todas as notas
     for (let legenda in bancoLegendasCompleto) {
         const dados = bancoLegendasCompleto[legenda];
         const nota = calcularIntensidadeAtributo(dados.nums, resultados, faltantes, desafios, nomeCompleto);
         rankingGeral.push({ nome: legenda, nota: parseFloat(nota), categoria: dados.cat });
     }
 
-    // 2. Ordenar para achar o "Instinto Superior" (A nota máxima)
     rankingGeral.sort((a, b) => b.nota - a.nota);
     const instintoSuperior = rankingGeral[0];
 
-    // 3. Separar Destaques por Categoria
     const categorias = ["Realização", "Mentalidade", "Social", "Essência", "Evolução"];
     
+    // HEADER DO INSTINTO SUPERIOR
     let html = `
-        <div class="card" style="background: var(--dark); color: var(--gold); border: 2px solid var(--gold); text-align:center; padding: 30px;">
-            <h2 style="margin:0; letter-spacing:3px;">FORÇA PREDOMINANTE</h2>
-            <div style="font-size: 40px; font-weight: bold; margin: 15px 0;">${instintoSuperior.nome}</div>
-            <p style="color: white; font-size: 14px; opacity: 0.8;">Este é o seu Instinto Superior, a frequência que mais vibra em sua essência atual.</p>
+        <div class="card" style="background: #0a0e1a; color: #d4af37; border: 2px solid #d4af37; text-align:center; padding: 25px;">
+            <h2 style="margin:0; font-size: 14px; letter-spacing:2px; opacity: 0.8;">FORÇA PREDOMINANTE</h2>
+            <div style="font-size: 32px; font-weight: bold; margin: 10px 0; text-transform: uppercase;">${instintoSuperior.nome}</div>
+            <p style="color: white; font-size: 13px; margin:0;">Este é o seu Instinto Superior, a frequência que domina seu campo vibracional.</p>
         </div>
     `;
 
-    // 4. Gerar cards para cada categoria (mostrando o melhor de cada uma)
+    // LOOP DAS CATEGORIAS (Pegando os 2 MELHORES de cada uma)
     categorias.forEach(cat => {
-        const melhorDaCat = rankingGeral.find(item => item.categoria === cat);
-        const porcento = melhorDaCat.nota * 10;
+        // Filtra os itens daquela categoria e pega os 2 primeiros
+        const itensDaCat = rankingGeral.filter(item => item.categoria === cat).slice(0, 2);
         
-        html += `
-            <div class="card" style="border-left: 5px solid var(--gold);">
-                <h3 style="margin-bottom: 5px; font-size: 14px; color: #666;">Destaque em ${cat}</h3>
-                <div style="display: flex; justify-content: space-between; align-items: flex-end;">
-                    <span style="font-size: 18px; font-weight: bold; color: var(--dark);">${melhorDaCat.nome}</span>
-                    <span style="font-size: 14px; font-weight: bold; color: var(--gold);">${Math.round(porcento)}%</span>
-                </div>
-                <div style="height: 8px; background: #eee; border-radius: 4px; overflow: hidden; margin-top:10px;">
-                    <div style="width: ${porcento}%; height: 100%; background: linear-gradient(90deg, #886a10, var(--gold)); transition: width 2s;"></div>
-                </div>
-            </div>
-        `;
-    });
-
-    // 5. Pontos de Atenção (As 3 menores notas globais)
-    const pontosAtencao = rankingGeral.slice(-3).reverse();
-    html += `
-        <div class="card" style="background: #fff1f1; border: 1px solid #fecaca;">
-            <h3 style="color: #b91c1c; margin-top:0;">⚠️ NECESSIDADES A TRABALHAR</h3>
-            <p style="font-size: 12px; color: #7f1d1d; margin-bottom: 15px;">Frequências que apresentam baixa voltagem em seu mapa atual:</p>
-            ${pontosAtencao.map(item => `
-                <div style="margin-bottom:10px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: bold;">
+        html += `<div class="card" style="border-top: 3px solid #d4af37; padding-bottom: 10px;">
+                    <h3 style="color: #666; font-size: 12px; text-transform: uppercase; margin-bottom: 15px; border:none;">Pilar de ${cat}</h3>`;
+        
+        itensDaCat.forEach(item => {
+            const porcento = item.nota * 10;
+            html += `
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 15px; font-weight: bold; color: #111;">
                         <span>${item.nome}</span>
-                        <span>${Math.round(item.nota * 10)}%</span>
+                        <span style="color: #d4af37;">${Math.round(porcento)}%</span>
+                    </div>
+                    <div style="height: 6px; background: #f0f0f0; border-radius: 3px; overflow: hidden; margin-top:5px;">
+                        <div style="width: ${porcento}%; height: 100%; background: #d4af37; transition: width 2s;"></div>
                     </div>
                 </div>
-            `).join("")}
+            `;
+        });
+        
+        html += `</div>`;
+    });
+
+    // PONTOS DE ATENÇÃO (Agora pegando 4 itens para encher mais)
+    const pontosAtencao = rankingGeral.slice(-4).reverse();
+    html += `
+        <div class="card" style="background: #fff5f5; border: 1px solid #ffcccc;">
+            <h3 style="color: #c53030; margin-top:0; border:none; font-size: 16px;">⚠️ NECESSIDADES DE DESENVOLVIMENTO</h3>
+            <p style="font-size: 12px; color: #9b2c2c; margin-bottom: 15px;">Frequências em baixa voltagem que precisam de atenção:</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                ${pontosAtencao.map(item => `
+                    <div style="background: white; padding: 8px; border-radius: 5px; border: 1px solid #fee2e2; font-size: 13px; font-weight: bold; color: #444;">
+                        ${item.nome}: <span style="color: #c53030;">${Math.round(item.nota * 10)}%</span>
+                    </div>
+                `).join("")}
+            </div>
         </div>
     `;
 
