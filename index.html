@@ -262,27 +262,7 @@ function gerarMapa() {
     momentos: {
         m1: md1, m2: md2, m3: md3, m4: md4
     },
-    textos: {
-        // ... (seus outros textos de motivação, etc) ...
-        deficiencias: textoDeficiencias,
-        
-        // Desafios corrigidos
-        desafio1: (textos.desafios && textos.desafios[1]) ? textos.desafios[1][d1] : "Texto não cadastrado",
-        desafio2: (textos.desafios && textos.desafios[2]) ? textos.desafios[2][d2] : "Texto não cadastrado",
-        desafioGeral: (textos.desafios && textos.desafios[3]) ? textos.desafios[3][d3] : "Texto não cadastrado",
 
-        // Momentos Decisivos (Verifique se no textos.js existe textos.momentos[1][numero])
-        txtMd1: (textos.momentos && textos.momentos[1]) ? textos.momentos[1][md1] : "Momento 1 não definido",
-        txtMd2: (textos.momentos && textos.momentos[2]) ? textos.momentos[2][md2] : "Momento 2 não definido",
-        txtMd3: (textos.momentos && textos.momentos[3]) ? textos.momentos[3][md3] : "Momento 3 não definido",
-        txtMd4: (textos.momentos && textos.momentos[4]) ? textos.momentos[4][md4] : "Momento 4 não definido",
-        
-        // Ciclos
-        txtCiclo1: (textos.ciclos && textos.ciclos[1]) ? textos.ciclos[1][ciclo1] : "",
-        txtCiclo2: (textos.ciclos && textos.ciclos[2]) ? textos.ciclos[2][ciclo2] : "",
-        txtCiclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : ""
-    }
-  },
 // --- Início do Objeto de Textos ---
 textos: {
         dia: textos.dia[diaN],
