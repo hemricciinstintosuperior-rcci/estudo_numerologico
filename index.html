@@ -243,20 +243,83 @@ function gerarMapa() {
   // Salva no Navegador
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
 
-  // 7. Exibição e Storage
+// ============================================
+  // 7. EXIBIÇÃO DE TODOS OS RESULTADOS (DESTRAVADO)
+  // ============================================
+  
+  // Atalhos para facilitar a escrita (puxando do objeto que criamos acima)
+  const t = dadosPremium.textos;
+  const p = dadosPremium.periodos;
+
   const htmlGraficos = gerarGraficosIntensidade(res, faltantes, [d1, d2, d3], nomeInput);
+  
+  // Salva no Navegador para o Premium (PDF) conseguir ler depois
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
   localStorage.setItem("graficoParaOPremium", htmlGraficos);
   
-  document.getElementById("resultado").innerHTML = htmlGraficos + 
-    card("Dia de Nascimento", "Talentos Naturais", res.diaN, textos.dia[res.diaN]) +
-    card("Influência", "Sua Imagem", res.influencia, textos.influencia[res.influencia]) +
-    card("Motivação", "Seu Íntimo", res.motivacao, textos.motivacao[res.motivacao]) +
-    card("Personalidade", "Sua Expressão", res.personalidade, textos.Personalidade[res.personalidade]);
+  // Monta a exibição completa no HTML da página atual
+  document.getElementById("resultado").innerHTML = `
+    ${htmlGraficos}
+    
+    <div class="card" style="border-left: 8px solid #22c55e; background: #f0fdf4;">
+        <h2 style="color:#166534; margin:0; border:none;">✨ ANÁLISE COMPLETA LIBERADA</h2>
+        <p>Role para baixo para conferir todos os detalhes do seu mapa.</p>
+    </div>
+
+    ${card("Dia de Nascimento", "Talento Natural", res.diaN, t.dia)}
+    ${card("Motivação", "Seu Íntimo", res.motivacao, t.motivacao)}
+    ${card("Influência", "Sua Imagem", res.influencia, t.influencia)}
+    ${card("Personalidade", "Sua Expressão", res.expressao || t.expressao, t.expressao)}
+    ${card("Caminho de Vida", "Seu Destino", res.caminhoVida, t.destino)}
+    ${card("Missão", "Propósito", res.missao, t.missao)}
+
+    <div class="card" style="border-top: 4px solid #d4af37;">
+        <h3>Numerologia Moderna e Comportamento</h3>
+        <p><strong>Déficits de Comportamento:</strong> ${dadosPremium.moderna.deficits.join(", ")}</p>
+        <p><strong>Resposta do Subconsciente:</strong> Número ${dadosPremium.moderna.subconsciente}</p>
+        ${dadosPremium.moderna.talentoEspecial ? `<p style="color:#d4af37; font-weight:bold;">🌟 Talento Especial Detectado: Vibração ${dadosPremium.moderna.talentoEspecial}</p>` : ""}
+    </div>
+
+    <div class="card">
+        <h3>Grandes Ciclos de Vida</h3>
+        <p><strong>1º Ciclo (${p.ciclo1}):</strong><br> ${t.ciclo1}</p>
+        <hr>
+        <p><strong>2º Ciclo (${p.ciclo2}):</strong><br> ${t.ciclo2}</p>
+        <hr>
+        <p><strong>3º Ciclo (${p.ciclo3}):</strong><br> ${t.ciclo3}</p>
+    </div>
+
+    <div class="card">
+        <h3>Momentos Decisivos (Pináculos)</h3>
+        <p><strong>Início (${p.md1}):</strong> ${t.md1}</p>
+        <p><strong>Intermediário 1 (${p.md2}):</strong> ${t.md2}</p>
+        <p><strong>Intermediário 2 (${p.md3}):</strong> ${t.md3}</p>
+        <p><strong>Final (${p.md4}):</strong> ${t.md4}</p>
+    </div>
+
+    <div class="card">
+        <h3>Desafios e Lições Cármicas</h3>
+        <p><strong>Lições (Faltas no nome):</strong><br> ${t.deficiencias || "Nenhuma falta detectada."}</p>
+        <hr>
+        <p><strong>Desafio de Juventude:</strong> ${t.d1}</p>
+        <p><strong>Desafio de Maturidade:</strong> ${t.d2}</p>
+        <p style="color:#b91c1c; font-weight:bold; background:#fff1f1; padding:10px; border-radius:5px;">⚠️ DESAFIO PRINCIPAL (Vida Inteira): ${t.d3}</p>
+    </div>
+
+    <div class="card" style="background: #0a0e1a; color: #fff; text-align:center;">
+        <h3 style="color: #d4af37; border-bottom: 1px solid #d4af37; margin-bottom:15px;">Seu Ano Pessoal Atual: ${res.anoPessoal}</h3>
+        <p style="color:#eee;">${t.anoPessoal}</p>
+    </div>
+
+    <div class="card" style="background: linear-gradient(45deg,#6a11cb,#2575fc); color:white; text-align:center;">
+        <h3>Deseja este estudo em PDF de Luxo?</h3>
+        <p>Clique no botão "Relatório Premium" no topo da página para gerar sua versão para impressão.</p>
+    </div>
+  `;
 
   mapaGerado = true;
   window.scrollTo({ top: document.getElementById("resultado").offsetTop - 20, behavior: 'smooth' });
-}
+} // <--- AQUI TERMINA A FUNÇÃO gerarMapa
 
 function validarPremium() {
    if(!mapaGerado){ alert("⚠️ Gere o mapa primeiro."); return; }
