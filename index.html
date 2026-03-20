@@ -267,7 +267,7 @@ function gerarMapaCompleto() {
     const htmlGraficos = gerarGraficosIntensidade(dadosParaRelatorio.resultados, faltantes, nomeRaw);
     localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosParaRelatorio));
     localStorage.setItem("graficoParaOPremium", htmlGraficos);
-
+document.getElementById("resultado").innerHTML = html;
     // Abre o relatório em nova aba
     window.open("premiummapa.html", "_blank");
 }
