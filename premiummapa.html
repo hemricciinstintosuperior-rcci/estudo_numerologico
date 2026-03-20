@@ -197,88 +197,98 @@ h2 {
 </div>
 
 <script>
-// 1. CARREGA OS DADOS DO LOCALSTORAGE
-const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+// ESTE É O SCRIPT FINAL "BLINDADO"
+window.onload = function() {
+    // 1. Tenta buscar os dados e os gráficos que o INDEX guardou
+    const dadosSalvos = localStorage.getItem("dadosMapaPremium");
+    const g1 = localStorage.getItem("graficoParaOPremium");
+    const g2 = localStorage.getItem("graficosAnalisePremium");
 
-if (!dadosPortal) {
-    document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Por favor, gere o mapa novamente.</h2>";
-} else {
+    // TESTE DE CONSOLE (Aperte F12 no navegador para ver isso)
+    console.log("Dados Texto:", dadosSalvos ? "OK" : "VAZIO");
+    console.log("Gráfico Principal:", g1 ? "OK" : "VAZIO");
 
-    // 2. FUNÇÃO DE LIMPEZA DE TEXTO (NOME DINÂMICO)
-    function limparParaHomem(texto) {
+    if (!dadosSalvos) {
+        document.body.innerHTML = "<h1 style='text-align:center;padding-top:100px;'>Erro: Por favor, gere o mapa no site primeiro.</h1>";
+        return;
+    }
+
+    const dados = JSON.parse(dadosSalvos);
+
+    // 2. FUNÇÃO PARA PERSONALIZAR O TEXTO (Troca "você" pelo nome e limpa o gênero)
+    function formatarTexto(texto) {
         if (!texto) return "";
-        let pNome = dadosPortal.nome.trim().split(' ')[0];
-        let nomeFormatado = pNome.charAt(0).toUpperCase() + pNome.slice(1).toLowerCase();
-        let t = texto.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
+        let primeiroNome = dados.nome.trim().split(' ')[0];
+        let nomeBonito = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
+        
+        let t = texto.replace(/você/gi, `<strong>${nomeBonito}</strong>`);
         t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
-    // 3. MAPEAMENTO DE TROCAS
-    const trocas = {
-        "{{NOME}}": dadosPortal.nome,
-        "{{DATA}}": dadosPortal.data,
-        "{{DIA}}": dadosPortal.resultados.diaN,
-        "{{INFLUENCIA}}": dadosPortal.resultados.influencia,
-        "{{MOTIVACAO}}": dadosPortal.resultados.motivacao,
-        "{{EXPRESSAO}}": dadosPortal.resultados.personalidade,
-        "{{DESTINO}}": dadosPortal.resultados.caminhoVida,
-        "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
-        "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
-        "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
-        "{{TEXTO_INFLUENCIA}}": limparParaHomem(dadosPortal.textos.influencia),
-        "{{TEXTO_EXPRESSAO}}": limparParaHomem(dadosPortal.textos.expressao),
-        "{{TEXTO_DESTINO}}": limparParaHomem(dadosPortal.textos.destino),
-        "{{TEXTO_CICLO1}}": limparParaHomem(dadosPortal.textos.ciclo1),
-        "{{TEXTO_CICLO2}}": limparParaHomem(dadosPortal.textos.ciclo2),
-        "{{TEXTO_CICLO3}}": limparParaHomem(dadosPortal.textos.ciclo3),
-        "{{TEXTO_MD1}}": limparParaHomem(dadosPortal.textos.md1),
-        "{{TEXTO_MD2}}": limparParaHomem(dadosPortal.textos.md2),
-        "{{TEXTO_MD3}}": limparParaHomem(dadosPortal.textos.md3),
-        "{{TEXTO_MD4}}": limparParaHomem(dadosPortal.textos.md4),
-        "{{TEXTO_D1}}": limparParaHomem(dadosPortal.textos.d1),
-        "{{TEXTO_D2}}": limparParaHomem(dadosPortal.textos.d2),
-        "{{TEXTO_D3}}": limparParaHomem(dadosPortal.textos.d3),
-        "{{TEXTO_ANO_PESSOAL}}": limparParaHomem(dadosPortal.textos.anoPessoal),
-        "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
-        "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
-        "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
-        "{{PERIODO_C3}}": dadosPortal.periodos.ciclo3,
-        "{{PERIODO_MD1}}": dadosPortal.periodos.md1,
-        "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
-        "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
-        "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
-        "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
-        "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
-        "{{PERIODO_D3}}": "Ao longo de toda a vida"
+    // 3. PEGA TODO O HTML DA PÁGINA PARA FAZER AS SUBSTITUIÇÕES
+    let htmlFinal = document.body.innerHTML;
+
+    // 4. DICIONÁRIO DE TROCAS (Substitui as chaves {{...}} pelos valores reais)
+    const mapaDeTrocas = {
+        "{{NOME}}": dados.nome,
+        "{{DATA}}": dados.data,
+        "{{DIA}}": dados.resultados.diaN,
+        "{{INFLUENCIA}}": dados.resultados.influencia,
+        "{{MOTIVACAO}}": dados.resultados.motivacao,
+        "{{EXPRESSAO}}": dados.resultados.personalidade,
+        "{{DESTINO}}": dados.resultados.caminhoVida,
+        "{{ANO_PESSOAL_NUMERO}}": dados.resultados.anoPessoal,
+        "{{TEXTO_DIA}}": formatarTexto(dados.textos.dia),
+        "{{TEXTO_MOTIVACAO}}": formatarTexto(dados.textos.motivacao),
+        "{{TEXTO_INFLUENCIA}}": formatarTexto(dados.textos.influencia),
+        "{{TEXTO_EXPRESSAO}}": formatarTexto(dados.textos.expressao),
+        "{{TEXTO_DESTINO}}": formatarTexto(dados.textos.destino),
+        "{{TEXTO_CICLO1}}": formatarTexto(dados.textos.ciclo1),
+        "{{TEXTO_CICLO2}}": formatarTexto(dados.textos.ciclo2),
+        "{{TEXTO_CICLO3}}": formatarTexto(dados.textos.ciclo3),
+        "{{TEXTO_MD1}}": formatarTexto(dados.textos.md1),
+        "{{TEXTO_MD2}}": formatarTexto(dados.textos.md2),
+        "{{TEXTO_MD3}}": formatarTexto(dados.textos.md3),
+        "{{TEXTO_MD4}}": formatarTexto(dados.textos.md4),
+        "{{TEXTO_D1}}": formatarTexto(dados.textos.d1),
+        "{{TEXTO_D2}}": formatarTexto(dados.textos.d2),
+        "{{TEXTO_D3}}": formatarTexto(dados.textos.d3),
+        "{{TEXTO_ANO_PESSOAL}}": formatarTexto(dados.textos.anoPessoal),
+        "{{TEXTO_DEFICIENCIAS}}": formatarTexto(dados.textos.deficiencias),
+        "{{PERIODO_C1}}": dados.periodos.ciclo1,
+        "{{PERIODO_C2}}": dados.periodos.ciclo2,
+        "{{PERIODO_C3}}": dados.periodos.ciclo3,
+        "{{PERIODO_MD1}}": dados.periodos.md1,
+        "{{PERIODO_MD2}}": dados.periodos.md2,
+        "{{PERIODO_MD3}}": dados.periodos.md3,
+        "{{PERIODO_MD4}}": dados.periodos.md4
     };
 
-    // 4. EXECUTA AS TROCAS NO HTML
-    let htmlFinal = document.body.innerHTML;
-    Object.keys(trocas).forEach(chave => {
-        htmlFinal = htmlFinal.split(chave).join(trocas[chave] || "");
+    // Aplica as trocas uma por uma
+    Object.keys(mapaDeTrocas).forEach(chave => {
+        htmlFinal = htmlFinal.split(chave).join(mapaDeTrocas[chave] || "");
     });
 
-    // 5. CRIA O LUGAR DO GRÁFICO E RE-RENDERIZA O BODY
-    const placeholder = '<div id="graficoPremiumDinamico"></div>';
-    document.body.innerHTML = htmlFinal.replace('<h2>Dia de Nascimento</h2>', placeholder + '<h2>Dia de Nascimento</h2>');
+    // 5. O PULO DO GATO: INJETAR O GRÁFICO
+    // Criamos o bloco do gráfico com o que veio do Index
+    if (g1) {
+        const blocoDoGrafico = `
+            <div class="secao" style="background:#fdf5e6; border:2px solid #d4c4a8; margin-bottom:30px; text-align:center; padding:20px; border-radius:12px;">
+                <h2 style="border:none; color:#5d4037; margin-bottom:20px;">Sua Orientação Vibracional</h2>
+                ${g1} 
+                <div style="margin-top:20px;">${g2 || ""}</div>
+            </div>`;
+        
+        // Procuramos o título "Dia de Nascimento" e colocamos o gráfico LOGO ACIMA dele
+        htmlFinal = htmlFinal.replace('<h2>Dia de Nascimento</h2>', blocoDoGrafico + '<h2>Dia de Nascimento</h2>');
+    }
 
-    // 6. INJETA OS GRÁFICOS DO LOCALSTORAGE
-    setTimeout(() => {
-        const container = document.getElementById("graficoPremiumDinamico");
-        const g1 = localStorage.getItem("graficoParaOPremium") || "";
-        const g2 = localStorage.getItem("graficosAnalisePremium") || "";
+    // 6. DEVOLVE O HTML TODO PRONTO PARA A PÁGINA
+    document.body.innerHTML = htmlFinal;
+};
 
-        if (container && (g1 || g2)) {
-            container.innerHTML = `
-                <div class="secao" style="text-align:center; background:#fdf5e6; border:1px solid #d4c4a8;">
-                    <h2 style="border:none;">Sua Orientação Vibracional</h2>
-                    ${g1} ${g2}
-                </div>`;
-        }
-    }, 200);
-}
-
+// Desativa o clique direito para proteger o relatório
 document.oncontextmenu = () => false;
 </script>
 </body>
