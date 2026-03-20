@@ -867,7 +867,7 @@ deficiencias: {
     9: `<p>Lição 9</p>
     <p>Esta vibração representa uma necessidade de conscientização constante sobre o significado maior da existência humana, focando na bondade, na humanidade e no altruísmo. <strong>você</strong> deve aprender a agir com compaixão, tolerância e compreensão, ampliando a visão para enxergar a vida sob um aspecto muito mais vasto do que os próprios interesses imediatos. Haverá momentos em que <strong>você</strong> precisará sacrificar ambições egocêntricas em benefício do bem coletivo, percebendo o enorme potencial que possui para influenciar positivamente o destino alheio. Esta não é exatamente uma deficiência, mas uma convocação para despertar a sensibilidade e compartilhar a dor e o sofrimento do próximo de forma solidária e generosa. <strong>você</strong> poderá enfrentar situações de injustiça, julgamentos e agressões ao ego, que servirão como testes para a sua capacidade de abrir mão do orgulho e da vaidade. A lição definitiva para <strong>você</strong> é o aprendizado do perdão e da entrega, entendendo que a verdadeira grandeza reside na capacidade de se doar sem esperar recompensas. Ao abraçar o amor universal, <strong>você</strong> transmuta o sofrimento em sabedoria, tornando-se uma alma carismática e inspiradora que controla o próprio destino através do serviço à vida. A superação do ego permite que <strong>você</strong> conclua a jornada com uma plenitude que transcende o plano material, alcançando a paz de quem compreendeu o mais elevado de todos os sentimentos.</p>`
   },
-const textosModerna = {
+
     deficits: {
         1: "Tendência à impulsividade e dificuldade em ouvir opiniões alheias.",
         2: "Excesso de sensibilidade ou dependência emocional de terceiros.",
