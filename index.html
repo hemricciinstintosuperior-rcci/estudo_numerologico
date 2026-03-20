@@ -141,6 +141,85 @@ function gerarMapa() {
       caminhoVida: reduzir(dia + mes + ano),
       anoPessoal: reduzir(dia + mes + new Date().getFullYear())
   };
+
+  // ============================================
+// NOVOS CÁLCULOS: NUMEROLOGIA MODERNA
+// ============================================
+
+// --- 1. DÉFICIT DE COMPORTAMENTO ---
+// Regra: Dia de Nascimento reduzido + Repetições entre Propósito, Objetivo, Personalidade e Motivação.
+let deficitPrincipal = reduzir(dia);
+let deficitsOcultos = [];
+const listaConferir = [res.missao, res.caminhoVida, res.personalidade, res.motivacao];
+
+// Verifica se há números repetidos na lista
+for (let i = 0; i < listaConferir.length; i++) {
+    for (let j = i + 1; j < listaConferir.length; j++) {
+        if (listaConferir[i] === listaConferir[j]) {
+            deficitsOcultos.push(listaConferir[i]);
+        }
+    }
+}
+// Remove duplicados dos ocultos
+let deficitsFinais = [...new Set([deficitPrincipal, ...deficitsOcultos])];
+
+// --- 2. INCLINAÇÃO OCULTA ---
+// Regra: Números que aparecem 3 ou mais vezes no nome. O 9 sempre está incluso.
+let contagemLetras = {};
+let inclinações = [9]; // O 9 é padrão para todos
+
+const nomeLimpo = nomeInput.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+for (let letra of nomeLimpo) {
+    let num = tabela[letra];
+    if (num) {
+        contagemLetras[num] = (contagemLetras[num] || 0) + 1;
+    }
+}
+
+for (let num in contagemLetras) {
+    if (contagemLetras[num] >= 3 && num != 9) {
+        inclinações.push(Number(num));
+    }
+}
+
+// --- 3. SUBCONSCIENTE ---
+// Regra: 9 menos a quantidade de números faltantes no nome.
+let subconscienteNum = 9 - faltantes.length;
+
+// --- 4. TALENTOS ESPECIAIS E DEFICIÊNCIAS ---
+// Regra: No PRIMEIRO NOME, se um número aparecer o dobro ou mais que qualquer outro.
+let primeiroNome = nomeInput.split(' ')[0].toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+let contagemPrimeiroNome = {};
+for (let letra of primeiroNome) {
+    let num = tabela[letra];
+    if (num) contagemPrimeiroNome[num] = (contagemPrimeiroNome[num] || 0) + 1;
+}
+
+let talentoEspecial = null;
+let maxRepeticao = 0;
+let segundoMaior = 0;
+
+for (let num in contagemPrimeiroNome) {
+    if (contagemPrimeiroNome[num] > maxRepeticao) {
+        segundoMaior = maxRepeticao;
+        maxRepeticao = contagemPrimeiroNome[num];
+        talentoEspecial = num;
+    } else if (contagemPrimeiroNome[num] > segundoMaior) {
+        segundoMaior = contagemPrimeiroNome[num];
+    }
+}
+// Verifica se é o dobro ou mais que o segundo colocado
+if (maxRepeticao < (segundoMaior * 2)) talentoEspecial = null;
+
+// ============================================
+// ADICIONANDO AO OBJETO PREMIUM
+// ============================================
+dadosPremium.moderna = {
+    deficits: deficitsFinais,
+    inclinacoes: inclinações,
+    subconsciente: subconscienteNum,
+    talentoEspecial: talentoEspecial
+},
   res.missao = reduzir(res.caminhoVida + res.personalidade);
 
   // Cálculos Adicionais
