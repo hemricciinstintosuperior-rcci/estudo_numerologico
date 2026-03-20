@@ -208,7 +208,7 @@ function gerarMapa() {
   const nome = nomeInput.toUpperCase();
   const [ano, mes, dia] = dataInput.split("-").map(Number);
 
-  // Cálculos Base
+  // 1. Cálculos de Nome e Faltantes
   let somaV = 0, somaC = 0, usados = new Set();
   for (let l of nome) {
     const valor = calcularValorComAcentos(l);
@@ -218,6 +218,7 @@ function gerarMapa() {
     vogais.includes(base) ? somaV += valor : somaC += valor;
   }
 
+  // 2. Resultados Base
   const res = {
       motivacao: reduzir(somaV),
       influencia: reduzir(somaC),
@@ -229,33 +230,68 @@ function gerarMapa() {
   };
   res.missao = reduzir(res.caminhoVida + res.personalidade);
 
+  // 3. Cálculos de Tempo (Ciclos e Momentos)
+  const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
+  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
+  const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
+  
+  const fim1 = 37 - res.caminhoVida;
+  const fim2 = fim1 + 27;
+
+  // 4. Letras Faltantes
   let faltantes = [];
   for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
-  const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
+  const textoDeficiencias = faltantes.map(num => textos.deficiencias ? textos.deficiencias[num] : "").join("");
 
-  // Dados para o Premium
-  const dadosPremium = { 
-      nome: nomeInput, resultados: res, faltantes, desafios: [d1, d2, d3]
+  // 5. Mapeamento de TEXTOS para o PREMIUM (Aqui vai TUDO)
+  const dadosPremium = {
+    nome: nomeInput,
+    data: dataInput.split("-").reverse().join("/"),
+    resultados: res,
+    faltantes: faltantes,
+    desafios: { d1, d2, d3 },
+    ciclos: { 
+        c1: `0 aos ${fim1} anos`, c2: `${fim1+1} aos ${fim2} anos`, c3: `Acima de ${fim2} anos`,
+        v1: ciclo1, v2: ciclo2, v3: ciclo3 
+    },
+    textos: {
+        motivacao: textos.motivacao[res.motivacao],
+        influencia: textos.influencia[res.influencia],
+        expressao: textos.Personalidade[res.personalidade],
+        destino: textos.CaminhodeVida[res.caminhoVida],
+        missao: textos.Propósito[res.missao],
+        dia: textos.dia[res.diaN],
+        comportamento: textos.comportamento[res.comportamento],
+        anoPessoal: textos.anoPessoal[res.anoPessoal],
+        deficiencias: textoDeficiencias,
+        // Desafios (Proteção contra erro de arquivo textos.js)
+        desafio1: (textos.desafios && textos.desafios[1]) ? textos.desafios[1][d1] : "Texto não encontrado",
+        desafio2: (textos.desafios && textos.desafios[2]) ? textos.desafios[2][d2] : "Texto não encontrado",
+        // Ciclos e Momentos
+        txtCiclo1: (textos.ciclos) ? textos.ciclos[1][ciclo1] : "",
+        txtCiclo2: (textos.ciclos) ? textos.ciclos[2][ciclo2] : "",
+        txtCiclo3: (textos.ciclos) ? textos.ciclos[3][ciclo3] : "",
+        txtMd1: (textos.momentos) ? textos.momentos[1][md1] : "",
+        txtMd2: (textos.momentos) ? textos.momentos[2][md2] : "",
+        txtMd3: (textos.momentos) ? textos.momentos[3][md3] : "",
+        txtMd4: (textos.momentos) ? textos.momentos[4][md4] : ""
+    }
   };
 
-  // Geração do Conteúdo Visual
+  // 6. Geração Visual e LocalStorage
   const htmlAnalise = gerarGraficosIntensidade(res, faltantes, [d1, d2, d3], nomeInput);
   
+  localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
+  localStorage.setItem("graficoParaOPremium", htmlAnalise);
+  
+  // 7. Renderização na tela (Grátis)
   const htmlCardsGratis = `
     ${card("Dia de Nascimento", "Talentos Naturais", res.diaN, textos.dia[res.diaN])}
     ${card("Influência", "Sua Imagem", res.influencia, textos.influencia[res.influencia])}
     ${card("Motivação", "Seu Íntimo", res.motivacao, textos.motivacao[res.motivacao])}
     ${card("Personalidade", "Sua Expressão", res.personalidade, textos.Personalidade[res.personalidade])}
-    ${card("Caminho de Vida", "Seu Destino", res.caminhoVida, textos.CaminhodeVida[res.caminhoVida])}
-    <div class="card" style="background: #fffbeb; border: 2px dashed #d97706; text-align: center;">
-        <p><strong>Relatório Premium desbloqueia Ciclos e Lições Cármicas.</strong></p>
-    </div>
   `;
 
-  // Renderização e LocalStorage
-  localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
-  localStorage.setItem("graficoParaOPremium", htmlAnalise);
-  
   document.getElementById("resultado").innerHTML = htmlAnalise + htmlCardsGratis;
   mapaGerado = true;
   window.scrollTo({ top: document.getElementById("resultado").offsetTop - 20, behavior: 'smooth' });
