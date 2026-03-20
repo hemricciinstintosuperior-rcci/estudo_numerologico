@@ -912,5 +912,32 @@ deficiencias: {
         8: "Reage focando na solução prática e no controle do dano.",
         9: "Mantém a calma e busca uma visão ampla do problema."
 },
+
+
+essencia : {
+    1: "Sua alma vibra na frequência da originalidade. Você busca ser o primeiro, o desbravador. Sua essência é pura iniciativa.",
+    2: "Sua alma busca harmonia e parceria. Você vibra no acolhimento e na sensibilidade de entender o que não é dito.",
+    3: "Sua essência é a alegria e a autoexpressão. Você brilha quando comunica e coloca sua marca criativa no mundo.",
+    4: "Sua alma busca segurança e ordem. Você vibra na construção de bases sólidas e na honestidade absoluta.",
+    5: "Sua essência é a liberdade e o movimento. Você vibra na mudança, na curiosidade e na quebra de padrões antigos.",
+    6: "Sua alma vibra no amor e na responsabilidade familiar. Você busca ser o porto seguro para quem está ao seu redor.",
+    7: "Sua essência é o mistério e a sabedoria. Você busca o conhecimento profundo, a introspecção e a verdade espiritual.",
+    8: "Sua alma vibra na justiça e na eficiência. Você busca o equilíbrio entre o mundo espiritual e o poder material.",
+    9: "Sua essência é a compaixão universal. Você vibra no desapego e no desejo de servir à humanidade de forma ampla."
+},
+
+
+
+equilibrio :{
+    1: "Em momentos de crise, você precisa confiar em si mesmo e evitar o isolamento excessivo.",
+    2: "Seu equilíbrio vem da paciência. Evite a hipersensibilidade e busque o diálogo calmo.",
+    3: "Para se equilibrar, use sua criatividade. Não deixe o pessimismo calar a sua voz.",
+    4: "O equilíbrio vem do método. Respire fundo e coloque os fatos em ordem antes de agir.",
+    5: "Sua estabilidade volta quando você aceita a mudança. Não tente controlar o incontrolável.",
+    6: "Busque o equilíbrio cuidando de si mesmo, não apenas dos outros. Evite a autocrítica.",
+    7: "O equilíbrio surge no silêncio. Tire um tempo para refletir sozinho antes de explodir.",
+    8: "Seu ponto de equilíbrio é a imparcialidade. Use a lógica para não se deixar levar pela raiva.",
+    9: "O equilíbrio vem da aceitação. Deixe ir o que não pode ser mudado para encontrar a paz."
+}
   
 };
