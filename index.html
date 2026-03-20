@@ -231,29 +231,58 @@ function gerarMapa() {
   res.missao = reduzir(res.caminhoVida + res.personalidade);
 
   // 3. Cálculos de Tempo (Ciclos e Momentos)
+// --- Cálculos de Tempo (Ciclos e Momentos) ---
   const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
-  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
-  const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
   
+  // Momentos Decisivos (Pináculos)
+  const md1 = reduzir(dia + mes);
+  const md2 = reduzir(dia + ano);
+  const md3 = reduzir(md1 + md2);
+  const md4 = reduzir(mes + ano);
+  
+  // Desafios
+  const d1 = reduzir(Math.abs(dia - mes));
+  const d2 = reduzir(Math.abs(dia - reduzir(ano)));
+  const d3 = reduzir(Math.abs(d1 - d2)); // Este é o Desafio Principal (Vida Inteira)
+  
+  // Datas dos Ciclos
   const fim1 = 37 - res.caminhoVida;
   const fim2 = fim1 + 27;
 
-  // 4. Letras Faltantes
-  let faltantes = [];
-  for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
-  const textoDeficiencias = faltantes.map(num => textos.deficiencias ? textos.deficiencias[num] : "").join("");
-
-  // 5. Mapeamento de TEXTOS para o PREMIUM (Aqui vai TUDO)
+  // --- Montagem do Objeto Premium (Correção de Undefined) ---
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
     resultados: res,
     faltantes: faltantes,
-    desafios: { d1, d2, d3 },
     ciclos: { 
         c1: `0 aos ${fim1} anos`, c2: `${fim1+1} aos ${fim2} anos`, c3: `Acima de ${fim2} anos`,
         v1: ciclo1, v2: ciclo2, v3: ciclo3 
     },
+    momentos: {
+        m1: md1, m2: md2, m3: md3, m4: md4
+    },
+    textos: {
+        // ... (seus outros textos de motivação, etc) ...
+        deficiencias: textoDeficiencias,
+        
+        // Desafios corrigidos
+        desafio1: (textos.desafios && textos.desafios[1]) ? textos.desafios[1][d1] : "Texto não cadastrado",
+        desafio2: (textos.desafios && textos.desafios[2]) ? textos.desafios[2][d2] : "Texto não cadastrado",
+        desafioGeral: (textos.desafios && textos.desafios[3]) ? textos.desafios[3][d3] : "Texto não cadastrado",
+
+        // Momentos Decisivos (Verifique se no textos.js existe textos.momentos[1][numero])
+        txtMd1: (textos.momentos && textos.momentos[1]) ? textos.momentos[1][md1] : "Momento 1 não definido",
+        txtMd2: (textos.momentos && textos.momentos[2]) ? textos.momentos[2][md2] : "Momento 2 não definido",
+        txtMd3: (textos.momentos && textos.momentos[3]) ? textos.momentos[3][md3] : "Momento 3 não definido",
+        txtMd4: (textos.momentos && textos.momentos[4]) ? textos.momentos[4][md4] : "Momento 4 não definido",
+        
+        // Ciclos
+        txtCiclo1: (textos.ciclos && textos.ciclos[1]) ? textos.ciclos[1][ciclo1] : "",
+        txtCiclo2: (textos.ciclos && textos.ciclos[2]) ? textos.ciclos[2][ciclo2] : "",
+        txtCiclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : ""
+    }
+  };
     textos: {
         motivacao: textos.motivacao[res.motivacao],
         influencia: textos.influencia[res.influencia],
