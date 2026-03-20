@@ -84,71 +84,85 @@
         </div>
     </div>
 
-    <script>
-        window.onload = function() {
-            const d = JSON.parse(localStorage.getItem("dadosMapaPremium"));
-            const g = localStorage.getItem("graficoParaOPremium");
-            if(!d) return;
-
-            // Capa
-            document.getElementById("nome-capa").innerText = d.nome;
-            document.getElementById("container-graficos").innerHTML = g;
-
-            const t = d.textos;
-            const r = d.resultados;
-
-            // Pilares
-            document.getElementById("secao-pilares").innerHTML = `
-                <h3><span class="numero-destaque">${r.motivacao}</span> Motivação</h3> <p>${t.motivacao}</p>
-                <h3><span class="numero-destaque">${r.personalidade}</span> Expressão</h3> <p>${t.expressao}</p>
-                <h3><span class="numero-destaque">${r.influencia}</span> Influência</h3> <p>${t.influencia}</p>
-            `;
-
-            // Destino
-            document.getElementById("secao-destino").innerHTML = `
-                <h3><span class="numero-destaque">${r.caminhoVida}</span> Caminho de Vida</h3> <p>${t.destino}</p>
-                <h3><span class="numero-destaque">${r.missao}</span> Missão de Vida</h3> <p>${t.missao}</p>
-            `;
-
-            // Ciclos
-            document.getElementById("secao-ciclos").innerHTML = `
-                <div class="box-info"><strong>Ciclo 1 (${d.ciclos.c1}):</strong> ${d.ciclos.c1} - ${t.txtCiclo1}</div>
-                <div class="box-info"><strong>Ciclo 2 (${d.ciclos.c2}):</strong> ${d.ciclos.c2} - ${t.txtCiclo2}</div>
-                <div class="box-info"><strong>Ciclo 3 (${d.ciclos.c3}):</strong> ${d.ciclos.c3} - ${t.txtCiclo3}</div>
-            `;
-
-            // Momentos
-            document.getElementById("secao-momentos").innerHTML = `
-                <div class="grid-premium">
-                    <div class="box-info"><strong>1º Momento (${r.md1}):</strong><br>${t.txtMd1}</div>
-                    <div class="box-info"><strong>2º Momento (${r.md2}):</strong><br>${t.txtMd2}</div>
-                    <div class="box-info"><strong>3º Momento (${r.md3}):</strong><br>${t.txtMd3}</div>
-                    <div class="box-info"><strong>4º Momento (${r.md4}):</strong><br>${t.txtMd4}</div>
-                </div>
-            `;
-
-// Localize onde você injeta os desafios no premiummapa.html e substitua:
-document.getElementById("secao-desafios").innerHTML = `
-    <h3>Lições Cármicas (Faltas no Nome)</h3> 
-    <p>${t.deficiencias || "Nenhuma lição detectada."}</p>
-    
-    <div class="box-info" style="margin-top:20px;">
-        <h4 style="color:var(--gold); margin:0;">🚫 Desafio 1 (Início da Vida)</h4>
-        <p>${t.desafio1}</p>
-    </div>
-    <div class="box-info" style="margin-top:10px;">
-        <h4 style="color:var(--gold); margin:0;">🚫 Desafio 2 (Fase Madura)</h4>
-        <p>${t.desafio2}</p>
-    </div>
-    <div class="box-info" style="margin-top:10px; border: 2px solid var(--gold);">
-        <h4 style="color:var(--dark); margin:0;">⚠️ DESAFIO PRINCIPAL (Vida Inteira)</h4>
-        <p><strong>Número: ${d.desafios.d3}</strong> - ${t.desafioGeral}</p>
-    </div>
-`;
-
-            document.getElementById("num-ano").innerText = r.anoPessoal;
-            document.getElementById("txt-ano").innerHTML = `<p>${t.anoPessoal}</p>`;
+<script>
+    window.onload = function() {
+        // Pega os dados salvos pelo index.html
+        const d = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+        const g = localStorage.getItem("graficoParaOPremium");
+        
+        if(!d) {
+            alert("Nenhum dado encontrado. Por favor, gere o mapa primeiro.");
+            return;
         }
-    </script>
+
+        const t = d.textos;
+        const r = d.resultados;
+        const p = d.periodos;
+
+        // 1. Capa e Gráficos
+        document.getElementById("nome-capa").innerText = d.nome;
+        document.getElementById("container-graficos").innerHTML = g || "<p>Gráficos não gerados.</p>";
+
+        // 2. Os Pilares do Ser
+        document.getElementById("secao-pilares").innerHTML = `
+            <h3><span class="numero-destaque">${r.motivacao}</span> Motivação</h3> <p>${t.motivacao}</p>
+            <h3><span class="numero-destaque">${r.personalidade}</span> Expressão</h3> <p>${t.expressao}</p>
+            <h3><span class="numero-destaque">${r.influencia}</span> Influência</h3> <p>${t.influencia}</p>
+            <h3><span class="numero-destaque">${r.comportamento}</span> Comportamento</h3> <p>${t.comportamento}</p>
+        `;
+
+        // 3. Missão e Destino
+        document.getElementById("secao-destino").innerHTML = `
+            <h3><span class="numero-destaque">${r.caminhoVida}</span> Caminho de Vida (Destino)</h3> <p>${t.destino}</p>
+            <h3><span class="numero-destaque">${r.missao}</span> Missão de Vida</h3> <p>${t.missao}</p>
+        `;
+
+        // 4. Ciclos de Vida (Usando as datas calculadas d.periodos)
+        document.getElementById("secao-ciclos").innerHTML = `
+            <div class="box-info" style="margin-bottom:10px;">
+                <strong>1º Ciclo (${p.ciclo1}):</strong><br>${t.ciclo1}
+            </div>
+            <div class="box-info" style="margin-bottom:10px;">
+                <strong>2º Ciclo (${p.ciclo2}):</strong><br>${t.ciclo2}
+            </div>
+            <div class="box-info">
+                <strong>3º Ciclo (${p.ciclo3}):</strong><br>${t.ciclo3}
+            </div>
+        `;
+
+        // 5. Momentos Decisivos (Pináculos)
+        document.getElementById("secao-momentos").innerHTML = `
+            <div class="grid-premium">
+                <div class="box-info"><strong>1º Momento (${p.md1}):</strong><br>${t.md1}</div>
+                <div class="box-info"><strong>2º Momento (${p.md2}):</strong><br>${t.md2}</div>
+                <div class="box-info"><strong>3º Momento (${p.md3}):</strong><br>${t.md3}</div>
+                <div class="box-info"><strong>4º Momento (${p.md4}):</strong><br>${t.md4}</div>
+            </div>
+        `;
+
+        // 6. Desafios e Lições Cármicas (Incluindo o Desafio Geral d3)
+        document.getElementById("secao-desafios").innerHTML = `
+            <h3>Lições Cármicas (Faltas no Nome)</h3> 
+            <p>${t.deficiencias || "Nenhuma lição ou dívida cármica detectada para este nome."}</p>
+            
+            <div class="box-info" style="margin-top:20px;">
+                <h4 style="color:var(--gold); margin:0;">🚫 Desafio 1 (Início da Vida)</h4>
+                <p>${t.d1}</p>
+            </div>
+            <div class="box-info" style="margin-top:10px;">
+                <h4 style="color:var(--gold); margin:0;">🚫 Desafio 2 (Fase Madura)</h4>
+                <p>${t.d2}</p>
+            </div>
+            <div class="box-info" style="margin-top:10px; border: 2px solid var(--gold); background: #fffdf5;">
+                <h4 style="color:var(--dark); margin:0;">⚠️ DESAFIO PRINCIPAL (Vida Inteira)</h4>
+                <p>${t.d3}</p>
+            </div>
+        `;
+
+        // 7. Ano Pessoal
+        document.getElementById("num-ano").innerText = r.anoPessoal;
+        document.getElementById("txt-ano").innerHTML = `<p>${t.anoPessoal}</p>`;
+    }
+</script>
 </body>
 </html>
