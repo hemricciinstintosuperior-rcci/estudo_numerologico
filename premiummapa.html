@@ -110,6 +110,8 @@ h2 {
       <div style="margin-top:10px;">{{DATA}}</div>
     </div>
 
+ <div id="container-do-grafico-premium"></div>
+
     <div class="secao">
         <h2>Dia de Nascimento</h2>
         <div class="explicacao">
@@ -272,16 +274,20 @@ window.onload = function() {
 
     // 5. O PULO DO GATO: INJETAR O GRÁFICO
     // Criamos o bloco do gráfico com o que veio do Index
-    if (g1) {
-        const blocoDoGrafico = `
+// 5. O PULO DO GATO: INJETAR O GRÁFICO NA DIV FIXA
+    // Primeiro, devolvemos o texto para a página
+    document.body.innerHTML = htmlFinal;
+
+    // Agora, colocamos o gráfico dentro da casinha dele
+    const areaDoGrafico = document.getElementById("container-do-grafico-premium");
+    if (g1 && areaDoGrafico) {
+        areaDoGrafico.innerHTML = `
             <div class="secao" style="background:#fdf5e6; border:2px solid #d4c4a8; margin-bottom:30px; text-align:center; padding:20px; border-radius:12px;">
                 <h2 style="border:none; color:#5d4037; margin-bottom:20px;">Sua Orientação Vibracional</h2>
                 ${g1} 
                 <div style="margin-top:20px;">${g2 || ""}</div>
             </div>`;
-        
-        // Procuramos o título "Dia de Nascimento" e colocamos o gráfico LOGO ACIMA dele
-        htmlFinal = htmlFinal.replace('<h2>Dia de Nascimento</h2>', blocoDoGrafico + '<h2>Dia de Nascimento</h2>');
+        console.log("Gráfico entregue no destino certo!");
     }
 
     // 6. DEVOLVE O HTML TODO PRONTO PARA A PÁGINA
