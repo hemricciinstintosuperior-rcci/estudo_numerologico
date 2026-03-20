@@ -201,17 +201,22 @@ function gerarMapa() {
   const fim1 = 37 - res.caminhoVida, fim2 = fim1 + 27;
 
   // 6. Montagem do Objeto Premium Final
+// --- MONTAGEM DO PACOTE PREMIUM FINAL ---
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
     resultados: res,
+    // Garanta que este bloco 'moderna' esteja aqui:
     moderna: {
         deficits: deficitsFinais,
         inclinacoes: inclinacoes,
         subconsciente: subconscienteNum,
         talentoEspecial: talentoEsp
     },
-    periodos: { ciclo1: `0-${fim1}`, ciclo2: `${fim1+1}-${fim2}`, ciclo3: `>${fim2}`, md1: `0-${fim1}`, md2: `${fim1+1}-${fim1+9}`, md3: `${fim1+10}-${fim1+18}`, md4: `>${fim2}` },
+    periodos: { 
+        ciclo1: `0-${fim1}`, ciclo2: `${fim1+1}-${fim2}`, ciclo3: `>${fim2}`, 
+        md1: `0-${fim1}`, md2: `${fim1+1}-${fim1+9}`, md3: `${fim1+10}-${fim1+18}`, md4: `>${fim2}` 
+    },
     textos: {
         dia: textos.dia[res.diaN],
         motivacao: textos.motivacao[res.motivacao],
@@ -234,6 +239,9 @@ function gerarMapa() {
         deficiencias: faltantes.map(n => (textos.deficiencias ? textos.deficiencias[n] : "")).join(" ")
     }
   };
+
+  // Salva no Navegador
+  localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
 
   // 7. Exibição e Storage
   const htmlGraficos = gerarGraficosIntensidade(res, faltantes, [d1, d2, d3], nomeInput);
