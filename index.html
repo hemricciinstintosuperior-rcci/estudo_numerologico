@@ -254,7 +254,7 @@ function gerarMapa() {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
     resultados: {
-        diaN, motivacao, influencia, personalidade, comportamento, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
+        dia, motivacao, influencia, personalidade, comportamento, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
     },
     periodos: {
         ciclo1: `0 aos ${fim1} anos`,
@@ -267,7 +267,7 @@ function gerarMapa() {
  },
 // --- Início do Objeto de Textos ---
 textos: {
-        diaN: textos.dia[diaN],
+        dia: textos.dia[diaN],
         motivacao: textos.motivacao[motivacao],
         influencia: textos.influencia[influencia],
         expressao: textos.Personalidade[personalidade],
