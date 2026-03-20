@@ -174,12 +174,39 @@ function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafio
 
 // Dentro da função gerarGraficosIntensidade, mude o loop para:
 
+function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto) {
+    let rankingGeral = [];
+    
+    // 1. Processa as notas de todas as legendas do banco
+    for (let legenda in bancoLegendasCompleto) {
+        const dados = bancoLegendasCompleto[legenda];
+        const nota = calcularIntensidadeAtributo(dados.nums, resultados, faltantes, desafios, nomeCompleto);
+        rankingGeral.push({ nome: legenda, nota: parseFloat(nota), categoria: dados.cat });
+    }
+
+    // 2. Ordena do maior para o menor para definir o ranking
+    rankingGeral.sort((a, b) => b.nota - a.nota);
+    const instintoSuperior = rankingGeral[0];
+
+    const categorias = ["Realização", "Mentalidade", "Social", "Essência", "Evolução"];
+    
+    // 3. HEADER DE IMPACTO (Instinto Superior)
+    let html = `
+        <div class="card" style="background: #0a0e1a; color: #d4af37; border: 2px solid #d4af37; text-align:center; padding: 25px; margin-bottom: 30px;">
+            <h2 style="margin:0; font-size: 14px; letter-spacing:3px; opacity: 0.8; border:none;">FORÇA PREDOMINANTE</h2>
+            <div style="font-size: 32px; font-weight: bold; margin: 10px 0; text-transform: uppercase;">${instintoSuperior.nome}</div>
+            <p style="color: white; font-size: 13px; margin:0; opacity: 0.9;">Este é o seu Instinto Superior, a frequência que domina seu campo vibracional hoje.</p>
+        </div>
+    `;
+
+    // 4. LOOP DAS CATEGORIAS (Mostrando os 3 melhores de cada pilar)
     categorias.forEach(cat => {
-        // Agora pegamos os 3 MELHORES de cada categoria
         const itensDaCat = rankingGeral.filter(item => item.categoria === cat).slice(0, 3);
         
-        html += `<div class="card" style="border-top: 3px solid #d4af37; margin-bottom: 25px;">
-                    <h3 style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Pilar de ${cat}</h3>`;
+        html += `
+            <div class="card" style="border-top: 4px solid #d4af37; margin-bottom: 25px;">
+                <h3 style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border:none;">Análise do Pilar de ${cat}</h3>
+        `;
         
         itensDaCat.forEach(item => {
             const porcento = item.nota * 10;
@@ -189,8 +216,8 @@ function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafio
                         <span>${item.nome}</span>
                         <span style="color: #d4af37;">${Math.round(porcento)}%</span>
                     </div>
-                    <div style="height: 5px; background: #f0f0f0; border-radius: 10px; overflow: hidden; margin-top:6px;">
-                        <div style="width: ${porcento}%; height: 100%; background: #d4af37; box-shadow: 0 0 10px rgba(212,175,55,0.3); transition: width 2s;"></div>
+                    <div style="height: 6px; background: #f0f0f0; border-radius: 10px; overflow: hidden; margin-top:6px;">
+                        <div style="width: ${porcento}%; height: 100%; background: #d4af37; box-shadow: 0 0 10px rgba(212,175,55,0.2); transition: width 2s;"></div>
                     </div>
                 </div>
             `;
@@ -199,6 +226,25 @@ function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafio
         html += `</div>`;
     });
 
+    // 5. PONTOS DE ATENÇÃO (As 4 menores notas do ranking total)
+    const pontosAtencao = rankingGeral.slice(-4).reverse();
+    html += `
+        <div class="card" style="background: #fff5f5; border: 1px solid #ffcccc; margin-top: 10px;">
+            <h3 style="color: #c53030; margin-top:0; border:none; font-size: 16px;">⚠️ NECESSIDADES DE DESENVOLVIMENTO</h3>
+            <p style="font-size: 12px; color: #9b2c2c; margin-bottom: 15px;">Frequências em baixa voltagem que precisam de atenção consciente:</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                ${pontosAtencao.map(item => `
+                    <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid #fee2e2; font-size: 13px; font-weight: bold; color: #444; text-align:center;">
+                        ${item.nome} <br>
+                        <span style="color: #c53030; font-size: 11px;">${Math.round(item.nota * 10)}% de Potência</span>
+                    </div>
+                `).join("")}
+            </div>
+        </div>
+    `;
+
+    return html;
+}
 let mapaGerado = false;
 
 function gerarMapa() {
