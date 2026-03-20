@@ -102,99 +102,68 @@
 
     <script src="textos.js"></script>
     <script>
-        window.onload = function() {
-            const d = JSON.parse(localStorage.getItem("dadosMapaPremium"));
-            const g = localStorage.getItem("graficoParaOPremium");
-            
-            if(!d) {
-                alert("Nenhum dado encontrado.");
-                return;
-            }
+window.onload = function() {
+    const d = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+    const g = localStorage.getItem("graficoParaOPremium");
+    
+    if(!d) return alert("Erro: Dados não encontrados.");
 
-            const t = d.textos;
-            const r = d.resultados;
-            const p = d.periodos;
-            const m = d.moderna;
+    document.getElementById("nome-capa").innerText = d.nome;
+    document.getElementById("container-graficos").innerHTML = g;
 
-            document.getElementById("nome-capa").innerText = d.nome;
-            document.getElementById("container-graficos").innerHTML = g || "";
+    const t = d.textos;
+    const r = d.resultados;
+    const p = d.periodos;
+    const m = d.moderna;
 
-            // Pilares
-            document.getElementById("secao-pilares").innerHTML = `
-                <h3><span class="numero-destaque">${r.motivacao}</span> Motivação</h3> <p>${t.motivacao}</p>
-                <h3><span class="numero-destaque">${r.personalidade}</span> Expressão</h3> <p>${t.expressao}</p>
-                <h3><span class="numero-destaque">${r.influencia}</span> Influência</h3> <p>${t.influencia}</p>
-                <h3><span class="numero-destaque">${r.comportamento}</span> Comportamento</h3> <p>${t.comportamento}</p>
-            `;
+    // Pilares e Destino
+    document.getElementById("secao-pilares").innerHTML = `
+        <h3><span class="numero-destaque">${r.motivacao}</span> Motivação</h3> <p>${t.motivacao}</p>
+        <h3><span class="numero-destaque">${r.personalidade}</span> Expressão</h3> <p>${t.expressao}</p>
+        <h3><span class="numero-destaque">${r.influencia}</span> Influência</h3> <p>${t.influencia}</p>
+    `;
+    
+    document.getElementById("secao-destino").innerHTML = `
+        <h3><span class="numero-destaque">${r.caminhoVida}</span> Caminho de Vida</h3> <p>${t.destino}</p>
+        <h3><span class="numero-destaque">${r.missao}</span> Propósito</h3> <p>${t.missao}</p>
+    `;
 
-            // Destino
-            document.getElementById("secao-destino").innerHTML = `
-                <h3><span class="numero-destaque">${r.caminhoVida}</span> Caminho de Vida</h3> <p>${t.destino}</p>
-                <h3><span class="numero-destaque">${r.missao}</span> Missão de Vida</h3> <p>${t.missao}</p>
-            `;
+    // Déficits - Puxando do textos.js global
+    document.getElementById("secao-deficits").innerHTML = m.deficits.map((num, i) => `
+        <div class="box-info">
+            <strong>${i === 0 ? "Déficit Recorrente" : "Déficit Oculto"} (Vibração ${num}):</strong> 
+            ${textos.deficits[num]}
+        </div>
+    `).join("");
 
-            // NOVO: Déficits (Numerologia Moderna)
-            // Note que usamos textosModerna (que definimos na mensagem anterior)
-            document.getElementById("secao-deficits").innerHTML = m.deficits.map(num => `
-                <div class="box-info">
-                    <strong>Vibração ${num}:</strong> ${textosModerna.deficits[num]}
-                </div>
-            `).join("");
+    // Subconsciente e Inclinações
+    document.getElementById("secao-subconsciente").innerHTML = `<div class="box-info">${textos.subconsciente[m.subconsciente]}</div>`;
+    document.getElementById("secao-inclinacoes").innerHTML = m.inclinacoes.map(num => `<div class="box-info">${textos.inclinacoes[num]}</div>`).join("");
 
-            // NOVO: Subconsciente
-            document.getElementById("secao-subconsciente").innerHTML = `
-                <div class="box-info" style="border-left: 5px solid var(--gold);">
-                    <strong>Número ${m.subconsciente}:</strong> ${textosModerna.subconsciente[m.subconsciente]}
-                </div>
-            `;
+    // Ciclos, Momentos e Desafios
+    document.getElementById("secao-ciclos").innerHTML = `
+        <div class="box-info"><strong>1º Ciclo (${p.ciclo1}):</strong><br>${t.ciclo1}</div>
+        <div class="box-info"><strong>2º Ciclo (${p.ciclo2}):</strong><br>${t.ciclo2}</div>
+        <div class="box-info"><strong>3º Ciclo (${p.ciclo3}):</strong><br>${t.ciclo3}</div>
+    `;
+    
+    document.getElementById("secao-momentos").innerHTML = `
+        <div class="grid-premium">
+            <div class="box-info"><strong>1º:</strong> ${t.md1}</div>
+            <div class="box-info"><strong>2º:</strong> ${t.md2}</div>
+            <div class="box-info"><strong>3º:</strong> ${t.md3}</div>
+            <div class="box-info"><strong>4º:</strong> ${t.md4}</div>
+        </div>
+    `;
 
-            // NOVO: Inclinações
-            document.getElementById("secao-inclinacoes").innerHTML = m.inclinacoes.map(num => `
-                <div class="box-info">
-                    <strong>Tendência Oculta ${num}:</strong> ${textosModerna.inclinacoes[num]}
-                </div>
-            `).join("");
+    document.getElementById("secao-desafios").innerHTML = `
+        <h3>Lições Cármicas</h3> <p>${t.deficiencias}</p>
+        <div class="box-info"><strong>Desafio Principal:</strong> ${t.d3}</div>
+    `;
 
-            // NOVO: Talento Especial (Se existir)
-            if(m.talentoEspecial) {
-                document.getElementById("area-talento-especial").innerHTML = `
-                    <h2>7. Talento Especial Detectado</h2>
-                    <div class="box-info" style="border: 2px solid var(--gold); background: #fffdf5;">
-                        <h3 style="margin-top:0;">🌟 Super Poder Vibracional: ${m.talentoEspecial}</h3>
-                        <p>${textosModerna.talento}</p>
-                    </div>
-                `;
-            }
-
-            // Ciclos e Momentos
-            document.getElementById("secao-ciclos").innerHTML = `
-                <div class="box-info"><strong>1º Ciclo (${p.ciclo1}):</strong><br>${t.ciclo1}</div>
-                <div class="box-info"><strong>2º Ciclo (${p.ciclo2}):</strong><br>${t.ciclo2}</div>
-                <div class="box-info"><strong>3º Ciclo (${p.ciclo3}):</strong><br>${t.ciclo3}</div>
-            `;
-
-            document.getElementById("secao-momentos").innerHTML = `
-                <div class="grid-premium">
-                    <div class="box-info"><strong>1º Momento (${p.md1}):</strong><br>${t.md1}</div>
-                    <div class="box-info"><strong>2º Momento (${p.md2}):</strong><br>${t.md2}</div>
-                    <div class="box-info"><strong>3º Momento (${p.md3}):</strong><br>${t.md3}</div>
-                    <div class="box-info"><strong>4º Momento (${p.md4}):</strong><br>${t.md4}</div>
-                </div>
-            `;
-
-            // Desafios
-            document.getElementById("secao-desafios").innerHTML = `
-                <h3>Lições Cármicas</h3> 
-                <p>${t.deficiencias || "Nenhuma lição detectada."}</p>
-                <div class="box-info"><strong>Desafio 1:</strong> ${t.d1}</div>
-                <div class="box-info"><strong>Desafio 2:</strong> ${t.d2}</div>
-                <div class="box-info" style="border: 2px solid var(--gold);"><strong>DESAFIO PRINCIPAL:</strong> ${t.d3}</div>
-            `;
-   // Abre o relatório premium
-   window.open("premiummapa.html", "_blank");
-            document.getElementById("num-ano").innerText = r.anoPessoal;
-            document.getElementById("txt-ano").innerHTML = `<p>${t.anoPessoal}</p>`;
-        }
+    document.getElementById("num-ano").innerText = r.anoPessoal;
+    document.getElementById("txt-ano").innerHTML = t.anoPessoal;
+}
     </script>
 </body>
 </html>
