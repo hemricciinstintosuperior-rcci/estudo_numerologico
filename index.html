@@ -51,9 +51,10 @@ const bancoAtributos = {
 };
 
 function reduzir(n) {
+  if (n === 0) return 0;
   n = Math.abs(n);
-  while (n > 9) { n = n.toString().split("").reduce((a,b)=>a+Number(b),0); }
-  return n;
+  let r = n % 9;
+  return r === 0 ? 9 : r;
 }
 
 function calcularValorComAcentos(letra) {
@@ -61,9 +62,13 @@ function calcularValorComAcentos(letra) {
   const valorBase = tabela[base];
   if (!valorBase) return 0;
   let soma = 0, mult = 1;
-  for (let c of letra.normalize("NFD")) {
-    if (c === "\u0301") soma += 2; else if (c === "\u0302") soma += 7;
-    else if (c === "\u0303") soma += 3; else if (c === "\u0327") soma += 6;
+  const normalizada = letra.normalize("NFD");
+  for (let i = 1; i < normalizada.length; i++) {
+    const c = normalizada[i];
+    if (c === "\u0301") soma += 2; 
+    else if (c === "\u0302") soma += 7;
+    else if (c === "\u0303") soma += 3; 
+    else if (c === "\u0327") soma += 6;
     else if (c === "\u0300" || c === "\u0308") mult *= 2;
   }
   return (valorBase + soma) * mult;
@@ -72,9 +77,8 @@ function calcularValorComAcentos(letra) {
 function aplicarFiltroTexto(texto) {
     if (!texto) return "";
     let nomeInput = document.getElementById("nome").value.trim();
-    let nome = nomeInput.split(' ')[0] || "você";
-    const regex = /você/gi;
-    return texto.replace(regex, `<strong>${nome}</strong>`);
+    let pNome = nomeInput.split(' ')[0] || "você";
+    return texto.replace(/você/gi, `<strong>${pNome}</strong>`);
 }
 
 function card(titulo, subtitulo, numero, textoRaw) {
@@ -83,13 +87,13 @@ function card(titulo, subtitulo, numero, textoRaw) {
 
 function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafios, nome) {
     let intensidade = 0;
+    const nomeLimpo = nome.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     numerosAlvo.forEach(num => {
         if (resultados.motivacao === num) intensidade += 3.5;
         if (resultados.personalidade === num) intensidade += 3.5;
         if (resultados.influencia === num) intensidade += 2.0;
         if (resultados.diaN === num) intensidade += 2.5;
         if (resultados.comportamento === num) intensidade += 2.0;
-        const nomeLimpo = nome.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         for (let letra of nomeLimpo) { if (tabela[letra] === num) intensidade += 0.4; }
         if (faltantes.includes(num)) intensidade -= 3.0;
         if (desafios.includes(num)) intensidade -= 1.5;
@@ -100,7 +104,7 @@ function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafio
 function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto) {
     let html = "";
     for (let categoria in bancoAtributos) {
-        const legendas = Object.keys(bancoAtributos[categoria]).sort((a,b) => a.localeCompare(b));
+        const legendas = Object.keys(bancoAtributos[categoria]).sort();
         html += `<div class="card" style="border-top: 4px solid #d4af37;"><h2>${categoria.toUpperCase()}</h2>`;
         legendas.forEach(legenda => {
             const nota = calcularIntensidadeAtributo(bancoAtributos[categoria][legenda], resultados, faltantes, desafios, nomeCompleto);
@@ -120,18 +124,21 @@ function gerarMapa() {
   const dataInput = document.getElementById("data").value;
   if(nomeInput.length < 5 || !dataInput) { alert("Preencha nome completo e data."); return; }
 
-  const nome = nomeInput.toUpperCase();
   const [ano, mes, dia] = dataInput.split("-").map(Number);
+  const nomeUp = nomeInput.toUpperCase();
 
+  // 1. Cálculos Base de Nome
   let somaV = 0, somaC = 0, usados = new Set();
-  for (let l of nome) {
+  for (let l of nomeUp) {
     const valor = calcularValorComAcentos(l);
     if (!valor) continue;
     const base = l.normalize("NFD")[0];
-    usados.add(tabela[base] || 0);
+    const valTabela = tabela[base];
+    if(valTabela) usados.add(valTabela);
     vogais.includes(base) ? somaV += valor : somaC += valor;
   }
 
+  // 2. Montagem dos Resultados Principais
   const res = {
       diaN: dia,
       motivacao: reduzir(somaV),
@@ -141,101 +148,69 @@ function gerarMapa() {
       caminhoVida: reduzir(dia + mes + ano),
       anoPessoal: reduzir(dia + mes + new Date().getFullYear())
   };
-
-  // ============================================
-// NOVOS CÁLCULOS: NUMEROLOGIA MODERNA
-// ============================================
-
-// --- 1. DÉFICIT DE COMPORTAMENTO ---
-// Regra: Dia de Nascimento reduzido + Repetições entre Propósito, Objetivo, Personalidade e Motivação.
-let deficitPrincipal = reduzir(dia);
-let deficitsOcultos = [];
-const listaConferir = [res.missao, res.caminhoVida, res.personalidade, res.motivacao];
-
-// Verifica se há números repetidos na lista
-for (let i = 0; i < listaConferir.length; i++) {
-    for (let j = i + 1; j < listaConferir.length; j++) {
-        if (listaConferir[i] === listaConferir[j]) {
-            deficitsOcultos.push(listaConferir[i]);
-        }
-    }
-}
-// Remove duplicados dos ocultos
-let deficitsFinais = [...new Set([deficitPrincipal, ...deficitsOcultos])];
-
-// --- 2. INCLINAÇÃO OCULTA ---
-// Regra: Números que aparecem 3 ou mais vezes no nome. O 9 sempre está incluso.
-let contagemLetras = {};
-let inclinações = [9]; // O 9 é padrão para todos
-
-const nomeLimpo = nomeInput.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-for (let letra of nomeLimpo) {
-    let num = tabela[letra];
-    if (num) {
-        contagemLetras[num] = (contagemLetras[num] || 0) + 1;
-    }
-}
-
-for (let num in contagemLetras) {
-    if (contagemLetras[num] >= 3 && num != 9) {
-        inclinações.push(Number(num));
-    }
-}
-
-// --- 3. SUBCONSCIENTE ---
-// Regra: 9 menos a quantidade de números faltantes no nome.
-let subconscienteNum = 9 - faltantes.length;
-
-// --- 4. TALENTOS ESPECIAIS E DEFICIÊNCIAS ---
-// Regra: No PRIMEIRO NOME, se um número aparecer o dobro ou mais que qualquer outro.
-let primeiroNome = nomeInput.split(' ')[0].toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-let contagemPrimeiroNome = {};
-for (let letra of primeiroNome) {
-    let num = tabela[letra];
-    if (num) contagemPrimeiroNome[num] = (contagemPrimeiroNome[num] || 0) + 1;
-}
-
-let talentoEspecial = null;
-let maxRepeticao = 0;
-let segundoMaior = 0;
-
-for (let num in contagemPrimeiroNome) {
-    if (contagemPrimeiroNome[num] > maxRepeticao) {
-        segundoMaior = maxRepeticao;
-        maxRepeticao = contagemPrimeiroNome[num];
-        talentoEspecial = num;
-    } else if (contagemPrimeiroNome[num] > segundoMaior) {
-        segundoMaior = contagemPrimeiroNome[num];
-    }
-}
-// Verifica se é o dobro ou mais que o segundo colocado
-if (maxRepeticao < (segundoMaior * 2)) talentoEspecial = null;
-
-// ============================================
-// ADICIONANDO AO OBJETO PREMIUM
-// ============================================
-dadosPremium.moderna = {
-    deficits: deficitsFinais,
-    inclinacoes: inclinações,
-    subconsciente: subconscienteNum,
-    talentoEspecial: talentoEspecial
-},
   res.missao = reduzir(res.caminhoVida + res.personalidade);
 
-  // Cálculos Adicionais
-  const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
-  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
-  const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
-  const fim1 = 37 - res.caminhoVida, fim2 = fim1 + 27;
-
+  // 3. Faltantes e Desafios (Necessário para a Moderna e Gráficos)
   let faltantes = [];
   for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
-  let textoDeficiencias = faltantes.map(n => (textos.deficiencias ? textos.deficiencias[n] : "")).join(" ");
 
+  const d1 = reduzir(Math.abs(dia - mes));
+  const d2 = reduzir(Math.abs(dia - reduzir(ano)));
+  const d3 = reduzir(Math.abs(d1 - d2));
+
+  // 4. NUMEROLOGIA MODERNA
+  let deficitPrincipal = reduzir(dia);
+  let deficitsOcultos = [];
+  const listaConferir = [res.missao, res.caminhoVida, res.personalidade, res.motivacao];
+  for (let i = 0; i < listaConferir.length; i++) {
+      for (let j = i + 1; j < listaConferir.length; j++) {
+          if (listaConferir[i] === listaConferir[j]) deficitsOcultos.push(listaConferir[i]);
+      }
+  }
+  let deficitsFinais = [...new Set([deficitPrincipal, ...deficitsOcultos])];
+
+  let contagemLetras = {};
+  let inclinacoes = [9];
+  const nomeLimpo = nomeUp.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  for (let letra of nomeLimpo) {
+      let num = tabela[letra];
+      if (num) contagemLetras[num] = (contagemLetras[num] || 0) + 1;
+  }
+  for (let num in contagemLetras) {
+      if (contagemLetras[num] >= 3 && num != 9) inclinacoes.push(Number(num));
+  }
+
+  let subconscienteNum = 9 - faltantes.length;
+
+  let primeiroNome = nomeInput.split(' ')[0].toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  let contPN = {};
+  for (let letra of primeiroNome) {
+      let num = tabela[letra];
+      if (num) contPN[num] = (contPN[num] || 0) + 1;
+  }
+  let talentoEsp = null, maxR = 0, segR = 0;
+  for (let num in contPN) {
+      if (contPN[num] > maxR) { segR = maxR; maxR = contPN[num]; talentoEsp = num; }
+      else if (contPN[num] > segR) segR = contPN[num];
+  }
+  if (maxR < (segR * 2) || maxR === 0) talentoEsp = null;
+
+  // 5. Períodos e Ciclos
+  const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
+  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
+  const fim1 = 37 - res.caminhoVida, fim2 = fim1 + 27;
+
+  // 6. Montagem do Objeto Premium Final
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
     resultados: res,
+    moderna: {
+        deficits: deficitsFinais,
+        inclinacoes: inclinacoes,
+        subconsciente: subconscienteNum,
+        talentoEspecial: talentoEsp
+    },
     periodos: { ciclo1: `0-${fim1}`, ciclo2: `${fim1+1}-${fim2}`, ciclo3: `>${fim2}`, md1: `0-${fim1}`, md2: `${fim1+1}-${fim1+9}`, md3: `${fim1+10}-${fim1+18}`, md4: `>${fim2}` },
     textos: {
         dia: textos.dia[res.diaN],
@@ -256,15 +231,16 @@ dadosPremium.moderna = {
         d2: (textos.desafios) ? textos.desafios[2][d2] : "",
         d3: (textos.desafios) ? textos.desafios[3][d3] : "",
         anoPessoal: textos.anoPessoal[res.anoPessoal],
-        deficiencias: textoDeficiencias
+        deficiencias: faltantes.map(n => (textos.deficiencias ? textos.deficiencias[n] : "")).join(" ")
     }
   };
 
-  const htmlAnalise = gerarGraficosIntensidade(res, faltantes, [d1, d2, d3], nomeInput);
+  // 7. Exibição e Storage
+  const htmlGraficos = gerarGraficosIntensidade(res, faltantes, [d1, d2, d3], nomeInput);
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
-  localStorage.setItem("graficoParaOPremium", htmlAnalise);
+  localStorage.setItem("graficoParaOPremium", htmlGraficos);
   
-  document.getElementById("resultado").innerHTML = htmlAnalise + 
+  document.getElementById("resultado").innerHTML = htmlGraficos + 
     card("Dia de Nascimento", "Talentos Naturais", res.diaN, textos.dia[res.diaN]) +
     card("Influência", "Sua Imagem", res.influencia, textos.influencia[res.influencia]) +
     card("Motivação", "Seu Íntimo", res.motivacao, textos.motivacao[res.motivacao]) +
