@@ -253,15 +253,17 @@ function gerarMapa() {
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
-    resultados: res,
-    faltantes: faltantes,
-    ciclos: { 
-        c1: `0 aos ${fim1} anos`, c2: `${fim1+1} aos ${fim2} anos`, c3: `Acima de ${fim2} anos`,
-        v1: ciclo1, v2: ciclo2, v3: ciclo3 
+    resultados: {
+        diaN, motivacao, influencia, personalidade, comportamento, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
     },
-    momentos: {
-        m1: md1, m2: md2, m3: md3, m4: md4
-    },
+    periodos: {
+        ciclo1: `0 aos ${fim1} anos`,
+        ciclo2: `${fim1 + 1} aos ${fim2} anos`,
+        ciclo3: `Acima de ${fim2} anos`,
+        md1: `0 aos ${fim1} anos`,
+        md2: `${fim1 + 1} aos ${fim1 + 9} anos`,
+        md3: `${fim1 + 10} aos ${fim1 + 18} anos`,
+        md4: `Acima de ${fim2} anos`
 
 // --- Início do Objeto de Textos ---
 textos: {
