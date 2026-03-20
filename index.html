@@ -42,85 +42,7 @@
 const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
 const vogais = ["A","E","I","O","U"];
 
-const bancoAtributos = {
-    "Seu Potencial": { "Proatividade": [1, 5, 8], "Praticidade": [4, 8], "Controle": [4, 1], "Coragem": [1, 5, 9], "Ousadia": [5, 1], "Autoconfiança": [1, 8], "Liderança": [1, 8, 4], "Independência": [1, 5], "Individualismo": [1] },
-    "Sua Essência": { "Sensibilidade": [2, 6, 9], "Curiosidade": [5, 3], "Introspecção": [7, 9], "Intelecto": [7, 1], "Racionalidade": [4, 7], "Lógica": [4, 7, 8], "Senso Crítico": [7, 4, 1], "Autojulgamento": [7, 6], "Instintividade": [5, 9, 2], "Espontaneidade": [3, 5], "Influenciabilidade": [2, 6], "Impulsividade": [1, 5], "Persistência": [4, 8, 9] },
-    "Capacidade de Aproveitar a Vida": { "Alegria": [3, 5], "Jovialidade": [3, 5], "Dinamismo": [5, 1, 8], "Capacidade de Perdoar": [9, 6, 2], "Otimismo": [3, 9], "Extroversão": [3, 5], "Espiritualidade": [7, 9], "Poder de Persuasão": [3, 5, 8], "Adaptabilidade": [5, 2] },
-    "Relacionamentos e Afeto": { "Demonstração de Afeto": [6, 2, 3, 9], "Cooperação": [2, 6, 9], "Tolerância": [9, 6, 2], "Diplomacia": [2], "Comprometimento": [4, 6, 8], "Lealdade": [4, 6], "Aconselhamento": [6, 9], "Magnetismo Pessoal": [1, 3, 5, 8] },
-    "Necessidades a Trabalhar": { "Adaptabilidade": [5, 2], "Autocontrole": [4, 8], "Flexibilidade": [5, 3, 9], "Humildade": [2, 6, 9], "Paciência": [2, 4, 7] }
-};
-  
-const bancoLegendasCompleto = {
-    // 1. REALIZAÇÃO E PODER (Foco: Dinheiro, Carreira, Status)
-    "Liderança": { nums: [1], cat: "Realização" },
-    "Visão Empreendedora": { nums: [1, 8], cat: "Realização" },
-    "Autoridade": { nums: [8], cat: "Realização" },
-    "Gestão Financeira": { nums: [8, 4], cat: "Realização" },
-    "Poder de Execução": { nums: [4, 8], cat: "Realização" },
-    "Ambição": { nums: [8, 1], cat: "Realização" },
-    "Independência": { nums: [1, 5], cat: "Realização" },
-    "Proatividade": { nums: [1], cat: "Realização" },
-    "Domínio": { nums: [1, 8], cat: "Realização" },
-    "Competitividade": { nums: [1, 8, 5], cat: "Realização" },
-    "Senso de Oportunidade": { nums: [5, 8], cat: "Realização" },
-    "Realização Material": { nums: [8, 4], cat: "Realização" },
-
-    // 2. MENTALIDADE E ESTRATÉGIA (Foco: Inteligência, Lógica, Foco)
-    "Análise": { nums: [7], cat: "Mentalidade" },
-    "Estratégia": { nums: [4, 7, 8], cat: "Mentalidade" },
-    "Perfeccionismo": { nums: [4], cat: "Mentalidade" },
-    "Discernimento": { nums: [7, 9], cat: "Mentalidade" },
-    "Organização": { nums: [4], cat: "Mentalidade" },
-    "Inovação": { nums: [5, 1], cat: "Mentalidade" },
-    "Disciplina": { nums: [4, 1], cat: "Mentalidade" },
-    "Praticidade": { nums: [4, 8], cat: "Mentalidade" },
-    "Método": { nums: [4], cat: "Mentalidade" },
-    "Concentração": { nums: [7, 4], cat: "Mentalidade" },
-    "Visão Sistêmica": { nums: [9, 7, 8], cat: "Mentalidade" },
-    "Racionalidade": { nums: [4, 7], cat: "Mentalidade" },
-
-    // 3. SOCIAL E COMUNICAÇÃO (Foco: Vendas, Persuasão, Brilho)
-    "Magnetismo": { nums: [3, 5], cat: "Social" },
-    "Diplomacia": { nums: [2], cat: "Social" },
-    "Persuasão": { nums: [3, 8], cat: "Social" },
-    "Carisma": { nums: [3], cat: "Social" },
-    "Mediação": { nums: [2, 6], cat: "Social" },
-    "Eloquência": { nums: [3, 5], cat: "Social" },
-    "Influência": { nums: [8, 3, 9], cat: "Social" },
-    "Extroversão": { nums: [3, 5], cat: "Social" },
-    "Expressividade": { nums: [3], cat: "Social" },
-    "Popularidade": { nums: [3, 6], cat: "Social" },
-    "Networking": { nums: [5, 3, 2], cat: "Social" },
-    "Poder de Convencimento": { nums: [3, 1, 8], cat: "Social" },
-
-    // 4. ESSÊNCIA E AFETO (Foco: Intuição, Emoção, Família)
-    "Empatia": { nums: [2, 9], cat: "Essência" },
-    "Acolhimento": { nums: [6], cat: "Essência" },
-    "Intuição": { nums: [7, 9], cat: "Essência" },
-    "Altruísmo": { nums: [9], cat: "Essência" },
-    "Equilíbrio": { nums: [6, 2], cat: "Essência" },
-    "Sensibilidade": { nums: [2, 7], cat: "Essência" },
-    "Idealismo": { nums: [9, 6], cat: "Essência" },
-    "Harmonia": { nums: [6], cat: "Essência" },
-    "Paternidade/Maternidade": { nums: [6, 2], cat: "Essência" },
-    "Generosidade": { nums: [9, 6], cat: "Essência" },
-    "Espiritualidade": { nums: [7, 9], cat: "Essência" },
-    "Zelo": { nums: [6, 4], cat: "Essência" },
-
-    // 5. EVOLUÇÃO E ADAPTAÇÃO (Foco: Mudança, Sorte, Viagens)
-    "Versatilidade": { nums: [5], cat: "Evolução" },
-    "Adaptação": { nums: [5, 2], cat: "Evolução" },
-    "Dinamismo": { nums: [5, 1], cat: "Evolução" },
-    "Resiliência": { nums: [9, 4], cat: "Evolução" },
-    "Ousadia": { nums: [1, 5], cat: "Evolução" },
-    "Flexibilidade": { nums: [5, 3], cat: "Evolução" },
-    "Desapego": { nums: [9, 5], cat: "Evolução" },
-    "Curiosidade": { nums: [5, 7], cat: "Evolução" },
-    "Aventura": { nums: [5], cat: "Evolução" },
-    "Transformação": { nums: [9, 5, 1], cat: "Evolução" },
-    "Agilidade": { nums: [5, 1], cat: "Evolução" },
-    "Liberdade": { nums: [5], cat: "Evolução" }
-};
+// --- FUNÇÕES DE CÁLCULO BASE ---
 function reduzir(n) {
   if (n === 0) return 0;
   n = Math.abs(n);
@@ -144,6 +66,30 @@ function calcularValorComAcentos(letra) {
   }
   return (valorBase + soma) * mult;
 }
+
+// --- NOVAS FUNÇÕES ADICIONADAS ---
+
+function calcularVibracaoEssencia(nomeCompleto) {
+    const partes = nomeCompleto.trim().toUpperCase().split(/\s+/);
+    let somaIniciais = 0;
+    partes.forEach(parte => {
+        if (parte.length > 0) somaIniciais += calcularValorComAcentos(parte[0]);
+    });
+    return reduzir(somaIniciais);
+}
+
+function calcularTalentoOculto(motivacao, personalidade) {
+    return reduzir(motivacao + personalidade);
+}
+
+function obterPoderConclusao(primeiroNome) {
+    if (!primeiroNome) return { letra: "", valor: 0 };
+    const ultimaLetra = primeiroNome.trim().slice(-1).toUpperCase();
+    const valor = tabela[ultimaLetra.normalize("NFD")[0]] || 0;
+    return { letra: ultimaLetra, valor: valor };
+}
+
+// --- FUNÇÕES DE INTERFACE ---
 
 function aplicarFiltroTexto(texto) {
     if (!texto) return "";
@@ -172,25 +118,17 @@ function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafio
     return Math.max(0, Math.min(10, intensidade)).toFixed(1);
 }
 
-// Dentro da função gerarGraficosIntensidade, mude o loop para:
-
 function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto) {
     let rankingGeral = [];
-    
-    // 1. Processa as notas de todas as legendas do banco
     for (let legenda in bancoLegendasCompleto) {
         const dados = bancoLegendasCompleto[legenda];
         const nota = calcularIntensidadeAtributo(dados.nums, resultados, faltantes, desafios, nomeCompleto);
         rankingGeral.push({ nome: legenda, nota: parseFloat(nota), categoria: dados.cat });
     }
-
-    // 2. Ordena do maior para o menor para definir o ranking
     rankingGeral.sort((a, b) => b.nota - a.nota);
     const instintoSuperior = rankingGeral[0];
-
     const categorias = ["Realização", "Mentalidade", "Social", "Essência", "Evolução"];
-    
-    // 3. HEADER DE IMPACTO (Instinto Superior)
+
     let html = `
         <div class="card" style="background: #0a0e1a; color: #d4af37; border: 2px solid #d4af37; text-align:center; padding: 25px; margin-bottom: 30px;">
             <h2 style="margin:0; font-size: 14px; letter-spacing:3px; opacity: 0.8; border:none;">FORÇA PREDOMINANTE</h2>
@@ -199,15 +137,10 @@ function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto)
         </div>
     `;
 
-    // 4. LOOP DAS CATEGORIAS (Mostrando os 3 melhores de cada pilar)
     categorias.forEach(cat => {
         const itensDaCat = rankingGeral.filter(item => item.categoria === cat).slice(0, 3);
-        
-        html += `
-            <div class="card" style="border-top: 4px solid #d4af37; margin-bottom: 25px;">
-                <h3 style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border:none;">Análise do Pilar de ${cat}</h3>
-        `;
-        
+        html += `<div class="card" style="border-top: 4px solid #d4af37; margin-bottom: 25px;">
+                <h3 style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; border:none;">Pilar de ${cat}</h3>`;
         itensDaCat.forEach(item => {
             const porcento = item.nota * 10;
             html += `
@@ -219,32 +152,23 @@ function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto)
                     <div style="height: 6px; background: #f0f0f0; border-radius: 10px; overflow: hidden; margin-top:6px;">
                         <div style="width: ${porcento}%; height: 100%; background: #d4af37; box-shadow: 0 0 10px rgba(212,175,55,0.2); transition: width 2s;"></div>
                     </div>
-                </div>
-            `;
+                </div>`;
         });
-        
         html += `</div>`;
     });
 
-    // 5. PONTOS DE ATENÇÃO (As 4 menores notas do ranking total)
     const pontosAtencao = rankingGeral.slice(-4).reverse();
-    html += `
-        <div class="card" style="background: #fff5f5; border: 1px solid #ffcccc; margin-top: 10px;">
+    html += `<div class="card" style="background: #fff5f5; border: 1px solid #ffcccc;">
             <h3 style="color: #c53030; margin-top:0; border:none; font-size: 16px;">⚠️ NECESSIDADES DE DESENVOLVIMENTO</h3>
-            <p style="font-size: 12px; color: #9b2c2c; margin-bottom: 15px;">Frequências em baixa voltagem que precisam de atenção consciente:</p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                 ${pontosAtencao.map(item => `
-                    <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid #fee2e2; font-size: 13px; font-weight: bold; color: #444; text-align:center;">
-                        ${item.nome} <br>
-                        <span style="color: #c53030; font-size: 11px;">${Math.round(item.nota * 10)}% de Potência</span>
-                    </div>
-                `).join("")}
-            </div>
-        </div>
-    `;
-
+                    <div style="background: white; padding: 10px; border-radius: 6px; border: 1px solid #fee2e2; font-size: 12px; font-weight: bold; color: #444; text-align:center;">
+                        ${item.nome} <br><span style="color: #c53030;">${Math.round(item.nota * 10)}%</span>
+                    </div>`).join("")}
+            </div></div>`;
     return html;
 }
+
 let mapaGerado = false;
 
 function gerarMapa() {
@@ -255,7 +179,7 @@ function gerarMapa() {
   const [ano, mes, dia] = dataInput.split("-").map(Number);
   const nomeUp = nomeInput.toUpperCase();
 
-  // 1. Cálculos Base de Nome
+  // 1. Cálculos Base
   let somaV = 0, somaC = 0, usados = new Set();
   for (let l of nomeUp) {
     const valor = calcularValorComAcentos(l);
@@ -266,7 +190,6 @@ function gerarMapa() {
     vogais.includes(base) ? somaV += valor : somaC += valor;
   }
 
-  // 2. Montagem dos Resultados Principais
   const res = {
       diaN: dia,
       motivacao: reduzir(somaV),
@@ -278,176 +201,78 @@ function gerarMapa() {
   };
   res.missao = reduzir(res.caminhoVida + res.personalidade);
 
-  // 3. Faltantes e Desafios (Necessário para a Moderna e Gráficos)
+  // 2. Novas Funções Chamadas
+  const numEssencia = calcularVibracaoEssencia(nomeInput);
+  const numTalentoOculto = calcularTalentoOculto(res.motivacao, res.personalidade);
+  const infoConclusao = obterPoderConclusao(nomeInput.split(' ')[0]);
+
+  // 3. Faltantes e Desafios
   let faltantes = [];
   for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
-
   const d1 = reduzir(Math.abs(dia - mes));
   const d2 = reduzir(Math.abs(dia - reduzir(ano)));
   const d3 = reduzir(Math.abs(d1 - d2));
 
-  // 4. NUMEROLOGIA MODERNA
-  let deficitPrincipal = reduzir(dia);
-  let deficitsOcultos = [];
-  const listaConferir = [res.missao, res.caminhoVida, res.personalidade, res.motivacao];
-  for (let i = 0; i < listaConferir.length; i++) {
-      for (let j = i + 1; j < listaConferir.length; j++) {
-          if (listaConferir[i] === listaConferir[j]) deficitsOcultos.push(listaConferir[i]);
-      }
-  }
-  let deficitsFinais = [...new Set([deficitPrincipal, ...deficitsOcultos])];
-
-  let contagemLetras = {};
-  let inclinacoes = [9];
-  const nomeLimpo = nomeUp.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  for (let letra of nomeLimpo) {
-      let num = tabela[letra];
-      if (num) contagemLetras[num] = (contagemLetras[num] || 0) + 1;
-  }
-  for (let num in contagemLetras) {
-      if (contagemLetras[num] >= 3 && num != 9) inclinacoes.push(Number(num));
-  }
-
-  let subconscienteNum = 9 - faltantes.length;
-
-  let primeiroNome = nomeInput.split(' ')[0].toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  let contPN = {};
-  for (let letra of primeiroNome) {
-      let num = tabela[letra];
-      if (num) contPN[num] = (contPN[num] || 0) + 1;
-  }
-  let talentoEsp = null, maxR = 0, segR = 0;
-  for (let num in contPN) {
-      if (contPN[num] > maxR) { segR = maxR; maxR = contPN[num]; talentoEsp = num; }
-      else if (contPN[num] > segR) segR = contPN[num];
-  }
-  if (maxR < (segR * 2) || maxR === 0) talentoEsp = null;
-
-  // 5. Períodos e Ciclos
-  const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
-  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
+  // 4. Montagem Premium
   const fim1 = 37 - res.caminhoVida, fim2 = fim1 + 27;
-
-  // 6. Montagem do Objeto Premium Final
-// --- MONTAGEM DO PACOTE PREMIUM FINAL ---
+  const t = textos; // Assume que 'textos' vem do textos.js
+  
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
     resultados: res,
-    // Garanta que este bloco 'moderna' esteja aqui:
-    moderna: {
-        deficits: deficitsFinais,
-        inclinacoes: inclinacoes,
-        subconsciente: subconscienteNum,
-        talentoEspecial: talentoEsp
-    },
-    periodos: { 
-        ciclo1: `0-${fim1}`, ciclo2: `${fim1+1}-${fim2}`, ciclo3: `>${fim2}`, 
-        md1: `0-${fim1}`, md2: `${fim1+1}-${fim1+9}`, md3: `${fim1+10}-${fim1+18}`, md4: `>${fim2}` 
-    },
+    essencia: numEssencia,
+    talentoOculto: numTalentoOculto,
+    conclusao: infoConclusao,
+    periodos: { ciclo1: `0-${fim1}`, ciclo2: `${fim1+1}-${fim2}`, ciclo3: `>${fim2}` },
     textos: {
-        dia: textos.dia[res.diaN],
-        motivacao: textos.motivacao[res.motivacao],
-        influencia: textos.influencia[res.influencia],
-        expressao: textos.Personalidade[res.personalidade],
-        comportamento: textos.comportamento[res.comportamento],
-        destino: textos.CaminhodeVida[res.caminhoVida],
-        missao: textos.Propósito[res.missao],
-        ciclo1: (textos.ciclos) ? textos.ciclos[1][ciclo1] : "",
-        ciclo2: (textos.ciclos) ? textos.ciclos[2][ciclo2] : "",
-        ciclo3: (textos.ciclos) ? textos.ciclos[3][ciclo3] : "",
-        md1: (textos.momentos) ? textos.momentos[1][md1] : "",
-        md2: (textos.momentos) ? textos.momentos[2][md2] : "",
-        md3: (textos.momentos) ? textos.momentos[3][md3] : "",
-        md4: (textos.momentos) ? textos.momentos[4][md4] : "",
-        d1: (textos.desafios) ? textos.desafios[1][d1] : "",
-        d2: (textos.desafios) ? textos.desafios[2][d2] : "",
-        d3: (textos.desafios) ? textos.desafios[3][d3] : "",
-        anoPessoal: textos.anoPessoal[res.anoPessoal],
-        deficiencias: faltantes.map(n => (textos.deficiencias ? textos.deficiencias[n] : "")).join(" ")
+        dia: t.dia[res.diaN],
+        motivacao: t.motivacao[res.motivacao],
+        influencia: t.influencia[res.influencia],
+        expressao: t.Personalidade[res.personalidade],
+        destino: t.CaminhodeVida[res.caminhoVida],
+        missao: t.Propósito[res.missao],
+        anoPessoal: t.anoPessoal[res.anoPessoal]
     }
   };
 
-  // Salva no Navegador
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
-
-// ============================================
-  // 7. EXIBIÇÃO DE TODOS OS RESULTADOS (DESTRAVADO)
-  // ============================================
-  
-  // Atalhos para facilitar a escrita (puxando do objeto que criamos acima)
-  const t = dadosPremium.textos;
-  const p = dadosPremium.periodos;
-
   const htmlGraficos = gerarGraficosIntensidade(res, faltantes, [d1, d2, d3], nomeInput);
-  
-  // Salva no Navegador para o Premium (PDF) conseguir ler depois
-  localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
-  localStorage.setItem("graficoParaOPremium", htmlGraficos);
-  
-  // Monta a exibição completa no HTML da página atual
+
+  // 5. EXIBIÇÃO FINAL
   document.getElementById("resultado").innerHTML = `
     ${htmlGraficos}
     
-    <div class="card" style="border-left: 8px solid #22c55e; background: #f0fdf4;">
-        <h2 style="color:#166534; margin:0; border:none;">✨ ANÁLISE COMPLETA LIBERADA</h2>
-        <p>Role para baixo para conferir todos os detalhes do seu mapa.</p>
+    <div class="card" style="background: #0a0e1a; border-left: 10px solid #d4af37; color: white;">
+        <h3 style="color: #d4af37; border:none;">🛡️ SEGREDOS CABALÍSTICOS</h3>
+        <p><strong>Vibração da Essência:</strong> ${numEssencia}<br><small>${textosSegredos.essenciaReativa[numEssencia]}</small></p>
+        <hr style="opacity:0.2">
+        <p><strong>Talento Oculto:</strong> ${numTalentoOculto}<br><small>${textosSegredos.talentoOculto[numTalentoOculto]}</small></p>
+        <hr style="opacity:0.2">
+        <p><strong>Poder de Conclusão:</strong> Letra "${infoConclusao.letra}" (${infoConclusao.valor})</p>
     </div>
 
-    ${card("Dia de Nascimento", "Talento Natural", res.diaN, t.dia)}
-    ${card("Motivação", "Seu Íntimo", res.motivacao, t.motivacao)}
-    ${card("Influência", "Sua Imagem", res.influencia, t.influencia)}
-    ${card("Personalidade", "Sua Expressão", res.expressao || t.expressao, t.expressao)}
-    ${card("Caminho de Vida", "Seu Destino", res.caminhoVida, t.destino)}
-    ${card("Missão", "Propósito", res.missao, t.missao)}
-
-    <div class="card" style="border-top: 4px solid #d4af37;">
-        <h3>Numerologia Moderna e Comportamento</h3>
-        <p><strong>Déficits de Comportamento:</strong> ${dadosPremium.moderna.deficits.join(", ")}</p>
-        <p><strong>Resposta do Subconsciente:</strong> Número ${dadosPremium.moderna.subconsciente}</p>
-        ${dadosPremium.moderna.talentoEspecial ? `<p style="color:#d4af37; font-weight:bold;">🌟 Talento Especial Detectado: Vibração ${dadosPremium.moderna.talentoEspecial}</p>` : ""}
-    </div>
-
-    <div class="card">
-        <h3>Grandes Ciclos de Vida</h3>
-        <p><strong>1º Ciclo (${p.ciclo1}):</strong><br> ${t.ciclo1}</p>
-        <hr>
-        <p><strong>2º Ciclo (${p.ciclo2}):</strong><br> ${t.ciclo2}</p>
-        <hr>
-        <p><strong>3º Ciclo (${p.ciclo3}):</strong><br> ${t.ciclo3}</p>
-    </div>
-
-    <div class="card">
-        <h3>Momentos Decisivos (Pináculos)</h3>
-        <p><strong>Início (${p.md1}):</strong> ${t.md1}</p>
-        <p><strong>Intermediário 1 (${p.md2}):</strong> ${t.md2}</p>
-        <p><strong>Intermediário 2 (${p.md3}):</strong> ${t.md3}</p>
-        <p><strong>Final (${p.md4}):</strong> ${t.md4}</p>
-    </div>
-
-    <div class="card">
-        <h3>Desafios e Lições Cármicas</h3>
-        <p><strong>Lições (Faltas no nome):</strong><br> ${t.deficiencias || "Nenhuma falta detectada."}</p>
-        <hr>
-        <p><strong>Desafio de Juventude:</strong> ${t.d1}</p>
-        <p><strong>Desafio de Maturidade:</strong> ${t.d2}</p>
-        <p style="color:#b91c1c; font-weight:bold; background:#fff1f1; padding:10px; border-radius:5px;">⚠️ DESAFIO PRINCIPAL (Vida Inteira): ${t.d3}</p>
-    </div>
+    ${card("Dia de Nascimento", "Talento Natural", res.diaN, dadosPremium.textos.dia)}
+    ${card("Motivação", "Seu Íntimo", res.motivacao, dadosPremium.textos.motivacao)}
+    ${card("Influência", "Sua Imagem", res.influencia, dadosPremium.textos.influencia)}
+    ${card("Personalidade", "Sua Expressão", res.personalidade, dadosPremium.textos.expressao)}
+    ${card("Caminho de Vida", "Seu Destino", res.caminhoVida, dadosPremium.textos.destino)}
+    ${card("Missão", "Propósito", res.missao, dadosPremium.textos.missao)}
 
     <div class="card" style="background: #0a0e1a; color: #fff; text-align:center;">
-        <h3 style="color: #d4af37; border-bottom: 1px solid #d4af37; margin-bottom:15px;">Seu Ano Pessoal Atual: ${res.anoPessoal}</h3>
-        <p style="color:#eee;">${t.anoPessoal}</p>
+        <h3 style="color: #d4af37; border-bottom: 1px solid #d4af37;">Ano Pessoal: ${res.anoPessoal}</h3>
+        <p>${dadosPremium.textos.anoPessoal}</p>
     </div>
 
     <div class="card" style="background: linear-gradient(45deg,#6a11cb,#2575fc); color:white; text-align:center;">
-        <h3>Deseja este estudo em PDF de Luxo?</h3>
-        <p>Clique no botão "Relatório Premium" no topo da página para gerar sua versão para impressão.</p>
+        <h3>Obtenha o PDF de Luxo</h3>
+        <p>Clique em "Relatório Premium" no topo para baixar.</p>
     </div>
   `;
 
   mapaGerado = true;
   window.scrollTo({ top: document.getElementById("resultado").offsetTop - 20, behavior: 'smooth' });
-} // <--- AQUI TERMINA A FUNÇÃO gerarMapa
+}
 
 function validarPremium() {
    if(!mapaGerado){ alert("⚠️ Gere o mapa primeiro."); return; }
