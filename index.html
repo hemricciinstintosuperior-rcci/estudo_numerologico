@@ -211,6 +211,73 @@ function renderizarGraficoOrientacao(saldo) {
     return html;
 }
 
+  function calcularPontuacaoAtributo(numerosAlvo, saldoGeral, resultadosPuros) {
+    let pontos = 0;
+    
+    numerosAlvo.forEach(n => {
+        // 1. Pega o saldo do gráfico (que já tem letras e pilares)
+        pontos += (saldoGeral[n] || 0) * 0.5;
+
+        // 2. Bônus Extra: Se o número está na MOTIVAÇÃO ou DESTINO (Peso maior)
+        if (resultadosPuros.motivacao === n) pontos += 2;
+        if (resultadosPuros.caminhoVida === n) pontos += 2;
+    });
+
+    // Normaliza para uma escala de 0 a 10
+    let resultado = Math.max(0, Math.min(10, pontos));
+    return resultado.toFixed(1);
+}
+  
+const bancoAtributos = {
+    "Seu Potencial": {
+        "Proatividade": [1, 5, 8],
+        "Praticidade": [4, 8],
+        "Controle": [4, 1],
+        "Coragem": [1, 5, 9],
+        "Ousadia": [5, 1],
+        "Autoconfiança": [1, 8],
+        "Liderança": [1, 8, 4],
+        "Independência": [1, 5],
+        "Individualismo": [1]
+    },
+    "Sua Essência": {
+        "Sensibilidade": [2, 6, 11, 9], // 11 aqui como 2
+        "Curiosidade": [5, 3],
+        "Introspecção": [7, 9],
+        "Intelecto": [7, 1],
+        "Racionalidade": [4, 7],
+        "Lógica": [4, 7, 8],
+        "Senso Crítico": [7, 4, 1],
+        "Autojulgamento": [7, 6],
+        "Instintividade": [5, 9, 2],
+        "Espontaneidade": [3, 5],
+        "Influenciabilidade": [2, 6],
+        "Impulsividade": [1, 5],
+        "Persistência": [4, 8, 9]
+    },
+    "Capacidade de Aproveitar a Vida": {
+        "Alegria": [3, 5],
+        "Jovialidade": [3, 5],
+        "Dinamismo": [5, 1, 8],
+        "Capacidade de Perdoar": [9, 6, 2],
+        "Otimismo": [3, 9],
+        "Extroversão": [3, 5],
+        "Espiritualidade": [7, 9, 11],
+        "Poder de Persuasão": [3, 5, 8],
+        "Adaptabilidade": [5, 2]
+    },
+    "Relacionamentos e Afeto": {
+        "Demonstração de Afeto": [6, 2, 3, 9],
+        "Cooperação": [2, 6, 9],
+        "Tolerância": [9, 6, 2],
+        "Diplomacia": [2, 11],
+        "Comprometimento": [4, 6, 8],
+        "Lealdade": [4, 6],
+        "Aconselhamento": [6, 9],
+        "Agressividade": [1, 8, 5], // Números de força em excesso ou desafio
+        "Magnetismo Personal": [1, 3, 5, 8]
+    }
+};
 function gerarMapa() {
   const nomeInput = document.getElementById("nome").value.trim();
   const dataInput = document.getElementById("data").value;
@@ -327,65 +394,38 @@ function gerarMapa() {
 }
 
 // Função que cria os gráficos coloridos de análise
-function gerarHTMLGraficosAnalise(saldo) {
-    // Definimos as categorias baseadas nas suas imagens originais
-    const categorias = {
-        "Perfil de Atitude": { 
-            classe: "barra-potencial", 
-            numeros: [1, 5, 8],
-            legendas: {
-                alto: "Alta Proatividade e Liderança",
-                medio: "Equilíbrio em Tomada de Decisão",
-                baixo: "Necessidade de Desenvolver Iniciativa"
-            }
-        },
-        "Perfil Intelectual": { 
-            classe: "barra-essencia", 
-            numeros: [7, 4, 1],
-            legendas: {
-                alto: "Forte Capacidade Analítica e Foco",
-                medio: "Pensamento Prático e Organizado",
-                baixo: "Trabalhar Concentração e Método"
-            }
-        },
-        "Perfil de Sensibilidade": { 
-            classe: "barra-capacidade", 
-            numeros: [2, 6, 9, 3],
-            legendas: {
-                alto: "Alta Empatia e Inteligência Emocional",
-                medio: "Sensibilidade Harmoniosa",
-                baixo: "Desenvolver Conexão com o Sentir"
-            }
-        }
-    };
-
+function gerarGraficosCompletosAnalise(saldo, resultados) {
     let html = "";
-    for (let titulo in categorias) {
-        let cat = categorias[titulo];
-        
-        // SOMA OS PONTOS: Pega o saldo de cada número daquela categoria
-        let somaPontos = cat.numeros.reduce((acc, n) => acc + (saldo[n] || 0), 0);
-        
-        // Define a Porcentagem (0 a 100%)
-        let porcento = Math.min(Math.max(somaPontos * 12, 10), 100); 
 
-        // ESCOLHE A LEGENDA DINÂMICA
-        let legendaFinal = cat.legendas.medio;
-        if (porcento > 70) legendaFinal = cat.legendas.alto;
-        if (porcento < 40) legendaFinal = cat.legendas.baixo;
+    for (let categoria in bancoAtributos) {
+        // Pega as legendas e coloca em ordem alfabética
+        const legendasOrdenadas = Object.keys(bancoAtributos[categoria]).sort((a, b) => a.localeCompare(b));
 
-        html += `
-        <div class="card" style="width: 100%; max-width: 600px; border-left: 5px solid ${porcento > 50 ? '#22c55e' : '#eab308'};">
-            <h3 style="margin-bottom: 5px;">${titulo}</h3>
-            <p style="font-size: 13px; color: #666; margin-top:0;">${legendaFinal}</p>
-            
-            <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
-                <div style="flex: 1; height: 16px; background: #eee; border-radius: 8px; overflow: hidden; border: 1px solid #ddd;">
-                    <div class="preenchimento ${cat.classe}" style="width:${porcento}%; height: 100%; transition: width 1.5s ease-in-out;"></div>
-                </div>
-                <span style="font-weight: bold; font-size: 14px; width: 40px;">${Math.round(porcento)}%</span>
-            </div>
-        </div>`;
+        html += `<div class="card" style="width: 100%; max-width: 650px; margin-bottom: 30px;">
+                    <h2 style="border-bottom: 2px solid #d4af37; color: #0a0e1a; padding-bottom: 10px;">${categoria}</h2>`;
+
+        legendasOrdenadas.forEach(legenda => {
+            const numerosRelacionados = bancoAtributos[categoria][legenda];
+            const nota = calcularPontuacaoAtributo(numerosRelacionados, saldo, resultados);
+            const porcentagem = nota * 10;
+
+            // Define cor baseada na nota (ex: abaixo de 4 é vermelho/atenção)
+            let corBarra = "#22c55e"; // Verde
+            if (nota < 6) corBarra = "#eab308"; // Amarelo
+            if (nota < 3.5) corBarra = "#ef4444"; // Vermelho
+
+            html += `
+                <div style="margin-bottom: 12px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                        <span>${legenda}</span>
+                        <span>${nota} / 10</span>
+                    </div>
+                    <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden; border: 1px solid #ddd;">
+                        <div style="width: ${porcentagem}%; height: 100%; background: ${corBarra}; transition: width 1s;"></div>
+                    </div>
+                </div>`;
+        });
+        html += `</div>`;
     }
     return html;
 }
