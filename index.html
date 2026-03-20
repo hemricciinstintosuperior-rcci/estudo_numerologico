@@ -175,121 +175,100 @@ Liberar acesso ao relatório e baixar o PDF
             return html;
         }
 
-        function gerarMapaCompleto() {
-            const nomeRaw = document.getElementById("nome").value.trim();
-            const dataRaw = document.getElementById("data").value;
-            if (!nomeRaw || !dataRaw) return alert("Preencha tudo!");
+function gerarMapaCompleto() {
+    const nomeRaw = document.getElementById("nome").value.trim();
+    const dataRaw = document.getElementById("data").value;
+    if (!nomeRaw || !dataRaw) return alert("Preencha tudo!");
 
-            const [ano, mes, dia] = dataRaw.split("-").map(Number);
-            const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
-            
-            let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
-            nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
-
-            for (let l of nomeRaw.toUpperCase()) {
-                const v = calcularValorLetra(l);
-                if (v > 0) {
-                    const base = l.normalize("NFD")[0];
-                    if (tabela[base]) contagem[tabela[base]]++;
-                    vogais.includes(base) ? sV += v : sC += v;
-                }
-            }
-
-            const exp = reduzir(sV + sC);
-            const cv = reduzir(dia + mes + ano);
-            const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0).map(Number);
-            // --- INÍCIO DO CÁLCULO DÉFICIT DE COMPORTAMENTO (MODERNA) ---
-            const diaReduzido = reduzir(dia); 
-            const mot = reduzir(sV);
-            const prop = reduzir(cv + exp);
-            
-            // Pilares para conferir repetição (Déficits Ocultos)
-            const pilaresOcultos = [prop, cv, exp, mot];
-            let deficitsOcultos = [];
-
-            pilaresOcultos.forEach((num, index) => {
-                // Se o número já apareceu antes no array, ele é um déficit oculto
-                if (pilaresOcultos.indexOf(num) !== index && !deficitsOcultos.includes(num)) {
-                    deficitsOcultos.push(num);
-                }
-            });
-            // --- FIM DO CÁLCULO ---
-            // --- CÁLCULO DE CRONOLOGIA (IDADE E DATAS) ---
-            const dataNascimento = new Date(dataRaw);
-            const idade1 = 36 - cv;
-            const anoFim1 = dataNascimento.getFullYear() + idade1;
-
-const res = {
-                dia: reduzir(dia), 
-                comportamento: reduzir(dia),
-                motivacao: mot, 
-                influencia: reduzir(sC),
-                Personalidade: exp, 
-                CaminhodeVida: cv,
-                "Propósito": prop, 
-                Maturidade: reduzir(cv + exp), 
-                Relacionamento: prop, // Vinculado ao Propósito conforme sua regra
-                anoPessoal: reduzir(dia + mes + 2026),
-                essencia: reduzir(sE), 
-                talento: reduzir(mot + exp),
-                equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
-                subconsciente: 9 - faltantes.length,
-                inclinacoes: mot,
-                // Novos campos para o Déficit Moderno:
-                deficitRecorrente: diaReduzido,
-                deficitsOcultos: deficitsOcultos
-            };
-
-            // 1. Gráficos de Intensidade no Topo
-            let html = gerarGraficosIntensidade(res, faltantes, nomeRaw);
-
-            // 2. Cards de Texto (Principais)
-            const ordem = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "anoPessoal", "inclinacoes", "subconsciente"];
-            ordem.forEach(k => {
-                html += `<div class="card"><h3>${k}</h3><div class="texto-res">${aplicarFiltroTexto(textos[k][res[k]])}</div></div>`;
-            });
-
-            // 3. Deficiências e Déficits (Separados)
-            html += `<div class="card"><h3>Deficiências (Faltas)</h3>`;
-            faltantes.forEach(f => html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p>`);
-// Substitua o seu card de Déficits antigo por este:
-    html += `<div class="card" style="border-left: 10px solid #c53030;">
-                <h3 style="color:#c53030;">Déficit de Comportamento</h3>
-                <p><strong>Déficit Recorrente (Dia):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>`;
+    const [ano, mes, dia] = dataRaw.split("-").map(Number);
+    const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
     
-    if (res.deficitsOcultos.length > 0) {
-        res.deficitsOcultos.forEach(d => {
-            html += `<p><strong>Déficit Oculto (Repetição ${d}):</strong> ${aplicarFiltroTexto(textos.deficits[d])}</p>`;
-        });
+    let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
+    nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
+
+    for (let l of nomeRaw.toUpperCase()) {
+        const v = calcularValorLetra(l);
+        if (v > 0) {
+            const base = l.normalize("NFD")[0];
+            if (tabela[base]) contagem[tabela[base]]++;
+            vogais.includes(base) ? sV += v : sC += v;
+        }
     }
-    html += `</div>`;
 
-            // 4. Ciclos, Momentos e Desafios com IDADES e DATAS
-            // CICLOS
-            html += `<div class="card"><h3>Ciclos de Vida</h3>
-                <p><strong>1º Ciclo (0 a ${idade1} anos - até ${anoFim1}):</strong> ${aplicarFiltroTexto(textos.ciclos[1][reduzir(mes)])}</p>
-                <p><strong>2º Ciclo (${idade1 + 1} a ${idade1 + 27} anos):</strong> ${aplicarFiltroTexto(textos.ciclos[2][reduzir(dia)])}</p>
-                <p><strong>3º Ciclo (Após ${idade1 + 27} anos):</strong> ${aplicarFiltroTexto(textos.ciclos[3][reduzir(ano)])}</p>
-            </div>`;
+    const exp = reduzir(sV + sC);
+    const cv = reduzir(dia + mes + ano);
+    const mot = reduzir(sV);
+    const prop = reduzir(cv + exp);
+    const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0).map(Number);
 
-            // MOMENTOS (REALIZAÇÕES)
-            html += `<div class="card"><h3>Momentos de Realização</h3>
-                <p><strong>1º Momento (0 a ${idade1} anos):</strong> ${aplicarFiltroTexto(textos.momentos[1][reduzir(dia+mes)])}</p>
-                <p><strong>2º Momento (${idade1 + 1} a ${idade1 + 9} anos):</strong> ${aplicarFiltroTexto(textos.momentos[2][reduzir(dia+ano)])}</p>
-                <p><strong>3º Momento (${idade1 + 10} a ${idade1 + 18} anos):</strong> ${aplicarFiltroTexto(textos.momentos[3][reduzir(reduzir(dia+mes)+reduzir(dia+ano))])}</p>
-                <p><strong>4º Momento (Após ${idade1 + 18} anos):</strong> ${aplicarFiltroTexto(textos.momentos[4][reduzir(mes+ano)])}</p>
-            </div>`;
+    // --- LÓGICA MODERNA ---
+    const diaReduzido = reduzir(dia); 
+    const pilaresOcultos = [prop, cv, exp, mot];
+    let deficitsOcultos = [];
+    pilaresOcultos.forEach((num, index) => {
+        if (pilaresOcultos.indexOf(num) !== index && !deficitsOcultos.includes(num)) {
+            deficitsOcultos.push(num);
+        }
+    });
 
-            // DESAFIOS
-            html += `<div class="card"><h3>Desafios</h3>
-                <p><strong>Desafio 1:</strong> ${aplicarFiltroTexto(textos.desafios[1][Math.abs(dia-mes)])}</p>
-                <p><strong>Desafio 2:</strong> ${aplicarFiltroTexto(textos.desafios[2][Math.abs(dia-reduzir(ano))])}</p>
-                <p><strong>Desafio Principal:</strong> ${aplicarFiltroTexto(textos.desafios[3][Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))])}</p>
-            </div>`;
+    // --- CRONOLOGIA ---
+    const idade1 = 36 - cv;
+    const anoFim1 = new Date(dataRaw).getUTCFullYear() + idade1;
 
-            document.getElementById("resultado").innerHTML = html;
-    
+    const res = {
+        motivacao: mot, personalidade: exp, influencia: reduzir(sC),
+        comportamento: diaReduzido, caminhoVida: cv, missao: prop,
+        anoPessoal: reduzir(dia + mes + 2026), subconsciente: 9 - faltantes.length
+    };
 
+    // --- PREPARAÇÃO DO PACOTE PREMIUM ---
+    const dadosMapa = {
+        nome: nomeRaw.toUpperCase(),
+        resultados: res,
+        periodos: {
+            ciclo1: `0 a ${idade1} anos (Até ${anoFim1})`,
+            ciclo2: `${idade1 + 1} a ${idade1 + 27} anos`,
+            ciclo3: `Após ${idade1 + 27} anos`,
+            md1: `Até ${idade1} anos`, md2: `Até ${idade1 + 9} anos`,
+            md3: `Até ${idade1 + 18} anos`, md4: `Após ${idade1 + 18} anos`
+        },
+        moderna: {
+            deficits: [diaReduzido, ...deficitsOcultos],
+            subconsciente: res.subconsciente,
+            inclinacoes: [mot]
+        },
+        textos: {
+            motivacao: aplicarFiltroTexto(textos.motivacao[mot]),
+            expressao: aplicarFiltroTexto(textos.Personalidade[exp]),
+            influencia: aplicarFiltroTexto(textos.influencia[reduzir(sC)]),
+            comportamento: aplicarFiltroTexto(textos.comportamento[diaReduzido]),
+            destino: aplicarFiltroTexto(textos.CaminhodeVida[cv]),
+            missao: aplicarFiltroTexto(textos.Propósito[prop]),
+            anoPessoal: aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal]),
+            ciclo1: aplicarFiltroTexto(textos.ciclos[1][reduzir(mes)]),
+            ciclo2: aplicarFiltroTexto(textos.ciclos[2][reduzir(dia)]),
+            ciclo3: aplicarFiltroTexto(textos.ciclos[3][reduzir(ano)]),
+            md1: aplicarFiltroTexto(textos.momentos[1][reduzir(dia+mes)]),
+            md2: aplicarFiltroTexto(textos.momentos[2][reduzir(dia+ano)]),
+            md3: aplicarFiltroTexto(textos.momentos[3][reduzir(reduzir(dia+mes)+reduzir(dia+ano))]),
+            md4: aplicarFiltroTexto(textos.momentos[4][reduzir(mes+ano)]),
+            d1: aplicarFiltroTexto(textos.desafios[1][Math.abs(dia-mes)]),
+            d2: aplicarFiltroTexto(textos.desafios[2][Math.abs(dia-reduzir(ano))]),
+            d3: aplicarFiltroTexto(textos.desafios[3][Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))]),
+            deficiencias: faltantes.map(f => `<strong>Número ${f}:</strong> ${textos.deficiencias[f]}`).join("<br>")
+        }
+    };
+
+    // Salva e Renderiza
+    const graficoHtml = gerarGraficosIntensidade(res, faltantes, nomeRaw);
+    document.getElementById("resultado").innerHTML = graficoHtml + `<button class="btn-gerar" onclick='abrirPremium(${JSON.stringify(dadosMapa).replace(/'/g, "&apos;")}, \`${graficoHtml}\`)'>📥 ABRIR RELATÓRIO PDF</button>`;
+}
+
+// Função separada para não bugar o window.open
+function abrirPremium(dados, graficos) {
+    localStorage.setItem("dadosMapaPremium", JSON.stringify(dados));
+    localStorage.setItem("graficoParaOPremium", graficos);
+    window.open("premiummapa.html", "_blank");
 }
 
 document.oncontextmenu=()=>false;
