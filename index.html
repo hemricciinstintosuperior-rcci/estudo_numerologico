@@ -204,13 +204,15 @@ let mapaGerado = false;
 function gerarMapa() {
   const nomeInput = document.getElementById("nome").value.trim();
   const dataInput = document.getElementById("data").value;
-  if(nomeInput.length < 5 || !dataInput) { alert("Preencha os dados corretamente."); return; }
+
+  if(nomeInput.length < 5) { alert("Digite seu nome completo."); return; }
+  if(!dataInput) { alert("Selecione sua data de nascimento."); return; }
 
   const nome = nomeInput.toUpperCase();
   const [ano, mes, dia] = dataInput.split("-").map(Number);
-  let usados = new Set();
-  let somaV = 0, somaC = 0;
 
+  // --- Cálculos de Nome ---
+  let somaV = 0, somaC = 0, usados = new Set();
   for (let l of nome) {
     const valor = calcularValorComAcentos(l);
     if (!valor) continue;
@@ -222,29 +224,90 @@ function gerarMapa() {
   const motivacao = reduzir(somaV);
   const influencia = reduzir(somaC);
   const personalidade = reduzir(somaV + somaC);
+
+  // --- Cálculos de Data ---
+  const diaN = dia;
+  const comportamento = reduzir(dia);
   const caminhoVida = reduzir(dia + mes + ano);
   const missao = reduzir(caminhoVida + personalidade);
+  const maturidade = reduzir(caminhoVida + personalidade);
+  const relacionamento = missao; 
+
+  const fim1 = 37 - caminhoVida;
+  const fim2 = fim1 + 27;
+  
+  const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
+  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
   const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
 
+  const anoAtual = new Date().getFullYear();
+  const anoPessoalNum = reduzir(dia + mes + anoAtual);
+  
   let faltantes = [];
   for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
+  const textoDeficiencias = faltantes.map(num => textos.deficiencias[num]).join("");
 
+  // --- Objeto de Dados Completo para o Premium ---
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
-    resultados: { diaN: dia, motivacao, influencia, personalidade, caminhoVida, missao },
-    textos: { /* seus textos aqui... */ }
+    resultados: {
+        diaN, motivacao, influencia, personalidade, comportamento, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
+    },
+    periodos: {
+        ciclo1: `0 aos ${fim1} anos`, ciclo2: `${fim1 + 1} aos ${fim2} anos`, ciclo3: `Acima de ${fim2} anos`,
+        md1: `0 aos ${fim1} anos`, md2: `${fim1 + 1} aos ${fim1 + 9} anos`, md3: `${fim1 + 10} aos ${fim1 + 18} anos`, md4: `Acima de ${fim2} anos`
+    },
+    textos: {
+        dia: textos.dia[diaN], 
+        motivacao: textos.motivacao[motivacao], 
+        influencia: textos.influencia[influencia],
+        expressao: textos.Personalidade[personalidade], 
+        comportamento: textos.comportamento[comportamento],
+        destino: textos.CaminhodeVida[caminhoVida], 
+        missao: textos.Propósito[missao],
+        maturidade: (textos.Maturidade) ? textos.Maturidade[maturidade] : textos.Propósito[missao],
+        anoPessoal: (textos.anoPessoal) ? textos.anoPessoal[anoPessoalNum] : "",
+        deficiencias: textoDeficiencias,
+        d1: (textos.desafios) ? textos.desafios[1][d1] : "",
+        d2: (textos.desafios) ? textos.desafios[2][d2] : "",
+        d3: (textos.desafios) ? textos.desafios[3][d3] : ""
+    }
   };
 
-  const saldoFinal = calcularOrientacaoNumerica(nome, dadosPremium.resultados, faltantes, [d1, d2, d3]);
+  // --- GERAÇÃO DOS GRÁFICOS INTELIGENTES ---
+  const listaDesafios = [d1, d2, d3]; 
+  const saldoFinal = calcularOrientacaoNumerica(nome, dadosPremium.resultados, faltantes, listaDesafios);
+  
   const htmlOrientacao = renderizarGraficoOrientacao(saldoFinal);
   const htmlAnalise = gerarGraficosCompletosAnalise(saldoFinal, dadosPremium.resultados, faltantes);
 
+  // --- SALVAMENTO NO LOCAL STORAGE ---
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
   localStorage.setItem("graficoParaOPremium", htmlOrientacao + htmlAnalise);
 
-  document.getElementById("resultado").innerHTML = htmlOrientacao + htmlAnalise + `<div class="card">Mapa Gratuito Gerado! Desbloqueie o Premium para ver tudo.</div>`;
-  mapaGerado = true;
+  // --- EXIBIÇÃO DOS CARDS DE TEXTO (PARTE GRATUITA) ---
+  const htmlCardsGratis = `
+    ${card("Dia de Nascimento", "Talentos Naturais", diaN, textos.dia[diaN])}
+    ${card("Influência", "Aparência e Personalidade", influencia, textos.influencia[influencia])}
+    ${card("Motivação", "Seu Desejo Íntimo", motivacao, textos.motivacao[motivacao])}
+    ${card("Personalidade", "Sua Expressão", personalidade, textos.Personalidade[personalidade])}
+    ${card("Comportamento", "Número Psíquico", comportamento, textos.comportamento[comportamento])}
+    ${card("Caminho de Vida", "Seu Destino", caminhoVida, textos.CaminhodeVida[caminhoVida])}
+    ${card("Ano Pessoal", "Sua energia em " + anoAtual, anoPessoalNum, textos.anoPessoal[anoPessoalNum])}
+    
+    <div class="card" style="background: #fffbeb; border: 2px dashed #d97706; text-align: center; padding: 30px;">
+        <h3 style="color: #92400e; border:none;">🔒 CONTEÚDO PREMIUM BLOQUEADO</h3>
+        <p>Seu mapa completo contém <strong>Ciclos de Vida, Momentos Decisivos, Desafios Profundos e Lições Cármicas</strong> que não aparecem aqui.</p>
+        <p>Clique no botão <strong>Relatório Premium</strong> no topo para liberar o PDF completo.</p>
+    </div>
+  `;
+
+  // --- RENDERIZAÇÃO FINAL NO HTML ---
+  document.getElementById("resultado").innerHTML = htmlOrientacao + htmlAnalise + htmlCardsGratis;
+  
+  mapaGerado = true; 
+  window.scrollTo({ top: document.getElementById("resultado").offsetTop - 50, behavior: 'smooth' });
 }
 
 function validarPremium() {
