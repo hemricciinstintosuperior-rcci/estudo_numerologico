@@ -283,6 +283,7 @@ function gerarMapa() {
         txtCiclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : ""
     }
   };
+// --- Início do Objeto de Textos ---
     textos: {
         motivacao: textos.motivacao[res.motivacao],
         influencia: textos.influencia[res.influencia],
@@ -293,18 +294,24 @@ function gerarMapa() {
         comportamento: textos.comportamento[res.comportamento],
         anoPessoal: textos.anoPessoal[res.anoPessoal],
         deficiencias: textoDeficiencias,
-        // Desafios (Proteção contra erro de arquivo textos.js)
-        desafio1: (textos.desafios && textos.desafios[1]) ? textos.desafios[1][d1] : "Texto não encontrado",
-        desafio2: (textos.desafios && textos.desafios[2]) ? textos.desafios[2][d2] : "Texto não encontrado",
-        // Ciclos e Momentos
-        txtCiclo1: (textos.ciclos) ? textos.ciclos[1][ciclo1] : "",
-        txtCiclo2: (textos.ciclos) ? textos.ciclos[2][ciclo2] : "",
-        txtCiclo3: (textos.ciclos) ? textos.ciclos[3][ciclo3] : "",
-        txtMd1: (textos.momentos) ? textos.momentos[1][md1] : "",
-        txtMd2: (textos.momentos) ? textos.momentos[2][md2] : "",
-        txtMd3: (textos.momentos) ? textos.momentos[3][md3] : "",
-        txtMd4: (textos.momentos) ? textos.momentos[4][md4] : ""
+
+        // Desafios (1, 2 e o Geral/3)
+        desafio1: (textos.desafios && textos.desafios[1]) ? textos.desafios[1][d1] : "",
+        desafio2: (textos.desafios && textos.desafios[2]) ? textos.desafios[2][d2] : "",
+        desafioGeral: (textos.desafios && textos.desafios[3]) ? textos.desafios[3][d3] : "",
+
+        // Ciclos de Vida
+        txtCiclo1: (textos.ciclos && textos.ciclos[1]) ? textos.ciclos[1][ciclo1] : "",
+        txtCiclo2: (textos.ciclos && textos.ciclos[2]) ? textos.ciclos[2][ciclo2] : "",
+        txtCiclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : "",
+
+        // Momentos Decisivos (Pináculos)
+        txtMd1: (textos.momentos && textos.momentos[1]) ? textos.momentos[1][md1] : "",
+        txtMd2: (textos.momentos && textos.momentos[2]) ? textos.momentos[2][md2] : "",
+        txtMd3: (textos.momentos && textos.momentos[3]) ? textos.momentos[3][md3] : "",
+        txtMd4: (textos.momentos && textos.momentos[4]) ? textos.momentos[4][md4] : ""
     }
+    // --- Fim do Objeto ---
   };
 
   // 6. Geração Visual e LocalStorage
