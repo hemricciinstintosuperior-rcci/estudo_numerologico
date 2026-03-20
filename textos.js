@@ -867,4 +867,50 @@ deficiencias: {
     9: `<p>Lição 9</p>
     <p>Esta vibração representa uma necessidade de conscientização constante sobre o significado maior da existência humana, focando na bondade, na humanidade e no altruísmo. <strong>você</strong> deve aprender a agir com compaixão, tolerância e compreensão, ampliando a visão para enxergar a vida sob um aspecto muito mais vasto do que os próprios interesses imediatos. Haverá momentos em que <strong>você</strong> precisará sacrificar ambições egocêntricas em benefício do bem coletivo, percebendo o enorme potencial que possui para influenciar positivamente o destino alheio. Esta não é exatamente uma deficiência, mas uma convocação para despertar a sensibilidade e compartilhar a dor e o sofrimento do próximo de forma solidária e generosa. <strong>você</strong> poderá enfrentar situações de injustiça, julgamentos e agressões ao ego, que servirão como testes para a sua capacidade de abrir mão do orgulho e da vaidade. A lição definitiva para <strong>você</strong> é o aprendizado do perdão e da entrega, entendendo que a verdadeira grandeza reside na capacidade de se doar sem esperar recompensas. Ao abraçar o amor universal, <strong>você</strong> transmuta o sofrimento em sabedoria, tornando-se uma alma carismática e inspiradora que controla o próprio destino através do serviço à vida. A superação do ego permite que <strong>você</strong> conclua a jornada com uma plenitude que transcende o plano material, alcançando a paz de quem compreendeu o mais elevado de todos os sentimentos.</p>`
   }
+const textosModerna = {
+    deficits: {
+        1: "Tendência à impulsividade e dificuldade em ouvir opiniões alheias.",
+        2: "Excesso de sensibilidade ou dependência emocional de terceiros.",
+        3: "Dispersão de energia e falta de foco em projetos práticos.",
+        4: "Rigidez excessiva ou dificuldade em aceitar mudanças necessárias.",
+        5: "Instabilidade e desejo de fuga quando surgem responsabilidades.",
+        6: "Perfeccionismo sufocante com a família ou consigo mesmo.",
+        7: "Isolamento excessivo e tendência a guardar sentimentos negativos.",
+        8: "Ambição desmedida ou apego excessivo ao controle material.",
+        9: "Sacrifício pessoal exagerado ou falta de limites com os outros."
+    },
+    inclinacoes: {
+        1: "Forte impulso de liderança e originalidade em tudo o que faz.",
+        2: "Habilidade natural para mediação e diplomacia silenciosa.",
+        3: "Grande capacidade de comunicação e expressão criativa.",
+        4: "Talento nato para organização, estrutura e métodos.",
+        5: "Necessidade de liberdade e facilidade em lidar com o público.",
+        6: "Forte senso de justiça e acolhimento comunitário.",
+        7: "Poderosa intuição e facilidade para estudos profundos.",
+        8: "Capacidade executiva e visão de negócios apurada.",
+        9: "Humanitarismo e compreensão profunda da alma humana."
+    },
+    subconsciente: {
+        1: "Sua primeira reação é de ação imediata e autoconfiança.",
+        2: "Sua reação inicial é buscar apoio e analisar os sentimentos.",
+        3: "Tende a reagir com otimismo e criatividade sob pressão.",
+        4: "Busca segurança e ordem assim que algo inesperado ocorre.",
+        5: "Reage com rapidez e adaptabilidade a mudanças bruscas.",
+        6: "Sua primeira preocupação é o bem-estar dos envolvidos.",
+        7: "Tende a se retrair para analisar a situação racionalmente.",
+        8: "Reage focando na solução prática e no controle do dano.",
+        9: "Mantém a calma e busca uma visão ampla do problema."
+    },
+    talento:    {     
+      1: "Sua primeira reação é de ação imediata e autoconfiança.",
+        2: "Sua reação inicial é buscar apoio e analisar os sentimentos.",
+        3: "Tende a reagir com otimismo e criatividade sob pressão.",
+        4: "Busca segurança e ordem assim que algo inesperado ocorre.",
+        5: "Reage com rapidez e adaptabilidade a mudanças bruscas.",
+        6: "Sua primeira preocupação é o bem-estar dos envolvidos.",
+        7: "Tende a se retrair para analisar a situação racionalmente.",
+        8: "Reage focando na solução prática e no controle do dano.",
+        9: "Mantém a calma e busca uma visão ampla do problema."
+},
+  
 };
