@@ -284,32 +284,36 @@ function gerarMapa() {
     }
   },
 // --- Início do Objeto de Textos ---
-    textos: {
-       dia: textos.dia[res.diaN],
-      motivacao: textos.motivacao[res.motivacao],
-        influencia: textos.influencia[res.influencia],
-        expressao: textos.Personalidade[res.personalidade],
-        destino: textos.CaminhodeVida[res.caminhoVida],
-        missao: textos.Propósito[res.missao],
-        comportamento: textos.comportamento[res.comportamento],
-        anoPessoal: textos.anoPessoal[res.anoPessoal],
-        deficiencias: textoDeficiencias,
-
-        // Desafios (1, 2 e o Geral/3)
-        desafio1: (textos.desafios && textos.desafios[1]) ? textos.desafios[1][d1] : "",
-        desafio2: (textos.desafios && textos.desafios[2]) ? textos.desafios[2][d2] : "",
-        desafioGeral: (textos.desafios && textos.desafios[3]) ? textos.desafios[3][d3] : "",
-
-        // Ciclos de Vida
-        txtCiclo1: (textos.ciclos && textos.ciclos[1]) ? textos.ciclos[1][ciclo1] : "",
-        txtCiclo2: (textos.ciclos && textos.ciclos[2]) ? textos.ciclos[2][ciclo2] : "",
-        txtCiclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : "",
-
-        // Momentos Decisivos (Pináculos)
-        txtMd1: (textos.momentos && textos.momentos[1]) ? textos.momentos[1][md1] : "",
-        txtMd2: (textos.momentos && textos.momentos[2]) ? textos.momentos[2][md2] : "",
-        txtMd3: (textos.momentos && textos.momentos[3]) ? textos.momentos[3][md3] : "",
-        txtMd4: (textos.momentos && textos.momentos[4]) ? textos.momentos[4][md4] : ""
+textos: {
+        dia: textos.dia[diaN],
+        motivacao: textos.motivacao[motivacao],
+        influencia: textos.influencia[influencia],
+        expressao: textos.Personalidade[personalidade],
+        comportamento: textos.comportamento[comportamento],
+        destino: textos.CaminhodeVida[caminhoVida],
+        missao: textos.Propósito[missao],
+        // Proteção: caso não tenha Maturidade ou Relacionamento, usa Propósito ou vazio
+        maturidade: (textos.Maturidade) ? textos.Maturidade[maturidade] : textos.Propósito[missao],
+        relacionamento: (textos.Relacionamento) ? textos.Relacionamento[relacionamento] : "",
+        
+        // Ajustado para o padrão da sua imagem: textos.ciclos[fase][numero]
+        ciclo1: (textos.ciclos && textos.ciclos[1]) ? textos.ciclos[1][ciclo1] : "",
+        ciclo2: (textos.ciclos && textos.ciclos[2]) ? textos.ciclos[2][ciclo2] : "",
+        ciclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : "",
+        
+        // Momentos Decisivos (ajuste conforme o nome que deu no textos.js)
+        md1: (textos.momentos) ? textos.momentos[1][md1] : "",
+        md2: (textos.momentos) ? textos.momentos[2][md2] : "",
+        md3: (textos.momentos) ? textos.momentos[3][md3] : "",
+        md4: (textos.momentos) ? textos.momentos[4][md4] : "",
+        
+        // Desafios (ajuste conforme o nome que deu no textos.js)
+        d1: (textos.desafios) ? textos.desafios[1][d1] : "",
+        d2: (textos.desafios) ? textos.desafios[2][d2] : "",
+        d3: (textos.desafios) ? textos.desafios[3][d3] : "",
+        
+        anoPessoal: (textos.anoPessoal) ? textos.anoPessoal[anoPessoalNum] : "",
+        deficiencias: (typeof textoDeficiencias !== 'undefined') ? textoDeficiencias : ""
     }
     // --- Fim do Objeto ---
   };
