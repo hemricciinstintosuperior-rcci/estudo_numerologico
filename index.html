@@ -328,42 +328,64 @@ function gerarMapa() {
 
 // Função que cria os gráficos coloridos de análise
 function gerarHTMLGraficosAnalise(saldo) {
-    const config = {
-        "Seu Potencial": { 
+    // Definimos as categorias baseadas nas suas imagens originais
+    const categorias = {
+        "Perfil de Atitude": { 
             classe: "barra-potencial", 
-            itens: { "Proatividade": [1, 5, 8], "Liderança": [1, 8], "Coragem": [1, 9] } 
+            numeros: [1, 5, 8],
+            legendas: {
+                alto: "Alta Proatividade e Liderança",
+                medio: "Equilíbrio em Tomada de Decisão",
+                baixo: "Necessidade de Desenvolver Iniciativa"
+            }
         },
-        "Sua Essência": { 
+        "Perfil Intelectual": { 
             classe: "barra-essencia", 
-            itens: { "Sensibilidade": [2, 6], "Intelecto": [7], "Introspecção": [7, 9] } 
+            numeros: [7, 4, 1],
+            legendas: {
+                alto: "Forte Capacidade Analítica e Foco",
+                medio: "Pensamento Prático e Organizado",
+                baixo: "Trabalhar Concentração e Método"
+            }
         },
-        "Capacidade de Vida": { 
+        "Perfil de Sensibilidade": { 
             classe: "barra-capacidade", 
-            itens: { "Alegria": [3, 5], "Otimismo": [3, 9], "Persuasão": [3, 5, 1] } 
+            numeros: [2, 6, 9, 3],
+            legendas: {
+                alto: "Alta Empatia e Inteligência Emocional",
+                medio: "Sensibilidade Harmoniosa",
+                baixo: "Desenvolver Conexão com o Sentir"
+            }
         }
     };
 
     let html = "";
-    for (let titulo in config) {
-        html += `<div class="card" style="width: 100%; max-width: 600px;">
-                    <h3 style="border-bottom: 2px solid #eee; padding-bottom: 8px;">${titulo}</h3>`;
-        for (let item in config[titulo].itens) {
-            let nums = config[titulo].itens[item];
-            // Soma os valores do saldo para os números daquela categoria
-            let soma = nums.reduce((acc, n) => acc + (saldo[n] || 0), 0);
-            
-            // Cálculo da porcentagem (ajuste o multiplicador se quiser barras mais cheias)
-            let porcento = Math.min(Math.max(soma * 15, 15), 100); 
+    for (let titulo in categorias) {
+        let cat = categorias[titulo];
+        
+        // SOMA OS PONTOS: Pega o saldo de cada número daquela categoria
+        let somaPontos = cat.numeros.reduce((acc, n) => acc + (saldo[n] || 0), 0);
+        
+        // Define a Porcentagem (0 a 100%)
+        let porcento = Math.min(Math.max(somaPontos * 12, 10), 100); 
 
-            html += `
-                <div style="display: flex; align-items: center; margin-bottom: 10px; gap: 10px;">
-                    <div style="width: 110px; font-size: 13px; font-weight: bold; text-align: right;">${item}</div>
-                    <div style="flex: 1; height: 14px; background: #eee; border-radius: 7px; overflow: hidden;">
-                        <div class="preenchimento ${config[titulo].classe}" style="width:${porcento}%; height: 100%; transition: width 0.8s;"></div>
-                    </div>
-                </div>`;
-        }
-        html += `</div>`;
+        // ESCOLHE A LEGENDA DINÂMICA
+        let legendaFinal = cat.legendas.medio;
+        if (porcento > 70) legendaFinal = cat.legendas.alto;
+        if (porcento < 40) legendaFinal = cat.legendas.baixo;
+
+        html += `
+        <div class="card" style="width: 100%; max-width: 600px; border-left: 5px solid ${porcento > 50 ? '#22c55e' : '#eab308'};">
+            <h3 style="margin-bottom: 5px;">${titulo}</h3>
+            <p style="font-size: 13px; color: #666; margin-top:0;">${legendaFinal}</p>
+            
+            <div style="display: flex; align-items: center; gap: 15px; margin-top: 10px;">
+                <div style="flex: 1; height: 16px; background: #eee; border-radius: 8px; overflow: hidden; border: 1px solid #ddd;">
+                    <div class="preenchimento ${cat.classe}" style="width:${porcento}%; height: 100%; transition: width 1.5s ease-in-out;"></div>
+                </div>
+                <span style="font-weight: bold; font-size: 14px; width: 40px;">${Math.round(porcento)}%</span>
+            </div>
+        </div>`;
     }
     return html;
 }
