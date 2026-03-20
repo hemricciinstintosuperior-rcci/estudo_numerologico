@@ -195,22 +195,46 @@
             const exp = reduzir(sV + sC);
             const cv = reduzir(dia + mes + ano);
             const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0).map(Number);
+            // --- INÍCIO DO CÁLCULO DÉFICIT DE COMPORTAMENTO (MODERNA) ---
+            const diaReduzido = reduzir(dia); 
+            const mot = reduzir(sV);
+            const prop = reduzir(cv + exp);
             
+            // Pilares para conferir repetição (Déficits Ocultos)
+            const pilaresOcultos = [prop, cv, exp, mot];
+            let deficitsOcultos = [];
+
+            pilaresOcultos.forEach((num, index) => {
+                // Se o número já apareceu antes no array, ele é um déficit oculto
+                if (pilaresOcultos.indexOf(num) !== index && !deficitsOcultos.includes(num)) {
+                    deficitsOcultos.push(num);
+                }
+            });
+            // --- FIM DO CÁLCULO ---
             // --- CÁLCULO DE CRONOLOGIA (IDADE E DATAS) ---
             const dataNascimento = new Date(dataRaw);
             const idade1 = 36 - cv;
             const anoFim1 = dataNascimento.getFullYear() + idade1;
 
-            const res = {
-                dia: reduzir(dia), comportamento: reduzir(dia),
-                motivacao: reduzir(sV), influencia: reduzir(sC),
-                Personalidade: exp, CaminhodeVida: cv,
-                "Propósito": reduzir(cv + exp), Maturidade: reduzir(cv + exp), Relacionamento: reduzir(cv + exp),
+const res = {
+                dia: reduzir(dia), 
+                comportamento: reduzir(dia),
+                motivacao: mot, 
+                influencia: reduzir(sC),
+                Personalidade: exp, 
+                CaminhodeVida: cv,
+                "Propósito": prop, 
+                Maturidade: reduzir(cv + exp), 
+                Relacionamento: prop, // Vinculado ao Propósito conforme sua regra
                 anoPessoal: reduzir(dia + mes + 2026),
-                essencia: reduzir(sE), talento: reduzir(reduzir(sV) + exp),
+                essencia: reduzir(sE), 
+                talento: reduzir(mot + exp),
                 equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
                 subconsciente: 9 - faltantes.length,
-                inclinacoes: reduzir(sV)
+                inclinacoes: mot,
+                // Novos campos para o Déficit Moderno:
+                deficitRecorrente: diaReduzido,
+                deficitsOcultos: deficitsOcultos
             };
 
             // 1. Gráficos de Intensidade no Topo
@@ -225,9 +249,17 @@
             // 3. Deficiências e Déficits (Separados)
             html += `<div class="card"><h3>Deficiências (Faltas)</h3>`;
             faltantes.forEach(f => html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p>`);
-            html += `</div><div class="card"><h3>Déficits (Impactos)</h3>`;
-            faltantes.forEach(f => html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficits[f])}</p>`);
-            html += `</div>`;
+// Substitua o seu card de Déficits antigo por este:
+    html += `<div class="card" style="border-left: 10px solid #c53030;">
+                <h3 style="color:#c53030;">Déficit de Comportamento</h3>
+                <p><strong>Déficit Recorrente (Dia):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>`;
+    
+    if (res.deficitsOcultos.length > 0) {
+        res.deficitsOcultos.forEach(d => {
+            html += `<p><strong>Déficit Oculto (Repetição ${d}):</strong> ${aplicarFiltroTexto(textos.deficits[d])}</p>`;
+        });
+    }
+    html += `</div>`;
 
             // 4. Ciclos, Momentos e Desafios com IDADES e DATAS
             // CICLOS
