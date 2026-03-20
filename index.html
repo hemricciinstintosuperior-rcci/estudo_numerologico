@@ -64,29 +64,20 @@
 // ============================================
 // 1. FUNÇÕES DE PERSONALIZAÇÃO E FILTRO
 // ============================================
-
 function formatarNomeDinamico() {
     let nomeInput = document.getElementById("nome").value.trim();
-    if (!nomeInput) return "você"; // Retorno padrão minúsculo para manter fluidez se vazio
-    
-    // Pega apenas o primeiro nome
+    if (!nomeInput) return "você";
     let primeiroNome = nomeInput.split(' ')[0];
-    
-    // Retorna Capitalizado (Ex: João)
     return primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
 }
 
 function aplicarFiltroTexto(texto) {
     if (!texto) return "";
     let nome = formatarNomeDinamico();
-    
-    // Criamos uma expressão regular que busca a palavra "você" (com ou sem acento, case insensitive)
-    // O modificador 'g' garante que mude todas as vezes que aparecer no texto
     const regex = /você/gi;
-    
-    // Substitui por <strong>Nome</strong>
     return texto.replace(regex, `<strong>${nome}</strong>`);
 }
+
 // ============================================
 // 2. MOTOR DE CÁLCULO (TABELA CABALÍSTICA)
 // ============================================
@@ -114,280 +105,112 @@ function reduzir(n) {
 
 function card(titulo, subtitulo, numero, textoRaw) {
   const textoProcessado = aplicarFiltroTexto(textoRaw);
-  return `
-  <div class="card">
-    <h3>${titulo}</h3>
-    <p><strong>${subtitulo}</strong> | Número: ${numero}</p>
-    <div class="texto">${textoProcessado || ""}</div>
-  </div>`;
+  return `<div class="card"><h3>${titulo}</h3><p><strong>${subtitulo}</strong> | Número: ${numero}</p><div class="texto">${textoProcessado || ""}</div></div>`;
 }
-
-let mapaGerado = false;
-const acessoPago = false; // Mudar via lógica de pagamento
 
 // ============================================
-// 3. MOTOR DE ORIENTAÇÃO (SALDO 1 A 9)
+// 3. BANCO DE ATRIBUTOS E LÓGICA DE EQUILÍBRIO
 // ============================================
-
-function calcularOrientacaoNumerica(nome, resultados, faltantes, desafios) {
-    // Inicializa todos os números de 1 a 9 com zero
-    let saldo = { 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0 };
-
-    // A. FORÇA DAS LETRAS (Intensidade base)
-    const nomeLimpo = nome.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    for (let letra of nomeLimpo) {
-        let n = tabela[letra];
-        if (n) saldo[n] += 0.3; // Cada letra do nome dá uma base de 0.3
-    }
-
-    // B. PONTOS DE PODER (Resultados Positivos - Peso Alto)
-    // Se o número é Destino, Missão ou Motivação, ele tem muito peso positivo
-    const pilaresPositivos = [
-        resultados.motivacao, 
-        resultados.influencia, 
-        resultados.personalidade, 
-        resultados.caminhoVida, 
-        resultados.missao, 
-        resultados.diaN
-    ];
-    pilaresPositivos.forEach(n => { if(saldo[n] !== undefined) saldo[n] += 2.5; });
-
-    // C. PONTOS DE DESAFIO (Lado Negativo - Subtração)
-    // Lições Cármicas (Números que faltam no nome) pesam muito negativamente
-    faltantes.forEach(n => { if(saldo[n] !== undefined) saldo[n] -= 3.5; });
-
-    // Desafios (D1, D2, D3) tiram pontos de fluidez do número
-    desafios.forEach(n => { if(saldo[n] !== undefined) saldo[n] -= 1.5; });
-
-    return saldo;
-}
-function calcularEquilibrioAtributo(numerosAlvo, saldoGeral, resultadosPuros, faltantes) {
-    let pontuacaoBase = 0;
-    
-    numerosAlvo.forEach(n => {
-        // 1. Soma a presença (letras e pilares)
-        pontuacaoBase += (saldoGeral[n] || 0);
-        
-        // 2. Penaliza fortemente se for uma Lição Cármica (Faltante)
-        if (faltantes.includes(n)) pontuacaoBase -= 4;
-
-        // 3. Bônus por posição de destaque (Motivação/Destino)
-        if (resultadosPuros.motivacao === n) pontuacaoBase += 2;
-        if (resultadosPuros.caminhoVida === n) pontuacaoBase += 2;
-    });
-
-    // Normaliza para 0 a 10
-    let nota = Math.max(0, Math.min(10, pontuacaoBase));
-    
-    // DEFINE O ESTADO (A Lógica da Média 5)
-    let estado = "Equilibrado";
-    let cor = "#22c55e"; // Verde (Zona de Ouro)
-
-    if (nota > 7.5) {
-        estado = "Excesso / Impulsividade";
-        cor = "#ef4444"; // Vermelho (Alerta de exagero)
-    } else if (nota < 3.5) {
-        estado = "Carência / Deficiência";
-        cor = "#3b82f6"; // Azul (Falta de energia)
-    } else if (nota >= 3.5 && nota < 4.5) {
-        estado = "Baixo / Trabalhar";
-        cor = "#eab308"; // Amarelo
-    }
-
-    return { nota: nota.toFixed(1), estado: estado, cor: cor };
-}
-// ============================================
-// 4. RENDERIZAÇÃO VISUAL (IGUAL À FOTO)
-// ============================================
-
-function renderizarGraficoOrientacao(saldo) {
-    let html = `
-    <div class="card" style="background: #fff; border: 2px solid #e5e7eb; padding: 25px;">
-        <h3 style="text-align:center; color:#111827; margin-bottom: 20px;">ANÁLISE DE PERFIL VIBRACIONAL</h3>
-        <p style="font-size: 13px; color: #666; text-align: center; margin-bottom: 25px;">
-            O equilíbrio entre seus potenciais (direita) e pontos de superação (esquerda).
-        </p>
-    `;
-
-    for (let i = 1; i <= 9; i++) {
-        let valor = saldo[i];
-        let largura = Math.min(Math.abs(valor) * 8, 50); // Escala visual
-        let isPositivo = valor >= 0;
-        
-        // INTERPRETAÇÃO DINÂMICA
-        let status = "";
-        if (valor > 4) status = "Potencial Dominante";
-        else if (valor > 0) status = "Equilibrado";
-        else if (valor > -2) status = "Instável";
-        else status = "Bloqueio / Trabalhar";
-
-        html += `
-        <div style="margin-bottom: 15px;">
-            <div style="display: flex; justify-content:建设; font-size: 11px; font-weight: bold; margin-bottom: 5px;">
-                <span>NÚMERO ${i}</span>
-                <span style="color: ${isPositivo ? '#16a34a' : '#dc2626'}">${status}</span>
-            </div>
-            <div style="height: 12px; background: #f3f4f6; position: relative; border-radius: 6px; overflow: hidden; border: 1px solid #e5e7eb;">
-                <div style="
-                    position: absolute; 
-                    left: ${isPositivo ? '50%' : `calc(50% - ${largura}%)`}; 
-                    width: ${largura}%; 
-                    height: 100%; 
-                    background: ${isPositivo ? 'linear-gradient(90deg, #4ade80, #16a34a)' : 'linear-gradient(90deg, #dc2626, #f87171)'};
-                    transition: all 1s ease-out;
-                "></div>
-                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #000; z-index: 2;"></div>
-            </div>
-        </div>`;
-    }
-
-    html += `</div>`;
-    return html;
-}
-
-  function calcularPontuacaoAtributo(numerosAlvo, saldoGeral, resultadosPuros) {
-    let pontos = 0;
-    
-    numerosAlvo.forEach(n => {
-        // 1. Pega o saldo do gráfico (que já tem letras e pilares)
-        pontos += (saldoGeral[n] || 0) * 0.5;
-
-        // 2. Bônus Extra: Se o número está na MOTIVAÇÃO ou DESTINO (Peso maior)
-        if (resultadosPuros.motivacao === n) pontos += 2;
-        if (resultadosPuros.caminhoVida === n) pontos += 2;
-    });
-
-    // Normaliza para uma escala de 0 a 10
-    let resultado = Math.max(0, Math.min(10, pontos));
-    return resultado.toFixed(1);
-}
-  
 const bancoAtributos = {
     "Seu Potencial": {
-        "Proatividade": [1, 5, 8],
-        "Praticidade": [4, 8],
-        "Controle": [4, 1],
-        "Coragem": [1, 5, 9],
-        "Ousadia": [5, 1],
-        "Autoconfiança": [1, 8],
-        "Liderança": [1, 8, 4],
-        "Independência": [1, 5],
-        "Individualismo": [1]
+        "Proatividade": [1, 5, 8], "Praticidade": [4, 8], "Controle": [4, 1], "Coragem": [1, 5, 9],
+        "Ousadia": [5, 1], "Autoconfiança": [1, 8], "Liderança": [1, 8, 4], "Independência": [1, 5], "Individualismo": [1]
     },
     "Sua Essência": {
-        "Sensibilidade": [2, 6, 11, 9], // 11 aqui como 2
-        "Curiosidade": [5, 3],
-        "Introspecção": [7, 9],
-        "Intelecto": [7, 1],
-        "Racionalidade": [4, 7],
-        "Lógica": [4, 7, 8],
-        "Senso Crítico": [7, 4, 1],
-        "Autojulgamento": [7, 6],
-        "Instintividade": [5, 9, 2],
-        "Espontaneidade": [3, 5],
-        "Influenciabilidade": [2, 6],
-        "Impulsividade": [1, 5],
-        "Persistência": [4, 8, 9]
+        "Sensibilidade": [2, 6, 9], "Curiosidade": [5, 3], "Introspecção": [7, 9], "Intelecto": [7, 1],
+        "Racionalidade": [4, 7], "Lógica": [4, 7, 8], "Senso Crítico": [7, 4, 1], "Autojulgamento": [7, 6],
+        "Instintividade": [5, 9, 2], "Espontaneidade": [3, 5], "Influenciabilidade": [2, 6], "Impulsividade": [1, 5], "Persistência": [4, 8, 9]
     },
     "Capacidade de Aproveitar a Vida": {
-        "Alegria": [3, 5],
-        "Jovialidade": [3, 5],
-        "Dinamismo": [5, 1, 8],
-        "Capacidade de Perdoar": [9, 6, 2],
-        "Otimismo": [3, 9],
-        "Extroversão": [3, 5],
-        "Espiritualidade": [7, 9, 11],
-        "Poder de Persuasão": [3, 5, 8],
-        "Adaptabilidade": [5, 2]
+        "Alegria": [3, 5], "Jovialidade": [3, 5], "Dinamismo": [5, 1, 8], "Capacidade de Perdoar": [9, 6, 2],
+        "Otimismo": [3, 9], "Extroversão": [3, 5], "Espiritualidade": [7, 9], "Poder de Persuasão": [3, 5, 8], "Adaptabilidade": [5, 2]
     },
     "Relacionamentos e Afeto": {
-        "Demonstração de Afeto": [6, 2, 3, 9],
-        "Cooperação": [2, 6, 9],
-        "Tolerância": [9, 6, 2],
-        "Diplomacia": [2, 11],
-        "Comprometimento": [4, 6, 8],
-        "Lealdade": [4, 6],
-        "Aconselhamento": [6, 9],
-        "Agressividade": [1, 8, 5], // Números de força em excesso ou desafio
-        "Magnetismo Personal": [1, 3, 5, 8]
+        "Demonstração de Afeto": [6, 2, 3, 9], "Cooperação": [2, 6, 9], "Tolerância": [9, 6, 2], "Diplomacia": [2],
+        "Comprometimento": [4, 6, 8], "Lealdade": [4, 6], "Aconselhamento": [6, 9], "Magnetismo Pessoal": [1, 3, 5, 8]
     }
 };
 
-function gerarGraficosEquilibrio(saldo, resultados, faltantes) {
+function calcularOrientacaoNumerica(nome, resultados, faltantes, desafios) {
+    let saldo = { 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0 };
+    const nomeLimpo = nome.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    for (let letra of nomeLimpo) {
+        let n = tabela[letra];
+        if (n) saldo[n] += 0.4; 
+    }
+    const pilares = [resultados.motivacao, resultados.influencia, resultados.personalidade, resultados.caminhoVida, resultados.missao, resultados.diaN];
+    pilares.forEach(n => { if(saldo[n] !== undefined) saldo[n] += 2.5; });
+    faltantes.forEach(n => { if(saldo[n] !== undefined) saldo[n] -= 3.5; });
+    desafios.forEach(n => { if(saldo[n] !== undefined) saldo[n] -= 1.5; });
+    return saldo;
+}
+
+function calcularNotaAtributo(numerosAlvo, saldoGeral, resultadosPuros, faltantes) {
+    let pontos = 0;
+    numerosAlvo.forEach(n => {
+        pontos += (saldoGeral[n] || 0) * 0.6;
+        if (resultadosPuros.motivacao === n || resultadosPuros.caminhoVida === n) pontos += 1.5;
+        if (faltantes.includes(n)) pontos -= 2;
+    });
+    let nota = Math.max(0, Math.min(10, pontos + 3)); // +3 para iniciar na média equilibrada
+    return parseFloat(nota.toFixed(1));
+}
+
+// ============================================
+// 4. RENDERIZAÇÃO DOS GRÁFICOS
+// ============================================
+function renderizarGraficoOrientacao(saldo) {
+    let html = `<div class="card"><h3>ANÁLISE DE PERFIL VIBRACIONAL</h3>`;
+    for (let i = 1; i <= 9; i++) {
+        let valor = saldo[i];
+        let largura = Math.min(Math.abs(valor) * 8, 50);
+        let isPositivo = valor >= 0;
+        let status = valor > 4 ? "Forte" : valor > 0 ? "Equilibrado" : "Trabalhar";
+        html += `<div style="margin-bottom:10px; font-size:11px;"><strong>N${i}</strong> - ${status}
+            <div style="height:10px; background:#eee; position:relative; border-radius:5px; overflow:hidden;">
+                <div style="position:absolute; left:${isPositivo ? '50%' : `calc(50% - ${largura}%)`}; width:${largura}%; height:100%; background:${isPositivo ? '#22c55e' : '#ef4444'};"></div>
+                <div style="position:absolute; left:50%; top:0; bottom:0; width:1px; background:#000;"></div>
+            </div></div>`;
+    }
+    return html + `</div>`;
+}
+
+function gerarGraficosCompletosAnalise(saldo, resultados, faltantes) {
     let html = "";
-
     for (let categoria in bancoAtributos) {
-        const legendas = Object.keys(bancoAtributos[categoria]).sort();
-
-        html += `<div class="card" style="margin-bottom: 30px; border: 1px solid #ddd;">
-                    <h2 style="background: #0a0e1a; color: #fff; padding: 10px; margin: -20px -20px 20px -20px; border-radius: 8px 8px 0 0; font-size: 18px;">${categoria}</h2>`;
-
+        const legendas = Object.keys(bancoAtributos[categoria]).sort((a,b) => a.localeCompare(b));
+        html += `<div class="card"><h3>${categoria}</h3>`;
         legendas.forEach(legenda => {
-            const numeros = bancoAtributos[categoria][legenda];
-            const analise = calcularEquilibrioAtributo(numeros, saldo, resultados, faltantes);
-            const porcento = analise.nota * 10;
-
-            html += `
-                <div style="margin-bottom: 18px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 4px;">
-                        <span style="font-weight: bold; text-transform: uppercase;">${legenda}</span>
-                        <span style="color: ${analise.cor}; font-weight: bold;">${analise.estado} (${analise.nota})</span>
-                    </div>
-                    <div style="height: 14px; background: #eee; border-radius: 7px; position: relative; border: 1px solid #ccc;">
-                        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: #999; z-index: 1; border-left: 1px dashed #fff;"></div>
-                        
-                        <div style="width: ${porcento}%; height: 100%; background: ${analise.cor}; transition: width 1s; position: relative; z-index: 2;"></div>
-                    </div>
-                </div>`;
+            const nota = calcularNotaAtributo(bancoAtributos[categoria][legenda], saldo, resultados, faltantes);
+            let cor = nota > 7.5 ? "#ef4444" : nota > 4 ? "#22c55e" : "#eab308";
+            let txtStatus = nota > 7.5 ? "Excesso" : nota > 4 ? "Equilibrado" : "Baixo";
+            html += `<div style="margin-bottom:12px; font-size:12px;">
+                <div style="display:flex; justify-content:space-between"><strong>${legenda}</strong> <span>${txtStatus} (${nota}/10)</span></div>
+                <div style="height:8px; background:#eee; border-radius:4px; overflow:hidden; border:1px solid #ddd; position:relative;">
+                    <div style="position:absolute; left:50%; width:1px; height:100%; background:#999; z-index:1;"></div>
+                    <div style="width:${nota*10}%; height:100%; background:${cor}; transition:width 1s;"></div>
+                </div></div>`;
         });
         html += `</div>`;
     }
     return html;
 }
 
-function gerarPainelTrabalho(saldo, resultados, faltantes) {
-    let sugestoes = [];
+// ============================================
+// 5. FUNÇÃO PRINCIPAL
+// ============================================
+let mapaGerado = false;
 
-    // Varre todos os atributos para achar os desequilíbrios
-    for (let cat in bancoAtributos) {
-        for (let leg in bancoAtributos[cat]) {
-            let res = calcularEquilibrioAtributo(bancoAtributos[cat][leg], saldo, resultados, faltantes);
-            if (res.nota < 4.0 || res.nota > 8.0) {
-                sugestoes.push({ item: leg, nota: res.nota, estado: res.estado });
-            }
-        }
-    }
-
-    // Pega os 5 casos mais críticos
-    sugestoes.sort((a, b) => Math.abs(5 - b.nota) - Math.abs(5 - a.nota));
-    let top3 = sugestoes.slice(0, 5);
-
-    let html = `
-    <div class="card" style="background: #fff5f5; border: 2px solid #feb2b2;">
-        <h3 style="color: #c53030;">⚠️ NECESSIDADES A SEREM TRABALHADAS</h3>
-        <p style="font-size: 14px;">Identificamos desequilíbrios que podem estar bloqueando sua evolução:</p>
-        <ul style="font-size: 14px; line-height: 1.8;">`;
-
-    top3.forEach(s => {
-        let conselho = s.nota < 5 ? "Aumentar/Desenvolver" : "Moderar/Equilibrar";
-        html += `<li><strong>${s.item}:</strong> ${s.estado}. Objetivo: ${conselho} esta energia.</li>`;
-    });
-
-    html += `</ul></div>`;
-    return html;
-}  
 function gerarMapa() {
   const nomeInput = document.getElementById("nome").value.trim();
   const dataInput = document.getElementById("data").value;
-
-  if(nomeInput.length < 5) { alert("Digite seu nome completo."); return; }
-  if(!dataInput) { alert("Selecione sua data de nascimento."); return; }
+  if(nomeInput.length < 5 || !dataInput) { alert("Preencha os dados corretamente."); return; }
 
   const nome = nomeInput.toUpperCase();
   const [ano, mes, dia] = dataInput.split("-").map(Number);
+  let usados = new Set();
+  let somaV = 0, somaC = 0;
 
-  // --- Cálculos de Nome ---
-  let somaV = 0, somaC = 0, usados = new Set();
   for (let l of nome) {
     const valor = calcularValorComAcentos(l);
     if (!valor) continue;
@@ -399,134 +222,31 @@ function gerarMapa() {
   const motivacao = reduzir(somaV);
   const influencia = reduzir(somaC);
   const personalidade = reduzir(somaV + somaC);
-
-  // --- Cálculos de Data ---
-  const diaN = dia;
-  const comportamento = reduzir(dia);
   const caminhoVida = reduzir(dia + mes + ano);
   const missao = reduzir(caminhoVida + personalidade);
-  const maturidade = reduzir(caminhoVida + personalidade);
-  const relacionamento = missao; 
-
-  const fim1 = 37 - caminhoVida;
-  const fim2 = fim1 + 27;
-  
-  const ciclo1 = reduzir(mes), ciclo2 = reduzir(dia), ciclo3 = reduzir(ano);
-  const md1 = reduzir(dia + mes), md2 = reduzir(dia + ano), md3 = reduzir(md1 + md2), md4 = reduzir(mes + ano);
   const d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
 
-  const anoAtual = new Date().getFullYear();
-  const anoPessoalNum = reduzir(dia + mes + anoAtual);
-  
   let faltantes = [];
   for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
-  const textoDeficiencias = faltantes.map(num => textos.deficiencias[num]).join("");
 
-  // --- Criação do Objeto de Dados ---
   const dadosPremium = {
     nome: nomeInput,
     data: dataInput.split("-").reverse().join("/"),
-    resultados: {
-        diaN, motivacao, influencia, personalidade, comportamento, caminhoVida, missao, maturidade, relacionamento, anoPessoal: anoPessoalNum
-    },
-    periodos: {
-        ciclo1: `0 aos ${fim1} anos`, ciclo2: `${fim1 + 1} aos ${fim2} anos`, ciclo3: `Acima de ${fim2} anos`,
-        md1: `0 aos ${fim1} anos`, md2: `${fim1 + 1} aos ${fim1 + 9} anos`, md3: `${fim1 + 10} aos ${fim1 + 18} anos`, md4: `Acima de ${fim2} anos`
-    },
-    textos: {
-        dia: textos.dia[diaN], motivacao: textos.motivacao[motivacao], influencia: textos.influencia[influencia],
-        expressao: textos.Personalidade[personalidade], comportamento: textos.comportamento[comportamento],
-        destino: textos.CaminhodeVida[caminhoVida], missao: textos.Propósito[missao],
-        maturidade: (textos.Maturidade) ? textos.Maturidade[maturidade] : textos.Propósito[missao],
-        relacionamento: (textos.Relacionamento) ? textos.Relacionamento[relacionamento] : "",
-        ciclo1: (textos.ciclos && textos.ciclos[1]) ? textos.ciclos[1][ciclo1] : "",
-        ciclo2: (textos.ciclos && textos.ciclos[2]) ? textos.ciclos[2][ciclo2] : "",
-        ciclo3: (textos.ciclos && textos.ciclos[3]) ? textos.ciclos[3][ciclo3] : "",
-        md1: (textos.momentos) ? textos.momentos[1][md1] : "",
-        md2: (textos.momentos) ? textos.momentos[2][md2] : "",
-        md3: (textos.momentos) ? textos.momentos[3][md3] : "",
-        md4: (textos.momentos) ? textos.momentos[4][md4] : "",
-        // CORREÇÃO DOS DESAFIOS:
-        // Verifique se no seu textos.js o objeto é "desafios" ou "Desafios"
-        d1: (textos.desafios) ? textos.desafios[1][d1] : "",
-        d2: (textos.desafios) ? textos.desafios[2][d2] : "",
-        d3: (textos.desafios) ? textos.desafios[3][d3] : "",
-        anoPessoal: (textos.anoPessoal) ? textos.anoPessoal[anoPessoalNum] : "",
-        deficiencias: textoDeficiencias
-    }
+    resultados: { diaN: dia, motivacao, influencia, personalidade, caminhoVida, missao },
+    textos: { /* seus textos aqui... */ }
   };
 
-  // --- GERAÇÃO DOS GRÁFICOS ---
-// --- GERAÇÃO DOS GRÁFICOS ---
-  const listaDesafios = [d1, d2, d3]; 
-  const saldoFinal = calcularOrientacaoNumerica(nome, dadosPremium.resultados, faltantes, listaDesafios);
-  
+  const saldoFinal = calcularOrientacaoNumerica(nome, dadosPremium.resultados, faltantes, [d1, d2, d3]);
   const htmlOrientacao = renderizarGraficoOrientacao(saldoFinal);
-  const htmlAnalise = gerarHTMLGraficosAnalise(saldoFinal); 
+  const htmlAnalise = gerarGraficosCompletosAnalise(saldoFinal, dadosPremium.resultados, faltantes);
 
-  // ADICIONE ESSAS DUAS LINHAS DE TESTE ABAIXO:
-  console.log("Gerou Orientação?", htmlOrientacao ? "SIM" : "NÃO");
-  console.log("Gerou Analise?", htmlAnalise ? "SIM" : "NÃO");
-
-  // --- SALVAMENTO PARA O PREMIUM ---
   localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosPremium));
-  localStorage.setItem("graficoParaOPremium", htmlOrientacao);
-  localStorage.setItem("graficosAnalisePremium", htmlAnalise);
+  localStorage.setItem("graficoParaOPremium", htmlOrientacao + htmlAnalise);
 
-  // --- EXIBIÇÃO NO INDEX (GRÁTIS) ---
-  const htmlCardsGratis = `
-    ${card("Dia de Nascimento", "Talentos Naturais", diaN, textos.dia[diaN])}
-    ${card("Influência", "Aparência", influencia, textos.influencia[influencia])}
-    ${card("Motivação", "Seu Desejo Íntimo", motivacao, textos.motivacao[motivacao])}
-    ${card("Personalidade", "Sua Expressão", personalidade, textos.Personalidade[personalidade])}
-    ${card("Comportamento", "Número Psíquico", comportamento, textos.comportamento[comportamento])}
-    ${card("Caminho de Vida", "Seu Destino", caminhoVida, textos.CaminhodeVida[caminhoVida])}
-    ${card("Ano Pessoal", "Sua energia em " + anoAtual, anoPessoalNum, textos.anoPessoal[anoPessoalNum])}
-    <div class="card" style="background: #fee2e2; border: 2px dashed #ef4444; text-align: center;">
-        <p><strong>Relatório Premium desbloqueia Ciclos, Momentos, Desafios e Lições Cármicas.</strong></p>
-    </div>
-  `;
-
-  document.getElementById("resultado").innerHTML = htmlOrientacao + htmlAnalise + htmlCardsGratis;
-  mapaGerado = true; 
+  document.getElementById("resultado").innerHTML = htmlOrientacao + htmlAnalise + `<div class="card">Mapa Gratuito Gerado! Desbloqueie o Premium para ver tudo.</div>`;
+  mapaGerado = true;
 }
 
-// Função que cria os gráficos coloridos de análise
-function gerarGraficosCompletosAnalise(saldo, resultados) {
-    let html = "";
-
-    for (let categoria in bancoAtributos) {
-        // Pega as legendas e coloca em ordem alfabética
-        const legendasOrdenadas = Object.keys(bancoAtributos[categoria]).sort((a, b) => a.localeCompare(b));
-
-        html += `<div class="card" style="width: 100%; max-width: 650px; margin-bottom: 30px;">
-                    <h2 style="border-bottom: 2px solid #d4af37; color: #0a0e1a; padding-bottom: 10px;">${categoria}</h2>`;
-
-        legendasOrdenadas.forEach(legenda => {
-            const numerosRelacionados = bancoAtributos[categoria][legenda];
-            const nota = calcularPontuacaoAtributo(numerosRelacionados, saldo, resultados);
-            const porcentagem = nota * 10;
-
-            // Define cor baseada na nota (ex: abaixo de 4 é vermelho/atenção)
-            let corBarra = "#22c55e"; // Verde
-            if (nota < 6) corBarra = "#eab308"; // Amarelo
-            if (nota < 3.5) corBarra = "#ef4444"; // Vermelho
-
-            html += `
-                <div style="margin-bottom: 12px;">
-                    <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
-                        <span>${legenda}</span>
-                        <span>${nota} / 10</span>
-                    </div>
-                    <div style="height: 10px; background: #eee; border-radius: 5px; overflow: hidden; border: 1px solid #ddd;">
-                        <div style="width: ${porcentagem}%; height: 100%; background: ${corBarra}; transition: width 1s;"></div>
-                    </div>
-                </div>`;
-        });
-        html += `</div>`;
-    }
-    return html;
-}
 function validarPremium() {
    if(!mapaGerado){ alert("⚠️ Gere o mapa primeiro."); return; }
    window.open("https://hemricciinstintosuperior-rcci.github.io/estudo_numerologico/premiummapa.html","_blank");
