@@ -125,6 +125,19 @@ function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafio
     });
     return Math.max(0, Math.min(10, intensidade)).toFixed(1);
 }
+// --- NOVAS FUNÇÕES DE SEGREDOS (INCLUINDO EQUILÍBRIO) ---
+function calcularEquilibrio(nomeCompleto) {
+    const partes = nomeCompleto.trim().toUpperCase().split(/\s+/);
+    let somaIniciais = 0;
+    partes.forEach(p => { 
+        if(p.length > 0) {
+            // Pega a primeira letra de cada nome e vê o valor na tabela
+            const letraBase = p[0].normalize("NFD")[0];
+            somaIniciais += tabela[letraBase] || 0;
+        }
+    });
+    return reduzir(somaIniciais);
+}
 
 function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto) {
     let rankingGeral = [];
@@ -192,6 +205,7 @@ function gerarMapa() {
   // 2. SEGREDOS E MODERNA
   const essencia = calcularVibracaoEssencia(nomeInput);
   const talentoOculto = calcularTalentoOculto(res.motivacao, res.personalidade);
+  const numEquilibrio = calcularEquilibrio(nomeInput); // <--- NOVO
   const infoConclusao = obterPoderConclusao(nomeInput.split(' ')[0]);
 
   let faltantes = []; for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
@@ -212,7 +226,19 @@ function gerarMapa() {
         <p><strong>Talento Oculto:</strong> ${talentoOculto}<br><small style="color:#aaa;">${textosSegredos.talentoOculto[talentoOculto]}</small></p>
         <p><strong>Poder de Conclusão:</strong> Letra "${infoConclusao.letra}" (Vibração ${infoConclusao.valor})</p>
     </div>
+// --- NO CARD DE SEGREDOS DA ALMA ---
+<div class="card" style="background: #0a0e1a; color: #fff; border-left: 10px solid #d4af37;">
+    <h3 style="color:#d4af37; border:none;">🛡️ SEGREDOS DA ALMA</h3>
+    
+    <p><strong>Essência:</strong> ${numEssencia}<br>
+       <small style="color:#aaa;">${textos.essencia ? textos.essencia[numEssencia] : ""}</small></p>
+    
+    <p><strong>Talento:</strong> ${numTalento}<br>
+       <small style="color:#aaa;">${textos.talento ? textos.talento[numTalento] : ""}</small></p>
 
+    <p><strong>Vibração de Equilíbrio:</strong> ${numEquilibrio}<br>
+       <small style="color:#aaa;">${textos.equilibrio ? textos.equilibrio[numEquilibrio] : "Sua base de estabilidade emocional."}</small></p>
+</div>
     ${card("Motivação", "Seu Íntimo", res.motivacao, textos.motivacao[res.motivacao])}
     ${card("Influência", "Sua Imagem", res.influencia, textos.influencia[res.influencia])}
     ${card("Personalidade", "Sua Expressão", res.personalidade, textos.Personalidade[res.personalidade])}
