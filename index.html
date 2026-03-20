@@ -180,7 +180,7 @@ function gerarMapaCompleto() {
     const [ano, mes, dia] = dataRaw.split("-").map(Number);
     const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
     
-    // Cálculos de Base
+    // 1. CÁLCULOS BÁSICOS
     let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
     nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
 
@@ -199,7 +199,7 @@ function gerarMapaCompleto() {
     const prop = reduzir(cv + exp);
     const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0).map(Number);
 
-    // --- LÓGICA MODERNA: DÉFICITS E REPETIÇÕES ---
+    // 2. LÓGICA MODERNA: DÉFICITS (DIA + REPETIÇÕES)
     const diaReduzido = reduzir(dia);
     const pilaresParaConferir = [prop, cv, exp, mot];
     let deficitsOcultos = [];
@@ -209,37 +209,41 @@ function gerarMapaCompleto() {
         }
     });
 
-    // --- CRONOLOGIA (IDADES E DATAS) ---
-    const anoNasc = new Date(dataRaw).getFullYear() + 1; // Ajuste de fuso
+    // 3. CRONOLOGIA (IDADES E DATAS)
+    const anoNasc = new Date(dataRaw).getUTCFullYear();
     const idadeCorte = 36 - cv;
-    const dataFim1 = anoNasc + idadeCorte;
+    const anoFim1 = anoNasc + idadeCorte;
 
-    // Estrutura de dados para o Relatório Premium
+    const res = {
+        motivacao: mot,
+        personalidade: exp,
+        influencia: reduzir(sC),
+        comportamento: diaReduzido,
+        caminhoVida: cv,
+        missao: prop,
+        anoPessoal: reduzir(dia + mes + 2026),
+        deficitRecorrente: diaReduzido,
+        deficitsOcultos: deficitsOcultos,
+        subconsciente: 9 - faltantes.length
+    };
+
+    // 4. PREPARA OS DADOS PARA O LOCALSTORAGE (PARA O PDF LER DEPOIS)
     const dadosParaRelatorio = {
         nome: nomeRaw.toUpperCase(),
-        resultados: {
-            motivacao: mot,
-            personalidade: exp,
-            influencia: reduzir(sC),
-            comportamento: diaReduzido,
-            caminhoVida: cv,
-            missao: prop,
-            anoPessoal: reduzir(dia + mes + 2026)
-        },
+        resultados: res,
         moderna: {
             deficits: [diaReduzido, ...deficitsOcultos],
-            subconsciente: 9 - faltantes.length,
-            inclinacoes: [mot], // Pode ser expandido conforme sua regra de repetição de letras
-            talentoEspecial: (faltantes.length < 3) ? "Mestre da Versatilidade" : null
+            subconsciente: res.subconsciente,
+            inclinacoes: [mot]
         },
         periodos: {
-            ciclo1: `0 aos ${idadeCorte} anos (Até ${dataFim1})`,
-            ciclo2: `${idadeCorte + 1} aos ${idadeCorte + 27} anos`,
-            ciclo3: `Após os ${idadeCorte + 27} anos`,
+            ciclo1: `0 a ${idadeCorte} anos (Até ${anoFim1})`,
+            ciclo2: `${idadeCorte + 1} a ${idadeCorte + 27} anos`,
+            ciclo3: `Após ${idadeCorte + 27} anos`,
             md1: `Até ${idadeCorte} anos`,
             md2: `Até ${idadeCorte + 9} anos`,
             md3: `Até ${idadeCorte + 18} anos`,
-            md4: `Após os ${idadeCorte + 18} anos`
+            md4: `Após ${idadeCorte + 18} anos`
         },
         textos: {
             motivacao: aplicarFiltroTexto(textos.motivacao[mot]),
@@ -248,7 +252,7 @@ function gerarMapaCompleto() {
             comportamento: aplicarFiltroTexto(textos.comportamento[diaReduzido]),
             destino: aplicarFiltroTexto(textos.CaminhodeVida[cv]),
             missao: aplicarFiltroTexto(textos.Propósito[prop]),
-            anoPessoal: aplicarFiltroTexto(textos.anoPessoal[reduzir(dia + mes + 2026)]),
+            anoPessoal: aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal]),
             ciclo1: aplicarFiltroTexto(textos.ciclos[1][reduzir(mes)]),
             ciclo2: aplicarFiltroTexto(textos.ciclos[2][reduzir(dia)]),
             ciclo3: aplicarFiltroTexto(textos.ciclos[3][reduzir(ano)]),
@@ -263,13 +267,28 @@ function gerarMapaCompleto() {
         }
     };
 
-    // Gera os gráficos e salva tudo
-    const htmlGraficos = gerarGraficosIntensidade(dadosParaRelatorio.resultados, faltantes, nomeRaw);
-    localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosParaRelatorio));
-    localStorage.setItem("graficoParaOPremium", htmlGraficos);
-document.getElementById("resultado").innerHTML = html;
-    // Abre o relatório em nova aba
-    window.open("premiummapa.html", "_blank");
+    // 5. GERA A EXIBIÇÃO NA TELA (O QUE O USUÁRIO VÊ PRIMEIRO)
+    let htmlNaTela = gerarGraficosIntensidade(res, faltantes, nomeRaw);
+    
+    // Adiciona o card de Déficits na tela para ele conferir
+    htmlNaTela += `
+        <div class="card" style="border-left: 10px solid #c53030;">
+            <h3 style="color:#c53030;">Déficit Comportamental (Moderna)</h3>
+            <p><strong>Recorrente:</strong> ${textos.deficits[diaReduzido]}</p>
+            ${deficitsOcultos.length > 0 ? `<p><strong>Ocultos:</strong> ${deficitsOcultos.join(", ")}</p>` : ""}
+        </div>
+    `;
+
+    document.getElementById("resultado").innerHTML = htmlNaTela;
+
+    // 6. MOSTRA O BOTÃO DO PDF E CONFIGURA O CLIQUE
+    const btnPremium = document.getElementById("btn-abrir-premium");
+    btnPremium.style.display = "block";
+    btnPremium.onclick = function() {
+        localStorage.setItem("dadosMapaPremium", JSON.stringify(dadosParaRelatorio));
+        localStorage.setItem("graficoParaOPremium", htmlNaTela);
+        window.open("premiummapa.html", "_blank"); // Altere aqui para o nome do seu arquivo de PDF
+    };
 }
     </script>
 </body>
