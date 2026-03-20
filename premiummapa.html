@@ -2,300 +2,700 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Relatório Premium - Instinto Superior</title>
+<title>Relatório Premium</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <style>
-body {
+
+body{
   font-family: "Times New Roman", serif;
-  color: #111;
-  background: #f4f4f4;
-  line-height: 1.8;
-  margin: 0;
+  color:#111;
+  background:#f4f4f4;
+  line-height:1.8;
+  margin:0;
+
+}
+/* COLUNA CENTRAL */
+body > *{
+  max-width:1350px;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:40px;
+  padding-right:40px;
 }
 
-body > * {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 40px;
-  padding-right: 40px;
+/* CAPA */
+.capa{
+  text-align:center;
+  padding-top:140px;
+  padding-bottom:140px;
+  margin-bottom:60px;
+  background:white;
+  box-shadow:0 0 25px rgba(0,0,0,0.05);
+  border-radius:10px;
 }
 
-.capa {
-  text-align: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  margin-bottom: 60px;
-  background: white;
-  box-shadow: 0 0 25px rgba(0,0,0,0.05);
-  border-radius: 10px;
+.logo{
+  max-width:600px;
+  margin-bottom:40px;
 }
 
-.logo { max-width: 400px; margin-bottom: 30px; }
-.titulo { font-size: 42px; letter-spacing: 3px; margin-bottom: 10px; }
-.subtitulo { font-size: 20px; color: #111; }
-.nome-capa { margin-top: 50px; font-size: 24px; font-weight: bold; text-transform: uppercase; }
-/* FORÇA A ALTURA E AS CORES DAS BARRAS NO PREMIUM */
-#boxGrafico .preenchimento, 
-#graficoPremiumDinamico .preenchimento {
-    height: 18px !important; /* Dá altura para a barra não sumir */
-    display: block !important;
-    min-width: 5px; /* Garante que mesmo valor baixo apareça um pouco */
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+.titulo{
+  font-size:42px;
+  letter-spacing:3px;
+  margin-bottom:10px;
 }
 
-/* Garante que o fundo cinza das barras apareça */
-div[style*="background: #eee"] {
-    background-color: #eee !important;
-    height: 18px !important;
-    border-radius: 4px;
-}
-.secao {
-  background: white;
-  padding: 30px;
-  margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
-  page-break-inside: avoid;
+.subtitulo{
+  font-size:20px;
+  color:#111;
 }
 
-h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
-  color: #1a1a1a;
+.nome{
+  margin-top:70px;
+  font-size:22px;
 }
 
-.explicacao { font-size: 17px; text-align: justify; margin-bottom: 20px; }
-.numero { font-weight: bold; font-size: 22px; color: #2563eb; margin: 20px 0; }
-
-/* ESTILOS DOS GRÁFICOS (FORÇANDO CORES NO PDF) */
-.barra-potencial { background: linear-gradient(90deg, #dcfce7, #166534) !important; } 
-.barra-essencia { background: linear-gradient(90deg, #f3e8ff, #6b21a8) !important; }  
-.barra-capacidade { background: linear-gradient(90deg, #ffedd5, #ea580c) !important; } 
-
-.preenchimento { 
-    height: 16px !important; 
-    display: block; 
-    border-radius: 8px;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
+/* SEÇÕES */
+.secao{
+  background:white;
+  padding:20px  10px;
+  margin-top:40px;
+  border-radius:10px;
+  box-shadow:0 0 20px rgba(0,0,0,0.05);
 }
 
-.assinatura { margin-top: 80px; text-align: center; color: #777; font-size: 14px; padding-bottom: 50px; }
+/* TÍTULOS */
+h2{
+  font-size:32px;
+  margin-bottom:25px;
+  border-bottom:1px solid #eee;
+  padding-bottom:10px;
+}
 
+.explicacao{
+  font-style: arial;
+  color:#111;
+  margin-bottom:18px;
+  line-height:1.75;
+  white-space: pre-line;
+}
+
+/* NÚMERO */
+.numero{
+  font-weight:bold;
+  margin-top:30px;
+  margin-bottom:20px;
+  font-size:22px;
+}
+
+/* TEXTOS DINÂMICOS */
+.secao div:not(.explicacao):not(.numero){
+  margin-bottom:18px;
+  font-size:18px;
+}
+
+/* ESPAÇO ENTRE PARÁGRAFOS */
+.secao div:not(.explicacao):not(.numero) br{
+  display:block;
+  margin-bottom:12px;
+}
+
+/* RODAPÉ DO SITE */
+.assinatura{
+  margin-top:100px;
+  margin-bottom:80px;
+  text-align:center;
+  font-size:15px;
+  color:#777;
+}
+
+
+
+/* ======================================================
+   CONFIGURAÇÃO PROFISSIONAL DE IMPRESSÃO (PDF)
+   ====================================================== */
 @media print {
-  body { background: white; }
-  .secao { box-shadow: none; border: 1px solid #eee; }
-  @page { size: A4; margin: 15mm; }
+
+  body{
+    background:white !important;
+    margin:0 !important;
+  }
+
+  /* área A4 */
+  #pdfFolha{
+    width:210mm;
+    margin:auto;
+    padding:12mm 10mm;
+    box-sizing:border-box;
+  }
+
+  /* evita quebra feia */
+  .secao{
+    page-break-inside:avoid;
+    margin-top:35px;
+  }
+
+  h1, h2, h3{
+    page-break-after:avoid;
+  }
+
+  p, .explicacao, .numero, .secao div{
+    orphans:3;
+    widows:3;
+  }
+
+  .btn-imprimir{
+    display:none !important;
+  }
+
+  @page{
+    size:A4;
+    margin:18mm 15mm;
+  }
+
+  /* capa quebra página */
+  .capa{
+    page-break-after:always;
+  }
+
+  /* espaço topo/baixo para não cortar conteúdo */
+  #pdfFolha{
+    padding-top:25mm !important;
+    padding-bottom:15mm !important;
+  }
+
+  /* =====================================
+     RODAPÉ PROFISSIONAL COM PAGINAÇÃO
+     ===================================== */
+
+/* inicia contagem correta */
+
+
+/* rodapé pequeno canto direito */
+.printFooter{
+  margin-top:40px;
+  text-align:center;
+  font-size:15px;
+  color:#777;
 }
 
+/* =======================================
+   RESPONSIVO CELULAR
+   ======================================= */
+
+
+/* ==============================
+   AJUSTE REAL DA ÁREA PREMIUM MOBILE
+   ============================== */
 @media screen and (max-width:768px){
-  body > * { padding-left: 15px; padding-right: 15px; }
-  .titulo { font-size: 28px; }
+
+  /* REMOVE A COLUNA A4 DO SITE */
+  body > *{
+    max-width:100% !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
+
+  /* REMOVE “caixa de livro” das seções */
+  .secao{
+    padding:24px 15px!important;
+    margin-top:25px !important;
+    border-radius:6px !important;
+  }
+
+  /* capa menor no celular */
+  .capa{
+    padding-top:60px !important;
+    padding-bottom:60px !important;
+  }
+
+  .logo{
+    max-width:90% !important;
+  }
+
+  /* textos proporcionais */
+  .titulo{ font-size:32px !important; }
+  .subtitulo{ font-size:18px !important; }
+  .nome{ font-size:18px !important; }
+  h2{ font-size:24px !important; }
+
 }
+}
+
 </style>
 </head>
 <body>
+<div id="relatorio">  
+<div id="areaPDF"></div>
+<!-- CAPA -->
+<div class="capa">
 
-<div id="conteudo-relatorio">
-    <div class="capa">
-      <img class="logo" src="https://hemricciinstintosuperior-rcci.github.io/estudo_numerologico/icon-192.png">
-      <div class="titulo">ESTUDO NUMEROLÓGICO</div>
-      <div class="subtitulo">RELATÓRIO PREMIUM</div>
-      <div class="nome-capa">{{NOME}}</div>
-      <div style="margin-top:10px;">{{DATA}}</div>
-    </div>
+  <!-- COLE AQUI O LINK DO SEU LOGO -->
+  <img class="logo" src="https://hemricciinstintosuperior-rcci.github.io/estudo_numerologico/icon-192.png">
 
- <div id="container-do-grafico-premium"></div>
+ 
 
-    <div class="secao">
-        <h2>Dia de Nascimento</h2>
-        <div class="explicacao">
-            O Dia Natalício revela suas qualidades naturais e talentos inatos que o acompanham desde o nascimento.
-        </div>
-        <div class="numero">Número {{DIA}}</div>
-        <div>{{TEXTO_DIA}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Influência</h2>
-        <div class="explicacao">Como você é percebido pelos outros e sua vibração externa.</div>
-        <div class="numero">Número {{INFLUENCIA}}</div>
-        <div>{{TEXTO_INFLUENCIA}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Motivação</h2>
-        <div class="explicacao">Seus desejos mais profundos e o que impulsiona sua alma.</div>
-        <div class="numero">Número {{MOTIVACAO}}</div>
-        <div>{{TEXTO_MOTIVACAO}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Personalidade</h2>
-        <div class="explicacao">Sua forma de agir e reagir diante dos desafios da vida.</div>
-        <div class="numero">Número {{EXPRESSAO}}</div>
-        <div>{{TEXTO_EXPRESSAO}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Caminho de Vida</h2>
-        <div class="explicacao">Sua trajetória principal e os aprendizados desta existência.</div>
-        <div class="numero">Número {{DESTINO}}</div>
-        <div>{{TEXTO_DESTINO}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Ciclos de Vida</h2>
-        <div class="numero">Primeiro Ciclo ({{PERIODO_C1}})</div>
-        <div>{{TEXTO_CICLO1}}</div>
-        <div class="numero">Segundo Ciclo ({{PERIODO_C2}})</div>
-        <div>{{TEXTO_CICLO2}}</div>
-        <div class="numero">Terceiro Ciclo ({{PERIODO_C3}})</div>
-        <div>{{TEXTO_CICLO3}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Momentos Decisivos</h2>
-        <div class="numero">1º Momento ({{PERIODO_MD1}})</div>
-        <div>{{TEXTO_MD1}}</div>
-        <div class="numero">2º Momento ({{PERIODO_MD2}})</div>
-        <div>{{TEXTO_MD2}}</div>
-        <div class="numero">3º Momento ({{PERIODO_MD3}})</div>
-        <div>{{TEXTO_MD3}}</div>
-        <div class="numero">4º Momento ({{PERIODO_MD4}})</div>
-        <div>{{TEXTO_MD4}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Desafios</h2>
-        <div class="numero">1º Desafio ({{PERIODO_D1}})</div>
-        <div>{{TEXTO_D1}}</div>
-        <div class="numero">2º Desafio ({{PERIODO_D2}})</div>
-        <div>{{TEXTO_D2}}</div>
-        <div class="numero">3º Desafio ({{PERIODO_D3}})</div>
-        <div>{{TEXTO_D3}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Ano Pessoal</h2>
-        <div class="numero">Ano {{ANO_PESSOAL_NUMERO}}</div>
-        <div>{{TEXTO_ANO_PESSOAL}}</div>
-    </div>
-
-    <div class="secao">
-        <h2>Fraquezas e Inibições</h2>
-        <div>{{TEXTO_DEFICIENCIAS}}</div>
-    </div>
-
-    <div class="assinatura">
-        Relatório desenvolvido por Instinto Superior<br>
-        www.instintosuperior.com
-    </div>
+  <div class="nome">
+    <strong>{{NOME}}</strong><br>
+    {{DATA}}
+  </div>
+ 
+  
+  
+  
+  <div class="titulo"></div>
+  <div class="subtitulo">"Aqui começa seu estudo Numerológico"</div>
 </div>
 
-<script>
-// ESTE É O SCRIPT FINAL "BLINDADO"
-window.onload = function() {
-    // 1. Tenta buscar os dados e os gráficos que o INDEX guardou
-    const dadosSalvos = localStorage.getItem("dadosMapaPremium");
-    const g1 = localStorage.getItem("graficoParaOPremium");
-    const g2 = localStorage.getItem("graficosAnalisePremium");
+<!-- CONTEÚDO -->
 
-    // TESTE DE CONSOLE (Aperte F12 no navegador para ver isso)
-    console.log("Dados Texto:", dadosSalvos ? "OK" : "VAZIO");
-    console.log("Gráfico Principal:", g1 ? "OK" : "VAZIO");
+<div class="secao">
+<h2>Dia de Nascimento</h2>
+<div class="explicacao">
 
-    if (!dadosSalvos) {
-        document.body.innerHTML = "<h1 style='text-align:center;padding-top:100px;'>Erro: Por favor, gere o mapa no site primeiro.</h1>";
-        return;
-    }
+<p>O Dia Natalício representa um dos elementos mais significativos dentro da análise numerológica, pois revela as qualidades naturais que acompanham o indivíduo desde o momento do nascimento. Ele simboliza a essência mais espontânea da personalidade, refletindo os talentos inatos, as inclinações comportamentais e as características que se manifestam de forma quase instintiva ao longo da vida.</p>
+<p>Na numerologia, compreende-se que cada ser humano nasce em uma data específica de acordo com suas necessidades evolutivas e com os aprendizados que sua alma precisa desenvolver durante a existência. Dessa forma, o dia exato do nascimento não é considerado um evento aleatório, mas sim um ponto de alinhamento entre a consciência individual e as forças simbólicas representadas pelos números.</p>
+<p>O Dia Natalício possui um papel particularmente importante dentro da estrutura numerológica, muitas vezes sendo considerado mais revelador do que o próprio mês ou o ano de nascimento. Isso ocorre porque ele expressa de maneira direta as tendências naturais da pessoa, mostrando como ela reage ao mundo, como expressa sua individualidade e quais são os dons que surgem com maior facilidade em sua vida.</p>
+<p>Pessoas nascidas em um mesmo dia do mês, independentemente do mês ou do ano, costumam apresentar traços psicológicos e comportamentais semelhantes. Isso não significa que suas vidas serão idênticas, mas indica a presença de padrões energéticos em comum que influenciam a maneira como cada indivíduo percebe, interpreta e vivencia a realidade.</p>
+<p>Essas características se manifestam principalmente nas atitudes espontâneas, nas escolhas naturais e na forma como a pessoa se posiciona diante das experiências cotidianas. O Dia Natalício revela aquilo que emerge com maior autenticidade, sem a necessidade de esforço ou adaptação consciente.</p>
+<p>Por essa razão, ele é frequentemente associado ao conceito do “Eu Sou” mais verdadeiro. Trata-se da parte mais genuína da identidade, aquela que permanece constante mesmo diante das mudanças externas, das circunstâncias da vida ou das influências sociais.</p>
+<p>Compreender o próprio Dia Natalício permite reconhecer talentos naturais, compreender padrões de comportamento e identificar potenciais que muitas vezes permanecem adormecidos. Ao trazer consciência sobre essas características, a numerologia oferece um instrumento de autoconhecimento que pode auxiliar no desenvolvimento pessoal e na harmonização da própria trajetória de vida.</p>
+<div class="numero">Número {{DIA}}</div>
+<div>{{TEXTO_DIA}}</div>
+</div>
 
-    const dados = JSON.parse(dadosSalvos);
+<div class="secao">
+<h2>Influencia</h2>
+<div class="explicacao">
+Você influencia pessoas e tambem mostra para elas o que você aparenta ser.
+</div>
+<div class="numero">Número {{INFLUENCIA}}</div>
+<div>{{TEXTO_INFLUENCIA}}</div>
+</div>
 
-    // 2. FUNÇÃO PARA PERSONALIZAR O TEXTO (Troca "você" pelo nome e limpa o gênero)
-    function formatarTexto(texto) {
-        if (!texto) return "";
-        let primeiroNome = dados.nome.trim().split(' ')[0];
-        let nomeBonito = primeiroNome.charAt(0).toUpperCase() + primeiroNome.slice(1).toLowerCase();
+<div class="secao">
+<h2>Motivação</h2>
+<div class="explicacao">
+A motivação mostra seus sonhos e desejo mais profundo. É um impulso natural que faz com que alguém aja para atingir seus objetivos e expressa a intenção que está por trás suas ações. Ele influencia as escolhas que você faz na vida, e é a principal característica responsável por iniciar, direcionar e manter comportamentos relacionados com o cumprimento de seus objetivos. 
+  
+Sua influência está em praticamente todas as suas escolhas; da de sua carreira a amizades, relacionamentos até seu modo de vida. É esta característica natural também que faz com que você dê o melhor de si e faça o possível para conquistar o que deseja. É ela também que muitas vezes, faz com que algumas pessoas acabem até mesmo “passando por cima” de outras para obter aquilo que desejam.
+  
+Mostra seus impulsos ocultos, o que verdadeiramente lhe motiva, e como suas ações influenciam nas suas decisões; revela quais são suas ambições, seus gostos pessoais, suas aversões, necessidades e vontades. Os motivos que estão por trás de cada decisão que alguém toma em sua vida e mesmo não sendo normalmente aparente, é este número que informa suas decisões.
+A motivação é um elemento essencial para o desenvolvimento do ser humano. Sem ela seria muito mais difícil cumprir a maior parte de suas intenções; por isso é uma vibração muito importante na numerologia e deve ser muito bem compreendida.
+</div>
+<div class="numero">Número {{MOTIVACAO}}</div>
+<div>{{TEXTO_MOTIVACAO}}</div>
+</div>
+
+<div class="secao">
+<h2>Personalidade </h2>
+<div class="explicacao">
+Personalidade 
+
+<p>O Número da Personalidade revela a maneira como você age, reage e se comporta diante da vida. Ele representa a expressão prática do seu ser, a forma como suas intenções se transformam em atitudes e como você se manifesta no mundo em diferentes circunstâncias.</p>
+<p>Este número descreve o padrão habitual do seu comportamento. Ele mostra suas reações repetidas, seus hábitos emocionais e mentais, e a forma como você tende a pensar, sentir e agir diante das experiências da vida. É através da personalidade que suas ideias, desejos e convicções ganham forma concreta.</p>
+<p>A personalidade representa o conjunto das características marcantes que moldam seus relacionamentos e sua forma de interagir com o ambiente. Ela define como você se posiciona socialmente, como responde aos desafios e como estabelece vínculos com as pessoas.</p>
+<p>O Número da Personalidade revela como você percebe a realidade e como reage a ela. Mostra suas tendências naturais de atração ou rejeição, suas convicções e a forma como expressa sentimentos e opiniões. Ele é um dos principais instrumentos para desenvolver uma forma eficiente, confortável e criativa de comunicação.</p>
+<p>Cada pessoa possui uma maneira única de agir e se expressar. Para aqueles que consideram a reencarnação como filosofia, a soma do nome completo representa a síntese de experiências, talentos e aprendizados acumulados ao longo de muitas existências.</p>
+<p>Compreender este número permite reconhecer talentos naturais, desafios comportamentais e padrões emocionais que influenciam diretamente a forma como sua vida se desenvolve.</p>
+
+</div>
+<div class="numero">Número {{EXPRESSAO}}</div>
+<div>{{TEXTO_EXPRESSAO}}</div>
+</div>
+  
+<div class="secao">
+<h2>Comportamento</h2>
+<div class="explicacao">
+O Número do Comportamento revela como são as qualidades psíquicas que influenciam nas escolhas pessoais. As pessoas experimentam diferentes respostas internas aos desafios da vida. Alguns se retiram de situações difíceis para pensar sobre elas; outros se afastam de suas emoções, para tentar evitar sentir as emoções. Outros se apegam aos seus sentimentos e sentem dificuldade em deixar as coisas irem.
+  
+Muitas vezes, essas são respostas condicionadas ou emocionais surgem sem pensamento ou análise. A maturidade e o autodesenvolvimento nos ajudam a aprender novos e mais eficazes métodos de lidar com nosso mundo e os problemas que enfrentamos. O número do comportamento fornece orientação 
+sobre a melhor forma de lidar com situações difíceis ou ameaçadoras, pois que reflete certos padrões interiores comuns a grupos de pessoas nascidas em dias comuns entre si.
+</div>
+<div class="numero">Número {{COMPORTAMENTO}}</div>
+<div>{{TEXTO_COMPORTAMENTO}}</div>
+</div>
+  
+<div class="secao">
+<h2>Caminho de Vida</h2>
+<div class="explicacao">
+<p>Viver de forma plena é um caminho contínuo que nos ensina a persistir diante dos desafios e das distrações para conquistar aquilo que escolhemos para nós. O destino não é um lugar fixo, mas uma forma de enxergar e compreender a vida.</p>
+  Independentemente das circunstâncias ou dos erros cometidos, nossa trajetória é construída a cada instante pelas decisões que tomamos.
+  <p>O Número do Caminho de Vida revela a melhor maneira de conduzir sua jornada para alcançar o “destino” que você escolheu. Trata-se de uma orientação constante, válida em qualquer fase da vida, ciclo ou momento, mesmo diante de mudanças de pensamentos e intenções.</p>
+  <p>O Caminho de Vida aponta a direção mais adequada a seguir. Quando você compreende e aceita essa orientação, passa a decidir com mais segurança, utiliza seus talentos com maior eficiência e entende melhor as causas das suas conquistas e frustrações. Também identifica o que é necessário para superar desafios, evoluir como pessoa e alcançar seus objetivos.</p>
+  <p>Sua função é estimular o desenvolvimento das suas habilidades e ampliar a consciência. Ele só se torna “predeterminado” quando você ignora suas orientações. Sem compreender o sentido da sua existência, torna-se difícil escolher bons caminhos e tomar decisões assertivas, fazendo com que a vida pareça desorganizada, aleatória e guiada apenas pelas circunstâncias.</p>
+</div>
+<div class="numero">Número {{DESTINO}}</div>
+<div>{{TEXTO_DESTINO}}</div>
+</div>
+
+<div class="secao">
+<h2>Propósito</h2>
+<div class="explicacao">
+<p>O propósito de vida não representa uma obrigação rígida nem uma tarefa imposta externamente, mas sim um impulso interno que surge de forma gradual e se torna mais claro à medida que a pessoa amadurece e amplia o autoconhecimento. Esse propósito, tradicionalmente chamado de missão, expressa a direção natural da existência e atua como uma afirmação profunda do sentido pessoal que orienta pensamentos, escolhas e atitudes ao longo da vida.</p>
+  <p>Por essa razão, na Numerologia Moderna essa orientação possui grande importância, pois revela aquilo que realmente dá significado às suas ações e aponta o caminho que você tende a seguir. Ele demonstra como suas decisões moldaram sua trajetória até o momento presente e oferece base para compreender quais metas futuras fazem sentido e quais atitudes devem ser consideradas para alcançá-las.</p>
+  <p>O propósito de vida também ajuda a compreender sua postura diante da família, da carreira, dos relacionamentos e da forma como você influencia o ambiente ao seu redor, além de mostrar o que verdadeiramente inspira suas escolhas e o impulsiona em direção ao destino que deseja construir.</p>
+  <p>Ao entender essa orientação, torna-se possível perceber com mais clareza como suas decisões afetam sua trajetória, explicando as causas de desafios, frustrações e obstáculos enfrentados ao longo do caminho.</p>
+  <p>Desenvolver consciência sobre o propósito de vida permite tomar decisões mais alinhadas às necessidades reais da sua essência, facilitando a resolução de conflitos, o crescimento pessoal e a construção de uma vida mais coerente, produtiva e evolutiva.</p>
+</div>
+<div class="numero">Número {{MISSAO}}</div>
+<div>{{TEXTO_MISSAO}}</div>
+</div>
+
+<div class="secao">
+<h2>Maturidade</h2>
+<div class="explicacao">
+NÚMERO DA MATURIDADE
+O Número de Maturidade revela desejos que surgem na juventude e se fortalecem com o tempo, tornando-se mais evidentes entre os 30 e 35 anos.
+  
+Quanto mais você se conhece, mais percebe essa influência orientando seus objetivos e decisões. Ele indica o rumo dos últimos anos de vida e reflete diretamente o Propósito de Vida.
+  
+Mesmo que não esteja consciente, você constrói esse caminho ao longo da vida através de suas escolhas e intenções. As características desse número já existem desde a infância, mas tornam-se mais claras com a maturidade.
+  
+Ele mostra quais qualidades devem ser desenvolvidas para alcançar realização pessoal.
+
+</div>
+<div class="numero">Número {{MATURIDADE}}</div>
+<div>{{TEXTO_MATURIDADE}}</div>
+</div>
+
+<div class="secao">
+<h2>Relacionamento</h2>
+<div class="explicacao">
+Cada pessoa possui uma vibração específica, quando você sabe qual a sua vibração poderá saber quais pessoas vibram com você, as que lhe atraem, as que são passivas e as opostas, e assim, temos como dizer como será a maioria dos relacionamentos conjugais ou afetivos entre duas pessoas.
+  
+Lembro porem que este é um indicador de harmonia entre duas pessoas, dizer se se duas pessoas harmônicas entre si darão certo num relacionamento afetivo é impossível, porém; as chances de sucesso entre números que são harmônicos são muito maiores.
+  
+Nada impede também que números incompatíveis vivam em plena harmonia. Ter conhecimento destas vibrações, lhe servirá para desvendar os motivos pelos quais muitos casais vivem desarmonia. Conhecer os motivos que levam a essa desarmonia, o ponto de partida para um processo de harmonização e entendimento. 
+  
+Através dos números de Harmonia Conjugal é possível ainda estabelecer como será o relacionamento afetivo/amoroso, ou conjugal, entre duas pessoas do sexo oposto.
+Note que a Numerologia Cabalística considera originalmente, somente os relacionamentos heterossexuais, o que não quer dizer que esta analise não se aplique a relacionamentos entre duas pessoas do mesmo sexo, porém nestes casos há de se fazer uma analise mais específica para que não sejam transmitidas informações incosistentes ou incoerentes.
+  
+A análise não leva em consideração se a pessoa é ou não casada, considera apenas a harmonia do relacionamento amoroso e sexual do casal.
+
+Orientações:
+1. Mesmo que após o casamento a mulher adote um nome diferente do que utilizava quando solteira, os números de harmonia conjugal não são alterados.
+  
+2. Mesmo que posterior a analise, haja qualquer tipo de alteração no nome de uma ou ambas as pessoas, os números de harmonia conjugal permanecerão sempre inalterados.
+  
+3. Duas pessoas que possuam o mesmo número de harmonia conjugal serão compatíveis e harmônicas, porém há uma tendência de que o relacionamento se torne monótono e rotineiro com o passar do tempo, assim nestes casos é muito importante que ambos se empenhem em manter a relação calorosa constantemente.
+  
+4. Números que se “atraem”: são completamente compatíveis tanto no amor  como no sexo. Relacionamentos assim tem tudo para ter sucesso, porém deve-se ter cuidado para que ambos não se deixem levar apenas pelo calor 
+da paixão.
+  
+5. Números que “vibram” denotam forte paixão e atração sexual, mas podem acabar em separação, se não houver amor, ou caso uma ou ambas as pessoas, seja arrogante, exageradamente ciumento, ou haja inconstância sexual.
+  
+6. Os números “passivos”: se anulam, não sofrem nem exercem influência um sobre o outro, o risco neste tipo de relacionamento é que os parceiros deixem de ser amantes e tornem-se amigos. Normalmente este tipo de 
+relacionamento dura por praticamente toda a vida, a menos que uma das pessoas acabe se envolvendo com outra mais interessante.
+  
+7. Os opostos; diferente do que se pensa não são incompatíveis, pelo contrário, se ambos tiverem esta consciência e estiverem intelectualmente formados o relacionamento poderá durar por toda a vida, já que se completam, porém ambos, devem ser compreensivos e flexíveis, e desde que não tentem impor um ao outro sua vontade, desejos e ideias.
+  
+</div>
+<div class="numero">Número {{RELACIONAMENTO}}</div>
+<div>{{TEXTO_RELACIONAMENTO}}</div>
+</div>
+
+<div class="secao">
+<h2>Ciclos de Vida</h2>
+  <div class="explicacao">
+Os Ciclos de Vida mostram as transformações que cada um de nós passamos no caminho próprio e natural da vida. Normalmente vivemos uma ampla gama de ciclos e podemos experimentar uma infinidade de mudanças em nosso comportamento, pensamentos, em nossos valores e crenças. Tudo isso contribui no desenvolvimento continuo de nossa identidade, caráter e autoestima. 
+    
+O ciclo da vida é um mapa natural de três fases de um processo para que nos permite começar a explorar a grande complexidade da vida ainda na infância e encontrar a transformação de que você precisa a cada momento de sua vida.
+    
+Todos nós queremos conquistar mais em nossas vidas, mas poucos sabem que existem certos estágios de auto crescimento e que é preciso muito tempo, trabalho e paciência para continuarmos nos aperfeiçoando constantemente. É comum que ao tomar conhecimento das orientações fornecidas por seus ciclos de vida, haja uma tendência a se tentar ignorar algumas de suas considerar e uma resistência em aceita-las, por entender que não são muito significantes a você. Perceba, porém, que são estas questões que vinham sendo ignoradas a causa da maioria das dificuldades que você tem enfrentado em sua vida.
+    
+Embora você possa não ver muitos motivos para seguir está orientações é importante entender que são elas que lhe permitirão promover grandes mudanças em seu comportamento e mudar sua vida para melhor, pois cada um deles; com suas características específicas lhe permite influenciar diretamente no destino que sua vida está tomando e que são elas que lhe tornam capaz de mudá-lo conforme suas necessitas e intenções.
+
+Importante:
+Sempre que o número de um Ciclo de Vida coincidir com o número de uma de suas fraquezas e inibições, será uma indicação de que para ter um melhor desenvolvimento neste período você precisará contar justamente com as habilidades ou necessidades faltantes ou que deveriam ter sido melhoradas 
+conforme orientadas pelo respectivo número de suas fraquezas e inibições.
+    
+Note, porém, que isso não significa de forma alguma que o período será ruim, mas indica que você poderá enfrentar algumas dificuldades e adversidades muitas vezes desnecessárias e evitáveis causadas por essa deficiência em sua personalidade até que a mesma seja aperfeiçoada e dominada. 
+    
+Perceba que quanto mais habilidades você tiver a sua disposição e quanto mais puder evitar suas fraquezas mais capaz você será de lidar com qualquer evento ou situação que se apresente em seu caminho e mais 
+fácil será superá-las.    
+<div class="numero">Primeiro Ciclo</div>
+<div><b>Período:</b> {{PERIODO_C1}}</div>
+<div>{{TEXTO_CICLO1}}</div>
+
+<div class="numero">Segundo Ciclo</div>
+<div><b>Período:</b> {{PERIODO_C2}}</div>
+<div>{{TEXTO_CICLO2}}</div>
+
+<div class="numero">Terceiro Ciclo</div>
+<div><b>Período:</b> {{PERIODO_C3}}</div>
+<div>{{TEXTO_CICLO3}}</div>
+
+</div>
+
+<div class="secao">
+<h2>Momentos Decisivos</h2>
+
+<div class="explicacao">
+Os Momentos Decisivos representam períodos de virada, mudança e redefinição de direção na vida. Eles indicam fases em que decisões, oportunidades e acontecimentos tendem a provocar transformações
+importantes no caminho pessoal.
+
+Esses períodos funcionam como portais de crescimento e evolução.
+Durante cada momento decisivo, circunstâncias externas e escolhas internas se combinam para direcionar a trajetória da pessoa para novos aprendizados, responsabilidades e experiências.
+
+Compreender esses momentos ajuda a reconhecer oportunidades, preparar-se para mudanças e tomar decisões com mais consciência e segurança.
+  
+Algumas coincidências númericas no Estudo Pessoal, podem demonstrar facilidades ou difucldades que poderão se apresentar no período, conforme a relação abaixo: 
+  
+Se o número do Momento Decisivo coincide com o número de Motivação, significa que durante o período você poderá ter uma maior facilidade para alcançar seus desejos e para satisfazer necessidades.
+  
+Se o número do Momento Decisivo coincide com o número de Personalidade significa que durante o período você poderá ter uma maior facilidade em encontrar sua vocação e ter ummelhor desenvolvimento pessoal.
+  
+Se o número do Momento Decisivo coincide com o número do Propósito de Vida poderá ser mais fácil durante o período perceber e aproveitar melhor as oportunidades que facilitarão a realização de seus sonhos e projetos pessoais.
+  
+Se o número do Momento Decisivo coincide com o número de uma de suas Fraquezas e Inibições, você pode ter alguma dificuldade para lidar com questões relacionadas a essa necessidade específica até que aperfeiçoe suas habilidades ou supere alguma inibição.  
+</div>
+
+<div class="numero">Primeiro Momento Decisivo</div>
+<div><b>Período:</b> {{PERIODO_MD1}}</div>
+<div>{{TEXTO_MD1}}</div>
+
+<div class="numero">Segundo Momento Decisivo</div>
+<div><b>Período:</b> {{PERIODO_MD2}}</div>
+<div>{{TEXTO_MD2}}</div>
+
+<div class="numero">Terceiro Momento Decisivo</div>
+<div><b>Período:</b> {{PERIODO_MD3}}</div>
+<div>{{TEXTO_MD3}}</div>
+
+<div class="numero">Quarto Momento Decisivo</div>
+<div><b>Período:</b> {{PERIODO_MD4}}</div>
+<div>{{TEXTO_MD4}}</div>
+
+</div>
+
+<div class="secao">
+<h2>Desafios</h2>
+
+<div class="explicacao">
+Os Desafios representam padrões de aprendizado e superação que acompanham a pessoa ao longo da vida. Eles indicam áreas onde podem surgir obstáculos, inseguranças, medos ou dificuldades que
+precisam ser compreendidos e trabalhados.
+
+Esses desafios não devem ser vistos como limitações permanentes, mas como oportunidades de crescimento e desenvolvimento pessoal.
+Ao reconhecer essas tendências, torna-se possível agir com mais consciência, fortalecer qualidades internas e transformar dificuldades
+em maturidade e experiência.
+
+Cada desafio mostra uma etapa específica do processo de evolução e revela quais atitudes favorecem o equilíbrio e a superação.
+  
+ Sempre que o número de um Desafio coincidir com o número de um Ciclo de Vida, Momento Decisivo ou Propósito de Vida, pode sugerir alguma predisposição a questões de saúde, que podem se apresentar no período conforme descrito abaixo:
+  
+Possíveis Problemas
+1
+Região da cabeça, coração, sistema circulatório e respiratório, alergias, ferimentos nos olhos, rosto, orelhas e maxilar, problemas circulatórios e cardíacos. Especialmente em idades mais avançadas; 
+anorexia, edema pulmonar, tosse, tuberculose, impotência masculina. Na fase infantil: facilidade para urinar na cama.
+  
+2
+Região dos rins, estômago e sistema nervoso. Pode acarretar retenção de líquidos no corpo, afetar ainda o sistema linfático, estômago e intestino, manchas hepáticas, infecções urinárias, esclerose múltipla, 
+distúrbios nos seios, excesso de peso, incontinência urinária, envelhecimento precoce. Problemas femininos em especial na fase da menopausa, perda de cabelos, facilidade para queimaduras.
+  
+3
+Região da garganta, fígado, e vesícula são os mais críticos. Também podem ocorrer quadros de enxaquecas, problemas glandulares, em especial na tireóidea e na hipófise, oscilações na pressão arterial, furúnculos, hematomas, problemas nos ombros e dores ciáticas causados por tensão nervosa; problemas nas coxas e nos pés.
+  
+4
+O “4” pode indicar doenças incomuns e de difícil diagnóstico, acidentes inesperados e ferimentos inexplicáveis, além de problemas de circulação sanguínea, anemia, hipoglicemia, problemas psicossomáticos, histeria, medos e fobias, perturbações mentais e emocionais; problemas ósseos em 
+geral; nos dentes; espasmos e palpitações; úlceras, colites e distúrbios digestivos.
+  
+5
+Problemas nos pulmões, aparelho respiratório, olhos e sistema nervoso. Ansiedade e alterações repentinas de humor, tensão nervosa, apneia, exaustão mental ou estafa; insônia, amnésia, paralisia 
+facial, gagueira, acidentes graves por imprudência, vícios em geral (álcool e drogas), distúrbio nos órgãos reprodutores e problemas na tireoide.
+  
+6
+Doenças renais, distúrbios pulmonares; irregularidades na circulação do sangue, hemofilia, palpitações cardíacas, quistos e tumores nos seios, colites, problemas na coluna em geral e dores lombares, problemas de próstata, excesso de peso, incontinência urinária, problemas cardíacos e na região do pescoço.
+  
+7
+Problemas glandulares, sistema nervoso, nos pés e o sistema linfático. Poderá haver certa vulnerabilidade à infecções, problemas de pele, como alergias em geral, coceiras, arteriosclerose, derrame cerebral, problemas mentais e cerebrais em geral, medos e fobias, depressão, síndrome do 
+pânico, problemas de varizes e vícios em geral, em especial o alcoolismo.
+  
+8
+Problemas de estômago e sistema nervoso, os pontos mais sensíveis, no entanto são: os joelhos, dentes, ossos e ligamentos. Podem ocorrer doenças sanguíneas, tendência a se submeter a tratamento médico 
+inadequado ou de receber prescrições médicas inadequadas, problemas de fígado e baço; distúrbios no digestivo e intestino, estados de desânimo profundo, dores de cabeça frequentes, derrames, hérnia de disco, desmaios, hipertensão, apendicite, problemas na próstata, cirurgias frequentes e obesidade.
+  
+ 
+</div>
+
+<div class="numero">Primeiro Desafio</div>
+<div><b>Período:</b> {{PERIODO_D1}}</div>
+<div>{{TEXTO_D1}}</div>
+
+<div class="numero">Segundo Desafio</div>
+<div><b>Período:</b> {{PERIODO_D2}}</div>
+<div>{{TEXTO_D2}}</div>
+
+<div class="numero">Terceiro Desafio</div>
+<div><b>Período:</b> {{PERIODO_D3}}</div>
+<div>{{TEXTO_D3}}</div>
+
+</div>
+<div class="secao">
+<h2>Ano Pessoal</h2>
+
+<div class="explicacao">
+O Ano Pessoal representa a vibração numérica que influencia os acontecimentos, oportunidades e aprendizados de um ciclo de doze meses. Ele indica tendências, desafios e possibilidades
+que estarão mais ativos durante o ano atual.
+
+Compreender essa vibração permite agir com mais consciência, aproveitar oportunidades e evitar decisões impulsivas.
+</div>
+
+<div class="numero">Ano {{ANO_PESSOAL_NUMERO}}</div>
+<div>{{TEXTO_ANO_PESSOAL}}</div>
+
+</div>
+<div class="secao">
+<h2>Fraquezas e inibições </h2>
+ <div class="explicacao">
+ Fraquezas e inibições  são comportamentos e habilidades que precisam ser tratados em sua personalidade. Essas características podem ser comparadas a uma caixa de ferramentas onde algumas ferramentas estão disponíveis para você e outras precisam ser adquiridas.
+   
+Imagine que cada letra em seu nome é uma ferramenta que você tem disponível e que as letras faltantes em seu nome de nascimento, representam as ferramentas que não estão disponíveis e devem ser aprendidas e dominadas.
+   
+Corrigir nossas fraquezas e inibições faz parte de um aprendizado que leva a evolução do ser humano, e devem ser aprendidas. Obviamente, se você puder dispor de todas as ferramentas, poderá ser capaz de lidar com qualquer evento ou situação que se apresente com muito mais facilidade.
+   
+É importante entender que na numerologia moderna o que é chamado de "lições cármicas" pela numerologia antiga e mítica; na realidade não são lições, mas sim necessidades que cada ser humano possui individualmente e que lhes permite tornar sua vida muito mais fácil, prática e prazerosa.
+   </div>
+
+  
+
+
+  
+<div>{{TEXTO_DEFICIENCIAS}}</div>
+</div>
+
+<div class="secao" style="page-break-before: always; text-align: center; padding: 40px;">
+    <h2 style="color: #1a1a1a; letter-spacing: 2px;">SÍNTESE DO DESTINO E EQUILÍBRIO SUPERIOR</h2>
+    
+    <div class="explicacao" style="font-size: 1.2rem; margin-bottom: 30px;">
+        "A verdadeira sabedoria não está apenas em conhecer seus números, mas em equilibrar as forças que eles representam."
+    </div>
+
+    <div style="text-align: justify; margin-bottom: 30px;">
+        <p>Ao finalizar este estudo, <strong>{{NOME}}</strong>, você detém em mãos a visão da águia: a capacidade de enxergar sua vida do alto, compreendendo que cada desafio e cada número é um dos quatro elementos que moldam sua realidade. </p>
         
-        let t = texto.replace(/você/gi, `<strong>${nomeBonito}</strong>`);
+        <p>A <strong>Justiça Divina</strong> aqui representada mostra que nada é por acaso. Suas Lições Cármicas não são punições, mas o peso exato na balança necessário para que sua alma alcance o equilíbrio. O espírito, representado pelo ponto central da estrela, é o que governa sua vontade e transforma seu Número de Destino em realidade concreta.</p>
+        
+        <p>Que este Mapa seja sua bússola. Use a força da terra para realizar, a fluidez da água para sentir, a leveza do ar para pensar e o fogo do espírito para liderar sua própria história.</p>
+    </div>
+  
+
+
+
+<div class="secao" style="text-align: center; page-break-before: always;">
+  <h2>Conclusão: O Equilíbrio Superior</h2>
+  <img src="https://hemricciinstintosuperior-rcci.github.io/estudo_numerologico/ícone-512.jpg" style="max-width: 100%; border-radius: 10px; margin-bottom: 20px;">
+  <p style="font-style: italic; font-size: 20px; line-height: 1.6;">
+    <span class="printNome">{{NOME}}</span>
+</div>
+    "Sua jornada é guiada pelo equilíbrio perfeito entre o céu e a terra. Assim como a Águia, que tudo vê do alto, este estudo lhe trouxe a clareza necessária para enxergar o seu propósito. Que a Justiça Divina pese suas ações com sabedoria, e que o domínio sobre os quatro elementos fortaleça o seu Espírito."
+  </p>
+</div>
+  <div class="assinatura">
+Relatório desenvolvido por Instinto Superior
+</div>
+<!-- RODAPÉ IMPRESSÃO -->
+<div class="printFooter">
+ https://www.instintosuperior.com
+</div>  
+  <!-- FOLHA A4 INVISÍVEL PARA PDF -->
+<div id="pdfFolha" style="
+position:fixed;
+left:-99999px;
+top:0;
+width:794px;
+background:white;
+padding:25px 30px;
+box-sizing:border-box;
+"></div>
+
+<script>
+// 1. PEGA OS DADOS (SEM ERRO)
+const dadosPortal = JSON.parse(localStorage.getItem("dadosMapaPremium"));
+
+if (!dadosPortal) {
+    document.body.innerHTML = "<h2 style='text-align:center;margin-top:100px'>Dados não encontrados. Gere o mapa no site primeiro.</h2>";
+} else {
+
+    // 2. FUNÇÃO QUE LIMPA O GÊNERO (PRO CARLOS)
+    function limparParaHomem(texto) {
+        if (!texto) return "";
+        let pNome = dadosPortal.nome.trim().split(' ')[0];
+        let nomeFormatado = pNome.charAt(0).toUpperCase() + pNome.slice(1).toLowerCase();
+
+        let t = texto;
+        t = t.replace(/você/gi, `<strong>${nomeFormatado}</strong>`);
+        // Limpa (a), /a, o/a
         t = t.replace(/\(a\)/gi, "").replace(/\(o\)/gi, "").replace(/\(as\)/gi, "").replace(/\(os\)/gi, "");
+        t = t.replace(/\/a/gi, "").replace(/\/o/gi, "").replace(/o\/a/gi, "o").replace(/a\/o/gi, "a");
         return t.replace(/\n\n/g, "<br><br>").replace(/\n/g, "<br>");
     }
 
-    // 3. PEGA TODO O HTML DA PÁGINA PARA FAZER AS SUBSTITUIÇÕES
-    let htmlFinal = document.body.innerHTML;
+    // 3. LISTA DE TUDO QUE TEM QUE TROCAR (MD3, MD4 E D3 ESTÃO AQUI)
+    const trocas = {
+        "{{NOME}}": dadosPortal.nome,
+        "{{DATA}}": dadosPortal.data,
+        "{{DIA}}": dadosPortal.resultados.diaN,
+        "{{INFLUENCIA}}": dadosPortal.resultados.influencia,
+        "{{MOTIVACAO}}": dadosPortal.resultados.motivacao,
+        "{{EXPRESSAO}}": dadosPortal.resultados.personalidade,
+        "{{COMPORTAMENTO}}": dadosPortal.resultados.comportamento,
+        "{{DESTINO}}": dadosPortal.resultados.caminhoVida,
+        "{{MISSAO}}": dadosPortal.resultados.missao,
+        "{{MATURIDADE}}": dadosPortal.resultados.maturidade,
+        "{{RELACIONAMENTO}}": dadosPortal.resultados.relacionamento,
+        "{{ANO_PESSOAL_NUMERO}}": dadosPortal.resultados.anoPessoal,
+        "{{QTD_DEFICIENCIAS}}": (dadosPortal.resultados.listaDeficiencias || []).length + " Lições Cármicas",
+        
+        // Textos Interpretativos
+        "{{TEXTO_DIA}}": limparParaHomem(dadosPortal.textos.dia),
+        "{{TEXTO_MOTIVACAO}}": limparParaHomem(dadosPortal.textos.motivacao),
+        "{{TEXTO_INFLUENCIA}}": limparParaHomem(dadosPortal.textos.influencia),
+        "{{TEXTO_EXPRESSAO}}": limparParaHomem(dadosPortal.textos.expressao),
+        "{{TEXTO_COMPORTAMENTO}}": limparParaHomem(dadosPortal.textos.comportamento),
+        "{{TEXTO_DESTINO}}": limparParaHomem(dadosPortal.textos.destino),
+        "{{TEXTO_MISSAO}}": limparParaHomem(dadosPortal.textos.missao),
+        "{{TEXTO_MATURIDADE}}": limparParaHomem(dadosPortal.textos.maturidade),
+        "{{TEXTO_RELACIONAMENTO}}": limparParaHomem(dadosPortal.textos.relacionamento),
+        "{{TEXTO_CICLO1}}": limparParaHomem(dadosPortal.textos.ciclo1),
+        "{{TEXTO_CICLO2}}": limparParaHomem(dadosPortal.textos.ciclo2),
+        "{{TEXTO_CICLO3}}": limparParaHomem(dadosPortal.textos.ciclo3),
+        "{{TEXTO_MD1}}": limparParaHomem(dadosPortal.textos.md1),
+        "{{TEXTO_MD2}}": limparParaHomem(dadosPortal.textos.md2),
+        "{{TEXTO_MD3}}": limparParaHomem(dadosPortal.textos.md3),
+        "{{TEXTO_MD4}}": limparParaHomem(dadosPortal.textos.md4),
+        "{{TEXTO_D1}}": limparParaHomem(dadosPortal.textos.d1),
+        "{{TEXTO_D2}}": limparParaHomem(dadosPortal.textos.d2),
+        "{{TEXTO_D3}}": limparParaHomem(dadosPortal.textos.d3),
+        "{{TEXTO_ANO_PESSOAL}}": limparParaHomem(dadosPortal.textos.anoPessoal),
+        "{{TEXTO_DEFICIENCIAS}}": limparParaHomem(dadosPortal.textos.deficiencias),
 
-    // 4. DICIONÁRIO DE TROCAS (Substitui as chaves {{...}} pelos valores reais)
-    const mapaDeTrocas = {
-        "{{NOME}}": dados.nome,
-        "{{DATA}}": dados.data,
-        "{{DIA}}": dados.resultados.diaN,
-        "{{INFLUENCIA}}": dados.resultados.influencia,
-        "{{MOTIVACAO}}": dados.resultados.motivacao,
-        "{{EXPRESSAO}}": dados.resultados.personalidade,
-        "{{DESTINO}}": dados.resultados.caminhoVida,
-        "{{ANO_PESSOAL_NUMERO}}": dados.resultados.anoPessoal,
-        "{{TEXTO_DIA}}": formatarTexto(dados.textos.dia),
-        "{{TEXTO_MOTIVACAO}}": formatarTexto(dados.textos.motivacao),
-        "{{TEXTO_INFLUENCIA}}": formatarTexto(dados.textos.influencia),
-        "{{TEXTO_EXPRESSAO}}": formatarTexto(dados.textos.expressao),
-        "{{TEXTO_DESTINO}}": formatarTexto(dados.textos.destino),
-        "{{TEXTO_CICLO1}}": formatarTexto(dados.textos.ciclo1),
-        "{{TEXTO_CICLO2}}": formatarTexto(dados.textos.ciclo2),
-        "{{TEXTO_CICLO3}}": formatarTexto(dados.textos.ciclo3),
-        "{{TEXTO_MD1}}": formatarTexto(dados.textos.md1),
-        "{{TEXTO_MD2}}": formatarTexto(dados.textos.md2),
-        "{{TEXTO_MD3}}": formatarTexto(dados.textos.md3),
-        "{{TEXTO_MD4}}": formatarTexto(dados.textos.md4),
-        "{{TEXTO_D1}}": formatarTexto(dados.textos.d1),
-        "{{TEXTO_D2}}": formatarTexto(dados.textos.d2),
-        "{{TEXTO_D3}}": formatarTexto(dados.textos.d3),
-        "{{TEXTO_ANO_PESSOAL}}": formatarTexto(dados.textos.anoPessoal),
-        "{{TEXTO_DEFICIENCIAS}}": formatarTexto(dados.textos.deficiencias),
-        "{{PERIODO_C1}}": dados.periodos.ciclo1,
-        "{{PERIODO_C2}}": dados.periodos.ciclo2,
-        "{{PERIODO_C3}}": dados.periodos.ciclo3,
-        "{{PERIODO_MD1}}": dados.periodos.md1,
-        "{{PERIODO_MD2}}": dados.periodos.md2,
-        "{{PERIODO_MD3}}": dados.periodos.md3,
-        "{{PERIODO_MD4}}": dados.periodos.md4
+        // Períodos
+        "{{PERIODO_C1}}": dadosPortal.periodos.ciclo1,
+        "{{PERIODO_C2}}": dadosPortal.periodos.ciclo2,
+        "{{PERIODO_C3}}": dadosPortal.periodos.ciclo3,
+        "{{PERIODO_MD1}}": dadosPortal.periodos.md1,
+        "{{PERIODO_MD2}}": dadosPortal.periodos.md2,
+        "{{PERIODO_MD3}}": dadosPortal.periodos.md3,
+        "{{PERIODO_MD4}}": dadosPortal.periodos.md4,
+        "{{PERIODO_D1}}": dadosPortal.periodos.ciclo1,
+        "{{PERIODO_D2}}": dadosPortal.periodos.ciclo2,
+        "{{PERIODO_D3}}": dadosPortal.periodos.ciclo3
     };
 
-    // Aplica as trocas uma por uma
-    Object.keys(mapaDeTrocas).forEach(chave => {
-        htmlFinal = htmlFinal.split(chave).join(mapaDeTrocas[chave] || "");
+    // 4. APLICA AS MUDANÇAS NO HTML (UMA ÚNICA VEZ PARA NÃO SUMIR NADA)
+    let htmlFinal = document.body.innerHTML;
+    Object.keys(trocas).forEach(chave => {
+        htmlFinal = htmlFinal.split(chave).join(trocas[chave] || "");
     });
-
-    // 5. O PULO DO GATO: INJETAR O GRÁFICO
-    // Criamos o bloco do gráfico com o que veio do Index
-// 5. O PULO DO GATO: INJETAR O GRÁFICO NA DIV FIXA
-    // Primeiro, devolvemos o texto para a página
     document.body.innerHTML = htmlFinal;
 
-    // Agora, colocamos o gráfico dentro da casinha dele
-    const areaDoGrafico = document.getElementById("container-do-grafico-premium");
-    if (g1 && areaDoGrafico) {
-        areaDoGrafico.innerHTML = `
-            <div class="secao" style="background:#fdf5e6; border:2px solid #d4c4a8; margin-bottom:30px; text-align:center; padding:20px; border-radius:12px;">
-                <h2 style="border:none; color:#5d4037; margin-bottom:20px;">Sua Orientação Vibracional</h2>
-                ${g1} 
-                <div style="margin-top:20px;">${g2 || ""}</div>
-            </div>`;
-        console.log("Gráfico entregue no destino certo!");
-    }
+    // 5. CHAMA A IMPRESSÃO
+    window.onload = () => { setTimeout(() => { window.print(); }, 1200); };
+}
 
-    // 6. DEVOLVE O HTML TODO PRONTO PARA A PÁGINA
-    document.body.innerHTML = htmlFinal;
-};
-
-// Desativa o clique direito para proteger o relatório
+// Proteção
 document.oncontextmenu = () => false;
+document.onselectstart = () => false;
 </script>
-</body>
-</html>
