@@ -36,7 +36,22 @@ body > * {
 .titulo { font-size: 42px; letter-spacing: 3px; margin-bottom: 10px; }
 .subtitulo { font-size: 20px; color: #111; }
 .nome-capa { margin-top: 50px; font-size: 24px; font-weight: bold; text-transform: uppercase; }
+/* FORÇA A ALTURA E AS CORES DAS BARRAS NO PREMIUM */
+#boxGrafico .preenchimento, 
+#graficoPremiumDinamico .preenchimento {
+    height: 18px !important; /* Dá altura para a barra não sumir */
+    display: block !important;
+    min-width: 5px; /* Garante que mesmo valor baixo apareça um pouco */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
 
+/* Garante que o fundo cinza das barras apareça */
+div[style*="background: #eee"] {
+    background-color: #eee !important;
+    height: 18px !important;
+    border-radius: 4px;
+}
 .secao {
   background: white;
   padding: 30px;
