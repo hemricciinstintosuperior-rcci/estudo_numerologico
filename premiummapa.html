@@ -127,12 +127,24 @@
                 </div>
             `;
 
-            // Desafios e Lições
-            document.getElementById("secao-desafios").innerHTML = `
-                <h3>Lições Cármicas</h3> <p>${t.deficiencias}</p>
-                <h3>Desafio Principal</h3> <p>${t.desafio1}</p>
-                <h3>Desafio Secundário</h3> <p>${t.desafio2}</p>
-            `;
+// Localize onde você injeta os desafios no premiummapa.html e substitua:
+document.getElementById("secao-desafios").innerHTML = `
+    <h3>Lições Cármicas (Faltas no Nome)</h3> 
+    <p>${t.deficiencias || "Nenhuma lição detectada."}</p>
+    
+    <div class="box-info" style="margin-top:20px;">
+        <h4 style="color:var(--gold); margin:0;">🚫 Desafio 1 (Início da Vida)</h4>
+        <p>${t.desafio1}</p>
+    </div>
+    <div class="box-info" style="margin-top:10px;">
+        <h4 style="color:var(--gold); margin:0;">🚫 Desafio 2 (Fase Madura)</h4>
+        <p>${t.desafio2}</p>
+    </div>
+    <div class="box-info" style="margin-top:10px; border: 2px solid var(--gold);">
+        <h4 style="color:var(--dark); margin:0;">⚠️ DESAFIO PRINCIPAL (Vida Inteira)</h4>
+        <p><strong>Número: ${d.desafios.d3}</strong> - ${t.desafioGeral}</p>
+    </div>
+`;
 
             document.getElementById("num-ano").innerText = r.anoPessoal;
             document.getElementById("txt-ano").innerHTML = `<p>${t.anoPessoal}</p>`;
