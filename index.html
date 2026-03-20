@@ -39,9 +39,11 @@
 <script src="textos.js"></script>
 
 <script>
+// --- TABELA BASE ---
 const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
 const vogais = ["A","E","I","O","U"];
 
+// --- BANCO DO GRÁFICO (NUNCA ESQUECER) ---
 const bancoLegendasCompleto = {
     "Liderança": { nums: [1], cat: "Realização" }, "Visão Empreendedora": { nums: [1, 8], cat: "Realização" }, "Autoridade": { nums: [8], cat: "Realização" },
     "Gestão Financeira": { nums: [8, 4], cat: "Realização" }, "Poder de Execução": { nums: [4, 8], cat: "Realização" }, "Ambição": { nums: [8, 1], cat: "Realização" },
@@ -65,7 +67,9 @@ const bancoLegendasCompleto = {
     "Agilidade": { nums: [5, 1], cat: "Evolução" }, "Liberdade": { nums: [5], cat: "Evolução" }, "Aventura": { nums: [5], cat: "Evolução" }
 };
 
+// --- FUNÇÕES DE CÁLCULO ---
 function reduzir(n) { if (n === 0) return 0; n = Math.abs(n); let r = n % 9; return r === 0 ? 9 : r; }
+function reduzirDesafio(n) { return Math.abs(n); } // Desafios podem ser 0
 
 function calcularValorComAcentos(letra) {
   const base = letra.normalize("NFD")[0];
@@ -82,79 +86,6 @@ function calcularValorComAcentos(letra) {
   return (valorBase + soma) * mult;
 }
 
-function calcularVibracaoEssencia(nomeCompleto) {
-    const partes = nomeCompleto.trim().toUpperCase().split(/\s+/);
-    let soma = 0;
-    partes.forEach(p => { if(p.length > 0) soma += calcularValorComAcentos(p[0]); });
-    return reduzir(soma);
-}
-
-function calcularTalento(motivacao, personalidade) { return reduzir(motivacao + personalidade); }
-
-function calcularEquilibrio(nomeCompleto) {
-    const partes = nomeCompleto.trim().toUpperCase().split(/\s+/);
-    let somaIniciais = 0;
-    partes.forEach(p => { 
-        if(p.length > 0) {
-            const letraBase = p[0].normalize("NFD")[0];
-            somaIniciais += tabela[letraBase] || 0;
-        }
-    });
-    return reduzir(somaIniciais);
-}
-
-function obterPoderConclusao(primeiroNome) {
-    if (!primeiroNome) return { letra: "", valor: 0 };
-    const ultimaLetra = primeiroNome.trim().slice(-1).toUpperCase();
-    const valor = tabela[ultimaLetra.normalize("NFD")[0]] || 0;
-    return { letra: ultimaLetra, valor: valor };
-}
-
-function calcularIntensidadeAtributo(numerosAlvo, resultados, faltantes, desafios, nome) {
-    let intensidade = 0;
-    const nomeLimpo = nome.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    numerosAlvo.forEach(num => {
-        if (resultados.motivacao === num) intensidade += 3.5;
-        if (resultados.personalidade === num) intensidade += 3.5;
-        if (resultados.influencia === num) intensidade += 2.0;
-        if (resultados.diaN === num) intensidade += 2.5;
-        for (let letra of nomeLimpo) { if (tabela[letra] === num) intensidade += 0.4; }
-        if (faltantes.includes(num)) intensidade -= 3.0;
-        if (desafios.includes(num)) intensidade -= 1.5;
-    });
-    return Math.max(0, Math.min(10, intensidade)).toFixed(1);
-}
-
-function gerarGraficosIntensidade(resultados, faltantes, desafios, nomeCompleto) {
-    let rankingGeral = [];
-    for (let legenda in bancoLegendasCompleto) {
-        const dados = bancoLegendasCompleto[legenda];
-        const nota = calcularIntensidadeAtributo(dados.nums, resultados, faltantes, desafios, nomeCompleto);
-        rankingGeral.push({ nome: legenda, nota: parseFloat(nota), categoria: dados.cat });
-    }
-    rankingGeral.sort((a, b) => b.nota - a.nota);
-    const instintoSuperior = rankingGeral[0];
-    const categorias = ["Realização", "Mentalidade", "Social", "Essência", "Evolução"];
-    let html = `<div class="card" style="background: #0a0e1a; color: #d4af37; border: 2px solid #d4af37; text-align:center; padding: 25px; margin-bottom: 30px;">
-            <h2 style="margin:0; font-size: 14px; letter-spacing:3px; opacity: 0.8; border:none;">FORÇA PREDOMINANTE</h2>
-            <div style="font-size: 32px; font-weight: bold; margin: 10px 0; text-transform: uppercase;">${instintoSuperior.nome}</div>
-            <p style="color: white; font-size: 13px; margin:0; opacity: 0.9;">Esta é a sua frequência dominante.</p>
-        </div>`;
-    categorias.forEach(cat => {
-        const itensDaCat = rankingGeral.filter(item => item.categoria === cat).slice(0, 3);
-        html += `<div class="card" style="border-top: 4px solid #d4af37; margin-bottom: 25px;"><h3 style="color: #888; font-size: 11px; text-transform: uppercase; border:none;">Pilar de ${cat}</h3>`;
-        itensDaCat.forEach(item => {
-            const porcento = item.nota * 10;
-            html += `<div style="margin-bottom: 12px;"><div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: bold; color: #111;"><span>${item.nome}</span><span style="color: #d4af37;">${Math.round(porcento)}%</span></div>
-                <div style="height: 6px; background: #f0f0f0; border-radius: 10px; margin-top:4px; overflow:hidden;"><div style="width: ${porcento}%; height: 100%; background: #d4af37;"></div></div></div>`;
-        });
-        html += `</div>`;
-    });
-    return html;
-}
-
-let mapaGerado = false;
-
 function gerarMapa() {
   const nomeInput = document.getElementById("nome").value.trim();
   const dataInput = document.getElementById("data").value;
@@ -163,68 +94,99 @@ function gerarMapa() {
   const [ano, mes, dia] = dataInput.split("-").map(Number);
   const nomeUp = nomeInput.toUpperCase();
 
+  // 1. Cálculos da Triade e Essenciais
   let somaV = 0, somaC = 0, usados = new Set();
   for (let l of nomeUp) {
-    const valor = calcularValorComAcentos(l);
-    if (!valor) continue;
-    const base = l.normalize("NFD")[0];
-    if(tabela[base]) usados.add(tabela[base]);
-    vogais.includes(base) ? somaV += valor : somaC += valor;
+    const v = calcularValorComAcentos(l);
+    if (!v) continue;
+    const b = l.normalize("NFD")[0];
+    if(tabela[b]) usados.add(tabela[b]);
+    vogais.includes(b) ? somaV += v : somaC += v;
   }
 
   const res = {
-      diaN: dia, motivacao: reduzir(somaV), influencia: reduzir(somaC),
-      personalidade: reduzir(somaV + somaC), comportamento: reduzir(dia),
-      caminhoVida: reduzir(dia + mes + ano), anoPessoal: reduzir(dia + mes + new Date().getFullYear())
+    dia: reduzir(dia),
+    motivação: reduzir(somaV),
+    influência: reduzir(somaC),
+    Personalidade: reduzir(somaV + somaC),
+    "Caminho de Vida": reduzir(dia + mes + ano),
+    "Propósito": reduzir(reduzir(dia + mes + ano) + reduzir(somaV + somaC)),
+    Maturidade: reduzir(reduzir(dia + mes + ano) + reduzir(somaV + somaC)),
+    Relacionamento: reduzir(somaV), // Base cabalística padrão
+    anoPessoal: reduzir(dia + mes + new Date().getFullYear()),
+    essência: reduzir(somaV), // Calculado pelas vogais
+    equilíbrio: (function(){
+        let somaIni = 0; 
+        nomeInput.split(/\s+/).forEach(p => { if(p.length > 0) somaIni += tabela[p[0].toUpperCase().normalize("NFD")[0]] || 0; });
+        return reduzir(somaIni);
+    })(),
+    talento: reduzir(reduzir(somaV) + reduzir(somaV + somaC))
   };
-  res.missao = reduzir(res.caminhoVida + res.personalidade);
 
-  const numEssencia = calcularVibracaoEssencia(nomeInput);
-  const numTalento = calcularTalento(res.motivacao, res.personalidade);
-  const numEquilibrio = calcularEquilibrio(nomeInput);
-  const infoConclusao = obterPoderConclusao(nomeInput.split(' ')[0]);
+  // 2. Ciclos, Momentos e Desafios
+  const c = [reduzir(mes), reduzir(dia), reduzir(ano)];
+  const m = [reduzir(dia + mes), reduzir(dia + ano), reduzir(reduzir(dia+mes) + reduzir(dia+ano)), reduzir(mes + ano)];
+  const d = [reduzirDesafio(dia - mes), reduzirDesafio(dia - reduzir(ano)), reduzirDesafio(reduzirDesafio(dia - mes) - reduzirDesafio(dia - reduzir(ano)))];
 
+  // 3. Mentalidade e Comportamento
   let faltantes = []; for (let i=1; i<=9; i++) if(!usados.has(i)) faltantes.push(i);
-  let d1 = reduzir(Math.abs(dia - mes)), d2 = reduzir(Math.abs(dia - reduzir(ano))), d3 = reduzir(Math.abs(d1 - d2));
-  const c1 = reduzir(mes), c2 = reduzir(dia), c3 = reduzir(ano);
-  const md1 = reduzir(dia + mes), md4 = reduzir(mes + ano);
+  const subconscienteNum = 9 - faltantes.length;
 
-  const htmlGraficos = gerarGraficosIntensidade(res, faltantes, [d1, d2, d3], nomeInput);
-
-  document.getElementById("resultado").innerHTML = `
-    ${htmlGraficos}
-    
+  // 4. Exibição com as Chaves Exatas do textos.js
+  let html = `
     <div class="card" style="background: #0a0e1a; color: #fff; border-left: 10px solid #d4af37;">
         <h3 style="color:#d4af37; border:none;">🛡️ SEGREDOS DA ALMA</h3>
-        <p><strong>Essência:</strong> ${numEssencia}<br><small style="color:#aaa;">${textos.essencia ? textos.essencia[numEssencia] : ""}</small></p>
-        <p><strong>Talento:</strong> ${numTalento}<br><small style="color:#aaa;">${textos.talento ? textos.talento[numTalento] : ""}</small></p>
-        <p><strong>Equilíbrio:</strong> ${numEquilibrio}<br><small style="color:#aaa;">${textos.equilibrio ? textos.equilibrio[numEquilibrio] : ""}</small></p>
-        <p><strong>Conclusão:</strong> Letra "${infoConclusao.letra}" (Vibração ${infoConclusao.valor})</p>
+        <p><strong>essência:</strong> ${res.essência}<br><small style="color:#aaa;">${textos.essência[res.essência]}</small></p>
+        <p><strong>talento:</strong> ${res.talento}<br><small style="color:#aaa;">${textos.talento[res.talento]}</small></p>
+        <p><strong>equilíbrio:</strong> ${res.equilíbrio}<br><small style="color:#aaa;">${textos.equilíbrio[res.equilíbrio]}</small></p>
     </div>
-
-    ${card("Motivação", "Seu Íntimo", res.motivacao, textos.motivacao[res.motivacao])}
-    ${card("Influência", "Sua Imagem", res.influencia, textos.influencia[res.influencia])}
-    ${card("Personalidade", "Sua Expressão", res.personalidade, textos.Personalidade[res.personalidade])}
 
     <div class="card" style="background: #fafafa; border-top: 4px solid #3b82f6;">
-        <h3 style="border:none;">🧠 MENTALIDADE MODERNA</h3>
-        <p><strong>Déficits:</strong><br><small style="color:#666;">${faltantes.map(n => textos.deficits[n]).join("<br>")}</small></p>
-        <p><strong>Subconsciente:</strong><br><small style="color:#666;">${textos.subconsciente[9 - faltantes.length]}</small></p>
+        <h3 style="border:none;">🧠 MENTALIDADE E COMPORTAMENTO</h3>
+        <p><strong>deficientes:</strong><br><small>${faltantes.map(n => textos.deficientes[n]).join(" | ")}</small></p>
+        <p><strong>déficit:</strong><br><small>${faltantes.map(n => textos.déficit[n]).join("<br>")}</small></p>
+        <p><strong>inclinações:</strong><br><small>${textos.inclinações[res.motivação]}</small></p>
+        <p><strong>subconsciente:</strong><br><small>${textos.subconsciente[subconscienteNum]}</small></p>
     </div>
 
-    ${card("Caminho de Vida", "Seu Destino", res.caminhoVida, textos.CaminhodeVida[res.caminhoVida])}
-    ${card("Missão", "Seu Propósito", res.missao, textos.Propósito[res.missao])}
+    ${card("motivação", "Íntimo", res.motivação, textos.motivação[res.motivação])}
+    ${card("influência", "Imagem", res.influência, textos.influência[res.influência])}
+    ${card("Personalidade", "Expressão", res.Personalidade, textos.Personalidade[res.Personalidade])}
+    ${card("Caminho de Vida", "Destino", res["Caminho de Vida"], textos["Caminho de Vida"][res["Caminho de Vida"]])}
+    ${card("Propósito", "Missão", res.Propósito, textos.Propósito[res.Propósito])}
+    ${card("Maturidade", "Realização", res.Maturidade, textos.Maturidade[res.Maturidade])}
+    ${card("Relacionamento", "Afetivo", res.Relacionamento, textos.Relacionamento[res.Relacionamento])}
 
     <div class="card">
-        <h3>Previsões e Ciclos</h3>
-        <p><strong>Ciclo Atual:</strong> ${textos.ciclos[1][c1]}</p>
-        <p><strong>Desafio Principal:</strong> ${textos.desafios[3][d3]}</p>
-        <p><strong>Ano Pessoal:</strong> ${textos.anoPessoal[res.anoPessoal]}</p>
+        <h3>⏳ CICLOS</h3>
+        <p><strong>ciclos 1:</strong> ${textos.ciclos[1][c[0]]}</p>
+        <p><strong>ciclos 2:</strong> ${textos.ciclos[2][c[1]]}</p>
+        <p><strong>ciclos 3:</strong> ${textos.ciclos[3][c[2]]}</p>
+    </div>
+
+    <div class="card">
+        <h3>🏆 MOMENTOS</h3>
+        <p><strong>momento 1:</strong> ${textos.momentos[1][m[0]]}</p>
+        <p><strong>momento 2:</strong> ${textos.momentos[2][m[1]]}</p>
+        <p><strong>momento 3:</strong> ${textos.momentos[3][m[2]]}</p>
+        <p><strong>momento 4:</strong> ${textos.momentos[4][m[3]]}</p>
+    </div>
+
+    <div class="card" style="background: #fff5f5;">
+        <h3 style="color:#c53030;">⚠️ DESAFIOS</h3>
+        <p><strong>desafio 1:</strong> ${textos.desafios[1][d[0]]}</p>
+        <p><strong>desafio 2:</strong> ${textos.desafios[2][d[1]]}</p>
+        <p><strong>desafio principal:</strong> ${textos.desafios[3][d[2]]}</p>
+    </div>
+
+    <div class="card" style="background: #0a0e1a; color: #fff; text-align:center;">
+        <h3 style="color: #d4af37;">ano Pessoal: ${res.anoPessoal}</h3>
+        <p>${textos.anoPessoal[res.anoPessoal]}</p>
     </div>
   `;
 
+  document.getElementById("resultado").innerHTML = html;
   mapaGerado = true;
-  window.scrollTo({ top: document.getElementById("resultado").offsetTop - 20, behavior: 'smooth' });
 }
 
 function card(titulo, subtitulo, numero, textoRaw) {
