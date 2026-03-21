@@ -66,7 +66,24 @@
     <script>
         const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
         const vogais = ["A","E","I","O","U"];
-
+// DICIONÁRIO DE EXIBIÇÃO PREMIUM (Tradução da Lógica para o Relatório)
+const nomesExibicao = {
+    "dia": "Vibração do Dia de Nascimento",
+    "comportamento": "Tendências de Comportamento",
+    "motivacao": "Sua Motivação Interna",
+    "influencia": "Sua Influência Externa",
+    "Personalidade": "Sua Personalidade Real",
+    "CaminhodeVida": "Caminho de Vida e Destino",
+    "Propósito": "Missão e Propósito de Vida",
+    "Maturidade": "Sua Fase de Maturidade",
+    "Relacionamento": "Harmonia nos Relacionamentos",
+    "anoPessoal": "Previsão: Seu Ano Pessoal 2026",
+    "essencia": "A Essência da sua Alma",
+    "talento": "Seus Talentos Naturais",
+    "equilibrio": "Pilar de Equilíbrio Emocional",
+    "inclinacoes": "Suas Inclinações Ocultas",
+    "subconsciente": "Mecanismos do Subconsciente"
+};
         function reduzir(n) { if (n === 0) return 0; let r = Math.abs(n) % 9; return r === 0 ? 9 : r; }
 
         function calcularValorLetra(letra) {
@@ -299,27 +316,27 @@ pilaresOcultos.forEach((num, index) => {
 
 
 const res = {
-   "Dia": reduzir(dia),
-    "Comportamento": reduzir(dia),
-    "Motivacão": mot,
-    influência: reduzir(sC),
+    dia: reduzir(dia),
+    comportamento: reduzir(dia),
+    motivacao: mot,
+    influencia: reduzir(sC),
     Personalidade: exp,
-    "Caminho de Vida": cvCalculado,
+    CaminhodeVida: cvCalculado,
     "Propósito": propCalculado,
-    "Maturidade": propCalculado, // ou a fórmula que desejar
-    "Relacionamento": propCalculado,
-    "Ano Pessoal": reduzir(dia + mes + 2026),
-   " Essência": reduzir(sE),
-    "Talento": reduzir(mot + exp),
-    "Equilibrio": reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
-    "Deficiencias": faltantes,
-    "Deficit Recorrente": diaReduzido, 
-    "Deficits Ocultos": deficitsOcultos, 
-    "Inclinações Ocultas": mot,
-    "Subconsciente": 9 - faltantes.length,
-    "Ciclos de Vida": {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
-    "Momentos de Decisão": {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
-    "Desafios": {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
+    Maturidade: propCalculado, // ou a fórmula que desejar
+    Relacionamento: propCalculado,
+    anoPessoal: reduzir(dia + mes + 2026),
+    essencia: reduzir(sE),
+    talento: reduzir(mot + exp),
+    equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
+    deficiencias: faltantes,
+    deficitRecorrente: diaReduzido, 
+    deficitsOcultos: deficitsOcultos, 
+    inclinacoes: mot,
+    subconsciente: 9 - faltantes.length,
+    ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
+    momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
+    desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
 };
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
@@ -391,12 +408,12 @@ const datasFases = {
                 <div class="secao-card quebra-pagina">
                     <h2 class="titulo-topico">Análise de Potenciais</h2>
                     <div class="intro-texto">${textos.introducoes.graficos}</div>
-                    ${gerarTodosOsGraficos(res, res.Deficiencias, nomeRaw, res.Desafios[3])}
+                    ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3])}
                 </div>
             `;
 
-            // 3. CARDS PRINCIPAIS COM INTRODUÇÃO
-           const listaPremium = ["Dia", "Comportamento", "Essência", "Equilibrio", "Talento", "Motivacão", "influência", "Personalidade", "Relacionamento", "Caminho de Vida", "Propósito", "Maturidade", "Inclinações Ocultas", "Subconsciente", "Ano Pessoal"];
+          // 3. CARDS PRINCIPAIS COM INTRODUÇÃO
+           const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
             
             listaPremium.forEach(k => {
                 html += `
