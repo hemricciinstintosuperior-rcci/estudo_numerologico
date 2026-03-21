@@ -196,7 +196,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
         const nomesBonitos = {"Potencial":"Seu Potencial", "Essência":"Sua Essência", "Vida":"Capacidade de Aproveitar a Vida", "Relacionamento":"Como Você se Relaciona", "Valores":"Seus Valores"};
 
         cats.forEach(c => {
-            const itens = ranking.filter(i => i.categoria === c && i.nota >= 6.5).sort((a,b)=>b.nota-a.nota).slice(0,4);
+            const itens = ranking.filter(i => i.categoria === c && i.nota >= 5.5).sort((a,b)=>b.nota-a.nota).slice(0,4);
             if(itens.length > 0) {
                 html += `<div class="card" style="border-left:10px solid ${itens[0].cor}"><h3>${nomesBonitos[c]}</h3>`;
                 itens.forEach(item => {
@@ -220,7 +220,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
             const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3);
 
             // Se a nota for baixa (necessidade de desenvolvimento), entra no card de alerta
-            if (notaNec < 6.5) {
+            if (notaNec < 8.5) {
                 temNecessidade = true;
                 let prioridade = (11 - notaNec) * 10; // Quanto menor a nota, maior a urgência
                 
