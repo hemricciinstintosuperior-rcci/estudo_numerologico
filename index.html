@@ -102,18 +102,17 @@ Liberar acesso ao relatório e baixar o PDF
             "Concentração": { nums: [7, 4], cat: "Mentalidade" },
             "Visão Sistêmica": { nums: [9, 7, 8], cat: "Mentalidade" },
             "Racionalidade": { nums: [4, 7], cat: "Mentalidade" },
-            "Magnetismo": { nums: [3, 5], cat: "Social" },
-            "Diplomacia": { nums: [2], cat: "Social" },
-            "Persuasão": { nums: [3, 8], cat: "Social" },
-            "Carisma": { nums: [3], cat: "Social" },
-            "Mediação": { nums: [2, 6], cat: "Social" },
-            "Eloquência": { nums: [3, 5], cat: "Social" },
-            "Influência": { nums: [8, 3, 9], cat: "Social" },
-            "Extroversão": { nums: [3, 5], cat: "Social" },
-            "Expressividade": { nums: [3], cat: "Social" },
-            "Popularidade": { nums: [3, 6], cat: "Social" },
-            "Networking": { nums: [5, 3, 2], cat: "Social" },
-            "Poder de Convencimento": { nums: [3, 1, 8], cat: "Social" },
+            "Magnetismo": { nums: [3, 5], cat: "Conexão Social" },
+            "Diplomacia": { nums: [2], cat: "Conexão Social" },
+            "Persuasão": { nums: [3, 8], cat: "Conexão Social" },
+            "Carisma": { nums: [3], cat: "Conexão Social" },
+            "Mediação": { nums: [2, 6], cat: "Conexão Social" },
+            "Eloquência": { nums: [3, 5], cat: "Conexão Social" },
+            "Influência": { nums: [8, 3, 9], cat: "Conexão Social" },
+            "Extroversão": { nums: [3, 5], cat: "Conexão Social" },
+            "Expressividade": { nums: [3], cat: "Conexão Social" },
+            "Popularidade": { nums: [3, 6], cat: "Conexão Social" },
+            "Poder de Convencimento": { nums: [3, 1, 8], cat: "Conexão Social" },
             "Empatia": { nums: [2, 9], cat: "Essência" },
             "Acolhimento": { nums: [6], cat: "Essência" },
             "Intuição": { nums: [7, 9], cat: "Essência" },
@@ -124,7 +123,7 @@ Liberar acesso ao relatório e baixar o PDF
             "Harmonia": { nums: [6], cat: "Essência" },
             "Paternidade/Maternidade": { nums: [6, 2], cat: "Essência" },
             "Generosidade": { nums: [9, 6], cat: "Essência" },
-            "Espiritualidade": { nums: [7, 9], cat: "Essência" },
+            "Espiritualidade": { nums: [3, 7, 9], cat: "Essência" },
             "Zelo": { nums: [6, 4], cat: "Essência" },
             "Versatilidade": { nums: [5], cat: "Evolução" },
             "Adaptação": { nums: [5, 2], cat: "Evolução" },
@@ -152,15 +151,15 @@ Liberar acesso ao relatório e baixar o PDF
 
             let html = `
                 <div class="card" style="background:#0a0e1a; color:var(--gold); border:2px solid var(--gold); text-align:center;">
-                    <h2 style="font-size:12px; letter-spacing:3px; color:#fff;">FORÇA PREDOMINANTE</h2>
+                    <h2 style="font-size:12px; letter-spacing:3px; color:#fff;">SUA FORÇA PREDOMINANTE</h2>
                     <div style="font-size:32px; font-weight:bold; text-transform:uppercase;">${instintoSuperior.nome}</div>
                 </div>
             `;
 
-            const categorias = ["Realização", "Mentalidade", "Social", "Essência", "Evolução"];
+            const categorias = ["Realização", "Mentalidade", "Conexão Social", "Essência", "Evolução"];
             categorias.forEach(cat => {
                 const itens = rankingGeral.filter(i => i.categoria === cat).slice(0, 3);
-                html += `<div class="card" style="border-left:5px solid var(--gold)"><h3>Pilar ${cat}</h3>`;
+                html += `<div class="card" style="border-left:5px solid var(--gold)"><h3>Sua ${cat}</h3>`;
                 itens.forEach(item => {
                     let perc = item.nota * 10;
                     html += `
