@@ -305,7 +305,7 @@ function gerarMapaCompleto() {
     };
 
     // Salva e Renderiza
-    const graficoHtml = gerarGraficosIntensidade(res, faltantes, nomeRaw);
+    const graficoHtml = gerarTodosOsGraficos(res, faltantes, nomeRaw, d3); 
     document.getElementById("resultado").innerHTML = graficoHtml + `<button class="btn-gerar" onclick='abrirPremium(${JSON.stringify(dadosMapa).replace(/'/g, "&apos;")}, \`${graficoHtml}\`)'>📥 ABRIR RELATÓRIO PDF</button>`;
 }
 
