@@ -295,6 +295,9 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
 
             const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
             const [ano, mes, dia] = dataRaw.split("-").map(Number);
+            const diaRed = reduzir(dia);
+const mesRed = reduzir(mes);
+const anoRed = reduzir(ano);
             
             let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
 
