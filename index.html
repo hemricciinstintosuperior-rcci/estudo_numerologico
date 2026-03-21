@@ -251,7 +251,14 @@ const bancoNecessidadesVermelho = {
             const exp = reduzir(sV + sC); // Personalidade (Expressão)
             const mot = reduzir(sV);
             const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0);
-
+           // Cálculos de Intensidade (5 Pilares)
+            const pilares = {
+                "Realização": ((contagem[1] + contagem[8]) * 10),
+                "Mentalidade": ((contagem[4] + contagem[7]) * 10),
+                "Social": ((contagem[3] + contagem[5]) * 10),
+                "Essência": ((contagem[2] + contagem[6]) * 10),
+                "Evolução": (contagem[9] * 20)
+            };
  
             const forte = Object.keys(pilares).reduce((a, b) => pilares[a] > pilares[b] ? a : b);
 
