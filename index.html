@@ -17,7 +17,19 @@
         }
 
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
-        
+        /* Estilo para os Logos */
+.logo-capa {
+    width: 180px; /* Ajuste o tamanho conforme seu logo */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.logo-conclusao {
+    width: 120px;
+    height: auto;
+    margin-top: 30px;
+    opacity: 0.9;
+}
         /* Container de Entrada */
         .container { width: 100%; max-width: 650px; background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 40px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
         h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
@@ -374,14 +386,15 @@ const datasFases = {
             let html = `
                 <button class="btn-pdf no-print" onclick="window.print()">📥 SALVAR PDF PREMIUM</button>
 
-                <div class="capa">
-                    <div style="font-size: 14px; color: var(--gold); letter-spacing: 8px;">MAPA NUMEROLÓGICO</div>
-                    <h1>INSTINTO SUPERIOR</h1>
-                    <div class="capa-cliente">
-                        <strong>${nomeRaw}</strong><br>
-                        <span style="font-size: 16px; opacity: 0.8;">${dataRaw.split('-').reverse().join('/')}</span>
-                    </div>
-                </div>
+<div class="capa">
+    <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png" class="logo-capa" alt="Logo">
+    <div style="font-size: 14px; color: var(--gold); letter-spacing: 8px;">MAPA NUMEROLÓGICO</div>
+    <h1>INSTINTO SUPERIOR</h1>
+    <div class="capa-cliente">
+        <strong>${nomeRaw}</strong><br>
+        <span style="font-size: 16px; opacity: 0.8;">${dataRaw.split('-').reverse().join('/')}</span>
+    </div>
+</div>
                 
 <div class="secao-card quebra-pagina">
     <h2 class="titulo-topico">Sumário do Mapa</h2>
@@ -497,6 +510,7 @@ listaPremium.forEach(chave => {
                     <h2 class="titulo-topico">Conclusão</h2>
                    <div class="texto-res">${aplicarFiltroTexto(textos.introducoes.Conclusao)}</div>
                     <br><br>
+                     <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/logosite.png" class="logo-conclusao" alt="Logo">
                     <p style="color:var(--gold); letter-spacing:3px;">INSTINTO SUPERIOR</p>
                 </div>
             `;
