@@ -301,21 +301,30 @@ const res = {
     desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
 };
             
-// --- CÁLCULO DE PERÍODOS (DATAS E IDADES) ---
-const idadeMudança = 36 - res.CaminhodeVida;
-const anoNasc = ano; 
+// --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
+const anoNasc = ano; // Variável 'ano' que vem do split da data
+const cv = res.CaminhodeVida;
 
-const periodos = {
+// A idade de mudança principal (Maturidade)
+const fim1 = 37 - cv; 
+const fim2 = fim1 + 27; // Ciclo 2 dura 27 anos
+
+const datasFases = {
     ciclos: {
-        1: { de: 0, ate: 28, anos: `${anoNasc} a ${anoNasc + 28}` },
-        2: { de: 28, ate: 56, anos: `${anoNasc + 28} a ${anoNasc + 56}` },
-        3: { de: 56, ate: 99, anos: `após ${anoNasc + 56}` }
+        1: { idade: `0 a ${fim1} anos`, anos: `${anoNasc} a ${anoNasc + fim1}` },
+        2: { idade: `${fim1 + 1} a ${fim2} anos`, anos: `${anoNasc + fim1 + 1} a ${anoNasc + fim2}` },
+        3: { idade: `após ${fim2} anos`, anos: `de ${anoNasc + fim2} em diante` }
     },
     momentos: {
-        1: { de: 0, ate: idadeMudança, anos: `${anoNasc} a ${anoNasc + idadeMudança}` },
-        2: { de: idadeMudança, ate: idadeMudança + 9, anos: `${anoNasc + idadeMudança} a ${anoNasc + idadeMudança + 9}` },
-        3: { de: idadeMudança + 9, ate: idadeMudança + 18, anos: `${anoNasc + idadeMudança + 9} a ${anoNasc + idadeMudança + 18}` },
-        4: { de: idadeMudança + 18, ate: 99, anos: `após ${anoNasc + idadeMudança + 18}` }
+        1: { idade: `0 a ${fim1} anos`, anos: `${anoNasc} a ${anoNasc + fim1}` },
+        2: { idade: `${fim1 + 1} a ${fim1 + 9} anos`, anos: `${anoNasc + fim1 + 1} a ${anoNasc + fim1 + 9}` },
+        3: { idade: `${fim1 + 10} a ${fim1 + 18} anos`, anos: `${anoNasc + fim1 + 10} a ${anoNasc + fim1 + 18}` },
+        4: { idade: `após ${fim1 + 18} anos`, anos: `de ${anoNasc + fim1 + 18} em diante` }
+    },
+    desafios: {
+        1: { idade: `0 a ${fim1 + 18} anos`, anos: `${anoNasc} a ${anoNasc + fim1 + 18}` }, // Desafio 1 e 2 costumam cobrir metade da vida
+        2: { idade: `${fim1 + 19} anos em diante`, anos: `de ${anoNasc + fim1 + 19} em diante` },
+        3: { idade: "Vida Inteira", anos: "Consistente" }
     }
 };
             // HTML: Gráficos no Topo
@@ -360,17 +369,29 @@ const periodos = {
             }
             html += `</div>`;
 
-// --- SUBSTITUA O LOOP DE CICLOS/MOMENTOS/DESAFIOS POR ESTE ---
+// --- RENDERIZAÇÃO DE CICLOS, MOMENTOS E DESAFIOS COM DATAS ---
 ["ciclos", "momentos", "desafios"].forEach(sec => {
     html += `<div class="card"><h3>${sec}</h3>`;
     for(let i in res[sec]) {
-        // Busca a data se existir no objeto periodos, senão deixa vazio (para desafios)
-        let infoData = "";
-        if (periodos[sec] && periodos[sec][i]) {
-            infoData = `<br><small style="color:var(--gold)">Período: ${periodos[sec][i].anos} (Idade: ${periodos[sec][i].de} a ${periodos[sec][i].ate} anos)</small>`;
-        }
+        const info = datasFases[sec][i];
+        let labelFase = `Fase ${i}`;
         
-        html += `<p><strong>Fase ${i}:</strong> ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}${infoData}</p><hr style="border:0; border-top:1px solid #eee">`;
+        // Ajuste de nomes para ficar mais profissional
+        if(sec === "desafios") {
+            labelFase = i == 1 ? "Primeiro Desafio" : i == 2 ? "Segundo Desafio" : "Desafio Principal";
+        }
+
+        html += `
+            <div style="margin-bottom: 20px;">
+                <span style="color: var(--gold); font-weight: bold; font-size: 13px; text-transform: uppercase;">
+                    ${info.idade} | ${info.anos}
+                </span>
+                <p style="margin-top: 5px;">
+                    <strong>${labelFase} (Número ${res[sec][i]}):</strong><br>
+                    ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
+                </p>
+                <hr style="border:0; border-top:1px solid #eee">
+            </div>`;
     }
     html += `</div>`;
 });
