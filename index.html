@@ -219,50 +219,52 @@ Liberar acesso ao relatório e baixar o PDF
         deficitRecorrente: diaReduzido
     };
 
-    // MONTAGEM DO PACOTE COMPLETO PARA O PREMIUM
+    // --- MONTAGEM DOS TEXTOS ---
+    const t_mot = aplicarFiltroTexto(textos.motivacao[mot]);
+    const t_inf = aplicarFiltroTexto(textos.influencia[reduzir(sC)]);
+    const t_per = aplicarFiltroTexto(textos.Personalidade[exp]);
+    const t_com = aplicarFiltroTexto(textos.comportamento[diaReduzido]);
+    const t_des = aplicarFiltroTexto(textos.CaminhodeVida[cv]);
+    const t_mis = aplicarFiltroTexto(textos.Propósito[prop]);
+    
+    // Ciclos, Desafios e Momentos
+    const t_c1 = aplicarFiltroTexto(textos.ciclos[1][reduzir(mes)]);
+    const t_c2 = aplicarFiltroTexto(textos.ciclos[2][reduzir(dia)]);
+    const t_c3 = aplicarFiltroTexto(textos.ciclos[3][reduzir(ano)]);
+    const t_d3 = aplicarFiltroTexto(textos.desafios[3][d3]);
+    const t_lic = faltantes.map(f => `<strong>Número ${f}:</strong> ${textos.deficiencias[f]}`).join("<br><br>");
+
+    // --- RENDERIZAÇÃO NO INDEX (O QUE VOCÊ VÊ NA TELA) ---
+    const graficoHtml = gerarTodosOsGraficos(res, faltantes, nomeRaw, d3);
+    
+    let htmlFinal = graficoHtml; // Começa com os gráficos
+    
+    // Adiciona cada Card de texto no Index para conferência
+    const s = (titulo, texto) => `<div class="card"><h3>${titulo}</h3><div class="texto-res">${texto}</div></div>`;
+    
+    htmlFinal += s("Motivação", t_mot);
+    htmlFinal += s("Influência", t_inf);
+    htmlFinal += s("Personalidade", t_per);
+    htmlFinal += s("Dígito de Nascimento", t_com);
+    htmlFinal += s("Caminho de Vida", t_des);
+    htmlFinal += s("Missão", t_mis);
+    htmlFinal += s("Ciclo 1", t_c1);
+    htmlFinal += s("Ciclo 2", t_c2);
+    htmlFinal += s("Ciclo 3", t_c3);
+    htmlFinal += s("Grande Desafio", t_d3);
+    if(faltantes.length > 0) htmlFinal += s("Lições Cármicas", t_lic);
+
+    // Salva no objeto para o PDF
     const dadosMapa = {
         nome: nomeRaw.toUpperCase(),
-        dataNascimento: dataRaw,
         resultados: res,
-        textos: {
-            motivacao: aplicarFiltroTexto(textos.motivacao[mot]),
-            expressao: aplicarFiltroTexto(textos.Personalidade[exp]),
-            influencia: aplicarFiltroTexto(textos.influencia[reduzir(sC)]),
-            comportamento: aplicarFiltroTexto(textos.comportamento[diaReduzido]),
-            destino: aplicarFiltroTexto(textos.CaminhodeVida[cv]),
-            missao: aplicarFiltroTexto(textos.Propósito[prop]),
-            anoPessoal: aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal]),
-            
-            // Ciclos
-            ciclo1: aplicarFiltroTexto(textos.ciclos[1][reduzir(mes)]),
-            ciclo2: aplicarFiltroTexto(textos.ciclos[2][reduzir(dia)]),
-            ciclo3: aplicarFiltroTexto(textos.ciclos[3][reduzir(ano)]),
-            
-            // Momentos Decisivos
-            md1: aplicarFiltroTexto(textos.momentos[1][reduzir(dia+mes)]),
-            md2: aplicarFiltroTexto(textos.momentos[2][reduzir(dia+ano)]),
-            md3: aplicarFiltroTexto(textos.momentos[3][reduzir(reduzir(dia+mes)+reduzir(dia+ano))]),
-            md4: aplicarFiltroTexto(textos.momentos[4][reduzir(mes+ano)]),
-            
-            // Desafios
-            d1: aplicarFiltroTexto(textos.desafios[1][Math.abs(dia-mes)]),
-            d2: aplicarFiltroTexto(textos.desafios[2][Math.abs(dia-reduzir(ano))]),
-            d3: aplicarFiltroTexto(textos.desafios[3][d3]),
-            
-            // Lições Cármicas (Faltantes)
-            deficiencias: faltantes.map(f => `<strong>Número ${f}:</strong> ${textos.deficiencias[f]}`).join("<br><br>")
-        }
+        textos: { motivacao: t_mot, influencia: t_inf, expressao: t_per, comportamento: t_com, destino: t_des, missao: t_mis, ciclo1: t_c1, ciclo2: t_c2, ciclo3: t_c3, d3: t_d3, deficiencias: t_lic }
     };
 
-    const graficoHtml = gerarTodosOsGraficos(res, faltantes, nomeRaw, d3);
-    document.getElementById("resultado").innerHTML = graficoHtml + `<button class="btn-gerar" style="margin-top:30px" onclick='abrirPremium(${JSON.stringify(dadosMapa).replace(/'/g, "&apos;")}, \`${graficoHtml}\`)'>📥 ABRIR RELATÓRIO PDF</button>`;
+    // Joga tudo no HTML e cria o botão do PDF
+    document.getElementById("resultado").innerHTML = htmlFinal + 
+    `<button class="btn-gerar" style="margin-top:30px" onclick='abrirPremium(${JSON.stringify(dadosMapa).replace(/'/g, "&apos;")}, \`${graficoHtml.replace(/`/g, "\\`")}\`)'>📥 ABRIR RELATÓRIO PDF</button>`;
 }
-
-    function abrirPremium(dados, graficos) {
-        localStorage.setItem("dadosMapaPremium", JSON.stringify(dados));
-        localStorage.setItem("graficoParaOPremium", graficos);
-        window.open("premiummapa.html", "_blank");
-    }
 
 
 document.oncontextmenu=()=>false;
