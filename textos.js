@@ -22,7 +22,7 @@ introducoes: {
         momentos: `Os momentos decisivos são oportunidades únicas de crescimento e realização.`,
         desafios: `Os desafios são as lições que, se superadas, trazem seu maior fortalecimento.`,
     
-    conclusao_premium: `Este mapa é uma ferramenta de autoconhecimento poderosa para sua evolução.`,
+    Conclusao: `Este mapa é uma ferramenta de autoconhecimento poderosa para sua evolução.`,
 },
   // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 31) ---
  dia: {
