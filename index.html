@@ -300,7 +300,24 @@ const res = {
     momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
     desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
 };
+            
+// --- CÁLCULO DE PERÍODOS (DATAS E IDADES) ---
+const idadeMudança = 36 - res.CaminhodeVida;
+const anoNasc = ano; 
 
+const periodos = {
+    ciclos: {
+        1: { de: 0, ate: 28, anos: `${anoNasc} a ${anoNasc + 28}` },
+        2: { de: 28, ate: 56, anos: `${anoNasc + 28} a ${anoNasc + 56}` },
+        3: { de: 56, ate: 99, anos: `após ${anoNasc + 56}` }
+    },
+    momentos: {
+        1: { de: 0, ate: idadeMudança, anos: `${anoNasc} a ${anoNasc + idadeMudança}` },
+        2: { de: idadeMudança, ate: idadeMudança + 9, anos: `${anoNasc + idadeMudança} a ${anoNasc + idadeMudança + 9}` },
+        3: { de: idadeMudança + 9, ate: idadeMudança + 18, anos: `${anoNasc + idadeMudança + 9} a ${anoNasc + idadeMudança + 18}` },
+        4: { de: idadeMudança + 18, ate: 99, anos: `após ${anoNasc + idadeMudança + 18}` }
+    }
+};
             // HTML: Gráficos no Topo
             let html = `<div class="secao-graficos">`;
             for (let p in pilares) {
@@ -343,14 +360,20 @@ const res = {
             }
             html += `</div>`;
 
-            // Ciclos, Momentos e Desafios (Subníveis 1, 2, 3...)
-            ["ciclos", "momentos", "desafios"].forEach(sec => {
-                html += `<div class="card"><h3>${sec}</h3>`;
-                for(let i in res[sec]) {
-                    html += `<p><strong>Fase ${i}:</strong> ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}</p>`;
-                }
-                html += `</div>`;
-            });
+// --- SUBSTITUA O LOOP DE CICLOS/MOMENTOS/DESAFIOS POR ESTE ---
+["ciclos", "momentos", "desafios"].forEach(sec => {
+    html += `<div class="card"><h3>${sec}</h3>`;
+    for(let i in res[sec]) {
+        // Busca a data se existir no objeto periodos, senão deixa vazio (para desafios)
+        let infoData = "";
+        if (periodos[sec] && periodos[sec][i]) {
+            infoData = `<br><small style="color:var(--gold)">Período: ${periodos[sec][i].anos} (Idade: ${periodos[sec][i].de} a ${periodos[sec][i].ate} anos)</small>`;
+        }
+        
+        html += `<p><strong>Fase ${i}:</strong> ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}${infoData}</p><hr style="border:0; border-top:1px solid #eee">`;
+    }
+    html += `</div>`;
+});
 
             document.getElementById("resultado").innerHTML = html;
         }
