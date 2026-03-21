@@ -338,9 +338,9 @@ const res = {
     deficitsOcultos: deficitsOcultos, 
     inclinacoes: mot,
     subconsciente: 9 - faltantes.length,
-    "Ciclos da Vida": {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
-    "Tomada de Decisões": {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
-    "Desafios da Personalidade": {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
+    ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
+    momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
+    desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
 };
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
@@ -352,18 +352,18 @@ const fim1 = 37 - cv;
 const fim2 = fim1 + 27; // Ciclo 2 dura 27 anos
 
 const datasFases = {
-    "Ciclos da Vida": {
+    ciclos: {
         1: { idade: `0 a ${fim1} anos`, anos: `${anoNasc} a ${anoNasc + fim1}` },
         2: { idade: `${fim1 + 1} a ${fim2} anos`, anos: `${anoNasc + fim1 + 1} a ${anoNasc + fim2}` },
         3: { idade: `após ${fim2} anos`, anos: `de ${anoNasc + fim2} em diante` }
     },
-    "Tomada de Decisões": {
+    momentos: {
         1: { idade: `0 a ${fim1} anos`, anos: `${anoNasc} a ${anoNasc + fim1}` },
         2: { idade: `${fim1 + 1} a ${fim1 + 9} anos`, anos: `${anoNasc + fim1 + 1} a ${anoNasc + fim1 + 9}` },
         3: { idade: `${fim1 + 10} a ${fim1 + 18} anos`, anos: `${anoNasc + fim1 + 10} a ${anoNasc + fim1 + 18}` },
         4: { idade: `após ${fim1 + 18} anos`, anos: `de ${anoNasc + fim1 + 18} em diante` }
     },
-    "Desafios da Personalidade": {
+    desafios: {
         1: { idade: `0 a ${fim1} anos`, anos: `${anoNasc} a ${anoNasc + fim1}` },
         2: { idade: `${fim1 + 1} a ${fim2} anos`, anos: `${anoNasc + fim1 + 1} a ${anoNasc + fim2}` },
         3: { idade: ``, anos: `Acompanha toda a Vida` }
@@ -412,7 +412,7 @@ const datasFases = {
                 <div class="secao-card quebra-pagina">
                     <h2 class="titulo-topico">Análise de Potenciais</h2>
                     <div class="intro-texto">${textos.introducoes.graficos}</div>
-                    ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res."DesafiosdaPersonalidade"[3])}
+                    ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3])}
                 </div>
             `;
 
@@ -462,7 +462,7 @@ listaPremium.forEach(chave => {
             html += `</div>`;
 
             // 5. CICLOS, MOMENTOS E DESAFIOS
-["Ciclos da Vida", "Tomada de Decisões", "Desafios da Personalidade"].forEach(sec => {
+["ciclos", "momentos", "desafios"].forEach(sec => {
                 html += `
                     <div class="secao-card quebra-pagina">
                         <h2 class="titulo-topico">${sec}</h2>
