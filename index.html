@@ -5,84 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinto Superior - Numerologia Premium</title>
     <style>
-        :root { --gold: #d4af37; --dark: #1a1a1a; --black: #000; --white: #fff; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--black); color: var(--white); margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
-        .container { width: 100%; max-width: 650px; background: var(--dark); padding: 30px; border-radius: 20px; border: 1px solid var(--gold); box-shadow: 0 0 50px rgba(212, 175, 55, 0.2); }
-        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: none; background: #333; color: #fff; font-size: 16px; box-sizing: border-box; }
-        .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 18px; cursor: pointer; text-transform: uppercase; margin-top: 15px; transition: 0.3s; }
+        :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 100%; max-width: 650px; background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
+        h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; }
+        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #000; color: #fff; font-size: 16px; box-sizing: border-box; }
+        .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; transition: 0.3s; margin-top: 15px; text-transform: uppercase; }
         .btn-gerar:hover { background: #fff; transform: scale(1.02); }
+        
+        /* Gráficos de Intensidade (No Topo) */
+        .secao-graficos { width: 100%; max-width: 650px; margin: 30px 0; background: #1a1a1a; padding: 20px; border-radius: 15px; border: 1px solid #333; box-sizing: border-box; }
+        .grafico-pilar { margin-bottom: 15px; }
+        .label-pilar { display: flex; justify-content: space-between; font-size: 14px; font-weight: bold; color: var(--gold); margin-bottom: 5px; }
+        .barra-bg { height: 12px; background: #333; border-radius: 6px; overflow: hidden; }
+        .barra-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #fff); width: 0%; transition: width 1.5s ease-in-out; }
+        .predominante { background: var(--gold); color: #000; padding: 12px; border-radius: 8px; text-align: center; font-weight: bold; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* Estilos dos Cards do Banco de Textos */
-        .card { background: var(--white); color: #333; padding: 25px; border-radius: 15px; margin-top: 25px; width: 100%; box-sizing: border-box; border-left: 10px solid var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .card h3 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: var(--black); text-transform: uppercase; margin-top: 0; font-size: 18px; }
-        .texto-res { line-height: 1.8; font-size: 15px; white-space: pre-line; }
+        /* Cards de Resultado */
+        .card { background: var(--card-bg); color: var(--text); padding: 25px; border-radius: 15px; margin-top: 25px; width: 100%; box-sizing: border-box; border-left: 10px solid var(--gold); box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
+        .card h3 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #000; text-transform: uppercase; margin-top: 0; font-size: 20px; }
+        .texto-res { line-height: 1.8; font-size: 16px; white-space: pre-line; }
         strong { color: #b8860b; font-weight: 800; }
-        .badge-idade { background: var(--gold); color: #000; padding: 2px 8px; border-radius: 5px; font-size: 12px; font-weight: bold; margin-left: 10px; }
-        .card-necessidades {
-    background: #fdf5e6; /* Bege claro das fotos */
-    padding: 30px;
-    border-radius: 4px;
-    border-left: 12px solid #cc0000; /* Faixa lateral vermelha de alerta */
-    box-shadow: 4px 4px 15px rgba(0,0,0,0.2);
-    margin-top: 50px;
-}
-
-.barra-vermelha {
-    height: 14px;
-    background: #ddd;
-    border-radius: 7px;
-    overflow: hidden;
-    margin-top: 5px;
-}
-
-.progresso-vermelho {
-    height: 100%;
-    background: linear-gradient(90deg, #ff9999, #cc0000); /* Gradiente igual à foto */
-}
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1 style="color:var(--gold); text-align:center; letter-spacing:3px;">INSTINTO SUPERIOR</h1>
+        <h1>Instinto Superior</h1>
         <input type="text" id="nome" placeholder="NOME COMPLETO">
         <input type="date" id="data">
         <button class="btn-gerar" onclick="gerarMapaCompleto()">GERAR MAPA PREMIUM</button>
-        <button class="btn-pdf" onclick="exportarRelatorio()">
-Liberar acesso ao relatório e baixar o PDF
-</button>
     </div>
 
     <div id="resultado" style="width: 100%; max-width: 650px;"></div>
 
     <script src="textos.js"></script>
 
-<script>
-    const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
-    const vogais = ["A","E","I","O","U"];
+    <script>
+        const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
+        const vogais = ["A","E","I","O","U"];
 
-    function reduzir(n) { if (n === 0) return 0; let r = Math.abs(n) % 9; return r === 0 ? 9 : r; }
+        function reduzir(n) { if (n === 0) return 0; let r = Math.abs(n) % 9; return r === 0 ? 9 : r; }
 
-    function calcularValorLetra(letra) {
-        const base = letra.normalize("NFD")[0].toUpperCase();
-        const vB = tabela[base] || 0; if (!vB) return 0;
-        let s = 0, m = 1, norm = letra.normalize("NFD");
-        for (let i = 1; i < norm.length; i++) {
-            const c = norm[i];
-            if (c === "\u0301") s += 2; else if (c === "\u0302") s += 7;
-            else if (c === "\u0303") s += 3; else if (c === "\u0327") s += 6;
-            else if (c === "\u0300" || c === "\u0308") m *= 2;
+        function calcularValorLetra(letra) {
+            const base = letra.normalize("NFD")[0].toUpperCase();
+            const valorBase = tabela[base] || 0;
+            if (!valorBase) return 0;
+            let soma = 0, mult = 1, norm = letra.normalize("NFD");
+            for (let i = 1; i < norm.length; i++) {
+                const c = norm[i];
+                if (c === "\u0301") soma += 2;      // Agudo
+                else if (c === "\u0302") soma += 7; // Circunflexo
+                else if (c === "\u0303") soma += 3; // Til
+                else if (c === "\u0327") soma += 6; // Cedilha
+                else if (c === "\u0300" || c === "\u0308") mult *= 2; // Grave/Trema
+            }
+            return (valorBase + soma) * mult;
         }
-        return (vB + s) * m;
-    }
 
-    function aplicarFiltroTexto(texto) {
-        if (!texto) return "";
-        let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
-        return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
-    }
-
-    function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
+        function aplicarFiltroTexto(texto) {
+            if (!texto) return "";
+            let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
+            return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
+        }
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
         let nota = 4;
         const dnaFixo = [resultados.motivacao, resultados.personalidade, resultados.influencia, resultados.comportamento, resultados.caminhoVida, resultados.missao, resultados.subconsciente, resultados.deficitRecorrente, d3];
         const comboCompleto = dnaFixo.concat(resultados.deficitsOcultos || []);
@@ -177,98 +163,102 @@ Liberar acesso ao relatório e baixar o PDF
         }
         return html;
     }
+        function gerarMapaCompleto() {
+            const nomeRaw = document.getElementById("nome").value.trim();
+            const dataRaw = document.getElementById("data").value;
+            if (!nomeRaw || !dataRaw) return alert("Por favor, preencha todos os dados.");
 
-    function gerarMapaCompleto() {
-    const nomeRaw = document.getElementById("nome").value.trim();
-    const dataRaw = document.getElementById("data").value;
-    if (!nomeRaw || !dataRaw) return alert("Preencha tudo!");
+            const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
+            const [ano, mes, dia] = dataRaw.split("-").map(Number);
+            
+            let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
 
-    const [ano, mes, dia] = dataRaw.split("-").map(Number);
-    const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
-    
-    let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
-    nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
+            // Essência: 1ª letra de cada nome
+            nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
 
-    for (let l of nomeRaw.toUpperCase()) {
-        const v = calcularValorLetra(l);
-        if (v > 0) {
-            const base = l.normalize("NFD")[0];
-            if (tabela[base]) contagem[tabela[base]]++;
-            vogais.includes(base) ? sV += v : sC += v;
+            // Motivação, Influência e Contagem (Frequência)
+            for (let l of nomeRaw.toUpperCase()) {
+                const v = calcularValorLetra(l);
+                if (v > 0) {
+                    const base = l.normalize("NFD")[0];
+                    if(tabela[base]) { contagem[tabela[base]]++; usados.add(tabela[base]); }
+                    vogais.includes(base) ? sV += v : sC += v;
+                }
+            }
+
+            const exp = reduzir(sV + sC); // Personalidade (Expressão)
+            const mot = reduzir(sV);
+            const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0);
+
+            // Cálculos de Intensidade (5 Pilares)
+            const pilares = {
+                "Realização": ((contagem[1] + contagem[8]) * 10),
+                "Mentalidade": ((contagem[4] + contagem[7]) * 10),
+                "Social": ((contagem[3] + contagem[5]) * 10),
+                "Essência": ((contagem[2] + contagem[6]) * 10),
+                "Evolução": (contagem[9] * 20)
+            };
+            const forte = Object.keys(pilares).reduce((a, b) => pilares[a] > pilares[b] ? a : b);
+
+            const res = {
+                dia: reduzir(dia),
+                comportamento: reduzir(dia),
+                motivacao: mot,
+                influencia: reduzir(sC),
+                Personalidade: exp,
+                CaminhodeVida: reduzir(dia + mes + ano),
+                "Propósito": reduzir(reduzir(dia + mes + ano) + exp),
+                Maturidade: reduzir(reduzir(dia + mes + ano) + exp),
+                Relacionamento: exp,
+                anoPessoal: reduzir(dia + mes + 2026),
+                essencia: reduzir(sE),
+                talento: reduzir(mot + exp),
+                equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
+                deficiencias: faltantes,
+                deficits: faltantes,
+                inclinacoes: mot,
+                subconsciente: 9 - faltantes.length,
+                ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
+                momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
+                desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
+            };
+
+            // HTML: Gráficos no Topo
+            let html = `<div class="secao-graficos">`;
+            for (let p in pilares) {
+                html += `<div class="grafico-pilar">
+                    <div class="label-pilar"><span>${p}</span><span>${Math.min(pilares[p], 100)}%</span></div>
+                    <div class="barra-bg"><div class="barra-fill" style="width:${Math.min(pilares[p], 100)}%"></div></div>
+                </div>`;
+            }
+            html += `<div class="predominante">INSTINTO SUPERIOR PREDOMINANTE: ${forte}</div></div>`;
+
+            // Cards Principais
+            const lista = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "anoPessoal", "inclinacoes", "subconsciente"];
+            
+            lista.forEach(k => {
+                html += `<div class="card"><h3>${k}</h3><div class="texto-res">${aplicarFiltroTexto(textos[k][res[k]])}</div></div>`;
+            });
+
+            // Deficiências e Déficits (renderizando um por um dos números faltantes)
+            html += `<div class="card"><h3>deficiencias e deficits</h3>`;
+            faltantes.forEach(f => {
+                html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p>`;
+                html += `<p>${aplicarFiltroTexto(textos.deficits[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
+            });
+            html += `</div>`;
+
+            // Ciclos, Momentos e Desafios (Subníveis 1, 2, 3...)
+            ["ciclos", "momentos", "desafios"].forEach(sec => {
+                html += `<div class="card"><h3>${sec}</h3>`;
+                for(let i in res[sec]) {
+                    html += `<p><strong>Fase ${i}:</strong> ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}</p>`;
+                }
+                html += `</div>`;
+            });
+
+            document.getElementById("resultado").innerHTML = html;
         }
-    }
-
-    const exp = reduzir(sV + sC);
-    const cv = reduzir(dia + mes + ano);
-    const mot = reduzir(sV);
-    const prop = reduzir(cv + exp);
-    const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0).map(Number);
-    const diaReduzido = reduzir(dia);
-    const d3 = Math.abs(Math.abs(dia - mes) - Math.abs(dia - reduzir(ano)));
-
-    const res = {
-        motivacao: mot, 
-        personalidade: exp, 
-        influencia: reduzir(sC),
-        comportamento: diaReduzido, 
-        caminhoVida: cv, 
-        missao: prop,
-        anoPessoal: reduzir(dia + mes + 2026), 
-        subconsciente: 9 - faltantes.length,
-        deficitsOcultos: [prop, cv], 
-        deficitRecorrente: diaReduzido
-    };
-
-    // --- MONTAGEM DOS TEXTOS ---
-    const t_mot = aplicarFiltroTexto(textos.motivacao[mot]);
-    const t_inf = aplicarFiltroTexto(textos.influencia[reduzir(sC)]);
-    const t_per = aplicarFiltroTexto(textos.Personalidade[exp]);
-    const t_com = aplicarFiltroTexto(textos.comportamento[diaReduzido]);
-    const t_des = aplicarFiltroTexto(textos.CaminhodeVida[cv]);
-    const t_mis = aplicarFiltroTexto(textos.Propósito[prop]);
-    
-    // Ciclos, Desafios e Momentos
-    const t_c1 = aplicarFiltroTexto(textos.ciclos[1][reduzir(mes)]);
-    const t_c2 = aplicarFiltroTexto(textos.ciclos[2][reduzir(dia)]);
-    const t_c3 = aplicarFiltroTexto(textos.ciclos[3][reduzir(ano)]);
-    const t_d3 = aplicarFiltroTexto(textos.desafios[3][d3]);
-    const t_lic = faltantes.map(f => `<strong>Número ${f}:</strong> ${textos.deficiencias[f]}`).join("<br><br>");
-
-    // --- RENDERIZAÇÃO NO INDEX (O QUE VOCÊ VÊ NA TELA) ---
-    const graficoHtml = gerarTodosOsGraficos(res, faltantes, nomeRaw, d3);
-    
-    let htmlFinal = graficoHtml; // Começa com os gráficos
-    
-    // Adiciona cada Card de texto no Index para conferência
-    const s = (titulo, texto) => `<div class="card"><h3>${titulo}</h3><div class="texto-res">${texto}</div></div>`;
-    
-    htmlFinal += s("Motivação", t_mot);
-    htmlFinal += s("Influência", t_inf);
-    htmlFinal += s("Personalidade", t_per);
-    htmlFinal += s("Dígito de Nascimento", t_com);
-    htmlFinal += s("Caminho de Vida", t_des);
-    htmlFinal += s("Missão", t_mis);
-    htmlFinal += s("Ciclo 1", t_c1);
-    htmlFinal += s("Ciclo 2", t_c2);
-    htmlFinal += s("Ciclo 3", t_c3);
-    htmlFinal += s("Grande Desafio", t_d3);
-    if(faltantes.length > 0) htmlFinal += s("Lições Cármicas", t_lic);
-
-    // Salva no objeto para o PDF
-    const dadosMapa = {
-        nome: nomeRaw.toUpperCase(),
-        resultados: res,
-        textos: { motivacao: t_mot, influencia: t_inf, expressao: t_per, comportamento: t_com, destino: t_des, missao: t_mis, ciclo1: t_c1, ciclo2: t_c2, ciclo3: t_c3, d3: t_d3, deficiencias: t_lic }
-    };
-
-    // Joga tudo no HTML e cria o botão do PDF
-    document.getElementById("resultado").innerHTML = htmlFinal + 
-    `<button class="btn-gerar" style="margin-top:30px" onclick='abrirPremium(${JSON.stringify(dadosMapa).replace(/'/g, "&apos;")}, \`${graficoHtml.replace(/`/g, "\\`")}\`)'>📥 ABRIR RELATÓRIO PDF</button>`;
-}
-
-
-document.oncontextmenu=()=>false;
-document.onselectstart=()=>false;
     </script>
 </body>
 </html>
