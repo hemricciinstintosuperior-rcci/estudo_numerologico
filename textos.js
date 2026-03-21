@@ -939,5 +939,17 @@ equilibrio :{
     8: "Seu ponto de equilíbrio é a imparcialidade. Use a lógica para não se deixar levar pela raiva.",
     9: "O equilíbrio vem da aceitação. Deixe ir o que não pode ser mudado para encontrar a paz."
 }
+
+const textos = {
+    introducoes: {
+        graficos: `Estes gráficos representam a força das suas vibrações...`,
+        dia: `O dia do nascimento revela sua forma natural de agir...`,
+        motivacao: `A motivação é o combustível da sua alma...`,
+        deficiencias: `As lições cármicas mostram o que você veio aprender...`,
+        ciclos: `Os ciclos de vida dividem sua jornada em três grandes fases...`,
+        // ... adicione para os outros títulos também
+    },
+    conclusao_premium: `Este mapa é uma ferramenta de autoconhecimento...`
+};  
   
 };
