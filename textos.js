@@ -18,9 +18,9 @@ introducoes: {
         anoPessoal: `O ano pessoal descreve a energia específica que rege o seu momento atual.`,
         deficiencias: `As lições cármicas mostram o que você veio aprender e ajustar nesta jornada.`,
         deficits: `Os déficits de comportamento indicam padrões repetitivos que precisam de atenção.`,
-        ciclos: `Os ciclos de vida dividem sua jornada em três grandes fases de aprendizado.`,
-        momentos: `Os momentos decisivos são oportunidades únicas de crescimento e realização.`,
-        desafios: `Os desafios são as lições que, se superadas, trazem seu maior fortalecimento.`,
+        "Ciclos da Vida": `Os ciclos de vida dividem sua jornada em três grandes fases de aprendizado.`,
+        "Tomada de Decisões": `Os momentos decisivos são oportunidades únicas de crescimento e realização.`,
+        "Desafios da Personalidade": `Os desafios são as lições que, se superadas, trazem seu maior fortalecimento.`,
     
     conclusao_premium: `Este mapa é uma ferramenta de autoconhecimento poderosa para sua evolução.`,
 },
@@ -504,7 +504,7 @@ Relacionamento: {
     9: `<p>Este é o momento do desapego, da conclusão de ciclos e da vivência de um amor universal e humanitário para <strong>você</strong>. A energia pede que <strong>você</strong> finalize mágoas do passado e que abra o coração para uma compreensão mais ampla das falhas humanas, agindo com uma generosidade sem limites. O risco para <strong>você</strong> é a dramatização emocional ou a dificuldade em deixar ir o que já não serve mais, o que pode gerar um cansaço desnecessário em relações desgastadas. A lição de vida para <strong>você</strong> é a da entrega: amar sem possuir e servir sem esperar retorno imediato, entendendo que o afeto é uma energia que deve circular. <strong>você</strong> sentirá uma sensibilidade aflorada, querendo ajudar o par em seu crescimento espiritual e se envolvendo em causas que beneficiem o coletivo. É um tempo de balanço afetivo, onde <strong>você</strong> deve perdoar integralmente para que o novo possa entrar na sua vida com leveza. Ao superar o apego ao ego e às pequenas disputas diárias, <strong>você</strong> se torna uma presença inspiradora e carismática, capaz de viver um amor que transcende as barreiras comuns, sentindo a plenitude de quem sabe que a maior riqueza é a capacidade de amar com liberdade e alma.</p>`
   },
 
-ciclos: {
+"Ciclos da Vida": {
     // --- 1º CICLO (FORMAÇÃO / JUVENTUDE) ---
     1: {
       1: `<p>O seu primeiro ciclo de vida foi marcado por uma necessidade visceral de autoafirmação e o despertar de uma independência precoce que moldou o seu caráter de forma definitiva. Desde os primeiros anos, <strong>você</strong> sentiu um impulso indomável de trilhar o próprio caminho, muitas vezes sendo colocada em situações onde a coragem e a autossuficiência foram exigidas antes mesmo do que seria esperado para a sua idade. Esta fase não foi apenas um período de crescimento físico, mas um verdadeiro batismo de fogo para a sua vontade individual, forçando <strong>você</strong> a descobrir recursos internos de bravura para enfrentar desafios sem depender do apoio constante de terceiros.</p>
