@@ -5,44 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinto Superior - Numerologia Premium</title>
 <style>
-        :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
+    :root { --gold: #d4af37; --dark: #000; --card-bg: #fff; --text: #1a1a1a; }
+    
+    @media print {
+        @page { size: portrait; margin: 10mm; }
+        body { background: white !important; color: black !important; width: 100% !important; }
+        .no-print, .container, .btn-pdf { display: none !important; }
         
-        /* Ajuste para Impressão/PDF */
-        @media print {
-            body { background: white !important; color: black !important; padding: 0 !important; }
-            .no-print, .container { display: none !important; }
-            .relatorio-premium { width: 100% !important; max-width: 100% !important; margin: 0 !important; box-shadow: none !important; }
-            .quebra-pagina { page-break-before: always; }
-            .secao-card { border: 1px solid #eee !important; break-inside: avoid; }
+        /* Força o preenchimento total da folha no PDF */
+        .relatorio-premium { 
+            width: 100% !important; 
+            max-width: 100% !important; 
+            margin: 0 !important; 
+            padding: 0 !important; 
         }
+        .secao-card { 
+            width: 100% !important; 
+            box-sizing: border-box; 
+            border: 1px solid #eee !important; 
+            break-inside: avoid; 
+        }
+        /* ESSENCIAL: Faz as cores das barras aparecerem no PDF/PWA */
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
-        
-        /* Container de Entrada */
-        .container { width: 100%; max-width: 650px; background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 40px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
-        h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
-        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #000; color: #fff; font-size: 16px; box-sizing: border-box; }
-        .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
+    body { font-family: 'Segoe UI', sans-serif; background: var(--dark); margin: 0; display: flex; flex-direction: column; align-items: center; }
+    
+    /* Centralização no PWA e Navegador */
+    #resultado { width: 100%; display: flex; justify-content: center; }
+    .relatorio-premium { width: 100%; max-width: 850px; margin: 20px auto; }
 
-        /* Estrutura do Relatório */
-        .relatorio-premium { width: 100%; max-width: 850px; margin: 40px auto; background: transparent; }
-        
-        .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double var(--gold); background: #050505; text-align: center; margin-bottom: 50px; }
-        .capa h1 { font-size: 45px; margin: 20px 0; }
-        .capa-cliente { font-size: 22px; text-transform: uppercase; border-top: 1px solid var(--gold); padding-top: 20px; width: 60%; }
+    .secao-card { 
+        background: var(--card-bg); color: var(--text); padding: 40px; 
+        margin-bottom: 30px; border-left: 10px solid var(--gold); 
+        box-shadow: 0 5px 20px rgba(0,0,0,0.3); width: 100%; box-sizing: border-box; 
+    }
 
-        .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-
-        .secao-card { background: var(--card-bg); color: var(--text); padding: 40px; border-radius: 4px; margin-bottom: 30px; border-left: 10px solid var(--gold); box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
-        .titulo-topico { font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-        .intro-texto { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
-        .texto-res { line-height: 1.8; font-size: 16px; white-space: pre-line; }
-        
-        /* Gráficos dentro do card */
-        .barra-vermelha { height: 14px; background: #ddd; border-radius: 7px; overflow: hidden; margin-top: 5px; }
-        .progresso-vermelho { height: 100%; background: linear-gradient(90deg, #ff9999, #cc0000); }
-        .card-necessidades { background: #fdf5e6; padding: 25px; border-radius: 4px; border-left: 12px solid #cc0000; margin-top: 20px; }
-    </style>
+    /* Estilo das barras para ocupar 100% do espaço do card */
+    .barra-bg-fundo { width: 100%; height: 14px; background: #eee; border-radius: 7px; overflow: hidden; margin-top: 5px; }
+    .barra-preenchimento { height: 100%; transition: width 0.5s; }
+</style>
 </head>
 <body>
 
