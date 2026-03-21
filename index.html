@@ -352,7 +352,11 @@ const res = {
     subconsciente: 9 - faltantes.length,
     ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
     momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
-    desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
+  desafios: {
+    1: Math.abs(diaRed - mesRed), 
+    2: Math.abs(diaRed - anoRed), 
+    3: Math.abs(Math.abs(diaRed - mesRed) - Math.abs(diaRed - anoRed))
+}
 };
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
