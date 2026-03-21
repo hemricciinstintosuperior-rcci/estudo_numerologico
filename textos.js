@@ -1,4 +1,14 @@
 const textos = {
+    introducoes: {
+        graficos: `Estes gráficos representam a força das suas vibrações...`,
+        dia: `O dia do nascimento revela sua forma natural de agir...`,
+        motivacao: `A motivação é o combustível da sua alma...`,
+        deficiencias: `As lições cármicas mostram o que você veio aprender...`,
+        ciclos: `Os ciclos de vida dividem sua jornada em três grandes fases...`,
+        // ... adicione para os outros títulos também
+   
+    conclusao_premium: `Este mapa é uma ferramenta de autoconhecimento...`},
+
   // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 31) ---
  dia: {
     1: `<p>O dia 1 traz para <strong>você</strong> uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. <strong>você</strong> traz consigo uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em todos os setores da vida e da jornada pessoal.</p>
@@ -941,16 +951,6 @@ equilibrio :{
 }
 
 };
-const textos = {
-    introducoes: {
-        graficos: `Estes gráficos representam a força das suas vibrações...`,
-        dia: `O dia do nascimento revela sua forma natural de agir...`,
-        motivacao: `A motivação é o combustível da sua alma...`,
-        deficiencias: `As lições cármicas mostram o que você veio aprender...`,
-        ciclos: `Os ciclos de vida dividem sua jornada em três grandes fases...`,
-        // ... adicione para os outros títulos também
-    },
-    conclusao_premium: `Este mapa é uma ferramenta de autoconhecimento...`
-};
+
   
 
