@@ -940,6 +940,7 @@ equilibrio :{
     9: "O equilíbrio vem da aceitação. Deixe ir o que não pode ser mudado para encontrar a paz."
 }
 
+};
 const textos = {
     introducoes: {
         graficos: `Estes gráficos representam a força das suas vibrações...`,
@@ -950,6 +951,6 @@ const textos = {
         // ... adicione para os outros títulos também
     },
     conclusao_premium: `Este mapa é uma ferramenta de autoconhecimento...`
-};  
-  
 };
+  
+
