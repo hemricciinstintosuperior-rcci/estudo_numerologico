@@ -171,20 +171,48 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
             }
         });
 
-        // FILTRO PARA O GRÁFICO VERMELHO (TUDO QUE DEU BAIXO)
-        let necessidades = ranking.filter(i => i.nota < 5.5).sort((a,b)=>a.nota-b.nota).slice(0, 8);
-        if(necessidades.length > 0) {
-            html += `<h2 style="color:#ff4d4d; text-align:center; margin-top:50px;">NECESSIDADES A SEREM TRABALHADAS</h2>
-            <div class="card-necessidades">`;
-            necessidades.forEach(item => {
-                let barraUrgencia = (11 - item.nota) * 10;
-                html += `<div style="margin-bottom:18px;"><div style="display:flex; justify-content:space-between; font-size:14px; color:#333;"><strong>${item.nome}</strong><span>Prioridade: ${Math.round(barraUrgencia)}%</span></div>
-                <div class="barra-vermelha"><div class="progresso-vermelho" style="width:${barraUrgencia}%"></div></div></div>`;
-            });
-            html += `</div>`;
+// --- 1. MANTÉM OS COLORIDOS (Não mexe no que já funciona) ---
+        // (O código dos cats.forEach já rodou e alimentou a variável 'html')
+
+        // --- 2. NOVA VARREDURA INDEPENDENTE PARA O BANCO VERMELHO ---
+        let htmlNecessidades = "";
+        let temNecessidade = false;
+
+        for (let itemNec in bancoNecessidadesVermelho) {
+            const dadosNec = bancoNecessidadesVermelho[itemNec];
+            const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3);
+
+            // Se a nota for baixa (necessidade de desenvolvimento), entra no card de alerta
+            if (notaNec < 5.5) {
+                temNecessidade = true;
+                let prioridade = (11 - notaNec) * 10; // Quanto menor a nota, maior a urgência
+                
+                htmlNecessidades += `
+                    <div style="margin-bottom:18px;">
+                        <div style="display:flex; justify-content:space-between; font-size:14px; color:#333; font-weight:bold;">
+                            <span>${itemNec}</span>
+                            <span>URGÊNCIA: ${Math.round(prioridade)}%</span>
+                        </div>
+                        <div class="barra-vermelha">
+                            <div class="progresso-vermelho" style="width:${prioridade}%"></div>
+                        </div>
+                    </div>`;
+            }
         }
+
+        // Se encontrou algo abaixo da média no banco de necessidades, exibe o card bege/vermelho
+        if (temNecessidade) {
+            html += `
+            <h2 style="color:#cc0000; text-align:center; margin-top:50px; letter-spacing:1px;">⚠️ FOCO DE DESENVOLVIMENTO</h2>
+            <div class="card-necessidades">
+                <p style="color:#660000; font-size:14px; margin-bottom:20px; font-weight:bold;">
+                    Os itens abaixo apresentam baixa vibração no seu mapa atual e exigem atenção consciente:
+                </p>
+                ${htmlNecessidades}
+            </div>`;
+        }
+
         return html;
-    }
 
 const bancoNecessidadesVermelho = {
     // --- COMPORTAMENTAL E ADAPTAÇÃO ---
