@@ -10,58 +10,69 @@
         --card-bg: #ffffff; --text: #222; --soft-gray: #f9f9f9;
     }
     
+    /* CORREÇÃO PARA CENTRALIZAR E PREENCHER A TELA/PDF */
     @media print {
-        body { background: white !important; color: black !important; padding: 0 !important; }
+        @page { size: portrait; margin: 15mm; }
+        body { background: white !important; color: black !important; padding: 0 !important; width: 100% !important; }
         .no-print, .container { display: none !important; }
-        .relatorio-premium { width: 100% !important; margin: 0 !important; box-shadow: none !important; }
-        .quebra-pagina { page-break-before: always; }
-        .secao-card { border: 1px solid #eee !important; break-inside: avoid; margin-bottom: 20px !important; }
+        .relatorio-premium { 
+            width: 100% !important; 
+            max-width: 100% !important; 
+            margin: 0 !important; 
+            box-shadow: none !important; 
+        }
+        .secao-card { 
+            width: 100% !important; 
+            box-sizing: border-box; /* Garante que o padding não "empurre" o card pra fora */
+            border: 1px solid #eee !important; 
+            break-inside: avoid; 
+            margin-bottom: 20px !important; 
+        }
     }
 
     body { font-family: 'Georgia', serif; background: var(--dark); color: #fff; margin: 0; padding: 0; }
     
-    .container { width: 100%; max-width: 600px; background: #151515; padding: 40px; border-radius: 15px; border: 1px solid var(--gold); margin: 50px auto; text-align: center; }
-    
-    .capa { 
-        height: 95vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
-        border: 15px double var(--gold); background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
-        text-align: center; margin-bottom: 50px; position: relative;
+    /* Centraliza o relatório na tela do navegador */
+    .relatorio-premium { 
+        width: 100%; 
+        max-width: 850px; /* Largura padrão de folha A4 */
+        margin: 0 auto; 
+        color: var(--text); 
+        display: flex;
+        flex-direction: column;
     }
-    .capa h1 { font-size: 55px; color: var(--gold); letter-spacing: 10px; margin: 30px 0; }
-    .capa-cliente { font-size: 26px; text-transform: uppercase; border-top: 2px solid var(--gold); padding-top: 30px; width: 70%; letter-spacing: 2px; font-family: sans-serif; }
-
-    .relatorio-premium { width: 100%; max-width: 900px; margin: 0 auto; color: var(--text); }
     
     .secao-card { 
-        background: var(--card-bg); padding: 50px; margin-bottom: 40px; border-radius: 2px; 
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; border-left: 8px solid var(--gold);
-    }
-    
-    .titulo-topico { 
-        font-size: 28px; color: var(--dark-gold); text-transform: uppercase; letter-spacing: 2px;
-        border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 25px;
-    }
-
-    .intro-texto { 
-        font-family: sans-serif; font-size: 14px; line-height: 1.6; color: #666; 
-        background: var(--soft-gray); padding: 20px; border-radius: 5px; margin-bottom: 30px; border-left: 3px solid #ddd;
+        background: var(--card-bg); 
+        padding: 40px; 
+        margin-bottom: 40px; 
+        border-radius: 2px; 
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        border-left: 8px solid var(--gold);
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .texto-res { line-height: 2; font-size: 17px; text-align: justify; color: #333; white-space: pre-line; }
-
-    /* ESTILO DOS GRÁFICOS */
-    .grafico-item { margin-bottom: 15px; }
-    .barra-container { height: 12px; background: #eee; border-radius: 6px; overflow: hidden; margin-top: 5px; }
-    .barra-preenchida { height: 100%; border-radius: 6px; transition: width 1s ease-in-out; }
-    
+    /* Ajuste para os Gráficos não ficarem espremidos */
     .card-interno-grafico { 
-        border: 1px solid #f0f0f0; padding: 20px; margin-bottom: 20px; border-radius: 5px; background: #fff;
+        width: 100%;
+        border: 1px solid #f0f0f0; 
+        padding: 20px; 
+        margin-bottom: 20px; 
+        border-radius: 5px; 
+        background: #fff;
+        box-sizing: border-box;
     }
 
-    .card-necessidades { 
-        background: #fff5f5; padding: 30px; border-radius: 5px; border: 1px solid #ffcccc; margin-top: 20px; 
+    .barra-container { 
+        width: 100%; /* Força a barra a usar todo o espaço disponível */
+        height: 14px; 
+        background: #eee; 
+        border-radius: 7px; 
+        overflow: hidden; 
+        margin-top: 5px; 
     }
-    .btn-pdf { position: fixed; top: 20px; right: 20px; background: var(--gold); color: #000; padding: 15px 30px; border-radius: 5px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; }
+    /* ... resto do seu CSS anterior de botões e capa ... */
 </style>
 </head>
 <body>
@@ -214,19 +225,16 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
     cats.forEach(c => {
         const itens = ranking.filter(i => i.categoria === c && i.nota >= 4.5).sort((a,b)=>b.nota-a.nota).slice(0,4);
         if(itens.length > 0) {
-            html += `<div class="card-interno-grafico" style="border-top: 4px solid ${itens[0].cor}">
-                        <h3 style="color:${itens[0].cor}; font-size: 18px; margin-top:0;">${nomesBonitos[c]}</h3>`;
-            itens.forEach(item => {
-                let p = item.nota * 10;
-                html += `
-                    <div class="grafico-item">
-                        <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:bold; color:#555;">
-                            <span>${item.nome}</span><span>${Math.round(p)}%</span>
-                        </div>
-                        <div class="barra-container">
-                            <div class="barra-preenchida" style="width:${p}%; background:${item.cor};"></div>
-                        </div>
-                    </div>`;
+// Dentro do loop dos itens do gráfico:
+html += `
+    <div class="grafico-item" style="width: 100%;"> 
+        <div style="display:flex; justify-content:space-between; font-size:13px; font-weight:bold; color:#555;">
+            <span>${item.nome}</span><span>${Math.round(p)}%</span>
+        </div>
+        <div class="barra-container">
+            <div class="barra-preenchida" style="width:${p}%; background:${item.cor}; height: 100%;"></div>
+        </div>
+    </div>`;
             });
             html += `</div>`;
         }
