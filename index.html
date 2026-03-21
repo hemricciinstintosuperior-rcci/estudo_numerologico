@@ -339,7 +339,7 @@ const datasFases = {
     desafios: {
         1: { idade: `0 a ${fim1} anos`, anos: `${anoNasc} a ${anoNasc + fim1}` },
         2: { idade: `${fim1 + 1} a ${fim2} anos`, anos: `${anoNasc + fim1 + 1} a ${anoNasc + fim2}` },
-        3: { idade: `após ${fim2} anos`, anos: `de ${anoNasc + fim2} em diante` }
+        3: { idade: `Toda Vida` }
     }
 };
 // --- NOVO SISTEMA DE INTENSIDADE (GRÁFICOS COLORIDOS E NECESSIDADES) ---
@@ -364,7 +364,7 @@ const datasFases = {
             `;
 
             // 3. CARDS PRINCIPAIS COM INTRODUÇÃO
-            const listaPremium = ["dia", "comportamento", "essencia", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito"];
+           const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
             
             listaPremium.forEach(k => {
                 html += `
@@ -389,20 +389,46 @@ const datasFases = {
             } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
             html += `</div>`;
 
+            // --- 4.5 DÉFICITS DE COMPORTAMENTO (RECORRENTE E OCULTOS) ---
+            html += `
+                <div class="secao-card quebra-pagina">
+                    <h2 class="titulo-topico">Déficits de Comportamento</h2>
+                    <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
+                    <p><strong>Déficit Recorrente (${res.deficitRecorrente}):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
+                    <hr style="border:0; border-top:1px solid #eee">
+            `;
+            
+            if (res.deficitsOcultos.length > 0) {
+                res.deficitsOcultos.forEach(d => {
+                    html += `<p><strong>Déficit Oculto (${d}):</strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #eee">`;
+                });
+            }
+            html += `</div>`;
+
             // 5. CICLOS, MOMENTOS E DESAFIOS
-            ["ciclos", "momentos", "desafios"].forEach(sec => {
+["ciclos", "momentos", "desafios"].forEach(sec => {
                 html += `
                     <div class="secao-card quebra-pagina">
                         <h2 class="titulo-topico">${sec}</h2>
-                        <div class="intro-texto">${textos.introducoes[sec]}</div>
+                        <div class="intro-texto">${textos.introducoes[sec] || ""}</div>
                 `;
                 for(let i in res[sec]) {
                     const info = datasFases[sec][i];
+                    // Recupera os nomes profissionais dos desafios
+                    let labelFase = `Fase ${i}`;
+                    if(sec === "desafios") {
+                        labelFase = i == 1 ? "Primeiro Desafio" : i == 2 ? "Segundo Desafio" : "Desafio Principal";
+                    }
+
                     html += `
                         <div style="margin-bottom: 20px;">
-                            <span style="color: #b8860b; font-weight: bold; font-size: 13px;">${info.idade} | ${info.anos}</span>
-                            <p><strong>Fase ${i} (Número ${res[sec][i]}):</strong><br>
-                            ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}</p>
+                            <span style="color: #b8860b; font-weight: bold; font-size: 13px; text-transform: uppercase;">
+                                ${info.idade} | ${info.anos}
+                            </span>
+                            <p style="margin-top: 5px;">
+                                <strong>${labelFase} (Número ${res[sec][i]}):</strong><br>
+                                ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
+                            </p>
                             <hr style="border:0; border-top:1px solid #eee">
                         </div>`;
                 }
