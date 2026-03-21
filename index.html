@@ -181,7 +181,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
     ranking.sort((a, b) => b.nota - a.nota);
 
     // --- GRÁFICOS DOURADOS (POTENCIAL) ---
-    let html = <h2 style="color:var(--gold); text-align:center;">POTENCIAIS E VIRTUDES</h2>;
+    let html = `<h2 style="color:var(--gold); text-align:center;">POTENCIAIS E VIRTUDES</h2>`;
     const categorias = ["Realização", "Mentalidade", "Conexão Social", "Essência", "Evolução"];
     categorias.forEach(cat => {
         const itens = ranking.filter(i => i.categoria === cat).slice(0, 2);
