@@ -412,18 +412,21 @@ const datasFases = {
                 </div>
             `;
 
-          // 3. CARDS PRINCIPAIS COM INTRODUÇÃO
-           const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
-            
-            listaPremium.forEach(k => {
-                html += `
-                    <div class="secao-card">
-                        <h2 class="titulo-topico">${k}</h2>
-                        <div class="intro-texto">${textos.introducoes[k]}</div>
-                        <div class="texto-res">${aplicarFiltroTexto(textos[k][res[k]])}</div>
-                    </div>
-                `;
-            });
+// 1. A lista deve ter exatamente as chaves que você colocou no 'res'
+const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
+
+listaPremium.forEach(chave => {
+    // Busca o nome bonito. Se não achar, usa a chave original.
+    const tituloBonito = nomesExibicao[chave] || chave;
+
+    html += `
+        <div class="secao-card">
+            <h2 class="titulo-topico" style="letter-spacing: 2px; border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
+            <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
+            <div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>
+        </div>
+    `;
+});
 
             // 4. LIÇÕES CÁRMICAS
             html += `
