@@ -303,7 +303,13 @@ function gerarMapaCompleto() {
             deficiencias: faltantes.map(f => `<strong>Número ${f}:</strong> ${textos.deficiencias[f]}`).join("<br>")
         }
     };
+// Cálculo do Desafio 3 (Desafio Maior)
+const d3 = Math.abs(Math.abs(dia - mes) - Math.abs(dia - reduzir(ano)));
 
+// Adicionando os déficits no objeto res para o gráfico encontrar
+res.deficitsOcultos = deficitsOcultos;
+res.inclinacoes = mot; 
+res.deficitRecorrente = diaReduzido;
     // Salva e Renderiza
     const graficoHtml = gerarTodosOsGraficos(res, faltantes, nomeRaw, d3); 
     document.getElementById("resultado").innerHTML = graficoHtml + `<button class="btn-gerar" onclick='abrirPremium(${JSON.stringify(dadosMapa).replace(/'/g, "&apos;")}, \`${graficoHtml}\`)'>📥 ABRIR RELATÓRIO PDF</button>`;
