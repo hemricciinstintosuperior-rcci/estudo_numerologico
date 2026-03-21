@@ -21,7 +21,7 @@
         /* Container de Entrada */
         .container { width: 100%; max-width: 650px; background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 40px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
         h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
-        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #000; color: #fff; font-size: 16px; box-sizing: border-box; }
+        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #fff; color: #000; font-size: 16px; box-sizing: border-box; }
         .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
 
         /* Estrutura do Relatório */
@@ -359,7 +359,33 @@ const datasFases = {
                         <span style="font-size: 16px; opacity: 0.8;">${dataRaw.split('-').reverse().join('/')}</span>
                     </div>
                 </div>
-
+                
+<div class="secao-card quebra-pagina">
+    <h2 class="titulo-topico">Sumário do Mapa</h2>
+    <p style="font-size: 14px; color: #666; font-style: italic; margin-bottom: 25px;">
+        Este guia facilita a navegação pelas profundezas do seu estudo numerológico.
+    </p>
+    <div style="font-size: 16px; line-height: 2.8; font-family: sans-serif;">
+        <div style="display:flex; justify-content:space-between; border-bottom: 1px dotted #ccc;">
+            <span>1. Análise de Potenciais e Gráficos</span><span>Pág 02</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom: 1px dotted #ccc;">
+            <span>2. Pilares de Personalidade (Motivação e Essência)</span><span>Pág 05</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom: 1px dotted #ccc;">
+            <span>3. Destino e Caminho de Vida</span><span>Pág 10</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom: 1px dotted #ccc;">
+            <span>4. Lições Cármicas e Foco de Desenvolvimento</span><span>Pág 14</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom: 1px dotted #ccc;">
+            <span>5. Ciclos, Momentos e Previsões</span><span>Pág 18</span>
+        </div>
+        <div style="display:flex; justify-content:space-between; border-bottom: 1px dotted #ccc;">
+            <span>6. Conclusão e Orientações Finais</span><span>Pág 22</span>
+        </div>
+    </div>
+</div>
                 <div class="secao-card quebra-pagina">
                     <h2 class="titulo-topico">Análise de Potenciais</h2>
                     <div class="intro-texto">${textos.introducoes.graficos}</div>
