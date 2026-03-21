@@ -299,32 +299,32 @@ pilaresOcultos.forEach((num, index) => {
 
 
 const res = {
-    dia: reduzir(dia),
-    comportamento: reduzir(dia),
-    motivacao: mot,
-    influencia: reduzir(sC),
+   "Dia": reduzir(dia),
+    "Comportamento": reduzir(dia),
+    "Motivacão": mot,
+    influência: reduzir(sC),
     Personalidade: exp,
-    CaminhodeVida: cvCalculado,
+    "Caminho de Vida": cvCalculado,
     "Propósito": propCalculado,
-    Maturidade: propCalculado, // ou a fórmula que desejar
-    Relacionamento: propCalculado,
-    anoPessoal: reduzir(dia + mes + 2026),
-    essencia: reduzir(sE),
-    talento: reduzir(mot + exp),
-    equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
-    deficiencias: faltantes,
-    deficitRecorrente: diaReduzido, 
-    deficitsOcultos: deficitsOcultos, 
-    inclinacoes: mot,
-    subconsciente: 9 - faltantes.length,
-    ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
-    momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
-    desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
+    "Maturidade": propCalculado, // ou a fórmula que desejar
+    "Relacionamento": propCalculado,
+    "Ano Pessoal": reduzir(dia + mes + 2026),
+   " Essência": reduzir(sE),
+    "Talento": reduzir(mot + exp),
+    "Equilibrio": reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
+    "Deficiencias": faltantes,
+    "Deficit Recorrente": diaReduzido, 
+    "Deficits Ocultos": deficitsOcultos, 
+    "Inclinações Ocultas": mot,
+    "Subconsciente": 9 - faltantes.length,
+    "Ciclos de Vida": {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
+    "Momentos de Decisão": {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
+    "Desafios": {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
 };
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
 const anoNasc = ano; // Variável 'ano' que vem do split da data
-const cv = res.CaminhodeVida;
+const cv = res."Caminho de Vida";
 
 // A idade de mudança principal (Maturidade)
 const fim1 = 37 - cv; 
@@ -396,7 +396,7 @@ const datasFases = {
             `;
 
             // 3. CARDS PRINCIPAIS COM INTRODUÇÃO
-           const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
+           const listaPremium = ["Dia", "Comportamento", "Essência", "Equilibrio", "Talento", "Motivacão", "influência", "Personalidade", "Relacionamento", "Caminho de Vida", "Propósito", "Maturidade", "Inclinações Ocultas", "Subconsciente", "Ano Pessoal"];
             
             listaPremium.forEach(k => {
                 html += `
