@@ -95,10 +95,10 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
 
         nums.forEach(n => {
             let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => tabela[letra.normalize("NFD")[0]] === n).length;
-            nota += (letrasEncontradas * 1.2);
+            nota += (letrasEncontradas * 0.5);
             const ocorrenciasNosCalculos = comboCompleto.filter(num => num === n).length;
-            nota += (ocorrenciasNosCalculos * 3.2);
-            if (faltantes.includes(n)) nota -= 5.5;
+            nota += (ocorrenciasNosCalculos * 1.5);
+            if (faltantes.includes(n)) nota -= 3.5;
         });
         return Math.min(Math.max(nota, 1), 10);
     }
