@@ -62,19 +62,50 @@ Liberar acesso ao relatório e baixar o PDF
         }
 
         // --- LÓGICA DE INTENSIDADE PARA O RANKING ---
-        function calcularIntensidadeAtributo(nums, resultados, faltantes, nome) {
-            let base = 5; // Começa no equilíbrio
-            nums.forEach(n => {
-                // Se o número está no nome, aumenta a voltagem
-                let frequencia = (nome.toUpperCase().split(Object.keys(tabela).find(k => tabela[k] === n)).length - 1);
-                base += (frequencia * 1.2);
-                // Se é um número central (Motivação ou Expressão), ganha bônus
-                if (resultados.motivacao === n || resultados.Personalidade === n) base += 2;
-                // Se é uma deficiência, cai drasticamente
-                if (faltantes.includes(n)) base -= 4;
-            });
-            return Math.min(Math.max(base, 1), 10); // Trava entre 1 e 10
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
+    let nota = 5; // Base neutra
+    
+    // 1. O COMBO DE IDENTIDADE FIXA (Tudo o que você listou)
+    const dnaFixo = [
+        resultados.motivacao,
+        resultados.personalidade,
+        resultados.influencia,
+        resultados.comportamento,
+        resultados.caminhoVida,
+        resultados.missao,
+        resultados.subconsciente,
+        resultados.deficitRecorrente,
+        resultados.inclinacoes,
+        d3 // O Desafio Principal
+    ];
+
+    // Une com os Déficits Ocultos (se houver)
+    const comboCompleto = dnaFixo.concat(resultados.deficitsOcultos || []);
+
+    nums.forEach(n => {
+        // A) FREQUÊNCIA NO NOME (DNA Vibracional)
+        // Conta as letras. Se for 0 (Lição Cármica), a nota base já começa a sofrer.
+        let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => {
+            const base = letra.normalize("NFD")[0];
+            return tabela[base] === n;
+        }).length;
+        
+        nota += (letrasEncontradas * 1.5);
+
+        // B) PRESENÇA NOS CÁLCULOS FIXOS (Energia de Destino/Missão/Motivação)
+        const ocorrenciasNosCalculos = comboCompleto.filter(num => num === n).length;
+        nota += (ocorrenciasNosCalculos * 3.5);
+
+        // C) O PESO DA LIÇÃO CÁRMICA (O que falta)
+        // Se o número da legenda (ex: 4 para Organização) está na lista de FALTANTES:
+        if (faltantes.includes(n)) {
+            nota -= 6; // Penalidade pesada para o gráfico dourado, o que fará a barra vermelha subir
         }
+    });
+
+    // Trava entre 1 e 10
+    return Math.min(Math.max(nota, 1), 10);
+}
 
         // --- BANCO DE LEGENDAS (O seu objeto de 60 itens) ---
         const bancoLegendasCompleto = {
@@ -139,40 +170,55 @@ Liberar acesso ao relatório e baixar o PDF
             "Liberdade": { nums: [5], cat: "Evolução" }
         };
 
-        function gerarGraficosIntensidade(resultados, faltantes, nomeCompleto) {
-            let rankingGeral = [];
-            for (let legenda in bancoLegendasCompleto) {
-                const dados = bancoLegendasCompleto[legenda];
-                const nota = calcularIntensidadeAtributo(dados.nums, resultados, faltantes, nomeCompleto);
-                rankingGeral.push({ nome: legenda, nota: nota, categoria: dados.cat });
-            }
-            rankingGeral.sort((a, b) => b.nota - a.nota);
-            const instintoSuperior = rankingGeral[0];
+// 2. NOVA FUNÇÃO PARA GERAR OS DOIS TIPOS DE GRÁFICOS
+function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
+    let ranking = [];
+    for (let legenda in bancoLegendasCompleto) {
+        const dados = bancoLegendasCompleto[legenda];
+        const nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3);
+        ranking.push({ nome: legenda, nota: nota, categoria: dados.cat });
+    }
+    ranking.sort((a, b) => b.nota - a.nota);
 
-            let html = `
-                <div class="card" style="background:#0a0e1a; color:var(--gold); border:2px solid var(--gold); text-align:center;">
-                    <h2 style="font-size:12px; letter-spacing:3px; color:#fff;">SUA FORÇA PREDOMINANTE</h2>
-                    <div style="font-size:32px; font-weight:bold; text-transform:uppercase;">${instintoSuperior.nome}</div>
+    // --- GRÁFICOS DOURADOS (POTENCIAL) ---
+    let html = <h2 style="color:var(--gold); text-align:center;">POTENCIAIS E VIRTUDES</h2>;
+    const categorias = ["Realização", "Mentalidade", "Conexão Social", "Essência", "Evolução"];
+    categorias.forEach(cat => {
+        const itens = ranking.filter(i => i.categoria === cat).slice(0, 2);
+        html += <div class="card"><h3>${cat}</h3>;
+        itens.forEach(item => {
+            let perc = item.nota * 10;
+            html += `
+                <div style="margin-bottom:10px;">
+                    <div style="display:flex; justify-content:space-between; font-size:12px;"><span>${item.nome}</span><span>${Math.round(perc)}%</span></div>
+                    <div style="height:8px; background:#333; border-radius:10px;"><div style="width:${perc}%; height:100%; background:var(--gold); border-radius:10px;"></div></div>
+                </div>`;
+        });
+        html += </div>;
+    });
+
+    // --- GRÁFICO VERMELHO (NECESSIDADES A TRABALHAR) ---
+    // Pegamos as legendas onde a nota foi mais baixa ou que estão ligadas aos Déficits/Desafios
+    let necessidades = ranking.filter(i => i.nota < 5).slice(0, 5);
+    
+    html += `<h2 style="color:#ff4d4d; text-align:center; margin-top:40px;">NECESSIDADES A SEREM TRABALHADAS</h2>
+             <div class="card" style="border-left:10px solid #ff4d4d; background:#fff1f1;">`;
+    
+    necessidades.forEach(item => {
+        // Invertemos a barra: quanto menor a nota original, maior a necessidade de trabalhar
+        let barraNecessidade = (11 - item.nota) * 10; 
+        html += `
+            <div style="margin-bottom:15px;">
+                <div style="display:flex; justify-content:space-between; font-size:13px; color:#333;"><strong>${item.nome}</strong><span>Prioridade: ${Math.round(barraNecessidade)}%</span></div>
+                <div style="height:12px; background:#ddd; border-radius:5px; margin-top:5px;">
+                    <div style="width:${barraNecessidade}%; height:100%; background:linear-gradient(90deg, #ff9999, #cc0000); border-radius:5px;"></div>
                 </div>
-            `;
+            </div>`;
+    });
+    html += </div>;
 
-            const categorias = ["Realização", "Mentalidade", "Conexão Social", "Essência", "Evolução"];
-            categorias.forEach(cat => {
-                const itens = rankingGeral.filter(i => i.categoria === cat).slice(0, 3);
-                html += `<div class="card" style="border-left:5px solid var(--gold)"><h3>Sua ${cat}</h3>`;
-                itens.forEach(item => {
-                    let perc = item.nota * 10;
-                    html += `
-                        <div style="margin-top:10px;">
-                            <div style="display:flex; justify-content:space-between; font-size:13px;"><span>${item.nome}</span><span>${Math.round(perc)}%</span></div>
-                            <div style="height:6px; background:#eee; border-radius:5px; margin-top:4px;"><div style="width:${perc}%; height:100%; background:var(--gold); border-radius:5px;"></div></div>
-                        </div>
-                    `;
-                });
-                html += `</div>`;
-            });
-            return html;
-        }
+    return html;
+}
 
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
