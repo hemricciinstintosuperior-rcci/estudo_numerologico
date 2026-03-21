@@ -251,16 +251,7 @@ const bancoNecessidadesVermelho = {
             const exp = reduzir(sV + sC); // Personalidade (Expressão)
             const mot = reduzir(sV);
             const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0);
-           // Cálculos de Intensidade (5 Pilares)
-            const pilares = {
-                "Realização": ((contagem[1] + contagem[8]) * 10),
-                "Mentalidade": ((contagem[4] + contagem[7]) * 10),
-                "Social": ((contagem[3] + contagem[5]) * 10),
-                "Essência": ((contagem[2] + contagem[6]) * 10),
-                "Evolução": (contagem[9] * 20)
-            };
- 
-            const forte = Object.keys(pilares).reduce((a, b) => pilares[a] > pilares[b] ? a : b);
+
 // --- NOVO CÁLCULO DE DÉFICIT DE COMPORTAMENTO ---
 const diaReduzido = reduzir(dia); 
 const cvCalculado = reduzir(dia + mes + ano);
@@ -327,15 +318,10 @@ const datasFases = {
         3: { idade: `após ${fim2} anos`, anos: `de ${anoNasc + fim2} em diante` }
     }
 };
-            // HTML: Gráficos no Topo
-            let html = `<div class="secao-graficos">`;
-            for (let p in pilares) {
-                html += `<div class="grafico-pilar">
-                    <div class="label-pilar"><span>${p}</span><span>${Math.min(pilares[p], 100)}%</span></div>
-                    <div class="barra-bg"><div class="barra-fill" style="width:${Math.min(pilares[p], 100)}%"></div></div>
-                </div>`;
-            }
-            html += `<div class="predominante">INSTINTO SUPERIOR PREDOMINANTE: ${forte}</div></div>`;
+// --- NOVO SISTEMA DE INTENSIDADE (GRÁFICOS COLORIDOS E NECESSIDADES) ---
+            // Chamamos a função passando os dados reais para o cálculo dinâmico
+            const d3Desafio = res.desafios[3]; // Desafio Principal
+            html += gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, d3Desafio);
 
             // Cards Principais
             const lista = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "anoPessoal", "inclinacoes", "subconsciente"];
