@@ -146,6 +146,45 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
         "Sentido de Justiça": { nums: [4, 8, 9], cat: "Valores", cor: "#1565c0" }
     };
 
+  const bancoNecessidadesVermelho = {
+    // --- COMPORTAMENTAL E ADAPTAÇÃO ---
+    "Flexibilidade": { nums: [5, 2, 3], cat: "Necessidade", cor: "#cc0000" },
+    "Adaptabilidade": { nums: [5, 2], cat: "Necessidade", cor: "#cc0000" },
+    "Humildade": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
+    "Autocontrole": { nums: [8, 4], cat: "Necessidade", cor: "#cc0000" },
+    "Paciência": { nums: [2, 7], cat: "Necessidade", cor: "#cc0000" },
+    "Tolerância": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
+    "Resiliência": { nums: [4, 9], cat: "Necessidade", cor: "#cc0000" },
+    "Disciplina": { nums: [4], cat: "Necessidade", cor: "#cc0000" },
+
+    // --- AUTONOMIA E FOCO ---
+    "Independência": { nums: [1, 5], cat: "Necessidade", cor: "#cc0000" },
+    "Proatividade": { nums: [1], cat: "Necessidade", cor: "#cc0000" },
+    "Praticidade": { nums: [4, 8], cat: "Necessidade", cor: "#cc0000" },
+    "Organização": { nums: [4], cat: "Necessidade", cor: "#cc0000" },
+    "Foco e Concentração": { nums: [4, 7], cat: "Necessidade", cor: "#cc0000" },
+    "Tomada de Decisão": { nums: [1, 8], cat: "Necessidade", cor: "#cc0000" },
+    "Autoafirmação": { nums: [1], cat: "Necessidade", cor: "#cc0000" },
+
+    // --- SOCIAL E EMOCIONAL ---
+    "Diplomacia": { nums: [2], cat: "Necessidade", cor: "#cc0000" },
+    "Comunicação Assertiva": { nums: [3], cat: "Necessidade", cor: "#cc0000" },
+    "Sociabilidade": { nums: [3, 5], cat: "Necessidade", cor: "#cc0000" },
+    "Empatia": { nums: [2, 9, 6], cat: "Necessidade", cor: "#cc0000" },
+    "Desapego": { nums: [9, 5], cat: "Necessidade", cor: "#cc0000" },
+    "Expressividade": { nums: [3], cat: "Necessidade", cor: "#cc0000" },
+    "Colaboração": { nums: [2, 6], cat: "Necessidade", cor: "#cc0000" },
+
+    // --- MENTAL E ESPIRITUAL ---
+    "Espiritualidade": { nums: [7, 9, 11], cat: "Necessidade", cor: "#cc0000" },
+    "Racionalidade": { nums: [4, 7], cat: "Necessidade", cor: "#cc0000" },
+    "Senso Crítico": { nums: [7, 8], cat: "Necessidade", cor: "#cc0000" },
+    "Intuição": { nums: [7, 11, 2], cat: "Necessidade", cor: "#cc0000" },
+    "Estabilidade Emocional": { nums: [6, 4, 2], cat: "Necessidade", cor: "#cc0000" },
+    "Idealismo": { nums: [9, 11], cat: "Necessidade", cor: "#cc0000" },
+    "Visão de Futuro": { nums: [1, 8, 9], cat: "Necessidade", cor: "#cc0000" }
+};      
+
     function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
         let ranking = [];
         for (let legenda in bancoLegendasCompleto) {
@@ -214,44 +253,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
 
         return html;
 }
-const bancoNecessidadesVermelho = {
-    // --- COMPORTAMENTAL E ADAPTAÇÃO ---
-    "Flexibilidade": { nums: [5, 2, 3], cat: "Necessidade", cor: "#cc0000" },
-    "Adaptabilidade": { nums: [5, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Humildade": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Autocontrole": { nums: [8, 4], cat: "Necessidade", cor: "#cc0000" },
-    "Paciência": { nums: [2, 7], cat: "Necessidade", cor: "#cc0000" },
-    "Tolerância": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Resiliência": { nums: [4, 9], cat: "Necessidade", cor: "#cc0000" },
-    "Disciplina": { nums: [4], cat: "Necessidade", cor: "#cc0000" },
 
-    // --- AUTONOMIA E FOCO ---
-    "Independência": { nums: [1, 5], cat: "Necessidade", cor: "#cc0000" },
-    "Proatividade": { nums: [1], cat: "Necessidade", cor: "#cc0000" },
-    "Praticidade": { nums: [4, 8], cat: "Necessidade", cor: "#cc0000" },
-    "Organização": { nums: [4], cat: "Necessidade", cor: "#cc0000" },
-    "Foco e Concentração": { nums: [4, 7], cat: "Necessidade", cor: "#cc0000" },
-    "Tomada de Decisão": { nums: [1, 8], cat: "Necessidade", cor: "#cc0000" },
-    "Autoafirmação": { nums: [1], cat: "Necessidade", cor: "#cc0000" },
-
-    // --- SOCIAL E EMOCIONAL ---
-    "Diplomacia": { nums: [2], cat: "Necessidade", cor: "#cc0000" },
-    "Comunicação Assertiva": { nums: [3], cat: "Necessidade", cor: "#cc0000" },
-    "Sociabilidade": { nums: [3, 5], cat: "Necessidade", cor: "#cc0000" },
-    "Empatia": { nums: [2, 9, 6], cat: "Necessidade", cor: "#cc0000" },
-    "Desapego": { nums: [9, 5], cat: "Necessidade", cor: "#cc0000" },
-    "Expressividade": { nums: [3], cat: "Necessidade", cor: "#cc0000" },
-    "Colaboração": { nums: [2, 6], cat: "Necessidade", cor: "#cc0000" },
-
-    // --- MENTAL E ESPIRITUAL ---
-    "Espiritualidade": { nums: [7, 9, 11], cat: "Necessidade", cor: "#cc0000" },
-    "Racionalidade": { nums: [4, 7], cat: "Necessidade", cor: "#cc0000" },
-    "Senso Crítico": { nums: [7, 8], cat: "Necessidade", cor: "#cc0000" },
-    "Intuição": { nums: [7, 11, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Estabilidade Emocional": { nums: [6, 4, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Idealismo": { nums: [9, 11], cat: "Necessidade", cor: "#cc0000" },
-    "Visão de Futuro": { nums: [1, 8, 9], cat: "Necessidade", cor: "#cc0000" }
-};
         
         function gerarMapaCompleto() {
             const nomeRaw = document.getElementById("nome").value.trim();
