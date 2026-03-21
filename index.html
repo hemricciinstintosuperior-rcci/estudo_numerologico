@@ -262,20 +262,15 @@ const bancoNecessidadesVermelho = {
  
             const forte = Object.keys(pilares).reduce((a, b) => pilares[a] > pilares[b] ? a : b);
 // --- NOVO CÁLCULO DE DÉFICIT DE COMPORTAMENTO ---
+const diaReduzido = reduzir(dia); 
+const cvCalculado = reduzir(dia + mes + ano);
+const propCalculado = reduzir(cvCalculado + exp);
 
-const diaReduzido = reduzir(dia); // Déficit Recorrente
-const prop = res.Propósito;
-const cv = res.CaminhodeVida;
-const exp = res.Personalidade;
-const mot = res.motivacao;
-
-// Array com os 4 pilares para checar repetição (Ocultos)
-const pilaresOcultos = [prop, cv, exp, mot];
+// Usamos as variáveis locais porque o objeto 'res' ainda vai ser criado abaixo
+const pilaresOcultos = [propCalculado, cvCalculado, exp, mot];
 let deficitsOcultos = [];
 
-// Lógica para encontrar o que coincide (Déficit Oculto)
 pilaresOcultos.forEach((num, index) => {
-    // Se o número aparece em outra posição do array, ele é um déficit oculto
     if (pilaresOcultos.indexOf(num) !== index && !deficitsOcultos.includes(num)) {
         deficitsOcultos.push(num);
     }
@@ -284,29 +279,29 @@ pilaresOcultos.forEach((num, index) => {
 // Guardamos no objeto de resultados
 res.deficitRecorrente = diaReduzido;
 res.deficitsOcultos = deficitsOcultos;
-            const res = {
-                dia: reduzir(dia),
-                comportamento: reduzir(dia),
-                motivacao: mot,
-                influencia: reduzir(sC),
-                Personalidade: exp,
-                CaminhodeVida: reduzir(dia + mes + ano),
-                "Propósito": reduzir(reduzir(dia + mes + ano) + exp),
-                Maturidade: reduzir(reduzir(dia + mes + ano) + exp),
-                Relacionamento:  reduzir(reduzir(dia + mes + ano) + exp),
-                anoPessoal: reduzir(dia + mes + 2026),
-                essencia: reduzir(sE),
-                talento: reduzir(mot + exp),
-                equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
-                deficiencias: faltantes,
-                  deficitRecorrente: diaReduzido, // <--- Adicione isso aqui
-                 deficitsOcultos: deficitsOcultos, // <--- Adicione isso aqui
-                inclinacoes: mot,
-                subconsciente: 9 - faltantes.length,
-                ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
-                momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
-                desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
-            };
+const res = {
+    dia: reduzir(dia),
+    comportamento: reduzir(dia),
+    motivacao: mot,
+    influencia: reduzir(sC),
+    Personalidade: exp,
+    CaminhodeVida: cvCalculado,
+    "Propósito": propCalculado,
+    Maturidade: propCalculado, // ou a fórmula que desejar
+    Relacionamento: propCalculado,
+    anoPessoal: reduzir(dia + mes + 2026),
+    essencia: reduzir(sE),
+    talento: reduzir(mot + exp),
+    equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
+    deficiencias: faltantes,
+    deficitRecorrente: diaReduzido, 
+    deficitsOcultos: deficitsOcultos, 
+    inclinacoes: mot,
+    subconsciente: 9 - faltantes.length,
+    ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
+    momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
+    desafios: {1: Math.abs(dia-mes), 2: Math.abs(dia-reduzir(ano)), 3: Math.abs(Math.abs(dia-mes)-Math.abs(dia-reduzir(ano)))}
+};
 
             // HTML: Gráficos no Topo
             let html = `<div class="secao-graficos">`;
