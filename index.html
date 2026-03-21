@@ -261,7 +261,29 @@ const bancoNecessidadesVermelho = {
             };
  
             const forte = Object.keys(pilares).reduce((a, b) => pilares[a] > pilares[b] ? a : b);
+// --- NOVO CÁLCULO DE DÉFICIT DE COMPORTAMENTO ---
 
+const diaReduzido = reduzir(dia); // Déficit Recorrente
+const prop = res.Propósito;
+const cv = res.CaminhodeVida;
+const exp = res.Personalidade;
+const mot = res.motivacao;
+
+// Array com os 4 pilares para checar repetição (Ocultos)
+const pilaresOcultos = [prop, cv, exp, mot];
+let deficitsOcultos = [];
+
+// Lógica para encontrar o que coincide (Déficit Oculto)
+pilaresOcultos.forEach((num, index) => {
+    // Se o número aparece em outra posição do array, ele é um déficit oculto
+    if (pilaresOcultos.indexOf(num) !== index && !deficitsOcultos.includes(num)) {
+        deficitsOcultos.push(num);
+    }
+});
+
+// Guardamos no objeto de resultados
+res.deficitRecorrente = diaReduzido;
+res.deficitsOcultos = deficitsOcultos;
             const res = {
                 dia: reduzir(dia),
                 comportamento: reduzir(dia),
@@ -277,7 +299,8 @@ const bancoNecessidadesVermelho = {
                 talento: reduzir(mot + exp),
                 equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
                 deficiencias: faltantes,
-                deficits: faltantes,
+                  deficitRecorrente: diaReduzido, // <--- Adicione isso aqui
+                 deficitsOcultos: deficitsOcultos, // <--- Adicione isso aqui
                 inclinacoes: mot,
                 subconsciente: 9 - faltantes.length,
                 ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
