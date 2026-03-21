@@ -318,12 +318,29 @@ const res = {
                 html += `<div class="card"><h3>${k}</h3><div class="texto-res">${aplicarFiltroTexto(textos[k][res[k]])}</div></div>`;
             });
 
-            // Deficiências e Déficits (renderizando um por um dos números faltantes)
-            html += `<div class="card"><h3>deficiencias e deficits</h3>`;
-            faltantes.forEach(f => {
-                html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p>`;
-                html += `<p>${aplicarFiltroTexto(textos.deficits[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
-            });
+// --- 1. CARD DE DEFICIÊNCIAS (O QUE FALTA NO NOME) ---
+            html += `<div class="card"><h3>Deficiências (Lições Cármicas)</h3>`;
+            if (res.deficiencias.length > 0) {
+                res.deficiencias.forEach(f => {
+                    html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
+                });
+            } else {
+                html += `<p>Nenhuma deficiência encontrada no nome.</p>`;
+            }
+            html += `</div>`;
+
+            // --- 2. CARD DE DÉFICITS DE COMPORTAMENTO (RECORRENTE E OCULTOS) ---
+            html += `<div class="card"><h3>Déficits de Comportamento</h3>`;
+            
+            // Exibe o Recorrente (Dia)
+            html += `<p><strong>Déficit Recorrente (${res.deficitRecorrente}):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p><hr style="border:0; border-top:1px solid #eee">`;
+            
+            // Exibe os Ocultos (Repetições), se houver
+            if (res.deficitsOcultos.length > 0) {
+                res.deficitsOcultos.forEach(d => {
+                    html += `<p><strong>Déficit Oculto (${d}):</strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #eee">`;
+                });
+            }
             html += `</div>`;
 
             // Ciclos, Momentos e Desafios (Subníveis 1, 2, 3...)
