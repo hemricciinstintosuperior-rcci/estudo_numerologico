@@ -110,6 +110,15 @@ function gerarPiramide(nome){
     return linhas;
 }
 
+// Adicione esta função para o código saber agrupar os números de 2 em 2
+function topo(base) {
+    let arcanos = [];
+    for (let i = 0; i < base.length - 1; i++) {
+        arcanos.push(parseInt("" + base[i] + base[i + 1]));
+    }
+    return arcanos;
+}        
+
 function detectarNegativas(linhas){
     let pos = []; let nums = [];
     linhas.forEach((linha, i) => {
