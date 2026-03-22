@@ -124,34 +124,60 @@ const nomesExibicao = {
             return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
         }
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
-    // Começamos com uma base dinâmica baseada no tamanho do nome para evitar o "100%" fixo
+    // Base dinâmica (3.85 a 4.20 aprox)
     let nota = 3.85 + (nomeRaw.length % 3) * 0.17; 
     
-    const dnaFixo = [resultados.motivacao, resultados.Personalidade, resultados.influencia, resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, resultados.subconsciente, resultados.deficitRecorrente,resultado.dia,  d3];
-    const comboCompleto = dnaFixo.concat(resultados.deficitsOcultos || []);
+    // 1. PILARES DE LUZ (SOMA)
+    const dnaPositivo = [
+        resultados.motivacao, 
+        resultados.Personalidade, 
+        resultados.influencia, 
+        resultados.comportamento, 
+        resultados.CaminhodeVida, 
+        resultados.Propósito, 
+        resultados.subconsciente, 
+        resultados.dia, 
+        resultados.equilibrio, 
+        resultados.talento, 
+        resultados.essencia
+    ];
+
+    // 2. PILARES DE SOMBRA (SUBTRAI)
+    // Incluímos aqui o D3 e os Déficits
+    const sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || []);
 
     nums.forEach(n => {
         let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => tabela[letra.normalize("NFD")[0]] === n).length;
         
-        // Peso dinâmico por letra encontrada (não é mais fixo 0.5)
-        nota += (letrasEncontradas * 0.05); 
+        // Peso por letra (Potencial base)
+        nota += (letrasEncontradas * 0.08); 
         
-        // Peso por presença nos pilares principais (DNA)
-        const ocorrenciasNosCalculos = comboCompleto.filter(num => num === n).length;
-        nota += (ocorrenciasNosCalculos * 1.18); 
+        // SE O NÚMERO É POSITIVO NO MAPA -> SOBE A NOTA
+        const ocorrenciasLuz = dnaPositivo.filter(num => num === n).length;
+        nota += (ocorrenciasLuz * 1.25); 
 
-        // Penalidade suave para faltantes
-        if (faltantes.includes(n)) nota -= 2.95;
+        // SE O NÚMERO É UM DÉFICIT OU DESAFIO -> DESCE A NOTA
+        const ocorrenciasSombra = sombras.filter(num => num === n).length;
+        nota -= (ocorrenciasSombra * 0.95); 
+
+        // SE O NÚMERO É UMA INCLINAÇÃO (EXCESSO) -> DESCE A NOTA (DESEQUILÍBRIO)
+        if (resultados.inclinacoes && resultados.inclinacoes.includes(n)) {
+            nota -= 1.10; 
+        }
+
+        // SE O NÚMERO É UMA LIÇÃO CÁRMICA (DEFICIÊNCIA/FALTANTE) -> O PESO MAIS NEGATIVO
+        if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
+            nota -= 3.30; // A maior penalidade, pois é uma ausência vibracional
+        }
     });
 
-    // O "pulo do gato": Adiciona uma pequena variação decimal baseada no valor da primeira letra
-    const variacaoSutil = (calcularValorLetra(nomeRaw[0]) / 20);
+    // Variação pela primeira letra (Assinatura)
+    const variacaoSutil = (calcularValorLetra(nomeRaw[0]) / 25);
     nota += variacaoSutil;
 
-    // Limitamos a 9.8 para que o 100% (10) seja quase impossível, parecendo mais humano
+    // Trava de segurança para o visual premium (1.2 a 9.8)
     return Math.min(Math.max(nota, 1.2), 9.8);
 }
-
     const bancoLegendasCompleto = {
         // POTENCIAL (VERDE)
         "Proatividade": { nums: [1], cat: "Potencial", cor: "#2e7d32" },
