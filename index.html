@@ -422,7 +422,6 @@ const res = {
     "Propósito": propCalculado,
     Maturidade: propCalculado, // ou a fórmula que desejar
     Relacionamento: propCalculado,
-    anoPessoal: reduzir(dia + mes + 2026),
     essencia: reduzir(sE),
     talento: reduzir(mot + exp),
     equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
@@ -436,8 +435,8 @@ const res = {
   desafios: {
     1: Math.abs(diaRed - mesRed), 
     2: Math.abs(diaRed - anoRed), 
-    3: Math.abs(Math.abs(diaRed - mesRed) - Math.abs(diaRed - anoRed))
-}
+    3: Math.abs(Math.abs(diaRed - mesRed) - Math.abs(diaRed - anoRed))},
+    anoPessoal: reduzir(dia + mes + 2026)
 };
 
 
