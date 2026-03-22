@@ -294,7 +294,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
     let ranking = [];
     for (let legenda in bancoLegendasCompleto) {
         const dados = bancoLegendasCompleto[legenda];
-        const nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3);
+        const nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
         ranking.push({ nome: legenda, nota: nota, categoria: dados.cat, cor: dados.cor });
     }
 
