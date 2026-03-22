@@ -77,7 +77,7 @@
 
     <script>
         const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
-        const vogais = ["A","E","I","O","U"];
+        const vogais = ["A","E","I","O","U","Y"];
 // DICIONÁRIO DE EXIBIÇÃO PREMIUM (Tradução da Lógica para o Relatório)
 const nomesExibicao = {
     "dia": "Vibração do Dia de Nascimento",
@@ -169,7 +169,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
         "Intelecto": { nums: [7, 4], cat: "Essência", cor: "#6a1b9a" },
         "Senso Crítico": { nums: [7, 8], cat: "Essência", cor: "#6a1b9a" },
         "Persistência": { nums: [4, 9], cat: "Essência", cor: "#6a1b9a" },
-        "Intuição": { nums: [7, 11, 2], cat: "Essência", cor: "#6a1b9a" },
+        "Intuição": { nums: [7, 2], cat: "Essência", cor: "#6a1b9a" },
         // APROVEITAR A VIDA (LARANJA)
         "Alegria/Jovialidade": { nums: [3], cat: "Vida", cor: "#ef6c00" },
         "Dinamismo": { nums: [5, 1], cat: "Vida", cor: "#ef6c00" },
@@ -186,9 +186,9 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
         "Flexibilidade": { nums: [5, 2, 3], cat: "Relacionamento", cor: "#fbc02d" },
         "Empatia": { nums: [2, 9], cat: "Relacionamento", cor: "#fbc02d" },
         // VALORES (AZUL)
-        "Espiritualidade": { nums: [7, 9, 11], cat: "Valores", cor: "#1565c0" },
+        "Espiritualidade": { nums: [7, 9, 2], cat: "Valores", cor: "#1565c0" },
         "Materialismo": { nums: [8, 4], cat: "Valores", cor: "#1565c0" },
-        "Idealismo": { nums: [9, 11], cat: "Valores", cor: "#1565c0" },
+        "Idealismo": { nums: [9, 2], cat: "Valores", cor: "#1565c0" },
         "Humanismo": { nums: [9, 6], cat: "Valores", cor: "#1565c0" },
         "Sentido de Justiça": { nums: [4, 8, 9], cat: "Valores", cor: "#1565c0" }
     };
@@ -226,9 +226,9 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
     "Espiritualidade": { nums: [7, 9, 11], cat: "Necessidade", cor: "#cc0000" },
     "Racionalidade": { nums: [4, 7], cat: "Necessidade", cor: "#cc0000" },
     "Senso Crítico": { nums: [7, 8], cat: "Necessidade", cor: "#cc0000" },
-    "Intuição": { nums: [7, 11, 2], cat: "Necessidade", cor: "#cc0000" },
+    "Intuição": { nums: [7, 2], cat: "Necessidade", cor: "#cc0000" },
     "Estabilidade Emocional": { nums: [6, 4, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Idealismo": { nums: [9, 11], cat: "Necessidade", cor: "#cc0000" },
+    "Idealismo": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
     "Visão de Futuro": { nums: [1, 8, 9], cat: "Necessidade", cor: "#cc0000" }
 };      
 
