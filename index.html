@@ -242,37 +242,37 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
 
     let html = `<h2 style="color:var(--gold); text-align:center; margin-top:30px; letter-spacing:2px;">ANÁLISE DE POTENCIAIS</h2>`;
     const cats = ["Potencial", "Essência", "Vida", "Relacionamento", "Valores"];
-    const nomesBonitos = {"Potencial":"Seu Potencial", "Essência":"Sua Essência", "Vida":"Fluidez Vital", "Relacionamento":"Dinâmica Social", "Valores":"Pares de Valores"};
+    const nomesBonitos = {"Potencial":"Seu Potencial", "Essência":"Sua Essência", "Vida":"Capacidade de Aproveitar a Vida", "Relacionamento":"Dinâmica Social", "Valores":"Seus Valores"};
 
     cats.forEach(c => {
-        const itens = ranking.filter(i => i.categoria === c && i.nota >= 4.5).sort((a,b)=>b.nota-a.nota).slice(0,5);
+        const itens = ranking.filter(i => i.categoria === c && i.nota >= 4.5).sort((a,b)=>b.nota-a.nota).slice(0,4);
         if(itens.length > 0) {
-            html += `
-            <div class="card" style="border-left:8px solid ${itens[0].cor}; padding: 25px; margin-bottom: 25px; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                <h3 style="margin-top:0; color:${itens[0].cor}; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">${nomesBonitos[c]}</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">`;
+            // RESTAURA O ESTILO ANTERIOR: Borda lateral grossa e padding
+            html += `<div class="card" style="border-left:12px solid ${itens[0].cor}; padding: 25px; margin-bottom: 25px; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h3 style="margin-top:0; color:${itens[0].cor}; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">${nomesBonitos[c]}</h3>`;
             
             itens.forEach(item => {
                 let p = item.nota * 10;
                 // Formatação com 1 casa decimal para parecer cálculo de precisão (ex: 83.4%)
                 let pExibicao = p.toFixed(1); 
                 
+                // RESTAURA O LAYOUT EMPILHADO (Um abaixo do outro)
                 html += `
-                <div style="margin-bottom:10px;">
+                <div style="margin-bottom:12px;">
                     <div style="display:flex; justify-content:space-between; font-size:12px; font-weight: bold; color: #444; margin-bottom: 4px;">
                         <span>${item.nome}</span>
                         <span>${pExibicao}%</span>
                     </div>
-                    <div style="height:8px; background:#f0f0f0; border-radius:4px; overflow:hidden;">
-                        <div style="width:${p}%; height:100%; background:${item.cor}; border-radius:4px; transition: width 1s ease-in-out;"></div>
+                    <div style="height:10px; background:#f0f0f0; border-radius:5px; overflow:hidden;">
+                        <div style="width:${p}%; height:100%; background:${item.cor}; border-radius:5px; transition: width 1s ease-in-out;"></div>
                     </div>
                 </div>`;
             });
-            html += `</div></div>`;
+            html += `</div>`;
         }
     });
 
-    // CARD DE DESENVOLVIMENTO (VERMELHO) - Ajuste de Urgência
+    // CARD DE DESENVOLVIMENTO (VERMELHO) - Ajuste de visual
     let htmlNecessidades = "";
     let temNecessidade = false;
     for (let itemNec in bancoNecessidadesVermelho) {
@@ -297,13 +297,11 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
     if (temNecessidade) {
         html += `
         <h2 style="color:#cc0000; text-align:center; margin-top:40px; letter-spacing:1px;">⚠️ FOCO DE DESENVOLVIMENTO</h2>
-        <div class="card-necessidades" style="border-left: 10px solid #cc0000; background: #fff5f5;">
+        <div class="card-necessidades" style="border-left: 14px solid #cc0000; background: #fff; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
             <p style="color:#900; font-size:14px; margin-bottom:25px; font-weight:bold; border-bottom: 1px solid #ffcccc; padding-bottom: 10px;">
                 Identificamos oscilações nas seguintes frequências que bloqueiam sua evolução plena:
             </p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                ${htmlNecessidades}
-            </div>
+            ${htmlNecessidades}
         </div>`;
     }
     return html;
