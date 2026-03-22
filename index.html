@@ -715,29 +715,54 @@ if(dadosNegativas.nums.length > 0){
 }
 htmlPiramide += `</div>`;
 
-// --- INSERÇÃO DAS POTÊNCIAS NUMÉRICAS (ENERGIA MODERNA) ---
-const potenciasTopo = topo(piramideVida[0]); // Pega os números de 2 dígitos do topo
+// --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
+const potenciasTopo = topo(piramideVida[0]); // As potências originais do nome
+const dataEntrada = document.getElementById("data").value;
+const anoNascPot = new Date(dataEntrada).getUTCFullYear();
 
-htmlPiramide += `
-    <div class="secao-potencias" style="margin-top: 25px; border-top: 1px solid #827108; padding-top: 20px;">
-        <h3 style="color: #827108; text-align: center; font-size: 22px;">⚡ Potências Numéricas</h3>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 20px;">
-            ${potenciasTopo.map(p => `<span style="background: #827108; color: #fff; padding: 4px 10px; border-radius: 5px; font-weight: bold;">${p}</span>`).join('')}
-        </div>
-`;
+let htmlPotenciasCalculadas = "";
+let idadeAcumulada = 0;
+let indiceLoop = 0;
 
-// Loop para colocar cada texto de cada potência
-potenciasTopo.forEach(p => {
-    const txtPot = (textos.Potencias && textos.Potencias[p]) ? textos.Potencias[p] : `Análise da Potência ${p} em processamento.`;
-    htmlPiramide += `
-        <div class="bloco-potencia" style="margin-bottom: 15px; text-align: left;">
-            <b style="color: #827108;">Potência ${p}:</b>
-            <div class="texto-res">${aplicarFiltroTexto(txtPot)}</div>
+// O loop continua enquanto a idade acumulada não atingir 100 anos
+while (idadeAcumulada < 100) {
+    // Pega a potência da lista. Se chegar no fim, o % faz voltar ao início (loop)
+    const p = potenciasTopo[indiceLoop % potenciasTopo.length];
+    
+    // Lógica do primeiro algarismo definindo a duração
+    const duracaoAnos = parseInt(p.toString()[0]); 
+    
+    const idadeInicio = idadeAcumulada;
+    const idadeFim = idadeAcumulada + duracaoAnos;
+    const anoInicio = anoNascPot + idadeInicio;
+    const anoFim = anoNascPot + idadeFim;
+
+    const txtPot = (textos.Potencias && textos.Potencias[p]) ? textos.Potencias[p] : `Vibração da Potência ${p} em análise.`;
+
+    htmlPotenciasCalculadas += `
+        <div class="bloco-potencia" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                <b style="color: #827108; font-size: 19px;">Potência ${p}</b>
+                <span style="color: #b8860b; font-weight: bold; font-size: 13px;">
+                    VIGÊNCIA: ${idadeInicio} a ${idadeFim} anos | ${anoInicio} a ${anoFim}
+                </span>
+            </div>
+            <div class="texto-res" style="color: #333; font-size: 15px;">${aplicarFiltroTexto(txtPot)}</div>
         </div>
     `;
-});
 
-htmlPiramide += `</div>`; // Fecha a seção de potências            
+    // Atualiza para o próximo passo
+    idadeAcumulada = idadeFim;
+    indiceLoop++;
+}
+
+htmlPiramide += `
+    <div class="secao-potencias" style="background: #fff; color: #000; padding: 25px; border-radius: 8px; border: 1px solid #827108; margin-top: 25px;">
+        <h2 style="color: #827108; text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #827108; padding-bottom: 10px;">⚡ Ciclos das Potências Numéricas</h2>
+        <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 20px;">Análise da evolução vibracional em ciclos recorrentes (formação e maturidade).</p>
+        ${htmlPotenciasCalculadas}
+    </div>
+`;
 
 // 4. FINALMENTE: JUNTA A PIRÂMIDE NO CORPO DO RELATÓRIO
 html += htmlPiramide;
