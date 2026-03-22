@@ -124,19 +124,33 @@ const nomesExibicao = {
             return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
         }
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
-        let nota = 4;
-        const dnaFixo = [resultados.motivacao, resultados.personalidade, resultados.influencia, resultados.comportamento, resultados.caminhoVida, resultados.missao, resultados.subconsciente, resultados.deficitRecorrente, d3];
-        const comboCompleto = dnaFixo.concat(resultados.deficitsOcultos || []);
+    // Começamos com uma base dinâmica baseada no tamanho do nome para evitar o "100%" fixo
+    let nota = 3.85 + (nomeRaw.length % 3) * 0.12; 
+    
+    const dnaFixo = [resultados.motivacao, resultados.personalidade, resultados.influencia, resultados.comportamento, resultados.caminhoVida, resultados.missao, resultados.subconsciente, resultados.deficitRecorrente, d3];
+    const comboCompleto = dnaFixo.concat(resultados.deficitsOcultos || []);
 
-        nums.forEach(n => {
-            let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => tabela[letra.normalize("NFD")[0]] === n).length;
-            nota += (letrasEncontradas * 0.5);
-            const ocorrenciasNosCalculos = comboCompleto.filter(num => num === n).length;
-            nota += (ocorrenciasNosCalculos * 1.5);
-            if (faltantes.includes(n)) nota -= 3.5;
-        });
-        return Math.min(Math.max(nota, 1), 10);
-    }
+    nums.forEach(n => {
+        let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => tabela[letra.normalize("NFD")[0]] === n).length;
+        
+        // Peso dinâmico por letra encontrada (não é mais fixo 0.5)
+        nota += (letrasEncontradas * 0.47); 
+        
+        // Peso por presença nos pilares principais (DNA)
+        const ocorrenciasNosCalculos = comboCompleto.filter(num => num === n).length;
+        nota += (ocorrenciasNosCalculos * 1.18); 
+
+        // Penalidade suave para faltantes
+        if (faltantes.includes(n)) nota -= 2.95;
+    });
+
+    // O "pulo do gato": Adiciona uma pequena variação decimal baseada no valor da primeira letra
+    const variacaoSutil = (calcularValorLetra(nomeRaw[0]) / 20);
+    nota += variacaoSutil;
+
+    // Limitamos a 9.8 para que o 100% (10) seja quase impossível, parecendo mais humano
+    return Math.min(Math.max(nota, 1.2), 9.8);
+}
 
     const bancoLegendasCompleto = {
         // POTENCIAL (VERDE)
@@ -218,73 +232,81 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
     "Visão de Futuro": { nums: [1, 8, 9], cat: "Necessidade", cor: "#cc0000" }
 };      
 
-    function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
-        let ranking = [];
-        for (let legenda in bancoLegendasCompleto) {
-            const dados = bancoLegendasCompleto[legenda];
-            const nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3);
-            ranking.push({ nome: legenda, nota: nota, categoria: dados.cat, cor: dados.cor });
-        }
+function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
+    let ranking = [];
+    for (let legenda in bancoLegendasCompleto) {
+        const dados = bancoLegendasCompleto[legenda];
+        const nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3);
+        ranking.push({ nome: legenda, nota: nota, categoria: dados.cat, cor: dados.cor });
+    }
 
-        let html = `<h2 style="color:var(--gold); text-align:center; margin-top:30px; letter-spacing:2px;">ANÁLISE DE POTENCIAIS</h2>`;
-        const cats = ["Potencial", "Essência", "Vida", "Relacionamento", "Valores"];
-        const nomesBonitos = {"Potencial":"Seu Potencial", "Essência":"Sua Essência", "Vida":"Capacidade de Aproveitar a Vida", "Relacionamento":"Como Você se Relaciona", "Valores":"Seus Valores"};
+    let html = `<h2 style="color:var(--gold); text-align:center; margin-top:30px; letter-spacing:2px;">ANÁLISE DE POTENCIAIS</h2>`;
+    const cats = ["Potencial", "Essência", "Vida", "Relacionamento", "Valores"];
+    const nomesBonitos = {"Potencial":"Seu Potencial", "Essência":"Sua Essência", "Vida":"Fluidez Vital", "Relacionamento":"Dinâmica Social", "Valores":"Pares de Valores"};
 
-        cats.forEach(c => {
-            const itens = ranking.filter(i => i.categoria === c && i.nota >= 5.5).sort((a,b)=>b.nota-a.nota).slice(0,4);
-            if(itens.length > 0) {
-                html += `<div class="card" style="border-left:10px solid ${itens[0].cor}"><h3>${nomesBonitos[c]}</h3>`;
-                itens.forEach(item => {
-                    let p = item.nota * 10;
-                    html += `<div style="margin-bottom:12px;"><div style="display:flex; justify-content:space-between; font-size:13px;"><span>${item.nome}</span><span>${Math.round(p)}%</span></div>
-                    <div style="height:10px; background:#eee; border-radius:5px;"><div style="width:${p}%; height:100%; background:${item.cor}; border-radius:5px;"></div></div></div>`;
-                });
-                html += `</div>`;
-            }
-        });
-
-// --- 1. MANTÉM OS COLORIDOS (Não mexe no que já funciona) ---
-        // (O código dos cats.forEach já rodou e alimentou a variável 'html')
-
-        // --- 2. NOVA VARREDURA INDEPENDENTE PARA O BANCO VERMELHO ---
-        let htmlNecessidades = "";
-        let temNecessidade = false;
-
-        for (let itemNec in bancoNecessidadesVermelho) {
-            const dadosNec = bancoNecessidadesVermelho[itemNec];
-            const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3);
-
-            // Se a nota for baixa (necessidade de desenvolvimento), entra no card de alerta
-            if (notaNec < 8.5) {
-                temNecessidade = true;
-                let prioridade = (11 - notaNec) * 10; // Quanto menor a nota, maior a urgência
-                
-                htmlNecessidades += `
-                    <div style="margin-bottom:18px;">
-                        <div style="display:flex; justify-content:space-between; font-size:14px; color:#333; font-weight:bold;">
-                            <span>${itemNec}</span>
-                            <span>URGÊNCIA: ${Math.round(prioridade)}%</span>
-                        </div>
-                        <div class="barra-vermelha">
-                            <div class="progresso-vermelho" style="width:${prioridade}%"></div>
-                        </div>
-                    </div>`;
-            }
-        }
-
-        // Se encontrou algo abaixo da média no banco de necessidades, exibe o card bege/vermelho
-        if (temNecessidade) {
+    cats.forEach(c => {
+        const itens = ranking.filter(i => i.categoria === c && i.nota >= 4.5).sort((a,b)=>b.nota-a.nota).slice(0,5);
+        if(itens.length > 0) {
             html += `
-            <h2 style="color:#cc0000; text-align:center; margin-top:50px; letter-spacing:1px;">⚠️ FOCO DE DESENVOLVIMENTO</h2>
-            <div class="card-necessidades">
-                <p style="color:#660000; font-size:14px; margin-bottom:20px; font-weight:bold;">
-                    Os itens abaixo apresentam baixa vibração no seu mapa atual e exigem atenção consciente:
-                </p>
-                ${htmlNecessidades}
-            </div>`;
+            <div class="card" style="border-left:8px solid ${itens[0].cor}; padding: 25px; margin-bottom: 25px; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                <h3 style="margin-top:0; color:${itens[0].cor}; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">${nomesBonitos[c]}</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">`;
+            
+            itens.forEach(item => {
+                let p = item.nota * 10;
+                // Formatação com 1 casa decimal para parecer cálculo de precisão (ex: 83.4%)
+                let pExibicao = p.toFixed(1); 
+                
+                html += `
+                <div style="margin-bottom:10px;">
+                    <div style="display:flex; justify-content:space-between; font-size:12px; font-weight: bold; color: #444; margin-bottom: 4px;">
+                        <span>${item.nome}</span>
+                        <span>${pExibicao}%</span>
+                    </div>
+                    <div style="height:8px; background:#f0f0f0; border-radius:4px; overflow:hidden;">
+                        <div style="width:${p}%; height:100%; background:${item.cor}; border-radius:4px; transition: width 1s ease-in-out;"></div>
+                    </div>
+                </div>`;
+            });
+            html += `</div></div>`;
         }
+    });
 
-        return html;
+    // CARD DE DESENVOLVIMENTO (VERMELHO) - Ajuste de Urgência
+    let htmlNecessidades = "";
+    let temNecessidade = false;
+    for (let itemNec in bancoNecessidadesVermelho) {
+        const dadosNec = bancoNecessidadesVermelho[itemNec];
+        const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3);
+        if (notaNec < 7.8) {
+            temNecessidade = true;
+            let urgencia = (10.5 - notaNec) * 9.5; 
+            htmlNecessidades += `
+                <div style="margin-bottom:15px;">
+                    <div style="display:flex; justify-content:space-between; font-size:13px; color:#333; font-weight:bold;">
+                        <span>${itemNec}</span>
+                        <span>NÍVEL DE ATENÇÃO: ${urgencia.toFixed(1)}%</span>
+                    </div>
+                    <div class="barra-vermelha" style="background: #eee; height: 12px;">
+                        <div class="progresso-vermelho" style="width:${urgencia}%; background: linear-gradient(90deg, #ff4444, #990000);"></div>
+                    </div>
+                </div>`;
+        }
+    }
+
+    if (temNecessidade) {
+        html += `
+        <h2 style="color:#cc0000; text-align:center; margin-top:40px; letter-spacing:1px;">⚠️ FOCO DE DESENVOLVIMENTO</h2>
+        <div class="card-necessidades" style="border-left: 10px solid #cc0000; background: #fff5f5;">
+            <p style="color:#900; font-size:14px; margin-bottom:25px; font-weight:bold; border-bottom: 1px solid #ffcccc; padding-bottom: 10px;">
+                Identificamos oscilações nas seguintes frequências que bloqueiam sua evolução plena:
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                ${htmlNecessidades}
+            </div>
+        </div>`;
+    }
+    return html;
 }
 
         
