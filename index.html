@@ -134,7 +134,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
         let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => tabela[letra.normalize("NFD")[0]] === n).length;
         
         // Peso dinâmico por letra encontrada (não é mais fixo 0.5)
-        nota += (letrasEncontradas * 0.47); 
+        nota += (letrasEncontradas * 0.05); 
         
         // Peso por presença nos pilares principais (DNA)
         const ocorrenciasNosCalculos = comboCompleto.filter(num => num === n).length;
@@ -285,7 +285,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
                 <div style="margin-bottom:15px;">
                     <div style="display:flex; justify-content:space-between; font-size:13px; color:#333; font-weight:bold;">
                         <span>${itemNec}</span>
-                        <span>NÍVEL DE ATENÇÃO: ${urgencia.toFixed(1)}%</span>
+                        <span> ATENÇÃO: ${urgencia.toFixed(1)}%</span>
                     </div>
                     <div class="barra-vermelha" style="background: #eee; height: 12px;">
                         <div class="progresso-vermelho" style="width:${urgencia}%; background: linear-gradient(90deg, #ff4444, #990000);"></div>
