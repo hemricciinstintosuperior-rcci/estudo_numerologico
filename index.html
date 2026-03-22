@@ -127,7 +127,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
     // Começamos com uma base dinâmica baseada no tamanho do nome para evitar o "100%" fixo
     let nota = 3.85 + (nomeRaw.length % 3) * 0.17; 
     
-    const dnaFixo = [resultados.motivacao, resultados.personalidade, resultados.influencia, resultados.comportamento, resultados.caminhoVida, resultados.missao, resultados.subconsciente, resultados.deficitRecorrente, d3];
+    const dnaFixo = [resultados.motivacao, resultados.Personalidade, resultados.influencia, resultados.comportamento, resultados.CaminhodeVida, resultados.missao, resultados.subconsciente, resultados.deficitRecorrente,resultado.dia,  d3];
     const comboCompleto = dnaFixo.concat(resultados.deficitsOcultos || []);
 
     nums.forEach(n => {
@@ -222,14 +222,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
     "Expressividade": { nums: [3], cat: "Necessidade", cor: "#cc0000" },
     "Colaboração": { nums: [2, 6], cat: "Necessidade", cor: "#cc0000" },
 
-    // --- MENTAL E ESPIRITUAL ---
-    "Espiritualidade": { nums: [7, 9, 11], cat: "Necessidade", cor: "#cc0000" },
-    "Racionalidade": { nums: [4, 7], cat: "Necessidade", cor: "#cc0000" },
-    "Senso Crítico": { nums: [7, 8], cat: "Necessidade", cor: "#cc0000" },
-    "Intuição": { nums: [7, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Estabilidade Emocional": { nums: [6, 4, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Idealismo": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Visão de Futuro": { nums: [1, 8, 9], cat: "Necessidade", cor: "#cc0000" }
+
 };      
 
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
