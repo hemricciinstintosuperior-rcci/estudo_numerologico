@@ -58,7 +58,11 @@
         .card-necessidades { background: #fdf5e6; padding: 25px; border-radius: 4px; border-left: 12px solid #ffffff; margin-top: 20px; }
        /* ESSENCIAL: Faz as cores das barras aparecerem no PDF/PWA */
         * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-    
+    .piramide { display: flex; flex-direction: column; align-items: center; margin: 20px auto; }
+.linha { display: flex; justify-content: center; gap: 4px; margin: 2px 0; }
+.num { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; background: #28d3ee; color: #000; font-size: 12px; font-weight: bold; border-radius: 4px; }
+.num.negativo { background-color: #FF0000 !important; color: #ffffff !important; }
+.bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
 
     </style>
 </head>
@@ -78,6 +82,56 @@
     <script>
         const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
         const vogais = ["A","E","I","O","U","Y"];
+
+const mapaMatriz = { A:1,I:1,Q:1,J:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5, U:6,V:6,W:6,X:6, O:7,Z:7, F:8,P:8 };
+
+function valorLetraMatriz(l){
+    let n = l.normalize("NFD");
+    let v = mapaMatriz[n[0].toUpperCase()] ?? 0;
+    let s = 0;
+    if(n.includes("\u0301")) s=2; else if(n.includes("\u0302")) s=7; else if(n.includes("\u0303")) s=3; else if(n.includes("\u0327")) s=6;
+    return (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
+}
+
+function gerarPiramide(nome){
+    let base = [];
+    for(let l of nome.toUpperCase()){ if(l !== " "){ let v = valorLetraMatriz(l); if(v) base.push(v); } }
+    let linhas = [base];
+    while(base.length > 1){
+        let nova = [];
+        for(let i=0; i<base.length-1; i++){
+            let soma = base[i] + base[i+1];
+            while(soma > 9) soma = soma.toString().split('').reduce((a,b)=>+a + +b, 0);
+            nova.push(soma);
+        }
+        linhas.push(nova);
+        base = nova;
+    }
+    return linhas;
+}
+
+function detectarNegativas(linhas){
+    let pos = []; let nums = [];
+    linhas.forEach((linha, i) => {
+        let cont = 1;
+        for(let j=1; j<linha.length; j++){
+            if(linha[j] === linha[j-1]) cont++;
+            else {
+                if(cont >= 3){ 
+                    nums.push(linha[j-1]);
+                    for(let k=j-cont; k<j; k++) pos.push({l:i, c:k});
+                }
+                cont = 1;
+            }
+        }
+        if(cont >= 3){ 
+            nums.push(linha[linha.length-1]);
+            for(let k=linha.length-cont; k<linha.length; k++) pos.push({l:i, c:linha.length-1-k});
+        }
+    });
+    return { pos, nums: [...new Set(nums)] };
+}
+        
 // DICIONÁRIO DE EXIBIÇÃO PREMIUM (Tradução da Lógica para o Relatório)
 const nomesExibicao = {
     "dia": "Vibração do Dia de Nascimento",
@@ -123,59 +177,26 @@ const nomesExibicao = {
             let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
             return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
         }
-function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
-    // Base dinâmica (3.85 a 4.20 aprox)
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let nota = 4.5 + (nomeRaw.length % 3) * 0.17; 
     
-    // 1. PILARES DE LUZ (SOMA)
+    // PILARES DE LUZ (Incluindo Regente da Matriz)
     const dnaPositivo = [
-        resultados.motivacao, 
-        resultados.Personalidade, 
-        resultados.influencia, 
-        resultados.comportamento, 
-        resultados.CaminhodeVida, 
-        resultados.Propósito, 
-        resultados.subconsciente, 
-        resultados.dia, 
-        resultados.equilibrio, 
-        resultados.talento, 
-        resultados.essencia
+        resultados.motivacao, resultados.Personalidade, resultados.influencia, 
+        resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
+        resultados.subconsciente, resultados.dia, resultados.equilibrio, 
+        resultados.talento, resultados.essencia, regenteMatriz // <-- Adicionado aqui
     ];
 
-    // 2. PILARES DE SOMBRA (SUBTRAI)
-    // Incluímos aqui o D3 e os Déficits
-    const sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || []);
+    // PILARES DE SOMBRA (Incluindo Sequências Negativas)
+    const sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz); // <-- Adicionado aqui
 
     nums.forEach(n => {
-        let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => tabela[letra.normalize("NFD")[0]] === n).length;
-        
-        // Peso por letra (Potencial base)
-        nota += (letrasEncontradas * 0.0); 
-        
-        // SE O NÚMERO É POSITIVO NO MAPA -> SOBE A NOTA
-        const ocorrenciasLuz = dnaPositivo.filter(num => num === n).length;
-        nota += (ocorrenciasLuz * 2.55); 
-
-        // SE O NÚMERO É UM DÉFICIT OU DESAFIO -> DESCE A NOTA
-        const ocorrenciasSombra = sombras.filter(num => num === n).length;
-        nota -= (ocorrenciasSombra * 1.31); 
-
-        // SE O NÚMERO É UMA INCLINAÇÃO (EXCESSO) -> DESCE A NOTA (DESEQUILÍBRIO)
-        if (resultados.inclinacoes && resultados.inclinacoes.includes(n)) {
-            nota -= 0.48; 
-        }
-
-        // SE O NÚMERO É UMA LIÇÃO CÁRMICA (DEFICIÊNCIA/FALTANTE) -> O PESO MAIS NEGATIVO
-        if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
-            nota -= 1.47; // A maior penalidade, pois é uma ausência vibracional
-        }
+        nota += (dnaPositivo.filter(num => num === n).length * 2.55); 
+        nota -= (sombras.filter(num => num === n).length * 1.31); 
+        if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) nota -= 1.47;
     });
 
-    // Variação pela primeira letra (Assinatura)
-    const variacaoSutil = (calcularValorLetra(nomeRaw[0]) / 25);
-    nota += variacaoSutil;
-
-    // Trava de segurança para o visual premium (1.2 a 9.8)
     return Math.min(Math.max(nota, 1.2), 9.8);
 }
     const bancoLegendasCompleto = {
@@ -418,6 +439,10 @@ const res = {
     3: Math.abs(Math.abs(diaRed - mesRed) - Math.abs(diaRed - anoRed))
 }
 };
+
+
+
+// Adicione a variável htmlPiramide na montagem final do seu 'html'
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
 const anoNasc = ano; // Variável 'ano' que vem do split da data
@@ -489,10 +514,47 @@ const datasFases = {
                 <div class="secao-card quebra-pagina">
                     <h2 class="titulo-topico">Análise de Potenciais</h2>
                     <div class="intro-texto">${textos.introducoes.graficos}</div>
-                    ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3])}
+                    ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3], regenteVida, dadosNegativas.nums)}
                 </div>
             `;
 
+            
+// Cálculo da Pirâmide da Vida
+const piramideVida = gerarPiramide(nomeRaw);
+const regenteVida = piramideVida.at(-1)[0];
+const dadosNegativas = detectarNegativas(piramideVida);
+
+// Na chamada do gráfico, passe os novos parâmetros:
+// gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3], regenteVida, dadosNegativas.nums)
+
+// Trecho para renderizar o HTML da Pirâmide no relatório
+let htmlPiramide = `<div class="secao-card quebra-pagina">
+    <h2 class="titulo-topico">Matriz Quântica: Pirâmide da Vida</h2>
+    <div class="piramide">`;
+    piramideVida.forEach((linha, i) => {
+        htmlPiramide += `<div class="linha">`;
+        linha.forEach((n, j) => {
+            let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
+            htmlPiramide += `<div class="${cl}">${n}</div>`;
+        });
+        htmlPiramide += `</div>`;
+    });
+htmlPiramide += `</div>
+    <p><strong>Potência Regente: ${regenteVida}</strong></p>
+    <div class="texto-res">${aplicarFiltroTexto(textosVida[regenteVida])}</div>`;
+
+if(dadosNegativas.nums.length > 0){
+    htmlPiramide += `<h3>Sequências Negativas Detectadas</h3>`;
+    dadosNegativas.nums.forEach(n => {
+        htmlPiramide += `<p style="color:red"><strong>Bloqueio ${n}:</strong> ${aplicarFiltroTexto(textosSeqNegVida[n])}</p>`;
+    });
+}
+htmlPiramide += `</div>`;
+
+html += htmlPiramide;
+
+
+            
 // 1. A lista deve ter exatamente as chaves que você colocou no 'res'
 const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
 
