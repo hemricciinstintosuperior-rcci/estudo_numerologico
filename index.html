@@ -125,7 +125,7 @@ const nomesExibicao = {
         }
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
     // Começamos com uma base dinâmica baseada no tamanho do nome para evitar o "100%" fixo
-    let nota = 3.85 + (nomeRaw.length % 3) * 0.12; 
+    let nota = 3.85 + (nomeRaw.length % 3) * 0.17; 
     
     const dnaFixo = [resultados.motivacao, resultados.personalidade, resultados.influencia, resultados.comportamento, resultados.caminhoVida, resultados.missao, resultados.subconsciente, resultados.deficitRecorrente, d3];
     const comboCompleto = dnaFixo.concat(resultados.deficitsOcultos || []);
