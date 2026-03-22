@@ -512,6 +512,7 @@ let html = `
 `;
 
 // 3. AGORA MONTA O HTML VISUAL DA PIRÂMIDE
+// 3. MONTAGEM DO HTML VISUAL DA PIRÂMIDE
 let htmlPiramide = `
 <div class="secao-card quebra-pagina">
     <h2 class="titulo-topico">Matriz Quântica: Pirâmide da Vida</h2>
@@ -528,12 +529,12 @@ let htmlPiramide = `
 
 htmlPiramide += `</div>
     <p><strong>Potência Regente: ${regenteVida}</strong></p>
-    <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`;
+    <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
 
 if(dadosNegativas.nums.length > 0){
     htmlPiramide += `<h3 style="color:red; margin-top:20px;">Sequências Negativas Detectadas</h3>`;
     dadosNegativas.nums.forEach(n => {
-        htmlPiramide += `<p style="color:red"><strong>Bloqueio ${n}:</strong> ${aplicarFiltroTexto(textos.SeqNegVida[n])}</p>`;
+        htmlPiramide += `<p style="color:red"><strong>Bloqueio ${n}:</strong> ${aplicarFiltroTexto(textos.SeqNegVida[n])}</p>`; // AJUSTADO AQUI
     });
 }
 htmlPiramide += `</div>`;
