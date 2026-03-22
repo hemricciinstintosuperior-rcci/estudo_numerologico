@@ -335,7 +335,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
     let temNecessidade = false;
     for (let itemNec in bancoNecessidadesVermelho) {
         const dadosNec = bancoNecessidadesVermelho[itemNec];
-        const notaNec = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
+        const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
         if (notaNec < 5.8) {
             temNecessidade = true;
             let urgencia = (10.5 - notaNec) * 9.5; 
