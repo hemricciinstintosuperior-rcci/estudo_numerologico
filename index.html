@@ -125,7 +125,7 @@ const nomesExibicao = {
         }
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
     // Base dinâmica (3.85 a 4.20 aprox)
-    let nota = 3.85 + (nomeRaw.length % 3) * 0.17; 
+    let nota = 4.5 + (nomeRaw.length % 3) * 0.17; 
     
     // 1. PILARES DE LUZ (SOMA)
     const dnaPositivo = [
@@ -158,16 +158,16 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
 
         // SE O NÚMERO É UM DÉFICIT OU DESAFIO -> DESCE A NOTA
         const ocorrenciasSombra = sombras.filter(num => num === n).length;
-        nota -= (ocorrenciasSombra * 1.87); 
+        nota -= (ocorrenciasSombra * 1.31); 
 
         // SE O NÚMERO É UMA INCLINAÇÃO (EXCESSO) -> DESCE A NOTA (DESEQUILÍBRIO)
         if (resultados.inclinacoes && resultados.inclinacoes.includes(n)) {
-            nota -= 0.87; 
+            nota -= 0.48; 
         }
 
         // SE O NÚMERO É UMA LIÇÃO CÁRMICA (DEFICIÊNCIA/FALTANTE) -> O PESO MAIS NEGATIVO
         if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
-            nota -= 1.25; // A maior penalidade, pois é uma ausência vibracional
+            nota -= 1.47; // A maior penalidade, pois é uma ausência vibracional
         }
     });
 
@@ -315,7 +315,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
     for (let itemNec in bancoNecessidadesVermelho) {
         const dadosNec = bancoNecessidadesVermelho[itemNec];
         const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3);
-        if (notaNec < 7.8) {
+        if (notaNec < 5.8) {
             temNecessidade = true;
             let urgencia = (10.5 - notaNec) * 9.5; 
             htmlNecessidades += `
