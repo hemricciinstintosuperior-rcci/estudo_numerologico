@@ -150,19 +150,19 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3) {
         let letrasEncontradas = nomeRaw.toUpperCase().split('').filter(letra => tabela[letra.normalize("NFD")[0]] === n).length;
         
         // Peso por letra (Potencial base)
-        nota += (letrasEncontradas * 0.08); 
+        nota += (letrasEncontradas * 0.09); 
         
         // SE O NÚMERO É POSITIVO NO MAPA -> SOBE A NOTA
         const ocorrenciasLuz = dnaPositivo.filter(num => num === n).length;
-        nota += (ocorrenciasLuz * 1.25); 
+        nota += (ocorrenciasLuz * 2.55); 
 
         // SE O NÚMERO É UM DÉFICIT OU DESAFIO -> DESCE A NOTA
         const ocorrenciasSombra = sombras.filter(num => num === n).length;
-        nota -= (ocorrenciasSombra * 0.95); 
+        nota -= (ocorrenciasSombra * 1.38); 
 
         // SE O NÚMERO É UMA INCLINAÇÃO (EXCESSO) -> DESCE A NOTA (DESEQUILÍBRIO)
         if (resultados.inclinacoes && resultados.inclinacoes.includes(n)) {
-            nota -= 1.10; 
+            nota -= 0.87; 
         }
 
         // SE O NÚMERO É UMA LIÇÃO CÁRMICA (DEFICIÊNCIA/FALTANTE) -> O PESO MAIS NEGATIVO
