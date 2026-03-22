@@ -513,10 +513,16 @@ let html = `
 
 // 3. AGORA MONTA O HTML VISUAL DA PIRÂMIDE
 // 3. MONTAGEM DO HTML VISUAL DA PIRÂMIDE
+// --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
 <div class="secao-card quebra-pagina">
-    <h2 class="titulo-topico">Matriz Quântica: Pirâmide da Vida</h2>
+    <h2 class="titulo-topico"> Pirâmide da Vida</h2>
+    
+    <div class="intro-texto">${textos.introducoes.piramide}</div>
+
     <div class="piramide">`;
+
+// ... (continua o código que desenha as linhas da pirâmide)
     
     piramideVida.forEach((linha, i) => {
         htmlPiramide += `<div class="linha">`;
