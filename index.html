@@ -131,7 +131,38 @@ function detectarNegativas(linhas){
     });
     return { pos, nums: [...new Set(nums)] };
 }
+
         
+ function gerarBlocoPotenciasNumericas(baseNumerica) {
+    // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
+    const potencias = topo(baseNumerica); 
+    
+    let html = `
+        <div class="secao-card" style="border-top: 2px solid #827108; margin-top: 20px; padding-top: 20px;">
+            <h2 class="titulo-topico" style="color: #827108; text-align: center;">⚡ Potências Numéricas</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px;">
+                ${potencias.map(p => `<span style="background: #827108; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold;">${p}</span>`).join('')}
+            </div>
+            <div class="lista-textos-potencias">
+    `;
+
+    potencias.forEach(p => {
+        // Busca no seu textos.js a chave textosPotencias[p]
+        const interpretacao = (window.textosPotencias && window.textosPotencias[p]) 
+                              ? window.textosPotencias[p] 
+                              : `A vibração da Potência ${p} traz uma energia específica para sua matriz quântica.`;
+        
+        html += `
+            <div class="item-potencia" style="margin-bottom: 15px; text-align: left;">
+                <b style="color: #827108; font-size: 1.1em;">Potência ${p}:</b>
+                <div class="texto-res">${aplicarFiltroTexto(interpretacao)}</div>
+            </div>
+        `;
+    });
+
+    html += `</div></div>`;
+    return html;
+}       
 // DICIONÁRIO DE EXIBIÇÃO PREMIUM (Tradução da Lógica para o Relatório)
 const nomesExibicao = {
     "dia": "Vibração do Dia de Nascimento",
@@ -644,6 +675,30 @@ if(dadosNegativas.nums.length > 0){
     });
 }
 htmlPiramide += `</div>`;
+
+// --- INSERÇÃO DAS POTÊNCIAS NUMÉRICAS (ENERGIA MODERNA) ---
+const potenciasTopo = topo(piramideVida[0]); // Pega os números de 2 dígitos do topo
+
+htmlPiramide += `
+    <div class="secao-potencias" style="margin-top: 25px; border-top: 1px solid #827108; padding-top: 20px;">
+        <h3 style="color: #827108; text-align: center; font-size: 22px;">⚡ Potências Numéricas</h3>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 20px;">
+            ${potenciasTopo.map(p => `<span style="background: #827108; color: #fff; padding: 4px 10px; border-radius: 5px; font-weight: bold;">${p}</span>`).join('')}
+        </div>
+`;
+
+// Loop para colocar cada texto de cada potência
+potenciasTopo.forEach(p => {
+    const txtPot = (textos.Potencias && textos.Potencias[p]) ? textos.Potencias[p] : `Análise da Potência ${p} em processamento.`;
+    htmlPiramide += `
+        <div class="bloco-potencia" style="margin-bottom: 15px; text-align: left;">
+            <b style="color: #827108;">Potência ${p}:</b>
+            <div class="texto-res">${aplicarFiltroTexto(txtPot)}</div>
+        </div>
+    `;
+});
+
+htmlPiramide += `</div>`; // Fecha a seção de potências            
 
 // 4. FINALMENTE: JUNTA A PIRÂMIDE NO CORPO DO RELATÓRIO
 html += htmlPiramide;
