@@ -514,7 +514,7 @@ let html = `
 
             
 // 1. A lista deve ter exatamente as chaves que você colocou no 'res'
-const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
+const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente"];
 
 listaPremium.forEach(chave => {
     // Busca o nome bonito. Se não achar, usa a chave original.
@@ -602,6 +602,16 @@ listaPremium.forEach(chave => {
                 }
                 html += `</div>`;
             });
+
+// INSERIR ANO PESSOAL AQUI (MANUALMENTE NO FINAL)
+html += `
+    <div class="secao-card quebra-pagina">
+        <h2 class="titulo-topico">${nomesExibicao.anoPessoal}</h2>
+        <div class="intro-texto">${textos.introducoes.anoPessoal || ""}</div>
+        <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
+    </div>
+`;
+            
 
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
