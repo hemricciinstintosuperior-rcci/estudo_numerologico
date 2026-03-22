@@ -504,7 +504,8 @@ const datasFases = {
 const piramideVida = gerarPiramide(nomeRaw);
 const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
-
+// --- INSERÇÃO DAS POTÊNCIAS NUMÉRICAS (ENERGIA MODERNA) ---
+const potenciasTopo = topo(piramideVida[0]); // Pega os números de 2 dígitos do topo
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
     <button class="btn-pdf no-print" onclick="window.print()">📥 SALVAR PDF PREMIUM</button>
@@ -676,8 +677,7 @@ if(dadosNegativas.nums.length > 0){
 }
 htmlPiramide += `</div>`;
 
-// --- INSERÇÃO DAS POTÊNCIAS NUMÉRICAS (ENERGIA MODERNA) ---
-const potenciasTopo = topo(piramideVida[0]); // Pega os números de 2 dígitos do topo
+
 
 htmlPiramide += `
     <div class="secao-potencias" style="margin-top: 25px; border-top: 1px solid #827108; padding-top: 20px;">
