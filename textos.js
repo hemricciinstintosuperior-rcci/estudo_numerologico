@@ -1,6 +1,7 @@
 const textos = {
 introducoes: {
         graficos: `Estes gráficos representam a força das suas vibrações e potenciais naturais.`,
+        piramide: "A Pirâmide da Vida, ou Matriz Quântica, revela as vibrações profundas que moldam seu destino. Cada camada representa uma fase de maturação das suas energias internas.",
         dia: `O dia do nascimento revela sua forma natural de agir e seus talentos inatos.`,
         comportamento: `O comportamento define como você lida com as situações do cotidiano.`,
         essencia: `A essência é o seu "eu" mais profundo, sua verdadeira identidade espiritual.`,
@@ -25,6 +26,8 @@ introducoes: {
         
     Conclusao: `Este mapa é uma ferramenta de autoconhecimento poderosa para sua evolução.`
 },
+
+    
 RegenteVida: {
  1:` <h2>🔱  Regente da Vida(Principal) N°1</h2> 
 <h3>1️⃣Iniciativa, Autonomia e Caminho Individual.1️⃣</h3> 
