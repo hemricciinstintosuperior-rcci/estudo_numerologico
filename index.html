@@ -290,7 +290,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 
 };      
 
-function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3) {
+function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) { 
     let ranking = [];
     for (let legenda in bancoLegendasCompleto) {
         const dados = bancoLegendasCompleto[legenda];
