@@ -335,7 +335,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
     let temNecessidade = false;
     for (let itemNec in bancoNecessidadesVermelho) {
         const dadosNec = bancoNecessidadesVermelho[itemNec];
-        const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3);
+        const notaNec = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
         if (notaNec < 5.8) {
             temNecessidade = true;
             let urgencia = (10.5 - notaNec) * 9.5; 
@@ -511,8 +511,7 @@ let html = `
     </div>
 `;
 
-// 3. AGORA MONTA O HTML VISUAL DA PIRÂMIDE
-// 3. MONTAGEM DO HTML VISUAL DA PIRÂMIDE
+
 // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
 <div class="secao-card quebra-pagina">
@@ -538,7 +537,7 @@ htmlPiramide += `</div>
     <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
 
 if(dadosNegativas.nums.length > 0){
-    htmlPiramide += `<h3 style="color:red; margin-top:20px;">Sequências Negativas Detectadas</h3>`;
+    htmlPiramide += `<h3 style="color:red; margin-top:20px;">Sequências de Vulnerabilidade</h3>`;
     dadosNegativas.nums.forEach(n => {
         htmlPiramide += `<p style="color:red"><strong>Bloqueio ${n}:</strong> ${aplicarFiltroTexto(textos.SeqNegVida[n])}</p>`; // AJUSTADO AQUI
     });
