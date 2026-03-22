@@ -511,40 +511,7 @@ let html = `
 `;
 
 
-// --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
-let htmlPiramide = `
-<div class="secao-card quebra-pagina">
-    <h2 class="titulo-topico"> Pirâmide da Vida</h2>
-    
-    <div class="intro-texto">${textos.introducoes.piramide}</div>
 
-    <div class="piramide">`;
-
-// ... (continua o código que desenha as linhas da pirâmide)
-    
-    piramideVida.forEach((linha, i) => {
-        htmlPiramide += `<div class="linha">`;
-        linha.forEach((n, j) => {
-            let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
-            htmlPiramide += `<div class="${cl}">${n}</div>`;
-        });
-        htmlPiramide += `</div>`;
-    });
-
-htmlPiramide += `</div>
-    
-    <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
-
-if(dadosNegativas.nums.length > 0){
-    htmlPiramide += `<h3 style="color:red; margin-top:20px;">Sequências de Vulnerabilidade</h3>`;
-    dadosNegativas.nums.forEach(n => {
-        htmlPiramide += `<p style="color:red"><strong>Bloqueio ${n}:</strong> ${aplicarFiltroTexto(textos.SeqNegVida[n])}</p>`; // AJUSTADO AQUI
-    });
-}
-htmlPiramide += `</div>`;
-
-// 4. FINALMENTE: JUNTA A PIRÂMIDE NO CORPO DO RELATÓRIO
-html += htmlPiramide;
             
 // 1. A lista deve ter exatamente as chaves que você colocou no 'res'
 const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente", "anoPessoal"];
@@ -635,6 +602,41 @@ listaPremium.forEach(chave => {
                 }
                 html += `</div>`;
             });
+
+            // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
+let htmlPiramide = `
+<div class="secao-card quebra-pagina">
+    <h2 class="titulo-topico"> Pirâmide da Vida</h2>
+    
+    <div class="intro-texto">${textos.introducoes.piramide}</div>
+
+    <div class="piramide">`;
+
+// ... (continua o código que desenha as linhas da pirâmide)
+    
+    piramideVida.forEach((linha, i) => {
+        htmlPiramide += `<div class="linha">`;
+        linha.forEach((n, j) => {
+            let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
+            htmlPiramide += `<div class="${cl}">${n}</div>`;
+        });
+        htmlPiramide += `</div>`;
+    });
+
+htmlPiramide += `</div>
+    
+    <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
+
+if(dadosNegativas.nums.length > 0){
+    htmlPiramide += `<h3 style="color:red; margin-top:20px;">Sequências de Vulnerabilidade</h3>`;
+    dadosNegativas.nums.forEach(n => {
+        htmlPiramide += `<p style="color:red"><strong>Bloqueio ${n}:</strong> ${aplicarFiltroTexto(textos.SeqNegVida[n])}</p>`; // AJUSTADO AQUI
+    });
+}
+htmlPiramide += `</div>`;
+
+// 4. FINALMENTE: JUNTA A PIRÂMIDE NO CORPO DO RELATÓRIO
+html += htmlPiramide;
 
             // 6. CONCLUSÃO E RODAPÉ
             html += `
