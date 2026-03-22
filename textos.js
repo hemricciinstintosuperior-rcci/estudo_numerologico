@@ -25,7 +25,7 @@ introducoes: {
         
     Conclusao: `Este mapa é uma ferramenta de autoconhecimento poderosa para sua evolução.`
 },
-regente: {
+regenteVida: {
  1:` <h2>🔱  Regente da Vida(Principal) N°1</h2> 
 <h3>1️⃣Iniciativa, Autonomia e Caminho Individual.1️⃣</h3> 
 
