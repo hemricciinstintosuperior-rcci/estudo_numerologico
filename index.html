@@ -94,6 +94,19 @@
     display: inline-block;
 }  
 
+/* Estilo das Abas de Planos */
+.tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
+.tab-btn { 
+    padding: 10px 15px; border: 1px solid #827108; background: #fff; color: #827108; 
+    cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 12px; border-radius: 4px; transition: 0.3s;
+}
+.tab-btn.active { background: #827108; color: #fff; }
+.tab-content { display: none; animation: fadeIn 0.5s; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+
+
     </style>
 </head>
 <body>
@@ -337,10 +350,10 @@ const megaBancoAtributos = {
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
 
+    // Calcula a nota para cada atributo no banco de dados
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
         let nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
-        
         rankingGeral.push({
             nome: nomeAtributo,
             nota: nota,
@@ -349,48 +362,62 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         });
     }
 
-    // Filtros de Performance
-    const potenciaisLuz = rankingGeral.filter(i => i.nota >= 7.2).sort((a,b) => b.nota - a.nota);
-    const necessidades = rankingGeral.filter(i => i.nota < 5.2).sort((a,b) => a.nota - b.nota);
+    const planos = ["Físico", "Mental", "Emocional", "Intuitivo"];
+    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Análise por Planos de Expressão</h2>`;
 
-    let htmlGraficos = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">ANÁLISE DE POTENCIAIS</h2>`;
+    planos.forEach(p => {
+        const itensPlano = rankingGeral.filter(i => i.plano === p).sort((a,b) => b.nota - a.nota);
+        
+        // Cria um bloco para cada Plano (Físico, Mental, etc.)
+        htmlFinal += `
+            <div class="secao-plano" style="margin-bottom: 30px; background:#fff; padding:20px; border-radius:8px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                <h3 style="color:#827108; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; text-transform: uppercase; font-size: 18px;">
+                    Plano ${p}
+                </h3>
+                <div style="margin-top: 15px;">
+        `;
 
-    // Bloco de Forças
-    if (potenciaisLuz.length > 0) {
-        htmlGraficos += `<div class="card" style="border-left:14px solid #2e7d32; padding:25px; background:#fff; margin-bottom:25px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <h3 style="color:#2e7d32; margin-top:0; font-size:18px; text-transform:uppercase;">🌟 SEUS PONTOS DE FORÇA</h3>
-                    <p style="font-size:13px; color:#666; margin-bottom:20px;">Frequências altamente ativas que impulsionam seus resultados nos planos físico, mental e emocional.</p>`;
-        potenciaisLuz.slice(0, 10).forEach(item => {
-            htmlGraficos += montarBarraGrafico(item, "#2e7d32");
+        itensPlano.forEach(item => {
+            let corBarra = "#2e7d32"; // Verde (Luz)
+            if (item.nota < 5.2) corBarra = "#cc0000"; // Vermelho (Sombra)
+            else if (item.nota < 7) corBarra = "#827108"; // Dourado (Neutro)
+
+            htmlFinal += montarBarraGrafico(item, corBarra);
         });
-        htmlGraficos += `</div>`;
-    }
 
-    // Bloco de Atenção
-    if (necessidades.length > 0) {
-        htmlGraficos += `<h2 style="color:#cc0000; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">⚠️ FOCO DE DESENVOLVIMENTO</h2>
-                 <div class="card" style="border-left:14px solid #cc0000; padding:25px; background:#fff; margin-bottom:25px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <h3 style="color:#cc0000; margin-top:0; font-size:18px; text-transform:uppercase;">BLOQUEIOS E OSCILAÇÕES</h3>
-                    <p style="font-size:13px; color:#666; margin-bottom:20px;">Atributos que apresentam baixa voltagem vibracional ou interferência de sequências negativas.</p>`;
-        necessidades.slice(0, 10).forEach(item => {
-            htmlGraficos += montarBarraGrafico(item, "linear-gradient(90deg, #ff4444, #990000)");
-        });
-        htmlGraficos += `</div>`;
-    }
-    return htmlGraficos;
+        htmlFinal += `</div></div>`;
+    });
+
+    return htmlFinal;
+}
+
+// FUNÇÃO PARA TROCAR AS ABAS
+function alternarAba(evt, nomePlano) {
+    const conteudos = document.querySelectorAll(".tab-content");
+    const botoes = document.querySelectorAll(".tab-btn");
+
+    conteudos.forEach(c => c.classList.remove("active"));
+    botoes.forEach(b => b.classList.remove("active"));
+
+    document.getElementById(nomePlano).classList.add("active");
+    evt.currentTarget.classList.add("active");
 }
 
 function montarBarraGrafico(item, cor) {
     return `
-    <div style="margin-bottom:15px;">
-        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:bold; color:#333; margin-bottom:4px;">
-            <span>${item.nome.toUpperCase()} <small style="color:#827108;">(${item.plano})</small></span>
-            <span>${item.percentual}%</span>
+        <div style="margin-bottom: 18px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: bold; font-size: 14px; color: #333;">
+                <span>${item.nome}</span>
+                <span style="color: ${cor};">${item.percentual}%</span>
+            </div>
+            <div style="height: 12px; background: #eee; border-radius: 6px; overflow: hidden; border: 1px solid #f0f0f0;">
+                <div style="width: ${item.percentual}%; height: 100%; background: ${cor}; border-radius: 6px; transition: width 1s ease-in-out;"></div>
+            </div>
+            <div style="font-size: 11px; color: #888; margin-top: 3px; font-style: italic;">
+                Nível de intensidade na matriz: ${item.nota.toFixed(1)} de 10
+            </div>
         </div>
-        <div style="height:10px; background:#f0f0f0; border-radius:5px; overflow:hidden; border: 1px solid #eee;">
-            <div style="width:${item.percentual}%; height:100%; background:${cor}; border-radius:5px;"></div>
-        </div>
-    </div>`;
+    `;
 }
         
         function gerarMapaCompleto() {
