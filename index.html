@@ -467,36 +467,47 @@ function montarHtmlPlanosNatural(nome) {
     const dados = calcularDadosPlanos(nome);
     const nomesPlanos = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
     
+    // Pega a introdução do seu objeto introducoes no textos.js
     let html = `
         <div class="secao-card quebra-pagina">
             <h2 class="titulo-topico">Plano de Expressão Natural</h2>
-            <div class="intro-texto">${textos.introducoes.natural || "Sua estrutura básica de funcionamento e reação ao mundo."}</div>
+            <div class="intro-texto">${introducoes.natural}</div>
             
             <div style="margin-top:20px;">
     `;
 
-    // Gera as Barras de Energia
+    // Loop pelos 4 planos para gerar as barras e os textos específicos (1 a 9)
     for(let p in dados.soma) {
         let porcentagem = dados.maior > 0 ? (dados.soma[p] / dados.maior) * 100 : 0;
-        let numReduzido = reduzir(dados.soma[p]); // Usa sua função reduzir
+        let numReduzido = reduzir(dados.soma[p]); // Sua função que reduz para 1-9
         
+        // Busca o texto no formato: textosPlanos.fisico.forte[1]
+        // Usei "forte" como padrão, mas você pode criar lógica para "fraco" se desejar
+        let textoDescritivo = textosPlanos[p]?.forte[numReduzido] || "";
+
         html += `
-            <div style="margin-bottom: 15px;">
-                <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:14px; color:#333;">
-                    <span>${nomesPlanos[p]} (Nº ${numReduzido})</span>
+            <div style="margin-bottom: 30px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 8px;">
+                    <span style="font-weight:bold; font-size:16px; color:var(--dark);">${nomesPlanos[p].toUpperCase()}</span>
+                    <span style="background:var(--gold); color:white; padding:2px 8px; border-radius:4px; font-size:12px;">Vibração ${numReduzido}</span>
                 </div>
-                <div style="height:12px; background:#eee; border-radius:6px; overflow:hidden; border:1px solid #f0f0f0;">
+                <div style="height:8px; background:#eee; border-radius:4px; overflow:hidden; margin-bottom:10px;">
                     <div style="width:${Math.max(porcentagem, 10)}%; height:100%; background:${coresPlanos[p]};"></div>
                 </div>
+                <div class="texto-res" style="font-size:14px; line-height:1.5;">${textoDescritivo}</div>
             </div>
         `;
     }
 
-    // Perfil de Expressão (Criativo/Indeciso/Neutro)
+    // Perfil de Comportamento (Criativo, Indeciso, Neutro)
+    // Pega o texto de textosExpressao[dominante]
+    const textoPerfil = textosExpressao[dados.dominantePerfil] || "";
+
     html += `
-            <div style="margin-top:30px; padding:20px; border-top:2px solid var(--gold); background:#f9f9f9; border-radius:8px;">
-                <h3 style="color:var(--dark); text-transform:uppercase; font-size:16px;">Perfil de Comportamento: <strong>${dados.dominantePerfil.toUpperCase()}</strong></h3>
-                <p class="texto-res" style="font-size:15px;">${aplicarFiltroTexto(textos.textosExpressao[dados.dominantePerfil])}</p>
+            <div style="margin-top:40px; padding:25px; border:1px solid var(--gold); background:rgba(212, 175, 55, 0.05); border-radius:8px; position:relative;">
+                <div style="position:absolute; top:-12px; left:20px; background:var(--gold); color:white; padding:2px 15px; font-size:12px; font-weight:bold; border-radius:20px;">PERFIL DE COMPORTAMENTO</div>
+                <h3 style="color:var(--dark); margin-bottom:10px;">${dados.dominantePerfil.toUpperCase()}</h3>
+                <div class="texto-res">${textoPerfil}</div>
             </div>
         </div>
     `;
@@ -638,18 +649,17 @@ let html = `
                 <span>1.5 Matriz Quântica: Pirâmide da Vida</span><span>Pág 04</span>
             </div>
             <div style="display:flex; justify-content:space-between; border-bottom: 1px dotted #ccc;">
-                <span>2. Pilares de Personalidade</span><span>Pág 05</span>
-            </div>
+                <span>2. Pilares de Personalidade</span><span>Pág 05</span>  </div>
+
+
+                
+       </div>   
         </div>
   </div>
  
-    <div class="capa">...</div>
-                
-    <div class="secao-card quebra-pagina">...</div>
 
-    ${montarHtmlPlanosNatural(nomeRaw)}
+${montarHtmlPlanosNatural(nomeRaw)}
 
-    `;
   
 
 
