@@ -269,172 +269,129 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 
     return Math.min(Math.max(nota, 1.2), 9.8);
 }
-    const bancoLegendasCompleto = {
-        // POTENCIAL (VERDE)
-        "Proatividade": { nums: [1], cat: "Potencial", cor: "#2e7d32" },
-        "Liderança": { nums: [1], cat: "Potencial", cor: "#2e7d32" },
-        "Independência": { nums: [1, 5], cat: "Potencial", cor: "#2e7d32" },
-        "Autoconfiança": { nums: [1, 8], cat: "Potencial", cor: "#2e7d32" },
-        "Praticidade": { nums: [4, 8], cat: "Potencial", cor: "#2e7d32" },
-        "Controle": { nums: [8, 4], cat: "Potencial", cor: "#2e7d32" },
-        "Ousadia": { nums: [5, 1], cat: "Potencial", cor: "#2e7d32" },
-        "Capacidade de Comando": { nums: [1, 8], cat: "Potencial", cor: "#2e7d32" },
-    "Flexibilidade": { nums: [5, 2, 3], cat: "Potencial", cor: "#2e7d32" },
-    "Adaptabilidade": { nums: [5, 2], cat: "Potencial", cor: "#2e7d32" },
-    "Autocontrole": { nums: [8, 4], cat: "Potencial", cor: "#2e7d32" },
-    "Tolerância": { nums: [9, 2], cat: "Potencial", cor: "#2e7d32" },
-    "Resiliência": { nums: [4, 9], cat: "Potencial", cor: "#2e7d32" },
-    "Disciplina": { nums: [4],  cat: "Potencial", cor: "#2e7d32" },
-   "Foco e Concentração": { nums: [4, 7],  cat: "Potencial", cor: "#2e7d32" },
-    "Tomada de Decisão": { nums: [1, 8],  cat: "Potencial", cor: "#2e7d32" },
+
+// --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
+
+const megaBancoAtributos = {
+    // FÍSICO
+    "Proatividade": { nums: [1], plano: "Físico" },
+    "Praticidade": { nums: [4, 8], plano: "Físico" },
+    "Vitalidade": { nums: [5, 1], plano: "Físico" },
+    "Disciplina": { nums: [4], plano: "Físico" },
+    "Capacidade de Comando": { nums: [1, 8], plano: "Físico" },
+    "Resistência Física": { nums: [4, 9], plano: "Físico" },
+    "Empreendedorismo": { nums: [1, 8, 5], plano: "Físico" },
+   "Flexibilidade": { nums: [5, 2, 3],  plano: "Físico" },
+    "Adaptavel": { nums: [5, 2],  plano: "Físico" },
+     "Liderança": { nums: [1], plano: "Físico" },
+     "Independência": { nums: [1, 5], plano: "Físico" },
+     "Demonstração de Afeto": { nums: [6, 3], plano: "Físico" },
+    "Colaboração": { nums: [2, 6], plano: "Físico" },
+    
+
+
+     // MENTAL
+    "Lógica e Análise": { nums: [7, 4], plano: "Mental" },
+    "Estratégia": { nums: [8, 1], plano: "Mental" },
+    "Criatividade": { nums: [3, 5], plano: "Mental" },
+    "Foco e Concentração": { nums: [7, 1], plano: "Mental" },
+    "Senso Crítico": { nums: [7, 8], plano: "Mental" },
+    "Tomada de Decisão": { nums: [1, 8], plano: "Mental" },
+    "Adaptabilidade": { nums: [5, 2], plano: "Mental" },
+    "Versatilidade": { nums: [5], plano: "Mental" },
+     "Dinamismo": { nums: [5, 1], plano: "Mental" },
+    
+
+    // EMOCIONAL
+    "Empatia": { nums: [2, 6, 9], plano: "Emocional" },
+    "Magnetismo Pessoal": { nums: [3, 8, 5], plano: "Emocional" },
+    "Diplomacia": { nums: [2], plano: "Emocional" },
+    "Afetivo": { nums: [6, 3], plano: "Emocional" },
+    "Colaboração": { nums: [2, 6], plano: "Emocional" },
+    "Paciência": { nums: [2, 7], plano: "Emocional" },
+    "Autocontrole": { nums: [8, 4],  plano: "Emocional" },
+    "Tolerância": { nums: [9, 2], plano: "Emocional" },
+   "Alegria/Jovialidade": { nums: [3], plano: "Emocional" },
+   "Otimismo": { nums: [3], plano: "Emocional" },
+    "Extroversão": { nums: [3, 5], plano: "Emocional" },
+    "Espontaneidade": { nums: [3, 5], plano: "Emocional" },
+    "Ousadia": { nums: [5, 1], plano: "Emocional" },
+     "Autoconfiança": { nums: [1, 8], plano: "Emocional" },  
+
+
+    // INTUITIVO
+    "Espiritualidade": { nums: [7, 9], plano: "Intuitivo" },
+    "Humanismo": { nums: [9], plano: "Intuitivo" },
+    "Idealismo": { nums: [11, 9, 2], plano: "Intuitivo" },
+    "Sabedoria": { nums: [7, 9, 2], plano: "Intuitivo" },
+    "Intuição": { nums: [7, 2, 11], plano: "Intuitivo" },
+    "Visão de Futuro": { nums: [1, 8, 9, 11], plano: "Intuitivo" },
+    "Materialismo": { nums: [8, 4], plano: "Intuitivo" },
+    "Sentido de Justiça": { nums: [4, 8, 9], plano: "Intuitivo" },
+     "Sentimento universal": { nums: [9], plano: "Intuitivo" },
+    "Consciência ecológica": { nums: [6, 4, 9], plano: "Intuitivo" }
+
+
+};
+
+function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
+    let rankingGeral = [];
+
+    for (let nomeAtributo in megaBancoAtributos) {
+        let dados = megaBancoAtributos[nomeAtributo];
+        let nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
         
-        // ESSÊNCIA (ROXO)
-        "Sensibilidade": { nums: [2, 7], cat: "Essência", cor: "#6a1b9a" },
-        "Curiosidade": { nums: [5, 7], cat: "Essência", cor: "#6a1b9a" },
-        "Introspecção": { nums: [7], cat: "Essência", cor: "#6a1b9a" },
-        "Intelecto": { nums: [7, 4], cat: "Essência", cor: "#6a1b9a" },
-        "Senso Crítico": { nums: [7, 8], cat: "Essência", cor: "#6a1b9a" },
-        "Persistência": { nums: [4, 9], cat: "Essência", cor: "#6a1b9a" },
-        "Intuição": { nums: [7, 2], cat: "Essência", cor: "#6a1b9a" },
-        "Colaboração": { nums: [2, 6], cat: "Essência", cor: "#6a1b9a" },
-        "Visão de Futuro": { nums: [1, 8, 9], cat: "Essência", cor: "#6a1b9a" },
-         "Humildade": { nums: [9, 2], cat: "Essência", cor: "#6a1b9a" },
-        
-        // APROVEITAR A VIDA (LARANJA)
-        "Alegria/Jovialidade": { nums: [3], cat: "Vida", cor: "#ef6c00" },
-        "Dinamismo": { nums: [5, 1], cat: "Vida", cor: "#ef6c00" },
-        "Otimismo": { nums: [3], cat: "Vida", cor: "#ef6c00" },
-        "Extroversão": { nums: [3, 5], cat: "Vida", cor: "#ef6c00" },
-        "Espontaneidade": { nums: [3, 5], cat: "Vida", cor: "#ef6c00" },
-        "Adaptabilidade": { nums: [5, 2], cat: "Vida", cor: "#ef6c00" },
-        "Versatilidade": { nums: [5], cat: "Vida", cor: "#ef6c00" },
-        
-        // RELACIONAMENTO (AMARELO)
-        "Demonstração de Afeto": { nums: [6, 3], cat: "Relacionamento", cor: "#fbc02d" },
-        "Diplomacia": { nums: [2], cat: "Relacionamento", cor: "#fbc02d" },
-        "Comprometimento": { nums: [4, 6], cat: "Relacionamento", cor: "#fbc02d" },
-        "Magnetismo Pessoal": { nums: [3, 5, 8], cat: "Relacionamento", cor: "#fbc02d" },
-        "Flexibilidade": { nums: [5, 2, 3], cat: "Relacionamento", cor: "#fbc02d" },
-        "Empatia": { nums: [2, 6, 9], cat: "Relacionamento", cor: "#fbc02d" },
-        "Expressividade": { nums: [3], cat: "Relacionamento", cor: "#fbc02d" },
-        
-        // VALORES (AZUL)
-        "Espiritualidade": { nums: [7, 9], cat: "Valores", cor: "#1565c0" },
-        "Materialismo": { nums: [8, 4], cat: "Valores", cor: "#1565c0" },
-        "Idealismo": { nums: [9, 2], cat: "Valores", cor: "#1565c0" },
-        "Humanismo": { nums: [9, 6], cat: "Valores", cor: "#1565c0" },
-        "Sentido de Justiça": { nums: [4, 8, 9], cat: "Valores", cor: "#1565c0" },
-        "Sentimento universal": { nums: [9], cat: "Valores", cor: "#1565c0" },
-        "Consciência ecológica": { nums: [6, 4, 9], cat: "Valores", cor: "#1565c0" },
-    };
-
-  const bancoNecessidadesVermelho = {
-    // --- COMPORTAMENTAL E ADAPTAÇÃO ---
-    "Flexibilidade": { nums: [5, 2, 3], cat: "Necessidade", cor: "#cc0000" },
-    "Adaptabilidade": { nums: [5, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Humildade": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Autocontrole": { nums: [8, 4], cat: "Necessidade", cor: "#cc0000" },
-    "Paciência": { nums: [2, 7], cat: "Necessidade", cor: "#cc0000" },
-    "Tolerância": { nums: [9, 2], cat: "Necessidade", cor: "#cc0000" },
-    "Resiliência": { nums: [4, 9], cat: "Necessidade", cor: "#cc0000" },
-    "Disciplina": { nums: [4], cat: "Necessidade", cor: "#cc0000" },
-
-    // --- AUTONOMIA E FOCO ---
-    "Independência": { nums: [1, 5], cat: "Necessidade", cor: "#cc0000" },
-    "Proatividade": { nums: [1], cat: "Necessidade", cor: "#cc0000" },
-    "Praticidade": { nums: [4, 8], cat: "Necessidade", cor: "#cc0000" },
-    "Organização": { nums: [4], cat: "Necessidade", cor: "#cc0000" },
-    "Foco e Concentração": { nums: [4, 7], cat: "Necessidade", cor: "#cc0000" },
-    "Tomada de Decisão": { nums: [1, 8], cat: "Necessidade", cor: "#cc0000" },
-    "Autoafirmação": { nums: [1], cat: "Necessidade", cor: "#cc0000" },
-
-    // --- SOCIAL E EMOCIONAL ---
-    "Diplomacia": { nums: [2], cat: "Necessidade", cor: "#cc0000" },
-    "Comunicação Assertiva": { nums: [3], cat: "Necessidade", cor: "#cc0000" },
-    "Sociabilidade": { nums: [3, 5], cat: "Necessidade", cor: "#cc0000" },
-    "Empatia": { nums: [2, 9, 6], cat: "Necessidade", cor: "#cc0000" },
-    "Desapego": { nums: [9, 5], cat: "Necessidade", cor: "#cc0000" },
-    "Expressividade": { nums: [3], cat: "Necessidade", cor: "#cc0000" },
-    "Colaboração": { nums: [2, 6], cat: "Necessidade", cor: "#cc0000" },
-
-
-};      
-
-function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) { 
-    let ranking = [];
-    for (let legenda in bancoLegendasCompleto) {
-        const dados = bancoLegendasCompleto[legenda];
-        const nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
-        ranking.push({ nome: legenda, nota: nota, categoria: dados.cat, cor: dados.cor });
+        rankingGeral.push({
+            nome: nomeAtributo,
+            nota: nota,
+            plano: dados.plano,
+            percentual: (nota * 10).toFixed(1)
+        });
     }
 
-    let html = `<h2 style="color:var(--gold); text-align:center; margin-top:30px; letter-spacing:2px;">ANÁLISE DE POTENCIAIS</h2>`;
-    const cats = ["Potencial", "Essência", "Vida", "Relacionamento", "Valores"];
-    const nomesBonitos = {"Potencial":"Seu Potencial", "Essência":"Sua Essência", "Vida":"Capacidade de Aproveitar a Vida", "Relacionamento":"Dinâmica Social", "Valores":"Seus Valores"};
+    // Filtros de Performance
+    const potenciaisLuz = rankingGeral.filter(i => i.nota >= 7.2).sort((a,b) => b.nota - a.nota);
+    const necessidades = rankingGeral.filter(i => i.nota < 5.2).sort((a,b) => a.nota - b.nota);
 
-    cats.forEach(c => {
-        const itens = ranking.filter(i => i.categoria === c && i.nota >= 4.5).sort((a,b)=>b.nota-a.nota).slice(0,4);
-        if(itens.length > 0) {
-            // RESTAURA O ESTILO ANTERIOR: Borda lateral grossa e padding
-            html += `<div class="card" style="border-left:12px solid ${itens[0].cor}; padding: 25px; margin-bottom: 25px; background: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                <h3 style="margin-top:0; color:${itens[0].cor}; text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">${nomesBonitos[c]}</h3>`;
-            
-            itens.forEach(item => {
-                let p = item.nota * 10;
-                // Formatação com 1 casa decimal para parecer cálculo de precisão (ex: 83.4%)
-                let pExibicao = p.toFixed(1); 
-                
-                // RESTAURA O LAYOUT EMPILHADO (Um abaixo do outro)
-                html += `
-                <div style="margin-bottom:12px;">
-                    <div style="display:flex; justify-content:space-between; font-size:12px; font-weight: bold; color: #444; margin-bottom: 4px;">
-                        <span>${item.nome}</span>
-                        <span>${pExibicao}%</span>
-                    </div>
-                    <div style="height:10px; background:#f0f0f0; border-radius:5px; overflow:hidden;">
-                        <div style="width:${p}%; height:100%; background:${item.cor}; border-radius:5px; transition: width 1s ease-in-out;"></div>
-                    </div>
-                </div>`;
-            });
-            html += `</div>`;
-        }
-    });
+    let htmlGraficos = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">ANÁLISE DE POTENCIAIS</h2>`;
 
-    // CARD DE DESENVOLVIMENTO (VERMELHO) - Ajuste de visual
-    let htmlNecessidades = "";
-    let temNecessidade = false;
-    for (let itemNec in bancoNecessidadesVermelho) {
-        const dadosNec = bancoNecessidadesVermelho[itemNec];
-        const notaNec = calcularIntensidadeAtributo(dadosNec.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
-        if (notaNec < 5.8) {
-            temNecessidade = true;
-            let urgencia = (10.5 - notaNec) * 9.5; 
-            htmlNecessidades += `
-                <div style="margin-bottom:15px;">
-                    <div style="display:flex; justify-content:space-between; font-size:13px; color:#333; font-weight:bold;">
-                        <span>${itemNec}</span>
-                        <span> ATENÇÃO: ${urgencia.toFixed(1)}%</span>
-                    </div>
-                    <div class="barra-vermelha" style="background: #eee; height: 12px;">
-                        <div class="progresso-vermelho" style="width:${urgencia}%; background: linear-gradient(90deg, #ff4444, #990000);"></div>
-                    </div>
-                </div>`;
-        }
+    // Bloco de Forças
+    if (potenciaisLuz.length > 0) {
+        htmlGraficos += `<div class="card" style="border-left:14px solid #2e7d32; padding:25px; background:#fff; margin-bottom:25px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h3 style="color:#2e7d32; margin-top:0; font-size:18px; text-transform:uppercase;">🌟 SEUS PONTOS DE FORÇA</h3>
+                    <p style="font-size:13px; color:#666; margin-bottom:20px;">Frequências altamente ativas que impulsionam seus resultados nos planos físico, mental e emocional.</p>`;
+        potenciaisLuz.slice(0, 10).forEach(item => {
+            htmlGraficos += montarBarraGrafico(item, "#2e7d32");
+        });
+        htmlGraficos += `</div>`;
     }
 
-    if (temNecessidade) {
-        html += `
-        <h2 style="color:#cc0000; text-align:center; margin-top:40px; letter-spacing:1px;">⚠️ FOCO DE DESENVOLVIMENTO</h2>
-        <div class="card-necessidades" style="border-left: 14px solid #cc0000; background: #fff; padding: 25px; margin-bottom: 25px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-            <p style="color:#900; font-size:14px; margin-bottom:25px; font-weight:bold; border-bottom: 1px solid #ffcccc; padding-bottom: 10px;">
-                Identificamos oscilações nas seguintes frequências que bloqueiam sua evolução plena:
-            </p>
-            ${htmlNecessidades}
-        </div>`;
+    // Bloco de Atenção
+    if (necessidades.length > 0) {
+        htmlGraficos += `<h2 style="color:#cc0000; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">⚠️ FOCO DE DESENVOLVIMENTO</h2>
+                 <div class="card" style="border-left:14px solid #cc0000; padding:25px; background:#fff; margin-bottom:25px; border-radius:8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <h3 style="color:#cc0000; margin-top:0; font-size:18px; text-transform:uppercase;">BLOQUEIOS E OSCILAÇÕES</h3>
+                    <p style="font-size:13px; color:#666; margin-bottom:20px;">Atributos que apresentam baixa voltagem vibracional ou interferência de sequências negativas.</p>`;
+        necessidades.slice(0, 10).forEach(item => {
+            htmlGraficos += montarBarraGrafico(item, "linear-gradient(90deg, #ff4444, #990000)");
+        });
+        htmlGraficos += `</div>`;
     }
-    return html;
+    return htmlGraficos;
 }
 
+function montarBarraGrafico(item, cor) {
+    return `
+    <div style="margin-bottom:15px;">
+        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:bold; color:#333; margin-bottom:4px;">
+            <span>${item.nome.toUpperCase()} <small style="color:#827108;">(${item.plano})</small></span>
+            <span>${item.percentual}%</span>
+        </div>
+        <div style="height:10px; background:#f0f0f0; border-radius:5px; overflow:hidden; border: 1px solid #eee;">
+            <div style="width:${item.percentual}%; height:100%; background:${cor}; border-radius:5px;"></div>
+        </div>
+    </div>`;
+}
         
         function gerarMapaCompleto() {
             const nomeRaw = document.getElementById("nome").value.trim();
