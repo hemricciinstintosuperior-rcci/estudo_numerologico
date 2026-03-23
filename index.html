@@ -528,30 +528,75 @@ function montarHtmlPlanosNatural(nome) {
             </div>
     `;
 
-    // 4. SÍNTESE DO PERFIL (Utilizando o seu baseTextos da foto)
-    const txtForca = baseTextos[p1.chave][p1.nivel];
-    const txtDesafio = baseTextos[p4.chave][p4.nivel];
-    let conclusaoDinamica = p1.nivel === "forte" && p4.nivel === "fraco" 
-        ? `Você opera em Alta Polaridade. Sua força no ${nomesAmigaveis[p1.chave]} impulsiona sua jornada.`
-        : `Seu perfil mostra uma dinâmica de equilíbrio entre ${nomesAmigaveis[p1.chave]} e ${nomesAmigaveis[p4.chave]}.`;
+// --- MOTOR DE INTELIGÊNCIA: SÍNTESE DO PLANO DE EXPRESSÃO ---
+    const p1 = planosOrdenados[0];
+    const p2 = planosOrdenados[1];
+    const p3 = planosOrdenados[2];
+    const p4 = planosOrdenados[3];
 
+    let perfilChave = "";
+    let conexaoTitulo = "";
+
+    const gapTotal = p1.vib - p4.vib;
+    const gapTopo = p1.vib - p2.vib;
+    const gapBase = p3.vib - p4.vib;
+
+    // LÓGICA DE DECISÃO
+    if (p4.vib >= 7) {
+        perfilChave = "desperto";
+        conexaoTitulo = "Alinhamento Integral";
+    } else if (gapTotal <= 2) {
+        perfilChave = "plato";
+        conexaoTitulo = "Platô de Estabilidade";
+    } else if (gapTopo >= 4) {
+        perfilChave = "monolito";
+        conexaoTitulo = "Pico de Especialização";
+    } else if (gapTopo <= 1 && gapBase >= 3) {
+        perfilChave = "binario";
+        conexaoTitulo = "Estrutura Binária";
+    } else if (p3.vib >= 6 && p4.vib <= 3) {
+        perfilChave = "tripe";
+        conexaoTitulo = "Sustentação Ampla";
+    } else if (p1.vib >= 7 && p2.vib <= 4) {
+        perfilChave = "vale";
+        conexaoTitulo = "Resiliência de Pilar Único";
+    } else {
+        perfilChave = "gangorra";
+        conexaoTitulo = "Intensidade Dinâmica";
+    }
+
+    const textoFinalSintese = textosSinteseExpressao[perfilChave];
+
+    // --- MONTAGEM DO HTML ---
     html += `
-            <div style="margin-top:50px; border-top:2px solid var(--gold); padding-top:25px; background:#f9f9f9; padding:20px; border-radius:12px;">
-                <h3 style="text-align:center; color:var(--dark); margin-bottom:20px; text-transform:uppercase; letter-spacing:2px;">Síntese da Matriz</h3>
-                
-                <p><strong>Força Principal (${nomesAmigaveis[p1.chave]}):</strong><br>
-                <span class="texto-res">${aplicarFiltroTexto(txtForca)}</span></p>
-                
-                <p><strong>Desafio Atual (${nomesAmigaveis[p4.chave]}):</strong><br>
-                <span class="texto-res">${aplicarFiltroTexto(txtDesafio)}</span></p>
-                
-                <div style="margin-top:20px; padding:15px; background:var(--dark); color:var(--gold); border-radius:8px; text-align:center;">
-                    <strong>CONEXÃO FINAL:</strong><br>
-                    <span>${aplicarFiltroTexto(conclusaoDinamica)}</span>
+        <div style="margin-top:50px; border:2px solid var(--gold); background:#fff; padding:25px; border-radius:12px;">
+            <div style="text-align:center; margin-bottom:20px;">
+                <span style="background:var(--gold); color:white; padding:4px 15px; border-radius:20px; font-size:11px; font-weight:bold; text-transform:uppercase;">${conexaoTitulo}</span>
+                <h3 style="color:var(--dark); margin-top:10px; text-transform:uppercase; letter-spacing:2px;">SÍNTESE DO PLANO DE EXPRESSÃO</h3>
+            </div>
+            
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 25px;">
+                <div style="padding:15px; background:#f4fbf4; border-radius:8px; border-left:5px solid #2e7d32;">
+                    <small style="color:#2e7d32; font-weight:bold;">CANAL DE FORÇA</small><br>
+                    <strong style="font-size:18px;">${nomesAmigaveis[p1.chave]}</strong>
+                </div>
+                <div style="padding:15px; background:#fff5f5; border-radius:8px; border-left:5px solid #c62828;">
+                    <small style="color:#c62828; font-weight:bold;">PONTO DE APRENDIZADO</small><br>
+                    <strong style="font-size:18px;">${nomesAmigaveis[p4.chave]}</strong>
+                </div>
+            </div>
+
+            <div class="texto-res" style="line-height:1.8; color:#333; font-size:16px;">
+                ${aplicarFiltroTexto(textoFinalSintese)}
+                <br><br>
+                <div style="background:var(--dark); color:var(--gold); padding:15px; border-radius:8px; text-align:center; font-size:14px;">
+                    <strong>DIRETRIZ DE EQUILÍBRIO:</strong> Sua expressão atinge o potencial máximo quando você utiliza a energia do plano <strong>${nomesAmigaveis[p1.chave]}</strong> para sustentar o desenvolvimento do plano <strong>${nomesAmigaveis[p4.chave]}</strong>.
                 </div>
             </div>
         </div>
     `;
+    
+
 
     return html;
 }
