@@ -2279,15 +2279,30 @@ const textosTrânsito = {
 const conectores = ["Além disso,", "Também,", "Outro ponto importante,", "Somando-se a isso,", "Em complemento,"];
 
 const textosSinteseExpressao = {
-    monolito: "Seu Plano de Expressão revela um **Pico de Especialização**. Você manifesta sua energia de forma singular e focada. Sua força no plano dominante é tão vasta que ela dita suas principais reações, mas cuidado para não se tornar rígido em sua forma de agir.",
-    binario: "Você possui uma **Estrutura de Dupla Manifestação**. Existe uma aliança estratégica entre seus dois canais de expressão principais, permitindo que você realize e sinta com o mesmo nível de intensidade.",
-    tripe: "Seu Plano de Expressão é de **Sustentação Ampla**. Você manifesta seus talentos de forma polivalente, com recursos disponíveis em quase todas as áreas de atuação humana.",
-    plato: "Sua configuração é um **Platô de Estabilidade**. Você é o camaleão da numerologia, expressando-se com equilíbrio em qualquer cenário. Sua força está na versatilidade total da sua conduta.",
-    vale: "Você vive uma **Resiliência de Pilar Único**. Sua expressão no mundo é sustentada por um canal de força absoluta que carrega os outros. É uma estrutura de grande impacto focado em uma única direção.",
-    gangorra: "Sua expressão opera no modo **Intensidade Dinâmica**. Você transita entre picos de entrega total e vales de recolhimento. Não existe meio-termo na sua forma de se mostrar ao mundo.",
-    desperto: "Você apresenta o raro estado de **Alinhamento Integral**. Todos os seus canais de expressão operam em alta frequência, indicando que sua forma de pensar, sentir e agir está em total harmonia."
-};
+    // 1. DUAS POTÊNCIAS E DOIS EQUILÍBRIOS (Caso do Carlos)
+    "FFMM": "O perfil apresenta uma **Dualidade de Potência**. Existem dois motores principais que operam em alta frequência, garantindo força de realização e intensidade. Os outros dois planos atuam como estabilizadores, operando no nível médio (equilíbrio). O desafio é não deixar que as duas potências dominantes abafem a voz dos planos equilibrados, mantendo a fluidez entre a ação e a moderação.",
 
+    // 2. TODOS EM EQUILÍBRIO (O que seria o antigo Alinhamento)
+    "FMMM": "Este é o estado de **Platô de Estabilidade**. Não há um plano que tente atropelar os outros; todos operam na frequência do equilíbrio (Médio). É o melhor estado para quem busca uma vida ponderada, sem grandes picos de estresse ou quedas de energia. A conquista aqui vem da constância e da clareza, pois a mente, o corpo e a alma caminham em passos iguais.",
+
+    // 3. TRÊS POTÊNCIAS E UM EQUILÍBRIO
+    "FFFM": "O perfil de **Tripé de Sustentação Ampla**. Quase todos os seus canais de expressão operam em potência máxima. Isso indica uma personalidade multifacetada e com grande energia vital. O único plano em estado médio funciona como o seu 'porto seguro', o ponto onde você recarrega as energias quando o excesso de força dos outros três planos começa a exaurir seu sistema.",
+
+    // 4. UMA POTÊNCIA ISOLADA (O MONOLITO)
+    "Ffff": "Estamos diante de um **Monolito de Especialização**. Existe uma força avassaladora em apenas um plano, enquanto os outros três encontram-se em estado de retração (Fracos). Isso indica um especialista nato, alguém que foca toda sua existência em um único canal. O risco aqui é a negligência com as outras áreas da vida, exigindo um esforço consciente para 'resgatar' os planos que estão na sombra.",
+
+    // 5. DOIS FORTES E DOIS FRACOS (SEM MEIO TERMO)
+    "FFff": "Um perfil de **Binário de Extremos**. Você opera no sistema 'tudo ou nada'. Quando está engajado nos seus dois planos fortes, nada o detém. Porém, os planos fracos podem representar 'buracos negros' por onde sua energia escapa. É necessário usar a potência dos planos líderes para construir pontes de socorro para as áreas que estão desassistidas.",
+
+    // 6. EQUILÍBRIO COM UM PONTO CEGO
+    "FMMf": "Perfil de **Equilíbrio com Ponto de Resgate**. Você possui uma vida muito estável e equilibrada na maioria dos sentidos, porém existe um canal específico que está operando abaixo do mínimo necessário. Esse plano 'fraco' pode estar drenando sua paz silenciosamente. O foco deve ser estabilizar esse ponto de fuga para que o seu equilíbrio (médio) não seja comprometido.",
+
+    // 7. PICO DE TRANSIÇÃO (UM FORTE, UM MÉDIO, DOIS FRACOS)
+    "FMff": "Este é o **Pico de Transição Dinâmica**. Você tem um líder (Forte) e um braço direito (Médio), mas a sua base de sustentação ainda é frágil. É o perfil de quem está começando a expandir sua consciência ou suas capacidades, mas ainda sente o peso das limitações passadas nos planos que permanecem fracos.",
+
+    // TEXTO DE SEGURANÇA
+    "padrao": "Seu Plano de Expressão apresenta uma configuração única de intensidade dinâmica. A interação entre seus planos fortes, médios e fracos cria uma assinatura energética singular, exigindo que você utilize sempre o seu canal de maior pontuação como guia para equilibrar os demais."
+};
 // TEXTOS BASE (FALLBACK)
     const baseTextos = {
         fisico: {
