@@ -272,11 +272,14 @@ const nomesExibicao = {
             return (valorBase + soma) * mult;
         }
 
-        function aplicarFiltroTexto(texto) {
-            if (!texto) return "";
-            let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
-            return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
-        }
+function aplicarFiltroTexto(texto) {
+    // Se o texto não existir, for nulo ou não for uma string, retorna vazio ou um aviso
+    if (!texto || typeof texto !== 'string') {
+        return ""; 
+    }
+    let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
+    return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
+}
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let nota = 4.5 + (nomeRaw.length % 3) * 0.17; 
     
