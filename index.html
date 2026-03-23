@@ -497,19 +497,35 @@ let html = `
 `;
 
 // Primeiro Loop: Apenas para criar as barras
+// --- NOVO MOTOR DE BUSCA POR VOLUME E VIBRAÇÃO ---
 for(let p in dados.soma) {
     let numRed = reduzir(dados.soma[p]);
-    let porcentagem = (dados.soma[p] / dados.maior) * 100;
+    let pontuacaoTotal = dados.soma[p];
     
+    // REGRA DE OURO DO PLANO DE EXPRESSÃO:
+    // A intensidade (Fraco/Médio/Forte) vem do volume de pontos comparado ao total
+    let intensidade = "medio"; 
+    
+    // Aqui usamos a lógica de proporção (ajuste os valores se precisar)
+    if (pontuacaoTotal <= (dados.maior * 0.35)) {
+        intensidade = "fraco";
+    } else if (pontuacaoTotal >= (dados.maior * 0.75)) {
+        intensidade = "forte";
+    } else {
+        intensidade = "medio";
+    }
+
+    // BUSCA DINÂMICA: Ex: textosPlanos['fisico']['medio'][9]
+    const textoPlanoIndiv = (textosPlanos[p] && textosPlanos[p][intensidade] && textosPlanos[p][intensidade][numRed]) 
+                            ? textosPlanos[p][intensidade][numRed] 
+                            : `Texto não encontrado para ${p} ${intensidade} ${numRed}`;
+
     html += `
-        <div style="margin-bottom: 15px;">
-            <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
-                <span style="font-weight:bold; font-size:13px; text-transform:uppercase; color:#555;">${nomesAmigaveis[p]}</span>
-                <span style="font-weight:bold; color:${coresPlanos[p]};">Vibração ${numRed}</span>
-            </div>
-            <div style="height:10px; background:#eee; border-radius:5px; overflow:hidden;">
-                <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p]};"></div>
-            </div>
+        <div style="margin-bottom: 25px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
+            <h4 style="margin: 0 0 5px 0; color: ${coresPlanos[p]}; text-transform: uppercase;">
+                ${nomesAmigaveis[p]} <small style="font-size:11px; opacity:0.7;">(${intensidade.toUpperCase()})</small>
+            </h4>
+            <div class="texto-res" style="font-size:15px; color:#333;">${aplicarFiltroTexto(textoPlanoIndiv)}</div>
         </div>
     `;
 }
