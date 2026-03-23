@@ -529,16 +529,24 @@ function montarHtmlPlanosNatural(nome) {
     `;
 
 
+// --- MOTOR DE INTELIGÊNCIA: SÍNTESE DO PLANO DE EXPRESSÃO ---
+    
+    // Garante que p1, p2, p3 e p4 existam para os cálculos abaixo
+    const _p1 = planosOrdenados[0];
+    const _p2 = planosOrdenados[1];
+    const _p3 = planosOrdenados[2];
+    const _p4 = planosOrdenados[3];
 
     let perfilChave = "";
     let conexaoTitulo = "";
 
-    const gapTotal = p1.vib - p4.vib;
-    const gapTopo = p1.vib - p2.vib;
-    const gapBase = p3.vib - p4.vib;
+    // Usamos as novas variáveis com underscore para evitar conflito de nome
+    const gapTotal = _p1.vib - _p4.vib;
+    const gapTopo = _p1.vib - _p2.vib;
+    const gapBase = _p3.vib - _p4.vib;
 
     // LÓGICA DE DECISÃO
-    if (p4.vib >= 7) {
+    if (_p4.vib >= 7) {
         perfilChave = "desperto";
         conexaoTitulo = "Alinhamento Integral";
     } else if (gapTotal <= 2) {
@@ -550,10 +558,10 @@ function montarHtmlPlanosNatural(nome) {
     } else if (gapTopo <= 1 && gapBase >= 3) {
         perfilChave = "binario";
         conexaoTitulo = "Estrutura Binária";
-    } else if (p3.vib >= 6 && p4.vib <= 3) {
+    } else if (_p3.vib >= 6 && _p4.vib <= 3) {
         perfilChave = "tripe";
         conexaoTitulo = "Sustentação Ampla";
-    } else if (p1.vib >= 7 && p2.vib <= 4) {
+    } else if (_p1.vib >= 7 && _p2.vib <= 4) {
         perfilChave = "vale";
         conexaoTitulo = "Resiliência de Pilar Único";
     } else {
