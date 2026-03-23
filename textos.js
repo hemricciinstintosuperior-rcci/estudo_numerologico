@@ -2278,6 +2278,28 @@ const textosTrânsito = {
 
 const conectores = ["Além disso,", "Também,", "Outro ponto importante,", "Somando-se a isso,", "Em complemento,"];
 
-
+// TEXTOS BASE (FALLBACK)
+    const baseTextos = {
+        fisico: {
+            fraco: "Sua falta de praticidade e objetividade pode dificultar colocar planos em andamento.",
+            medio: "O bom senso é sua chave. Você cumpre atividades mantendo o foco.",
+            forte: "Suas atitudes são poderosas e seguras, focando na solução imediata."
+        },
+        mental: {
+            fraco: "Pode ter dificuldade em resistir a opiniões alheias.",
+            medio: "Você é cauteloso e lida bem com questões complexas.",
+            forte: "Extremamente analítico e racional, com grande capacidade de liderança."
+        },
+        emocional: {
+            fraco: "Pode ter problemas em expressar sentimentos.",
+            medio: "Equilíbrio emocional pleno e comunicação saudável.",
+            forte: "Suas emoções comandam suas decisões, alimentando muita criatividade."
+        },
+        intuitivo: {
+            fraco: "O lado espiritual não é prioridade imediata.",
+            medio: "Introspectivo, usa o recolhimento para recuperar energia.",
+            forte: "Sentido espiritual vital, capta intenções facilmente."
+        }
+    };
   
 
