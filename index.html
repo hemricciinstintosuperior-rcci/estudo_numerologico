@@ -472,29 +472,37 @@ function montarHtmlPlanosNatural(nome) {
     const dados = calcularDadosPlanos(nome);
     const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
     
-    // --- LÓGICA DA SUA FOTO ---
-    // Criamos um array ordenado para saber quem é o P1 (maior) e P4 (menor)
     const planosOrdenados = Object.entries(dados.soma)
-        .map(([chave, valor]) => ({
-            chave: chave,
-            valor: valor,
-            // Definimos se é forte ou fraco baseado na vibração (ex: > 5 é forte)
-            nivel: reduzir(valor) >= 5 ? "forte" : "fraco" 
-        }))
+        .map(([chave, valor]) => {
+            let vib = reduzir(valor);
+            let nv = "medio"; // Padrão
+            if (vib <= 3) nv = "fraco";
+            else if (vib >= 7) nv = "forte";
+
+            return {
+                chave: chave,
+                valor: valor,
+                nivel: nv,
+                vib: vib
+            };
+        })
         .sort((a, b) => b.valor - a.valor);
 
     const p1 = planosOrdenados[0];
     const p4 = planosOrdenados[3];
-    let conclusaoDinamica = "";
+    
+    // --- LÓGICA DE RECUPERAÇÃO DOS TEXTOS (AJUSTADA PARA SUA FOTO) ---
+    // Acessa: baseTextos -> plano -> nivel (fraco/medio/forte)
+    const txtForca = baseTextos[p1.chave][p1.nivel];
+    const txtDesafio = baseTextos[p4.chave][p4.nivel];
 
-    // Exatamente a lógica do seu if na foto:
+    let conclusaoDinamica = "";
     if (p1.nivel === "forte" && p4.nivel === "fraco") {
         conclusaoDinamica = `Você opera em Alta Polaridade. Sua força no ${nomesAmigaveis[p1.chave]} impulsiona sua jornada.`;
     } else {
         conclusaoDinamica = `Seu perfil mostra uma dinâmica entre ${nomesAmigaveis[p1.chave]} e ${nomesAmigaveis[p4.chave]}.`;
     }
 
-    // --- MONTAGEM DO HTML ---
     let html = `
         <div class="secao-card quebra-pagina">
             <h2 class="titulo-topico">Plano de Expressão Natural</h2>
@@ -519,20 +527,20 @@ function montarHtmlPlanosNatural(nome) {
         `;
     }
 
-    // SÍNTESE DO PERFIL (Estilo da Foto adaptado para o Premium)
+    // --- SÍNTESE DO PERFIL ---
     html += `
             <div style="margin-top:40px; border-top:2px solid var(--gold); padding-top:20px; background:#f9f9f9; padding:20px; border-radius:8px;">
-                <h3 style="text-align:center; color:var(--dark); margin-bottom:20px;">SÍNTESE DO PERFIL</h3>
+                <h3 style="text-align:center; color:var(--dark); margin-bottom:20px; text-transform:uppercase; letter-spacing:2px;">SÍNTESE DO PERFIL</h3>
                 
-                <p><strong>Sua Força Principal (${nomesAmigaveis[p1.chave]}):</strong><br>
-                ${aplicarFiltroTexto(baseTextos[p1.chave])}</p>
+                <p style="margin-bottom:15px;"><strong>Sua Força Principal (${nomesAmigaveis[p1.chave]}):</strong><br>
+                <span class="texto-res">${aplicarFiltroTexto(txtForca)}</span></p>
                 
-                <p><strong>Seu Desafio Atual (${nomesAmigaveis[p4.chave]}):</strong><br>
-                ${aplicarFiltroTexto(baseTextos[p4.chave])}</p>
+                <p style="margin-bottom:15px;"><strong>Seu Desafio Atual (${nomesAmigaveis[p4.chave]}):</strong><br>
+                <span class="texto-res">${aplicarFiltroTexto(txtDesafio)}</span></p>
                 
-                <div style="margin-top:20px; padding:15px; background:var(--dark); color:var(--gold); border-radius:8px; text-align:center;">
-                    <strong>A CONEXÃO FINAL:</strong><br>
-                    <span>${aplicarFiltroTexto(conclusaoDinamica)}</span>
+                <div style="margin-top:20px; padding:20px; background:var(--dark); color:var(--gold); border-radius:8px; text-align:center; border: 1px solid var(--gold);">
+                    <strong style="text-transform:uppercase; font-size:12px; letter-spacing:1px;">A CONEXÃO FINAL</strong><br>
+                    <div style="margin-top:10px; font-size:16px;">${aplicarFiltroTexto(conclusaoDinamica)}</div>
                 </div>
             </div>
         </div>
