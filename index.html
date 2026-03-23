@@ -127,7 +127,24 @@
         const vogais = ["A","E","I","O","U","Y"];
 
 const mapaMatriz = { A:1,I:1,Q:1,J:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5, U:6,V:6,W:6,X:6, O:7,Z:7, F:8,P:8 };
+// Tabelas para o Plano de Expressão
+const tabelaExpressao = {
+    'E':'criativo','W':'indeciso','D':'neutro','M':'neutro',
+    'A':'criativo','H':'indeciso','J':'indeciso','N':'indeciso','P':'indeciso','G':'neutro','L':'neutro',
+    'I':'criativo','O':'criativo','R':'criativo','Z':'criativo','B':'indeciso','S':'indeciso','T':'indeciso','X':'indeciso',
+    'K':'criativo','F':'indeciso','Q':'indeciso','U':'indeciso','Y':'indeciso','C':'neutro','V':'neutro'
+};
 
+const gruposPlanos = { 
+    fisico: ["E","W","D","M"], 
+    mental: ["A","H","J","N","P","G","L"], 
+    emocional: ["I","O","R","Z","B","S","T","X"], 
+    intuitivo: ["K","F","Q","U","Y","C","V"] 
+};
+
+const coresPlanos = { fisico: "#ff4d4d", mental: "#4da6ff", emocional: "#33cc66", intuitivo: "#ffd633" };
+
+        
 function valorLetraMatriz(l){
     let n = l.normalize("NFD");
     let v = mapaMatriz[n[0].toUpperCase()] ?? 0;
@@ -417,6 +434,77 @@ function montarBarraGrafico(item, cor) {
         </div>
     `;
 }
+
+
+function calcularDadosPlanos(nome) {
+    let soma = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
+    let contPerfil = { criativo: 0, indeciso: 0, neutro: 0 };
+    
+    for(let l of nome.toUpperCase()) {
+        let letraBase = l.normalize("NFD")[0];
+        // Cálculo do Valor Vibracional (Energia)
+        let valor = calcularValorLetra(l); // Usa sua função já existente
+        
+        // Identifica o Plano
+        for(let p in gruposPlanos) {
+            if(gruposPlanos[p].includes(letraBase)) {
+                soma[p] += valor;
+                break;
+            }
+        }
+        
+        // Identifica o Perfil (Criativo/Indeciso/Neutro)
+        if (tabelaExpressao[letraBase]) contPerfil[tabelaExpressao[letraBase]]++;
+    }
+    
+    const maior = Math.max(soma.fisico, soma.mental, soma.emocional, soma.intuitivo);
+    const dominantePerfil = Object.keys(contPerfil).reduce((a, b) => contPerfil[a] >= contPerfil[b] ? a : b);
+    
+    return { soma, maior, contPerfil, dominantePerfil };
+}
+
+function montarHtmlPlanosNatural(nome) {
+    const dados = calcularDadosPlanos(nome);
+    const nomesPlanos = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
+    
+    let html = `
+        <div class="secao-card quebra-pagina">
+            <h2 class="titulo-topico">Plano de Expressão Natural</h2>
+            <div class="intro-texto">${textos.introducoes.natural || "Sua estrutura básica de funcionamento e reação ao mundo."}</div>
+            
+            <div style="margin-top:20px;">
+    `;
+
+    // Gera as Barras de Energia
+    for(let p in dados.soma) {
+        let porcentagem = dados.maior > 0 ? (dados.soma[p] / dados.maior) * 100 : 0;
+        let numReduzido = reduzir(dados.soma[p]); // Usa sua função reduzir
+        
+        html += `
+            <div style="margin-bottom: 15px;">
+                <div style="display:flex; justify-content:space-between; font-weight:bold; font-size:14px; color:#333;">
+                    <span>${nomesPlanos[p]} (Nº ${numReduzido})</span>
+                </div>
+                <div style="height:12px; background:#eee; border-radius:6px; overflow:hidden; border:1px solid #f0f0f0;">
+                    <div style="width:${Math.max(porcentagem, 10)}%; height:100%; background:${coresPlanos[p]};"></div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Perfil de Expressão (Criativo/Indeciso/Neutro)
+    html += `
+            <div style="margin-top:30px; padding:20px; border-top:2px solid var(--gold); background:#f9f9f9; border-radius:8px;">
+                <h3 style="color:var(--dark); text-transform:uppercase; font-size:16px;">Perfil de Comportamento: <strong>${dados.dominantePerfil.toUpperCase()}</strong></h3>
+                <p class="texto-res" style="font-size:15px;">${aplicarFiltroTexto(textos.textosExpressao[dados.dominantePerfil])}</p>
+            </div>
+        </div>
+    `;
+    
+    return html;
+}
+
+        
         
         function gerarMapaCompleto() {
             const nomeRaw = document.getElementById("nome").value.trim();
@@ -553,7 +641,18 @@ let html = `
                 <span>2. Pilares de Personalidade</span><span>Pág 05</span>
             </div>
         </div>
-    </div>
+  </div>
+ 
+    <div class="capa">...</div>
+                
+    <div class="secao-card quebra-pagina">...</div>
+
+    ${montarHtmlPlanosNatural(nomeRaw)}
+
+    `;
+  
+
+
 
     <div class="secao-card quebra-pagina">
         <h2 class="titulo-topico">Análise de Potenciais</h2>
