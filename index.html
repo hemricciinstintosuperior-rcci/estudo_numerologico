@@ -561,20 +561,35 @@ function montarHtmlPlanosNatural(nome) {
     const gapBase = _p3.vib - _p4.vib;
 
     // LÓGICA DE DECISÃO DO PERFIL
-    if (_p4.vib >= 7) { 
-        perfilChave = "desperto"; conexaoTitulo = "Alinhamento Integral"; 
-    } else if (gapTotal <= 2) { 
-        perfilChave = "plato"; conexaoTitulo = "Platô de Estabilidade"; 
-    } else if (gapTopo >= 4) { 
-        perfilChave = "monolito"; conexaoTitulo = "Pico de Especialização"; 
-    } else if (gapTopo <= 1 && gapBase >= 3) { 
-        perfilChave = "binario"; conexaoTitulo = "Estrutura Binária"; 
-    } else if (_p3.vib >= 6 && _p4.vib <= 3) { 
-        perfilChave = "tripe"; conexaoTitulo = "Sustentação Ampla"; 
-    } else if (_p1.vib >= 7 && _p2.vib <= 4) { 
-        perfilChave = "vale"; conexaoTitulo = "Resiliência de Pilar Único"; 
-    } else { 
-        perfilChave = "gangorra"; conexaoTitulo = "Intensidade Dinâmica"; 
+// --- MOTOR DE INTELIGÊNCIA CORRIGIDO ---
+    let perfilChave = "gangorra"; // Padrão
+    let conexaoTitulo = "Intensidade Dinâmica";
+
+    // 1. Cálculo de Médias de Volume para comparar os planos
+    const mediaVolume = (_p1.valor + _p2.valor + _p3.valor + _p4.valor) / 4;
+    const variancia = _p1.valor - _p4.valor; // Diferença entre o mais forte e o mais fraco
+
+    // 2. NOVA LÓGICA DE CLASSIFICAÇÃO
+    
+    // Alinhamento Integral: Todos precisam estar no topo (Volume alto e pouca diferença entre eles)
+    if (_p4.valor >= (dados.maior * 0.85) && variancia <= (dados.maior * 0.15)) {
+        perfilChave = "desperto";
+        conexaoTitulo = "Alinhamento Integral";
+    } 
+    // Platô de Estabilidade: Todos estão no MÉDIO (Equilibrados, sem grandes picos)
+    else if (variancia <= (dados.maior * 0.20)) {
+        perfilChave = "plato";
+        conexaoTitulo = "Platô de Estabilidade (Equilíbrio)";
+    }
+    // Estrutura Binária: Dois Fortes (Potência) e dois Médios/Fracos (Carlos se encaixa aqui)
+    else if (_p2.valor >= (dados.maior * 0.80) && _p3.valor <= (dados.maior * 0.60)) {
+        perfilChave = "binario";
+        conexaoTitulo = "Dualidade de Potência";
+    }
+    // Pico de Especialização (Monolito): Um plano é MUITO mais forte que todos os outros
+    else if (gapTopo >= 4 || _p1.valor > (_p2.valor * 1.5)) {
+        perfilChave = "monolito";
+        conexaoTitulo = "Pico de Especialização";
     }
 
     const textoFinalSintese = textosSinteseExpressao[perfilChave] || "Análise de síntese em processamento...";
