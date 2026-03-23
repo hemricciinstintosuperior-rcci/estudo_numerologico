@@ -487,34 +487,50 @@ function montarHtmlPlanosNatural(nome) {
     const p4 = planosOrdenados[3];
 
     // --- INÍCIO DO HTML ---
-    let html = `
-        <div class="secao-card quebra-pagina">
-            <h2 class="titulo-topico">Plano de Expressão Natural</h2>
-            <div class="intro-texto">${aplicarFiltroTexto(introducoes.natural)}</div>
-            <div style="margin-top:20px;">
-    `;
-
-    // 2. RENDERIZAÇÃO DAS BARRAS + TEXTOS INDIVIDUAIS (Físico, Mental, etc.)
-    for(let p in dados.soma) {
-        let numRed = reduzir(dados.soma[p]);
-        let porcentagem = (dados.soma[p] / dados.maior) * 100;
+ // --- INÍCIO DA MONTAGEM DO HTML ---
+let html = `
+    <div class="secao-card quebra-pagina">
+        <h2 class="titulo-topico">Plano de Expressão Natural</h2>
+        <div class="intro-texto">${aplicarFiltroTexto(introducoes.natural)}</div>
         
-        // BUSCA O TEXTO NO textosPlanos (Ex: textosPlanos.fisico.forte[9])
-        const textoPlanoIndiv = textosPlanos[p]?.forte[numRed] || "";
+        <div style="margin-top: 25px; margin-bottom: 40px; background: #f9f9f9; padding: 20px; border-radius: 8px;">
+`;
 
-        html += `
-            <div style="margin-bottom: 30px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 8px;">
-                    <span style="font-weight:bold; font-size:16px; color:var(--dark); text-transform:uppercase;">${nomesAmigaveis[p]}</span>
-                    <span style="background:var(--gold); color:white; padding:2px 8px; border-radius:4px; font-size:12px; font-weight:bold;">Vibração ${numRed}</span>
-                </div>
-                <div style="height:8px; background:#eee; border-radius:4px; overflow:hidden; margin-bottom:12px;">
-                    <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p]};"></div>
-                </div>
-                <div class="texto-res" style="font-size:15px; color:#333;">${aplicarFiltroTexto(textoPlanoIndiv)}</div>
+// Primeiro Loop: Apenas para criar as barras
+for(let p in dados.soma) {
+    let numRed = reduzir(dados.soma[p]);
+    let porcentagem = (dados.soma[p] / dados.maior) * 100;
+    
+    html += `
+        <div style="margin-bottom: 15px;">
+            <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
+                <span style="font-weight:bold; font-size:13px; text-transform:uppercase; color:#555;">${nomesAmigaveis[p]}</span>
+                <span style="font-weight:bold; color:${coresPlanos[p]};">Vibração ${numRed}</span>
             </div>
-        `;
-    }
+            <div style="height:10px; background:#eee; border-radius:5px; overflow:hidden;">
+                <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p]};"></div>
+            </div>
+        </div>
+    `;
+}
+
+html += `</div> <div style="margin-top:20px;">
+`;
+
+// Segundo Loop: Para colocar os textos baseados nas vibrações
+for(let p in dados.soma) {
+    let numRed = reduzir(dados.soma[p]);
+    const textoPlanoIndiv = textosPlanos[p]?.forte[numRed] || "";
+
+    html += `
+        <div style="margin-bottom: 25px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
+            <h4 style="margin: 0 0 10px 0; color: ${coresPlanos[p]}; text-transform: uppercase;">Análise ${nomesAmigaveis[p]}</h4>
+            <div class="texto-res" style="font-size:15px; color:#333;">${aplicarFiltroTexto(textoPlanoIndiv)}</div>
+        </div>
+    `;
+}
+
+// ... Restante do código (Perfil de Comportamento e Síntese) permanece igual
 
     // 3. PERFIL DE COMPORTAMENTO (Criativo, Neutro, Indeciso)
     // BUSCA NO textosExpressao[dados.dominantePerfil]
