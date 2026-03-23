@@ -2278,6 +2278,16 @@ const textosTrânsito = {
 
 const conectores = ["Além disso,", "Também,", "Outro ponto importante,", "Somando-se a isso,", "Em complemento,"];
 
+const textosSinteseExpressao = {
+    monolito: "Seu Plano de Expressão revela um **Pico de Especialização**. Você manifesta sua energia de forma singular e focada. Sua força no plano dominante é tão vasta que ela dita suas principais reações, mas cuidado para não se tornar rígido em sua forma de agir.",
+    binario: "Você possui uma **Estrutura de Dupla Manifestação**. Existe uma aliança estratégica entre seus dois canais de expressão principais, permitindo que você realize e sinta com o mesmo nível de intensidade.",
+    tripe: "Seu Plano de Expressão é de **Sustentação Ampla**. Você manifesta seus talentos de forma polivalente, com recursos disponíveis em quase todas as áreas de atuação humana.",
+    plato: "Sua configuração é um **Platô de Estabilidade**. Você é o camaleão da numerologia, expressando-se com equilíbrio em qualquer cenário. Sua força está na versatilidade total da sua conduta.",
+    vale: "Você vive uma **Resiliência de Pilar Único**. Sua expressão no mundo é sustentada por um canal de força absoluta que carrega os outros. É uma estrutura de grande impacto focado em uma única direção.",
+    gangorra: "Sua expressão opera no modo **Intensidade Dinâmica**. Você transita entre picos de entrega total e vales de recolhimento. Não existe meio-termo na sua forma de se mostrar ao mundo.",
+    desperto: "Você apresenta o raro estado de **Alinhamento Integral**. Todos os seus canais de expressão operam em alta frequência, indicando que sua forma de pensar, sentir e agir está em total harmonia."
+};
+
 // TEXTOS BASE (FALLBACK)
     const baseTextos = {
         fisico: {
