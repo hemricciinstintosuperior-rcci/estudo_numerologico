@@ -582,13 +582,12 @@ function montarHtmlPlanosNatural(nome) {
 // ============================================
 
 function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
-    // 1. Identifica o Ano Atual dinamicamente
     const anoAtual = new Date().getFullYear();
     const dtNasci = new Date(dataNascimento + 'T00:00:00');
     const dia = String(dtNasci.getDate()).padStart(2, '0');
     const mes = String(dtNasci.getMonth() + 1).padStart(2, '0');
 
-    // 2. Lógica de Timelines (Cálculo do Trânsito do Ano)
+    // 1. Lógica de Timelines
     const partes = nomeCompleto.toUpperCase().trim().split(/\s+/);
     let timelines = partes.map(p => {
         let t = [];
@@ -599,7 +598,6 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         return t;
     });
 
-    // 3. Pega a letra exata que rege o Ano Atual
     const indiceAno = anoAtual - dtNasci.getFullYear();
     let somaMomento = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
     let letrasAtivas = timelines.map(t => t[indiceAno % t.length]);
@@ -609,48 +607,42 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         if(p) somaMomento[p] += calcularValorLetra(l);
     });
 
-    // 4. Ordenação para achar o P1 do Momento (Régua Mestra)
     const planosOrdenados = Object.entries(somaMomento)
         .map(([chave, valor]) => ({ chave, valor, vib: reduzir(valor) }))
         .sort((a, b) => b.valor - a.valor);
 
     const _p1 = planosOrdenados[0];
-    const _p2 = planosOrdenados[1];
-    const _p3 = planosOrdenados[2];
-    const _p4 = planosOrdenados[3];
-
-    // 5. Aplicação da Regra dos 75% (Status do Ano)
-    const ref = _p1.valor || 1; // Evita divisão por zero
-    const p2S = (_p2.valor / ref > 0.75) ? "F" : (_p2.valor / ref >= 0.50) ? "M" : "f";
-    const p3S = (_p3.valor / ref > 0.75) ? "F" : (_p3.valor / ref >= 0.50) ? "M" : "f";
-    const p4S = (_p4.valor / ref > 0.75) ? "F" : (_p4.valor / ref >= 0.50) ? "M" : "f";
-
+    const ref = _p1.valor || 1;
+    
+    // Sigla para Síntese
+    const p2S = (planosOrdenados[1].valor / ref > 0.75) ? "F" : (planosOrdenados[1].valor / ref >= 0.50) ? "M" : "f";
+    const p3S = (planosOrdenados[2].valor / ref > 0.75) ? "F" : (planosOrdenados[2].valor / ref >= 0.50) ? "M" : "f";
+    const p4S = (planosOrdenados[3].valor / ref > 0.75) ? "F" : (planosOrdenados[3].valor / ref >= 0.50) ? "M" : "f";
     const siglaMomento = "F" + p2S + p3S + p4S;
+
     const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
 
-    // 6. Montagem do HTML
     let html = `
         <div class="secao-card quebra-pagina" style="border-top: 4px solid var(--gold); margin-top: 40px;">
             <h2 class="titulo-topico">Status do Momento (${anoAtual})</h2>
-            <p style="font-size: 0.9rem; color: #666; margin-top: -10px;">
-                Ciclo vigente de ${dia}/${mes}/${anoAtual} até ${dia}/${mes}/${anoAtual + 1}
-            </p>
+            <div class="intro-texto">${textos.introducoes.momento || ""}</div>
+            <p style="font-size: 0.9rem; color: #666; margin-top: -10px;">Vigência: ${dia}/${mes}/${anoAtual} até ${dia}/${mes}/${anoAtual + 1}</p>
             
-            <div style="margin: 25px 0; background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 8px;">
+            <div style="margin: 25px 0; background: #f9f9f9; padding: 20px; border-radius: 8px;">
     `;
 
-    // Gráfico de Barras do Momento
+    // 2. Gráfico Colorido (Igual ao Natural)
     for(let p in somaMomento) {
         let porcentagem = (somaMomento[p] / ref) * 100;
         let numRed = reduzir(somaMomento[p]);
         html += `
             <div style="margin-bottom: 15px;">
                 <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
-                    <span style="font-weight:bold; font-size:11px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
-                    <span style="font-weight:bold; color:var(--dark);">Vibração ${numRed}</span>
+                    <span style="font-weight:bold; font-size:12px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
+                    <span style="font-weight:bold; color:${coresPlanos[p]};">Vibração ${numRed}</span>
                 </div>
-                <div style="height:6px; background:#eee; border-radius:3px; overflow:hidden;">
-                    <div style="width:${porcentagem}%; height:100%; background:var(--gold);"></div>
+                <div style="height:8px; background:#ddd; border-radius:4px; overflow:hidden;">
+                    <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p]};"></div>
                 </div>
             </div>
         `;
@@ -658,31 +650,46 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
     html += `</div>`;
 
-    // 7. Síntese do Ano (Usando as mesmas siglas do Natural para manter a coerência)
+    // 3. Textos de Interpretação (Forte/Médio/Fraco)
+    for(let p in somaMomento) {
+        let numRed = reduzir(somaMomento[p]);
+        let r = somaMomento[p] / ref;
+        let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
+        const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][int][numRed] : "";
+        
+        if(textoIndiv) {
+            html += `
+                <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
+                    <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:14px;">
+                        ${nomesAmigaveis[p]} no Momento <small>(${int})</small>
+                    </h4>
+                    <div class="texto-res">${aplicarFiltroTexto(textoIndiv)}</div>
+                </div>
+            `;
+        }
+    }
+
+    // 4. Síntese Final do Momento
     const tituloSintese = titulosEstrutura[siglaMomento] || "Dinâmica do Ciclo";
     const textoSintese = textosSinteseExpressao[siglaMomento] || textosSinteseExpressao["padrao"];
 
     html += `
-        <div style="padding:20px; background:#fdf9f0; border-radius:12px; border: 1px solid #f1e4c2;">
-            <h3 style="margin-top:0; color:var(--dark); font-size:1.2rem;">${tituloSintese}</h3>
+        <div style="margin-top:40px; border:2px solid var(--gold); padding:25px; border-radius:12px; background:#fff;">
+            <div style="text-align:center; margin-bottom:20px;">
+                <span style="background:var(--gold); color:white; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:bold;">${tituloSintese}</span>
+                <h3 style="margin-top:10px; text-transform:uppercase;">Síntese do Momento Atual</h3>
+            </div>
             <div class="texto-res">${aplicarFiltroTexto(textoSintese)}</div>
-            
-            <div style="margin-top:20px; font-style:italic; font-size:0.95rem; color:#555; border-top:1px solid #e2d1a8; padding-top:15px;">
-                <strong>Foco do Ano:</strong> Neste ciclo, sua maior força de expressão está no plano <strong>${nomesAmigaveis[_p1.chave]}</strong>. Utilize essa energia para compensar a retração que ocorre no plano <strong>${nomesAmigaveis[_p4.chave]}</strong>.
+            <div style="margin-top:20px; background:var(--dark); color:var(--gold); padding:15px; border-radius:8px; text-align:center;">
+                <strong>DIRETRIZ DO ANO:</strong> Sua maior força de ação hoje está no plano <strong>${nomesAmigaveis[_p1.chave]}</strong>.
             </div>
         </div>
-    </div>`;
+    `;
 
-
-
-// --- CÁLCULO DA VIBRAÇÃO DE TRÂNSITO (O NÚMERO DO ANO) ---
+    // 5. Vibração de Trânsito (O Círculo com o Número)
     const somaTotalMomento = somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo;
     const numeroTransito = reduzir(somaTotalMomento);
-
-    // Pega o seu texto que já existe no textos.js
-    const textoDoSeuArquivo = (textosTransito && textosTransito[numeroTransito]) 
-        ? textosTransito[numeroTransito] 
-        : "A vibração deste ano é o número " + numeroTransito;
+    const textoTrans = (textosTransito && textosTransito[numeroTransito]) ? textosTransito[numeroTransito] : "";
 
     html += `
         <div style="margin-top:30px; border-top: 2px dashed var(--gold); padding-top:20px;">
@@ -690,18 +697,16 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
                 <div style="background:var(--dark); color:var(--gold); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold; border: 2px solid var(--gold);">
                     ${numeroTransito}
                 </div>
-                <h3 style="margin:0; text-transform:uppercase; color:var(--dark);">Vibração de Trânsito do Ano</h3>
+                <h3 style="margin:0; text-transform:uppercase; color:var(--dark);">Vibração de Trânsito</h3>
             </div>
             <div class="texto-res" style="background:#fff; padding:15px; border-radius:8px; border:1px solid #eee;">
-                ${aplicarFiltroTexto(textoDoSeuArquivo)}
+                ${aplicarFiltroTexto(textoTrans)}
             </div>
         </div>
-    `;
+    </div>`;
 
-    
     return html;
 }
-
 
         
         function gerarMapaCompleto() {
