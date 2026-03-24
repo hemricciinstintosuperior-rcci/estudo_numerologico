@@ -793,30 +793,28 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 }
 
         
-     function gerarMapaCompleto() {
-  const nomeRaw = document.getElementById("nome").value.trim();
-    const dataInput = document.getElementById("data").value; 
+function gerarMapaCompleto() {
+            const nomeRaw = document.getElementById("nome").value.trim();
+            const dataRaw = document.getElementById("data").value;
+            if (!nomeRaw || !dataRaw) return alert("Por favor, preencha todos os dados.");
 
-    if (!nomeRaw || !dataInput) return alert("Por favor, preencha todos os dados.");
+            // 1. CORREÇÃO DA DATA (Pega o número puro, evita erro no Celular)
+            const partesData = dataRaw.split("-");
+            const ano = parseInt(partesData[0]);
+            const mes = parseInt(partesData[1]);
+            const dia = parseInt(partesData[2]);
 
-    // EXTRAÇÃO SEGURA (Cura o bug do celular e do PC)
-    const partesData = dataInput.split("-");
-    const ano = parseInt(partesData[0]);
-    const mes = parseInt(partesData[1]);
-    const dia = parseInt(partesData[2]);
+            const diaRed = reduzir(dia);
+            const mesRed = reduzir(mes);
+            const anoRed = reduzir(ano);
 
-    // Formatação para a Capa (Brasil: DD/MM/AAAA)
-    const diaF = dia < 10 ? "0" + dia : dia;
-    const mesF = mes < 10 ? "0" + mes : mes;
-    const dataExibicao = `${diaF}/${mesF}/${ano}`;
+            // 2. DEFINIÇÃO DO nomesArray (O que causou o erro de 'not defined')
+            const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
 
-    // Reduções Iniciais
-    const diaRed = reduzir(dia);
-    const mesRed = reduzir(mes);
-    const anoRed = reduzir(ano);
+            // 3. INÍCIO DOS CÁLCULOS (Mantendo sua lógica original)
+            let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
 
-    // Variáveis de cálculo (removi o que estava repetido)
-    let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
+            // A partir daqui o seu código continua igual...
 
             // Essência: 1ª letra de cada nome
             nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
