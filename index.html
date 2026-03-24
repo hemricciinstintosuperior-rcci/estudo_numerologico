@@ -137,7 +137,7 @@
     <div class="container">
         <h1>Estudo Numerológico</h1>
         <input type="text" id="nome" placeholder="NOME COMPLETO">
-        <input type="date" id="data">
+        <input type="text" id="data" placeholder="DD/MM/AAAA" maxlength="10" onInput="this.value = this.value.replace(/[^0-9/]/g, '').replace(/^(\d{2})(\d)/, '$1/$2').replace(/(\d{2})(\d)/, '$1/$2');">
         <button class="btn-gerar" onclick="gerarMapaCompleto()">GERAR O MAPA</button>
     </div>
 
@@ -795,20 +795,19 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
-    const dataRaw = document.getElementById("data").value; // "2026-03-25"
+    const dataRaw = document.getElementById("data").value; // Agora vem como DD/MM/AAAA
 
     if (!nomeRaw || !dataRaw) return alert("Por favor, preencha todos os dados.");
 
-    // O PULO DO GATO PARA CELULAR: Extrai apenas os números puros da string
-    // Isso ignora se hoje é dia 24 ou 25. Ele lê o que está escrito no campo.
-    const correspondencias = dataRaw.match(/(\d{4})-(\d{2})-(\d{2})/);
-    if (!correspondencias) return alert("Formato de data inválido.");
+    // 1. CAPTURA DO TEXTO DIGITADO (Lógica para DD/MM/AAAA)
+    const partes = dataRaw.split("/");
+    if (partes.length !== 3) return alert("Formato de data inválido. Use DD/MM/AAAA");
 
-    var ano = parseInt(correspondencias[1], 10);
-    var mes = parseInt(correspondencias[2], 10);
-    var dia = parseInt(correspondencias[3], 10); 
+    var dia = parseInt(partes[0], 10);
+    var mes = parseInt(partes[1], 10);
+    var ano = parseInt(partes[2], 10);
 
-    // Agora o 'dia' é 25, 26, 31... o celular não consegue mais bloquear!
+    // Agora o celular aceita QUALQUER dia (25, 26, 31...) porque é apenas TEXTO.
     
     var diaRed = reduzir(dia);
     var mesRed = reduzir(mes);
@@ -816,14 +815,12 @@ function gerarMapaCompleto() {
 
     const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
 
-    // Variáveis de soma (Mantendo sua estrutura original)
-    let sV = 0; 
-    let sC = 0; 
-    let sE = 0; 
+    // Variáveis de soma (Sua lógica original)
+    let sV = 0, sC = 0, sE = 0;
     let contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
     let usados = new Set();
-
-    // O RESTO DO SEU CÓDIGO SEGUE DAQUI...
+    
+    // O resto do seu código segue igual...
 
             // A partir daqui o seu código continua igual...
 
