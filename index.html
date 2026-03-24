@@ -569,6 +569,107 @@ function montarHtmlPlanosNatural(nome) {
     return html;
 }
         
+
+// ============================================
+// FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (AUTOMÁTICO)
+// ============================================
+
+function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
+    // 1. Identifica o Ano Atual dinamicamente
+    const anoAtual = new Date().getFullYear();
+    const dtNasci = new Date(dataNascimento + 'T00:00:00');
+    const dia = String(dtNasci.getDate()).padStart(2, '0');
+    const mes = String(dtNasci.getMonth() + 1).padStart(2, '0');
+
+    // 2. Lógica de Timelines (Cálculo do Trânsito do Ano)
+    const partes = nomeCompleto.toUpperCase().trim().split(/\s+/);
+    let timelines = partes.map(p => {
+        let t = [];
+        for(let l of p) { 
+            let v = calcularValorComAcentos(l); 
+            for(let i=0; i<v; i++) t.push(l); 
+        }
+        return t;
+    });
+
+    // 3. Pega a letra exata que rege o Ano Atual
+    const indiceAno = anoAtual - dtNasci.getFullYear();
+    let somaMomento = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
+    let letrasAtivas = timelines.map(t => t[indiceAno % t.length]);
+
+    letrasAtivas.forEach(l => {
+        let p = descobrirPlano(l);
+        if(p) somaMomento[p] += calcularValorComAcentos(l);
+    });
+
+    // 4. Ordenação para achar o P1 do Momento (Régua Mestra)
+    const planosOrdenados = Object.entries(somaMomento)
+        .map(([chave, valor]) => ({ chave, valor, vib: reduzir(valor) }))
+        .sort((a, b) => b.valor - a.valor);
+
+    const _p1 = planosOrdenados[0];
+    const _p2 = planosOrdenados[1];
+    const _p3 = planosOrdenados[2];
+    const _p4 = planosOrdenados[3];
+
+    // 5. Aplicação da Regra dos 75% (Status do Ano)
+    const ref = _p1.valor || 1; // Evita divisão por zero
+    const p2S = (_p2.valor / ref > 0.75) ? "F" : (_p2.valor / ref >= 0.50) ? "M" : "f";
+    const p3S = (_p3.valor / ref > 0.75) ? "F" : (_p3.valor / ref >= 0.50) ? "M" : "f";
+    const p4S = (_p4.valor / ref > 0.75) ? "F" : (_p4.valor / ref >= 0.50) ? "M" : "f";
+
+    const siglaMomento = "F" + p2S + p3S + p4S;
+    const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
+
+    // 6. Montagem do HTML
+    let html = `
+        <div class="secao-card quebra-pagina" style="border-top: 4px solid var(--gold); margin-top: 40px;">
+            <h2 class="titulo-topico">Status do Momento (${anoAtual})</h2>
+            <p style="font-size: 0.9rem; color: #666; margin-top: -10px;">
+                Ciclo vigente de ${dia}/${mes}/${anoAtual} até ${dia}/${mes}/${anoAtual + 1}
+            </p>
+            
+            <div style="margin: 25px 0; background: #fff; border: 1px solid #eee; padding: 20px; border-radius: 8px;">
+    `;
+
+    // Gráfico de Barras do Momento
+    for(let p in somaMomento) {
+        let porcentagem = (somaMomento[p] / ref) * 100;
+        let numRed = reduzir(somaMomento[p]);
+        html += `
+            <div style="margin-bottom: 15px;">
+                <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
+                    <span style="font-weight:bold; font-size:11px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
+                    <span style="font-weight:bold; color:var(--dark);">Vibração ${numRed}</span>
+                </div>
+                <div style="height:6px; background:#eee; border-radius:3px; overflow:hidden;">
+                    <div style="width:${porcentagem}%; height:100%; background:var(--gold);"></div>
+                </div>
+            </div>
+        `;
+    }
+
+    html += `</div>`;
+
+    // 7. Síntese do Ano (Usando as mesmas siglas do Natural para manter a coerência)
+    const tituloSintese = titulosEstrutura[siglaMomento] || "Dinâmica do Ciclo";
+    const textoSintese = textosSinteseExpressao[siglaMomento] || textosSinteseExpressao["padrao"];
+
+    html += `
+        <div style="padding:20px; background:#fdf9f0; border-radius:12px; border: 1px solid #f1e4c2;">
+            <h3 style="margin-top:0; color:var(--dark); font-size:1.2rem;">${tituloSintese}</h3>
+            <div class="texto-res">${aplicarFiltroTexto(textoSintese)}</div>
+            
+            <div style="margin-top:20px; font-style:italic; font-size:0.95rem; color:#555; border-top:1px solid #e2d1a8; padding-top:15px;">
+                <strong>Foco do Ano:</strong> Neste ciclo, sua maior força de expressão está no plano <strong>${nomesAmigaveis[_p1.chave]}</strong>. Utilize essa energia para compensar a retração que ocorre no plano <strong>${nomesAmigaveis[_p4.chave]}</strong>.
+            </div>
+        </div>
+    </div>`;
+
+    return html;
+}
+
+
         
         function gerarMapaCompleto() {
             const nomeRaw = document.getElementById("nome").value.trim();
