@@ -22,7 +22,12 @@ introducoes: {
         ciclos: `Os ciclos de vida dividem sua jornada em três grandes fases de aprendizado.`,
         momentos: `Os momentos decisivos são oportunidades únicas de crescimento e realização.`,
         desafios: `Os desafios são as lições que, se superadas, trazem seu maior fortalecimento.`,
-    
+        // Nova chave para os Gráficos do Ano
+    statusAnual: "O Status do Momento revela a configuração da sua Matriz Quântica para o ano vigente. Diferente do seu Plano Natural, esta análise identifica quais áreas da sua vida estão recebendo carga extra de energia e quais exigem maior cautela estratégica no ciclo atual.",
+
+    // Nova chave para a Vibração de Trânsito
+    vibracaoAno: "A Vibração de Trânsito é o 'clima numérico' que rege o seu ano pessoal. Ela define a tônica das oportunidades e os aprendizados específicos que cruzarão o seu caminho nos próximos 12 meses, permitindo um planejamento mais assertivo.",
+
         
     Conclusao: `Este mapa é uma ferramenta de autoconhecimento poderosa para sua evolução.`
 },
