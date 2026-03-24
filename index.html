@@ -920,7 +920,8 @@ listaPremium.forEach(chave => {
 
 
 
-            html += `
+// --- INÍCIO DO PILAR 02 ORGANIZADO ---
+html += `
     <div class="capa-transicao">
         <p>PILAR 02</p>
         <h2>Alinhamento e <br> Superação de Desafios</h2>
@@ -928,41 +929,33 @@ listaPremium.forEach(chave => {
     </div>
 `;
 
+// A. LIÇÕES CÁRMICAS
+html += `
+    <div class="secao-card quebra-pagina">
+        <h2 class="titulo-topico">Deficiências (Lições de Vida)</h2>
+        <div class="intro-texto">${textos.introducoes.deficiencias}</div>
+`;
+if (res.deficiencias.length > 0) {
+    res.deficiencias.forEach(f => {
+        html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
+    });
+} else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
+html += `</div>`;
 
-
-
-
-            
-            // 4. LIÇÕES CÁRMICAS
-            html += `
-                <div class="secao-card quebra-pagina">
-                    <h2 class="titulo-topico">Deficiências (Lições de Vida)</h2>
-                    <div class="intro-texto">${textos.introducoes.deficiencias}</div>
-            `;
-            if (res.deficiencias.length > 0) {
-                res.deficiencias.forEach(f => {
-                    html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
-                });
-            } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
-            html += `</div>`;
-
-            // --- 4.5 DÉFICITS DE COMPORTAMENTO (RECORRENTE E OCULTOS) ---
-            html += `
-                <div class="secao-card quebra-pagina">
-                    <h2 class="titulo-topico">Déficits de Comportamento</h2>
-                    <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
-                    <p><strong>Déficit Recorrente (${res.deficitRecorrente}):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
-                    <hr style="border:0; border-top:1px solid #eee">
-            `;
-            
-            if (res.deficitsOcultos.length > 0) {
-                res.deficitsOcultos.forEach(d => {
-                    html += `<p><strong>Déficit Oculto (${d}):</strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #eee">`;
-                });
-            }
-            html += `</div>`;
-
-            
+// B. DÉFICITS DE COMPORTAMENTO
+html += `
+    <div class="secao-card quebra-pagina">
+        <h2 class="titulo-topico">Déficits de Comportamento</h2>
+        <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
+        <p><strong>Déficit Recorrente (${res.deficitRecorrente}):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
+        <hr style="border:0; border-top:1px solid #eee">
+`;
+if (res.deficitsOcultos.length > 0) {
+    res.deficitsOcultos.forEach(d => {
+        html += `<p><strong>Déficit Oculto (${d}):</strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #eee">`;
+    });
+}
+html += `</div>`;
 
 // C. INCLINAÇÕES, SUBCONSCIENTE E EQUILÍBRIO (O FECHAMENTO DO ALINHAMENTO)
 const itensAlinhamento = ["inclinacoes", "subconsciente", "equilibrio"];
@@ -974,13 +967,13 @@ itensAlinhamento.forEach(chave => {
     if (chave === "inclinacoes") {
         if (res.inclinacoes && res.inclinacoes.length > 0) {
             res.inclinacoes.forEach(num => {
-                conteudoFinal += <p><strong>Número ${num}:</strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #eee">;
+                conteudoFinal += `<p><strong>Número ${num}:</strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #eee">`;
             });
         } else {
             conteudoFinal = "<p>Nenhuma inclinação específica detectada.</p>";
         }
     } else {
-        conteudoFinal = <div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>;
+        conteudoFinal = `<div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
     }
 
     html += `
@@ -991,6 +984,7 @@ itensAlinhamento.forEach(chave => {
         </div>
     `;
 });
+// --- FIM DO PILAR 02 ---
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
     <div class="capa-transicao">
