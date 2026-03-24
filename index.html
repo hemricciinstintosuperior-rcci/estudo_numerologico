@@ -625,7 +625,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     let html = `
         <div class="secao-card quebra-pagina" style="border-top: 4px solid var(--gold); margin-top: 40px;">
             <h2 class="titulo-topico">Status do Momento (${anoAtual})</h2>
-            <div class="intro-texto">${textos.introducoes.momento || ""}</div>
+            <div class="intro-texto">${textos.introducoes.statusAnual || ""}</div>
             <p style="font-size: 0.9rem; color: #666; margin-top: -10px;">Vigência: ${dia}/${mes}/${anoAtual} até ${dia}/${mes}/${anoAtual + 1}</p>
             
             <div style="margin: 25px 0; background: #f9f9f9; padding: 20px; border-radius: 8px;">
@@ -687,6 +687,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     `;
 
     // 5. Vibração de Trânsito (O Círculo com o Número)
+// 5. Vibração de Trânsito (O Círculo com o Número)
     const somaTotalMomento = somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo;
     const numeroTransito = reduzir(somaTotalMomento);
     const textoTrans = (textosTransito && textosTransito[numeroTransito]) ? textosTransito[numeroTransito] : "";
@@ -699,6 +700,9 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
                 </div>
                 <h3 style="margin:0; text-transform:uppercase; color:var(--dark);">Vibração de Trânsito</h3>
             </div>
+
+            <div class="intro-texto" style="border-bottom:none; margin-bottom:15px;">${textos.introducoes.vibracaoAno || ""}</div>
+
             <div class="texto-res" style="background:#fff; padding:15px; border-radius:8px; border:1px solid #eee;">
                 ${aplicarFiltroTexto(textoTrans)}
             </div>
