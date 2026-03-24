@@ -1,29 +1,166 @@
 const textos = {
 introducoes: {
         graficos: `Estes gráficos representam a força das suas vibrações e potenciais naturais.`,
+        
         piramide: "A Pirâmide da Vida, ou Matriz Quântica, revela as vibrações profundas que moldam seu destino. Cada camada representa uma fase de maturação das suas energias internas.",
-        dia: `O dia do nascimento revela sua forma natural de agir e seus talentos inatos.`,
-        comportamento: `O comportamento define como você lida com as situações do cotidiano.`,
+        
+        dia: `<p>O Dia Natalício representa um dos elementos mais significativos dentro da análise numerológica, pois revela as qualidades naturais que acompanham o indivíduo desde o momento do nascimento. Ele simboliza a essência mais espontânea da personalidade, refletindo os talentos inatos, as inclinações comportamentais e as características que se manifestam de forma quase instintiva ao longo da vida.</p>
+<p>Na numerologia, compreende-se que cada ser humano nasce em uma data específica de acordo com suas necessidades evolutivas e com os aprendizados que sua alma precisa desenvolver durante a existência. Dessa forma, o dia exato do nascimento não é considerado um evento aleatório, mas sim um ponto de alinhamento entre a consciência individual e as forças simbólicas representadas pelos números.</p>
+<p>O Dia Natalício possui um papel particularmente importante dentro da estrutura numerológica, muitas vezes sendo considerado mais revelador do que o próprio mês ou o ano de nascimento. Isso ocorre porque ele expressa de maneira direta as tendências naturais da pessoa, mostrando como ela reage ao mundo, como expressa sua individualidade e quais são os dons que surgem com maior facilidade em sua vida.</p>
+<p>Pessoas nascidas em um mesmo dia do mês, independentemente do mês ou do ano, costumam apresentar traços psicológicos e comportamentais semelhantes. Isso não significa que suas vidas serão idênticas, mas indica a presença de padrões energéticos em comum que influenciam a maneira como cada indivíduo percebe, interpreta e vivencia a realidade.</p>
+<p>Essas características se manifestam principalmente nas atitudes espontâneas, nas escolhas naturais e na forma como a pessoa se posiciona diante das experiências cotidianas. O Dia Natalício revela aquilo que emerge com maior autenticidade, sem a necessidade de esforço ou adaptação consciente.</p>
+<p>Por essa razão, ele é frequentemente associado ao conceito do “Eu Sou” mais verdadeiro. Trata-se da parte mais genuína da identidade, aquela que permanece constante mesmo diante das mudanças externas, das circunstâncias da vida ou das influências sociais.</p>
+<p>Compreender o próprio Dia Natalício permite reconhecer talentos naturais, compreender padrões de comportamento e identificar potenciais que muitas vezes permanecem adormecidos. Ao trazer consciência sobre essas características, a numerologia oferece um instrumento de autoconhecimento que pode auxiliar no desenvolvimento pessoal e na harmonização da própria trajetória de vida.</p>`,
+       
+        comportamento: `O Número do Comportamento revela como são as qualidades psíquicas que influenciam nas escolhas pessoais. As pessoas experimentam diferentes respostas internas aos desafios da vida. Alguns se retiram de situações difíceis para pensar sobre elas; outros se afastam de suas emoções, para tentar evitar sentir as emoções. Outros se apegam aos seus sentimentos e sentem dificuldade em deixar as coisas irem.
+  
+Muitas vezes, essas são respostas condicionadas ou emocionais surgem sem pensamento ou análise. A maturidade e o autodesenvolvimento nos ajudam a aprender novos e mais eficazes métodos de lidar com nosso mundo e os problemas que enfrentamos. O número do comportamento fornece orientação 
+sobre a melhor forma de lidar com situações difíceis ou ameaçadoras, pois que reflete certos padrões interiores comuns a grupos de pessoas nascidas em dias comuns entre si.`,
+        
         essencia: `A essência é o seu "eu" mais profundo, sua verdadeira identidade espiritual.`,
         equilibrio: `O equilíbrio mostra sua capacidade de manter a estabilidade em momentos de crise.`,
         talento: `O talento revela as habilidades naturais que você deve desenvolver nesta vida.`,
-        motivacao: `A motivação é o combustível da sua alma, o que realmente te faz feliz.`,
+        
+        motivacao: `A motivação mostra seus sonhos e desejo mais profundo. É um impulso natural que faz com que alguém aja para atingir seus objetivos e expressa a intenção que está por trás suas ações. Ele influencia as escolhas que você faz na vida, e é a principal característica responsável por iniciar, direcionar e manter comportamentos relacionados com o cumprimento de seus objetivos. 
+  
+Sua influência está em praticamente todas as suas escolhas; da de sua carreira a amizades, relacionamentos até seu modo de vida. É esta característica natural também que faz com que você dê o melhor de si e faça o possível para conquistar o que deseja. É ela também que muitas vezes, faz com que algumas pessoas acabem até mesmo “passando por cima” de outras para obter aquilo que desejam.
+  
+Mostra seus impulsos ocultos, o que verdadeiramente lhe motiva, e como suas ações influenciam nas suas decisões; revela quais são suas ambições, seus gostos pessoais, suas aversões, necessidades e vontades. Os motivos que estão por trás de cada decisão que alguém toma em sua vida e mesmo não sendo normalmente aparente, é este número que informa suas decisões.
+A motivação é um elemento essencial para o desenvolvimento do ser humano. Sem ela seria muito mais difícil cumprir a maior parte de suas intenções; por isso é uma vibração muito importante na numerologia e deve ser muito bem compreendida.`,
+        
         influencia: `A influência mostra como o seu ambiente e as pessoas ao redor te afetam.`,
-        Personalidade: `A personalidade é a "máscara" social, como o mundo enxerga você.`,
+        
+        Personalidade: `<p>O Número da Personalidade revela a maneira como você age, reage e se comporta diante da vida. Ele representa a expressão prática do seu ser, a forma como suas intenções se transformam em atitudes e como você se manifesta no mundo em diferentes circunstâncias.</p>
+<p>Este número descreve o padrão habitual do seu comportamento. Ele mostra suas reações repetidas, seus hábitos emocionais e mentais, e a forma como você tende a pensar, sentir e agir diante das experiências da vida. É através da personalidade que suas ideias, desejos e convicções ganham forma concreta.</p>
+<p>A personalidade representa o conjunto das características marcantes que moldam seus relacionamentos e sua forma de interagir com o ambiente. Ela define como você se posiciona socialmente, como responde aos desafios e como estabelece vínculos com as pessoas.</p>
+<p>O Número da Personalidade revela como você percebe a realidade e como reage a ela. Mostra suas tendências naturais de atração ou rejeição, suas convicções e a forma como expressa sentimentos e opiniões. Ele é um dos principais instrumentos para desenvolver uma forma eficiente, confortável e criativa de comunicação.</p>
+<p>Cada pessoa possui uma maneira única de agir e se expressar. Para aqueles que consideram a reencarnação como filosofia, a soma do nome completo representa a síntese de experiências, talentos e aprendizados acumulados ao longo de muitas existências.</p>
+<p>Compreender este número permite reconhecer talentos naturais, desafios comportamentais e padrões emocionais que influenciam diretamente a forma como sua vida se desenvolve.</p>`,
+        
         Relacionamento: `O pilar de relacionamento define como você se entrega e troca com os outros.`,
-        CaminhodeVida: `O Caminho de Vida é a estrada principal da sua existência e seus aprendizados.`,
-        Propósito: `O Propósito revela a meta final e o grande objetivo da sua encarnação.`,
-        Maturidade: `A Maturidade mostra o que te espera na fase mais experiente da sua vida.`,
+        
+        CaminhodeVida: `<p>Viver de forma plena é um caminho contínuo que nos ensina a persistir diante dos desafios e das distrações para conquistar aquilo que escolhemos para nós. O destino não é um lugar fixo, mas uma forma de enxergar e compreender a vida.</p>
+  Independentemente das circunstâncias ou dos erros cometidos, nossa trajetória é construída a cada instante pelas decisões que tomamos.
+  <p>O Número do Caminho de Vida revela a melhor maneira de conduzir sua jornada para alcançar o “destino” que você escolheu. Trata-se de uma orientação constante, válida em qualquer fase da vida, ciclo ou momento, mesmo diante de mudanças de pensamentos e intenções.</p>
+  <p>O Caminho de Vida aponta a direção mais adequada a seguir. Quando você compreende e aceita essa orientação, passa a decidir com mais segurança, utiliza seus talentos com maior eficiência e entende melhor as causas das suas conquistas e frustrações. Também identifica o que é necessário para superar desafios, evoluir como pessoa e alcançar seus objetivos.</p>
+  <p>Sua função é estimular o desenvolvimento das suas habilidades e ampliar a consciência. Ele só se torna “predeterminado” quando você ignora suas orientações. Sem compreender o sentido da sua existência, torna-se difícil escolher bons caminhos e tomar decisões assertivas, fazendo com que a vida pareça desorganizada, aleatória e guiada apenas pelas circunstâncias.</p>`,
+        
+        Propósito: `O propósito de vida não representa uma obrigação rígida nem uma tarefa imposta externamente, mas sim um impulso interno que surge de forma gradual e se torna mais claro à medida que a pessoa amadurece e amplia o autoconhecimento. Esse propósito, tradicionalmente chamado de missão, expressa a direção natural da existência e atua como uma afirmação profunda do sentido pessoal que orienta pensamentos, escolhas e atitudes ao longo da vida.
+  
+Por essa razão, na Numerologia Moderna essa orientação possui grande importância, pois revela aquilo que realmente dá significado às suas ações e aponta o caminho que você tende a seguir. Ele demonstra como suas decisões moldaram sua trajetória até o momento presente e oferece base para compreender quais metas futuras fazem sentido e quais atitudes devem ser consideradas para alcançá-las.
+  
+O propósito de vida também ajuda a compreender sua postura diante da família, da carreira, dos relacionamentos e da forma como você influencia o ambiente ao seu redor, além de mostrar o que verdadeiramente inspira suas escolhas e o impulsiona em direção ao destino que deseja construir.
+  
+Ao entender essa orientação, torna-se possível perceber com mais clareza como suas decisões afetam sua trajetória, explicando as causas de desafios, frustrações e obstáculos enfrentados ao longo do caminho.
+  
+Desenvolver consciência sobre o propósito de vida permite tomar decisões mais alinhadas às necessidades reais da sua essência, facilitando a resolução de conflitos, o crescimento pessoal e a construção de uma vida mais coerente, produtiva e evolutiva.`,
+        
+        Maturidade: `O Número de Maturidade revela desejos que surgem na juventude e se fortalecem com o tempo, tornando-se mais evidentes entre os 30 e 35 anos.
+  
+Quanto mais você se conhece, mais percebe essa influência orientando seus objetivos e decisões. Ele indica o rumo dos últimos anos de vida e reflete diretamente o Propósito de Vida.
+  
+Mesmo que não esteja consciente, você constrói esse caminho ao longo da vida através de suas escolhas e intenções. As características desse número já existem desde a infância, mas tornam-se mais claras com a maturidade.
+  
+Ele mostra quais qualidades devem ser desenvolvidas para alcançar realização pessoal.`,
+        
         inclinacoes: `As inclinações mostram tendências naturais que você traz de sua bagagem.`,
         subconsciente: `O subconsciente revela seus medos e reações automáticas mais profundas.`,
-        anoPessoal: `O ano pessoal descreve a energia específica que rege o seu momento atual.`,
-        deficiencias: `As lições cármicas mostram o que você veio aprender e ajustar nesta jornada.`,
+        
+        anoPessoal: `O Ano Pessoal representa a vibração numérica que influencia os acontecimentos, oportunidades e aprendizados de um ciclo de doze meses. Ele indica tendências, desafios e possibilidades
+que estarão mais ativos durante o ano atual.
+
+Compreender essa vibração permite agir com mais consciência, aproveitar oportunidades e evitar decisões impulsivas.`,
+        
+        deficiencias: ` Fraquezas e inibições  são comportamentos e habilidades que precisam ser tratados em sua personalidade. Essas características podem ser comparadas a uma caixa de ferramentas onde algumas ferramentas estão disponíveis para você e outras precisam ser adquiridas.
+   
+Imagine que cada letra em seu nome é uma ferramenta que você tem disponível e que as letras faltantes em seu nome de nascimento, representam as ferramentas que não estão disponíveis e devem ser aprendidas e dominadas.
+   
+Corrigir nossas fraquezas e inibições faz parte de um aprendizado que leva a evolução do ser humano, e devem ser aprendidas. Obviamente, se você puder dispor de todas as ferramentas, poderá ser capaz de lidar com qualquer evento ou situação que se apresente com muito mais facilidade.
+   
+É importante entender que na numerologia moderna o que é chamado de "lições cármicas" pela numerologia antiga e mítica; na realidade não são lições, mas sim necessidades que cada ser humano possui individualmente e que lhes permite tornar sua vida muito mais fácil, prática e prazerosa.`,
+        
         deficits: `Os déficits de comportamento indicam padrões repetitivos que precisam de atenção.`,
-        ciclos: `Os ciclos de vida dividem sua jornada em três grandes fases de aprendizado.`,
-        momentos: `Os momentos decisivos são oportunidades únicas de crescimento e realização.`,
-        desafios: `Os desafios são as lições que, se superadas, trazem seu maior fortalecimento.`,
+        
+        ciclos: `Os Ciclos de Vida mostram as transformações que cada um de nós passamos no caminho próprio e natural da vida. Normalmente vivemos uma ampla gama de ciclos e podemos experimentar uma infinidade de mudanças em nosso comportamento, pensamentos, em nossos valores e crenças. Tudo isso contribui no desenvolvimento continuo de nossa identidade, caráter e autoestima. 
+    
+O ciclo da vida é um mapa natural de três fases de um processo para que nos permite começar a explorar a grande complexidade da vida ainda na infância e encontrar a transformação de que você precisa a cada momento de sua vida.
+    
+Todos nós queremos conquistar mais em nossas vidas, mas poucos sabem que existem certos estágios de auto crescimento e que é preciso muito tempo, trabalho e paciência para continuarmos nos aperfeiçoando constantemente. É comum que ao tomar conhecimento das orientações fornecidas por seus ciclos de vida, haja uma tendência a se tentar ignorar algumas de suas considerar e uma resistência em aceita-las, por entender que não são muito significantes a você. Perceba, porém, que são estas questões que vinham sendo ignoradas a causa da maioria das dificuldades que você tem enfrentado em sua vida.
+    
+Embora você possa não ver muitos motivos para seguir está orientações é importante entender que são elas que lhe permitirão promover grandes mudanças em seu comportamento e mudar sua vida para melhor, pois cada um deles; com suas características específicas lhe permite influenciar diretamente no destino que sua vida está tomando e que são elas que lhe tornam capaz de mudá-lo conforme suas necessitas e intenções.
+
+Importante:
+Sempre que o número de um Ciclo de Vida coincidir com o número de uma de suas fraquezas e inibições, será uma indicação de que para ter um melhor desenvolvimento neste período você precisará contar justamente com as habilidades ou necessidades faltantes ou que deveriam ter sido melhoradas 
+conforme orientadas pelo respectivo número de suas fraquezas e inibições.
+    
+Note, porém, que isso não significa de forma alguma que o período será ruim, mas indica que você poderá enfrentar algumas dificuldades e adversidades muitas vezes desnecessárias e evitáveis causadas por essa deficiência em sua personalidade até que a mesma seja aperfeiçoada e dominada. 
+    
+Perceba que quanto mais habilidades você tiver a sua disposição e quanto mais puder evitar suas fraquezas mais capaz você será de lidar com qualquer evento ou situação que se apresente em seu caminho e mais 
+fácil será superá-las. `,
+        
+        momentos: `Os Momentos Decisivos representam períodos de virada, mudança e redefinição de direção na vida. Eles indicam fases em que decisões, oportunidades e acontecimentos tendem a provocar transformações
+importantes no caminho pessoal.
+
+Esses períodos funcionam como portais de crescimento e evolução.
+Durante cada momento decisivo, circunstâncias externas e escolhas internas se combinam para direcionar a trajetória da pessoa para novos aprendizados, responsabilidades e experiências.
+
+Compreender esses momentos ajuda a reconhecer oportunidades, preparar-se para mudanças e tomar decisões com mais consciência e segurança.
+  
+Algumas coincidências númericas no Estudo Pessoal, podem demonstrar facilidades ou difucldades que poderão se apresentar no período, conforme a relação abaixo: 
+  
+Se o número do Momento Decisivo coincide com o número de Motivação, significa que durante o período você poderá ter uma maior facilidade para alcançar seus desejos e para satisfazer necessidades.
+  
+Se o número do Momento Decisivo coincide com o número de Personalidade significa que durante o período você poderá ter uma maior facilidade em encontrar sua vocação e ter ummelhor desenvolvimento pessoal.
+  
+Se o número do Momento Decisivo coincide com o número do Propósito de Vida poderá ser mais fácil durante o período perceber e aproveitar melhor as oportunidades que facilitarão a realização de seus sonhos e projetos pessoais.
+  
+Se o número do Momento Decisivo coincide com o número de uma de suas Fraquezas e Inibições, você pode ter alguma dificuldade para lidar com questões relacionadas a essa necessidade específica até que aperfeiçoe suas habilidades ou supere alguma inibição.  `,
+        
+        desafios: `Os Desafios representam padrões de aprendizado e superação que acompanham a pessoa ao longo da vida. Eles indicam áreas onde podem surgir obstáculos, inseguranças, medos ou dificuldades que
+precisam ser compreendidos e trabalhados.
+
+Esses desafios não devem ser vistos como limitações permanentes, mas como oportunidades de crescimento e desenvolvimento pessoal.
+Ao reconhecer essas tendências, torna-se possível agir com mais consciência, fortalecer qualidades internas e transformar dificuldades
+em maturidade e experiência.
+
+Cada desafio mostra uma etapa específica do processo de evolução e revela quais atitudes favorecem o equilíbrio e a superação.
+  
+ Sempre que o número de um Desafio coincidir com o número de um Ciclo de Vida, Momento Decisivo ou Propósito de Vida, pode sugerir alguma predisposição a questões de saúde, que podem se apresentar no período conforme descrito abaixo:
+  
+Possíveis Problemas
+1
+Região da cabeça, coração, sistema circulatório e respiratório, alergias, ferimentos nos olhos, rosto, orelhas e maxilar, problemas circulatórios e cardíacos. Especialmente em idades mais avançadas; 
+anorexia, edema pulmonar, tosse, tuberculose, impotência masculina. Na fase infantil: facilidade para urinar na cama.
+  
+2
+Região dos rins, estômago e sistema nervoso. Pode acarretar retenção de líquidos no corpo, afetar ainda o sistema linfático, estômago e intestino, manchas hepáticas, infecções urinárias, esclerose múltipla, 
+distúrbios nos seios, excesso de peso, incontinência urinária, envelhecimento precoce. Problemas femininos em especial na fase da menopausa, perda de cabelos, facilidade para queimaduras.
+  
+3
+Região da garganta, fígado, e vesícula são os mais críticos. Também podem ocorrer quadros de enxaquecas, problemas glandulares, em especial na tireóidea e na hipófise, oscilações na pressão arterial, furúnculos, hematomas, problemas nos ombros e dores ciáticas causados por tensão nervosa; problemas nas coxas e nos pés.
+  
+4
+O “4” pode indicar doenças incomuns e de difícil diagnóstico, acidentes inesperados e ferimentos inexplicáveis, além de problemas de circulação sanguínea, anemia, hipoglicemia, problemas psicossomáticos, histeria, medos e fobias, perturbações mentais e emocionais; problemas ósseos em 
+geral; nos dentes; espasmos e palpitações; úlceras, colites e distúrbios digestivos.
+  
+5
+Problemas nos pulmões, aparelho respiratório, olhos e sistema nervoso. Ansiedade e alterações repentinas de humor, tensão nervosa, apneia, exaustão mental ou estafa; insônia, amnésia, paralisia 
+facial, gagueira, acidentes graves por imprudência, vícios em geral (álcool e drogas), distúrbio nos órgãos reprodutores e problemas na tireoide.
+  
+6
+Doenças renais, distúrbios pulmonares; irregularidades na circulação do sangue, hemofilia, palpitações cardíacas, quistos e tumores nos seios, colites, problemas na coluna em geral e dores lombares, problemas de próstata, excesso de peso, incontinência urinária, problemas cardíacos e na região do pescoço.
+  
+7
+Problemas glandulares, sistema nervoso, nos pés e o sistema linfático. Poderá haver certa vulnerabilidade à infecções, problemas de pele, como alergias em geral, coceiras, arteriosclerose, derrame cerebral, problemas mentais e cerebrais em geral, medos e fobias, depressão, síndrome do 
+pânico, problemas de varizes e vícios em geral, em especial o alcoolismo.
+  
+8
+Problemas de estômago e sistema nervoso, os pontos mais sensíveis, no entanto são: os joelhos, dentes, ossos e ligamentos. Podem ocorrer doenças sanguíneas, tendência a se submeter a tratamento médico 
+inadequado ou de receber prescrições médicas inadequadas, problemas de fígado e baço; distúrbios no digestivo e intestino, estados de desânimo profundo, dores de cabeça frequentes, derrames, hérnia de disco, desmaios, hipertensão, apendicite, problemas na próstata, cirurgias frequentes e obesidade.
+  `,
+        
         // Nova chave para os Gráficos do Ano
-    statusAnual: "O Status do Momento revela a configuração da sua Matriz Quântica para o ano vigente. Diferente do seu Plano Natural, esta análise identifica quais áreas da sua vida estão recebendo carga extra de energia e quais exigem maior cautela estratégica no ciclo atual.",
+    statusAnual: "O Status do Momento revela a configuração do seu plano de Expressão para o ano vigente. Diferente do seu Plano Natural, esta análise identifica quais áreas da sua vida estão recebendo carga extra de energia e quais exigem maior cautela estratégica no ciclo atual.",
 
     // Nova chave para a Vibração de Trânsito
     vibracaoAno: "A Vibração de Trânsito é o 'clima numérico' que rege o seu ano pessoal. Ela define a tônica das oportunidades e os aprendizados específicos que cruzarão o seu caminho nos próximos 12 meses, permitindo um planejamento mais assertivo.",
