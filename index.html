@@ -177,19 +177,7 @@ const gruposPlanos = {
 const coresPlanos = { fisico: "#ff4d4d", mental: "#4da6ff", emocional: "#33cc66", intuitivo: "#ffd633" };
 
         
-function mascaraData(campo) {
-    let v = campo.value.replace(/\D/g, ""); // Remove tudo que não é número
-    if (v.length > 8) v = v.substring(0, 8);
-    
-    // Adiciona as barras conforme digita
-    if (v.length > 2 && v.length <= 4) {
-        v = v.replace(/^(\d{2})(\d)/, "$1/$2");
-    } else if (v.length > 4) {
-        v = v.replace(/^(\d{2})(\d{2})(\d)/, "$1/$2/$3");
-    }
-    campo.value = v;
-}
-        
+ 
 function valorLetraMatriz(l){
     let n = l.normalize("NFD");
     let v = mapaMatriz[n[0].toUpperCase()] ?? 0;
