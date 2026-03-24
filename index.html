@@ -911,19 +911,7 @@ listaPremium.forEach(chave => {
    const tituloBonito = nomesExibicao[chave] || chave;
     let conteudoFinal = "";
 
-    // Caso especial para as Inclinações (múltiplos textos)
-    if (chave === "inclinacoes") {
-        if (res.inclinacoes && res.inclinacoes.length > 0) {
-            res.inclinacoes.forEach(num => {
-                conteudoFinal += `<p><strong>Número ${num}:</strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #eee">`;
-            });
-        } else {
-            conteudoFinal = "<p>Nenhuma inclinação específica detectada pelas repetições do nome.</p>";
-        }
-    } else {
-        // Caso normal para os outros tópicos
-        conteudoFinal = `<div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
-    }
+
 
     html += `
         <div class="secao-card">
@@ -944,6 +932,23 @@ listaPremium.forEach(chave => {
     </div>
 `;
 
+
+    // Caso especial para as Inclinações (múltiplos textos)
+    if (chave === "inclinacoes") {
+        if (res.inclinacoes && res.inclinacoes.length > 0) {
+            res.inclinacoes.forEach(num => {
+                conteudoFinal += `<p><strong>Número ${num}:</strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #eee">`;
+            });
+        } else {
+            conteudoFinal = "<p>Nenhuma inclinação específica detectada pelas repetições do nome.</p>";
+        }
+    } else {
+        // Caso normal para os outros tópicos
+        conteudoFinal = `<div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
+    }
+
+
+            
             // 4. LIÇÕES CÁRMICAS
             html += `
                 <div class="secao-card quebra-pagina">
