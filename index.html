@@ -796,30 +796,30 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
     const dataInput = document.getElementById("data").value;
+
     if (!nomeRaw || !dataInput) return alert("Por favor, preencha todos os dados.");
 
-    // 1. EXTRAÇÃO LIMPA (Sem repetir declarações de variáveis)
+    // 1. CAPTURA PURA (Resolve o bug do celular dia 25-31)
     const partes = dataInput.split("-");
-    const valAno = parseInt(partes[0], 10);
-    const valMes = parseInt(partes[1], 10);
-    const valDia = parseInt(partes[2], 10);
+    const vAno = parseInt(partes[0], 10);
+    const vMes = parseInt(partes[1], 10);
+    const vDia = parseInt(partes[2], 10);
 
-    // 2. USO NOS CÁLCULOS (Usando os nomes novos para não dar conflito)
-    const diaRed = reduzir(valDia);
-    const mesRed = reduzir(valMes);
-    const anoRed = reduzir(valAno);
+    // 2. REDUÇÕES PARA CÁLCULO (O dia vDia fica puro para o relatório)
+    const diaRed = reduzir(vDia);
+    const mesRed = reduzir(vMes);
+    const anoRed = reduzir(vAno);
 
     const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
 
-    // 3. SEU OBJETO DE RESULTADOS (Mantendo o dia puro, sem reduzir)
-    // Procure onde você monta o 'res' e garanta que está assim:
-    const res = {
-        dia: valDia, // Aqui ele vai pegar 25, 26, 31... sem erro!
-        mes: valMes,
-        ano: valAno,
-        // ... o restante dos seus cálculos (motivacao, etc)
-            
-            let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
+    // 3. VARIÁVEIS DE SOMA (Atenção à pontuação aqui)
+    let sV = 0; 
+    let sC = 0; 
+    let sE = 0; 
+    let contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
+    let usados = new Set();
+
+    // DAQUI PARA BAIXO SEGUE O SEU CÓDIGO ORIGINAL...
 
             // A partir daqui o seu código continua igual...
 
