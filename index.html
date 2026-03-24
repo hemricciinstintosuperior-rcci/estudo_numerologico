@@ -795,7 +795,17 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         
 function gerarMapaCompleto() {
             const nomeRaw = document.getElementById("nome").value.trim();
-            const dataRaw = document.getElementById("data").value;
+            // Substitua a linha do dataRaw e a extração por esta versão:
+const dataInput = document.getElementById("data").value; 
+if (!dataInput) return alert("Por favor, selecione a data.");
+
+// O segredo para o celular: split pelo traço "-" e forçar número inteiro
+const partes = dataInput.split("-");
+const ano = parseInt(partes[0], 10);
+const mes = parseInt(partes[1], 10);
+const dia = parseInt(partes[2], 10);
+
+// Agora o 'dia' vale 25, 26, 31... não importa o fuso horário ou o dia de hoje.
             if (!nomeRaw || !dataRaw) return alert("Por favor, preencha todos os dados.");
 
             const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
