@@ -795,33 +795,35 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
-    // Mantemos o nome dataRaw para não quebrar a sua linha 934
-    const dataRaw = document.getElementById("data").value;
+    const dataRaw = document.getElementById("data").value; // "2026-03-25"
 
     if (!nomeRaw || !dataRaw) return alert("Por favor, preencha todos os dados.");
 
-    // 1. CAPTURA SEGURA (Resolve o bug do celular/dia 31)
-    var partes = dataRaw.split("-");
-    var ano = parseInt(partes[0], 10);
-    var mes = parseInt(partes[1], 10);
-    var dia = parseInt(partes[2], 10); 
+    // O PULO DO GATO PARA CELULAR: Extrai apenas os números puros da string
+    // Isso ignora se hoje é dia 24 ou 25. Ele lê o que está escrito no campo.
+    const correspondencias = dataRaw.match(/(\d{4})-(\d{2})-(\d{2})/);
+    if (!correspondencias) return alert("Formato de data inválido.");
 
-    // 2. REDUÇÕES (Para os seus cálculos numerológicos)
+    var ano = parseInt(correspondencias[1], 10);
+    var mes = parseInt(correspondencias[2], 10);
+    var dia = parseInt(correspondencias[3], 10); 
+
+    // Agora o 'dia' é 25, 26, 31... o celular não consegue mais bloquear!
+    
     var diaRed = reduzir(dia);
     var mesRed = reduzir(mes);
     var anoRed = reduzir(ano);
 
-    // 3. PREPARAÇÃO DO NOME (Necessário para Essência/Equilíbrio)
     const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
 
-    // 4. VARIÁVEIS DE SOMA (Lógica original intacta)
+    // Variáveis de soma (Mantendo sua estrutura original)
     let sV = 0; 
     let sC = 0; 
     let sE = 0; 
     let contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
     let usados = new Set();
 
-    // A partir daqui, o seu código na linha 934 vai reconhecer o dataRaw e o dia...
+    // O RESTO DO SEU CÓDIGO SEGUE DAQUI...
 
             // A partir daqui o seu código continua igual...
 
