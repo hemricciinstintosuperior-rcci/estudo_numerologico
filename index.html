@@ -255,6 +255,13 @@ const nomesExibicao = {
       "Conclusao": "Conclusão"   
 };
         function reduzir(n) { if (n === 0) return 0; let r = Math.abs(n) % 9; return r === 0 ? 9 : r; }
+        function descobrirPlano(l) {
+    const letraBase = l.normalize("NFD")[0].toUpperCase();
+    for (let p in gruposPlanos) {
+        if (gruposPlanos[p].includes(letraBase)) return p;
+    }
+    return null;
+}
 
         function calcularValorLetra(letra) {
             const base = letra.normalize("NFD")[0].toUpperCase();
@@ -586,7 +593,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     let timelines = partes.map(p => {
         let t = [];
         for(let l of p) { 
-            let v = calcularValorComAcentos(l); 
+            let v = calcularValorLetra(l); 
             for(let i=0; i<v; i++) t.push(l); 
         }
         return t;
@@ -599,7 +606,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
     letrasAtivas.forEach(l => {
         let p = descobrirPlano(l);
-        if(p) somaMomento[p] += calcularValorComAcentos(l);
+        if(p) somaMomento[p] += calcularValorLetra(l);
     });
 
     // 4. Ordenação para achar o P1 do Momento (Régua Mestra)
@@ -944,6 +951,10 @@ listaPremium.forEach(chave => {
                 html += `</div>`;
             });
 
+
+// 1. INSERIR O PLANO DE MOMENTO E VIBRAÇÃO DE TRÂNSITO AQUI
+html += montarHtmlPlanosMomento(nomeRaw, dataRaw); 
+            
 // INSERIR ANO PESSOAL AQUI (MANUALMENTE NO FINAL)
 html += `
     <div class="secao-card quebra-pagina">
