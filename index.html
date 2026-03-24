@@ -877,13 +877,7 @@ let html = `
 </div>
 `;
 
-// INSERIR CAPA 1 AQUI
-html += `
-    <div class="capa-transicao">
-        <p>PILAR 01</p>
-        <h2>Sua Essência e <br> Identidade Quântica</h2>
-        <p>A decodificação das frequências nativas que definem sua personalidade e propósito original.</p>
-    </div>
+
 
 
 ${montarHtmlPlanosNatural(nomeRaw)}
@@ -893,7 +887,7 @@ ${montarHtmlPlanosNatural(nomeRaw)}
   
 
 
-
+html += `
     <div class="secao-card quebra-pagina">
         <h2 class="titulo-topico">Análise de Potenciais</h2>
         <div class="intro-texto">${textos.introducoes.graficos}</div>
@@ -901,7 +895,13 @@ ${montarHtmlPlanosNatural(nomeRaw)}
     </div>
 `;
 
+// INSERIR CAPA 1 AQUI
 
+    <div class="capa-transicao">
+        <p>PILAR 01</p>
+        <h2>Sua Essência e <br> Identidade Quântica</h2>
+        <p>A decodificação das frequências nativas que definem sua personalidade e propósito original.</p>
+    </div>`
             
 // 1. A lista deve ter exatamente as chaves que você colocou no 'res'
 const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", "Personalidade", "comportamento", "Relacionamento", "CaminhodeVida", "Propósito"];
