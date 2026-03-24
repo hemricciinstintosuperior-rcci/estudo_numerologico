@@ -544,9 +544,32 @@ function montarHtmlPlanosNatural(nome) {
         ((planosOrdenados[3].valor / ref > 0.75) ? "F" : (planosOrdenados[3].valor / ref >= 0.50) ? "M" : "f");
 
     const descricoesPerfil = {
-        criativo: "Sua natureza é expansiva e inovadora. Você tende a buscar soluções originais e tem facilidade em iniciar novos projetos.",
-        indeciso: "Seu perfil oscila entre diversas possibilidades, buscando segurança antes de agir. É uma natureza que analisa muito antes de se comprometer.",
-        neutro: "Você possui um perfil pragmático e equilibrado. Age com foco na utilidade e na estabilidade das situações."
+        criativo: ` <p>"Sua mente possui mais Criatividade"</p>
+    
+<p>Naturalmente você apresenta ideias originais, enxerga a realidade de forma diferenciada e encara imprevistos com otimismo e espontaneidade. 
+Ao analisar problemas complexos, você divide-os em partes menores, focando em soluções eficazes e na adaptação rápida a novas situações.</p>
+
+<p>Movido por estímulos internos, você demonstra grande motivação pessoal, ignorando rotinas estabelecidas para explorar diversas alternativas. 
+Pelo lado desafiador, você pode manifestar certa arrogância ou rebeldia contra regras, sofrendo com flutuações de humor e desconfiança. 
+Nessa busca constante pelo novo, você corre o risco de perder a noção de tempo ou se deixar envolver por ilusões temporárias.</p>`,
+        
+        indeciso:  ` <p>"A indecisão toma conta da sua expressão"</p>
+    
+<p>Com grande sensibilidade, você demonstra necessidade de atenção, podendo agir de forma dramática ou precipitada sob pressão emocional. 
+Sendo influenciável pelo ambiente, você muda de opinião com frequência e encontra certa dificuldade em agir de forma solitária.</p>
+
+<p>Revelando um lado sedutor, você pode ser interpretado com inconveniência devido ao excesso de dramatização em suas falas. 
+Ao fortalecer seu caráter, você descobre sua verdadeira identidade, trocando a busca por aprovação externa por seus desejos internos. 
+Em momentos de desequilíbrio, você torna-se inconstante ou impulsiva, especialmente quando é dominada por receios e emoções intensas.</p>`,
+        
+        neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p> 
+    
+<p>Sendo alguém observador, você prefere analisar todos os pontos de vista antes de tomar partido em qualquer tipo de conflito. 
+Agindo por interesses próprios, você raramente sai da zona de conforto, mantendo-se excessivamente cauteloso para evitar riscos inúteis.</p>
+
+<p>Relacionando-se bem com todos, você constrói barreiras emocionais intencionais para evitar sofrimento, raramente expondo o que realmente sente. 
+Com facilidade de adaptação, **você** mantém o autocontrole em situações difíceis, preferindo rotinas pacíficas. 
+No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, mantendo-se neutro e com baixa inclinação criativa.</p>`
     };
 
     let html = `
@@ -608,7 +631,7 @@ function montarHtmlPlanosNatural(nome) {
         <div style="margin-top:40px; border:2px solid var(--gold); padding:25px; border-radius:12px; background:#fff;">
             <div style="text-align:center; margin-bottom:20px;">
                 <span style="background:var(--gold); color:white; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:bold;">${titulosEstrutura[sigla] || "SÍNTESE"}</span>
-                <h3 style="margin-top:10px; text-transform:uppercase;">Síntese da Matriz</h3>
+                <h3 style="margin-top:10px; text-transform:uppercase;">Síntese de Expressão Natural</h3>
             </div>
             <div class="texto-res">${aplicarFiltroTexto(textosSinteseExpressao[sigla] || textosSinteseExpressao["padrao"])}</div>
             
