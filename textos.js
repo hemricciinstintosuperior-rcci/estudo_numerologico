@@ -382,6 +382,7 @@ SeqNegVida: {
   // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 31) ---
  dia: {
     1: ` <h4>Desbravador - Dia 1 
+    
     É um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!</h4>
     <p>O dia 1 traz para <strong>você</strong> uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. <strong>você</strong> traz consigo uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em todos os setores da vida e da jornada pessoal.</p>
     <p>Sua mente funciona de forma independente e <strong>você</strong> sente uma necessidade vital de manter o controle sobre a própria trajetória. Seu talento natural é a iniciativa pura; <strong>você</strong> não sente conforto em seguir fórmulas prontas ou ordens que não façam sentido para a sua lógica, buscando sempre a própria verdade interna acima de opiniões alheias.</p>
@@ -389,6 +390,7 @@ SeqNegVida: {
     <p>O grande desafio de <strong>você</strong> é equilibrar essa força de vontade para não transmitir uma imagem de autoridade excessiva, transformando sua determinação em uma fonte de inspiração constante. Ao liderar pelo exemplo, <strong>você</strong> demonstra que o sucesso é fruto da autoconfiança e da persistência que habitam seu espírito realizador.</p>`,
 
     2: ` <h4>Pacificador - Dia 2 
+    
     Está ciente do que acontece ao seu redor e é facilmente influenciado pelas pessoas e pelo ambiente!</h4>
     <p>O dia 2 confere a <strong>você</strong> uma natureza extremamente diplomática, sensível e voltada para a cooperação. <strong>você</strong> possui o dom de perceber as nuances nos relacionamentos e no ambiente que a maioria das pessoas ignora, o que faz de <strong>você</strong> uma figura de mediação excelente em qualquer conflito ou negociação.</p>
     <p>Sua força não reside na agressividade, mas na persuasão suave e na capacidade de unir pessoas em torno de um objetivo comum com muita paciência. <strong>você</strong> produz resultados melhores em parceria do que em total isolamento, e seu talento natural brilha quando existe um ambiente de harmonia onde sua intuição aguçada pode ser ouvida.</p>
@@ -403,6 +405,7 @@ SeqNegVida: {
     <p>O cuidado que <strong>você</strong> deve ter é com a dispersão de energia; por possuir tantos talentos, existe o risco de começar muitos projetos e ter dificuldade em concluí-los. Ao focar sua expressão em objetivos claros, <strong>você</strong> ganha o poder de influenciar multidões e espalhar entusiasmo por onde passar.</p>`,
 
     4: ` <h4>Disciplinado - Dia 4 
+    
     É altamente ético, possui princípios elevados. 
     É disciplinado e responsável! </h4>
     <p>O dia 4 indica que <strong>você</strong> possui um talento natural para a organização, a disciplina e a construção de bases sólidas. <strong>você</strong> é a pessoa que traz estrutura para o caos, agindo com uma responsabilidade e uma honestidade que são pilares fundamentais para o desenvolvimento de qualquer projeto duradouro.</p>
@@ -411,6 +414,7 @@ SeqNegVida: {
     <p>O desafio para <strong>você</strong> é não permitir que a mente se torne rígida demais ou resistente às mudanças necessárias do mundo moderno. Ao unir sua incrível persistência com um pouco mais de flexibilidade, <strong>você</strong> torna suas conquistas absolutamente inabaláveis e admiradas por todos ao seu redor.</p>`,
 
     5: ` <h4>Independente - Dia 5 
+    
     É altamente adaptável, curioso, se entedia facilmente e precisa aprender a ter disciplina e organização!</h4>
     <p>O dia 5 traz para <strong>você</strong> uma alma livre, versátil e amante profunda das mudanças. <strong>você</strong> possui um talento natural para a adaptação e uma curiosidade intelectual que leva a explorar novos horizontes, viagens e experiências sensoriais de forma constante e entusiasmada.</p>
     <p>Sua energia é magnética e <strong>você</strong> aprende com uma rapidez impressionante, especialmente através da vivência direta com o mundo. <strong>você</strong> possui aversão à rotina e às limitações impostas por sistemas fechados, pois sua mente precisa de estímulos constantes e de liberdade para descobrir o que há além do óbvio.</p>
@@ -418,6 +422,7 @@ SeqNegVida: {
     <p>O aprendizado para <strong>você</strong> é desenvolver o foco e a disciplina, para que a busca por liberdade não se transforme em uma instabilidade crônica. Quando <strong>você</strong> canaliza essa inteligência rápida para um propósito maior, <strong>você</strong> se torna alguém brilhante e capaz de realizar transformações profundas na sociedade.</p>`,
 
     6: ` <h4>Zeloso - Dia 6 
+    
     É um zelador orientado para cuidar das pessoas e capaz de sacrificar seu próprio bem estar para apoiar e ajuda-las!</h4>
     <p>O dia 6 confere a <strong>você</strong> um talento profundo para cuidar, aconselhar e criar harmonia nos ambientes em que habita. <strong>você</strong> é alguém que se move pelo amor, pela justiça e por um senso de dever muito forte em relação à família e à comunidade, sendo o porto seguro de muita gente.</p>
     <p>Sua sensibilidade estética e artística também é marcante; <strong>você</strong> tem o dom de tornar tudo ao redor mais belo, acolhedor e equilibrado. Para <strong>você</strong>, o lar é o centro do universo, e a realização pessoal vem quando <strong>você</strong> consegue ajudar alguém ou resolver um conflito através da compreensão e do carinho.</p>
@@ -425,13 +430,16 @@ SeqNegVida: {
     <p>O desafio de <strong>você</strong> é não se sobrecarregar com os problemas alheios ou se perder em um perfeccionismo excessivo. Ao aprender a cuidar de si com a mesma dedicação que oferece aos outros, <strong>você</strong> atinge uma plenitude emocional que irradia luz e conforto para o mundo inteiro.</p>`,
 
     7: ` <h4>Pefecionista - Dia 7 
+    
     É exigente e difícil de se conhecer. Introspectivo, tranquilo e analítico, seu objetivo é sempre a perfeição!</h4>
     <p>O dia 7 indica que <strong>você</strong> possui uma mente analítica, intuitiva e totalmente voltada para a busca da verdade interior. <strong>você</strong> é uma pessoa de investigação nata, sentindo uma necessidade profunda de entender os mistérios da existência, da ciência ou dos caminhos da espiritualidade.</p>
     <p>Sua natureza é mais introspectiva e <strong>você</strong> valoriza o silêncio e a solidão produtiva como ferramentas essenciais para recarregar as energias e processar pensamentos complexos. <strong>você</strong> possui um radar natural para a falsidade e raramente se contenta com explicações superficiais sobre qualquer assunto importante.</p>
     <p><strong>você</strong> busca a perfeição em tudo o que estuda ou executa, tornando-se uma autoridade técnica ou intelectual em seus temas de interesse. Existe uma elegância e uma discrição no comportamento de <strong>você</strong> que impõe respeito e desperta a curiosidade de quem deseja conhecer sua mente brilhante.</p>
     <p>O desafio para <strong>você</strong> é não se isolar excessivamente ou se tornar alguém de crítica impiedosa com as imperfeições humanas. Ao compartilhar sua sabedoria e suas descobertas com o próximo, <strong>você</strong> se torna uma figura de orientação ou guia espiritual de grande profundidade e impacto real.</p>`,
 
-    8: ` <h4>Original - Dia 8   É altamente competitivo. Gosta de  desafios. 
+    8: ` <h4>Original - Dia 8   
+    
+    É altamente competitivo. Gosta de  desafios. 
     As expectativas dos outros o estimulam, especialmente se duvidam de sua capacidade!</h4>
     <p>O dia 8 traz para <strong>você</strong> um talento natural para a gestão, para os negócios e para a realização material em larga escala. <strong>você</strong> possui uma visão executiva invejável e um senso de justiça muito apurado, sabendo exatamente como organizar recursos e pessoas para atingir metas grandiosas.</p>
     <p>Sua determinação é impressionante e <strong>você</strong> encara os desafios com uma seriedade profissional que impõe autoridade imediata. Para <strong>você</strong>, o sucesso é uma consequência natural do esforço disciplinado e da capacidade de liderar com equilíbrio emocional e foco inabalável nos resultados práticos.</p>
@@ -439,13 +447,16 @@ SeqNegVida: {
     <p>O aprendizado de <strong>você</strong> é entender que o poder e o dinheiro são ferramentas para o bem, e não o fim de tudo. Quando <strong>você</strong> une sua ambição com a generosidade e a ética, <strong>você</strong> constrói um império de abundância que beneficia não apenas sua vida, mas a de milhares de pessoas ao redor.</p>`,
 
     9: ` <h4>Universalista - Dia 9 É liberal e idealista. 
+    
     Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h4>
     <p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e dotada de uma visão de mundo extremamente ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar um legado positivo, agindo com um altruísmo que inspira confiança.</p>
     <p>Sua intuição é fortíssima e <strong>você</strong> possui uma sabedoria que parece vir de experiências de muitas vidas. <strong>você</strong> é capaz de grandes sacrifícios por causas nobres e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua compaixão e integridade moral.</p>
     <p><strong>você</strong> está em uma vibração de encerramento de ciclos e de compreensão total. Sua mente não se prende a detalhes mesquinhos, pois <strong>você</strong> enxerga o quadro geral da existência, buscando sempre a evolução espiritual e o auxílio ao próximo como metas principais de sua jornada na terra.</p>
     <p>O desafio para <strong>você</strong> é aprender o desapego em relação ao passado e às situações que não estão sob seu controle. Ao focar sua energia no serviço desinteressado, <strong>você</strong> atinge um estado de plenitude e paz interior que é a verdadeira e mais alta recompensa da sua história.</p>`,
 
-    10: ` <h4>Ambicioso - Dia 10 É audacioso, progressista, prestativo e independente. 
+    10: ` <h4>Ambicioso - Dia 10 
+    
+    É audacioso, progressista, prestativo e independente. 
     Está sempre disposto a ajudar àqueles que lhe pedem auxílio!</h4>
     <p>O dia 10 traz para <strong>você</strong> a energia vibrante do "novo começo" com uma potência redobrada. <strong>você</strong> possui um talento nato para a liderança e uma capacidade única de se reinventar, não importa quantas vezes a vida apresente desafios que exijam começar do zero absoluto.</p>
     <p>Sua autoconfiança é um grande trunfo, e <strong>você</strong> possui uma coragem pioneira que leva a explorar campos onde pouca gente se atreve a ir. <strong>você</strong> é uma figura realizadora por excelência e sua presença é marcante, transmitindo uma vibração de independência e sucesso por onde decide passar.</p>
@@ -453,6 +464,7 @@ SeqNegVida: {
     <p>O cuidado que <strong>você</strong> deve ter é com a impulsividade e o excesso de orgulho nas vitórias. Ao aprender a ouvir a intuição e a planejar cada passo com sabedoria e paciência, <strong>você</strong> se torna uma força imparável da natureza, capaz de construir uma história de vida brilhante e inspiradora.</p>`,
 
    11: ` <h4>Idealista - Dia 11 É um bom conselheiro e curador. 
+   
    Possui as qualidades de um visionário que aprecia e motiva aspessoas!</h4>
    <p>O dia 11 traz para <strong>você</strong> a vibração de um Número Mestre, o que confere uma intuição extraordinária e uma sensibilidade espiritual muito acima da média. <strong>você</strong> funciona como um canal de inspiração para o mundo, possuindo ideais elevados e uma capacidade única de enxergar além das aparências materiais e das limitações do cotidiano.</p>
     <p>Sua presença é magnética e <strong>você</strong> tem o dom de iluminar a vida das pessoas com palavras e percepções profundas que tocam a alma. No entanto, por ser uma vibração de alta voltagem, <strong>você</strong> pode sentir uma tensão interna constante ou uma exigência própria muito forte para realizar algo grandioso pela humanidade, o que exige momentos de pausa e recolhimento.</p>
@@ -460,6 +472,7 @@ SeqNegVida: {
     <p>O desafio para <strong>você</strong> é manter o pragmatismo e aprender a confiar na própria voz interior sem se deixar levar pela ansiedade ou pelo perfeccionismo. Quando <strong>você</strong> equilibra essa mente brilhante com a ação prática, <strong>você</strong> se torna uma liderança espiritual ou intelectual capaz de transformar profundamente a realidade de todos ao seu redor.</p>`,
 
     12: `     <h4>Comunicador - Dia 12 
+    
     É altamente imaginativo e talentoso especialmente nas habilidades verbais e de escrita. Mas pode ser temperamental e evasivo!</h4>
    <p>O dia 12 confere a <strong>você</strong> uma personalidade rica em criatividade, com uma habilidade de comunicação que une a lógica à sensibilidade de forma magistral. <strong>você</strong> possui um talento natural para as artes, para o ensino ou para qualquer atividade que exija expressar ideias de forma clara, equilibrada e altamente convincente para diferentes públicos.</p>
     <p>Sua mente é fértil e <strong>você</strong> tem a capacidade de analisar os problemas sob diversos ângulos simultâneos, o que faz de <strong>você</strong> uma figura de conselho muito requisitada. <strong>você</strong> valoriza as conexões sociais, possuindo um magnetismo que atrai pessoas interessadas em sua inteligência e no modo refinado e artístico com que <strong>você</strong> observa a vida.</p>
@@ -467,6 +480,7 @@ SeqNegVida: {
     <p>O cuidado que <strong>você</strong> deve ter é para não se sacrificar em excesso pelos desejos alheios a ponto de esquecer os próprios sonhos. Ao aprender a estabelecer limites saudáveis e a usar a criatividade para a própria realização, <strong>você</strong> se torna uma pessoa multifacetada e profundamente admirada por sua integridade e talento.</p>`,
 
     13: ` <h4>Prático - Dia 13
+    
 É um organizador e gerente natural, focado nos detalhes. Dotado de considerável perseverança e determinação!</h4>
     <p>O dia 13 traz para <strong>você</strong> uma energia de transformação profunda e de construção sólida, capaz de erguer estruturas onde nada existia. Embora seja um número muitas vezes mal compreendido, ele confere a <strong>você</strong> uma capacidade de trabalho e uma determinação que poucas pessoas possuem, permitindo a realização de grandes feitos através do esforço contínuo.</p>
     <p><strong>você</strong> é alguém que não teme o trabalho árduo e possui um talento natural para a organização estratégica e para a reestruturação de situações caóticas. Sua vida é marcada por ciclos de renovação necessária, nos quais <strong>você</strong> aprende a deixar o que é obsoleto para trás a fim de construir algo muito mais forte, estável e duradouro no lugar.</p>
@@ -474,6 +488,7 @@ SeqNegVida: {
     <p>O desafio para <strong>você</strong> é aprender a expressar os sentimentos de forma mais aberta e flexível, evitando a rigidez mental. Quando <strong>você</strong> aceita as mudanças com naturalidade, <strong>você</strong> se torna uma força realizadora imparável, capaz de alcançar o topo através da disciplina e de uma inteligência prática fora do comum.</p>`,
 
     14: ` <h4>Aventureiro - Dia 14
+    
 É altamente adaptável, mas fica entediado facilmente e precisa do novo e do exótico para se sentir estimulado e vivo!</h4>
     <p>O dia 14 confere a <strong>você</strong> um talento nato para lidar com o público, com a comunicação de massa e com o dinamismo do mundo moderno. <strong>você</strong> possui uma mente rápida, versátil e uma curiosidade que leva a querer experimentar tudo o que a existência oferece, agindo sempre com uma agilidade mental que desperta a admiração de todos.</p>
     <p>Sua natureza é inquieta e <strong>você</strong> possui uma facilidade extrema de adaptação a novos ambientes e situações imprevistas. <strong>você</strong> detém o dom da persuasão e consegue transmitir ideias ou conceitos com uma clareza impressionante, pois as pessoas confiam naturalmente em sua energia vibrante e em sua visão progressista sobre o futuro.</p>
@@ -481,6 +496,7 @@ SeqNegVida: {
     <p>O aprendizado para <strong>você</strong> é buscar a temperança, evitando a impulsividade em momentos de tédio. Ao canalizar essa energia vibrante para objetivos claros e construtivos, <strong>você</strong> se torna profissional de destaque e uma pessoa que vive experiências ricas, transformadoras e repletas de significado profundo.</p>`,
 
     15: ` <h4>Sedutor - Dia 15
+    
 É muito sensível, não suporta ser criticado e por isso tende a apoiar os outros a ponto de negar a si mesmo!</h4>
 
     <p>O dia 15 traz para <strong>você</strong> um magnetismo pessoal fortíssimo, aliado a um talento nato para o ensino e para o auxílio ao próximo através da generosidade. <strong>você</strong> possui uma natureza acolhedora e se sente em plenitude quando pode prover bem-estar para a família ou para a comunidade, agindo como uma figura central de apoio e equilíbrio.</p>
@@ -489,6 +505,7 @@ SeqNegVida: {
     <p>O desafio para <strong>você</strong> é não se deixar levar por tentativas de manipulação externa ou pelo desejo de controlar excessivamente a vida alheia. Ao usar seu magnetismo para elevar as pessoas e criar união, <strong>você</strong> atinge um nível de prosperidade e satisfação pessoal que é fruto direto da nobreza que habita seu coração.</p>`,
 
     16: ` <h4>Extremista - Dia 16
+    
 Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para terminar o que começou!</h4>
     <p>O dia 16 indica que <strong>você</strong> possui uma mente analítica e uma intuição profunda, voltada para a descoberta da verdade e da essência real das coisas. Sua vida é pontuada por experiências que levam a questionar valores meramente materiais, desenvolvendo em <strong>você</strong> uma sabedoria espiritual e intelectual que poucos conseguem alcançar.</p>
     <p><strong>você</strong> tem o talento de enxergar através das máscaras sociais e possui um discernimento infalível para detectar a falsidade ou a superficialidade. Embora possa parecer uma pessoa reservada ou até misteriosa, sua profundidade de pensamento é o que a torna profissional de excelência em estratégia, pesquisa ou orientação em temas complexos.</p>
@@ -496,6 +513,7 @@ Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para 
     <p>O desafio para <strong>você</strong> é aprender a lidar com as mudanças bruscas como oportunidades de evolução, sem se fechar em um isolamento defensivo. Quando <strong>você</strong> entende que o desapego é o caminho para o verdadeiro poder, <strong>você</strong> se torna alguém inabalável e detentor de um conhecimento que ilumina o caminho de todos ao redor.</p>`,
 
     17: ` <h4>Orgulhoso - Dia 17
+    
 É muito ambicioso e independente. Seu desafio é evitar ficar obcecado com seu próprio julgamento e se tornar um ditador!</h4>
     <p>O dia 17 confere a <strong>você</strong> uma vibração de sucesso, reconhecimento e brilho pessoal. <strong>você</strong> possui o talento raro de unir a espiritualidade e a intuição com a capacidade executiva de alto nível, o que permite alcançar posições de grande destaque e prosperidade mantendo a integridade e os valores éticos elevados.</p>
     <p>Sua mente é organizada, lógica e <strong>você</strong> possui uma visão de longo alcance para os negócios e para a estruturação da vida profissional. <strong>você</strong> impõe respeito pela competência e pela forma justa como conduz projetos, agindo sempre com uma autoridade natural que dispensa a força, baseando-se no conhecimento e na eficiência técnica.</p>
@@ -503,6 +521,7 @@ Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para 
     <p>O aprendizado para <strong>você</strong> é manter a conexão com o propósito interior enquanto sobe os degraus da realização material, evitando o excesso de frieza. Quando <strong>você</strong> usa sua influência e abundância para o bem comum, <strong>você</strong> brilha como uma das vibrações mais vitoriosas e afortunadas de toda a numerologia.</p>`,
 
     18: ` <h4>Contestador - Dia 18
+    
 É capaz de organizar e inspirar outras pessoas, sua satisfação mais profunda é realizar algo que beneficie outras pessoas!</h4>
     <p>O dia 18 traz para <strong>você</strong> uma natureza humanitária, combativa e dotada de uma grande força emocional e resiliência. <strong>você</strong> é alguém que se sente em movimento quando pode lutar por justiça ou ajudar quem precisa de proteção, possuindo um talento natural para liderar grandes causas sociais ou movimentos de transformação coletiva.</p>
     <p>Sua intuição é muito forte e <strong>você</strong> possui uma capacidade de superação impressionante, conseguindo transformar crises profundas em vitórias pessoais e aprendizados valiosos. <strong>você</strong> entende os processos de encerramento e transição, o que permite finalizar ciclos com dignidade e iniciar novas etapas com coragem e sabedoria renovadas.</p>
@@ -510,6 +529,7 @@ Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para 
     <p>O desafio para <strong>você</strong> é controlar as oscilações emocionais e evitar o acúmulo de mágoas do passado. Ao focar toda essa energia no serviço desinteressado e na cura do ambiente ao seu redor, <strong>você</strong> encontra uma paz profunda e um reconhecimento que vem do impacto positivo e real que gera na vida das pessoas.</p>`,
 
     19: ` <h4>Individualista - Dia 19
+    
 É muito determinado e independente é altamente idealista, mas se seus ideais falharem, pode se tornar amargo e negativo!</h4>
     <p>O dia 19 confere a <strong>você</strong> uma energia de independência total, criatividade exuberante e brilho pessoal intenso. <strong>você</strong> é uma liderança nata que possui a capacidade de realizar desejos através da pura força de vontade, mas a vida sempre apresentará situações para que <strong>você</strong> aprenda a considerar a importância do coletivo.</p>
     <p>Sua personalidade é vibrante e <strong>você</strong> tem o talento de iniciar novos empreendimentos com muito entusiasmo e originalidade. <strong>você</strong> nasceu para ser protagonista da própria história e possui todas as ferramentas mentais para alcançar o topo, desde que desenvolva a habilidade de ouvir e colaborar com as outras pessoas.</p>
@@ -517,6 +537,7 @@ Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para 
     <p>O aprendizado central de <strong>você</strong> é superar o egoísmo e entender que o verdadeiro poder vem da união de forças. Quando <strong>você</strong> brilha sem apagar a luz alheia e compartilha suas vitórias, <strong>você</strong> atinge uma realização plena e se torna fonte inesgotável de calor e direção para todos que cruzam seu caminho.</p>`,
 
     20: ` <h4>Consciente - Dia 20
+    
 Tem a capacidade de persuadir os outros sob o seu ponto de vista usando meios gentis. É brilhante em fazer os outros pensarem que são brilhantes!</h4>
     <p>O dia 20 traz para <strong>você</strong> a vibração da cooperação, da sensibilidade extrema e da diplomacia em sua forma mais refinada. <strong>você</strong> possui o dom da escuta e da empatia profunda, sendo aquela pessoa que consegue pacificar conflitos e criar pontes de entendimento sólido entre os lados mais opostos de uma questão.</p>
     <p>Sua força reside na suavidade, na paciência e na capacidade de aguardar o momento certo para agir. <strong>você</strong> produz resultados excepcionais quando trabalha em grupo e se revela uma parceria leal e confiável, valorizando a harmonia familiar e social acima de qualquer disputa por ego ou desejo de comando solitário.</p>
@@ -524,6 +545,7 @@ Tem a capacidade de persuadir os outros sob o seu ponto de vista usando meios ge
     <p>O desafio para <strong>você</strong> é não se deixar levar pela insegurança ou pela passividade excessiva diante de personalidades mais agressivas. Ao confiar no seu valor imenso como mediadora e fortalecer a própria voz, <strong>você</strong> se torna a peça essencial que mantém qualquer estrutura unida e funcionando em perfeita paz.</p>`,
 
 21: ` <h4>Disperso - Dia 21
+
 Apesar de ser idealista e liberal, necessita da companhia de outras pessoas, pois disso depende o seu sucesso e bem estar!</h4>
 <p>O dia 21 traz para <strong>você</strong> uma vibração de expansão, sorte e grande capacidade de comunicação social. <strong>você</strong> possui um magnetismo natural que atrai oportunidades e figuras influentes, agindo com uma alegria de viver que se torna contagiante para todos ao redor, criando um ambiente de leveza e descontração.</p>
     <p>Sua mente é criativa e versátil, permitindo que <strong>você</strong> se destaque em atividades que envolvam o público, as artes ou a escrita. <strong>você</strong> tem o dom de transformar palavras em pontes para o sucesso, possuindo uma habilidade única de expressar desejos de forma clara, encantadora e extremamente convincente em qualquer círculo social.</p>
@@ -531,6 +553,7 @@ Apesar de ser idealista e liberal, necessita da companhia de outras pessoas, poi
     <p>O desafio para <strong>você</strong> é evitar a dispersão de talentos e a ansiedade por resultados imediatos. Quando <strong>você</strong> foca a energia em um objetivo central e mantém a persistência, <strong>você</strong> atinge uma colheita de reconhecimento e prosperidade que flui de forma natural e constante para a sua vida.</p>`,
 
     22: ` <h4>Sonhador - Dia 22
+    
 Tem o dom de ver os detalhes de e como tudo deve se desenvolver. Ordeiro e paciente, pode abordar tudo de maneira metódica e sistemática!</h4>
     <p>O dia 22 é a vibração do "Mestre Construtor", o que confere a <strong>você</strong> o potencial de realizar projetos de escala monumental e impacto coletivo. <strong>você</strong> possui a intuição elevada do número 11 combinada com a capacidade prática e realizadora do número 4, permitindo que <strong>você</strong> transforme sonhos abstratos em realidades concretas.</p>
     <p>Sua visão de mundo é ampla e existe a sensação de que <strong>você</strong> nasceu para deixar um legado duradouro e benéfico para a humanidade. <strong>você</strong> tem um talento natural para a organização de grandes sistemas, empresas ou movimentos, agindo com uma responsabilidade e uma ética que inspiram confiança absoluta em parceiros e colaboradores.</p>
@@ -538,6 +561,7 @@ Tem o dom de ver os detalhes de e como tudo deve se desenvolver. Ordeiro e pacie
     <p>O aprendizado para <strong>você</strong> é lidar com a imensa pressão que essa capacidade gera na vida pessoal. Ao manter o equilíbrio emocional e a humildade diante das grandes conquistas, <strong>você</strong> se torna uma força realizadora inigualável, capaz de mudar a estrutura do mundo ao seu redor para muito melhor.</p>`,
 
     23: ` <h4>Versatil - Dia 23
+    
 A vida é uma aventura, a ser vivida ao máximo, adora mudança e emoção e precisa dos dois para se sentir verdadeiramente vivo!</h4>
     <p>O dia 23 confere a <strong>você</strong> uma inteligência brilhante, versatilidade e uma facilidade incrível para aprender qualquer assunto com profundidade. <strong>você</strong> possui um talento especial para a comunicação e para a persuasão, conseguindo convencer as pessoas através de uma lógica rápida, um charme pessoal único e muita agilidade mental.</p>
     <p>Sua natureza é curiosa e amante da liberdade, e <strong>você</strong> se adapta a mudanças com uma rapidez que impressiona a todos. <strong>você</strong> brilha em ambientes dinâmicos onde pode usar a criatividade para resolver problemas complexos de forma inovadora e eficiente, buscando sempre expandir horizontes e descobrir novas formas de atuação.</p>
@@ -545,6 +569,7 @@ A vida é uma aventura, a ser vivida ao máximo, adora mudança e emoção e pre
     <p>O cuidado que <strong>você</strong> deve ter é para não se tornar alguém de impaciência excessiva com quem possui um ritmo mais lento. Ao cultivar a persistência nos projetos de longo prazo, <strong>você</strong> transforma sua agilidade mental em uma carreira de sucesso sólido e uma vida repleta de conquistas memoráveis.</p>`,
 
     24: ` <h4>Prestativo - Dia 24
+    
 É enérgico, responsável e prestativo, mas sua natureza solidária pode fazer com que enfrente muitas dificuldades!</h4>
     <p>O dia 24 indica que <strong>você</strong> possui um talento nato para a diplomacia, para o cuidado com as relações e para a promoção da harmonia através da presença. <strong>você</strong> é a "âncora" emocional de seu círculo social e familiar, possuindo um senso de dever e de justiça que faz de <strong>você</strong> uma figura de conselho e apoio muito procurada.</p>
     <p>Sua energia é voltada para a criação de equilíbrio e beleza nos ambientes. <strong>você</strong> se sente em plenitude quando pode servir ao próximo ou zelar pelo bem-estar de quem ama, agindo sempre com uma doçura que protege uma grande força interior e uma determinação inabalável para manter a paz e a segurança de todos.</p>
@@ -559,6 +584,7 @@ O sucesso é indispensável para sua autoestima. Estabelece para si, padrões de
     <p>O aprendizado para <strong>você</strong> é confiar mais na própria intuição do que apenas na lógica racional. Quando <strong>você</strong> une sua capacidade analítica com a sabedoria do coração, <strong>você</strong> se torna profissional de destaque, referência em seu campo e alguém dotado de uma profunda paz interior.</p>`,
 
     26: ` <h4>Controlador - Dia 26
+    
 Pode ser muito diplomático e convincente. Prefere persuasivo, em vez da impositivo!</h4>
     <p>O dia 26 confere a <strong>você</strong> um talento excepcional para os negócios, para a gestão financeira e para uma liderança executiva pautada pelo equilíbrio. <strong>você</strong> possui uma visão prática e ambiciosa da vida, mas não abre mão da diplomacia e da consideração pelo bem-estar das pessoas envolvidas em seus projetos e metas.</p>
     <p>Sua capacidade de organização é aliada a um forte senso de justiça social e familiar. <strong>você</strong> sabe como atrair a prosperidade e como gerir recursos com extrema eficiência, sendo frequentemente o pilar de sustentação para quem está ao redor, agindo com uma autoridade que é respeitada por sua generosidade e competência.</p>
@@ -566,6 +592,7 @@ Pode ser muito diplomático e convincente. Prefere persuasivo, em vez da imposit
     <p>O desafio para <strong>você</strong> é equilibrar a busca pelo sucesso material com as necessidades da vida emocional e afetiva. Ao manter o foco no propósito maior e não apenas nos números, <strong>você</strong> constrói uma trajetória de prestígio sólido e um legado de abundância que atravessa o tempo.</p>`,
 
     27: ` <h4>Político - Dia 27
+    
 É idealista, sensível e analítico. Sua mente fértil e criativa, impressiona facilmente as pessoas através de suas ideias inusitadas!</h4>
     <p>O dia 27 traz para <strong>você</strong> uma vibração humanitária elevada, aliada a uma mente intelectualmente poderosa e independente. <strong>você</strong> possui o talento de compreender conceitos complexos e de aplicá-los para o benefício do coletivo, agindo como uma figura de orientação, educação ou guia para muitas pessoas.</p>
     <p>Sua visão de mundo é espiritualizada e <strong>você</strong> sente uma forte necessidade de se envolver em causas que tragam progresso e cura para a humanidade. <strong>você</strong> é alguém de carisma e inspiração, cuja integridade e sabedoria atraem a admiração de pessoas de todas as classes sociais, culturas e níveis de conhecimento.</p>
@@ -573,6 +600,7 @@ Pode ser muito diplomático e convincente. Prefere persuasivo, em vez da imposit
     <p>O aprendizado para <strong>você</strong> é lidar com a sensibilidade aos problemas do mundo sem se deixar abater por eles. Ao focar na sua imensa capacidade de ensino e auxílio, <strong>você</strong> encontra a realização plena e deixa um rastro de luz, transformação e esperança por onde decide passar.</p>`,
 
     28: ` <h4>Obstinado - Dia 28
+    
 É genioso, controverso e aberto a novas ideias dentro dos limites do convencional. Nasceu com o dom do querer, e vive se queixando de tudo!</h4>
     <p>O dia 28 indica que <strong>você</strong> possui uma liderança forte, mas que se manifesta de forma estratégica, cooperativa e diplomática. <strong>você</strong> tem o talento de iniciar grandes projetos contando com o apoio de parceiros que confiam em sua visão e em sua garra inesgotável para vencer desafios e obstáculos.</p>
     <p>Sua determinação é mesclada com uma intuição aguçada sobre as necessidades e potenciais alheios. <strong>você</strong> é alguém de realização que busca o topo, mas que entende perfeitamente que a união de forças é o caminho mais curto e seguro para o sucesso sustentável, agindo com uma coragem que é sempre inteligente e bem planejada.</p>
@@ -580,6 +608,7 @@ Pode ser muito diplomático e convincente. Prefere persuasivo, em vez da imposit
     <p>O desafio para <strong>você</strong> é não cair na teimosia ou no desejo de dominar as situações de forma unilateral. Ao usar seu poder para empoderar sua equipe, família ou parceiros, <strong>você</strong> se torna uma liderança inesquecível e alcança uma prosperidade invejável, sólida e merecida.</p>`,
 
     29: ` <h4>Instintivo - Dia 29
+    
 Vivenciam muitas oscilações emocionais. Por sua tendência melancolia e vulnerabilidade, tende a ver tudo de forma exagerada!</h4>
     <p>O dia 29 confere a <strong>você</strong> uma sensibilidade espiritual e intuitiva altíssima, sendo uma vibração que carrega o potencial do Número Mestre 11. <strong>você</strong> possui uma mente visionária e uma capacidade de percepção que ultrapassa em muito os limites do óbvio, agindo como um verdadeiro farol de consciência para os outros.</p>
     <p>Sua vida é marcada por uma intensidade emocional profunda e <strong>você</strong> tem o dom de inspirar multidões através de sua fé, de seus ideais ou de suas ideias inovadoras. <strong>você</strong> atrai os extremos e deve aprender a navegar entre a rica vida interior e as exigências do mundo material com equilíbrio e muita sabedoria prática.</p>
@@ -587,6 +616,7 @@ Vivenciam muitas oscilações emocionais. Por sua tendência melancolia e vulner
     <p>O aprendizado para <strong>você</strong> é a busca pela estabilidade emocional. Ao ancorar sua intuição em ações concretas e manter a confiança na própria força, <strong>você</strong> se torna uma figura de guia espiritual ou intelectual poderosa, capaz de realizar mudanças profundas e positivas na sociedade.</p>`,
 
     30: ` <h4>Teimoso - Dia 30 É teimoso! 
+    
     Tem sua própria opinião e estará sempre convencido de que seu modo de fazer as coisas é o único certo!</h4>
     <p>O dia 30 traz para <strong>você</strong> o poder da autoexpressão absoluta, do otimismo e da alegria criativa em sua forma mais pura. <strong>você</strong> possui o talento de enxergar o lado bom da vida e de comunicar essa vibração positiva através da fala, da arte, do ensino ou de qualquer forma de interação social produtiva.</p>
     <p>Sua mente é brilhante e <strong>você</strong> possui um magnetismo que faz com que as pessoas queiram estar perto de <strong>você</strong> para absorver sua energia vibrante e renovadora. <strong>você</strong> tem o dom de tornar leves as situações pesadas e de encontrar soluções criativas onde outros veem apenas becos sem saída ou problemas insolúveis.</p>
@@ -594,6 +624,7 @@ Vivenciam muitas oscilações emocionais. Por sua tendência melancolia e vulner
     <p>O desafio para <strong>você</strong> é evitar a dispersão e a tendência a críticas superficiais. Ao usar sua comunicação para elevar, educar e motivar o próximo, <strong>você</strong> atinge uma realização imensa e se torna uma figura querida, respeitada e central em qualquer grupo que integre.</p>`,
 
     31: ` <h4>Tradicionalista - Dia 31
+    
 Pode ser teimoso e rígido, se recusando a permitir que ideias novas e criativas tenham lugar em seu apego rígido aos padrões pré-estabelecidos!</h4>
     <p>O dia 31 indica que <strong>você</strong> possui uma mente prática, organizada e disciplinada, mas com uma pitada de criatividade e originalidade que a diferencia da maioria. <strong>você</strong> é uma figura de construção que não tem medo de inovar, agindo com uma responsabilidade que garante a segurança e a prosperidade do futuro.</p>
     <p>Sua natureza é persistente e <strong>você</strong> valoriza a honestidade e os valores tradicionais, mas está sempre com a mente aberta para novas ideias que possam melhorar sua eficiência e seus resultados. <strong>você</strong> possui um talento natural para a estruturação de bases familiares e profissionais sólidas, prósperas e muito respeitadas.</p>
