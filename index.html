@@ -516,6 +516,7 @@ function montarHtmlPlanosNatural(nome) {
         .sort((a, b) => b.valor - a.valor);
 
     const _p1 = planosOrdenados[0];
+    const _p4 = planosOrdenados[3];
     const ref = _p1.valor || 1;
     const sigla = "F" + 
         ((planosOrdenados[1].valor / ref > 0.75) ? "F" : (planosOrdenados[1].valor / ref >= 0.50) ? "M" : "f") +
@@ -577,6 +578,7 @@ function montarHtmlPlanosNatural(nome) {
         }
     }
 
+    // SÍNTESE + CAIXA PRETA (DIRETRIZ)
     html += `
         <div style="margin-top:40px; border:2px solid var(--gold); padding:25px; border-radius:12px; background:#fff;">
             <div style="text-align:center; margin-bottom:20px;">
@@ -584,6 +586,13 @@ function montarHtmlPlanosNatural(nome) {
                 <h3 style="margin-top:10px; text-transform:uppercase;">Síntese da Matriz</h3>
             </div>
             <div class="texto-res">${aplicarFiltroTexto(textosSinteseExpressao[sigla] || textosSinteseExpressao["padrao"])}</div>
+            
+            <div style="margin-top:25px; background:var(--dark); color:var(--gold); padding:20px; border-radius:8px; text-align:center; border: 1px solid var(--gold);">
+                <strong style="text-transform: uppercase; letter-spacing: 1px;">Diretriz de Equilíbrio:</strong><br>
+                <span style="font-size: 15px; color: #fff; opacity: 0.9;">
+                    Utilize a potência do plano <strong>${nomesAmigaveis[_p1.chave]}</strong> para sustentar e elevar as fragilidades do plano <strong>${nomesAmigaveis[_p4.chave]}</strong>.
+                </span>
+            </div>
         </div>
     </div>`;
 
@@ -598,8 +607,6 @@ function montarHtmlPlanosNatural(nome) {
 function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     const anoAtual = new Date().getFullYear();
     const dtNasci = new Date(dataNascimento + 'T00:00:00');
-    const dia = String(dtNasci.getDate()).padStart(2, '0');
-    const mes = String(dtNasci.getMonth() + 1).padStart(2, '0');
 
     const partes = nomeCompleto.toUpperCase().trim().split(/\s+/);
     let timelines = partes.map(p => {
@@ -645,7 +652,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
                 </div>
                 <div>
                     <h4 style="margin: 0; color: var(--dark); text-transform: uppercase;">Perfil de Ação Atual: ${dominanteMomento}</h4>
-                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #555;">Sua forma de agir e decidir este ano está sob a frequência <strong>${dominanteMomento}</strong>.</p>
+                    <p style="margin: 5px 0 0 0; font-size: 14px; color: #555;">Sua forma de decidir este ano está sob a frequência <strong>${dominanteMomento}</strong>.</p>
                 </div>
             </div>
 
@@ -676,20 +683,28 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         if(textoIndiv) {
             html += `
                 <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
-                    <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:14px;">${nomesAmigaveis[p]} no Momento <small>(${int})</small></h4>
+                    <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:14px;">${nomesAmigaveis[p]} <small>(${int})</small></h4>
                     <div class="texto-res">${aplicarFiltroTexto(textoIndiv)}</div>
                 </div>
             `;
         }
     }
 
+    // SÍNTESE + CAIXA PRETA (DIRETRIZ DO ANO)
     html += `
         <div style="margin-top:40px; border:2px solid var(--gold); padding:25px; border-radius:12px; background:#fff;">
             <div style="text-align:center; margin-bottom:20px;">
-                <span style="background:var(--gold); color:white; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:bold;">${titulosEstrutura[siglaMomento] || "SÍNTESE DO MOMENTO"}</span>
-                <h3 style="margin-top:10px; text-transform:uppercase;">Síntese do Ciclo Atual</h3>
+                <span style="background:var(--gold); color:white; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:bold;">${titulosEstrutura[siglaMomento] || "SÍNTESE DO CICLO"}</span>
+                <h3 style="margin-top:10px; text-transform:uppercase;">Síntese do Momento Atual</h3>
             </div>
             <div class="texto-res">${aplicarFiltroTexto(textosSinteseExpressao[siglaMomento] || textosSinteseExpressao["padrao"])}</div>
+            
+            <div style="margin-top:25px; background:var(--dark); color:var(--gold); padding:20px; border-radius:8px; text-align:center; border: 1px solid var(--gold);">
+                <strong style="text-transform: uppercase; letter-spacing: 1px;">Diretriz do Ciclo:</strong><br>
+                <span style="font-size: 15px; color: #fff; opacity: 0.9;">
+                    Sua maior força de ação neste ano está concentrada no plano <strong>${nomesAmigaveis[_p1[0]]}</strong>.
+                </span>
+            </div>
         </div>
 
         <div style="margin-top:30px; border-top: 2px dashed var(--gold); padding-top:20px;">
