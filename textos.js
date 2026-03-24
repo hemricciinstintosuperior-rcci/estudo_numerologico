@@ -2218,7 +2218,7 @@ const introducoes = {
   momento: "O Plano de Energia do Momento atua como uma lente temporal sobre a sua essência. Ele indica como as circunstâncias atuais estão moldando sua forma de agir e sentir, destacando quais habilidades estão sendo mais exigidas ou despertadas em você neste ciclo."
 };
 
-const textosTrânsito = {
+const textosTransito = {
 
 1: `<p>O momento atual sinaliza o início de um ciclo de novos começos e de uma renovação profunda em sua caminhada. Este trânsito marca o limiar de uma fase inovadora, onde novas ideias devem ser aceitas e desenvolvidas por você com muita coragem e determinação. É a hora de avançar com firmeza, deixando o passado para trás e eliminando tudo o que não serve mais ao seu futuro promissor. Sinta a força que emana desta nova etapa, permitindo que a criatividade flua de maneira livre e sem amarras, pois o universo conspira a seu favor agora.</p>
 
