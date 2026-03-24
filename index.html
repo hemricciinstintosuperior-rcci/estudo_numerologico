@@ -105,7 +105,30 @@
 .tab-content.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-
+.capa-transicao {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border: 5px solid var(--gold);
+    margin: 40px 0;
+    text-align: center;
+    page-break-before: always;
+}
+.capa-transicao h2 {
+    font-size: 35px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.capa-transicao p {
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.7;
+    max-width: 80%;
+}
 
     </style>
 </head>
@@ -871,7 +894,7 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 
             
 // 1. A lista deve ter exatamente as chaves que você colocou no 'res'
-const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "Maturidade", "inclinacoes", "subconsciente"];
+const listaPremium = ["dia", "comportamento", "essencia", "equilibrio", "talento", "motivacao", "influencia", "Personalidade", "Relacionamento", "CaminhodeVida", "Propósito", "inclinacoes", "subconsciente"];
 
 listaPremium.forEach(chave => {
     // Busca o nome bonito. Se não achar, usa a chave original.
@@ -960,6 +983,31 @@ listaPremium.forEach(chave => {
                 html += `</div>`;
             });
 
+
+// ... (depois de terminar os Desafios)
+
+// 1. CAPA PARA O BLOCO DE TEMPO
+html += `
+    <div class="capa-transicao">
+        <p>PARTE 03</p>
+        <h2>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
+        <p>A análise das janelas de oportunidade e as frequências que regem o seu agora.</p>
+    </div>
+`;
+
+// 2. INSERIR A MATURIDADE AQUI (Como você pediu)
+const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
+html += `
+    <div class="secao-card quebra-pagina">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloMat}</h2>
+        <div class="intro-texto">${textos.introducoes.Maturidade || ""}</div>
+        <div class="texto-res">${aplicarFiltroTexto(textos.Maturidade[res.Maturidade])}</div>
+    </div>
+`;
+
+// 3. CHAMA O STATUS DO MOMENTO (que já calculamos)
+html += montarHtmlPlanosMomento(nomeRaw, dataRaw);
+            
 
 // 1. INSERIR O PLANO DE MOMENTO E VIBRAÇÃO DE TRÂNSITO AQUI
 html += montarHtmlPlanosMomento(nomeRaw, dataRaw); 
