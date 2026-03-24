@@ -795,28 +795,15 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         
 function gerarMapaCompleto() {
             const nomeRaw = document.getElementById("nome").value.trim();
-// Substitua a linha do dataRaw e a extração por esta versão:
-const dataInput = document.getElementById("data").value; 
-if (!dataInput) return alert("Por favor, selecione a data.");
+            const dataRaw = document.getElementById("data").value;
+            if (!nomeRaw || !dataRaw) return alert("Por favor, preencha todos os dados.");
 
-// O segredo para o celular: split pelo traço "-" e forçar número inteiro
-const partes = dataInput.split("-");
-const ano = parseInt(partes[0], 10);
-const mes = parseInt(partes[1], 10);
-const dia = parseInt(partes[2], 10);
-
-// Agora o 'dia' vale 25, 26, 31... não importa o fuso horário ou o dia de hoje.
-
-            // 2. PREPARA O ARRAY DE NOMES (O que deu erro antes)
             const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
-
-            // 3. ATENÇÃO AQUI: Criamos a variável 'diaRed' para cálculos que pedem redução,
-            // mas mantemos a variável 'dia' pura para o seu relatório.
-            const diaRed = reduzir(dia); 
-            const mesRed = reduzir(mes);
-            const anoRed = reduzir(ano);
-
-            // 4. INÍCIO DOS CÁLCULOS
+            const [ano, mes, dia] = dataRaw.split("-").map(Number);
+            const diaRed = reduzir(dia);
+const mesRed = reduzir(mes);
+const anoRed = reduzir(ano);
+            
             let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
 
             // A partir daqui o seu código continua igual...
