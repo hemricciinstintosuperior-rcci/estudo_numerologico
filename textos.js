@@ -635,6 +635,7 @@ Pode ser teimoso e rígido, se recusando a permitir que ideias novas e criativas
 // --- COMPORTAMENTO (NÚMERO PSÍQUICO) ---
 comportamento: {
     1: ` <h4>Determinado e convicto Comportamento 1
+    
 O 1 é o Número do Comportamento das pessoas nascidas nos dias 01, 10, 19 e 28 de cada mês.</h4>
 
     <p>O comportamento psíquico de <strong>você</strong> é marcado por uma autoconfiança inabalável e uma postura extremamente decidida diante de qualquer desafio que a vida apresente. Existe em seu íntimo uma preferência clara por agir através da própria iniciativa em vez de aguardar por decisões alheias, demonstrando uma independência mental que impressiona a todos ao redor pela firmeza e clareza de propósitos.</p>
@@ -643,6 +644,7 @@ O 1 é o Número do Comportamento das pessoas nascidas nos dias 01, 10, 19 e 28 
     <p>O grande talento de <strong>você</strong> reside na originalidade do pensamento e na coragem de ser quem realmente é. Ao longo da vida, esse comportamento atrai o respeito de figuras influentes e abre portas para cargos de comando, consolidando <strong>você</strong> como uma referência de autonomia e sucesso que inspira todos a buscarem sua própria força interior.</p>`,
 
     2: ` <h4>Romantico e emotivo Comportamento 2
+    
 O 2 é o Número do Comportamento das pessoas nascidas nos dias 02, 11, 20 e 29 do mês.</h4>
     <p>O comportamento psíquico de <strong>você</strong> revela uma alma diplomática, gentil e profundamente voltada para a promoção da harmonia e da cooperação mútua. <strong>você</strong> possui uma sensibilidade aguçada que permite captar nuances emocionais e intenções alheias muito antes que qualquer palavra seja proferida, agindo sempre com uma cautela respeitosa e muito tato social.</p>
     <p><strong>você</strong> tende a evitar conflitos diretos, preferindo resolver impasses através da persuasão suave, da escuta ativa e do equilíbrio entre as partes envolvidas. Sua mente busca incessantemente o ponto de união, tornando <strong>você</strong> uma figura de mediação excelente. O comportamento de <strong>você</strong> é pautado pela convicção de que a verdadeira força reside na união de esforços e na gentileza, não na imposição de vontades.</p>
@@ -650,6 +652,7 @@ O 2 é o Número do Comportamento das pessoas nascidas nos dias 02, 11, 20 e 29 
     <p>O desafio desse comportamento é não absorver as tensões externas ou se anular em favor da vontade alheia. Quando <strong>você</strong> aprende a confiar no próprio valor e a expressar suas necessidades com clareza, seu comportamento se transforma em uma fonte inesgotável de paz e estabilidade emocional para todo o círculo social e familiar.</p>`,
 
     3: ` <h4>Otimista e despreocupado Comportamento 3
+    
 O 3 é o Número do Comportamento das pessoas nascidas nos dias 3, 12, 21 ou 30 do mês.</h4>
     <p>O comportamento psíquico de <strong>você</strong> é vibrante, criativo e movido por uma necessidade intrínseca de interação e expressão pessoal. Existe um otimismo natural na personalidade de <strong>você</strong> que contagia qualquer ambiente, agindo sempre com uma vivacidade que atrai as pessoas para perto dessa energia luminosa, comunicativa e repleta de carisma.</p>
     <p>Para <strong>você</strong>, a vida é observada como uma oportunidade constante de criar, aprender e compartilhar ideias inovadoras. O comportamento é o de uma pessoa curiosa, que gosta de se manter informada e de participar ativamente da vida social. <strong>você</strong> possui o dom da palavra e sabe como usar o magnetismo pessoal para motivar os outros de forma leve, transformando problemas pesados em soluções criativas.</p>
@@ -657,6 +660,7 @@ O 3 é o Número do Comportamento das pessoas nascidas nos dias 3, 12, 21 ou 30 
     <p>O cuidado necessário é com a tendência a dispersar a atenção em muitos interesses simultâneos. Quando <strong>você</strong> consegue focar esse comportamento dinâmico em uma direção específica, sua capacidade de realização se torna brilhante, transformando o potencial criativo em resultados concretos, admirados e amplamente reconhecidos pela sociedade.</p>`,
 
     4: ` <h4>Teimoso e observador Comportamento 4
+    
 O 4 é o Número do Comportamento das pessoas nascidas nos dias 4, 13, 22 e 31 do mês.</h4>
     <p>O comportamento psíquico de <strong>você</strong> é pautado pela lógica rigorosa, pela autodisciplina e por um senso de responsabilidade extremamente elevado. <strong>você</strong> valoriza a ordem, a pontualidade e a integridade acima de tudo, agindo sempre com uma seriedade profissional que transmite total confiança e segurança absoluta para quem convive ao seu lado.</p>
     <p>Sua mente busca bases sólidas, por isso o comportamento de <strong>você</strong> é o de alguém que planeja cada etapa com cuidado minucioso e prefere caminhos comprovadamente seguros a aventuras incertas. <strong>você</strong> é o alicerce onde as outras pessoas se apoiam, sendo uma figura reconhecida pela imensa capacidade de trabalho e pela lealdade inabalável aos próprios princípios e à família.</p>
@@ -664,6 +668,7 @@ O 4 é o Número do Comportamento das pessoas nascidas nos dias 4, 13, 22 e 31 d
     <p>O desafio para <strong>você</strong> é permitir que a flexibilidade e a inovação entrem em sua rotina, evitando a rigidez excessiva. Ao unir a incrível capacidade de construção com uma mente aberta a novas formas de fazer as coisas, <strong>você</strong> se torna uma presença invencível na conquista de metas de longo prazo e na manutenção de um legado estável.</p>`,
 
     5: ` <h4>Impulsivo e imediatista Comportamento 5
+    
 O 5 é o Número do Comportamento das pessoas nascidas nos dias 5, 14 e 23 do mês.</h4>
     <p>O comportamento psíquico de <strong>você</strong> é marcado pela versatilidade, pela rapidez de raciocínio e por uma busca incessante por autonomia e novas experiências. Existe uma mente inquieta em <strong>você</strong> que se aborrece facilmente com o que é repetitivo, agindo sempre com uma curiosidade que leva a explorar o mundo, as ideias e as pessoas sem qualquer receio.</p>
     <p><strong>você</strong> possui uma facilidade impressionante de adaptação e um magnetismo que atrai mudanças constantes para a trajetória pessoal. O pensamento de <strong>você</strong> é progressista e está sempre à frente do tempo, buscando novas formas de viver, trabalhar e se relacionar. Esse comportamento dinâmico faz com que <strong>você</strong> seja uma figura influente em processos de modernização e quebra de paradigmas.</p>
@@ -671,6 +676,7 @@ O 5 é o Número do Comportamento das pessoas nascidas nos dias 5, 14 e 23 do m�
     <p>O aprendizado central para o comportamento de <strong>você</strong> é lidar com a impaciência e a ansiedade por novidades. Quando <strong>você</strong> consegue canalizar essa energia vibrante para um propósito específico e persistente, <strong>você</strong> se torna uma força de transformação poderosa e uma referência de vitalidade e plenitude em qualquer setor da vida.</p>`,
 
     6: ` <h4>Protecionista e sentimental Comportamento 6
+    
 O 6 é o Número do Comportamento das pessoas nascidas nos dias 6, 15 e 24 do mês.</h4>
     <p>O comportamento psíquico de <strong>você</strong> é profundamente voltado para o cuidado, a proteção e o bem-estar dos entes queridos e da comunidade. Existe um senso de dever e de justiça muito forte em sua personalidade, agindo sempre como o coração do grupo social e buscando criar harmonia estética e emocional em cada detalhe do ambiente ao redor.</p>
     <p><strong>você</strong> sente uma necessidade vital de ser útil e de oferecer conselhos sábios a quem atravessa dificuldades. O comportamento é acolhedor e <strong>você</strong> valoriza imensamente a beleza, o conforto do lar e a estabilidade das relações. As pessoas sentem uma atração natural pela energia bondosa de <strong>você</strong>, buscando o apoio e a compreensão que apenas sua presença equilibrada pode oferecer.</p>
@@ -685,6 +691,7 @@ O 7 é o Número do Comportamento das pessoas nascidas nos dias 7, 16 e 25 do m�
     <p>O cuidado necessário é para não se isolar em demasia ou se tornar uma figura excessivamente crítica com as falhas humanas. Ao compartilhar sua sabedoria com o mundo de forma generosa, seu comportamento se transforma em um guia luminoso para todos os que buscam o autoconhecimento e o entendimento real da vida.</p>`,
 
     8: ` <h4>Determinado e competitivo Comportamento 8
+    
 O 8 é o Número do Comportamento das pessoas nascidas nos dias 8, 17 e 26 do mês.</h4>
     <p>O comportamento psíquico de <strong>você</strong> é marcado pela ambição elevada, pelo pragmatismo e por uma visão executiva invejável da realidade. <strong>você</strong> compreende perfeitamente as leis da causa e efeito no mundo material, agindo sempre com uma determinação focada na conquista de autoridade, prestígio e prosperidade sólida para si e para os seus.</p>
     <p><strong>você</strong> não recua diante de desafios grandiosos e possui um comportamento que impõe respeito de forma natural, sem necessidade de artifícios. Sua mente é voltada para a gestão eficiente de recursos, tempo e pessoas, buscando sempre o resultado concreto e a excelência. Para <strong>você</strong>, a vida é uma jornada de mérito, onde o esforço disciplinado deve ser recompensado com o sucesso.</p>
@@ -692,6 +699,7 @@ O 8 é o Número do Comportamento das pessoas nascidas nos dias 8, 17 e 26 do m�
     <p>O aprendizado para <strong>você</strong> é equilibrar o exercício do poder com a compaixão e o afeto. Quando <strong>você</strong> usa sua força para construir algo que beneficia o coletivo e não apenas o benefício próprio, seu comportamento atrai uma abundância inesgotável e <strong>você</strong> se torna uma liderança admirada, vitoriosa e influente.</p>`,
 
     9: ` <h4>Inquieto e inconformado Comportamento 9
+    
 O 9 é o Número do Comportamento das pessoas nascidas nos dias 9, 18 e 27 do mês.</h4>
     <p>O comportamento psíquico de <strong>você</strong> é humanitário, altruísta e dotado de uma sensibilidade que abrange as necessidades do mundo inteiro. <strong>você</strong> possui uma sabedoria que parece vir de outras épocas, agindo sempre com uma generosidade que não espera recompensa e uma compreensão profunda das fragilidades e dores humanas.</p>
     <p><strong>você</strong> sente uma ligação intrínseca com causas sociais e com o desenvolvimento espiritual. O comportamento de <strong>você</strong> é o de alguém que está sempre em prontidão para encerrar ciclos, perdoar e buscar a evolução da consciência acima de qualquer ganho material imediato. Existe um carisma universal em <strong>você</strong> que atrai pessoas de todas as origens para perto de sua luz e tolerância.</p>
