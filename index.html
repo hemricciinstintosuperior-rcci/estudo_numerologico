@@ -605,8 +605,22 @@ function montarHtmlPlanosNatural(nome) {
 // ============================================
 
 function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
-    const anoAtual = new Date().getFullYear();
+    const agora = new Date();
+    const anoAtual = agora.getFullYear();
     const dtNasci = new Date(dataNascimento + 'T00:00:00');
+    
+    // Lógica para determinar o intervalo do ciclo (de aniversário a aniversário)
+    let inicioCiclo = new Date(anoAtual, dtNasci.getMonth(), dtNasci.getDate());
+    let fimCiclo = new Date(anoAtual + 1, dtNasci.getMonth(), dtNasci.getDate());
+    
+    // Se o aniversário ainda não passou este ano, o ciclo atual começou no ano passado
+    if (agora < inicioCiclo) {
+        inicioCiclo.setFullYear(anoAtual - 1);
+        fimCiclo.setFullYear(anoAtual);
+    }
+
+    const formatarData = (d) => d.toLocaleDateString('pt-BR');
+    const periodoVigente = `${formatarData(inicioCiclo)} a ${formatarData(fimCiclo)}`;
 
     const partes = nomeCompleto.toUpperCase().trim().split(/\s+/);
     let timelines = partes.map(p => {
@@ -618,7 +632,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         return t;
     });
 
-    const indiceAno = anoAtual - dtNasci.getFullYear();
+    const indiceAno = inicioCiclo.getFullYear() - dtNasci.getFullYear();
     let somaMomento = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
     let contPerfilMomento = { criativo: 0, indeciso: 0, neutro: 0 };
     let letrasAtivas = timelines.map(t => t[indiceAno % t.length]);
@@ -633,7 +647,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     let dominanteMomento = Object.keys(contPerfilMomento).reduce((a, b) => contPerfilMomento[a] >= contPerfilMomento[b] ? a : b);
     const planosOrdenados = Object.entries(somaMomento).sort((a, b) => b[1] - a[1]);
     const _p1 = planosOrdenados[0];
-    const ref = _p1.valor || 1;
+    const ref = _p1[1] || 1;
     const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
 
     const siglaMomento = "F" + 
@@ -643,7 +657,12 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
     let html = `
         <div class="secao-card quebra-pagina" style="border-top: 4px solid var(--gold); margin-top: 40px;">
-            <h2 class="titulo-topico">Status do Momento (${anoAtual})</h2>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+                <h2 class="titulo-topico" style="margin-bottom: 5px;">Status do Momento</h2>
+                <span style="background: var(--dark); color: var(--gold); padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; border: 1px solid var(--gold);">
+                    VIGÊNCIA: ${periodoVigente}
+                </span>
+            </div>
             <div class="intro-texto">${textos.introducoes.statusAnual || ""}</div>
             
             <div style="margin-bottom: 25px; padding: 20px; border: 2px solid var(--dark); border-radius: 12px; background: #fafafa; display: flex; align-items: center; gap: 20px;">
@@ -659,6 +678,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
             <div style="margin: 25px 0; background: #f9f9f9; padding: 20px; border-radius: 8px;">
     `;
 
+    // Reiteração dos Gráficos
     for(let p in somaMomento) {
         let porcentagem = (somaMomento[p] / ref) * 100;
         html += `
@@ -676,6 +696,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
     html += `</div>`;
 
+    // Textos de Interpretação por Plano
     for(let p in somaMomento) {
         let r = somaMomento[p] / ref;
         let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
@@ -683,14 +704,14 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         if(textoIndiv) {
             html += `
                 <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
-                    <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:14px;">${nomesAmigaveis[p]} <small>(${int})</small></h4>
+                    <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:14px;">${nomesAmigaveis[p]} no Momento <small>(${int})</small></h4>
                     <div class="texto-res">${aplicarFiltroTexto(textoIndiv)}</div>
                 </div>
             `;
         }
     }
 
-    // SÍNTESE + CAIXA PRETA (DIRETRIZ DO ANO)
+    // SÍNTESE + CAIXA PRETA (DIRETRIZ)
     html += `
         <div style="margin-top:40px; border:2px solid var(--gold); padding:25px; border-radius:12px; background:#fff;">
             <div style="text-align:center; margin-bottom:20px;">
