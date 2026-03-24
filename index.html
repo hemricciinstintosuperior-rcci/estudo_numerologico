@@ -794,30 +794,29 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
         
      function gerarMapaCompleto() {
-    const nomeRaw = document.getElementById("nome").value.trim();
-    const dataInput = document.getElementById("data").value; // O input date sempre entrega AAAA-MM-DD
+  const nomeRaw = document.getElementById("nome").value.trim();
+    const dataInput = document.getElementById("data").value; 
 
     if (!nomeRaw || !dataInput) return alert("Por favor, preencha todos os dados.");
 
-    // 1. Extração Manual Segura (Evita bug de fuso horário no celular)
-    const partes = dataInput.split("-");
-    const ano = parseInt(partes[0]);
-    const mes = parseInt(partes[1]);
-    const dia = parseInt(partes[2]);
+    // EXTRAÇÃO SEGURA (Cura o bug do celular e do PC)
+    const partesData = dataInput.split("-");
+    const ano = parseInt(partesData[0]);
+    const mes = parseInt(partesData[1]);
+    const dia = parseInt(partesData[2]);
 
-    // 2. Formatação para o Relatório (Brasileiro: DD/MM/AAAA)
-    const diaFormatado = dia < 10 ? "0" + dia : dia;
-    const mesFormatado = mes < 10 ? "0" + mes : mes;
-    const dataExibicao = `${diaFormatado}/${mesFormatado}/${ano}`;
+    // Formatação para a Capa (Brasil: DD/MM/AAAA)
+    const diaF = dia < 10 ? "0" + dia : dia;
+    const mesF = mes < 10 ? "0" + mes : mes;
+    const dataExibicao = `${diaF}/${mesF}/${ano}`;
 
-    // 3. Reduções Numerológicas
+    // Reduções Iniciais
     const diaRed = reduzir(dia);
     const mesRed = reduzir(mes);
     const anoRed = reduzir(ano);
 
-    // ... restante dos cálculos (sV, sC, etc) ...
-            
-            let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
+    // Variáveis de cálculo (removi o que estava repetido)
+    let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
 
             // Essência: 1ª letra de cada nome
             nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
