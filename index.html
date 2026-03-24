@@ -799,25 +799,28 @@ function gerarMapaCompleto() {
 
     if (!nomeRaw || !dataInput) return alert("Por favor, preencha todos os dados.");
 
-    // 1. CAPTURA PURA (Resolve o bug do celular dia 25-31)
-    const partes = dataInput.split("-");
-    const vAno = parseInt(partes[0], 10);
-    const vMes = parseInt(partes[1], 10);
-    const vDia = parseInt(partes[2], 10);
+    // 1. CAPTURA DOS NÚMEROS (Sem reduzir e sem erro de fuso no celular)
+    var partes = dataInput.split("-");
+    var ano = parseInt(partes[0], 10);
+    var mes = parseInt(partes[1], 10);
+    var dia = parseInt(partes[2], 10); 
 
-    // 2. REDUÇÕES PARA CÁLCULO (O dia vDia fica puro para o relatório)
-    const diaRed = reduzir(vDia);
-    const mesRed = reduzir(vMes);
-    const anoRed = reduzir(vAno);
+    // 2. REDUÇÕES (Para os cálculos que pedem um único dígito)
+    var diaRed = reduzir(dia);
+    var mesRed = reduzir(mes);
+    var anoRed = reduzir(ano);
 
+    // 3. PREPARAÇÃO DO NOME
     const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
 
-    // 3. VARIÁVEIS DE SOMA (Atenção à pontuação aqui)
+    // 4. VARIÁVEIS DE CÁLCULO (Certifique-se de que não há nada grudado aqui)
     let sV = 0; 
     let sC = 0; 
     let sE = 0; 
     let contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
     let usados = new Set();
+
+    // DAQUI PARA BAIXO O SEU CÓDIGO VAI RECONHECER O 'dia' E FUNCIONAR...
 
     // DAQUI PARA BAIXO SEGUE O SEU CÓDIGO ORIGINAL...
 
