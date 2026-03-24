@@ -874,10 +874,21 @@ let html = `
                 
        </div>   
         </div>
-  </div>
- 
+</div>
+`;
+
+// INSERIR CAPA 1 AQUI
+html += `
+    <div class="capa-transicao">
+        <p>PILAR 01</p>
+        <h2>Sua Essência e <br> Identidade Quântica</h2>
+        <p>A decodificação das frequências nativas que definem sua personalidade e propósito original.</p>
+    </div>
+
 
 ${montarHtmlPlanosNatural(nomeRaw)}
+
+
 
   
 
@@ -890,7 +901,13 @@ ${montarHtmlPlanosNatural(nomeRaw)}
     </div>
 `;
 
-
+html += `
+    <div class="capa-transicao">
+        <p>PILAR 02</p>
+        <h2>Alinhamento e <br> Superação de Desafios</h2>
+        <p>Onde a luz encontra a sombra: lições cármicas e mecanismos do subconsciente para o seu equilíbrio.</p>
+    </div>
+`;
 
             
 // 1. A lista deve ter exatamente as chaves que você colocou no 'res'
@@ -953,6 +970,15 @@ listaPremium.forEach(chave => {
             }
             html += `</div>`;
 
+            
+// 1. CAPA PARA O BLOCO DE TEMPO
+html += `
+    <div class="capa-transicao">
+        <p>PARTE 03</p>
+        <h2>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
+        <p>A análise das janelas de oportunidade e as frequências que regem o seu agora.</p>
+    </div>
+`;
             // 5. CICLOS, MOMENTOS E DESAFIOS
 ["ciclos", "momentos", "desafios"].forEach(sec => {
                 html += `
@@ -986,14 +1012,7 @@ listaPremium.forEach(chave => {
 
 // ... (depois de terminar os Desafios)
 
-// 1. CAPA PARA O BLOCO DE TEMPO
-html += `
-    <div class="capa-transicao">
-        <p>PARTE 03</p>
-        <h2>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
-        <p>A análise das janelas de oportunidade e as frequências que regem o seu agora.</p>
-    </div>
-`;
+
 
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
@@ -1005,8 +1024,7 @@ html += `
     </div>
 `;
 
-// 3. CHAMA O STATUS DO MOMENTO (que já calculamos)
-html += montarHtmlPlanosMomento(nomeRaw, dataRaw);
+
             
 
 // 1. INSERIR O PLANO DE MOMENTO E VIBRAÇÃO DE TRÂNSITO AQUI
