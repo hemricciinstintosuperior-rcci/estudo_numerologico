@@ -314,8 +314,10 @@ const nomesExibicao = {
       "Conclusao": "Conclusão"   
 };
         function reduzir(n) { if (n === 0) return 0; let r = Math.abs(n) % 9; return r === 0 ? 9 : r; }
-        function descobrirPlano(l) {
-    const letraBase = l.normalize("NFD")[0].toUpperCase();
+        
+      function descobrirPlano(letra) { 
+    if (!letra) return "físico"; 
+    const letraBase = letra.normalize("NFD")[0].toUpperCase();
     for (let p in gruposPlanos) {
         if (gruposPlanos[p].includes(letraBase)) return p;
     }
