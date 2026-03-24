@@ -409,15 +409,32 @@ const megaBancoAtributos = {
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
 
-    // Calcula a nota para cada atributo no banco de dados
+    // --- MANUTENÇÃO TOTAL: Chamamos sua função de planos para pegar os números ---
+    const dadosNaturais = calcularDadosPlanos(nomeRaw);
+    const vNaturais = {
+        "Físico": reduzir(dadosNaturais.soma.fisico),
+        "Mental": reduzir(dadosNaturais.soma.mental),
+        "Emocional": reduzir(dadosNaturais.soma.emocional),
+        "Intuitivo": reduzir(dadosNaturais.soma.intuitivo)
+    };
+
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
+        
+        // --- SUA LÓGICA ORIGINAL (INTOCADA) ---
         let nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
+        
+        // --- APENAS ACRESCENTANDO O RESULTADO DO PLANO ---
+        // Aqui somamos a vibração do plano (ex: se o plano é Mental e deu 9, soma 0.9 na nota)
+        if (vNaturais[dados.plano]) {
+            nota += (vNaturais[dados.plano] * 0.1); 
+        }
+
         rankingGeral.push({
             nome: nomeAtributo,
             nota: nota,
             plano: dados.plano,
-            percentual: (nota * 10).toFixed(1)
+            percentual: Math.min((nota * 10), 100).toFixed(1)
         });
     }
 
@@ -427,19 +444,18 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
     planos.forEach(p => {
         const itensPlano = rankingGeral.filter(i => i.plano === p).sort((a,b) => b.nota - a.nota);
         
-        // Cria um bloco para cada Plano (Físico, Mental, etc.)
         htmlFinal += `
             <div class="secao-plano" style="margin-bottom: 30px; background:#fff; padding:20px; border-radius:8px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
                 <h3 style="color:#827108; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; text-transform: uppercase; font-size: 18px;">
-                    Plano ${p}
+                    Plano ${p} <small style="font-size:10px; color:#999; margin-left:10px;">(Influência da Vibração ${vNaturais[p]})</small>
                 </h3>
                 <div style="margin-top: 15px;">
         `;
 
         itensPlano.forEach(item => {
-            let corBarra = "#2e7d32"; // Verde (Luz)
-            if (item.nota < 5.2) corBarra = "#cc0000"; // Vermelho (Sombra)
-            else if (item.nota < 7) corBarra = "#827108"; // Dourado (Neutro)
+            let corBarra = "#2e7d32"; 
+            if (item.nota < 5.2) corBarra = "#cc0000"; 
+            else if (item.nota < 7) corBarra = "#827108"; 
 
             htmlFinal += montarBarraGrafico(item, corBarra);
         });
