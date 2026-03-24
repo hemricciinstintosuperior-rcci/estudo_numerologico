@@ -794,25 +794,30 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
         
 function gerarMapaCompleto() {
-            const nomeRaw = document.getElementById("nome").value.trim();
-            // Substitua a linha do dataRaw e a extração por esta versão:
-const dataInput = document.getElementById("data").value; 
-if (!dataInput) return alert("Por favor, selecione a data.");
+    const nomeRaw = document.getElementById("nome").value.trim();
+    const dataInput = document.getElementById("data").value;
+    if (!nomeRaw || !dataInput) return alert("Por favor, preencha todos os dados.");
 
-// O segredo para o celular: split pelo traço "-" e forçar número inteiro
-const partes = dataInput.split("-");
-const ano = parseInt(partes[0], 10);
-const mes = parseInt(partes[1], 10);
-const dia = parseInt(partes[2], 10);
+    // 1. EXTRAÇÃO LIMPA (Sem repetir declarações de variáveis)
+    const partes = dataInput.split("-");
+    const valAno = parseInt(partes[0], 10);
+    const valMes = parseInt(partes[1], 10);
+    const valDia = parseInt(partes[2], 10);
 
-// Agora o 'dia' vale 25, 26, 31... não importa o fuso horário ou o dia de hoje.
-            if (!nomeRaw || !dataRaw) return alert("Por favor, preencha todos os dados.");
+    // 2. USO NOS CÁLCULOS (Usando os nomes novos para não dar conflito)
+    const diaRed = reduzir(valDia);
+    const mesRed = reduzir(valMes);
+    const anoRed = reduzir(valAno);
 
-            const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
-            const [ano, mes, dia] = dataRaw.split("-").map(Number);
-            const diaRed = reduzir(dia);
-const mesRed = reduzir(mes);
-const anoRed = reduzir(ano);
+    const nomesArray = nomeRaw.toUpperCase().split(/\s+/);
+
+    // 3. SEU OBJETO DE RESULTADOS (Mantendo o dia puro, sem reduzir)
+    // Procure onde você monta o 'res' e garanta que está assim:
+    const res = {
+        dia: valDia, // Aqui ele vai pegar 25, 26, 31... sem erro!
+        mes: valMes,
+        ano: valAno,
+        // ... o restante dos seus cálculos (motivacao, etc)
             
             let sV = 0, sC = 0, sE = 0, contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0}, usados = new Set();
 
