@@ -408,8 +408,8 @@ const megaBancoAtributos = {
 
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
-
-    // --- MANUTENÇÃO TOTAL: Chamamos sua função de planos para pegar os números ---
+    
+    // Captura os resultados numéricos reduzidos (1 a 9) de cada área
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
     const vNaturais = {
         "Físico": reduzir(dadosNaturais.soma.fisico),
@@ -418,14 +418,19 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Intuitivo": reduzir(dadosNaturais.soma.intuitivo)
     };
 
+    // Mapeamento das novas legendas que você pediu
+    const legendasPersonalizadas = {
+        "Físico": "Potencial de Realização e Ação",
+        "Emocional": "Essência e Capacidade de Aproveitar a Vida",
+        "Intuitivo": "Valores Internos e Sabedoria",
+        "Mental": "Estratégia, Lógica e Decisão"
+    };
+
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
-        
-        // --- SUA LÓGICA ORIGINAL (INTOCADA) ---
         let nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz);
         
-        // --- APENAS ACRESCENTANDO O RESULTADO DO PLANO ---
-        // Aqui somamos a vibração do plano (ex: se o plano é Mental e deu 9, soma 0.9 na nota)
+        // Soma o resultado numérico daquela área específica (o 1 a 9)
         if (vNaturais[dados.plano]) {
             nota += (vNaturais[dados.plano] * 0.1); 
         }
@@ -438,25 +443,29 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         });
     }
 
-    const planos = ["Físico", "Mental", "Emocional", "Intuitivo"];
-    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Análise por Planos de Expressão</h2>`;
+    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Análise de Potenciais e Perfil</h2>`;
 
-    planos.forEach(p => {
+    // Renderiza os blocos com as NOVAS LEGENDAS
+    const ordemExibicao = ["Físico", "Emocional", "Intuitivo", "Mental"];
+
+    ordemExibicao.forEach(p => {
         const itensPlano = rankingGeral.filter(i => i.plano === p).sort((a,b) => b.nota - a.nota);
         
         htmlFinal += `
             <div class="secao-plano" style="margin-bottom: 30px; background:#fff; padding:20px; border-radius:8px; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
-                <h3 style="color:#827108; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; text-transform: uppercase; font-size: 18px;">
-                    Plano ${p} <small style="font-size:10px; color:#999; margin-left:10px;">(Influência da Vibração ${vNaturais[p]})</small>
-                </h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 15px;">
+                    <h3 style="color:#827108; text-transform: uppercase; font-size: 16px; margin: 0;">
+                        ${legendasPersonalizadas[p]}
+                    </h3>
+                    <span style="background: #827108; color: #fff; padding: 2px 10px; border-radius: 5px; font-size: 11px; font-weight: bold;">
+                        Força: ${vNaturais[p]}
+                    </span>
+                </div>
                 <div style="margin-top: 15px;">
         `;
 
         itensPlano.forEach(item => {
-            let corBarra = "#2e7d32"; 
-            if (item.nota < 5.2) corBarra = "#cc0000"; 
-            else if (item.nota < 7) corBarra = "#827108"; 
-
+            let corBarra = item.nota >= 7 ? "#2e7d32" : (item.nota >= 5.2 ? "#827108" : "#cc0000");
             htmlFinal += montarBarraGrafico(item, corBarra);
         });
 
