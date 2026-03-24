@@ -716,7 +716,12 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
     letrasAtivas.forEach(l => {
         let p = descobrirPlano(l);
-        let letraBase = l.normalize("NFD")[0];
+        letraAtiva = timelines[i][idadeNoCiclo % timelines[i].length];
+        // ADICIONE ESTA TRAVA ABAIXO:
+if (!letraAtiva) {
+    console.log("Aviso: Letra não encontrada no índice, pulando...");
+    return; // Se a letra for indefinida, ele pula para a próxima sem travar
+}
         if(p) somaMomento[p] += calcularValorLetra(l);
         if(tabelaExpressao[letraBase]) contPerfilMomento[tabelaExpressao[letraBase]]++;
     });
