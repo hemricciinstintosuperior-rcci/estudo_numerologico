@@ -381,47 +381,56 @@ SeqNegVida: {
 },
   // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 31) ---
  dia: {
-    1: `<p>O dia 1 traz para <strong>você</strong> uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. <strong>você</strong> traz consigo uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em todos os setores da vida e da jornada pessoal.</p>
+    1: ` <h4>Desbravador - Dia 1 É um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!</h4>
+    <p>O dia 1 traz para <strong>você</strong> uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. <strong>você</strong> traz consigo uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em todos os setores da vida e da jornada pessoal.</p>
     <p>Sua mente funciona de forma independente e <strong>você</strong> sente uma necessidade vital de manter o controle sobre a própria trajetória. Seu talento natural é a iniciativa pura; <strong>você</strong> não sente conforto em seguir fórmulas prontas ou ordens que não façam sentido para a sua lógica, buscando sempre a própria verdade interna acima de opiniões alheias.</p>
     <p>Na vida prática, <strong>você</strong> possui uma coragem que muitas vezes beira o pioneirismo, sendo aquela pessoa que dá o primeiro passo em projetos ousados e desafiadores que exigem pulso firme. <strong>você</strong> tem a marca da individualidade e o desejo de ser alguém de destaque em sua área de atuação.</p>
     <p>O grande desafio de <strong>você</strong> é equilibrar essa força de vontade para não transmitir uma imagem de autoridade excessiva, transformando sua determinação em uma fonte de inspiração constante. Ao liderar pelo exemplo, <strong>você</strong> demonstra que o sucesso é fruto da autoconfiança e da persistência que habitam seu espírito realizador.</p>`,
 
-    2: `<p>O dia 2 confere a <strong>você</strong> uma natureza extremamente diplomática, sensível e voltada para a cooperação. <strong>você</strong> possui o dom de perceber as nuances nos relacionamentos e no ambiente que a maioria das pessoas ignora, o que faz de <strong>você</strong> uma figura de mediação excelente em qualquer conflito ou negociação.</p>
+    2: ` <h4>Pacificador - Dia 2 Está ciente do que acontece ao seu redor e é facilmente influenciado pelas pessoas e pelo ambiente!</h4>
+    <p>O dia 2 confere a <strong>você</strong> uma natureza extremamente diplomática, sensível e voltada para a cooperação. <strong>você</strong> possui o dom de perceber as nuances nos relacionamentos e no ambiente que a maioria das pessoas ignora, o que faz de <strong>você</strong> uma figura de mediação excelente em qualquer conflito ou negociação.</p>
     <p>Sua força não reside na agressividade, mas na persuasão suave e na capacidade de unir pessoas em torno de um objetivo comum com muita paciência. <strong>você</strong> produz resultados melhores em parceria do que em total isolamento, e seu talento natural brilha quando existe um ambiente de harmonia onde sua intuição aguçada pode ser ouvida.</p>
     <p><strong>você</strong> é o suporte emocional de muitos, possuindo uma empatia que acolhe e traz segurança para quem compartilha a vida ao seu lado. Existe em seu interior um apreço profundo pelas artes e pela beleza, refletindo uma alma que busca o equilíbrio estético e emocional em cada detalhe do cotidiano.</p>
     <p>O aprendizado para <strong>você</strong> é fortalecer a autoconfiança para não depender tanto da aprovação externa. Quando <strong>você</strong> aprende a unir sua sensibilidade com a firmeza nas decisões, <strong>você</strong> se torna uma peça fundamental e indispensável em qualquer estrutura familiar ou profissional de sucesso.</p>`,
 
-    3: `<p>O dia 3 traz para <strong>você</strong> o dom da comunicação, da expressão criativa e de um carisma social inigualável. <strong>você</strong> é uma pessoa que possui luz própria e uma facilidade imensa em transmitir ideias, seja pela fala, pela escrita ou pelas artes, atraindo a atenção de todos com naturalidade e alegria.</p>
+    3: ` <h4>Carsimático - Dia 3 É amigável e sociável, mas pode ser temperamental e sujeito a variações de humor instantâneas! </h4>
+    <p>O dia 3 traz para <strong>você</strong> o dom da comunicação, da expressão criativa e de um carisma social inigualável. <strong>você</strong> é uma pessoa que possui luz própria e uma facilidade imensa em transmitir ideias, seja pela fala, pela escrita ou pelas artes, atraindo a atenção de todos com naturalidade e alegria.</p>
     <p>O otimismo é uma marca registrada da personalidade de <strong>você</strong>, que tem o talento de elevar o espírito das pessoas ao redor. Para <strong>você</strong>, a vida é um palco onde a criatividade deve ser explorada ao máximo, e sua mente está sempre em movimento, criando conexões sociais interessantes e descobrindo novas possibilidades de diversão.</p>
     <p><strong>você</strong> tem uma alma jovem e vibrante que detesta o tédio e a rotina pesada. Sua presença costuma ser o ponto alto de qualquer evento, pois <strong>você</strong> traz consigo uma vibração de leveza e uma inteligência rápida que cativa tanto amigos quanto desconhecidos em poucos minutos de conversa.</p>
     <p>O cuidado que <strong>você</strong> deve ter é com a dispersão de energia; por possuir tantos talentos, existe o risco de começar muitos projetos e ter dificuldade em concluí-los. Ao focar sua expressão em objetivos claros, <strong>você</strong> ganha o poder de influenciar multidões e espalhar entusiasmo por onde passar.</p>`,
 
-    4: `<p>O dia 4 indica que <strong>você</strong> possui um talento natural para a organização, a disciplina e a construção de bases sólidas. <strong>você</strong> é a pessoa que traz estrutura para o caos, agindo com uma responsabilidade e uma honestidade que são pilares fundamentais para o desenvolvimento de qualquer projeto duradouro.</p>
+    4: ` <h4>Disciplinado - Dia 4 É altamente ético, possui princípios elevados. É disciplinado e responsável! </h4>
+    <p>O dia 4 indica que <strong>você</strong> possui um talento natural para a organização, a disciplina e a construção de bases sólidas. <strong>você</strong> é a pessoa que traz estrutura para o caos, agindo com uma responsabilidade e uma honestidade que são pilares fundamentais para o desenvolvimento de qualquer projeto duradouro.</p>
     <p>Sua abordagem da vida é prática e realista, sem espaço para ilusões sem fundamento. <strong>você</strong> valoriza o trabalho árduo e entende perfeitamente que o sucesso duradouro é construído tijolo por tijolo, com paciência. Para <strong>você</strong>, a segurança da família e a estabilidade financeira são prioridades absolutas.</p>
     <p><strong>você</strong> é alguém em quem todos podem confiar, pois sua palavra tem valor de lei e sua lealdade é inabalável. Existe um prazer íntimo em ver as coisas em ordem e em saber que cada esforço empreendido hoje trará a colheita de uma vida tranquila e segura no futuro próximo.</p>
     <p>O desafio para <strong>você</strong> é não permitir que a mente se torne rígida demais ou resistente às mudanças necessárias do mundo moderno. Ao unir sua incrível persistência com um pouco mais de flexibilidade, <strong>você</strong> torna suas conquistas absolutamente inabaláveis e admiradas por todos ao seu redor.</p>`,
 
-    5: `<p>O dia 5 traz para <strong>você</strong> uma alma livre, versátil e amante profunda das mudanças. <strong>você</strong> possui um talento natural para a adaptação e uma curiosidade intelectual que leva a explorar novos horizontes, viagens e experiências sensoriais de forma constante e entusiasmada.</p>
+    5: ` <h4>Independente - Dia 5 É altamente adaptável, curioso, se entedia facilmente e precisa aprender a ter disciplina e organização!</h4>
+    <p>O dia 5 traz para <strong>você</strong> uma alma livre, versátil e amante profunda das mudanças. <strong>você</strong> possui um talento natural para a adaptação e uma curiosidade intelectual que leva a explorar novos horizontes, viagens e experiências sensoriais de forma constante e entusiasmada.</p>
     <p>Sua energia é magnética e <strong>você</strong> aprende com uma rapidez impressionante, especialmente através da vivência direta com o mundo. <strong>você</strong> possui aversão à rotina e às limitações impostas por sistemas fechados, pois sua mente precisa de estímulos constantes e de liberdade para descobrir o que há além do óbvio.</p>
     <p><strong>você</strong> é uma pessoa de pensamento progressista, que está sempre buscando a modernidade e formas mais eficientes e interessantes de viver a vida. Sua versatilidade permite que <strong>você</strong> transite entre diferentes grupos sociais e áreas profissionais com uma facilidade que muitos invejam.</p>
     <p>O aprendizado para <strong>você</strong> é desenvolver o foco e a disciplina, para que a busca por liberdade não se transforme em uma instabilidade crônica. Quando <strong>você</strong> canaliza essa inteligência rápida para um propósito maior, <strong>você</strong> se torna alguém brilhante e capaz de realizar transformações profundas na sociedade.</p>`,
 
-    6: `<p>O dia 6 confere a <strong>você</strong> um talento profundo para cuidar, aconselhar e criar harmonia nos ambientes em que habita. <strong>você</strong> é alguém que se move pelo amor, pela justiça e por um senso de dever muito forte em relação à família e à comunidade, sendo o porto seguro de muita gente.</p>
+    6: ` <h4>Zeloso - Dia 6 É um zelador orientado para cuidar das pessoas e capaz de sacrificar seu próprio bem estar para apoiar e ajuda-las!</h4>
+    <p>O dia 6 confere a <strong>você</strong> um talento profundo para cuidar, aconselhar e criar harmonia nos ambientes em que habita. <strong>você</strong> é alguém que se move pelo amor, pela justiça e por um senso de dever muito forte em relação à família e à comunidade, sendo o porto seguro de muita gente.</p>
     <p>Sua sensibilidade estética e artística também é marcante; <strong>você</strong> tem o dom de tornar tudo ao redor mais belo, acolhedor e equilibrado. Para <strong>você</strong>, o lar é o centro do universo, e a realização pessoal vem quando <strong>você</strong> consegue ajudar alguém ou resolver um conflito através da compreensão e do carinho.</p>
     <p><strong>você</strong> possui uma natureza protetora e uma capacidade de doação que é raramente vista. Existe um compromisso interno com a verdade e com a ética que guia cada passo de <strong>você</strong>, tornando sua presença uma garantia de paz e de bons conselhos para quem atravessa momentos de dificuldade.</p>
     <p>O desafio de <strong>você</strong> é não se sobrecarregar com os problemas alheios ou se perder em um perfeccionismo excessivo. Ao aprender a cuidar de si com a mesma dedicação que oferece aos outros, <strong>você</strong> atinge uma plenitude emocional que irradia luz e conforto para o mundo inteiro.</p>`,
 
-    7: `<p>O dia 7 indica que <strong>você</strong> possui uma mente analítica, intuitiva e totalmente voltada para a busca da verdade interior. <strong>você</strong> é uma pessoa de investigação nata, sentindo uma necessidade profunda de entender os mistérios da existência, da ciência ou dos caminhos da espiritualidade.</p>
+    7: ` <h4>Pefecionista - Dia 7 É exigente e difícil de se conhecer. Introspectivo, tranquilo e analítico, seu objetivo é sempre a perfeição!</h4>
+    <p>O dia 7 indica que <strong>você</strong> possui uma mente analítica, intuitiva e totalmente voltada para a busca da verdade interior. <strong>você</strong> é uma pessoa de investigação nata, sentindo uma necessidade profunda de entender os mistérios da existência, da ciência ou dos caminhos da espiritualidade.</p>
     <p>Sua natureza é mais introspectiva e <strong>você</strong> valoriza o silêncio e a solidão produtiva como ferramentas essenciais para recarregar as energias e processar pensamentos complexos. <strong>você</strong> possui um radar natural para a falsidade e raramente se contenta com explicações superficiais sobre qualquer assunto importante.</p>
     <p><strong>você</strong> busca a perfeição em tudo o que estuda ou executa, tornando-se uma autoridade técnica ou intelectual em seus temas de interesse. Existe uma elegância e uma discrição no comportamento de <strong>você</strong> que impõe respeito e desperta a curiosidade de quem deseja conhecer sua mente brilhante.</p>
     <p>O desafio para <strong>você</strong> é não se isolar excessivamente ou se tornar alguém de crítica impiedosa com as imperfeições humanas. Ao compartilhar sua sabedoria e suas descobertas com o próximo, <strong>você</strong> se torna uma figura de orientação ou guia espiritual de grande profundidade e impacto real.</p>`,
 
-    8: `<p>O dia 8 traz para <strong>você</strong> um talento natural para a gestão, para os negócios e para a realização material em larga escala. <strong>você</strong> possui uma visão executiva invejável e um senso de justiça muito apurado, sabendo exatamente como organizar recursos e pessoas para atingir metas grandiosas.</p>
+    8: ` <h4>Original - Dia 8 É altamente competitivo. gosta de um desafio. As expectativas dos outros o estimulam, especialmente se duvidam de sua capacidade!</h4>
+    <p>O dia 8 traz para <strong>você</strong> um talento natural para a gestão, para os negócios e para a realização material em larga escala. <strong>você</strong> possui uma visão executiva invejável e um senso de justiça muito apurado, sabendo exatamente como organizar recursos e pessoas para atingir metas grandiosas.</p>
     <p>Sua determinação é impressionante e <strong>você</strong> encara os desafios com uma seriedade profissional que impõe autoridade imediata. Para <strong>você</strong>, o sucesso é uma consequência natural do esforço disciplinado e da capacidade de liderar com equilíbrio emocional e foco inabalável nos resultados práticos.</p>
     <p><strong>você</strong> tem a habilidade de transformar ideias abstratas em lucros e estruturas concretas. Existe em <strong>você</strong> um desejo de prosperidade que vai além do ganho pessoal, buscando também o conforto da linhagem e a segurança de quem está sob sua proteção e comando no dia a dia.</p>
     <p>O aprendizado de <strong>você</strong> é entender que o poder e o dinheiro são ferramentas para o bem, e não o fim de tudo. Quando <strong>você</strong> une sua ambição com a generosidade e a ética, <strong>você</strong> constrói um império de abundância que beneficia não apenas sua vida, mas a de milhares de pessoas ao redor.</p>`,
 
-    9: `<p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e dotada de uma visão de mundo extremamente ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar um legado positivo, agindo com um altruísmo que inspira confiança.</p>
+    9: ` <h4>Universalista - Dia 9 É liberal e idealista. Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h4>
+    <p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e dotada de uma visão de mundo extremamente ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar um legado positivo, agindo com um altruísmo que inspira confiança.</p>
     <p>Sua intuição é fortíssima e <strong>você</strong> possui uma sabedoria que parece vir de experiências de muitas vidas. <strong>você</strong> é capaz de grandes sacrifícios por causas nobres e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua compaixão e integridade moral.</p>
     <p><strong>você</strong> está em uma vibração de encerramento de ciclos e de compreensão total. Sua mente não se prende a detalhes mesquinhos, pois <strong>você</strong> enxerga o quadro geral da existência, buscando sempre a evolução espiritual e o auxílio ao próximo como metas principais de sua jornada na terra.</p>
     <p>O desafio para <strong>você</strong> é aprender o desapego em relação ao passado e às situações que não estão sob seu controle. Ao focar sua energia no serviço desinteressado, <strong>você</strong> atinge um estado de plenitude e paz interior que é a verdadeira e mais alta recompensa da sua história.</p>`,
@@ -2329,30 +2338,30 @@ intuitivo : {
 const textosExpressao = {
     criativo: ` <p>"Sua mente possui mais Criatividade"</p>
     
-<p>Naturalmente **você** apresenta ideias originais, enxerga a realidade de forma diferenciada e encara imprevistos com otimismo e espontaneidade. 
-Ao analisar problemas complexos, **você** divide-os em partes menores, focando em soluções eficazes e na adaptação rápida a novas situações.</p>
+<p>Naturalmente você apresenta ideias originais, enxerga a realidade de forma diferenciada e encara imprevistos com otimismo e espontaneidade. 
+Ao analisar problemas complexos, você divide-os em partes menores, focando em soluções eficazes e na adaptação rápida a novas situações.</p>
 
-<p>Movido por estímulos internos, **você** demonstra grande motivação pessoal, ignorando rotinas estabelecidas para explorar diversas alternativas. 
-Pelo lado desafiador, **você** pode manifestar certa arrogância ou rebeldia contra regras, sofrendo com flutuações de humor e desconfiança. 
-Nessa busca constante pelo novo, **você** corre o risco de perder a noção de tempo ou se deixar envolver por ilusões temporárias.</p>`,
+<p>Movido por estímulos internos, você demonstra grande motivação pessoal, ignorando rotinas estabelecidas para explorar diversas alternativas. 
+Pelo lado desafiador, você pode manifestar certa arrogância ou rebeldia contra regras, sofrendo com flutuações de humor e desconfiança. 
+Nessa busca constante pelo novo, você corre o risco de perder a noção de tempo ou se deixar envolver por ilusões temporárias.</p>`,
 
     indeciso: ` <p>"A indecisão toma conta da sua expressão"</p>
     
-<p>Com grande sensibilidade, **você** demonstra necessidade de atenção, podendo agir de forma dramática ou precipitada sob pressão emocional. 
-Sendo influenciável pelo ambiente, **você** muda de opinião com frequência e encontra certa dificuldade em agir de forma solitária.</p>
+<p>Com grande sensibilidade, você demonstra necessidade de atenção, podendo agir de forma dramática ou precipitada sob pressão emocional. 
+Sendo influenciável pelo ambiente, você muda de opinião com frequência e encontra certa dificuldade em agir de forma solitária.</p>
 
-<p>Revelando um lado sedutor, **você** pode ser interpretado com inconveniência devido ao excesso de dramatização em suas falas. 
-Ao fortalecer seu caráter, **você** descobre sua verdadeira identidade, trocando a busca por aprovação externa por seus desejos internos. 
-Em momentos de desequilíbrio, **você** torna-se inconstante ou impulsiva, especialmente quando é dominada por receios e emoções intensas.</p>`,
+<p>Revelando um lado sedutor, você pode ser interpretado com inconveniência devido ao excesso de dramatização em suas falas. 
+Ao fortalecer seu caráter, você descobre sua verdadeira identidade, trocando a busca por aprovação externa por seus desejos internos. 
+Em momentos de desequilíbrio, você torna-se inconstante ou impulsiva, especialmente quando é dominada por receios e emoções intensas.</p>`,
 
     neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p> 
     
-<p>Sendo alguém observador, **você** prefere analisar todos os pontos de vista antes de tomar partido em qualquer tipo de conflito. 
-Agindo por interesses próprios, **você** raramente sai da zona de conforto, mantendo-se excessivamente cauteloso para evitar riscos inúteis.</p>
+<p>Sendo alguém observador, você prefere analisar todos os pontos de vista antes de tomar partido em qualquer tipo de conflito. 
+Agindo por interesses próprios, você raramente sai da zona de conforto, mantendo-se excessivamente cauteloso para evitar riscos inúteis.</p>
 
-<p>Relacionando-se bem com todos, **você** constrói barreiras emocionais intencionais para evitar sofrimento, raramente expondo o que realmente sente. 
+<p>Relacionando-se bem com todos, você constrói barreiras emocionais intencionais para evitar sofrimento, raramente expondo o que realmente sente. 
 Com facilidade de adaptação, **você** mantém o autocontrole em situações difíceis, preferindo rotinas pacíficas. 
-No aspecto negativo, **você** pode demonstrar certa omissão ou medo de decidir, mantendo-se neutro e com baixa inclinação criativa.</p>`
+No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, mantendo-se neutro e com baixa inclinação criativa.</p>`
 };
 
 const introducoes = {
@@ -2431,10 +2440,10 @@ const textosSinteseExpressao = {
     "FFFM": "O perfil de **Tripé de Sustentação Ampla**. Quase todos os seus canais de expressão operam em potência máxima. Isso indica uma personalidade multifacetada e com grande energia vital. O único plano em estado médio funciona como o seu 'porto seguro', o ponto onde você recarrega as energias quando o excesso de força dos outros três planos começa a exaurir seu sistema.",
 
     // 4. UMA POTÊNCIA ISOLADA (O MONOLITO)
-    "Ffff": "Estamos diante de um **Monolito de Especialização**. Existe uma força avassaladora em apenas um plano, enquanto os outros três encontram-se em estado de retração (Fracos). Isso indica um especialista nato, alguém que foca toda sua existência em um único canal. O risco aqui é a negligência com as outras áreas da vida, exigindo um esforço consciente para 'resgatar' os planos que estão na sombra.",
+    "Ffff": "Estamos diante de uma **POTÊNCIA ISOLADA **. Existe uma força avassaladora em apenas um plano, enquanto os outros três encontram-se em estado de retração (Fracos). Isso indica um especialista nato, alguém que foca toda sua existência em um único canal. O risco aqui é a negligência com as outras áreas da vida, exigindo um esforço consciente para 'resgatar' os planos que estão na sombra.",
 
     // 5. DOIS FORTES E DOIS FRACOS (SEM MEIO TERMO)
-    "FFff": "Um perfil de **Binário de Extremos**. Você opera no sistema 'tudo ou nada'. Quando está engajado nos seus dois planos fortes, nada o detém. Porém, os planos fracos podem representar 'buracos negros' por onde sua energia escapa. É necessário usar a potência dos planos líderes para construir pontes de socorro para as áreas que estão desassistidas.",
+    "FFff": "Um perfil de **Perfil de Extremos opostos**. Você opera no sistema 'tudo ou nada'. Quando está engajado nos seus dois planos fortes, nada o detém. Porém, os planos fracos podem representar 'buracos negros' por onde sua energia escapa. É necessário usar a potência dos planos líderes para construir pontes de socorro para as áreas que estão desassistidas.",
 
     // 6. EQUILÍBRIO COM UM PONTO CEGO
     "FMMf": "Perfil de **Equilíbrio com Ponto de Resgate**. Você possui uma vida muito estável e equilibrada na maioria dos sentidos, porém existe um canal específico que está operando abaixo do mínimo necessário. Esse plano 'fraco' pode estar drenando sua paz silenciosamente. O foco deve ser estabilizar esse ponto de fuga para que o seu equilíbrio (médio) não seja comprometido.",
