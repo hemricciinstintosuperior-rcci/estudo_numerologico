@@ -381,7 +381,8 @@ SeqNegVida: {
 },
   // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 31) ---
  dia: {
-    1: ` <h4>Desbravador - Dia 1 É um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!</h4>
+    1: ` <h4>Desbravador - Dia 1 
+    É um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!</h4>
     <p>O dia 1 traz para <strong>você</strong> uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. <strong>você</strong> traz consigo uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em todos os setores da vida e da jornada pessoal.</p>
     <p>Sua mente funciona de forma independente e <strong>você</strong> sente uma necessidade vital de manter o controle sobre a própria trajetória. Seu talento natural é a iniciativa pura; <strong>você</strong> não sente conforto em seguir fórmulas prontas ou ordens que não façam sentido para a sua lógica, buscando sempre a própria verdade interna acima de opiniões alheias.</p>
     <p>Na vida prática, <strong>você</strong> possui uma coragem que muitas vezes beira o pioneirismo, sendo aquela pessoa que dá o primeiro passo em projetos ousados e desafiadores que exigem pulso firme. <strong>você</strong> tem a marca da individualidade e o desejo de ser alguém de destaque em sua área de atuação.</p>
@@ -429,7 +430,8 @@ SeqNegVida: {
     <p><strong>você</strong> tem a habilidade de transformar ideias abstratas em lucros e estruturas concretas. Existe em <strong>você</strong> um desejo de prosperidade que vai além do ganho pessoal, buscando também o conforto da linhagem e a segurança de quem está sob sua proteção e comando no dia a dia.</p>
     <p>O aprendizado de <strong>você</strong> é entender que o poder e o dinheiro são ferramentas para o bem, e não o fim de tudo. Quando <strong>você</strong> une sua ambição com a generosidade e a ética, <strong>você</strong> constrói um império de abundância que beneficia não apenas sua vida, mas a de milhares de pessoas ao redor.</p>`,
 
-    9: ` <h4>Universalista - Dia 9 É liberal e idealista. Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h4>
+    9: ` <h4>Universalista - Dia 9 É liberal e idealista. 
+    Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h4>
     <p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e dotada de uma visão de mundo extremamente ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar um legado positivo, agindo com um altruísmo que inspira confiança.</p>
     <p>Sua intuição é fortíssima e <strong>você</strong> possui uma sabedoria que parece vir de experiências de muitas vidas. <strong>você</strong> é capaz de grandes sacrifícios por causas nobres e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua compaixão e integridade moral.</p>
     <p><strong>você</strong> está em uma vibração de encerramento de ciclos e de compreensão total. Sua mente não se prende a detalhes mesquinhos, pois <strong>você</strong> enxerga o quadro geral da existência, buscando sempre a evolução espiritual e o auxílio ao próximo como metas principais de sua jornada na terra.</p>
