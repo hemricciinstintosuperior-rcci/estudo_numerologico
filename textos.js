@@ -2,7 +2,13 @@ const textos = {
 introducoes: {
         graficos: `Estes gráficos representam a força das suas vibrações e potenciais naturais.`,
         
-        piramide: "A Pirâmide da Vida, ou Matriz Quântica, revela as vibrações profundas que moldam seu destino. Cada camada representa uma fase de maturação das suas energias internas.",
+        piramide: `<p>​A Pirâmide da Vida Principal é o alicerce absoluto de todo o seu mapa numerológico quântico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Diferente das outras pirâmides que focam em áreas específicas, esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
+
+<p>​Esta pirâmide é construída exclusivamente a partir do seu nome de batismo, o que, na numerologia cabalística, representa a sua essência imutável e a vibração que você trouxe ao mundo. Ela reflete os aspectos gerais da vida e serve como o cenário onde todos os outros eventos acontecem. É por isso que todas as vigências de idade e períodos cronológicos do seu relatório são baseados nesta pirâmide central; ela é o relógio biológico e espiritual que governa todas as outras influências.</p>
+
+<p>​Ao analisar a Pirâmide da Vida, você está olhando para o seu destino em larga escala. Ela mostra as lições que você veio aprender e os ciclos de amadurecimento pelos quais passará. Se a sua vida fosse um filme, esta aba descreveria o enredo principal e o cenário de fundo. Sem a compreensão desta matriz, as outras áreas (pessoal ou social) ficam sem contexto, pois é a Pirâmide da Vida que define se você está em um momento de colheita, de plantio ou de transformação profunda. Ela é a bússola que impede que você se perca nas distrações do cotidiano, mantendo o foco no que realmente importa para a sua evolução de longo prazo.</p>
+
+`,,
         
         dia: `<p>O Dia Natalício representa um dos elementos mais significativos dentro da análise numerológica, pois revela as qualidades naturais que acompanham o indivíduo desde o momento do nascimento. Ele simboliza a essência mais espontânea da personalidade, refletindo os talentos inatos, as inclinações comportamentais e as características que se manifestam de forma quase instintiva ao longo da vida.</p>
 <p>Na numerologia, compreende-se que cada ser humano nasce em uma data específica de acordo com suas necessidades evolutivas e com os aprendizados que sua alma precisa desenvolver durante a existência. Dessa forma, o dia exato do nascimento não é considerado um evento aleatório, mas sim um ponto de alinhamento entre a consciência individual e as forças simbólicas representadas pelos números.</p>
