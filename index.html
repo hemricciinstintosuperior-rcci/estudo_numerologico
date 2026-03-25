@@ -150,7 +150,7 @@ input:focus {
     <div class="container">
         <h1>Estudo Numerológico</h1>
      <input type="text" id="nome" placeholder="NOME COMPLETO" >
-      <input type="text" id="data" placeholder="DD/MM/AAAA"> 
+     <input type="text" id="data" placeholder="DD/MM/AAAA" maxlength="10" onInput="this.value = this.value.replace(/[^0-9/]/g, '').replace(/^(\d{2})(\d)/, '$1/$2').replace(/(\d{2})(\d)/, '$1/$2');"> 
         <button class="btn-gerar" onclick="gerarMapaCompleto()">GERAR O MAPA</button>
     </div>
 
