@@ -85,7 +85,22 @@ Corrigir nossas fraquezas e inibições faz parte de um aprendizado que leva a e
    
 É importante entender que na numerologia moderna o que é chamado de "lições cármicas" pela numerologia antiga e mítica; na realidade não são lições, mas sim necessidades que cada ser humano possui individualmente e que lhes permite tornar sua vida muito mais fácil, prática e prazerosa.`,
         
-        deficits: `Os déficits de comportamento indicam padrões repetitivos que precisam de atenção.`,
+      
+        deficits: `<p>Em um mundo ideal todos nos “falaríamos a mesma língua” e cumpriríamos fielmente com nossas responsabilidades. Isso parece óbvio, mas na vida real não funciona assim e com isso nossos erros de comportamento e atitudes erráticas, muitas vezes impensadas, prejudicam os resultados que desejamos obter em nossas vidas.</p>
+
+<p>A Numerologia moderna é baseada na ideia da continuidade existencial onde apesar de passarmos por várias “vidas” temos uma única identidade existencial e durante este percurso, fazemos muitas escolhas positivas e acumulamos uma vasta sabedoria como também cometemos muitos erros.</p>
+
+<p>A Numerologia Moderna entende o que muitos chamam de Karma é apenas uma consequência de atitudes produzida pela própria pessoa conforme a maneira como ela interage com o mundo a sua volta, com as pessoas e consigo mesma em sua existência. Todos nós acreditamos saber o que devemos fazer, mas depois descobrimos que em algum momento desse processo, tomamos decisões ou tivemos atitudes menos assertivas que obviamente acaba exercendo algum tipo de influência em nossas vidas.</p>
+
+<p>Suas atitudes e comportamento sempre geram um resultando que se reflete em uma consequência. De acordo com a maneira como você conduz sua vida essa reação pode ter maior ou menor intensidade, e se manifestam na forma do que misticamente se costuma chamar de dívidas cármicas. Da mesma maneira, suas atitudes e comportamento também geram consequências positivas que podem compensar, reduzir ou se somar a outros erros.</p>
+
+<p>Independentemente de sua situação ou influência, não podemos considerar essas consequências como uma influência, mas sim como o resultado de um erro comportamental. Da mesma forma, não podemos considerar como sendo algo negativo, muito pelo contrário; é muito importante entender que toda consequência é um resultado da maneira como agimos e interagimos com o mundo então não possuem um “lado” positivo ou negativo já que o intuito é lhe fazer evitar situações que levem a um acúmulo de erros e assim lhe força a superar questões importantes que possam impor obstáculos maiores que limitem ou impeçam seu desenvolvimento, pessoal, material, profissional ou em qualquer outro aspecto de sua vida.</p>
+
+<p>Pela visão da Numerologia Moderna, as questões Kármicas nada mais são que um alerta ou um motivador que nos evita acumular erros. Marcam períodos que poderão gerar efeitos inesperados ou indesejados caso você esteja se negando a corrigir certas deficiências em sua personalidade que lhe induzem diretamente a repetir sempre os mesmos erros e vícios de comportamento.</p>
+
+<p>Se o período será bom ou ruim, dependerá da forma como você estiver conduzindo sua vida e da vontade que possui em resolver essas questões. Para que os resultados desejados sejam alcançados é preciso alinhar expectativas, valores, objetivos. Temos que assumir a responsabilidade por nossas vidas e garantir que estamos realmente comprometidos com nosso próprio desenvolvimento.</p>`,
+
+
         
         ciclos: `Os Ciclos de Vida mostram as transformações que cada um de nós passamos no caminho próprio e natural da vida. Normalmente vivemos uma ampla gama de ciclos e podemos experimentar uma infinidade de mudanças em nosso comportamento, pensamentos, em nossos valores e crenças. Tudo isso contribui no desenvolvimento continuo de nossa identidade, caráter e autoestima. 
     
