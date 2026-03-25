@@ -44,8 +44,18 @@ Sua influência está em praticamente todas as suas escolhas; da de sua carreira
   
 Mostra seus impulsos ocultos, o que verdadeiramente lhe motiva, e como suas ações influenciam nas suas decisões; revela quais são suas ambições, seus gostos pessoais, suas aversões, necessidades e vontades. Os motivos que estão por trás de cada decisão que alguém toma em sua vida e mesmo não sendo normalmente aparente, é este número que informa suas decisões.
 A motivação é um elemento essencial para o desenvolvimento do ser humano. Sem ela seria muito mais difícil cumprir a maior parte de suas intenções; por isso é uma vibração muito importante na numerologia e deve ser muito bem compreendida.`,
+
         
-        influencia: `A influência mostra como o seu ambiente e as pessoas ao redor te afetam.`,
+        influencia: `<p>O Número de Influência revela a forma como o mundo externo percebe sua presença; é a impressão imediata e a essência da imagem que você projeta. Ele define o impacto inicial que sua figura exerce sobre as pessoas e os julgamentos automáticos que elas formulam ao interagirem com você.</p>
+
+<p>Este indicador fornece detalhes sobre a face que você deseja apresentar à sociedade e o nível de confiança empregado ao se comunicar. Ele delimita a acessibilidade em seus relacionamentos, funcionando como um termômetro de quão profundamente você permite que os outros se aproximem.</p>
+
+<p>Além da estética externa, este número reflete a estrutura do seu pensamento e como as informações são processadas internamente. Ele traduz o que é prioritário em sua mente e como esses valores se manifestam na realidade prática, revelando o grau de maturidade alcançado para lidar com o convívio social.</p>
+
+<p>O Número de Influência também expõe as barreiras mentais, estereótipos ou resistências que podem dificultar a entrega de informações autênticas sobre si para o universo. É comum que até as pessoas mais próximas tenham dificuldade em descrever sua essência, pois, somente com o tempo e o estabelecimento de confiança, as camadas mais profundas da sua natureza são reveladas.</p>
+
+<p>Atuando como um dispositivo de censura, este número filtra tanto a imagem transmitida quanto os temas que você aceita abordar. Ele serve como um escudo que afasta situações indesejadas, ao mesmo tempo em que preserva os aspectos mais íntimos da sua personalidade. Essa primeira imagem é decisiva: ela pode tanto despertar uma curiosidade magnética quanto fazer com que o interesse alheio se dissipe rapidamente.</p>`,
+
         
         Personalidade: `<p>O Número da Personalidade revela a maneira como você age, reage e se comporta diante da vida. Ele representa a expressão prática do seu ser, a forma como suas intenções se transformam em atitudes e como você se manifesta no mundo em diferentes circunstâncias.</p>
 <p>Este número descreve o padrão habitual do seu comportamento. Ele mostra suas reações repetidas, seus hábitos emocionais e mentais, e a forma como você tende a pensar, sentir e agir diante das experiências da vida. É através da personalidade que suas ideias, desejos e convicções ganham forma concreta.</p>
