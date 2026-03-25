@@ -25,7 +25,18 @@ sobre a melhor forma de lidar com situações difíceis ou ameaçadoras, pois qu
         
         essencia: `A essência é o seu "eu" mais profundo, sua verdadeira identidade espiritual.`,
         equilibrio: `O equilíbrio mostra sua capacidade de manter a estabilidade em momentos de crise.`,
-        talento: `O talento revela as habilidades naturais que você deve desenvolver nesta vida.`,
+     
+        
+        
+        talento: `<p>Às vezes, o foco nas métricas tradicionais de sucesso é tão intenso que impede notar a existência de dons e talentos naturais que operam silenciosamente. São habilidades sutis que auxiliam você a alcançar grandes resultados, muitas vezes sem que exista uma percepção clara dessa maestria em cada ação.</p>
+
+<p>É fundamental dedicar um olhar atento a essas capacidades inatas. Ao reconhecer esses recursos internos, você passa a sentir mais competência e segurança em todas as esferas da vida, transformando potencial bruto em realização cotidiana.</p>
+
+<p>Contudo, é necessário cautela com as percepções que nutre sobre si e com as classificações adotadas. As crenças que você carrega moldam pensamentos que se cristalizam em ações concretas. Em última análise, o que você pensa é o que você se torna.</p>
+
+<p>Este estudo revela que certas características podem apresentar naturezas conflitantes, enquanto outras apontam para aptidões únicas. O segredo reside no equilíbrio, e com as qualidades pessoais não é diferente. Tudo deve passar por análise, pois cada traço pode descrever tanto um talento especial a ser lapidado quanto uma deficiência que exige superação.</p>`,
+
+
         
         motivacao: `A motivação mostra seus sonhos e desejo mais profundo. É um impulso natural que faz com que alguém aja para atingir seus objetivos e expressa a intenção que está por trás suas ações. Ele influencia as escolhas que você faz na vida, e é a principal característica responsável por iniciar, direcionar e manter comportamentos relacionados com o cumprimento de seus objetivos. 
   
@@ -50,6 +61,7 @@ A motivação é um elemento essencial para o desenvolvimento do ser humano. Sem
   <p>O Número do Caminho de Vida revela a melhor maneira de conduzir sua jornada para alcançar o “destino” que você escolheu. Trata-se de uma orientação constante, válida em qualquer fase da vida, ciclo ou momento, mesmo diante de mudanças de pensamentos e intenções.</p>
   <p>O Caminho de Vida aponta a direção mais adequada a seguir. Quando você compreende e aceita essa orientação, passa a decidir com mais segurança, utiliza seus talentos com maior eficiência e entende melhor as causas das suas conquistas e frustrações. Também identifica o que é necessário para superar desafios, evoluir como pessoa e alcançar seus objetivos.</p>
   <p>Sua função é estimular o desenvolvimento das suas habilidades e ampliar a consciência. Ele só se torna “predeterminado” quando você ignora suas orientações. Sem compreender o sentido da sua existência, torna-se difícil escolher bons caminhos e tomar decisões assertivas, fazendo com que a vida pareça desorganizada, aleatória e guiada apenas pelas circunstâncias.</p>`,
+
         
         Propósito: `O propósito de vida não representa uma obrigação rígida nem uma tarefa imposta externamente, mas sim um impulso interno que surge de forma gradual e se torna mais claro à medida que a pessoa amadurece e amplia o autoconhecimento. Esse propósito, tradicionalmente chamado de missão, expressa a direção natural da existência e atua como uma afirmação profunda do sentido pessoal que orienta pensamentos, escolhas e atitudes ao longo da vida.
   
@@ -60,6 +72,7 @@ O propósito de vida também ajuda a compreender sua postura diante da família,
 Ao entender essa orientação, torna-se possível perceber com mais clareza como suas decisões afetam sua trajetória, explicando as causas de desafios, frustrações e obstáculos enfrentados ao longo do caminho.
   
 Desenvolver consciência sobre o propósito de vida permite tomar decisões mais alinhadas às necessidades reais da sua essência, facilitando a resolução de conflitos, o crescimento pessoal e a construção de uma vida mais coerente, produtiva e evolutiva.`,
+
         
         Maturidade: `O Número de Maturidade revela desejos que surgem na juventude e se fortalecem com o tempo, tornando-se mais evidentes entre os 30 e 35 anos.
   
@@ -81,11 +94,19 @@ Ele mostra quais qualidades devem ser desenvolvidas para alcançar realização 
  
         
         
-        subconsciente: `O subconsciente revela seus medos e reações automáticas mais profundas.`,
+        subconsciente: `<p>Em nossa jornada cotidiana, somos constantemente bombardeados por estímulos que podem gerar irritação, frustração ou melancolia. Na maioria das vezes, operamos no "piloto automático", reagindo a esses eventos sem uma consciência real de nossas motivações internas.</p>
+
+<p>Todos possuímos uma predisposição intrínseca para executar sequências de ações e comportamentos padronizados. Essas reações costumam se manifestar de forma intensa e predefinida, movidas por um forte impulso instintivo que muitas vezes desconhecemos. Por serem automáticas, essas respostas tornam-se mais evidentes apenas em situações extremas, inesperadas ou sob forte pressão.</p>
+
+<p>O Número do Subconsciente é a chave para compreender o nível de autoconfiança que você possui. Ele revela sua capacidade de avaliar cenários críticos com clareza e de responder a eles de maneira equilibrada e apropriada, em vez de apenas ser levado pela correnteza emocional.</p>
+
+<p>Este indicador revela qual é a sua primeira reação — instintiva e imediata — diante de imprevistos que exigem decisões instantâneas. Ele permite analisar como você processa suas emoções no exato momento em que elas emergem, oferecendo um mapa do seu comportamento sob estresse.</p>
+
+<p>Esses impulsos podem durar apenas uma fração de segundo, mas seu impacto pode ser profundo. Se não forem compreendidos, esses padrões podem gerar estados de estresse prolongado ou até mesmo levar a quadros de exaustão emocional. Conhecer seu subconsciente é o primeiro passo para transformar reações reativas em ações conscientes e seguras.</p>`,
+   
         
         anoPessoal: `O Ano Pessoal representa a vibração numérica que influencia os acontecimentos, oportunidades e aprendizados de um ciclo de doze meses. Ele indica tendências, desafios e possibilidades
 que estarão mais ativos durante o ano atual.
-
 Compreender essa vibração permite agir com mais consciência, aproveitar oportunidades e evitar decisões impulsivas.`,
         
         deficiencias: ` Fraquezas e inibições  são comportamentos e habilidades que precisam ser tratados em sua personalidade. Essas características podem ser comparadas a uma caixa de ferramentas onde algumas ferramentas estão disponíveis para você e outras precisam ser adquiridas.
@@ -148,15 +169,9 @@ Se o número do Momento Decisivo coincide com o número do Propósito de Vida po
   
 Se o número do Momento Decisivo coincide com o número de uma de suas Fraquezas e Inibições, você pode ter alguma dificuldade para lidar com questões relacionadas a essa necessidade específica até que aperfeiçoe suas habilidades ou supere alguma inibição.  `,
         
-        desafios: `Os Desafios representam padrões de aprendizado e superação que acompanham a pessoa ao longo da vida. Eles indicam áreas onde podem surgir obstáculos, inseguranças, medos ou dificuldades que
-precisam ser compreendidos e trabalhados.
-
-Esses desafios não devem ser vistos como limitações permanentes, mas como oportunidades de crescimento e desenvolvimento pessoal.
-Ao reconhecer essas tendências, torna-se possível agir com mais consciência, fortalecer qualidades internas e transformar dificuldades
-em maturidade e experiência.
-
-Cada desafio mostra uma etapa específica do processo de evolução e revela quais atitudes favorecem o equilíbrio e a superação.
-  
+        desafios: `Os Desafios representam padrões de aprendizado e superação que acompanham a pessoa ao longo da vida. Eles indicam áreas onde podem surgir obstáculos, inseguranças, medos ou dificuldades que precisam ser compreendidos e trabalhados.
+Esses desafios não devem ser vistos como limitações permanentes, mas como oportunidades de crescimento e desenvolvimento pessoal. Ao reconhecer essas tendências, torna-se possível agir com mais consciência, fortalecer qualidades internas e transformar dificuldades em maturidade e experiência.
+Cada desafio mostra uma etapa específica do processo de evolução e revela quais atitudes favorecem o equilíbrio e a superação.  
  Sempre que o número de um Desafio coincidir com o número de um Ciclo de Vida, Momento Decisivo ou Propósito de Vida, pode sugerir alguma predisposição a questões de saúde, que podem se apresentar no período conforme descrito abaixo:
   
 Possíveis Problemas
@@ -1759,26 +1774,80 @@ inclinacoes : {
     },
         
     subconsciente: {
-        1: "Sua primeira reação é de ação imediata e autoconfiança.",
-        2: "Sua reação inicial é buscar apoio e analisar os sentimentos.",
-        3: "Tende a reagir com otimismo e criatividade sob pressão.",
-        4: "Busca segurança e ordem assim que algo inesperado ocorre.",
-        5: "Reage com rapidez e adaptabilidade a mudanças bruscas.",
-        6: "Sua primeira preocupação é o bem-estar dos envolvidos.",
-        7: "Tende a se retrair para analisar a situação racionalmente.",
-        8: "Reage focando na solução prática e no controle do dano.",
-        9: "Mantém a calma e busca uma visão ampla do problema."
-    },
+       1: `<h3>Reação Fraca e Dispersa - Subconsciente 1</h3>
+        <p>Você possui certa dificuldade em antecipar crises, e sua percepção pode falhar ao identificar a real gravidade de eventos imprevistos. Isso resulta em uma reação inicial dispersa e em uma nítida falta de iniciativa, deixando-o momentaneamente impotente e sem direção clara.</p>
+        <p>Embora possua uma resistência vital impressionante, você tem um limite crítico. Quando atingido, sua postura muda drasticamente para um estado combativo e autoritário. Nesse estágio, você se torna defensivo e crítico, enxergando ameaças em todos os lugares, o que dificulta o recebimento de ajuda externa e retarda sua recuperação emocional.</p>`,
+
+    2: `<h3>Controlador e Individualista - Subconsciente 2</h3>
+        <p>Apesar de sua flexibilidade habitual, momentos de crise profunda despertam um comportamento arredio e cauteloso. Em situações de alta tensão, sua tendência é evitar o confronto direto, mas isso pode dar lugar a uma postura arrogante ou dissimulada como mecanismo de defesa.</p>
+        <p>Se você sente que a derrota é inevitável, pode se abater rapidamente, tornando-se emocionalmente vulnerável e exigindo atenção excessiva. Sob pressão, há um forte impulso para controlar o ambiente através da comoção, podendo agir de forma fria ou vingativa contra aqueles que considera responsáveis pelo seu mal-estar.</p>`,
+
+    3: `<h3>Impetuoso e Descontrolado - Subconsciente 3</h3>
+        <p>Você transita bem na rotina, mas diante de desafios severos, a falta de firmeza se torna evidente. Sua abordagem tende a ser indisciplinada e incoerente, dificultando uma leitura precisa da realidade e gerando um pessimismo paralisante.</p>
+        <p>Em emergências, sua reação é frequentemente explosiva e desproporcional. A confusão mental e a falta de foco podem levá-lo a atitudes grosseiras ou estados depressivos súbitos. Para não sucumbir às dificuldades, você depende crucialmente do apoio de figuras que lhe transmitam segurança e proteção emocional.</p>`,
+
+    4: `<h3>Hesitação e Rigidez - Subconsciente 4</h3>
+        <p>Sua natureza é estável e sólida, mas o apego excessivo a métodos e sistemas pode torná-lo lento na resposta a eventos inesperados. Sob pressão, você corre o risco de se tornar inflexível, perdendo-se em detalhes irrelevantes enquanto a realidade exige ações rápidas.</p>
+        <p>A insegurança o torna teimoso e resistente a mudanças não planejadas. Se sentir que seu terreno seguro está ameaçado, você pode se tornar um contestador implacável e excessivamente rigoroso, tanto consigo mesmo quanto com os outros, utilizando a crítica como um escudo contra o desconhecido.</p>`,
+
+    5: `<h3>Tensão e Impulsividade - Subconsciente 5</h3>
+        <p>Você se adapta bem ao dinamismo, mas o caos absoluto desestabiliza sua sensatez. Em crises, sua reação tende a ser confusa e inconveniente, deixando-se guiar por instintos básicos e perdendo a capacidade de tomar decisões assertivas.</p>
+        <p>Há uma inclinação a dispersar energia para fugir do problema central. Se a pressão se torna insuportável, o desejo de gratificação instantânea pode levá-lo a comportamentos de risco ou vícios como forma de escape. Nestes momentos, a intervenção de terceiros é essencial para recuperar seu equilíbrio.</p>`,
+
+    6: `<h3>Sensibilidade e Controle - Subconsciente 6</h3>
+        <p>Em situações críticas, sua prioridade absoluta é o bem-estar alheio. Você demonstra uma calma aparente e um desejo genuíno de confortar a todos, muitas vezes assumindo responsabilidades que não são suas e negligenciando suas próprias necessidades básicas.</p>
+        <p>Contudo, esse zelo pode se transformar em um comportamento intrusivo e controlador. Ao tentar "salvar" a todos, você pode ditar ordens e ignorar a autonomia dos outros. Se não houver o reconhecimento ou a gratidão esperada, você pode oscilar para uma postura presunçosa ou hipócrita.</p>`,
+
+    7: `<h3>Arredio e Evasivo - Subconsciente 7</h3>
+        <p>Sua reação instintiva diante do inesperado é o retraimento. Você tende a analisar as crises de forma fria e calculista, reprimindo emoções e buscando se afastar fisicamente ou emocionalmente do problema para evitar o envolvimento direto.</p>
+        <p>Se for forçado ao confronto, pode utilizar a ironia e a manipulação como ferramentas de defesa. Existe uma tendência a buscar culpados em vez de soluções e, em estados de isolamento profundo, a buscar consolo em hábitos solitários e destrutivos, fechando-se completamente para o mundo exterior.</p>`,
+
+    8: `<h3>Eficiente e Autoritário - Subconsciente 8</h3>
+        <p>Você é a figura de estabilidade em qualquer emergência. Sua reação é focada, organizada e extremamente honesta, assumindo o comando com objetividade e eficiência. É a pessoa em quem todos confiam quando o sistema falha.</p>
+        <p>No entanto, essa força pode se tornar esmagadora. Se confrontado ou desafiado em sua autoridade, você pode tentar se impor pela força bruta ou pela arrogância. Sua dificuldade em lidar com derrotas ou perdas materiais pode gerar explosões de raiva e uma busca implacável por provar que sua verdade é a única correta.</p>`,
+
+    9: `<h3>Apático e Distante - Subconsciente 9</h3>
+        <p>Embora seja estrategista, você enfrenta grandes dificuldades em administrar crises emocionais imediatas. Sua primeira reação tende a ser a apatia ou o afastamento egoísta, agindo com uma indiferença que pode ser interpretada como falta de caráter em momentos críticos.</p>
+        <p>Ao se sentir ameaçado ou injustiçado, seu lado sombrio emerge: você se torna implacável e malicioso. Dificilmente perdoa ofensas e pode dedicar grande energia a planos de retaliação. Em emergências, sua tendência a se fechar em seu próprio mundo o torna uma figura pouco confiável para o grupo.</p>`
+},
     talento:    {     
-      1: "Sua primeira reação é de ação imediata e autoconfiança.",
-        2: "Sua reação inicial é buscar apoio e analisar os sentimentos.",
-        3: "Tende a reagir com otimismo e criatividade sob pressão.",
-        4: "Busca segurança e ordem assim que algo inesperado ocorre.",
-        5: "Reage com rapidez e adaptabilidade a mudanças bruscas.",
-        6: "Sua primeira preocupação é o bem-estar dos envolvidos.",
-        7: "Tende a se retrair para analisar a situação racionalmente.",
-        8: "Reage focando na solução prática e no controle do dano.",
-        9: "Mantém a calma e busca uma visão ampla do problema."
+    
+    1: `<h4>Talento 1</h4>
+        <p>Existe em você uma natureza independente e ambiciosa, com um ponto de vista muito próprio sobre todos os temas. O interesse e a inteligência guiam suas ações, mantendo o foco e a determinação em níveis elevados, embora a busca pela autonomia possa, por vezes, resultar em uma postura obstinada.</p>
+        <p>É importante observar a tendência a priorizar apenas interesses particulares, o que pode gerar inquietude ou sentimentos de posse. O foco excessivo na própria visão pode fechar portas para ideias externas valiosas, sendo comum perceber as oportunidades perdidas apenas quando o entusiasmo do momento arrefece. Contudo, em situações de alta pressão, sua manifestação é brilhante, mantendo a firmeza e a consistência necessárias para não recuar.</p>`,
+
+    2: `<h4>Talento 2</h4>
+        <p>A comunicação e a gentileza são suas marcas registradas. Existe uma disposição natural para a cooperação e a cautela, buscando resolver divergências com diplomacia e equilíbrio. Entretanto, essa receptividade pode ser confundida com insegurança, permitindo que pessoas mal-intencionadas tentem exercer influência sobre suas decisões.</p>
+        <p>Embora a proatividade seja uma força interna, a presença de muitas opções pode causar dispersão e perda do foco prioritário. Sua grande capacidade de organização e mediação é essencial para conciliar conflitos. O desafio é orientar as ações para o próprio bem-estar, garantindo que a bondade inata não seja utilizada por terceiros em benefício próprio.</p>`,
+
+    3: `<h4>Talento 3</h4>
+        <p>A alegria e uma imaginação fértil permitem que a expressão ocorra de forma clara, embora o conteúdo da sua mente seja sempre uma surpresa para os demais devido à criatividade extraordinária. Seu raciocínio segue uma lógica própria e original, capaz de surpreender a todos com soluções inesperadas.</p>
+        <p>Essa forma singular de pensar pode gerar certa impaciência com processos lentos ou imprudência em relação a questões materiais. É um talento que brilha na inovação, exigindo apenas que o entusiasmo criativo seja equilibrado com a atenção aos detalhes práticos do cotidiano.</p>`,
+
+    4: `<h4>Talento 4</h4>
+        <p>A dedicação ao trabalho e a visão de futuro são pilares de sua personalidade. Existe uma preocupação constante com as consequências das ações, o que traz um planejamento rigoroso. A melhor característica aqui é o respeito aos limites e a diplomacia, permitindo que o diálogo flua livremente com as pessoas ao redor.</p>
+        <p>Por ser uma natureza que valoriza as tradições e o que é comprovado, pode haver certa relutância ou demora em aceitar inovações repentinas. A estabilidade e a regularidade de comportamento são buscadas a todo custo, fazendo o possível para evitar distrações ou conflitos que tirem o foco da construção sólida que você realiza.</p>`,
+
+    5: `<h4>Talento 5</h4>
+        <p>Uma personalidade vibrante, ágil e magnética define este perfil. A reação diante do que desagrada é imediata e direta, o que pode dificultar a comunicação com quem prefere ritmos mais lentos. Aprender a estabelecer limites sobre o que e quando dizer é o grande aprendizado para que esse caráter forte seja bem compreendido.</p>
+        <p>O verdadeiro desenvolvimento ocorre no meio do caos e de projetos desafiadores. Enquanto outros se sentem pressionados pelo estresse, você encontra abordagens dinâmicas e confiantes, ajustando-se a qualquer circunstância para extrair vantagem das situações mais triviais.</p>`,
+
+    6: `<h4>Talento 6</h4>
+        <p>A confiabilidade e o apego às responsabilidades fazem de você alguém presente em todos os momentos. A atenção aos detalhes do ambiente, seja no trabalho ou no lar, permite identificar pequenas mudanças e oferecer ajuda prontamente. Por vezes, esse instinto protecionista pode ser interpretado como uma interferência excessiva.</p>
+        <p>Existe um forte senso de justiça social e a disposição para defender quem parece estar em desvantagem, mesmo com custos pessoais. A memória para as ações alheias é vasta, e o desejo de cuidar faz com que os problemas, às vezes, pareçam maiores do que são, apenas pelo excesso de zelo e dedicação.</p>`,
+
+    7: `<h4>Talento 7</h4>
+        <p>O perfeccionismo e a disciplina são as bases deste talento reservado. Existe um instinto de contestação natural, que leva à dúvida saudável até que a informação seja comprovada pela experiência própria. Quando há segurança sobre um tema, a ação é espontânea; do contrário, o recolhimento serve como proteção para as ideias e sentimentos.</p>
+        <p>O pensamento analítico produz conclusões precisas e interessantes. Há uma aversão à repetição de tarefas e ao erro evitável, pois a busca é pela perfeição desde a primeira tentativa. O debate intelectual é apreciado, especialmente quando permite o aprofundamento em informações que sustentem a palavra final.</p>`,
+
+    8: `<h4>Talento 8</h4>
+        <p>O poder de inspirar pessoas é um dom natural, aliado a uma engenhosidade que não se deixa surpreender por imprevistos. Existe uma grande habilidade de comando e iniciativa, focada em realizações materiais e tangíveis. Sua capacidade de combinar lógica com situações caóticas leva a produtividade ao limite.</p>
+        <p>A visão vai muito além do óbvio, o que garante uma enorme vantagem competitiva, mas também pode gerar irritação quando os outros não acompanham seu ritmo acelerado. É fundamental equilibrar essa força realizadora para evitar que a prepotência ou o controle excessivo sobreponham-se ao brilho das conquistas.</p>`,
+
+    9: `<h4>Talento 9</h4>
+        <p>A empatia e a compreensão social são características fortes, com uma disposição natural para ser alguém útil e necessário ao grupo. Há uma facilidade notável em se ajustar a mudanças estratégicas e novas circunstâncias, desde que os objetivos sejam bem fundamentados.</p>
+        <p>Em momentos críticos, o desafio é não se deixar levar pela apatia ou pelo isolamento defensivo. Quando os interesses são diretamente ameaçados ou há percepção de injustiça, uma força implacável e maliciosa pode emergir como defesa. O equilíbrio deste talento está em manter a doação ao próximo sem esquecer das próprias necessidades de afeto e reconhecimento.</p>`
+
 },
 
 
