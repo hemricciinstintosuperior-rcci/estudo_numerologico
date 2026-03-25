@@ -1654,16 +1654,44 @@ Potencias: {
 },      
         
 
-    deficits: {
-        1: "Tendência à impulsividade e dificuldade em ouvir opiniões alheias.",
-        2: "Excesso de sensibilidade ou dependência emocional de terceiros.",
-        3: "Dispersão de energia e falta de foco em projetos práticos.",
-        4: "Rigidez excessiva ou dificuldade em aceitar mudanças necessárias.",
-        5: "Instabilidade e desejo de fuga quando surgem responsabilidades.",
-        6: "Perfeccionismo sufocante com a família ou consigo mesmo.",
-        7: "Isolamento excessivo e tendência a guardar sentimentos negativos.",
-        8: "Ambição desmedida ou apego excessivo ao controle material.",
-        9: "Sacrifício pessoal exagerado ou falta de limites com os outros."
+deficits : {
+    1: `<h3>Egoismo - Déficit de Comportamento 1</h3>
+        <p>Está ligado ao princípio de causa e efeito, ou seja: tudo o que acontece em sua vida é consequência de seus próprios atos e escolhas. Em algum momento de sua existência pode ter sido intolerante e controlador tentando se impor a qualquer custo e visando seu próprio benefício. Compreenda que a vida é reativa, e que toda ação causa um resultado. Se causou prejuízos e cometeu injustiças, em algum momento terá que confrontar seus erros e arcar com a sua parte da responsabilidade.</p>
+        <p><strong>Influência:</strong> Poderá ser exposto a situações desgastantes, onde tenderá a duvidar de si mesmo, tendo que enfrentar sua própria fragilidade de caráter e das pessoas; conviver com a intolerância a injustiça e a falsidade. Para evitar dificuldades desnecessárias deve estar consciente que receberá da vida exatamente o que nela empenhar; seja justo, consciente e tolerante; aperfeiçoe seu caráter, domine suas emoções e os impulsos. Crie uma imagem verdadeira de si, mostre-se como é e jamais se utilize da falsidade como um meio para progredir.</p>`,
+
+    2: `<h3>Crueldade - Déficit de Comportamento 2</h3>
+        <p>Em algum momento de sua existência pode ter sido vingativo, cruel e implacável, tendo humilhado ou sido abusivo com outros. Compreenda que ser compassivo nos ajuda a desenvolver a capacidade de compreender e cooperar com os outros, nos torna tolerantes e capazes de conciliar ideias e opiniões divergentes nos permitindo ocupar um lugar especial nos corações e mentes daqueles que nos conhecem, trazendo um senso de equilíbrio para tudo.</p>
+        <p><strong>Influência:</strong> Poderá sofrer abusos, podendo ser exposto a situações onde terá que enfrentar o desrespeito e a submissão, sendo explorado sem obter o reconhecimento que merece, sofrendo de baixa autoestima pelo medo de cometer um erro e temer ficar sozinho. Os baixos níveis de confiança podem tornar difícil tomar uma decisão e lhe tornar muito pessimista. Devem aprender a apoiar sua criatividade com a ética para ser capaz de ver todos os lados de um problema e procurar sempre por um resultado harmonioso em todas as situações.</p>`,
+
+    3: `<h3>Exibicionismo - Déficit de Comportamento 3</h3>
+        <p>Em algum momento de sua existência pode ter sido superficial com uma tendência narcisista levado a necessidade de ser o centro das atenções, tendo sido indisciplinado e agido de forma oportunista e aproveitadora, se tornando uma pessoa ciumenta, insensível e exploradora, colocando suas prioridades acima de tudo e de todos através de atitudes autoritárias e egoístas.</p>
+        <p><strong>Influência:</strong> Poderá enfrentar questões desafiadoras, que testarão sua firmeza e foco. Confiar em si mesmo pode se tornar uma das tarefas mais difíceis tendendo a procrastinar e ser incapaz de concluir qualquer coisa que venha iniciar sucumbindo às dificuldades a menos que outros lhe forneçam apoio. Pode ter uma tendência ao ciúme nos relacionamentos pessoais, exagerando e se tornando dramático, podendo perder o controle na maioria das situações.</p>
+        <p>Para que se torne uma pessoa equilibrada e feliz, é preciso aprender a disciplina, desenvolver sua concentração e habilidade de seguir em frente para alcançar esse sucesso. Compromisso e lealdade de longo prazo são essenciais ao seu desenvolvimento.</p>`,
+
+    4: `<h3>Irresponsabilidade - Déficit de Comportamento 4</h3>
+        <p>Em algum momento de sua existência pode ter sido negligente e irresponsável, se deixou levar pelos caprichos e evitou assumir suas responsabilidades. Suas ações foram orientadas apenas no seu próprio prazer e satisfação, dominando e se aproveitando de outros e tomando más decisões, levado pela preguiça, tendo sido negligente ou omisso vivendo na obscuridade e se entregando a algum tipo de vício. Seja qual for a razão tudo foi uma consequência de seus atos e decisões; direta ou indiretamente foi sua indiferença, imprudência ou omissão, que causou algum dano a você mesmo ou a alguém.</p>
+        <p><strong>Influência:</strong> Poderá enfrentar várias dificuldades que inconscientemente se associem a algum tipo de limitação, pode ter atitudes e comportamento desregrado, disperso e desatento, se sentindo insatisfeito sempre reclamando de tudo e de todos, com uma tendência a ter pouca disposição. Precisará enfrentar seus medos, ser uma pessoa útil e produtiva, organizada em seu trabalho e vida pessoal. Aprenda a administrar seu estresse e seja tolerante.</p>`,
+
+    5: `<h3>Impulsividade - Déficit de Comportamento 5</h3>
+        <p>A vida está cheia de circunstâncias em constante mudança que estão além do nosso controle, e elas geralmente surgem de maneira inesperada. Em algum momento de sua existência você foi inconsequente e descuidado e teve dificuldade em controlar sua própria vida por estar tão obcecado com sua própria liberdade que acabou correndo riscos desnecessários, se deixando levar pelos excessos, ligados ao sexo, aos vícios e tudo que esteja relacionado ao desperdício de energia e falta de controle.</p>
+        <p><strong>Influência:</strong> Poderá ser exposto a várias situações que colocarão a prova sua integridade, moral e confiabilidade, passar por muitas frustrações, se sentir uma pessoa incompreendida e levado ao desequilíbrio emocional, sendo levado a uma personalidade viciante estimulada mais pelos sentidos que pela coerência e ressentindo de quaisquer restrições impostas. Precisará aprender a ser paciente, controlar seus impulsos, ter e reconhecer seus limites.</p>`,
+
+    6: `<h3>Avarento - Déficit de Comportamento 6</h3>
+        <p>Em algum momento de sua existência pode ter sido levado pela hipocrisia, tentando levar vantagem sobre as pessoas se preocupando apenas com seu próprio bem-estar, se deixando levar pela arrogância, se envolvendo demais na vida dos outros se tornando controlador, invejoso, mesquinho e intolerante tentando impor sua verdade e valores a todos.</p>
+        <p><strong>Influência:</strong> Poderá ser exposto a situações onde terá que sacrificar seu próprio bem-estar em benefício de outros, terá que superar a arrogância e a ingratidão. Precisará sair de sua zona de conforto e aprender a analisar tudo de uma maneira mais ampla, sob vários pontos de vista para se desenvolver e manter seus relacionamentos. Pode ter dificuldade em avaliar o caráter de outros, atraindo pessoas oportunistas. Para evitar enfrentar estas situações aprenda a interagir com as pessoas sem ser presunçoso e sem se envolver em suas vidas.</p>`,
+
+    7: `<h3>Preconceitos - Déficit de Comportamento 7</h3>
+        <p>Em algum momento de sua existência pode ter sido indiferente, vaidoso e intolerante, agiu de forma fria, cínica e abusiva, sem se importar em compreender a situação dos outros e sem respeitar suas opiniões e interesses. Pode ainda ter sido desonesto, escolhendo uma verdade mais "interessante" do que a real, dando extremo valor à aparência e futilidade, causando perdas e sofrimentos apenas para satisfazer seu próprio ego.</p>
+        <p><strong>Influência:</strong> Poderá ser exposto a situações que afetarão diretamente seu orgulho e vaidade, sofrer muitas decepções causadas por amizades e relacionamentos desleais. Estará sujeito a ter baixa autoestima, se sentir uma pessoa vazia e se tornar dependente de outras pessoas. Seja humilde, tolerante e livre de preconceitos, aja com justiça e tenha confiança em si mesmo.</p>`,
+
+    8: `<h3>Ganância - Déficit de Comportamento 8</h3>
+        <p>Em algum momento de sua existência pode ter sido ganancioso e insatisfeito se deixando levar pelas frustrações, sendo agressivo com as pessoas e tomando suas decisões de maneira intolerante, baseado na raiva, no ódio e na ganância. Tentando ter tudo aquilo que pudesse possuir, sem nunca estar satisfeito com o que tem e sem mesmo desfrutar das conquistas que fez.</p>
+        <p><strong>Influência:</strong> Poderá ser exposto a situações que testarão sua força de vontade e determinação sofrendo privações financeiras e limitações materiais. Poderá ter dificuldades em se realizar como pessoa e profissionalmente. Precisará aprender a controlar seus impulsos, a ter limites, ser paciente e evitar os exageros, mantendo o equilíbrio e a moderação. Entenda que as pessoas confiam em você pelo que você é e não por aquilo que você tem.</p>`,
+
+    9: `<h3>Vaidade - Déficit de Comportamento 9</h3>
+        <p>Em algum momento de sua existência você foi arrogante e muitas vezes pode ter ofendido e humilhado as pessoas, agindo de forma dura e insensível levado por seu idealismo e acreditando ser superior aos outros. Pode ter sido egoísta, cruel, imoral e completamente intocável, se tornando vingativo com aqueles que iam contra a sua vontade ou que se recusavam a se submeter a ela.</p>
+        <p><strong>Influência:</strong> Poderá ser exposto a situações onde terá que agir com sabedoria e humanidade; compartilhando suas conquistas e beneficiando a todos que estiverem em seu caminho. Poderá ter que enfrentar muitas perdas financeiras, materiais ou afetivas. Estará sujeito a falsas amizades e a se sentir uma pessoa vazia. Para não ter que enfrentar estas dificuldades, seja solidário e compreensivo, aja com justiça e tenha confiança em si mesmo.</p>`
+
     },
     inclinacoes: {
         1: "Forte impulso de liderança e originalidade em tudo o que faz.",
