@@ -712,19 +712,21 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     const indiceAno = inicioCiclo.getFullYear() - dtNasci.getFullYear();
     let somaMomento = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
     let contPerfilMomento = { criativo: 0, indeciso: 0, neutro: 0 };
-    let letrasAtivas = timelines.map(t => t[indiceAno % t.length]);
+    // Substitua o bloco da 715 até a 730 por este:
+let letrasAtivas = timelines.map((t, i) => {
+    let letraAtiva = t[indiceAno % t.length];
 
-    letrasAtivas.forEach(l => {
-        let p = descobrirPlano(l);
-        letraAtiva = timelines[i][idadeNoCiclo % timelines[i].length];
-        // ADICIONE ESTA TRAVA ABAIXO:
-if (!letraAtiva) {
-    console.log("Aviso: Letra não encontrada no índice, pulando...");
-    return; // Se a letra for indefinida, ele pula para a próxima sem travar
-}
-        if(p) somaMomento[p] += calcularValorLetra(l);
-        if(tabelaExpressao[letraBase]) contPerfilMomento[tabelaExpressao[letraBase]]++;
-    });
+    if (!letraAtiva) return; // Trava de segurança
+
+    const plano = descobrirPlano(letraAtiva);
+    
+    // Aqui segue a sua lógica de soma:
+    if (somaMomento[plano] !== undefined) {
+        somaMomento[plano] += calcularValorLetra(letraAtiva);
+    }
+    
+    return letraAtiva;
+});
 
     let dominanteMomento = Object.keys(contPerfilMomento).reduce((a, b) => contPerfilMomento[a] >= contPerfilMomento[b] ? a : b);
     const planosOrdenados = Object.entries(somaMomento).sort((a, b) => b[1] - a[1]);
