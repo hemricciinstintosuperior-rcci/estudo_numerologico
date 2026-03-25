@@ -69,7 +69,18 @@ Mesmo que não esteja consciente, você constrói esse caminho ao longo da vida 
   
 Ele mostra quais qualidades devem ser desenvolvidas para alcançar realização pessoal.`,
         
-        inclinacoes: `As inclinações mostram tendências naturais que você traz de sua bagagem.`,
+        inclinacoes: `<p>Esta característica possui uma força intrínseca capaz de moldar sua trajetória, gerando um desejo profundo de desenvolver e manifestar essa habilidade específica em sua jornada. É um chamado da sua própria essência que busca expressão e reconhecimento.</p>
+
+<p>A existência desse talento exige que ele seja exteriorizado. Vivenciar essa faceta é, em última análise, permitir-se viver em total harmonia com sua verdadeira natureza. Assim, a Inclinação Oculta atua como um guia silencioso, esculpindo sua personalidade e direcionando suas escolhas de maneira quase imperceptível, mas extremamente poderosa.</p>
+
+<p>Por exercer tamanha influência, este ponto demanda atenção redobrada. Ele representa padrões de comportamento que tendem a se repetir ciclicamente. Se o modelo atual não for transformado conscientemente, você poderá se ver diante das mesmas situações repetidas vezes, como um eco de suas próprias tendências internas.</p>
+
+<p>Esses "vícios de comportamento" são inclinações naturais que, quando não observadas, limitam a forma como experimentamos a realidade. Agravados pela impulsividade ou por reações automáticas, esses padrões podem criar a ilusão de que os eventos da vida estão fora de nosso controle ou que são causados por fatores externos.</p>
+
+<p>Compreender essas tendências é o primeiro passo para quebrar o círculo vicioso. Ao assumir a maestria sobre essas inclinações, você deixa de ser refém de comportamentos repetitivos e passa a conduzir sua vida com intenção, ética e clareza, transformando potenciais limitações em ferramentas de evolução.</p>`,
+ 
+        
+        
         subconsciente: `O subconsciente revela seus medos e reações automáticas mais profundas.`,
         
         anoPessoal: `O Ano Pessoal representa a vibração numérica que influencia os acontecimentos, oportunidades e aprendizados de um ciclo de doze meses. Ele indica tendências, desafios e possibilidades
@@ -1708,17 +1719,45 @@ deficits : {
         <p><strong>Influência:</strong> Poderá ser exposto a situações onde terá que agir com sabedoria e humanidade; compartilhando suas conquistas e beneficiando a todos que estiverem em seu caminho. Poderá ter que enfrentar muitas perdas financeiras, materiais ou afetivas. Estará sujeito a falsas amizades e a se sentir uma pessoa vazia. Para não ter que enfrentar estas dificuldades, seja solidário e compreensivo, aja com justiça e tenha confiança em si mesmo.</p>`
 
     },
-    inclinacoes: {
-        1: "Forte impulso de liderança e originalidade em tudo o que faz.",
-        2: "Habilidade natural para mediação e diplomacia silenciosa.",
-        3: "Grande capacidade de comunicação e expressão criativa.",
-        4: "Talento nato para organização, estrutura e métodos.",
-        5: "Necessidade de liberdade e facilidade em lidar com o público.",
-        6: "Forte senso de justiça e acolhimento comunitário.",
-        7: "Poderosa intuição e facilidade para estudos profundos.",
-        8: "Capacidade executiva e visão de negócios apurada.",
-        9: "Humanitarismo e compreensão profunda da alma humana."
+        
+inclinacoes : {
+    1: `<h3>Controlador e Individualista - Inclinação Oculta 1</h3>
+        <p>Você manifesta uma autoconfiança inabalável e uma busca incessante pela perfeição, alimentada por um forte espírito competitivo que o impele a liderar em todas as esferas. Essa força, contudo, pode transparecer como uma tendência à manipulação para atingir objetivos específicos.</p>
+        <p>Há um risco latente de inclinar-se ao individualismo e ao egocentrismo, permitindo que atitudes prepotentes ou autoritárias dominem suas relações. Quando desalinhada, essa energia pode torná-lo arrogante e excessivamente focado em seus próprios interesses, dificultando a colaboração e a empatia.</p>`,
+
+    2: `<h3>Dependente e Indeciso - Inclinação Oculta 2</h3>
+        <p>Sua natureza é a de um mediador nato, capaz de harmonizar conflitos e buscar o equilíbrio entre partes divergentes. No entanto, essa busca por agradar a todos pode mascarar uma insegurança profunda, manifestando-se como timidez excessiva ou falta de iniciativa própria.</p>
+        <p>Existe uma tendência à indecisão e à dependência emocional de terceiros, o que pode abrir margem para comportamentos dissimulados ou atitudes mesquinhas. O desafio aqui é não permitir que o desânimo tome conta diante dos obstáculos, evitando a armadilha da passividade.</p>`,
+
+    3: `<h3>Exibicionismo e Superficialidade - Inclinação Oculta 3</h3>
+        <p>Você possui o dom de motivar e encantar os outros, mas frequentemente sofre com a dispersão e a falta de foco nos objetivos de longo prazo. O desejo por entretenimento e prazer imediato pode sobrepor-se às responsabilidades, levando a uma vida sem metas definidas.</p>
+        <p>A preocupação excessiva com as aparências e o julgamento superficial das pessoas são marcas dessa inclinação. Essa vaidade, somada a um estado de agitação constante, pode resultar em um grande desperdício de energia vital em questões fúteis ou puramente estéticas.</p>`,
+
+    4: `<h3>Intolerância e Rigidez - Inclinação Oculta 4</h3>
+        <p>A organização e a preparação para imprevistos são seus pilares, mas essa estrutura pode se tornar uma prisão de rigidez mental. Você tende a se apegar ferreamente às suas próprias convicções, exercendo um autoritarismo que sufoca as pessoas ao seu redor.</p>
+        <p>O perfeccionismo exagerado gera uma insatisfação crônica com o próprio desempenho e com o trabalho alheio. Essa obsessão pelo controle e a teimosia em aceitar novas perspectivas criam um ambiente de tensão, onde a intolerância acaba impedindo o fluxo natural das conquistas.</p>`,
+
+    5: `<h3>Abusos e Desmotivação - Inclinação Oculta 5</h3>
+        <p>Sua curiosidade insaciável e o desejo de vivenciar tudo ao máximo são motores poderosos, mas que podem conduzir a comportamentos impulsivos e inconsequentes. Existe uma inclinação a explorar as fraquezas alheias em benefício próprio, agindo de forma precipitada.</p>
+        <p>A busca constante por estímulos inéditos frequentemente resulta em desmotivação e na dificuldade em estabelecer vínculos profundos e duradouros. Essa sede de adrenalina pode levar a excessos e comportamentos viciantes, como forma de preencher um vazio interno que nunca parece satisfeito.</p>`,
+
+    6: `<h3>Controlador e Autoritário - Inclinação Oculta 6</h3>
+        <p>Embora você nutra um cuidado genuíno pelas pessoas próximas, essa atenção pode facilmente se transformar em uma interferência excessiva e controladora. Sua visão idealista faz com que você exija perfeição absoluta daqueles com quem convive, gerando cobranças desmedidas.</p>
+        <p>O apego rígido a padrões sociais e morais pode torná-lo uma pessoa teimosa e autoritária. Quando as expectativas não são atendidas, surge uma tendência à ingratidão e ao julgamento, dificultando a aceitação das imperfeições naturais da vida e das relações humanas.</p>`,
+
+    7: `<h3>Insatisfação e Melancolia - Inclinação Oculta 7</h3>
+        <p>Como um intelectual nato, você vive em um mundo de ideias e conceitos complexos. Entretanto, essa mente analítica pode se tornar excessivamente crítica, especialmente com aquilo que foge à sua compreensão lógica, levando a um isolamento defensivo.</p>
+        <p>A dificuldade em expressar emoções pode resultar em sentimentos de incompreensão e melancolia. Há uma inclinação à frustração persistente, onde nada — nem mesmo as próprias conquistas — parece ser suficiente, criando um ciclo de rejeição e possíveis dependências escapistas.</p>`,
+
+    8: `<h3>Ganância e Obstinação - Inclinação Oculta 8</h3>
+        <p>Sua ambição é voltada para o sucesso material, o poder e o prestígio. Você acredita firmemente no seu direito de possuir o melhor, mas essa determinação pode se transformar em um apego materialista exagerado e em uma sede insaciável de controle.</p>
+        <p>O medo da escassez pode corromper o caráter, levando a comportamentos avarentos ou à participação em situações eticamente questionáveis. A obstinação pelo poder, se não equilibrada pela generosidade, pode torná-lo escravo das posses e da busca incessante por status.</p>`,
+
+    9: `<h3>Carência de Afeto - Inclinação Oculta 9</h3>
+        <p>Sua natureza é profundamente empática e voltada ao serviço humanitário, mas essa dedicação ao próximo muitas vezes esconde uma negligência severa com as suas próprias necessidades. Você tende a se envolver nos problemas alheios como forma de evitar olhar para si mesmo.</p>
+        <p>Essa inclinação revela uma carência afetiva latente, manifestando-se em uma busca constante por aprovação, amor e reconhecimento externo. O desafio reside em equilibrar a doação ao mundo com o autorespeito, evitando que a necessidade de ser "útil" se torne uma dependência emocional desgastante.</p>`
     },
+        
     subconsciente: {
         1: "Sua primeira reação é de ação imediata e autoconfiança.",
         2: "Sua reação inicial é buscar apoio e analisar os sentimentos.",
