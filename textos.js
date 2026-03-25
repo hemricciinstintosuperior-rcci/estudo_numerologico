@@ -1042,7 +1042,7 @@ Maturidade: {
     <p><strong>você</strong> encontrará sua maior alegria em servir a causas globais, nas artes transformadoras ou na espiritualidade aplicada. O mundo vê em <strong>você</strong> uma luz guia, alguém cuja integridade moral e compaixão servem de bússola para um futuro melhor. O sucesso nesta etapa não é medido por posses, mas pelo número de vidas que <strong>você</strong> conseguiu tocar e elevar. Seu legado será uma trajetória de amor incondicional e sabedoria, provando que a verdadeira grandeza reside na entrega ao próximo. <strong>você</strong> encerrará esta jornada com a alma em paz, sendo amada universalmente como uma personalidade que verdadeiramente cumpriu a missão de iluminar a existência humana.</p>`
   },
 // --- RELACIONAMENTO (COMO VOCÊ É E SE COMPORTA NO AMOR) ---
-relacionamento: {
+Relacionamento: {
   
     1: `<p>Esta energia traz para você a necessidade constante de preservar a individualidade dentro de qualquer união afetiva. Essa força de liderança e autonomia garante que você não se anule em nome de um par, mantendo o brilho original em todas as circunstâncias da convivência.</p>
         <p>O grande desafio é exercer o amor com independência, evitando dependências emocionais que possam drenar a vitalidade. Existe um impulso natural para tomar decisões solitárias, o que exige um diálogo claro para que a parceria não se sinta excluída ou em segundo plano. A lição fundamental para você é entender que um relacionamento sólido é composto por dois seres inteiros.</p>
