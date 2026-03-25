@@ -1,6 +1,14 @@
 const textos = {
 introducoes: {
-        graficos: `Estes gráficos representam a força das suas vibrações e potenciais naturais.`,
+
+        
+        graficos: `<p>A *Análise de Potenciais* é o coração estratégico do seu mapa, onde consolidamos as vibrações da sua Personalidade, Motivação, Destino e Desafios para mensurar sua real capacidade de entrega ao mundo. Diferente dos ciclos temporais, estes gráficos revelam sua estrutura natural e permanente: como você processa a realidade e quais ferramentas internas possui para construir sua jornada de sucesso.</p>
+
+<p>Cada indicador reflete a união de suas forças nativas distribuídas nos quatro planos de ação. No *Físico, medimos seu poder de realização e comando; no **Emocional, sua essência e conexão com a vida; no **Intuitivo, seus valores internos e sabedoria espiritual; e no **Mental*, sua capacidade estratégica e lógica de decisão. Ao ler esses dados, você não está vendo apenas números, mas sim a integração total do seu propósito, permitindo identificar onde sua energia flui com maestria e onde residem os pontos de superação para alcançar sua máxima performance humana.</p>`,
+
+
+
+
         
         piramide: `<p>​A Pirâmide da Vida Principal é o alicerce absoluto de todo o seu mapa numerológico quântico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Diferente das outras pirâmides que focam em áreas específicas, esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
 
