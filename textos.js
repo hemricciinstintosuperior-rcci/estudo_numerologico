@@ -22,9 +22,26 @@ introducoes: {
   
 Muitas vezes, essas são respostas condicionadas ou emocionais surgem sem pensamento ou análise. A maturidade e o autodesenvolvimento nos ajudam a aprender novos e mais eficazes métodos de lidar com nosso mundo e os problemas que enfrentamos. O número do comportamento fornece orientação 
 sobre a melhor forma de lidar com situações difíceis ou ameaçadoras, pois que reflete certos padrões interiores comuns a grupos de pessoas nascidas em dias comuns entre si.`,
+
+
         
-        essencia: `A essência é o seu "eu" mais profundo, sua verdadeira identidade espiritual.`,
-        equilibrio: `O equilíbrio mostra sua capacidade de manter a estabilidade em momentos de crise.`,
+        essencia: `<p>Diante dos desafios da existência, cada indivíduo manifesta uma resposta interna singular. Existem pessoas que optam pelo distanciamento momentâneo das dificuldades para estruturar um plano de ação estratégico, enquanto outras buscam o recolhimento como uma forma de proteção contra emoções e sentimentos indesejados.</p>
+
+<p>Em contrapartida, há quem reaja de maneira intensa e imediata, deixando-se levar pelo ímpeto do momento, mas permitindo que essa energia se dissipe com rapidez. Outros, no entanto, prolongam esses estados emocionais, mantendo o sentimento ativo por longos períodos. Essas reações costumam ser respostas condicionadas que surgem de forma impensada e automática.</p>
+
+<p>O caminho da maturidade e do autodesenvolvimento oferece a oportunidade de adotar posturas mais práticas e conscientes perante o inesperado. Ao compreender a própria essência, torna-se possível lidar com situações críticas de forma mais eficaz, alcançando resultados satisfatórios e reduzindo drasticamente os conflitos internos e externos.</p>`,
+
+
+        
+        equilibrio: `<p>O Universo rege-se pelo princípio da harmonia, e o mesmo se aplica aos seus números pessoais. Qualquer excesso identificado em sua estrutura numerológica merece uma análise criteriosa, pois essas intensidades podem revelar tanto talentos excepcionais quanto pontos que demandam superação e ajuste.</p>
+
+<p>Muitas vezes, as reações diante da vida são respostas condicionadas ou puramente emocionais, que surgem de forma automática. O processo de maturidade e autodesenvolvimento permite a adoção de métodos mais eficazes para interagir com o mundo. Nesse contexto, o seu Número de Equilíbrio atua como um guia estratégico, orientando sobre a melhor postura a ser adotada em situações desafiadoras ou de alta pressão.</p>
+
+<p>Cada letra do nome de nascimento carrega uma característica específica, mas certos pontos merecem atenção redobrada. A letra inicial do seu primeiro nome traduz suas inclinações primárias, revelando como você aborda oportunidades e obstáculos logo no primeiro contato. É a sua assinatura de atitude inicial perante o novo.</p>
+
+<p>Já a última letra do seu primeiro nome reflete a persistência e a capacidade de concluir projetos. Juntas, essas letras fornecem um panorama completo sobre o seu potencial para iniciar e finalizar ciclos com sucesso. O equilíbrio entre o impulso de começar e a disciplina de terminar é o que define a eficácia de suas realizações.</p>
+
+<p>Ao longo da existência, diversas vibrações influenciam a trajetória humana. Enquanto algumas promovem harmonia, outras trazem desafios necessários ao crescimento. Assim como as letras extremas do seu nome indicam tendências, a letra de maior recorrência em seu nome completo destaca habilidades específicas ou excessos que moldam sua personalidade de forma única.</p>`,
      
         
         
@@ -64,7 +81,15 @@ A motivação é um elemento essencial para o desenvolvimento do ser humano. Sem
 <p>Cada pessoa possui uma maneira única de agir e se expressar. Para aqueles que consideram a reencarnação como filosofia, a soma do nome completo representa a síntese de experiências, talentos e aprendizados acumulados ao longo de muitas existências.</p>
 <p>Compreender este número permite reconhecer talentos naturais, desafios comportamentais e padrões emocionais que influenciam diretamente a forma como sua vida se desenvolve.</p>`,
         
-        Relacionamento: `O pilar de relacionamento define como você se entrega e troca com os outros.`,
+        Relacionamento: `<p>Cada indivíduo emite uma frequência energética única. Ao compreender a natureza da sua própria vibração, torna-se possível identificar quais perfis possuem maior afinidade com você, distinguindo entre atrações magnéticas, convivências passivas ou dinâmicas opostas. Esse mapeamento é a chave para antecipar a fluidez de vínculos conjugais, afetivos ou profissionais.</p>
+
+<p>É importante ressaltar que este estudo funciona como um indicador de harmonia potencial. Embora a numerologia aponte tendências de compatibilidade, o sucesso de uma união — seja ela uma amizade, sociedade ou relacionamento amoroso — depende do livre-arbítrio e da dedicação mútua. Contudo, as probabilidades de êxito e de uma convivência serena são significativamente maiores entre números que compartilham vibrações harmônicas.</p>
+
+<p>Não há impedimentos para que personalidades teoricamente incompatíveis vivam em pleno equilíbrio; o segredo reside no conhecimento. Ter clareza sobre essas vibrações permite desvendar as causas de desarmonias recorrentes, servindo como o ponto de partida essencial para um processo de cura, entendimento e ajuste entre as partes.</p>
+
+<p>Diferente de abordagens tradicionais, a Numerologia Moderna acolhe a diversidade de todos os arranjos afetivos. Para conexões entre pessoas do mesmo sexo, recomenda-se uma análise ainda mais detalhada para garantir que as nuances da dinâmica sejam captadas com precisão e coerência, respeitando a identidade de cada um.</p>
+
+<p>Esta análise transcende o estado civil ou rótulos sociais. O foco reside exclusivamente na qualidade da harmonia amorosa e na sinergia do casal, oferecendo um panorama profundo sobre como a energia de duas pessoas se entrelaça na construção de uma realidade compartilhada.</p>`,
         
         CaminhodeVida: `<p>Viver de forma plena é um caminho contínuo que nos ensina a persistir diante dos desafios e das distrações para conquistar aquilo que escolhemos para nós. O destino não é um lugar fixo, mas uma forma de enxergar e compreender a vida.</p>
   Independentemente das circunstâncias ou dos erros cometidos, nossa trajetória é construída a cada instante pelas decisões que tomamos.
@@ -1016,27 +1041,46 @@ Maturidade: {
     9: `<p>A maturidade de <strong>você</strong> é um período de transcendência, onde a sua sabedoria universal e o seu amor pela humanidade se manifestam em ações de grande impacto altruísta. Nesta fase, <strong>você</strong> se torna a cidadã do mundo, agindo como uma ponte de cura, ensino e inspiração para pessoas de todas as origens. O seu legado é o da evolução humana; <strong>você</strong> será lembrada como a alma generosa que ofereceu tudo o que aprendeu para tornar o mundo um lugar mais fraterno e consciente. A maturidade para <strong>você</strong> é o encerramento magistral de um ciclo, marcado pelo desapego sábio e pela gratidão profunda por cada experiência vivida.</p>
     <p><strong>você</strong> encontrará sua maior alegria em servir a causas globais, nas artes transformadoras ou na espiritualidade aplicada. O mundo vê em <strong>você</strong> uma luz guia, alguém cuja integridade moral e compaixão servem de bússola para um futuro melhor. O sucesso nesta etapa não é medido por posses, mas pelo número de vidas que <strong>você</strong> conseguiu tocar e elevar. Seu legado será uma trajetória de amor incondicional e sabedoria, provando que a verdadeira grandeza reside na entrega ao próximo. <strong>você</strong> encerrará esta jornada com a alma em paz, sendo amada universalmente como uma personalidade que verdadeiramente cumpriu a missão de iluminar a existência humana.</p>`
   },
-// --- RELACIONAMENTO (COMO VOCÊ AMA E SE COMPORTA NO AMOR) ---
-Relacionamento: {
+// --- RELACIONAMENTO (COMO VOCÊ É E SE COMPORTA NO AMOR) ---
+relacionamento: {
   
-    1: `<p>Este ciclo traz para <strong>você</strong> a necessidade de manter a individualidade dentro de qualquer união afetiva. A energia de liderança pode gerar conflitos se <strong>você</strong> não aprender a respeitar o espaço da outra pessoa, mas também é o que garante que <strong>você</strong> não se anule em nome de um par. O desafio para <strong>você</strong> é exercer o amor com autonomia, evitando a dependência emocional que drena a vitalidade. Durante este período, <strong>você</strong> sentirá um impulso maior para tomar decisões solitárias, o que exige um diálogo claro para que a parceria não se sinta excluída. A lição para <strong>você</strong> é entender que um relacionamento forte é composto por dois seres inteiros e independentes. Ao cultivar a própria força, <strong>você</strong> atrai conexões que respeitam a sua liberdade e o seu brilho original. A busca por alguém que acompanhe o seu ritmo de inovação será constante, e <strong>você</strong> terá sucesso se mantiver a honestidade sobre os seus planos. A construção de um vínculo duradouro para <strong>você</strong> depende da admiração mútua e da coragem de inovar na rotina a dois, mantendo o frescor da conquista sempre vivo em cada gesto de carinho e presença.</p>`,
+    1: `<p>Esta energia traz para você a necessidade constante de preservar a individualidade dentro de qualquer união afetiva. Essa força de liderança e autonomia garante que você não se anule em nome de um par, mantendo o brilho original em todas as circunstâncias da convivência.</p>
+        <p>O grande desafio é exercer o amor com independência, evitando dependências emocionais que possam drenar a vitalidade. Existe um impulso natural para tomar decisões solitárias, o que exige um diálogo claro para que a parceria não se sinta excluída ou em segundo plano. A lição fundamental para você é entender que um relacionamento sólido é composto por dois seres inteiros.</p>
+        <p>Ao cultivar a própria força, você atrai conexões que respeitam sua liberdade e seu ritmo de inovação. A construção de um vínculo duradouro depende da admiração mútua e da coragem de sempre renovar a rotina, mantendo o frescor da conquista vivo em cada gesto de carinho e presença.</p>`,
 
-    2: `<p>A tônica deste período para <strong>você</strong> é a diplomacia, o acolhimento e a busca por uma harmonia profunda nas relações de parceria. A sensibilidade estará em alto nível, o que permite a <strong>você</strong> perceber as necessidades da outra pessoa antes mesmo que elas sejam verbalizadas, criando um elo de compreensão mútua. A sombra aqui é a hipersensibilidade; <strong>você</strong> precisará ter cuidado para não absorver as tensões alheias e para não se calar diante de insatisfações apenas para evitar o confronto. O aprendizado para <strong>você</strong> é o de que a verdadeira paz nasce da verdade dita com doçura, e não do silêncio que acumula mágoas. É um tempo de muita entrega e de valorização dos pequenos detalhes que fortalecem o convívio diário, como o apoio emocional e a escuta ativa. <strong>você</strong> terá a oportunidade de curar feridas antigas através de uma convivência baseada na paciência e na cooperação constante. Ao desenvolver o equilíbrio entre o dar e o receber, <strong>você</strong> consolida uma união estável e segura, onde o afeto flui sem barreiras e o respeito se torna o alicerce de toda a felicidade compartilhada.</p>`,
+    2: `<p>A marca da sua energia é a diplomacia, o acolhimento e a busca por uma harmonia profunda nas relações de parceria. Sua sensibilidade permite perceber as necessidades da outra pessoa antes mesmo da verbalização, criando um elo de compreensão mútua e apoio constante.</p>
+        <p>É preciso atenção com a hipersensibilidade, para não absorver tensões alheias ou silenciar insatisfações apenas para evitar confrontos. O aprendizado essencial para você é que a verdadeira paz nasce da verdade dita com doçura, e não do acúmulo de mágoas. Sua natureza é de entrega e valorização dos detalhes que fortalecem o convívio diário.</p>
+        <p>Existe uma grande oportunidade de promover curas internas através de uma convivência baseada na paciência e na cooperação. Ao desenvolver o equilíbrio entre o dar e o receber, você consolida uma união estável e segura, onde o afeto flui sem barreiras e o respeito se torna o alicerce de toda a felicidade compartilhada.</p>`,
 
-    3: `<p>Este ciclo favorece a alegria, a vida social intensa e a expressão dos sentimentos de forma aberta e vibrante para <strong>você</strong>. A energia é de expansão afetiva, o que torna <strong>você</strong> uma presença magnética e encantadora, capaz de atrair parcerias através do riso e da boa comunicação. O risco para <strong>você</strong> é a dispersão; em momentos de muita euforia, pode haver uma dificuldade em aprofundar os laços, preferindo o brilho das novidades superficiais à rotina do compromisso sério. A lição de vida para <strong>você</strong> é usar a criatividade para manter o relacionamento dinâmico, evitando que o tédio se instale na vida a dois. <strong>você</strong> sentirá vontade de compartilhar viagens, festas e momentos de lazer, entendendo que o prazer é um componente essencial da saúde emocional. É o momento de <strong>você</strong> brilhar ao lado de quem ama, celebrando cada conquista com entusiasmo e leveza. Ao superar a tendência à inconstância, <strong>você</strong> descobre que a verdadeira felicidade reside na capacidade de ser quem <strong>você</strong> é, sem máscaras, dentro de uma relação que estimula o seu crescimento intelectual e a sua liberdade de expressão social.</p>`,
+    3: `<p>Sua vibração favorece a alegria, a vida social e a expressão dos sentimentos de forma aberta e vibrante. Essa energia de expansão torna você uma presença magnética e encantadora, capaz de atrair parcerias através do entusiasmo, do riso e da excelente comunicação.</p>
+        <p>O risco reside na dispersão, que pode dificultar o aprofundamento dos laços ao preferir o brilho das novidades superficiais à solidez do compromisso. A lição de vida para você é usar a criatividade para manter o relacionamento dinâmico, impedindo que o tédio ou a monotonia se instalem na vida a dois.</p>
+        <p>Você brilha ao lado de quem ama, celebrando cada conquista com leveza e celebrando o prazer como um componente essencial da saúde emocional. Ao superar a inconstância, descobre-se que a felicidade reside na capacidade de ser quem você é, sem máscaras, dentro de uma relação que estimula o crescimento intelectual.</p>`,
 
-    4: `<p>Para <strong>você</strong>, este é um período de construção de bases sólidas, onde o amor é demonstrado através da presença constante e do apoio prático no cotidiano. A segurança emocional estará ligada à estabilidade material e à fidelidade, exigindo que <strong>você</strong> cultive a paciência e o respeito às regras da convivência. A sombra aqui é a rigidez ou o excesso de cobranças, que pode transformar a relação em um conjunto de obrigações sem o frescor do afeto espontâneo. O desafio para <strong>você</strong> é encontrar beleza na rotina e entender que o trabalho em equipe é o que garante a durabilidade do vínculo. <strong>você</strong> terá o desejo de planejar o futuro com detalhes, investindo em um lar seguro e em projetos de longo prazo com o par. A demonstração de amor para <strong>você</strong> se dá no cuidado com a saúde, na organização das finanças e na lealdade inabalável diante das crises. Ao superar a tendência ao pessimismo ou ao controle excessivo, <strong>você</strong> constrói um relacionamento que é uma verdadeira rocha, servindo de exemplo de integridade e de união para todos os que observam a solidez da sua jornada afetiva.</p>`,
+    4: `<p>Sua natureza foca na construção de bases sólidas, onde o amor se manifesta através da presença constante e do apoio prático no cotidiano. A segurança emocional está intrinsecamente ligada à estabilidade e à fidelidade, exigindo o cultivo da paciência e do respeito às bases da convivência.</p>
+        <p>É necessário evitar a rigidez ou o excesso de cobranças, que podem retirar o frescor do afeto espontâneo e transformar a relação em obrigações. O desafio para você é encontrar beleza na construção diária e entender que o trabalho em equipe é o que garante a durabilidade e a confiança do vínculo.</p>
+        <p>Existe um desejo natural de planejar o futuro com detalhes, investindo em um lar seguro e em projetos de longo prazo com o par. Ao superar o controle excessivo, você constrói um relacionamento que é uma verdadeira rocha, servindo de exemplo de integridade e união inabalável para todos ao redor.</p>`,
 
-    5: `<p>O foco agora para <strong>você</strong> é a aventura, a quebra de padrões e a necessidade de renovação constante dentro da vida amorosa. Este ciclo traz uma inquietude que exige que a parceria seja cúmplice em mudanças, viagens e novas experiências sensoriais e intelectuais. A sombra aqui é a instabilidade; <strong>você</strong> pode sentir uma vontade súbita de romper laços apenas pelo desejo de liberdade, o que exige discernimento para não destruir construções valiosas por impulsos passageiros. A lição para <strong>você</strong> é entender que a liberdade real pode ser vivida dentro de um relacionamento, desde que haja espaço para a individualidade e para a novidade. <strong>você</strong> terá um magnetismo sexual e intelectual muito forte, atraindo situações que testam a sua capacidade de adaptação e de diálogo. O segredo para <strong>você</strong> é manter o canal da comunicação sempre aberto, transformando a relação em uma viagem constante de descobertas mútuas. Ao dominar a agitação interna, <strong>você</strong> se torna alguém com versatilidade para manter o interesse vivo por anos, sendo uma companhia estimulante e corajosa que encara cada transformação da vida com um sorriso e espírito de exploração.</p>`,
+    5: `<p>Sua energia é voltada para a aventura, a quebra de padrões e a necessidade de renovação constante dentro da vida amorosa. Existe uma inquietude que busca parcerias cúmplices em mudanças, viagens e novas experiências sensoriais e intelectuais, fugindo do convencional.</p>
+        <p>É preciso atenção para que a instabilidade não leve ao rompimento de laços valiosos por impulsos passageiros de liberdade. O aprendizado para você é entender que a autonomia real pode ser vivida dentro de um relacionamento, desde que haja espaço para a individualidade e para a novidade constante.</p>
+        <p>Seu magnetismo pessoal atrai situações que testam a capacidade de adaptação e de diálogo profundo. O segredo para você é manter o canal da comunicação sempre aberto, sendo uma companhia estimulante e corajosa que encara cada transformação da vida com um espírito de exploração mútua.</p>`,
 
-    6: `<p>Este é o ciclo por excelência do amor familiar, do casamento e do serviço dedicado ao bem-estar das pessoas queridas para <strong>você</strong>. A energia pede que <strong>você</strong> assuma responsabilidades afetivas com maturidade, agindo como a figura que traz harmonia e justiça para dentro do lar. O risco para <strong>você</strong> é o perfeccionismo e a tendência a cobrar das outras pessoas um ideal de comportamento que nem sempre é possível alcançar, gerando tensões desnecessárias. A lição de vida para <strong>você</strong> é o acolhimento incondicional, entendendo que o amor real aceita as imperfeições da humanidade com doçura e paciência. <strong>você</strong> sentirá uma necessidade maior de conforto doméstico, de cuidar da estética do ambiente e de fortalecer os laços com parentes e amigos próximos. É um excelente período para oficializar uniões ou para expandir a família, pois o seu instinto protetor estará no auge. Ao superar a tendência ao controle ou à intromissão na vida alheia, <strong>você</strong> se torna um porto seguro inabalável, alguém que as pessoas procuram pelo conforto e pela sabedoria afetiva que <strong>você</strong> emana naturalmente, criando um legado de paz e união duradoura.</p>`,
+    6: `<p>Sua vibração é voltada para o amor familiar, o equilíbrio doméstico e o serviço dedicado ao bem-estar das pessoas queridas. Essa energia pede que as responsabilidades afetivas sejam assumidas com maturidade, agindo como a figura que traz harmonia e justiça para dentro do convívio.</p>
+        <p>O risco para você é o perfeccionismo ou a tendência a cobrar um ideal de comportamento inatingível do par, gerando tensões desnecessárias. A lição de vida é o acolhimento incondicional, entendendo que o amor real aceita as imperfeições da humanidade com doçura e muita paciência.</p>
+        <p>Existe uma necessidade profunda de conforto doméstico e de fortalecer os laços com quem você ama, pois seu instinto protetor é nato e poderoso. Ao equilibrar o desejo de cuidar com o respeito à autonomia alheia, você se torna um porto seguro inabalável e uma referência de sabedoria afetiva.</p>`,
 
-    7: `<p>A vida afetiva para <strong>você</strong> neste período exige profundidade, respeito ao silêncio e uma conexão que vá além do plano físico e material. <strong>você</strong> buscará uma união de almas, onde a troca intelectual e a sintonia espiritual sejam os pilares principais, preferindo a qualidade do tempo à quantidade de eventos sociais. A sombra aqui é o isolamento ou a frieza; <strong>você</strong> pode se fechar tanto em seu mundo interno que a outra pessoa se sinta excluída ou incompreendida. O desafio para <strong>você</strong> é aprender a compartilhar as suas descobertas e sentimentos mais profundos, saindo da torre de marfim para permitir que o par conheça a sua essência real. A intuição estará muito forte, permitindo que <strong>você</strong> perceba as verdades ocultas na relação, o que exige coragem para lidar com a realidade sem ilusões. É um tempo de refinamento amoroso, onde o autorespeito e a dignidade pessoal se tornam essenciais para que <strong>você</strong> se sinta bem em uma união. Ao superar o medo da vulnerabilidade, <strong>você</strong> desenvolve um vínculo de integridade absoluta, onde a cumplicidade nasce do entendimento silencioso e da admiração pela sabedoria que ambos cultivam juntos.</p>`,
+    7: `<p>A vida afetiva sob esta influência exige profundidade, respeito ao silêncio e uma conexão que transcende o plano físico e material. Você busca uma união de almas, onde a sintonia intelectual e espiritual são os pilares principais, valorizando a qualidade do tempo compartilhado.</p>
+        <p>É preciso evitar o isolamento excessivo, que pode fazer com que a outra pessoa se sinta excluída ou incompreendida pelo seu recolhimento. O desafio para você é aprender a compartilhar as descobertas e sentimentos mais profundos, permitindo que o par conheça sua essência real e sem defesas.</p>
+        <p>Sua intuição aguçada permite perceber as verdades ocultas na relação, o que exige coragem para lidar com a realidade sem ilusões. Ao superar o medo da vulnerabilidade, desenvolve-se um vínculo de integridade absoluta, onde a cumplicidade nasce do entendimento silencioso e da admiração mútua.</p>`,
 
-    8: `<p>Este ciclo traz para <strong>você</strong> o desafio de equilibrar o poder, o sucesso material e as responsabilidades executivas com a entrega afetiva. <strong>você</strong> buscará parcerias que tenham ambição e que respeitem a sua autoridade no mundo externo, valorizando a lealdade e a eficiência na construção de um patrimônio comum. A sombra aqui é o autoritarismo ou a frieza de quem trata o relacionamento como um negócio, o que pode levar a disputas de ego e a um clima de tensão permanente. A lição para <strong>você</strong> é aprender que a verdadeira liderança no amor nasce do respeito mútuo e da justiça, e não do domínio sobre as vontades alheias. <strong>você</strong> sentirá o desejo de proteger e de prover segurança para quem ama, agindo com uma generosidade que vem do sucesso conquistado com esforço. É um período de colheita material, onde as decisões financeiras do casal ganham destaque e exigem um julgamento equilibrado. Ao superar a obsessão por status ou o medo da perda, <strong>você</strong> consolida uma relação de grande influência e prestígio, onde a força da união é o motor para que ambos alcancem o topo com honra e estabilidade inabaláveis.</p>`,
+    8: `<p>Sua energia traz o desafio de equilibrar o sucesso material e as responsabilidades executivas com a entrega afetiva sincera. Você valoriza parcerias com ambição, que respeitem sua autoridade e colaborem ativamente na construção de um patrimônio e de um futuro comum.</p>
+        <p>É fundamental evitar o autoritarismo ou tratar o relacionamento como uma transação comercial, o que causaria disputas de ego e frieza. A lição para você é que a verdadeira liderança no amor nasce do respeito e da justiça, e não do domínio sobre as vontades da pessoa amada.</p>
+        <p>Existe um desejo genuíno de proteger e prover segurança para quem você ama, com a generosidade vinda das conquistas alcançadas. Ao superar a obsessão por controle, você consolida uma relação de grande influência, onde a força da união impulsiona ambos ao topo com honra e estabilidade.</p>`,
 
-    9: `<p>Este é o momento do desapego, da conclusão de ciclos e da vivência de um amor universal e humanitário para <strong>você</strong>. A energia pede que <strong>você</strong> finalize mágoas do passado e que abra o coração para uma compreensão mais ampla das falhas humanas, agindo com uma generosidade sem limites. O risco para <strong>você</strong> é a dramatização emocional ou a dificuldade em deixar ir o que já não serve mais, o que pode gerar um cansaço desnecessário em relações desgastadas. A lição de vida para <strong>você</strong> é a da entrega: amar sem possuir e servir sem esperar retorno imediato, entendendo que o afeto é uma energia que deve circular. <strong>você</strong> sentirá uma sensibilidade aflorada, querendo ajudar o par em seu crescimento espiritual e se envolvendo em causas que beneficiem o coletivo. É um tempo de balanço afetivo, onde <strong>você</strong> deve perdoar integralmente para que o novo possa entrar na sua vida com leveza. Ao superar o apego ao ego e às pequenas disputas diárias, <strong>você</strong> se torna uma presença inspiradora e carismática, capaz de viver um amor que transcende as barreiras comuns, sentindo a plenitude de quem sabe que a maior riqueza é a capacidade de amar com liberdade e alma.</p>`
-  },
+    9: `<p>Sua natureza é marcada pelo amor universal, pela compreensão ampla e pela vivência humanitária dentro das relações. Essa energia favorece a resolução de mágoas passadas e a abertura do coração para uma aceitação generosa das falhas humanas, agindo com desprendimento.</p>
+        <p>É preciso evitar a dramatização emocional ou a dificuldade em encerrar ciclos que já não trazem mais crescimento para ambas as partes. A lição de vida para você é a da entrega: amar com liberdade e entender que o afeto é uma energia que deve circular sem sentimentos de posse.</p>
+        <p>Sua sensibilidade aflorada busca auxiliar o par no crescimento espiritual e no envolvimento com causas que beneficiam o coletivo. Ao superar o apego ao ego, você se torna uma presença inspiradora, capaz de viver um amor que transcende as barreiras comuns, sentindo a plenitude de quem ama com a alma.</p>`
+},
+
 
 ciclos: {
     // --- 1º CICLO (FORMAÇÃO / JUVENTUDE) ---
@@ -1862,29 +1906,83 @@ inclinacoes : {
 
 
 essencia : {
-    1: "Sua alma vibra na frequência da originalidade. Você busca ser o primeiro, o desbravador. Sua essência é pura iniciativa.",
-    2: "Sua alma busca harmonia e parceria. Você vibra no acolhimento e na sensibilidade de entender o que não é dito.",
-    3: "Sua essência é a alegria e a autoexpressão. Você brilha quando comunica e coloca sua marca criativa no mundo.",
-    4: "Sua alma busca segurança e ordem. Você vibra na construção de bases sólidas e na honestidade absoluta.",
-    5: "Sua essência é a liberdade e o movimento. Você vibra na mudança, na curiosidade e na quebra de padrões antigos.",
-    6: "Sua alma vibra no amor e na responsabilidade familiar. Você busca ser o porto seguro para quem está ao seu redor.",
-    7: "Sua essência é o mistério e a sabedoria. Você busca o conhecimento profundo, a introspecção e a verdade espiritual.",
-    8: "Sua alma vibra na justiça e na eficiência. Você busca o equilíbrio entre o mundo espiritual e o poder material.",
-    9: "Sua essência é a compaixão universal. Você vibra no desapego e no desejo de servir à humanidade de forma ampla."
+ 1: `<h4>Essência 1</h4>
+        <p>Sua reação interna primária é marcada por um forte impulso de liderança e autoconfiança. Diante do inesperado, o desejo de assumir o controle surge quase instantaneamente, impulsionando ações rápidas e decididas para solucionar qualquer impasse.</p>
+        <p>O desafio está em não permitir que essa força se transforme em uma postura defensiva ou autoritária no calor do momento. Ao equilibrar a coragem do começo com a escuta atenta, você transforma a impulsividade em uma autoridade respeitada e eficiente.</p>`,
+
+    2: `<h4>Essência 2</h4>
+        <p>Sua resposta interna é de natureza diplomática e receptiva. Ao enfrentar uma dificuldade, a primeira tendência é buscar o equilíbrio e considerar os sentimentos envolvidos, evitando ao máximo qualquer tipo de ruptura ou confronto direto.</p>
+        <p>A maturidade ensina a não transformar essa busca por harmonia em uma omissão de si. O equilíbrio real ocorre quando você utiliza sua sensibilidade para mediar a situação sem permitir que a indecisão ou a dependência emocional paralisem sua capacidade de agir.</p>`,
+
+    3: `<h4>Essência 3</h4>
+        <p>A reação imediata da sua essência é a criatividade e a comunicação. Existe um otimismo nato que busca encontrar saídas originais e leves, utilizando o pensamento rápido para desarmar tensões e transformar problemas em oportunidades de expressão.</p>
+        <p>O cuidado necessário é para que a agitação mental não gere dispersão. Quando a criatividade inicial é canalizada com foco, os resultados são brilhantes; do contrário, a tendência é gastar energia com reclamações ou superficialidades que não resolvem a questão central.</p>`,
+
+    4: `<h4>Essência 4</h4>
+        <p>Internamente, sua resposta é pragmática e fundamentada na segurança. Diante de imprevistos, você busca se ancorar em métodos conhecidos e na organização, preferindo a estabilidade à inovação arriscada.</p>
+        <p>A rigidez pode ser o seu maior obstáculo em momentos de crise. O desenvolvimento pessoal auxilia você a manter a estrutura necessária, mas com a flexibilidade suficiente para aceitar que nem tudo pode ser planejado. A eficiência surge da união entre método e adaptação.</p>`,
+
+    5: `<h4>Essência 5</h4>
+        <p>Sua essência vibra na rapidez e na adaptabilidade. A resposta interna ao desafio é a curiosidade e o movimento, buscando soluções fora do comum e agindo com uma agilidade que surpreende os ritmos mais lentos.</p>
+        <p>A impulsividade, contudo, pode levar a escolhas precipitadas das quais você pode se arrepender mais tarde. O equilíbrio reside em usar sua versatilidade de forma estratégica, aprendendo a pausar antes de agir para que a liberdade de escolha seja sempre produtiva.</p>`,
+
+    6: `<h4>Essência 6</h4>
+        <p>Diante de conflitos, sua reação interna é de proteção e responsabilidade. O instinto de cuidar das pessoas e do ambiente sobressai, fazendo com que você tome as dores alheias como se fossem suas, buscando restaurar a paz a qualquer custo.</p>
+        <p>É preciso cuidado para que esse zelo não se torne um controle excessivo ou uma interferência intrusiva. A verdadeira eficácia da sua essência aparece quando você apoia o próximo sem anular a autonomia dele, mantendo o equilíbrio emocional próprio no processo.</p>`,
+
+    7: `<h4>Essência 7</h4>
+        <p>Sua primeira resposta é o recolhimento analítico e introspectivo. Você tende a se afastar do ruído externo para processar os fatos em silêncio, buscando uma compreensão profunda antes de manifestar qualquer opinião ou ação.</p>
+        <p>O desafio é não permitir que esse afastamento se torne um isolamento frio ou melancólico. Ao compartilhar suas conclusões de forma clara e segura, você transforma o conhecimento em uma ferramenta poderosa para resolver problemas complexos com precisão cirúrgica.</p>`,
+
+    8: `<h4>Essência 8</h4>
+        <p>A reação interna é de autoridade e ambição. Diante de um obstáculo, sua mente processa imediatamente o custo-benefício e a melhor estratégia para vencer, agindo com uma objetividade que foca nos resultados materiais e práticos.</p>
+        <p>No calor do momento, a sede de poder ou o apego ao controle podem gerar tensões desnecessárias. O autodesenvolvimento permite que você lidere com justiça e ética, garantindo que o sucesso seja alcançado sem ferir os relacionamentos ou a própria integridade.</p>`,
+
+    9: `<h4>Essência 9</h4>
+        <p>Sua essência responde aos desafios com uma visão ampla e humanitária. Existe uma tendência ao desprendimento e à compreensão de que tudo faz parte de um ciclo maior, o que confere uma sabedoria natural diante das crises.</p>
+        <p>O risco é cair na apatia ou no idealismo excessivo quando a realidade se mostra dura. A maturidade ensina você a usar essa compaixão universal de forma prática, transformando a sabedoria interna em ações concretas que beneficiam tanto a você quanto ao coletivo.</p>`
 },
 
 
 
 equilibrio :{
-    1: "Em momentos de crise, você precisa confiar em si mesmo e evitar o isolamento excessivo.",
-    2: "Seu equilíbrio vem da paciência. Evite a hipersensibilidade e busque o diálogo calmo.",
-    3: "Para se equilibrar, use sua criatividade. Não deixe o pessimismo calar a sua voz.",
-    4: "O equilíbrio vem do método. Respire fundo e coloque os fatos em ordem antes de agir.",
-    5: "Sua estabilidade volta quando você aceita a mudança. Não tente controlar o incontrolável.",
-    6: "Busque o equilíbrio cuidando de si mesmo, não apenas dos outros. Evite a autocrítica.",
-    7: "O equilíbrio surge no silêncio. Tire um tempo para refletir sozinho antes de explodir.",
-    8: "Seu ponto de equilíbrio é a imparcialidade. Use a lógica para não se deixar levar pela raiva.",
-    9: "O equilíbrio vem da aceitação. Deixe ir o que não pode ser mudado para encontrar a paz."
+
+    1: `<h4>Equilíbrio 1</h4>
+        <p>Sua força reside na autonomia e no pioneirismo. A vibração inicial impele você a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades.</p>
+        <p>Para o sucesso pleno, o desafio é manter essa chama acesa até a conclusão. Quando a iniciativa do começo se une à determinação final, você se torna uma força imparável. O equilíbrio aqui é não permitir que a impaciência interrompa o fluxo antes que o objetivo seja alcançado.</p>`,
+
+    2: `<h4>Equilíbrio 2</h4>
+        <p>A abordagem inicial é marcada pela diplomacia e pela sensibilidade. Você prefere analisar o terreno e buscar parcerias antes de agir, utilizando a intuição como bússola. Essa postura cooperativa facilita a entrada em novos ambientes e a resolução de conflitos precoces.</p>
+        <p>A conclusão de seus projetos depende da confiança que deposita em si. O equilíbrio consiste em não se deixar paralisar pela dúvida ou pela dependência alheia no estágio final. Ao finalizar suas metas com suavidade e firmeza, você consolida sua capacidade de realização harmoniosa.</p>`,
+
+    3: `<h4>Equilíbrio 3</h4>
+        <p>Sua atitude inicial é vibrante, criativa e repleta de otimismo. A facilidade de comunicação permite que novas ideias sejam lançadas com entusiasmo, atraindo a atenção e o apoio necessários para o início de qualquer jornada ou empreendimento.</p>
+        <p>O grande aprendizado está em evitar a dispersão de energia no meio do caminho. Manter o foco até o último detalhe é o que garante que seu brilho criativo se transforme em algo concreto. Ao equilibrar a alegria do começo com a disciplina do fim, seus projetos ganham uma forma extraordinária.</p>`,
+
+    4: `<h4>Equilíbrio 4</h4>
+        <p>A entrada em qualquer situação ocorre de forma metódica e pragmática. Existe um respeito profundo pelas bases e pela estrutura, o que garante que o primeiro passo seja dado com segurança e planejamento, evitando riscos desnecessários logo de partida.</p>
+        <p>Sua capacidade de finalização é sólida, mas pode ser limitada por uma rigidez excessiva. O equilíbrio reside em permitir que o processo flua sem tanta resistência a imprevistos. Ao unir a organização inicial à persistência final, você constrói legados duradouros e estáveis.</p>`,
+
+    5: `<h4>Equilíbrio 5</h4>
+        <p>Você aborda as oportunidades com uma agilidade mental invejável e um desejo de renovação. O início de seus ciclos é marcado pela versatilidade e pela coragem de arriscar, o que torna sua presença dinâmica e magnética desde o primeiro instante.</p>
+        <p>Para concluir com êxito, é preciso domar a inquietude que surge quando a novidade passa. O sucesso vem ao transformar a impulsividade inicial em uma estratégia de finalização consistente. O equilíbrio está em aproveitar a liberdade do processo sem perder de vista o porto de chegada.</p>`,
+
+    6: `<h4>Equilíbrio 6</h4>
+        <p>A motivação inicial é o senso de responsabilidade e o cuidado com o bem-estar coletivo. Você inicia projetos com um olhar voltado para a harmonia e para o serviço ao próximo, estabelecendo um ambiente de confiança mútua logo no primeiro contato.</p>
+        <p>A conclusão de seus objetivos é guiada pelo perfeccionismo e pelo afeto. O desafio é não se sobrecarregar com as expectativas alheias no estágio final. Ao equilibrar o desejo de ajudar com a necessidade de finalizar suas próprias metas, você alcança uma realização plena e gratificante.</p>`,
+
+    7: `<h4>Equilíbrio 7</h4>
+        <p>Sua atitude inicial é introspectiva e analítica. Antes de se comprometer, existe uma busca profunda por conhecimento e verdade, o que confere às suas ações uma base intelectual muito sólida e diferenciada perante os obstáculos.</p>
+        <p>O sucesso na finalização depende de superar a tendência ao isolamento ou à crítica excessiva. Ao compartilhar os resultados de sua análise e concluir seus projetos com clareza, você transforma sabedoria em resultados práticos. O equilíbrio está em unir a profundidade do início com a entrega do fim.</p>`,
+
+    8: `<h4>Equilíbrio 8</h4>
+        <p>A abordagem de novas oportunidades é executada com autoridade e visão de poder. Existe uma capacidade executiva latente que permite visualizar o sucesso material antes mesmo do primeiro movimento, conferindo uma postura de comando natural.</p>
+        <p>Para que o ciclo se complete, a ética e a justiça devem guiar a finalização tanto quanto a ambição guiou o começo. O equilíbrio entre o desejo de conquista e a responsabilidade social é o que garante que suas vitórias sejam sólidas e respeitadas por todos ao redor.</p>`,
+
+    9: `<h4>Equilíbrio 9</h4>
+        <p>Você inicia seus ciclos com uma vibração humanitária e compreensiva. Existe um desprendimento inicial que permite enxergar o quadro geral, abordando as situações com sabedoria e uma generosidade que inspira quem compartilha de sua jornada.</p>
+        <p>A conclusão é marcada pela necessidade de encerramento emocional e espiritual. O desafio é não se perder em idealismos utópicos, garantindo que o projeto tenha um fim prático e útil. O equilíbrio está em transformar o sonho do início em uma entrega concreta para o mundo.</p>`
+
 }
 
 };
