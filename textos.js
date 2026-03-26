@@ -282,14 +282,15 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
     statusAnual: "O Status do Momento revela a configuração do seu plano de Expressão para o ano vigente. Diferente do seu Plano Natural, esta análise identifica quais áreas da sua vida estão recebendo carga extra de energia e quais exigem maior cautela estratégica no ciclo atual.",
 
     // Nova chave para a Vibração de Trânsito
-    vibracaoAno: "A Vibração de Trânsito é o 'clima numérico' que rege o seu ano pessoal. Ela define a tônica das oportunidades e os aprendizados específicos que cruzarão o seu caminho nos próximos 12 meses, permitindo um planejamento mais assertivo.",
+ 
 
        Conclusao: `    <p style="font-size: 16px; color: var(--dark); line-height: 1.6;"> *Você*, agradeço profundamente pela confiança depositada em meu trabalho ao permitir que a Numerologia guie seus próximos passos. 
        É uma honra fazer parte da sua jornada de autodescoberta. 
        Que o Universo ilumine seus caminhos, abençoe suas escolhas e que cada vibração numérica aqui revelada se transforme em força, prosperidade e luz em sua vida. Siga com coragem e sabedoria!
     </p>`,
 
-
+ Transito: "A Vibração de Trânsito é o 'clima numérico' que rege o seu ano pessoal. Ela define a tônica das oportunidades e os aprendizados específicos que cruzarão o seu caminho nos próximos 12 meses, permitindo um planejamento mais assertivo."
+   ,
         
     conclusaoEvolutiva: `<p>Chegamos ao final desta jornada de decodificação numérica, mas este é, na verdade, o seu verdadeiro ponto de partida. Tudo o que você leu até aqui — suas potências, seus desafios, seus ciclos e sua essência — compõe o mapa sagrado da sua existência. No entanto, é fundamental compreender que o mapa não é o caminho; ele é a bússola. A numerologia não determina o seu destino de forma fatalista, ela revela as tendências e as ferramentas que você trouxe consigo para construir a sua própria realidade.</p>
 
@@ -297,7 +298,8 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
 
 <p>Lembre-se: você é o arquiteto consciente da sua vida. Este estudo é uma ferramenta poderosa de empoderamento, feita para que você pare de lutar contra a sua própria natureza e comece a fluir com ela. A evolução é um exercício diário de escolhas. Que este diagnóstico seja o farol que ilumina suas decisões, permitindo que você caminhe com muito mais clareza, confiança e maestria em direção ao seu propósito maior. O universo respeita a sua vontade; agora, cabe a você dar o próximo passo.</p>`
 },
-
+ 
+ 
     
 RegenteVida: {
  1:` <h2>🔱  Regente da Piramide N°1</h2> 
