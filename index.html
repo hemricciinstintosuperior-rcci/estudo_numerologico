@@ -94,6 +94,15 @@
     display: inline-block;
 }  
 
+/* Cor Especial para o Regente da Vida */
+.num.regente-destaque {
+    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c) !important;
+    color: #000 !important;
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.6) !important;
+    border: 1px solid #827108 !important;
+    font-weight: 900 !important;
+}    
+
 /* Estilo das Abas de Planos */
 .tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
 .tab-btn { 
@@ -1381,14 +1390,21 @@ let htmlPiramide = `
 
 // ... (continua o código que desenha as linhas da pirâmide)
     
-    piramideVida.forEach((linha, i) => {
-        htmlPiramide += `<div class="linha">`;
-        linha.forEach((n, j) => {
-            let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
-            htmlPiramide += `<div class="${cl}">${n}</div>`;
-        });
-        htmlPiramide += `</div>`;
+piramideVida.forEach((linha, i) => {
+    htmlPiramide += `<div class="linha">`;
+    linha.forEach((n, j) => {
+        // 1. Verifica se é uma sequência negativa
+        let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
+
+        // 2. NOVA LÓGICA: Se for a última linha (i) e o único número (j), é o REGENTE
+        if (i === piramideVida.length - 1) {
+            cl += " regente-destaque";
+        }
+
+        htmlPiramide += `<div class="${cl}">${n}</div>`;
     });
+    htmlPiramide += `</div>`;
+});
 
 htmlPiramide += `</div>
     
