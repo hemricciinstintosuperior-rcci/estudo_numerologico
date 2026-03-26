@@ -24,7 +24,7 @@ introducoes: {
 
 <p>​Esta pirâmide é construída exclusivamente a partir do seu nome de batismo, o que, na numerologia cabalística, representa a sua essência imutável e a vibração que você trouxe ao mundo. Ela reflete os aspectos gerais da vida e serve como o cenário onde todos os outros eventos acontecem. É por isso que todas as vigências de idade e períodos cronológicos do seu relatório são baseados nesta pirâmide central; ela é o relógio biológico e espiritual que governa todas as outras influências.</p>
 
-<h1>🔱  Regente da Vida </h1>
+<h3>🔱  Regente da Vida </h3>
 <p>O Regente da Vida representa o núcleo vibracional da sua existência. Ele é a força central que sustenta toda a estrutura da sua Pirâmide da Vida, funcionando como o eixo principal em torno do qual todas as demais energias se organizam. Assim como o Sol mantém o equilíbrio do sistema solar, o Regente mantém o alinhamento das experiências que compõem a sua trajetória.</p>
 
 <p>Essa vibração revela a essência mais autêntica da sua natureza, indicando como você reage aos acontecimentos, quais padrões emocionais predominam e de que maneira sua energia se projeta no mundo. Diferente de eventos momentâneos, o Regente atua como uma base constante que acompanha você durante toda a vida.</p>
@@ -33,7 +33,7 @@ introducoes: {
 
 <p>Compreender o seu Regente é compreender o fundamento da sua identidade energética. Ele revela talentos naturais, tendências comportamentais e a forma como a sua presença influencia o ambiente ao redor, sendo a base sobre a qual todo o restante da análise da Pirâmide da Vida se apoia.</p>
 
-<h1 style="color:#d32f2f;">⚠️ O que são Sequências de Vulnerabilidade e insegurança na Vida?</h1>
+<h3 style="color:#d32f2f;">⚠️ O que são Sequências de Vulnerabilidade e insegurança na Vida?</h3>
 <p>As Sequências Negativas indicam pontos de tensão dentro da estrutura energética da sua vida. Elas não representam punições nem destinos inevitáveis, mas sim padrões que revelam áreas onde a energia tende a se repetir de maneira desafiadora. Funcionam como sinais que mostram onde determinados comportamentos ou situações podem gerar desgaste ou bloqueios.</p>
 
 <p>Muitas dessas sequências estão associadas a experiências que exigem aprendizado e amadurecimento. Elas surgem quando certos aspectos da sua natureza ainda não foram plenamente compreendidos ou integrados. Por isso, podem se manifestar como situações recorrentes que parecem reaparecer em diferentes fases da vida.</p>
