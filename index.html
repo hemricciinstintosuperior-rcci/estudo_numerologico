@@ -962,37 +962,28 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     }
 
 // TRÂNSITO (Cálculo da soma reduzida dos 4 planos)
-// TRÂNSITO (Soma reduzida dos 4 planos)
-    const vTransito = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
+// --- BLOCO DE TRÂNSITO ---
+const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
 
-    // 1. BUSCA O TEXTO DE INTRODUÇÃO (Apenas "Transito")
-    const textoIntroducao = (typeof introducoes !== 'undefined' && introducoes.Transito) ? introducoes.Transito : "";
-
-    // 2. BUSCA O TEXTO DO RESULTADO ESPECÍFICO (O significado do número)
-    const textoResultado = (typeof TextosTransito !== 'undefined') ? (TextosTransito[vTransito] || "") : "";
-
-    html += `
-    <div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 30px;">
-        <h2 class="titulo-topico">Número de Trânsito</h2>
-        
-        <div class="resultado-bloco">
-            <div class="texto-intro" style="margin-bottom: 20px; font-style: italic; color: #444;">
-                ${aplicarFiltroTexto(textoIntroducao)}
-            </div>
-
-            <h3 style="display: flex; align-items: center; gap: 10px;">
-                Seu Trânsito Atual: <span class="numero-destaque" style="color: var(--gold); font-size: 1.5em;">${vTransito}</span>
-            </h3>
-            
-            <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
-                VIGÊNCIA: ${periodoVigente}
-            </p>
-
-            <div class="texto-res" style="margin-top: 15px;">
-                ${aplicarFiltroTexto(textoResultado)}
-            </div>
+html += `
+<div class="secao-card">
+    <h2 class="titulo-topico">Número de Trânsito</h2>
+    
+    <div class="resultado-bloco">
+        <div class="intro-texto" style="margin-bottom:15px; font-style:italic; color:#555;">
+            ${aplicarFiltroTexto(introducoes.Transito || "")}
         </div>
-    </div>`;
+
+        <h3>Seu Trânsito Atual: <span class="numero-destaque">${vTransitoCalculado}</span></h3>
+        
+        <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
+            Vigência: ${vigenciaAnoPessoal}
+        </p>
+
+        <div class="texto-res">${aplicarFiltroTexto(TextosTransito[vTransitoCalculado] || "")}</div>
+    </div>
+</div>
+`;
 
     return html;
 }
