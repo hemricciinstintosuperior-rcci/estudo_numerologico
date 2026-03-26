@@ -20,7 +20,7 @@ introducoes: {
 
 
         
-        piramide: `<p>​A Pirâmide da Vida Principal é o alicerce absoluto de todo o seu mapa numerológico quântico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Diferente das outras pirâmides que focam em áreas específicas, esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
+        piramide: `<p>​A Pirâmide da Vida Principal é o alicerce absoluto de todo o seu mapa numerológico Cabalístico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Diferente das outras pirâmides que focam em áreas específicas, esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
 
 <p>​Esta pirâmide é construída exclusivamente a partir do seu nome de batismo, o que, na numerologia cabalística, representa a sua essência imutável e a vibração que você trouxe ao mundo. Ela reflete os aspectos gerais da vida e serve como o cenário onde todos os outros eventos acontecem. É por isso que todas as vigências de idade e períodos cronológicos do seu relatório são baseados nesta pirâmide central; ela é o relógio biológico e espiritual que governa todas as outras influências.</p>
 
