@@ -23,7 +23,25 @@ introducoes: {
         piramide: `<p>​A Pirâmide da Vida Principal é o alicerce absoluto de todo o seu mapa numerológico Cabalístico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Diferente das outras pirâmides que focam em áreas específicas, esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
 
 <p>​Esta pirâmide é construída exclusivamente a partir do seu nome de batismo, o que, na numerologia cabalística, representa a sua essência imutável e a vibração que você trouxe ao mundo. Ela reflete os aspectos gerais da vida e serve como o cenário onde todos os outros eventos acontecem. É por isso que todas as vigências de idade e períodos cronológicos do seu relatório são baseados nesta pirâmide central; ela é o relógio biológico e espiritual que governa todas as outras influências.</p>
-`,
+
+<h1>🔱  Regente da Vida </h1>
+<p>O Regente da Vida representa o núcleo vibracional da sua existência. Ele é a força central que sustenta toda a estrutura da sua Pirâmide da Vida, funcionando como o eixo principal em torno do qual todas as demais energias se organizam. Assim como o Sol mantém o equilíbrio do sistema solar, o Regente mantém o alinhamento das experiências que compõem a sua trajetória.</p>
+
+<p>Essa vibração revela a essência mais autêntica da sua natureza, indicando como você reage aos acontecimentos, quais padrões emocionais predominam e de que maneira sua energia se projeta no mundo. Diferente de eventos momentâneos, o Regente atua como uma base constante que acompanha você durante toda a vida.</p>
+
+<p>Quando suas escolhas estão alinhadas com essa frequência central, as situações tendem a fluir com mais naturalidade. Os desafios continuam existindo, mas passam a ser enfrentados com maior clareza e equilíbrio. No entanto, quando você se distancia dessa vibração essencial, pode surgir uma sensação de desgaste, como se estivesse nadando contra a própria corrente da sua natureza.</p>
+
+<p>Compreender o seu Regente é compreender o fundamento da sua identidade energética. Ele revela talentos naturais, tendências comportamentais e a forma como a sua presença influencia o ambiente ao redor, sendo a base sobre a qual todo o restante da análise da Pirâmide da Vida se apoia.</p>
+
+<h1 style="color:#d32f2f;">⚠️ O que são Sequências de Vulnerabilidade e insegurança na Vida?</h1>
+<p>As Sequências Negativas indicam pontos de tensão dentro da estrutura energética da sua vida. Elas não representam punições nem destinos inevitáveis, mas sim padrões que revelam áreas onde a energia tende a se repetir de maneira desafiadora. Funcionam como sinais que mostram onde determinados comportamentos ou situações podem gerar desgaste ou bloqueios.</p>
+
+<p>Muitas dessas sequências estão associadas a experiências que exigem aprendizado e amadurecimento. Elas surgem quando certos aspectos da sua natureza ainda não foram plenamente compreendidos ou integrados. Por isso, podem se manifestar como situações recorrentes que parecem reaparecer em diferentes fases da vida.</p>
+
+<p>Reconhecer essas vibrações permite que você desenvolva consciência sobre os próprios padrões. Em vez de reagir automaticamente aos desafios, torna-se possível observar o que está acontecendo e escolher respostas mais equilibradas. Esse processo transforma aquilo que antes parecia um obstáculo inevitável em uma oportunidade real de evolução.</p>
+
+<p>Ao identificar essas sequências dentro da sua Pirâmide da Vida, você passa a compreender com maior clareza quais aspectos da sua jornada pedem atenção e fortalecimento, abrindo espaço para que a energia vital circule de forma mais harmoniosa.</p>`,
+
         
         dia: `<p>O Dia Natalício representa um dos elementos mais significativos dentro da análise numerológica, pois revela as qualidades naturais que acompanham o indivíduo desde o momento do nascimento. Ele simboliza a essência mais espontânea da personalidade, refletindo os talentos inatos, as inclinações comportamentais e as características que se manifestam de forma quase instintiva ao longo da vida.</p>
 <p>Na numerologia, compreende-se que cada ser humano nasce em uma data específica de acordo com suas necessidades evolutivas e com os aprendizados que sua alma precisa desenvolver durante a existência. Dessa forma, o dia exato do nascimento não é considerado um evento aleatório, mas sim um ponto de alinhamento entre a consciência individual e as forças simbólicas representadas pelos números.</p>
