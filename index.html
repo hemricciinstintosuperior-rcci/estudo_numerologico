@@ -567,10 +567,10 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
     };
 
     const legendasPlanos = {
-        "Físico": "Potencial de Realização e Ação",
-        "Emocional": "Essência e Capacidade de Aproveitar a Vida",
-        "Intuitivo": "Valores Internos e Sabedoria",
-        "Mental": "Estratégia, Lógica e Decisão"
+        "Físico": "Plano Físico",
+        "Emocional": "Plano Emocional",
+        "Intuitivo": "Plano Intuitivo",
+        "Mental": "Plano Mental"
     };
 
     // Processa as notas
@@ -597,9 +597,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
                     <h3 style="color:#827108; text-transform: uppercase; font-size: 18px; margin: 0; font-weight:bold;">
                         ${legendasPlanos[p]}
                     </h3>
-                    <span style="background: #827108; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">
-                        VIBRAÇÃO DO PLANO: ${vNaturais[p]}
-                    </span>
+                 
                 </div>
         `;
 
