@@ -382,29 +382,53 @@ function aplicarFiltroTexto(texto) {
     let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
     return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
 }
-function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano) {
+
+        
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano) {
+    // Nota base baseada no comprimento do nome
     let nota = 4.5 + (nomeRaw.length % 3) * 0.17; 
     
-    // PILARES DE LUZ (Agora incluindo a Vibração Específica do Plano como prioridade)
-    const dnaPositivo = [
+    // PILARES DE LUZ (DNA POSITIVO)
+    let dnaPositivo = [
         resultados.motivacao, resultados.Personalidade, resultados.influencia, 
         resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
         resultados.subconsciente, resultados.dia, resultados.equilibrio, 
-        resultados.talento, resultados.essencia, regenteMatriz, 
-        vibPlano // <--- O resultado do Plano entra aqui como um pilar de força!
+        resultados.talento, resultados.essencia, regenteMatriz
     ];
 
-    const sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
+    // LISTA DE SOMBRAS
+    let sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
+
+    // --- REGRA DOS PLANOS DE EXPRESSÃO ---
+    // Se o plano for FRACO, a vibração do plano vira uma SOMBRA.
+    // Se for MÉDIO ou FORTE, vira DNA POSITIVO.
+    if (statusPlano === "fraco") {
+        sombras.push(vibPlano);
+    } else {
+        dnaPositivo.push(vibPlano);
+    }
 
     nums.forEach(n => {
-        // Se o número do atributo for igual à vibração do plano, o bônus é maior!
-        let multiplicador = (n === vibPlano) ? 3.5 : 2.55; 
+        // Multiplicador padrão
+        let multiplicador = 2.55; 
         
+        // Bônus extra se o número do atributo for o mesmo do plano e o plano for FORTE
+        if (n === vibPlano && statusPlano === "forte") {
+            multiplicador = 3.8; 
+        } else if (n === vibPlano && statusPlano === "medio") {
+            multiplicador = 3.2;
+        }
+        
+        // Cálculo final da nota do atributo
         nota += (dnaPositivo.filter(num => num === n).length * multiplicador); 
-        nota -= (sombras.filter(num => num === n).length * 1.31); 
-        if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) nota -= 1.47;
+        nota -= (sombras.filter(num => num === n).length * 1.45); // Peso da sombra levemente aumentado
+        
+        if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
+            nota -= 1.47;
+        }
     });
 
+    // Limita a nota entre 1.2 e 9.8
     return Math.min(Math.max(nota, 1.2), 9.8);
 }
 
@@ -558,12 +582,22 @@ const megaBancoAtributos = {
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
     
+    // Obtém os dados dos planos (Somas e Quantidades)
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
+    
     const vNaturais = {
         "Físico": reduzir(dadosNaturais.soma.fisico),
         "Mental": reduzir(dadosNaturais.soma.mental),
         "Emocional": reduzir(dadosNaturais.soma.emocional),
         "Intuitivo": reduzir(dadosNaturais.soma.intuitivo)
+    };
+
+    // Quantidade de números em cada plano para definir Força/Fraqueza
+    const qtdPorPlano = {
+        "Físico": dadosNaturais.quantidade.fisico,
+        "Mental": dadosNaturais.quantidade.mental,
+        "Emocional": dadosNaturais.quantidade.emocional,
+        "Intuitivo": dadosNaturais.quantidade.intuitivo
     };
 
     const legendasPlanos = {
@@ -573,17 +607,28 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Mental": "Plano Mental"
     };
 
-    // Processa as notas
+    // Processa cada atributo do Mega Banco
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
         let vibraDoPlano = vNaturais[dados.plano];
-        let nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibraDoPlano);
+        let contagemLetras = qtdPorPlano[dados.plano];
+
+        // Determina o Status do Plano:
+        // Fraco: 0 ou 1 letra | Médio: 2 ou 3 letras | Forte: 4 ou mais
+        let statusPlano = "medio";
+        if (contagemLetras <= 1) statusPlano = "fraco";
+        else if (contagemLetras >= 4) statusPlano = "forte";
+
+        let nota = calcularIntensidadeAtributo(
+            dados.nums, res, faltantes, nomeRaw, d3, 
+            regenteMatriz, negativasMatriz, vibraDoPlano, statusPlano
+        );
 
         rankingGeral.push({
             nome: nomeAtributo,
             nota: nota,
             plano: dados.plano,
-            sub: dados.sub, // Captura a legenda da subcategoria
+            sub: dados.sub,
             percentual: (nota * 10).toFixed(1)
         });
     }
@@ -597,13 +642,13 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
                     <h3 style="color:#827108; text-transform: uppercase; font-size: 22px; margin: 0; font-weight:bold;">
                         ${legendasPlanos[p]}
                     </h3>
-                     </div>
+                    <span style="background: #827108; color: #fff; padding: 5px 15px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase;">
+                        PLANO ${p}
+                    </span>
+                </div>
         `;
 
-        // Filtra os itens deste plano
         const itensDestePlano = rankingGeral.filter(i => i.plano === p);
-        
-        // Pega as subcategorias únicas presentes neste plano (ex: "EXECUÇÃO E FORÇA BRUTA")
         const subcategorias = [...new Set(itensDestePlano.map(i => i.sub))];
 
         subcategorias.forEach(sub => {
@@ -621,10 +666,10 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
                 htmlFinal += montarBarraGrafico(item, corBarra);
             });
 
-            htmlFinal += `</div>`; // Fecha bloco da subcategoria
+            htmlFinal += `</div>`; 
         });
 
-        htmlFinal += `</div>`; // Fecha bloco do plano
+        htmlFinal += `</div>`; 
     });
 
     return htmlFinal;
