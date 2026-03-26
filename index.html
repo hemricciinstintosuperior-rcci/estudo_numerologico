@@ -1403,14 +1403,30 @@ html += `
 
 // 1. INSERIR O PLANO DE MOMENTO E VIBRAÇÃO DE TRÂNSITO AQUI
 html += montarHtmlPlanosMomento(nomeRaw, dataRaw); 
-            
+
+
+// Cálculo rápido da vigência (Aniversário a Aniversário)
+const dataPartes = dataRaw.split('-'); // Supondo que dataRaw seja AAAA-MM-DD
+const diaMêsNasc = `${dataPartes[2]}/${dataPartes[1]}`;
+const anoAtual = new Date().getFullYear();
+
+const dataInicioAP = `${diaMêsNasc}/${anoAtual}`;
+const dataFimAP = `${diaMêsNasc}/${anoAtual + 1}`;    
 // INSERIR ANO PESSOAL AQUI (MANUALMENTE NO FINAL)
 html += `
-    <div class="secao-card quebra-pagina">
-        <h2 class="titulo-topico">${nomesExibicao.anoPessoal}</h2>
-        <div class="intro-texto">${textos.introducoes.anoPessoal || ""}</div>
+<div class="secao-card quebra-pagina">
+    <h2 class="titulo-topico">${nomesExibicao.anoPessoal}</h2>
+    
+    <div class="resultado-bloco" id="bloco-ano-pessoal">
+        <h3>Ano Pessoal: <span id="num-ano-pessoal">${res.anoPessoal}</span></h3>
+        
+        <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
+            Vigência: ${dataInicioAP} a ${dataFimAP}
+        </p>
+
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
     </div>
+</div>
 `;
             
 // Capa de transição para a Pirâmide da Vida
