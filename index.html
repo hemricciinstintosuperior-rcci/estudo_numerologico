@@ -411,170 +411,147 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
 
 const megaBancoAtributos = {
-// --- EXPANSÃO DO MEGA BANCO DE ATRIBUTOS (PLANO FÍSICO) ---
+    // --- PLANO FÍSICO ---
+    "Ímpeto de Finalização": { nums: [1, 8, 9], plano: "Físico", sub: "EXECUÇÃO E FORÇA BRUTA" },
+    "Pragmatismo Operacional": { nums: [4, 8], plano: "Físico", sub: "EXECUÇÃO E FORÇA BRUTA" },
+    "Resistência a Pressão": { nums: [9, 4, 8], plano: "Físico", sub: "EXECUÇÃO E FORÇA BRUTA" },
+    "Poder de Manifestação": { nums: [8, 1], plano: "Físico", sub: "EXECUÇÃO E FORÇA BRUTA" },
+    "Vigor Biológico": { nums: [5, 1, 9], plano: "Físico", sub: "EXECUÇÃO E FORÇA BRUTA" },
+    "Índice de Produtividade": { nums: [4, 8, 1], plano: "Físico", sub: "EXECUÇÃO E FORÇA BRUTA" },
 
-    // EXECUÇÃO E FORÇA BRUTA
-    "Ímpeto de Finalização": { nums: [1, 8, 9], plano: "Físico" },
-    "Pragmatismo Operacional": { nums: [4, 8], plano: "Físico" },
-    "Resistência a Pressão": { nums: [9, 4, 8], plano: "Físico" },
-    "Poder de Manifestação": { nums: [8, 1], plano: "Físico" },
-    "Vigor Biológico": { nums: [5, 1, 9], plano: "Físico" },
-    "Índice de Produtividade": { nums: [4, 8, 1], plano: "Físico" },
+    "Autoridade Inata": { nums: [1, 8], plano: "Físico", sub: "LIDERANÇA E TERRITÓRIO" },
+    "Domínio de Campo": { nums: [8, 9], plano: "Físico", sub: "LIDERANÇA E TERRITÓRIO" },
+    "Competitividade": { nums: [1, 5, 8], plano: "Físico", sub: "LIDERANÇA E TERRITÓRIO" },
+    "Senso de Urgência": { nums: [1, 5], plano: "Físico", sub: "LIDERANÇA E TERRITÓRIO" },
+    "Gestão de Recursos": { nums: [4, 8], plano: "Físico", sub: "LIDERANÇA E TERRITÓRIO" },
+    "Poder de Decisão Prática": { nums: [1, 8], plano: "Físico", sub: "LIDERANÇA E TERRITÓRIO" },
 
-    // LIDERANÇA E TERRITÓRIO
-    "Autoridade Inata": { nums: [1, 8], plano: "Físico" },
-    "Domínio de Campo": { nums: [8, 9], plano: "Físico" },
-    "Competitividade": { nums: [1, 5, 8], plano: "Físico" },
-    "Senso de Urgência": { nums: [1, 5], plano: "Físico" },
-    "Gestão de Recursos": { nums: [4, 8], plano: "Físico" },
-    "Poder de Decisão Prática": { nums: [1, 8], plano: "Físico" },
+    "Rigor Metódico": { nums: [4], plano: "Físico", sub: "DISCIPLINA E ESTRUTURA" },
+    "Consistência de Hábitos": { nums: [4, 9], plano: "Físico", sub: "DISCIPLINA E ESTRUTURA" },
+    "Estabilidade de Foco": { nums: [4, 1], plano: "Físico", sub: "DISCIPLINA E ESTRUTURA" },
+    "Organização Logística": { nums: [4, 8], plano: "Físico", sub: "DISCIPLINA E ESTRUTURA" },
+    "Persistência Material": { nums: [9, 4, 8], plano: "Físico", sub: "DISCIPLINA E ESTRUTURA" },
 
-    // DISCIPLINA E ESTRUTURA
-    "Rigor Metódico": { nums: [4], plano: "Físico" },
-    "Consistência de Hábitos": { nums: [4, 9], plano: "Físico" },
-    "Estabilidade de Foco": { nums: [4, 1], plano: "Físico" },
-    "Organização Logística": { nums: [4, 8], plano: "Físico" },
-    "Persistência Material": { nums: [9, 4, 8], plano: "Físico" },
-
-    // DINAMISMO E ADAPTAÇÃO FÍSICA
-    "Velocidade de Reação": { nums: [5, 1], plano: "Físico" },
-    "Mobilidade e Viagens": { nums: [5], plano: "Físico" },
-    "Versatilidade de Execução": { nums: [5, 3], plano: "Físico" },
-    "Otimização de Tempo": { nums: [1, 4, 5], plano: "Físico" },
-    "Audácia Empreendedora": { nums: [1, 5, 8], plano: "Físico" },
-    "Recuperação Energética": { nums: [5, 9, 1], plano: "Físico" },
+    "Velocidade de Reação": { nums: [5, 1], plano: "Físico", sub: "DINAMISMO E ADAPTAÇÃO FÍSICA" },
+    "Mobilidade e Viagens": { nums: [5], plano: "Físico", sub: "DINAMISMO E ADAPTAÇÃO FÍSICA" },
+    "Versatilidade de Execução": { nums: [5, 3], plano: "Físico", sub: "DINAMISMO E ADAPTAÇÃO FÍSICA" },
+    "Otimização de Tempo": { nums: [1, 4, 5], plano: "Físico", sub: "DINAMISMO E ADAPTAÇÃO FÍSICA" },
+    "Audácia Empreendedora": { nums: [1, 5, 8], plano: "Físico", sub: "DINAMISMO E ADAPTAÇÃO FÍSICA" },
+    "Recuperação Energética": { nums: [5, 9, 1], plano: "Físico", sub: "DINAMISMO E ADAPTAÇÃO FÍSICA" },
     
-    // CONEXÃO COM A MATÉRIA
-    "Ambição Construtiva": { nums: [8, 1], plano: "Físico" },
-    "Presença de Comando": { nums: [1, 8, 9], plano: "Físico" },
-    "Solidez de Resultados": { nums: [4, 8], plano: "Físico" },
-    "Autonomia de Movimento": { nums: [1, 5], plano: "Físico" },
+    "Ambição Construtiva": { nums: [8, 1], plano: "Físico", sub: "CONEXÃO COM A MATÉRIA" },
+    "Presença de Comando": { nums: [1, 8, 9], plano: "Físico", sub: "CONEXÃO COM A MATÉRIA" },
+    "Solidez de Resultados": { nums: [4, 8], plano: "Físico", sub: "CONEXÃO COM A MATÉRIA" },
+    "Autonomia de Movimento": { nums: [1, 5], plano: "Físico", sub: "CONEXÃO COM A MATÉRIA" },
 
-    // --- EXPANSÃO DO MEGA BANCO DE ATRIBUTOS (PLANO EMOCIONAL) ---
+    // --- PLANO EMOCIONAL ---
+    "Empatia Ressonante": { nums: [2, 6, 9], plano: "Emocional", sub: "CONEXÃO E EMPATIA" },
+    "Diplomacia de Relações": { nums: [2, 6], plano: "Emocional", sub: "CONEXÃO E EMPATIA" },
+    "Sensibilidade Interpessoal": { nums: [2, 3], plano: "Emocional", sub: "CONEXÃO E EMPATIA" },
+    "Espírito Colaborativo": { nums: [2, 6, 9], plano: "Emocional", sub: "CONEXÃO E EMPATIA" },
+    "Acolhimento Humano": { nums: [6, 9], plano: "Emocional", sub: "CONEXÃO E EMPATIA" },
+    "Sintonia Afetiva": { nums: [2, 6], plano: "Emocional", sub: "CONEXÃO E EMPATIA" },
 
-    // CONEXÃO E EMPATIA
-    "Empatia Ressonante": { nums: [2, 6, 9], plano: "Emocional" },
-    "Diplomacia de Relações": { nums: [2, 6], plano: "Emocional" },
-    "Sensibilidade Interpessoal": { nums: [2, 3], plano: "Emocional" },
-    "Espírito Colaborativo": { nums: [2, 6, 9], plano: "Emocional" },
-    "Acolhimento Humano": { nums: [6, 9], plano: "Emocional" },
-    "Sintonia Afetiva": { nums: [2, 6], plano: "Emocional" },
+    "Entusiasmo Vital": { nums: [3, 5], plano: "Emocional", sub: "ALEGRIA E FRUIÇÃO" },
+    "Capacidade de Desfrute": { nums: [3, 6], plano: "Emocional", sub: "ALEGRIA E FRUIÇÃO" },
+    "Otimismo Contagiante": { nums: [3, 9], plano: "Emocional", sub: "ALEGRIA E FRUIÇÃO" },
+    "Fluidez Social": { nums: [3, 2, 5], plano: "Emocional", sub: "ALEGRIA E FRUIÇÃO" },
+    "Leveza de Espírito": { nums: [3, 5], plano: "Emocional", sub: "ALEGRIA E FRUIÇÃO" },
+    "Magnetismo Pessoal": { nums: [3, 1, 8], plano: "Emocional", sub: "ALEGRIA E FRUIÇÃO" },
 
-    // ALEGRIA E FRUIÇÃO (APROVEITAR A VIDA)
-    "Entusiasmo Vital": { nums: [3, 5], plano: "Emocional" },
-    "Capacidade de Desfrute": { nums: [3, 6], plano: "Emocional" },
-    "Otimismo Contagiante": { nums: [3, 9], plano: "Emocional" },
-    "Fluidez Social": { nums: [3, 2, 5], plano: "Emocional" },
-    "Leveza de Espírito": { nums: [3, 5], plano: "Emocional" },
-    "Magnetismo Pessoal": { nums: [3, 1, 8], plano: "Emocional" },
+    "Estabilidade Emocional": { nums: [6, 4], plano: "Emocional", sub: "EQUILÍBRIO E HARMONIA" },
+    "Paz Interior": { nums: [2, 7, 9], plano: "Emocional", sub: "EQUILÍBRIO E HARMONIA" },
+    "Senso de Justiça Afetiva": { nums: [6, 8, 9], plano: "Emocional", sub: "EQUILÍBRIO E HARMONIA" },
+    "Segurança Sentimental": { nums: [6, 2], plano: "Emocional", sub: "EQUILÍBRIO E HARMONIA" },
+    "Resiliência do Coração": { nums: [9, 6], plano: "Emocional", sub: "EQUILÍBRIO E HARMONIA" },
+    "Zelo e Cuidado": { nums: [6, 2], plano: "Emocional", sub: "EQUILÍBRIO E HARMONIA" },
 
-    // EQUILÍBRIO E HARMONIA
-    "Estabilidade Emocional": { nums: [6, 4], plano: "Emocional" },
-    "Paz Interior": { nums: [2, 7, 9], plano: "Emocional" },
-    "Senso de Justiça Afetiva": { nums: [6, 8, 9], plano: "Emocional" },
-    "Segurança Sentimental": { nums: [6, 2], plano: "Emocional" },
-    "Resiliência do Coração": { nums: [9, 6], plano: "Emocional" },
-    "Zelo e Cuidado": { nums: [6, 2], plano: "Emocional" },
+    "Autenticidade Emocional": { nums: [1, 3, 9], plano: "Emocional", sub: "EXPRESSÃO DA ESSÊNCIA" },
+    "Eloquência do Sentir": { nums: [3, 6], plano: "Emocional", sub: "EXPRESSÃO DA ESSÊNCIA" },
+    "Criatividade Afetiva": { nums: [3], plano: "Emocional", sub: "EXPRESSÃO DA ESSÊNCIA" },
+    "Profundidade de Alma": { nums: [7, 9], plano: "Emocional", sub: "EXPRESSÃO DA ESSÊNCIA" },
+    "Comprometimento Ético": { nums: [6, 4, 9], plano: "Emocional", sub: "EXPRESSÃO DA ESSÊNCIA" },
+    "Vocação para o Servir": { nums: [9, 6], plano: "Emocional", sub: "EXPRESSÃO DA ESSÊNCIA" },
 
-    // EXPRESSÃO DA ESSÊNCIA
-    "Autenticidade Emocional": { nums: [1, 3, 9], plano: "Emocional" },
-    "Eloquência do Sentir": { nums: [3, 6], plano: "Emocional" },
-    "Criatividade Afetiva": { nums: [3], plano: "Emocional" },
-    "Profundidade de Alma": { nums: [7, 9], plano: "Emocional" },
-    "Comprometimento Ético": { nums: [6, 4, 9], plano: "Emocional" },
-    "Vocação para o Servir": { nums: [9, 6], plano: "Emocional" },
+    "Espontaneidade": { nums: [3, 5], plano: "Emocional", sub: "VITALIDADE EMOCIONAL" },
+    "Dinamismo Relacional": { nums: [5, 3, 2], plano: "Emocional", sub: "VITALIDADE EMOCIONAL" },
+    "Harmonia Ambiental": { nums: [6, 2], plano: "Emocional", sub: "VITALIDADE EMOCIONAL" },
+    "Idealismo Amoroso": { nums: [9, 6], plano: "Emocional", sub: "VITALIDADE EMOCIONAL" },
+    "Generosidade Prática": { nums: [6, 9], plano: "Emocional", sub: "VITALIDADE EMOCIONAL" },
+    "Inteligência Social": { nums: [2, 3, 5], plano: "Emocional", sub: "VITALIDADE EMOCIONAL" },
 
-    // VITALIDADE EMOCIONAL
-    "Espontaneidade": { nums: [3, 5], plano: "Emocional" },
-    "Dinamismo Relacional": { nums: [5, 3, 2], plano: "Emocional" },
-    "Harmonia Ambiental": { nums: [6, 2], plano: "Emocional" },
-    "Idealismo Amoroso": { nums: [9, 6], plano: "Emocional" },
-    "Generosidade Prática": { nums: [6, 9], plano: "Emocional" },
-    "Inteligência Social": { nums: [2, 3, 5], plano: "Emocional" },
+    // --- PLANO MENTAL ---
+    "Arquitetura de Ideias": { nums: [4, 7, 1], plano: "Mental", sub: "ESTRATÉGIA E VISÃO DE FUTURO" },
+    "Visão Macroestratégica": { nums: [8, 9, 11], plano: "Mental", sub: "ESTRATÉGIA E VISÃO DE FUTURO" },
+    "Planejamento Antecipado": { nums: [4, 8], plano: "Mental", sub: "ESTRATÉGIA E VISÃO DE FUTURO" },
+    "Perspicácia de Negócios": { nums: [8, 5, 1], plano: "Mental", sub: "ESTRATÉGIA E VISÃO DE FUTURO" },
+    "Projeção de Cenários": { nums: [7, 8], plano: "Mental", sub: "ESTRATÉGIA E VISÃO DE FUTURO" },
+    "Inteligência Competitiva": { nums: [1, 8], plano: "Mental", sub: "ESTRATÉGIA E VISÃO DE FUTURO" },
 
-    // --- EXPANSÃO DO MEGA BANCO DE ATRIBUTOS (PLANO MENTAL) ---
+    "Raciocínio Analítico": { nums: [7, 4], plano: "Mental", sub: "LÓGICA E PROCESSAMENTO" },
+    "Estruturação Lógica": { nums: [4, 2], plano: "Mental", sub: "LÓGICA E PROCESSAMENTO" },
+    "Foco e Concentração": { nums: [1, 7, 4], plano: "Mental", sub: "LÓGICA E PROCESSAMENTO" },
+    "Precisão de Dados": { nums: [4, 7], plano: "Mental", sub: "LÓGICA E PROCESSAMENTO" },
+    "Capacidade de Síntese": { nums: [9, 3, 1], plano: "Mental", sub: "LÓGICA E PROCESSAMENTO" },
+    "Agilidade Mental": { nums: [5, 1, 3], plano: "Mental", sub: "LÓGICA E PROCESSAMENTO" },
 
-    // ESTRATÉGIA E VISÃO DE FUTURO
-    "Arquitetura de Ideias": { nums: [4, 7, 1], plano: "Mental" },
-    "Visão Macroestratégica": { nums: [8, 9, 11], plano: "Mental" },
-    "Planejamento Antecipado": { nums: [4, 8], plano: "Mental" },
-    "Perspicácia de Negócios": { nums: [8, 5, 1], plano: "Mental" },
-    "Projeção de Cenários": { nums: [7, 8], plano: "Mental" },
-    "Inteligência Competitiva": { nums: [1, 8], plano: "Mental" },
+    "Autoridade Intelectual": { nums: [1, 7, 8], plano: "Mental", sub: "TOMADA DE DECISÃO" },
+    "Julgamento Imparcial": { nums: [8, 4, 9], plano: "Mental", sub: "TOMADA DE DECISÃO" },
+    "Poder de Argumentação": { nums: [3, 1, 5], plano: "Mental", sub: "TOMADA DE DECISÃO" },
+    "Decisão sob Pressão": { nums: [1, 8, 9], plano: "Mental", sub: "TOMADA DE DECISÃO" },
+    "Pragmatismo Intelectual": { nums: [4, 8], plano: "Mental", sub: "TOMADA DE DECISÃO" },
+    "Independência de Pensamento": { nums: [1, 7, 5], plano: "Mental", sub: "TOMADA DE DECISÃO" },
 
-    // LÓGICA E PROCESSAMENTO
-    "Raciocínio Analítico": { nums: [7, 4], plano: "Mental" },
-    "Estruturação Lógica": { nums: [4, 2], plano: "Mental" },
-    "Foco e Concentração": { nums: [1, 7, 4], plano: "Mental" },
-    "Precisão de Dados": { nums: [4, 7], plano: "Mental" },
-    "Capacidade de Síntese": { nums: [9, 3, 1], plano: "Mental" },
-    "Agilidade Mental": { nums: [5, 1, 3], plano: "Mental" },
+    "Curiosidade Investigativa": { nums: [7, 5], plano: "Mental", sub: "APRENDIZADO E ESPECIALIZAÇÃO" },
+    "Domínio Técnico": { nums: [4, 7, 8], plano: "Mental", sub: "APRENDIZADO E ESPECIALIZAÇÃO" },
+    "Apreensão de Sistemas": { nums: [4, 11, 22], plano: "Mental", sub: "APRENDIZADO E ESPECIALIZAÇÃO" },
+    "Mentalidade Inovadora": { nums: [1, 5, 11], plano: "Mental", sub: "APRENDIZADO E ESPECIALIZAÇÃO" },
+    "Memória Estruturada": { nums: [4, 7], plano: "Mental", sub: "APRENDIZADO E ESPECIALIZAÇÃO" },
+    "Filtro de Relevância": { nums: [8, 7, 4], plano: "Mental", sub: "APRENDIZADO E ESPECIALIZAÇÃO" },
 
-    // TOMADA DE DECISÃO
-    "Autoridade Intelectual": { nums: [1, 7, 8], plano: "Mental" },
-    "Julgamento Imparcial": { nums: [8, 4, 9], plano: "Mental" },
-    "Poder de Argumentação": { nums: [3, 1, 5], plano: "Mental" },
-    "Decisão sob Pressão": { nums: [1, 8, 9], plano: "Mental" },
-    "Pragmatismo Intelectual": { nums: [4, 8], plano: "Mental" },
-    "Independência de Pensamento": { nums: [1, 7, 5], plano: "Mental" },
+    "Solução de Complexidades": { nums: [7, 9, 22], plano: "Mental", sub: "RESOLUÇÃO DE PROBLEMAS" },
+    "Engenharia de Soluções": { nums: [4, 8, 1], plano: "Mental", sub: "RESOLUÇÃO DE PROBLEMAS" },
+    "Flexibilidade Cognitiva": { nums: [5, 3], plano: "Mental", sub: "RESOLUÇÃO DE PROBLEMAS" },
+    "Discernimento Crítico": { nums: [7, 8], plano: "Mental", sub: "RESOLUÇÃO DE PROBLEMAS" },
+    "Liderança de Pensamento": { nums: [1, 11, 8], plano: "Mental", sub: "RESOLUÇÃO DE PROBLEMAS" },
+    "Gestão de Prioridades": { nums: [1, 4, 8], plano: "Mental", sub: "RESOLUÇÃO DE PROBLEMAS" },
 
-    // APRENDIZADO E ESPECIALIZAÇÃO
-    "Curiosidade Investigativa": { nums: [7, 5], plano: "Mental" },
-    "Domínio Técnico": { nums: [4, 7, 8], plano: "Mental" },
-    "Apreensão de Sistemas": { nums: [4, 11, 22], plano: "Mental" },
-    "Mentalidade Inovadora": { nums: [1, 5, 11], plano: "Mental" },
-    "Memória Estruturada": { nums: [4, 7], plano: "Mental" },
-    "Filtro de Relevância": { nums: [8, 7, 4], plano: "Mental" },
+    // --- PLANO INTUITIVO ---
+    "Percepção Extrassensorial": { nums: [7, 9, 11], plano: "Intuitivo", sub: "SABEDORIA E CONHECIMENTO INTERNO" },
+    "Discernimento Interior": { nums: [7, 9], plano: "Intuitivo", sub: "SABEDORIA E CONHECIMENTO INTERNO" },
+    "Profundidade Analítica": { nums: [7], plano: "Intuitivo", sub: "SABEDORIA E CONHECIMENTO INTERNO" },
+    "Sabedoria Ancestral": { nums: [9, 7], plano: "Intuitivo", sub: "SABEDORIA E CONHECIMENTO INTERNO" },
+    "Conexão com o Invisível": { nums: [7, 11], plano: "Intuitivo", sub: "SABEDORIA E CONHECIMENTO INTERNO" },
+    "Busca pela Verdade": { nums: [7, 9], plano: "Intuitivo", sub: "SABEDORIA E CONHECIMENTO INTERNO" },
 
-    // RESOLUÇÃO DE PROBLEMAS
-    "Solução de Complexidades": { nums: [7, 9, 22], plano: "Mental" },
-    "Engenharia de Soluções": { nums: [4, 8, 1], plano: "Mental" },
-    "Flexibilidade Cognitiva": { nums: [5, 3], plano: "Mental" },
-    "Discernimento Crítico": { nums: [7, 8], plano: "Mental" },
-    "Liderança de Pensamento": { nums: [1, 11, 8], plano: "Mental" },
-    "Gestão de Prioridades": { nums: [1, 4, 8], plano: "Mental" },
+    "Integridade Inabalável": { nums: [4, 9, 7], plano: "Intuitivo", sub: "ÉTICA E VALORES MORAIS" },
+    "Nobreza de Caráter": { nums: [6, 9], plano: "Intuitivo", sub: "ÉTICA E VALORES MORAIS" },
+    "Fidelidade aos Princípios": { nums: [4, 7], plano: "Intuitivo", sub: "ÉTICA E VALORES MORAIS" },
+    "Senso de Justiça Universal": { nums: [9, 8], plano: "Intuitivo", sub: "ÉTICA E VALORES MORAIS" },
+    "Compromisso Espiritual": { nums: [7, 9, 11], plano: "Intuitivo", sub: "ÉTICA E VALORES MORAIS" },
+    "Honradez Intuitiva": { nums: [6, 9], plano: "Intuitivo", sub: "ÉTICA E VALORES MORAIS" },
 
-    // --- EXPANSÃO DO MEGA BANCO DE ATRIBUTOS (PLANO INTUITIVO) ---
+    "Voz Interior": { nums: [7, 2], plano: "Intuitivo", sub: "INTUIÇÃO E GUIANÇA" },
+    "Clareza de Propósito": { nums: [1, 7, 9], plano: "Intuitivo", sub: "INTUIÇÃO E GUIANÇA" },
+    "Direcionamento de Alma": { nums: [9, 11], plano: "Intuitivo", sub: "INTUIÇÃO E GUIANÇA" },
+    "Sensitividade Aguda": { nums: [2, 7, 11], plano: "Intuitivo", sub: "INTUIÇÃO E GUIANÇA" },
+    "Pressentimento Estratégico": { nums: [7, 8], plano: "Intuitivo", sub: "INTUIÇÃO E GUIANÇA" },
+    "Confiança no Fluxo": { nums: [5, 9], plano: "Intuitivo", sub: "INTUIÇÃO E GUIANÇA" },
 
-    // SABEDORIA E CONHECIMENTO INTERNO
-    "Percepção Extrassensorial": { nums: [7, 9, 11], plano: "Intuitivo" },
-    "Discernimento Interior": { nums: [7, 9], plano: "Intuitivo" },
-    "Profundidade Analítica": { nums: [7], plano: "Intuitivo" },
-    "Sabedoria Ancestral": { nums: [9, 7], plano: "Intuitivo" },
-    "Conexão com o Invisível": { nums: [7, 11], plano: "Intuitivo" },
-    "Busca pela Verdade": { nums: [7, 9], plano: "Intuitivo" },
+    "Elevação de Consciência": { nums: [7, 9, 11], plano: "Intuitivo", sub: "TRANSCENDÊNCIA E EVOLUÇÃO" },
+    "Desapego Evolutivo": { nums: [9, 5], plano: "Intuitivo", sub: "TRANSCENDÊNCIA E EVOLUÇÃO" },
+    "Magnetismo Espiritual": { nums: [11, 7, 3], plano: "Intuitivo", sub: "TRANSCENDÊNCIA E EVOLUÇÃO" },
+    "Paz Contemplativa": { nums: [7, 2, 6], plano: "Intuitivo", sub: "TRANSCENDÊNCIA E EVOLUÇÃO" },
+    "Visão Holística": { nums: [9, 7], plano: "Intuitivo", sub: "TRANSCENDÊNCIA E EVOLUÇÃO" },
+    "Harmonia com o Todo": { nums: [9, 6, 2], plano: "Intuitivo", sub: "TRANSCENDÊNCIA E EVOLUÇÃO" },
 
-    // ÉTICA E VALORES MORAIS
-    "Integridade Inabalável": { nums: [4, 9, 7], plano: "Intuitivo" },
-    "Nobreza de Caráter": { nums: [6, 9], plano: "Intuitivo" },
-    "Fidelidade aos Princípios": { nums: [4, 7], plano: "Intuitivo" },
-    "Senso de Justiça Universal": { nums: [9, 8], plano: "Intuitivo" },
-    "Compromisso Espiritual": { nums: [7, 9, 11], plano: "Intuitivo" },
-    "Honradez Intuitiva": { nums: [6, 9], plano: "Intuitivo" },
+    "Fortaleza Interna": { nums: [9, 4, 7], plano: "Intuitivo", sub: "RESILIÊNCIA DA ALMA" },
+    "Serenidade sob Caos": { nums: [7, 9], plano: "Intuitivo", sub: "RESILIÊNCIA DA ALMA" },
+    "Fé Inata": { nums: [7, 9, 11], plano: "Intuitivo", sub: "RESILIÊNCIA DA ALMA" },
+    "Autossuficiência Espiritual": { nums: [7, 1], plano: "Intuitivo", sub: "RESILIÊNCIA DA ALMA" },
+    "Equanimidade": { nums: [9, 6, 2], plano: "Intuitivo", sub: "RESILIÊNCIA DA ALMA" },
+    "Sabedoria do Silêncio": { nums: [7], plano: "Intuitivo", sub: "RESILIÊNCIA DA ALMA" }
 
-    // INTUIÇÃO E GUIANÇA
-    "Voz Interior": { nums: [7, 2], plano: "Intuitivo" },
-    "Clareza de Propósito": { nums: [1, 7, 9], plano: "Intuitivo" },
-    "Direcionamento de Alma": { nums: [9, 11], plano: "Intuitivo" },
-    "Sensitividade Aguda": { nums: [2, 7, 11], plano: "Intuitivo" },
-    "Pressentimento Estratégico": { nums: [7, 8], plano: "Intuitivo" },
-    "Confiança no Fluxo": { nums: [5, 9], plano: "Intuitivo" },
-
-    // TRANSCENDÊNCIA E EVOLUÇÃO
-    "Elevação de Consciência": { nums: [7, 9, 11], plano: "Intuitivo" },
-    "Desapego Evolutivo": { nums: [9, 5], plano: "Intuitivo" },
-    "Magnetismo Espiritual": { nums: [11, 7, 3], plano: "Intuitivo" },
-    "Paz Contemplativa": { nums: [7, 2, 6], plano: "Intuitivo" },
-    "Visão Holística": { nums: [9, 7], plano: "Intuitivo" },
-    "Harmonia com o Todo": { nums: [9, 6, 2], plano: "Intuitivo" },
-
-    // RESILIÊNCIA DA ALMA
-    "Fortaleza Interna": { nums: [9, 4, 7], plano: "Intuitivo" },
-    "Serenidade sob Caos": { nums: [7, 9], plano: "Intuitivo" },
-    "Fé Inata": { nums: [7, 9, 11], plano: "Intuitivo" },
-    "Autossuficiência Espiritual": { nums: [7, 1], plano: "Intuitivo" },
-    "Equanimidade": { nums: [9, 6, 2], plano: "Intuitivo" },
-    "Sabedoria do Silêncio": { nums: [7], plano: "Intuitivo" }
 
     };
 
@@ -589,17 +566,16 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Intuitivo": reduzir(dadosNaturais.soma.intuitivo)
     };
 
-    const legendasPersonalizadas = {
+    const legendasPlanos = {
         "Físico": "Potencial de Realização e Ação",
         "Emocional": "Essência e Capacidade de Aproveitar a Vida",
         "Intuitivo": "Valores Internos e Sabedoria",
         "Mental": "Estratégia, Lógica e Decisão"
     };
 
+    // Processa as notas
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
-        
-        // Passamos a vibração reduzida do plano correspondente para dentro do cálculo
         let vibraDoPlano = vNaturais[dados.plano];
         let nota = calcularIntensidadeAtributo(dados.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibraDoPlano);
 
@@ -607,34 +583,51 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             nome: nomeAtributo,
             nota: nota,
             plano: dados.plano,
+            sub: dados.sub, // Captura a legenda da subcategoria
             percentual: (nota * 10).toFixed(1)
         });
     }
 
-    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Resultado dos Potenciais </h2>`;
+    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Resultado dos Potenciais</h2>`;
 
     ["Físico", "Emocional", "Intuitivo", "Mental"].forEach(p => {
-        const itensPlano = rankingGeral.filter(i => i.plano === p).sort((a,b) => b.nota - a.nota);
-        
         htmlFinal += `
-            <div class="secao-plano" style="margin-bottom: 30px; background:#fff; padding:20px; border-radius:8px; border: 1px solid #eee;">
-                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 15px;">
-                    <h3 style="color:#827108; text-transform: uppercase; font-size: 16px; margin: 0;">
-                        ${legendasPersonalizadas[p]}
+            <div class="secao-plano" style="margin-bottom: 40px; background:#fff; padding:20px; border-radius:8px; border: 2px solid #82710822;">
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #827108; padding-bottom: 10px; margin-bottom: 20px;">
+                    <h3 style="color:#827108; text-transform: uppercase; font-size: 18px; margin: 0; font-weight:bold;">
+                        ${legendasPlanos[p]}
                     </h3>
-                    <span style="background: var(--dark); color: var(--gold); padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: bold; border: 1px solid var(--gold);">
-                        PLANO ${p.toUpperCase()}: ${vNaturais[p]}
+                    <span style="background: #827108; color: #fff; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: bold;">
+                        VIBRAÇÃO DO PLANO: ${vNaturais[p]}
                     </span>
                 </div>
-                <div style="margin-top: 15px;">
         `;
 
-        itensPlano.forEach(item => {
-            let corBarra = item.nota >= 7 ? "#2e7d32" : (item.nota >= 5.2 ? "#827108" : "#cc0000");
-            htmlFinal += montarBarraGrafico(item, corBarra);
+        // Filtra os itens deste plano
+        const itensDestePlano = rankingGeral.filter(i => i.plano === p);
+        
+        // Pega as subcategorias únicas presentes neste plano (ex: "EXECUÇÃO E FORÇA BRUTA")
+        const subcategorias = [...new Set(itensDestePlano.map(i => i.sub))];
+
+        subcategorias.forEach(sub => {
+            htmlFinal += `
+                <div style="margin: 25px 0 10px 0;">
+                    <h4 style="color:#555; font-size: 13px; text-transform: uppercase; border-left: 4px solid #827108; padding-left: 10px; margin-bottom: 15px; letter-spacing: 1px;">
+                        ${sub}
+                    </h4>
+            `;
+
+            const itensDaSub = itensDestePlano.filter(i => i.sub === sub).sort((a,b) => b.nota - a.nota);
+            
+            itensDaSub.forEach(item => {
+                let corBarra = item.nota >= 7 ? "#2e7d32" : (item.nota >= 5.2 ? "#827108" : "#cc0000");
+                htmlFinal += montarBarraGrafico(item, corBarra);
+            });
+
+            htmlFinal += `</div>`; // Fecha bloco da subcategoria
         });
 
-        htmlFinal += `</div></div>`;
+        htmlFinal += `</div>`; // Fecha bloco do plano
     });
 
     return htmlFinal;
