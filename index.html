@@ -964,21 +964,23 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     // TRÂNSITO (Corrigido o sumiço)
     const vTransito = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
 // Primeiro, definimos a vigência do ano civil (Janeiro a Dezembro)
-const anoAtualTrânsito = new Date().getFullYear();
-const vigenciaCivil = `01/01/${anoAtualTrânsito} a 31/12/${anoAtualTrânsito}`;
+// 1. CALCULO DA VIGÊNCIA (Baseado no aniversário)
+const dataPartes = dataRaw.split('-'); // Pega a data de nascimento AAAA-MM-DD
+const diaMesNasc = ${dataPartes[2]}/${dataPartes[1]};
+const anoReferencia = new Date().getFullYear();
+
+// Se o Status/Trânsito é para o momento atual do usuário:
+const vigenciaAniversario = ${diaMesNasc}/${anoReferencia} a ${diaMesNasc}/${anoReferencia + 1};
 
 // Agora montamos o HTML do Trânsito
 html += `
-<div class="secao-card quebra-pagina">
+<div class="secao-card">
     <h2 class="titulo-topico">Número de Trânsito</h2>
-    
-    <div class="resultado-bloco" id="bloco-transito">
-        <h3>Seu Trânsito Atual: <span class="numero-destaque">${res.numeroTransito}</span></h3>
-        
-        <p class="vigencia-texto" style="color: #555; font-weight: 600; margin-bottom: 15px; font-size: 0.9em;">
-            Vigência: ${vigenciaCivil}
+    <div class="resultado-bloco">
+        <h3>Seu Trânsito: <span class="numero-destaque">${res.numeroTransito}</span></h3>
+        <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 10px;">
+            Vigência: ${vigenciaAniversario}
         </p>
-
         <div class="texto-res">${aplicarFiltroTexto(textos.transito[res.numeroTransito])}</div>
     </div>
 </div>
