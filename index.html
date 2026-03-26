@@ -961,25 +961,32 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         }
     }
 
-// --- BLOCO DE TRÂNSITO (Corrigido para usar periodoVigente) ---
+// --- BLOCO DE TRÂNSITO ATUALIZADO ---
 const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
 
+// Texto que você pediu (duas linhas sobre a conexão com os planos)
+const novoTextoIntroducao = "O Número de Trânsito representa a síntese vibracional do seu momento atual, unificando as energias dos seus planos Físico, Mental, Emocional e Intuitivo em uma frequência única que rege este ciclo.";
+
 html += `
-<div class="secao-card">
+<div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 30px;">
     <h2 class="titulo-topico">Número de Trânsito</h2>
     
     <div class="resultado-bloco">
-        <div class="intro-texto" style="margin-bottom:15px; font-style:italic; color:#555;">
-            ${aplicarFiltroTexto(introducoes.Transito || "")}
+        <div class="texto-intro" style="margin-bottom: 20px; font-style: italic; color: #444; line-height: 1.6;">
+            ${novoTextoIntroducao}
         </div>
 
-        <h3>Seu Trânsito Atual: <span class="numero-destaque">${vTransitoCalculado}</span></h3>
+        <h3 style="display: flex; align-items: center; gap: 10px;">
+            Seu Trânsito Atual: <span class="numero-destaque" style="color: var(--gold); font-size: 1.5em;">${vTransitoCalculado}</span>
+        </h3>
         
         <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
-            Vigência: ${periodoVigente}
+            VIGÊNCIA: ${periodoVigente}
         </p>
 
-        <div class="texto-res">${aplicarFiltroTexto(TextosTransito[vTransitoCalculado] || "")}</div>
+        <div class="texto-res" style="margin-top: 15px;">
+            ${aplicarFiltroTexto(TextosTransito[vTransitoCalculado] || "")}
+        </div>
     </div>
 </div>
 `;
