@@ -1,6 +1,6 @@
 const textos = {
 
-introducaoGeralPortal: `
+introducoesgeralPortal: `
 <p>A **Numerologia** é uma das linguagens mais antigas e profundas da humanidade, remontando às escolas de mistérios do Egito, da Caldeia e, fundamentalmente, aos ensinamentos de Pitágoras na Grécia Antiga. Para os antigos sábios, os números não eram apenas símbolos de quantidade, mas frequências vibracionais que compõem o tecido do universo. Eles acreditavam que "Tudo é Número", e que ao decodificar os códigos numéricos presentes no nome e na data de nascimento de um indivíduo, é possível acessar o mapa original da sua alma.</p>
 
 <p>Ao longo dos séculos, essa ciência evoluiu para se tornar um guia prático de navegação humana. Por que usar a Numerologia hoje? Porque ela oferece uma maneira clara e objetiva de descobrir camadas inéditas sobre si mesmo, permitindo que você se enxergue por prismas que a rotina muitas vezes oculta. É uma ferramenta de espelhamento que revela como o mundo te percebe e como suas potências internas podem ser melhor aproveitadas para gerar resultados reais na matéria.</p>
