@@ -1469,25 +1469,33 @@ while (idadeAcumulada < 100) {
 
     const txtPot = (textos.Potencias && textos.Potencias[p]) ? textos.Potencias[p] : `Vibração da Potência ${p} em análise.`;
 
-    htmlPotenciasCalculadas += `
-        <div class="bloco-potencia" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                <h3 style="color: #827108; font-size: 19px;">✡︎ Potência ${p}</h3>
-                <span style="color: #b8860b; font-weight: bold; font-size: 13px;">
-                   🔍 VIGÊNCIA: de ${idadeInicio} a ${idadeFim} anos de idade </span><br>
-                   
-            <span style="color: #b8860b; font-weight: bold; font-size: 13px;"> 📅 PERÍODO: do ano ${anoInicio} até ${anoFim}
-                </span>
-            </div>
-            <div class="texto-res" style="color: #333; font-size: 15px;">${aplicarFiltroTexto(txtPot)}</div>
+htmlPotenciasCalculadas += `
+    <div class="bloco-potencia" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+        <div style="display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; text-align: left;">
+            
+            <h3 style="color: #827108; font-size: 19px; margin: 0;">✡︎ Potência ${p}</h3>
+            
+            <span style="color: #b8860b; font-weight: bold; font-size: 13px;">
+               🔍 VIGÊNCIA: de ${idadeInicio} a ${idadeFim} anos de idade
+            </span>
+            
+            <span style="color: #b8860b; font-weight: bold; font-size: 13px;"> 
+               📅 PERÍODO: do ano ${anoInicio} até ${anoFim}
+            </span>
+            
         </div>
-    `;
-
+        
+        <div class="texto-res" style="color: #333; font-size: 15px; text-align: left;">
+            ${aplicarFiltroTexto(txtPot)}
+        </div>
+    </div>
+`;
+    
+    
     // Atualiza para o próximo passo
     idadeAcumulada = idadeFim;
     indiceLoop++;
-}
-            
+}           
 // --- TRECHO DAS CAIXINHAS DOURADAS (VITRINE) ---
 let htmlCaixinhas = `<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">`;
 potenciasTopo.forEach(p => {
