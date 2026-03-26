@@ -1422,45 +1422,39 @@ html += `
 html += montarHtmlPlanosMomento(nomeRaw, dataRaw); 
 
 
-// 1. GARANTIR A CAPTURA DA DATA
-// Tenta pegar do input se a variável global não existir
-const campoData = document.getElementById('dataNascimento').value; 
-let diaMêsVigencia = "00/00";
+// 1. CAPTURA SEGURA DA DATA (Evita o erro de 'null')
+const campoDataElemento = document.getElementById('dataNascimento');
+let vigenciaFinal = "Data não disponível";
 
-if (campoData) {
-    const partes = campoData.split('-'); // O input date retorna AAAA-MM-DD
-    // partes[0] = Ano, partes[1] = Mês, partes[2] = Dia
-    diaMêsVigencia = `${partes[2]}/${partes[1]}`;
+if (campoDataElemento && campoDataElemento.value) {
+    const partes = campoDataElemento.value.split('-'); 
+    const diaMesVigencia = `${partes[2]}/${partes[1]}`;
+    const anoAtualVig = new Date().getFullYear();
+    vigenciaFinal = `${diaMesVigencia}/${anoAtualVig} a ${diaMesNasc}/${anoAtualVig + 1}`;
 }
 
-const anoAtualVig = new Date().getFullYear();
+// 2. BUSCA A INTRODUÇÃO DO ANO PESSOAL (Ajuste conforme seu objeto de introduções)
+const introAnoPessoal = (typeof introducoes !== 'undefined' && introducoes.AnoPessoal) ? introducoes.AnoPessoal : "";
 
-// 2. CRIAR A STRING FINAL
-const vigenciaFinal = `${diaMêsVigencia}/${anoAtualVig} a ${diaMêsVigencia}/${anoAtualVig + 1}`;
-// INSERIR ANO PESSOAL AQUI (MANUALMENTE NO FINAL)
+// 3. INSERIR ANO PESSOAL NO HTML COM INTRODUÇÃO
 html += `
 <div class="secao-card quebra-pagina">
     <h2 class="titulo-topico">${nomesExibicao.anoPessoal}</h2>
     
     <div class="resultado-bloco" id="bloco-ano-pessoal">
-        <h3>Ano Pessoal: <span id="num-ano-pessoal">${res.anoPessoal}</span></h3>
+        <div class="texto-intro" style="margin-bottom: 20px; font-style: italic; color: #444;">
+            ${aplicarFiltroTexto(introAnoPessoal)}
+        </div>
+
+        <h3>Ano Pessoal: <span id="num-ano-pessoal" class="numero-destaque">${res.anoPessoal}</span></h3>
         
         <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
-            Vigência: ${dataInicioAP} a ${dataFimAP}
+            Vigência: ${vigenciaFinal}
         </p>
 
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
     </div>
 </div>
-`;
-            
-// Capa de transição para a Pirâmide da Vida
-html += `
-    <div class="capa-transicao">
-        <p>A MATRIZ COMPLETA</p>
-        <h2>Pirâmide da Vida</h2>
-        <p>O mapa arquetípico da sua existência: das frequências do seu nascimento ao seu último dia de vida.</p>
-    </div>
 `;
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
