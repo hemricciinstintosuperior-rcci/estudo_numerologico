@@ -582,32 +582,29 @@ const megaBancoAtributos = {
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
     
+    // 1. Chamada dos dados originais
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
 
-    // --- DIAGNÓSTICO: Isso vai mostrar no seu console a estrutura real dos dados ---
-    console.log("CONTEÚDO DE DADOS NATURAIS:", dadosNaturais);
+    // Diagnóstico interno (pode manter ou remover depois)
+    console.log("DADOS RECEBIDOS:", dadosNaturais);
 
-    // Ajuste automático de segurança: tenta ler plural ou singular
-    const somaDados = dadosNaturais.soma || dadosNaturais.somas || {};
-    const qtdDados = dadosNaturais.quantidade || dadosNaturais.quantidades || {};
-
-    if (!somaDados || !qtdDados) {
-        console.error("ERRO CRÍTICO: calcularDadosPlanos retornou um formato desconhecido.");
-        return `<p style="color:red; text-align:center;">Erro de estrutura nos Planos. Verifique o Console (F12).</p>`;
-    }
+    // 2. Mapeamento correto baseado no seu console.log
+    // Usamos 'soma' e 'contPerfil' (que é onde estão as quantidades no seu sistema)
+    const somaDados = dadosNaturais.soma || {};
+    const qtdDados = dadosNaturais.contPerfil || {}; 
 
     const vNaturais = {
-        "Físico": reduzir(somaDados.fisico || somaDados.physical || 0),
+        "Físico": reduzir(somaDados.fisico || 0),
         "Mental": reduzir(somaDados.mental || 0),
-        "Emocional": reduzir(somaDados.emocional || somaDados.emotional || 0),
-        "Intuitivo": reduzir(somaDados.intuitivo || somaDados.intuitive || 0)
+        "Emocional": reduzir(somaDados.emocional || 0),
+        "Intuitivo": reduzir(somaDados.intuitivo || 0)
     };
 
     const qtdPorPlano = {
-        "Físico": qtdDados.fisico || qtdDados.physical || 0,
+        "Físico": qtdDados.fisico || 0,
         "Mental": qtdDados.mental || 0,
-        "Emocional": qtdDados.emocional || qtdDados.emotional || 0,
-        "Intuitivo": qtdDados.intuitivo || qtdDados.intuitive || 0
+        "Emocional": qtdDados.emocional || 0,
+        "Intuitivo": qtdDados.intuitivo || 0
     };
 
     const legendasPlanos = {
@@ -617,12 +614,13 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Mental": "Plano Mental"
     };
 
-    // O restante do loop continua igual...
+    // 3. Processamento dos Atributos
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
         let vibraDoPlano = vNaturais[dados.plano];
         let contagemLetras = qtdPorPlano[dados.plano];
 
+        // Lógica de Intensidade: Fraco (0-1), Médio (2-3), Forte (4+)
         let statusPlano = "medio";
         if (contagemLetras <= 1) statusPlano = "fraco";
         else if (contagemLetras >= 4) statusPlano = "forte";
@@ -641,6 +639,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         });
     }
 
+    // 4. Geração do HTML (Visual)
     let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Resultado dos Potenciais</h2>`;
 
     ["Físico", "Emocional", "Intuitivo", "Mental"].forEach(p => {
