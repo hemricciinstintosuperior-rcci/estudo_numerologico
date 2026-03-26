@@ -238,27 +238,52 @@ function topo(base) {
     return arcanos;
 }        
 
-function detectarNegativas(linhas){
-    let pos = []; let nums = [];
+function detectarNegativas(linhas) {
+    let detalhes = [];
+    let pos = [];
+    let numsSet = new Set();
+
     linhas.forEach((linha, i) => {
-        let cont = 1;
-        for(let j=1; j<linha.length; j++){
-            if(linha[j] === linha[j-1]) cont++;
-            else {
-                if(cont >= 3){ 
-                    nums.push(linha[j-1]);
-                    for(let k=j-cont; k<j; k++) pos.push({l:i, c:k});
-                }
-                cont = 1;
-            }
-        }
-        if(cont >= 3){ 
-            nums.push(linha[linha.length-1]);
-            for(let k=linha.length-cont; k<linha.length; k++) pos.push({l:i, c:linha.length-1-k});
+        let j = 0;
+        while (j < linha.length) {
+            let num = linha[j];
+            let cont = 1;
+            while (j + cont < linha.length && linha[j + cont] === num) { cont++; }
+
+            if (cont >= 3) {
+                numsSet.add(num);
+                // Calcula o deslocamento (offset) para alinhar com as colunas do topo
+                let offset = Math.floor(i / 2); 
+                detalhes.push({
+                    numero: num,
+                    colunaInicio: j + offset,
+                    repeticoes: cont,
+                    linha: i
+                });
+                for (let k = j; k < j + cont; k++) pos.push({ l: i, c: k });
+                j += cont;
+            } else { j++; }
         }
     });
-    return { pos, nums: [...new Set(nums)] };
+    return { pos, nums: [...numsSet], detalhes };
 }
+
+function calcularDatasVigenciaNegativa(dataNascStr, idadeInicio, duracaoTotal) {
+    let partes = dataNascStr.split("/");
+    // Assume formato DD/MM/AAAA do seu input atual
+    let dataBase = new Date(parseInt(partes[2]), parseInt(partes[1]) - 1, parseInt(partes[0]));
+
+    let dataIni = new Date(dataBase);
+    dataIni.setFullYear(dataIni.getFullYear() + idadeInicio);
+    
+    let dataFim = new Date(dataIni);
+    dataFim.setFullYear(dataFim.getFullYear() + duracaoTotal);
+
+    return {
+        ini: dataIni.toLocaleDateString('pt-BR'),
+        fim: dataFim.toLocaleDateString('pt-BR')
+    };
+}        
 
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
@@ -1369,10 +1394,37 @@ htmlPiramide += `</div>
     
     <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
 
-if(dadosNegativas.nums.length > 0){
-    htmlPiramide += `<h3 style="color:red; margin-top:20px;">Sequências de Vulnerabilidade</h3>`;
-    dadosNegativas.nums.forEach(n => {
-        htmlPiramide += `<p style="color:red"><strong>Bloqueio ${n}:</strong> ${aplicarFiltroTexto(textos.SeqNegVida[n])}</p>`; // AJUSTADO AQUI
+if(dadosNegativas.detalhes.length > 0){
+    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px;">⚠️ Sequências de Vulnerabilidade (Vigência)</h3>`;
+    
+    const arcanosTopo = topo(piramideVida[0]);
+
+    dadosNegativas.detalhes.forEach(neg => {
+        let idadeInicio = 0;
+        let duracaoTotal = 0;
+
+        // 1. Soma as durações de todas as colunas ANTES da sequência começar
+        for (let a = 0; a < neg.colunaInicio; a++) {
+            let arcRef = arcanosTopo[a] || arcanosTopo[arcanosTopo.length - 1];
+            idadeInicio += parseInt(arcRef.toString()[0]) || 1;
+        }
+
+        // 2. Soma a duração das colunas que a sequência OCUPA na pirâmide
+        for (let b = 0; b < neg.repeticoes; b++) {
+            let colReal = neg.colunaInicio + b;
+            let arcAtual = arcanosTopo[colReal] || arcanosTopo[arcanosTopo.length - 1];
+            duracaoTotal += parseInt(arcAtual.toString()[0]) || 1;
+        }
+
+        const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
+
+        htmlPiramide += `
+            <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: left;">
+                <b style="color:red; font-size: 18px;">Bloqueio ${neg.numero}</b><br>
+                <span style="color:#111; font-weight: bold;">📅 Período: de ${datas.ini} até ${datas.fim}</span><br>
+                <span style="color:#d32f2f; font-weight: bold;">Vigência: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos)</span>
+                <p style="margin-top: 8px; color: #333;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
+            </div>`;
     });
 }
 htmlPiramide += `</div>`;
