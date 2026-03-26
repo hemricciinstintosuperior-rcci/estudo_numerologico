@@ -582,22 +582,28 @@ const megaBancoAtributos = {
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
     
-    // Obtém os dados dos planos (Somas e Quantidades)
+    // 1. Chamada dos dados (com proteção para não quebrar)
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
-    
+
+    // Se a função calcularDadosPlanos falhar ou retornar algo estranho, 
+    // criamos um objeto padrão para evitar o erro de "undefined"
+    if (!dadosNaturais || !dadosNaturais.soma || !dadosNaturais.quantidade) {
+        console.error("Erro: A função calcularDadosPlanos não retornou os dados esperados.");
+        return `<p style="color:red; text-align:center;">Erro ao processar os Planos de Expressão. Verifique a função calcularDadosPlanos.</p>`;
+    }
+
     const vNaturais = {
-        "Físico": reduzir(dadosNaturais.soma.fisico),
-        "Mental": reduzir(dadosNaturais.soma.mental),
-        "Emocional": reduzir(dadosNaturais.soma.emocional),
-        "Intuitivo": reduzir(dadosNaturais.soma.intuitivo)
+        "Físico": reduzir(dadosNaturais.soma.fisico || 0),
+        "Mental": reduzir(dadosNaturais.soma.mental || 0),
+        "Emocional": reduzir(dadosNaturais.soma.emocional || 0),
+        "Intuitivo": reduzir(dadosNaturais.soma.intuitivo || 0)
     };
 
-    // Quantidade de números em cada plano para definir Força/Fraqueza
     const qtdPorPlano = {
-        "Físico": dadosNaturais.quantidade.fisico,
-        "Mental": dadosNaturais.quantidade.mental,
-        "Emocional": dadosNaturais.quantidade.emocional,
-        "Intuitivo": dadosNaturais.quantidade.intuitivo
+        "Físico": dadosNaturais.quantidade.fisico || 0,
+        "Mental": dadosNaturais.quantidade.mental || 0,
+        "Emocional": dadosNaturais.quantidade.emocional || 0,
+        "Intuitivo": dadosNaturais.quantidade.intuitivo || 0
     };
 
     const legendasPlanos = {
@@ -607,14 +613,11 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Mental": "Plano Mental"
     };
 
-    // Processa cada atributo do Mega Banco
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
         let vibraDoPlano = vNaturais[dados.plano];
         let contagemLetras = qtdPorPlano[dados.plano];
 
-        // Determina o Status do Plano:
-        // Fraco: 0 ou 1 letra | Médio: 2 ou 3 letras | Forte: 4 ou mais
         let statusPlano = "medio";
         if (contagemLetras <= 1) statusPlano = "fraco";
         else if (contagemLetras >= 4) statusPlano = "forte";
