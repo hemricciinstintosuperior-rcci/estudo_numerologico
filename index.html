@@ -386,7 +386,7 @@ function aplicarFiltroTexto(texto) {
         
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano) {
     // Nota base baseada no comprimento do nome
-    let nota = 4.5 + (nomeRaw.length % 3) * 0.17; 
+    let nota = 4.5 + (nomeRaw.length % 3) * 0.13; 
     
     // PILARES DE LUZ (DNA POSITIVO)
     let dnaPositivo = [
@@ -416,12 +416,12 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
         if (n === vibPlano && statusPlano === "forte") {
             multiplicador = 3.8; 
         } else if (n === vibPlano && statusPlano === "medio") {
-            multiplicador = 3.2;
+            multiplicador = 2.3;
         }
         
         // Cálculo final da nota do atributo
         nota += (dnaPositivo.filter(num => num === n).length * multiplicador); 
-        nota -= (sombras.filter(num => num === n).length * 1.45); // Peso da sombra levemente aumentado
+        nota -= (sombras.filter(num => num === n).length * 1.87); // Peso da sombra levemente aumentado
         
         if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
             nota -= 1.47;
@@ -429,7 +429,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
     });
 
     // Limita a nota entre 1.2 e 9.8
-    return Math.min(Math.max(nota, 1.2), 9.8);
+    return Math.min(Math.max(nota, 1.2), 9.3);
 }
 
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
