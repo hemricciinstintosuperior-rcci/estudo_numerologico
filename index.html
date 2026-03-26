@@ -1472,11 +1472,12 @@ while (idadeAcumulada < 100) {
     htmlPotenciasCalculadas += `
         <div class="bloco-potencia" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
-                <b style="color: #827108; font-size: 19px;">Potência ${p}</b>
+                <b style="color: #827108; font-size: 19px;">✡︎ Potência ${p}</b>
                 <span style="color: #b8860b; font-weight: bold; font-size: 13px;">
-                    VIGÊNCIA: de ${idadeInicio} a ${idadeFim} anos de idade </span>
-            <div <span style="color: #b8860b; font-weight: bold; font-size: 13px;"> PERÍODO: do ano ${anoInicio} a ${anoFim}
-                </span></div>
+                   🔍 VIGÊNCIA: de ${idadeInicio} a ${idadeFim} anos de idade </span><br>
+                   
+            <span style="color: #b8860b; font-weight: bold; font-size: 13px;"> 📅 PERÍODO: do ano ${anoInicio} até ${anoFim}
+                </span>
             </div>
             <div class="texto-res" style="color: #333; font-size: 15px;">${aplicarFiltroTexto(txtPot)}</div>
         </div>
