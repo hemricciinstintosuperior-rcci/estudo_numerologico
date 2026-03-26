@@ -961,10 +961,13 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         }
     }
 
-// TRÂNSITO (Corrigido o sumiço e o erro de variável)
+// TRÂNSITO (Cálculo da soma reduzida dos 4 planos)
     const vTransito = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
 
-    // Agora montamos o HTML do Trânsito usando a vigência que já calculamos lá no topo da função
+    // BUSCA DO TEXTO (Usando a sua Const textosTransito)
+    // Se por acaso o número não existir na lista, ele exibe um texto vazio ""
+    const textoParaExibir = (typeof textosTransito !== 'undefined') ? (textosTransito[vTransito] || "") : "";
+
     html += `
     <div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 20px;">
         <h2 class="titulo-topico">Número de Trânsito</h2>
@@ -975,7 +978,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
                 VIGÊNCIA: ${periodoVigente}
             </p>
 
-            <div class="texto-res">${aplicarFiltroTexto(textos.transito[vTransito])}</div>
+            <div class="texto-res">${aplicarFiltroTexto(textoParaExibir)}</div>
         </div>
     </div>`;
 
