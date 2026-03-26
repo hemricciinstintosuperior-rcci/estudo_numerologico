@@ -1,4 +1,14 @@
 const textos = {
+
+introducaoGeralPortal: `
+<p>A **Numerologia** é uma das linguagens mais antigas e profundas da humanidade, remontando às escolas de mistérios do Egito, da Caldeia e, fundamentalmente, aos ensinamentos de Pitágoras na Grécia Antiga. Para os antigos sábios, os números não eram apenas símbolos de quantidade, mas frequências vibracionais que compõem o tecido do universo. Eles acreditavam que "Tudo é Número", e que ao decodificar os códigos numéricos presentes no nome e na data de nascimento de um indivíduo, é possível acessar o mapa original da sua alma.</p>
+
+<p>Ao longo dos séculos, essa ciência evoluiu para se tornar um guia prático de navegação humana. Por que usar a Numerologia hoje? Porque ela oferece uma maneira clara e objetiva de descobrir camadas inéditas sobre si mesmo, permitindo que você se enxergue por prismas que a rotina muitas vezes oculta. É uma ferramenta de espelhamento que revela como o mundo te percebe e como suas potências internas podem ser melhor aproveitadas para gerar resultados reais na matéria.</p>
+
+<p>O grande valor deste estudo reside na consciência. Quando somos capazes de reconhecer nossas vantagens nativas e identificar nossas desvantagens ou "sombras", ganhamos o poder de corrigir nossa trajetória de forma deliberada. Conhecer as áreas que exigem revisão permite que você analise suas ações e comportamentos com uma precisão cirúrgica, ajustando a maneira como lida com a realidade. A Numerologia atua como um orientador estratégico, fornecendo os dados necessários para que você administre sua vida com maestria, sem a necessidade de crenças cegas ou buscas místicas intermináveis.</p>
+
+<p>Basicamente, quando a Numerologia é corretamente entendida e aplicada, ela se torna um sistema de suporte que trabalha a seu favor. Você só precisa absorver as informações e aplicar as orientações em sua rotina para observar a mudança na direção dos seus caminhos. É importante ressaltar que nada acontece ao acaso: o sucesso exige atitude, empenho e dedicação. No entanto, ao caminhar alinhado com sua vibração numérica, o esforço deixa de ser um fardo e passa a ser o motor de resultados que irão, genuinamente, impressionar você.</p>`,
+        
 introducoes: {
 
         
