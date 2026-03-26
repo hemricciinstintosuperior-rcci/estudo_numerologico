@@ -471,7 +471,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         });
     }
 
-    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Análise de Potenciais</h2>`;
+    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Resultado dos Potenciais </h2>`;
 
     ["Físico", "Emocional", "Intuitivo", "Mental"].forEach(p => {
         const itensPlano = rankingGeral.filter(i => i.plano === p).sort((a,b) => b.nota - a.nota);
