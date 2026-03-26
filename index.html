@@ -1424,32 +1424,31 @@ html += montarHtmlPlanosMomento(nomeRaw, dataRaw);
 
 // 1. CAPTURA SEGURA DA DATA (Evita o erro de 'null')
 const campoDataElemento = document.getElementById('dataNascimento');
-let vigenciaFinal = "Data não disponível";
-
-if (campoDataElemento && campoDataElemento.value) {
-    const partes = campoDataElemento.value.split('-'); 
-    const diaMesVigencia = `${partes[2]}/${partes[1]}`;
-    const anoAtualVig = new Date().getFullYear();
-    vigenciaFinal = `${diaMesVigencia}/${anoAtualVig} a ${diaMesNasc}/${anoAtualVig + 1}`;
+// --- CÁLCULO DA DATA BLINDADO ---
+let vigenciaAnoPessoal = "Data não disponível";
+if (dataRaw && dataRaw.includes('-')) {
+    const p = dataRaw.split('-'); 
+    vigenciaAnoPessoal = `${p[2]}/${p[1]}/${new Date().getFullYear()} a ${p[2]}/${p[1]}/${new Date().getFullYear() + 1}`;
+} else if (dataRaw && dataRaw.includes('/')) {
+    // Caso a data venha formatada com barra
+    const p = dataRaw.split('/');
+    vigenciaAnoPessoal = `${p[0]}/${p[1]}/${new Date().getFullYear()} a ${p[0]}/${p[1]}/${new Date().getFullYear() + 1}`;
 }
 
-// 2. BUSCA A INTRODUÇÃO DO ANO PESSOAL (Ajuste conforme seu objeto de introduções)
-const introAnoPessoal = (typeof introducoes !== 'undefined' && introducoes.AnoPessoal) ? introducoes.AnoPessoal : "";
-
-// 3. INSERIR ANO PESSOAL NO HTML COM INTRODUÇÃO
+// --- BLOCO DO ANO PESSOAL ---
 html += `
 <div class="secao-card quebra-pagina">
     <h2 class="titulo-topico">${nomesExibicao.anoPessoal}</h2>
     
-    <div class="resultado-bloco" id="bloco-ano-pessoal">
-        <div class="texto-intro" style="margin-bottom: 20px; font-style: italic; color: #444;">
-            ${aplicarFiltroTexto(introAnoPessoal)}
+    <div class="resultado-bloco">
+        <div class="intro-texto" style="margin-bottom:15px; font-style:italic; color:#555;">
+            ${aplicarFiltroTexto(textos.introducoes.anoPessoal || "")}
         </div>
 
-        <h3>Ano Pessoal: <span id="num-ano-pessoal" class="numero-destaque">${res.anoPessoal}</span></h3>
+        <h3>Ano Pessoal: <span class="numero-destaque">${res.anoPessoal}</span></h3>
         
         <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
-            Vigência: ${vigenciaFinal}
+            Vigência: ${vigenciaAnoPessoal}
         </p>
 
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
