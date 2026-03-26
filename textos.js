@@ -23,9 +23,6 @@ introducoes: {
         piramide: `<p>​A Pirâmide da Vida Principal é o alicerce absoluto de todo o seu mapa numerológico Cabalístico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Diferente das outras pirâmides que focam em áreas específicas, esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
 
 <p>​Esta pirâmide é construída exclusivamente a partir do seu nome de batismo, o que, na numerologia cabalística, representa a sua essência imutável e a vibração que você trouxe ao mundo. Ela reflete os aspectos gerais da vida e serve como o cenário onde todos os outros eventos acontecem. É por isso que todas as vigências de idade e períodos cronológicos do seu relatório são baseados nesta pirâmide central; ela é o relógio biológico e espiritual que governa todas as outras influências.</p>
-
-<p>​Ao analisar a Pirâmide da Vida, você está olhando para o seu destino em larga escala. Ela mostra as lições que você veio aprender e os ciclos de amadurecimento pelos quais passará. Se a sua vida fosse um filme, esta aba descreveria o enredo principal e o cenário de fundo. Sem a compreensão desta matriz, as outras áreas (pessoal ou social) ficam sem contexto, pois é a Pirâmide da Vida que define se você está em um momento de colheita, de plantio ou de transformação profunda. Ela é a bússola que impede que você se perca nas distrações do cotidiano, mantendo o foco no que realmente importa para a sua evolução de longo prazo.</p>
-
 `,
         
         dia: `<p>O Dia Natalício representa um dos elementos mais significativos dentro da análise numerológica, pois revela as qualidades naturais que acompanham o indivíduo desde o momento do nascimento. Ele simboliza a essência mais espontânea da personalidade, refletindo os talentos inatos, as inclinações comportamentais e as características que se manifestam de forma quase instintiva ao longo da vida.</p>
@@ -161,6 +158,7 @@ Ele mostra quais qualidades devem ser desenvolvidas para alcançar realização 
         anoPessoal: `O Ano Pessoal representa a vibração numérica que influencia os acontecimentos, oportunidades e aprendizados de um ciclo de doze meses. Ele indica tendências, desafios e possibilidades
 que estarão mais ativos durante o ano atual.
 Compreender essa vibração permite agir com mais consciência, aproveitar oportunidades e evitar decisões impulsivas.`,
+ 
         
         deficiencias: ` Fraquezas e inibições  são comportamentos e habilidades que precisam ser tratados em sua personalidade. Essas características podem ser comparadas a uma caixa de ferramentas onde algumas ferramentas estão disponíveis para você e outras precisam ser adquiridas.
    
@@ -203,6 +201,7 @@ Note, porém, que isso não significa de forma alguma que o período será ruim,
     
 Perceba que quanto mais habilidades você tiver a sua disposição e quanto mais puder evitar suas fraquezas mais capaz você será de lidar com qualquer evento ou situação que se apresente em seu caminho e mais 
 fácil será superá-las. `,
+ 
         
         momentos: `Os Momentos Decisivos representam períodos de virada, mudança e redefinição de direção na vida. Eles indicam fases em que decisões, oportunidades e acontecimentos tendem a provocar transformações
 importantes no caminho pessoal.
@@ -221,40 +220,42 @@ Se o número do Momento Decisivo coincide com o número de Personalidade signifi
 Se o número do Momento Decisivo coincide com o número do Propósito de Vida poderá ser mais fácil durante o período perceber e aproveitar melhor as oportunidades que facilitarão a realização de seus sonhos e projetos pessoais.
   
 Se o número do Momento Decisivo coincide com o número de uma de suas Fraquezas e Inibições, você pode ter alguma dificuldade para lidar com questões relacionadas a essa necessidade específica até que aperfeiçoe suas habilidades ou supere alguma inibição.  `,
+
+ 
         
         desafios: `Os Desafios representam padrões de aprendizado e superação que acompanham a pessoa ao longo da vida. Eles indicam áreas onde podem surgir obstáculos, inseguranças, medos ou dificuldades que precisam ser compreendidos e trabalhados.
 Esses desafios não devem ser vistos como limitações permanentes, mas como oportunidades de crescimento e desenvolvimento pessoal. Ao reconhecer essas tendências, torna-se possível agir com mais consciência, fortalecer qualidades internas e transformar dificuldades em maturidade e experiência.
 Cada desafio mostra uma etapa específica do processo de evolução e revela quais atitudes favorecem o equilíbrio e a superação.  
+ 
  Sempre que o número de um Desafio coincidir com o número de um Ciclo de Vida, Momento Decisivo ou Propósito de Vida, pode sugerir alguma predisposição a questões de saúde, que podem se apresentar no período conforme descrito abaixo:
-  
-Possíveis Problemas
-1
+  Possíveis Problemas
+1️⃣
 Região da cabeça, coração, sistema circulatório e respiratório, alergias, ferimentos nos olhos, rosto, orelhas e maxilar, problemas circulatórios e cardíacos. Especialmente em idades mais avançadas; 
 anorexia, edema pulmonar, tosse, tuberculose, impotência masculina. Na fase infantil: facilidade para urinar na cama.
   
-2
+2️⃣
 Região dos rins, estômago e sistema nervoso. Pode acarretar retenção de líquidos no corpo, afetar ainda o sistema linfático, estômago e intestino, manchas hepáticas, infecções urinárias, esclerose múltipla, 
 distúrbios nos seios, excesso de peso, incontinência urinária, envelhecimento precoce. Problemas femininos em especial na fase da menopausa, perda de cabelos, facilidade para queimaduras.
   
-3
+3️⃣
 Região da garganta, fígado, e vesícula são os mais críticos. Também podem ocorrer quadros de enxaquecas, problemas glandulares, em especial na tireóidea e na hipófise, oscilações na pressão arterial, furúnculos, hematomas, problemas nos ombros e dores ciáticas causados por tensão nervosa; problemas nas coxas e nos pés.
   
-4
+4️⃣
 O “4” pode indicar doenças incomuns e de difícil diagnóstico, acidentes inesperados e ferimentos inexplicáveis, além de problemas de circulação sanguínea, anemia, hipoglicemia, problemas psicossomáticos, histeria, medos e fobias, perturbações mentais e emocionais; problemas ósseos em 
 geral; nos dentes; espasmos e palpitações; úlceras, colites e distúrbios digestivos.
   
-5
+5️⃣
 Problemas nos pulmões, aparelho respiratório, olhos e sistema nervoso. Ansiedade e alterações repentinas de humor, tensão nervosa, apneia, exaustão mental ou estafa; insônia, amnésia, paralisia 
 facial, gagueira, acidentes graves por imprudência, vícios em geral (álcool e drogas), distúrbio nos órgãos reprodutores e problemas na tireoide.
   
-6
+6️⃣
 Doenças renais, distúrbios pulmonares; irregularidades na circulação do sangue, hemofilia, palpitações cardíacas, quistos e tumores nos seios, colites, problemas na coluna em geral e dores lombares, problemas de próstata, excesso de peso, incontinência urinária, problemas cardíacos e na região do pescoço.
   
-7
+7️⃣
 Problemas glandulares, sistema nervoso, nos pés e o sistema linfático. Poderá haver certa vulnerabilidade à infecções, problemas de pele, como alergias em geral, coceiras, arteriosclerose, derrame cerebral, problemas mentais e cerebrais em geral, medos e fobias, depressão, síndrome do 
 pânico, problemas de varizes e vícios em geral, em especial o alcoolismo.
   
-8
+8️⃣
 Problemas de estômago e sistema nervoso, os pontos mais sensíveis, no entanto são: os joelhos, dentes, ossos e ligamentos. Podem ocorrer doenças sanguíneas, tendência a se submeter a tratamento médico 
 inadequado ou de receber prescrições médicas inadequadas, problemas de fígado e baço; distúrbios no digestivo e intestino, estados de desânimo profundo, dores de cabeça frequentes, derrames, hérnia de disco, desmaios, hipertensão, apendicite, problemas na próstata, cirurgias frequentes e obesidade.
   `,
@@ -266,7 +267,11 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
     vibracaoAno: "A Vibração de Trânsito é o 'clima numérico' que rege o seu ano pessoal. Ela define a tônica das oportunidades e os aprendizados específicos que cruzarão o seu caminho nos próximos 12 meses, permitindo um planejamento mais assertivo.",
 
         
-    Conclusao: `Este mapa é uma ferramenta de autoconhecimento poderosa para sua evolução.`
+    Conclusao: `<p>Chegamos ao final desta jornada de decodificação numérica, mas este é, na verdade, o seu verdadeiro ponto de partida. Tudo o que você leu até aqui — suas potências, seus desafios, seus ciclos e sua essência — compõe o mapa sagrado da sua existência. No entanto, é fundamental compreender que o mapa não é o caminho; ele é a bússola. A numerologia não determina o seu destino de forma fatalista, ela revela as tendências e as ferramentas que você trouxe consigo para construir a sua própria realidade.</p>
+
+<p>A partir deste momento, o processo de evolução está em suas mãos. O autoconhecimento só se transforma em sabedoria quando é aplicado na prática. Use as informações sobre seu *Plano de Expressão* para equilibrar suas ações e as diretrizes do seu *Status do Momento* para surfar as ondas do tempo com menos esforço e mais resultado. Reconheça seus bloqueios não como sentenças, mas como degraus necessários para o seu fortalecimento.</p>
+
+<p>Lembre-se: você é o arquiteto consciente da sua vida. Este estudo é uma ferramenta poderosa de empoderamento, feita para que você pare de lutar contra a sua própria natureza e comece a fluir com ela. A evolução é um exercício diário de escolhas. Que este diagnóstico seja o farol que ilumina suas decisões, permitindo que você caminhe com muito mais clareza, confiança e maestria em direção ao seu propósito maior. O universo respeita a sua vontade; agora, cabe a você dar o próximo passo.</p>`
 },
 
     
