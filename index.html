@@ -963,20 +963,26 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
     // TRÂNSITO (Corrigido o sumiço)
     const vTransito = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
-    html += `
-        <div style="margin-top:30px; border-top: 2px dashed var(--gold); padding-top:20px;">
-            <div style="display:flex; align-items:center; gap:15px; margin-bottom:15px;">
-                <div style="background:var(--dark); color:var(--gold); width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:bold; border: 2px solid var(--gold);">
-                    ${vTransito}
-                </div>
-                <h3 style="margin:0; text-transform:uppercase; color:var(--dark);">Vibração de Trânsito Atual</h3>
-            </div>
-            <div class="texto-res" style="background:#fff; padding:15px; border-radius:8px; border:1px solid #eee;">
-                ${aplicarFiltroTexto(textosTransito[vTransito] || "AAAAAAAAAA")}
-            </div>
-        </div>
-    </div>`; // Aqui fecha o card principal corretamente
+// Primeiro, definimos a vigência do ano civil (Janeiro a Dezembro)
+const anoAtualTrânsito = new Date().getFullYear();
+const vigenciaCivil = `01/01/${anoAtualTrânsito} a 31/12/${anoAtualTrânsito}`;
 
+// Agora montamos o HTML do Trânsito
+html += `
+<div class="secao-card quebra-pagina">
+    <h2 class="titulo-topico">Número de Trânsito</h2>
+    
+    <div class="resultado-bloco" id="bloco-transito">
+        <h3>Seu Trânsito Atual: <span class="numero-destaque">${res.numeroTransito}</span></h3>
+        
+        <p class="vigencia-texto" style="color: #555; font-weight: 600; margin-bottom: 15px; font-size: 0.9em;">
+            Vigência: ${vigenciaCivil}
+        </p>
+
+        <div class="texto-res">${aplicarFiltroTexto(textos.transito[res.numeroTransito])}</div>
+    </div>
+</div>
+`;
     return html;
 }
         
@@ -1405,13 +1411,21 @@ html += `
 html += montarHtmlPlanosMomento(nomeRaw, dataRaw); 
 
 
-// Cálculo rápido da vigência (Aniversário a Aniversário)
-const dataPartes = dataRaw.split('-'); // Supondo que dataRaw seja AAAA-MM-DD
-const diaMêsNasc = `${dataPartes[2]}/${dataPartes[1]}`;
-const anoAtual = new Date().getFullYear();
+// 1. GARANTIR A CAPTURA DA DATA
+// Tenta pegar do input se a variável global não existir
+const campoData = document.getElementById('dataNascimento').value; 
+let diaMêsVigencia = "00/00";
 
-const dataInicioAP = `${diaMêsNasc}/${anoAtual}`;
-const dataFimAP = `${diaMêsNasc}/${anoAtual + 1}`;    
+if (campoData) {
+    const partes = campoData.split('-'); // O input date retorna AAAA-MM-DD
+    // partes[0] = Ano, partes[1] = Mês, partes[2] = Dia
+    diaMêsVigencia = `${partes[2]}/${partes[1]}`;
+}
+
+const anoAtualVig = new Date().getFullYear();
+
+// 2. CRIAR A STRING FINAL
+const vigenciaFinal = `${diaMêsVigencia}/${anoAtualVig} a ${diaMêsVigencia}/${anoAtualVig + 1}`;
 // INSERIR ANO PESSOAL AQUI (MANUALMENTE NO FINAL)
 html += `
 <div class="secao-card quebra-pagina">
