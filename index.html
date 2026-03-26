@@ -1470,28 +1470,24 @@ while (idadeAcumulada < 100) {
     const txtPot = (textos.Potencias && textos.Potencias[p]) ? textos.Potencias[p] : `Vibração da Potência ${p} em análise.`;
 
 htmlPotenciasCalculadas += `
-    <div class="bloco-potencia" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+    <div class="bloco-potencia" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; display: flex; flex-direction: column;">
         
-        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
-            
-            <div style="display: flex; flex-direction: column; gap: 4px; text-align: left;">
-                <span style="color: #b8860b; font-weight: bold; font-size: 13px;">
-                   🔍 VIGÊNCIA: de ${idadeInicio} a ${idadeFim} anos de idade
-                </span>
-                <span style="color: #b8860b; font-weight: bold; font-size: 13px;"> 
-                   📅 PERÍODO: do ano ${anoInicio} até ${anoFim}
-                </span>
-            </div>
+        <div style="text-align: right; width: 100%; margin-bottom: 8px;">
+            <h3 style="color: #827108; font-size: 20px; margin: 0; font-weight: bold;">
+                Potência ${p} ✡︎
+            </h3>
+        </div>
 
-            <div style="text-align: rigth;">
-                <h3 style="color: #827108; font-size: 19px; margin: 0; white-space: nowrap;">
-                    Potência ${p} ✡︎
-                </h3>
-            </div>
-
+        <div style="display: flex; flex-direction: column; gap: 3px; text-align: left; background: #fdfaf3; padding: 8px; border-radius: 4px; margin-bottom: 10px;">
+            <span style="color: #b8860b; font-weight: bold; font-size: 13px;">
+               🔍 VIGÊNCIA: de ${idadeInicio} a ${idadeFim} anos de idade
+            </span>
+            <span style="color: #b8860b; font-weight: bold; font-size: 13px;"> 
+               📅 PERÍODO: do ano ${anoInicio} até ${anoFim}
+            </span>
         </div>
         
-        <div class="texto-res" style="color: #333; font-size: 15px; text-align: left; margin-top: 10px;">
+        <div class="texto-res" style="color: #333; font-size: 15px; text-align: left; line-height: 1.6;">
             ${aplicarFiltroTexto(txtPot)}
         </div>
     </div>
