@@ -449,24 +449,25 @@ function aplicarFiltroTexto(texto) {
 
         
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual, rankingPlanos) {
-    let nota = 4.0;
+    // 1. NOTA BASE REDUZIDA PARA DAR ESPAÇO AO RANKING
+    let nota = 3.0;
 
-    // --- MOTOR 1: A ESCADA DO PLANO (PODER DO TERRENO) ---
-    const posicaoNoRanking = rankingPlanos[planoAtual]; 
-    if (posicaoNoRanking === 1) nota += 2.8; // O Plano mais forte do nome (Campeão)
-    else if (posicaoNoRanking === 2) nota += 1.2; // Segundo plano mais forte
-    else if (posicaoNoRanking === 3) nota -= 0.5; // Terceiro lugar
-    else nota -= 2.2; // O plano com menos força (Fraco)
+    // 2. MOTOR DE HIERARQUIA (PESO DETERMINANTE)
+    // Aumentamos a diferença entre os degraus da escada para o ranking mandar no gráfico
+    const posicao = rankingPlanos[planoAtual]; 
+    if (posicao === 1) nota += 4.5;      // O plano campeão ganha um impulso gigante
+    else if (posicao === 2) nota += 2.5; // O segundo lugar fica bem posicionado
+    else if (posicao === 3) nota += 0.5; // O terceiro fica na média
+    else nota -= 2.5;                    // O quarto lugar (Físico aqui) é puxado para baixo
 
-    // --- MOTOR 2: O CLIMA DO PERFIL (MODULAÇÃO) ---
+    // 3. MODULAÇÃO POR PERFIL (CLIMA)
     const perfil = dominantePerfil.toLowerCase();
-    
-    // Bônus/Penalidade padrão por tipo de energia
-    if (perfil === "criativo") nota += 1.4;
-    else if (perfil === "neutro") nota += 0.7;
-    else if (perfil === "indeciso") nota -= 1.6; // O indeciso "sabota" a força do plano
+    if (perfil === "criativo") nota += 1.0;
+    else if (perfil === "neutro") nota += 0.5;
+    else if (perfil === "indeciso") nota -= 2.0; // O indeciso derruba a nota com força
 
-    // --- MOTOR 3: DNA E SOMBRAS (CONTEÚDO DO MAPA) ---
+    // 4. DNA E SOMBRAS (PESOS SUAVES)
+    // Diminuímos os multiplicadores aqui para os números não "atropelarem" o Ranking do Plano
     let dnaPositivo = [
         resultados.motivacao, resultados.Personalidade, resultados.influencia, 
         resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
@@ -475,33 +476,22 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
     ];
     let sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
 
-    const tabelaPontos = {
-        "Físico": { "criativo": [5], "indeciso": [6, 5], "neutro": [4] },
-        "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3, 4] },
-        "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4], "neutro": [3] },
-        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [6] }
-    };
-
     nums.forEach(n => {
-        let multiplicador = 2.45;
+        let pesoDNA = 0.8; // Antes era 2.4, baixamos para o ranking dominar
         
-        // Verifica afinidade específica com a tabela da foto
-        if (tabelaPontos[planoAtual] && tabelaPontos[planoAtual][perfil] && tabelaPontos[planoAtual][perfil].includes(n)) {
-            nota += 1.1; 
-        }
+        // Bônus da vibração regente do plano
+        if (n === vibPlano) nota += 1.0;
 
-        // Bônus se o número for a vibração regente do plano
-        if (n === vibPlano && statusPlano !== "fraco") multiplicador = 3.2;
-
-        nota += (dnaPositivo.filter(num => num === n).length * multiplicador);
-        nota -= (sombras.filter(num => num === n).length * 2.0);
+        nota += (dnaPositivo.filter(num => num === n).length * pesoDNA);
+        nota -= (sombras.filter(num => num === n).length * 1.2);
         
         if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
-            nota -= 1.6;
+            nota -= 1.0;
         }
     });
 
-    return Math.min(Math.max(nota, 1.0), 9.5);
+    // Limites de segurança (0 a 100% no gráfico)
+    return Math.min(Math.max(nota, 0.5), 9.6);
 }
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
 
