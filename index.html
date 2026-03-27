@@ -1190,7 +1190,15 @@ function gerarMapaCompleto() {
     var dia = parseInt(partes[0], 10);
     var mes = parseInt(partes[1], 10);
     var ano = parseInt(partes[2], 10);
+// --- CÁLCULO DE IDADE CRONOLÓGICA (ALINHAMENTO PREMIUM) ---
+const agora = new Date();
+const dtNasci = new Date(ano, mes - 1, dia); // Usa as variáveis que você já criou
 
+let idadeCronologica = agora.getFullYear() - dtNasci.getFullYear();
+if (agora < new Date(agora.getFullYear(), dtNasci.getMonth(), dtNasci.getDate())) {
+    idadeCronologica--; // Ainda não fez aniversário este ano
+}
+// ---------------------------------------------------------
     // Agora o celular aceita QUALQUER dia (25, 26, 31...) porque é apenas TEXTO.
     
     var diaRed = reduzir(dia);
@@ -1248,9 +1256,9 @@ pilaresOcultos.forEach((num, index) => {
 
 let diaR = reduzir(dia);
 let mesR = reduzir(mes);
-let anoR = reduzir(2026); // 2+0+2+6 = 10 -> 1
-let somaAnoPessoal = diaR + mesR + anoR;
-let resultadoAnoPessoal = reduzir(somaAnoPessoal);
+// O Ano de referência para o Ano Pessoal depende se o aniversário já passou
+let anoReferencia = (agora < new Date(agora.getFullYear(), mes - 1, dia)) ? agora.getFullYear() - 1 : agora.getFullYear();
+let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
     
 const res = {
     dia: dia,
@@ -1766,48 +1774,36 @@ let indiceLoop = 0;
 
 // O loop continua enquanto a idade acumulada não atingir 100 anos
 while (idadeAcumulada < 100) {
-    // Pega a potência da lista. Se chegar no fim, o % faz voltar ao início (loop)
-    const p = potenciasTopo[indiceLoop % potenciasTopo.length];
-    
-    // Lógica do primeiro algarismo definindo a duração
-    const duracaoAnos = parseInt(p.toString()[0]); 
-    
-    const idadeInicio = idadeAcumulada;
-    const idadeFim = idadeAcumulada + duracaoAnos;
-    const anoInicio = anoNascPot + idadeInicio;
-    const anoFim = anoNascPot + idadeFim;
-
-    const txtPot = (textos.Potencias && textos.Potencias[p]) ? textos.Potencias[p] : `Vibração da Potência ${p} em análise.`;
-
-htmlPotenciasCalculadas += `
-    <div class="bloco-potencia" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px; display: flex; flex-direction: column;">
+        const p = potenciasTopo[indiceLoop % potenciasTopo.length];
+        const duracaoAnos = parseInt(p.toString()[0]) || 1; 
         
-        <div style="text-align: left; width: 100%; margin-bottom: 8px;">
-            <h3 style="color: #827108; font-size: 20px; margin: 0; font-weight: bold;">
-                Potência ${p} ✡︎
-            </h3>
-        </div>
+        const idadeInicio = idadeAcumulada;
+        const idadeFim = idadeAcumulada + duracaoAnos;
 
-        <div style="display: flex; flex-direction: column; gap: 3px; text-align: right; background: #fdfaf3; padding: 8px; border-radius: 4px; margin-bottom: 10px;">
-            <span style="color: #b8860b; font-weight: bold; font-size: 13px;">
-                                                                                        🔍 VIGÊNCIA: de ${idadeInicio} a ${idadeFim} anos de idade
-            </span>
-            <span style="color: #b8860b; font-weight: bold; font-size: 13px;"> 
-                                                                                         📅 PERÍODO: no ano de ${anoInicio} até ${anoFim}
-            </span>
-        </div>
+        // AQUI É A ÚNICA MUDANÇA: O ALINHAMENTO VISUAL
+        const potenciaAtivaAgora = (idadeCronologica >= idadeInicio && idadeCronologica < idadeFim);
+
+        // Datas baseadas no nascimento (mantendo o seu padrão)
+        const dataIniPot = new Date(dtNasci.getFullYear() + idadeInicio, dtNasci.getMonth(), dtNasci.getDate());
+        const dataFimPot = new Date(dtNasci.getFullYear() + idadeFim, dtNasci.getMonth(), dtNasci.getDate());
+
+        htmlPotenciasCalculadas += `
+            <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 15px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 10px; opacity: 0.7;'}">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="color: #827108; font-size: 18px; margin: 0;">Potência ${p} ✡︎</h3>
+                    ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
+                </div>
+                <div style="font-size: 11px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
+                    📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
+                </div>
+                <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#444;'}">
+                    ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
+                </div>
+            </div>`;
         
-        <div class="texto-res" style="color: #333; font-size: 15px; text-align: left; line-height: 1.6;">
-            ${aplicarFiltroTexto(txtPot)}
-        </div>
-    </div>
-`;
-    
-    
-    // Atualiza para o próximo passo
-    idadeAcumulada = idadeFim;
-    indiceLoop++;
-}           
+        idadeAcumulada = idadeFim;
+        indiceLoop++;
+    }     
 // --- TRECHO DAS CAIXINHAS DOURADAS (VITRINE) ---
 let htmlCaixinhas = `<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">`;
 potenciasTopo.forEach(p => {
