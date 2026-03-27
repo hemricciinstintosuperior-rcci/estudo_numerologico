@@ -1172,15 +1172,16 @@ const res = {
         4: calcularNumerologia(mes + ano, true)
     },
     
- desafios: {
-    // Desafio 1: Diferença entre Dia e Mês
-    1: Math.abs(diaPuro - mesPuro), 
-    
-    // Desafio 2: Diferença entre Dia e Ano
-    2: Math.abs(diaPuro - anoPuro), 
-    
-    // Desafio 3: Diferença entre os dois resultados anteriores
-    3: Math.abs(Math.abs(diaPuro - mesPuro) - Math.abs(diaPuro - anoPuro))
+// Cálculo dos Desafios (Garantindo resultado de 0 a 8)
+desafios: {
+    // Desafio 1: Diferença entre Dia e Mês (Reduzidos a 1-9)
+    1: Math.abs(reduzirPuro(dia) - reduzirPuro(mes)), 
+
+    // Desafio 2: Diferença entre Dia e Ano (Reduzidos a 1-9)
+    2: Math.abs(reduzirPuro(dia) - reduzirPuro(ano)), 
+
+    // Desafio 3: Diferença entre os resultados acima (Sempre 0 a 8)
+    3: Math.abs(Math.abs(reduzirPuro(dia) - reduzirPuro(mes)) - Math.abs(reduzirPuro(dia) - reduzirPuro(ano)))
 },
  anoPessoal: resultadoAnoPessoal
 };
