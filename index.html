@@ -1151,7 +1151,7 @@ const res = {
     essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
     talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
     equilibrio: calcularNumerologia(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)], false),
-    deficiencias: faltantes,
+    deficiencias: faltantes.map(d => reduzirPuro(d)), 
     deficitRecorrente: calcularNumerologia(dia, false), 
     deficitsOcultos: deficitsOcultos.map(d => reduzirPuro(d)), 
     inclinacoes: Object.keys(contagem).filter(num => contagem[num] >= 3).map(Number).sort((a, b) => a - b),
