@@ -220,6 +220,25 @@ function mascaraData(campo) {
     }
     campo.value = v;
 }
+
+
+ // Função Universal de Redução Numerológica
+function calcularNumerologia(valor, aceitaMestre = true) {
+    let num = parseInt(valor);
+    
+    // Se não for um número válido, retorna zero ou vazio
+    if (isNaN(num)) return 0;
+
+    while (num > 9) {
+        // Se a regra permitir (aceitaMestre) e cair em 11, 22 ou 33, para aqui.
+        if (aceitaMestre && (num === 11 || num === 22 || num === 33)) {
+            break;
+        }
+        // Soma os dígitos
+        num = String(num).split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+    }
+    return num;
+}       
        
 function gerarPiramide(nome){
     let base = [];
@@ -1043,14 +1062,20 @@ function gerarMapaCompleto() {
                 }
             }
 
-            const exp = reduzir(sV + sC); // Personalidade (Expressão)
-            const mot = reduzir(sV);
+           // Onde era: const exp = reduzir(sV + sC);
+const exp = calcularNumerologia(sV + sC, true); // Aceita Mestre
+
+// Onde era: const mot = reduzir(sV);
+const mot = calcularNumerologia(sV, true); // Aceita Mestre
             const faltantes = Object.keys(contagem).filter(k => contagem[k] === 0);
 
 // --- NOVO CÁLCULO DE DÉFICIT DE COMPORTAMENTO ---
 const diaReduzido = reduzir(dia); 
-const cvCalculado = reduzir(dia + mes + ano);
-const propCalculado = reduzir(cvCalculado + exp);
+// Onde era: const cvCalculado = reduzir(dia + mes + ano);
+const cvCalculado = calcularNumerologia(dia + mes + ano, true); // Aceita Mestre
+
+// Onde era: const propCalculado = reduzir(cvCalculado + exp);
+const propCalculado = calcularNumerologia(cvCalculado + exp, true); // Aceita Mestre
 
 // Usamos as variáveis locais porque o objeto 'res' ainda vai ser criado abaixo
 const pilaresOcultos = [propCalculado, cvCalculado, exp, mot];
@@ -1065,29 +1090,44 @@ pilaresOcultos.forEach((num, index) => {
 
 const res = {
     dia: dia,
-    motivacao: mot,
-    influencia: reduzir(sC),
-    Personalidade: exp,
-    comportamento: reduzir(dia),
-    CaminhodeVida: cvCalculado,
-    "Propósito": propCalculado,
-    Maturidade: propCalculado, // ou a fórmula que desejar
-    Relacionamento: propCalculado,
-    essencia: reduzir(sE),
-    talento: reduzir(mot + exp),
-    equilibrio: reduzir(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)]),
+    motivacao: mot, // Já calculado com Mestre
+    influencia: calcularNumerologia(sC, true), // Personalidade/Influência aceita Mestre
+    Personalidade: exp, // Já calculado com Mestre
+    comportamento: calcularNumerologia(dia, false), // Comportamento reduz para 1-9
+    CaminhodeVida: cvCalculado, // Já calculado com Mestre
+    "Propósito": propCalculado, // Já calculado com Mestre
+    Maturidade: propCalculado, 
+    Relacionamento: calcularNumerologia(propCalculado, false), // Relacionamento SEMPRE reduz (1-9)
+    essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
+    talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
+    equilibrio: calcularNumerologia(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)], false),
     deficiencias: faltantes,
-    deficitRecorrente: diaReduzido, 
+    deficitRecorrente: calcularNumerologia(dia, false), 
     deficitsOcultos: deficitsOcultos, 
     inclinacoes: Object.keys(contagem).filter(num => contagem[num] >= 3).map(Number).sort((a, b) => a - b),
     subconsciente: 9 - faltantes.length,
-    ciclos: {1: reduzir(mes), 2: reduzir(dia), 3: reduzir(ano)},
-    momentos: {1: reduzir(dia+mes), 2: reduzir(dia+ano), 3: reduzir(reduzir(dia+mes)+reduzir(dia+ano)), 4: reduzir(mes+ano)},
-  desafios: {
-    1: Math.abs(diaRed - mesRed), 
-    2: Math.abs(diaRed - anoRed), 
-    3: Math.abs(Math.abs(diaRed - mesRed) - Math.abs(diaRed - anoRed))},
-    anoPessoal: reduzir(dia + mes + 2026)
+    
+    // CICLOS: Geralmente 1 a 9
+    ciclos: {
+        1: calcularNumerologia(mes, false), 
+        2: calcularNumerologia(dia, false), 
+        3: calcularNumerologia(ano, false)
+    },
+    
+    // MOMENTOS DECISIVOS (Pináculos): ACEITAM 11 e 22
+    momentos: {
+        1: calcularNumerologia(dia + mes, true), 
+        2: calcularNumerologia(dia + ano, true), 
+        3: calcularNumerologia(calcularNumerologia(dia + mes, true) + calcularNumerologia(dia + ano, true), true), 
+        4: calcularNumerologia(mes + ano, true)
+    },
+    
+    desafios: {
+        1: Math.abs(diaRed - mesRed), 
+        2: Math.abs(diaRed - anoRed), 
+        3: Math.abs(Math.abs(diaRed - mesRed) - Math.abs(diaRed - anoRed))
+    },
+    anoPessoal: calcularNumerologia(dia + mes + 2026, false) // Ano Pessoal reduz 1-9
 };
 
 
