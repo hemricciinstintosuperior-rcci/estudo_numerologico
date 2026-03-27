@@ -636,10 +636,8 @@ const megaBancoAtributos = {
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
     
-    // 1. Chamada dos dados originais
+    // 1. Dados originais e perfil
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
-    
-    // CORREÇÃO DO ERRO: Extraindo o perfil dominante para usar no cálculo
     const dominantePerfil = dadosNaturais.dominantePerfil; 
 
     const somaDados = dadosNaturais.soma || {};
@@ -659,9 +657,14 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Intuitivo": qtdDados.intuitivo || 0
     };
 
-    // ... (restante das legendas e processamento) ...
+    const legendasPlanos = {
+        "Físico": "Pilar da Realização",
+        "Emocional": "Pilar do Sentimento",
+        "Intuitivo": "Pilar da Percepção",
+        "Mental": "Pilar da Racionalidade"
+    };
 
-    // No loop dos atributos, passamos o plano como o 11º argumento
+    // 2. Processamento dos Atributos
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
         let vibraDoPlano = vNaturais[dados.plano];
@@ -671,12 +674,10 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         if (contagemLetras <= 1) statusPlano = "fraco";
         else if (contagemLetras >= 4) statusPlano = "forte";
 
-        // AGORA PASSAMOS TUDO NA ORDEM CERTA:
         let nota = calcularIntensidadeAtributo(
             dados.nums, res, faltantes, nomeRaw, d3, 
             regenteMatriz, negativasMatriz, vibraDoPlano, statusPlano, 
-            dominantePerfil, // 10º argumento
-            dados.plano      // 11º argumento (O plano do atributo atual)
+            dominantePerfil, dados.plano
         );
 
         rankingGeral.push({
@@ -687,10 +688,8 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             percentual: (nota * 10).toFixed(1)
         });
     }
-    // ... restando da função (geração do HTML)
-}
 
-    // 4. Geração do HTML (Visual)
+    // 3. Geração do HTML (Visual)
     let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Resultado dos Potenciais</h2>`;
 
     ["Físico", "Emocional", "Intuitivo", "Mental"].forEach(p => {
@@ -732,6 +731,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
     return htmlFinal;
 }
+       
 // FUNÇÃO PARA TROCAR AS ABAS
 function alternarAba(evt, nomePlano) {
     const conteudos = document.querySelectorAll(".tab-content");
