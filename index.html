@@ -1146,7 +1146,7 @@ const res = {
     equilibrio: calcularNumerologia(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)], false),
     deficiencias: faltantes,
     deficitRecorrente: calcularNumerologia(dia, false), 
-    deficitsOcultos: deficitsOcultos, 
+    deficitsOcultos: deficitsOcultos.map(d => reduzirPuro(d)), 
     inclinacoes: Object.keys(contagem).filter(num => contagem[num] >= 3).map(Number).sort((a, b) => a - b),
     subconsciente: 9 - faltantes.length,
     
