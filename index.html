@@ -1107,7 +1107,12 @@ pilaresOcultos.forEach((num, index) => {
     }
 });
 
-
+let diaR = reduzir(dia);
+let mesR = reduzir(mes);
+let anoR = reduzir(2026); // 2+0+2+6 = 10 -> 1
+let somaAnoPessoal = diaR + mesR + anoR;
+let resultadoAnoPessoal = reduzir(somaAnoPessoal);
+    
 const res = {
     dia: dia,
     motivacao: mot, // Já calculado com Mestre
@@ -1147,12 +1152,7 @@ const res = {
         2: Math.abs(diaRed - anoRed), 
         3: Math.abs(Math.abs(diaRed - mesRed) - Math.abs(diaRed - anoRed))
     },
-    // Primeiro reduz o dia, o mês e o ano separadamente, depois soma e reduz o total
-let diaR = reduzir(dia);
-let mesR = reduzir(mes);
-let anoR = reduzir(2026); // 2+0+2+6 = 10 -> 1
-let somaAnoPessoal = diaR + mesR + anoR;
-res.anoPessoal = reduzir(somaAnoPessoal);
+ anoPessoal: resultadoAnoPessoal
 };
 
 
