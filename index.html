@@ -701,29 +701,31 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
     
-    // Puxa os dados naturais (Físico, Mental, etc)
+    // 1. Puxa os dados (Soma e Contagem)
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
     const dominantePerfil = dadosNaturais.dominantePerfil; 
-    const qtdDados = dadosNaturais.contPerfil || {}; 
-
-    // Define a Escada de Poder (Ranking de 1 a 4)
-    const contagemPlanos = {
-        "Físico": qtdDados.fisico || 0,
-        "Mental": qtdDados.mental || 0,
-        "Emocional": qtdDados.emocional || 0,
-        "Intuitivo": qtdDados.intuitivo || 0
+    
+    // 2. CRIANDO A ESCADA DE PODER BASEADA NA SOMA (Igual ao seu Plano Natural)
+    const somaPlanos = {
+        "Físico": dadosNaturais.soma.fisico || 0,
+        "Mental": dadosNaturais.soma.mental || 0,
+        "Emocional": dadosNaturais.soma.emocional || 0,
+        "Intuitivo": dadosNaturais.soma.intuitivo || 0
     };
 
-    const escadaPoder = Object.entries(contagemPlanos).sort((a, b) => b[1] - a[1]);
+    // Ordena pela SOMA (valor total) para definir o Ranking 1 a 4
+    const escadaPoder = Object.entries(somaPlanos).sort((a, b) => b[1] - a[1]);
     const rankingPlanos = {};
-    escadaPoder.forEach((item, index) => { rankingPlanos[item[0]] = index + 1; });
+    escadaPoder.forEach((item, index) => { 
+        rankingPlanos[item[0]] = index + 1; 
+    });
 
-    // Vibrações regentes de cada plano
+    // 3. Vibrações para o cálculo interno
     const vNaturais = {
-        "Físico": reduzir(dadosNaturais.soma.fisico || 0),
-        "Mental": reduzir(dadosNaturais.soma.mental || 0),
-        "Emocional": reduzir(dadosNaturais.soma.emocional || 0),
-        "Intuitivo": reduzir(dadosNaturais.soma.intuitivo || 0)
+        "Físico": reduzir(somaPlanos["Físico"]),
+        "Mental": reduzir(somaPlanos["Mental"]),
+        "Emocional": reduzir(somaPlanos["Emocional"]),
+        "Intuitivo": reduzir(somaPlanos["Intuitivo"])
     };
 
     const legendasPlanos = {
@@ -733,10 +735,11 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Mental": "Pilar da Racionalidade"
     };
 
-    // Loop principal no Mega Banco de Atributos
+    // 4. Loop de Atributos
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
         
+        // Passa o rankingPlanos (baseado na soma) para a função de intensidade
         let nota = calcularIntensidadeAtributo(
             dados.nums, res, faltantes, nomeRaw, d3, 
             regenteMatriz, negativasMatriz, vNaturais[dados.plano], 
@@ -752,10 +755,13 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         });
     }
 
-    // --- 3. CONSTRUÇÃO DO VISUAL (HTML) ---
+    // 5. Construção do HTML
     let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Potenciais de Expressão</h2>`;
 
-    ["Físico", "Emocional", "Intuitivo", "Mental"].forEach(p => {
+    // Exibe na ordem do Ranking (O dominante primeiro)
+    const ordemExibicao = Object.keys(rankingPlanos).sort((a, b) => rankingPlanos[a] - rankingPlanos[b]);
+
+    ordemExibicao.forEach(p => {
         const rank = rankingPlanos[p];
         const seloPlano = rank === 1 ? "DOMINANTE" : (rank === 4 ? "DESAFIADOR" : "ESTÁVEL");
         const corSelo = rank === 1 ? "#827108" : (rank === 4 ? "#cc0000" : "#555");
@@ -773,10 +779,9 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
         subcategorias.forEach(sub => {
             htmlFinal += `<div style="margin: 20px 0 10px 0;"><h4 style="color:#666; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;">${sub}</h4>`;
-            
             itensDestePlano.filter(i => i.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
                 let corBarra = item.nota >= 7 ? "#2e7d32" : (item.nota >= 5 ? "#827108" : "#cc0000");
-                htmlFinal += montarBarraGrafico(item, corBarra); // Certifique-se que montarBarraGrafico existe!
+                htmlFinal += montarBarraGrafico(item, corBarra);
             });
             htmlFinal += `</div>`;
         });
@@ -785,7 +790,6 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
     return htmlFinal;
 }
-       
 // FUNÇÃO PARA TROCAR AS ABAS
 function alternarAba(evt, nomePlano) {
     const conteudos = document.querySelectorAll(".tab-content");
