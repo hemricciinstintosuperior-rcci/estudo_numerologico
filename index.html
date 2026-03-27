@@ -448,26 +448,27 @@ function aplicarFiltroTexto(texto) {
 }
 
         
-function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual, rankingPlanos) {
-    // 1. NOTA BASE REDUZIDA PARA DAR ESPAÇO AO RANKING
-    let nota = 3.0;
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual) {
+    // 1. NOTA BASE (Ponto de partida neutro)
+    let nota = 5.5; 
 
-    // 2. MOTOR DE HIERARQUIA (PESO DETERMINANTE)
-    // Aumentamos a diferença entre os degraus da escada para o ranking mandar no gráfico
-    const posicao = rankingPlanos[planoAtual]; 
-    if (posicao === 1) nota += 4.5;      // O plano campeão ganha um impulso gigante
-    else if (posicao === 2) nota += 2.5; // O segundo lugar fica bem posicionado
-    else if (posicao === 3) nota += 0.5; // O terceiro fica na média
-    else nota -= 2.5;                    // O quarto lugar (Físico aqui) é puxado para baixo
+    // 2. MOTOR DE STATUS (A REGRA QUE VOCÊ DEFINIU)
+    // Forte: Soma muito | Médio: Soma pouco/Mantém | Fraco: Subtrai
+    if (statusPlano === "forte") {
+        nota += 2.5; 
+    } else if (statusPlano === "medio") {
+        nota += 0.5; // No médio ele ainda ganha um fôlego, não perde!
+    } else if (statusPlano === "fraco") {
+        nota -= 2.5; // Só aqui o gráfico realmente "apanha"
+    }
 
-    // 3. MODULAÇÃO POR PERFIL (CLIMA)
+    // 3. MODULAÇÃO POR PERFIL (O CLIMA)
     const perfil = dominantePerfil.toLowerCase();
-    if (perfil === "criativo") nota += 1.0;
-    else if (perfil === "neutro") nota += 0.5;
-    else if (perfil === "indeciso") nota -= 2.0; // O indeciso derruba a nota com força
+    if (perfil === "criativo") nota += 1.2;
+    else if (perfil === "neutro") nota += 0.3;
+    else if (perfil === "indeciso") nota -= 1.5;
 
-    // 4. DNA E SOMBRAS (PESOS SUAVES)
-    // Diminuímos os multiplicadores aqui para os números não "atropelarem" o Ranking do Plano
+    // 4. DNA E SOMBRAS
     let dnaPositivo = [
         resultados.motivacao, resultados.Personalidade, resultados.influencia, 
         resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
@@ -477,21 +478,20 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
     let sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
 
     nums.forEach(n => {
-        let pesoDNA = 0.8; // Antes era 2.4, baixamos para o ranking dominar
+        let pesoDNA = 0.8;
         
-        // Bônus da vibração regente do plano
-        if (n === vibPlano) nota += 1.0;
+        // Bônus se o número do atributo for a vibração regente do plano
+        if (n === vibPlano && statusPlano !== "fraco") nota += 1.0;
 
         nota += (dnaPositivo.filter(num => num === n).length * pesoDNA);
-        nota -= (sombras.filter(num => num === n).length * 1.2);
+        nota -= (sombras.filter(num => num === n).length * 1.5);
         
         if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
-            nota -= 1.0;
+            nota -= 1.2;
         }
     });
 
-    // Limites de segurança (0 a 100% no gráfico)
-    return Math.min(Math.max(nota, 0.5), 9.6);
+    return Math.min(Math.max(nota, 1.0), 9.6);
 }
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
 
@@ -700,50 +700,40 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 // --- 2. FUNÇÃO MAESTRO (GERAR TODOS OS GRÁFICOS) ---
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
-    
-    // 1. Puxa os dados (Soma e Contagem)
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
-    const dominantePerfil = dadosNaturais.dominantePerfil; 
+    const dominantePerfil = dadosNaturais.dominantePerfil;
     
-    // 2. CRIANDO A ESCADA DE PODER BASEADA NA SOMA (Igual ao seu Plano Natural)
-    const somaPlanos = {
-        "Físico": dadosNaturais.soma.fisico || 0,
-        "Mental": dadosNaturais.soma.mental || 0,
-        "Emocional": dadosNaturais.soma.emocional || 0,
-        "Intuitivo": dadosNaturais.soma.intuitivo || 0
-    };
+    // Pegamos a maior soma para servir de referência (o "ref" da sua função)
+    const somas = [
+        dadosNaturais.soma.fisico || 0,
+        dadosNaturais.soma.mental || 0,
+        dadosNaturais.soma.emocional || 0,
+        dadosNaturais.soma.intuitivo || 0
+    ];
+    const ref = Math.max(...somas) || 1;
 
-    // Ordena pela SOMA (valor total) para definir o Ranking 1 a 4
-    const escadaPoder = Object.entries(somaPlanos).sort((a, b) => b[1] - a[1]);
-    const rankingPlanos = {};
-    escadaPoder.forEach((item, index) => { 
-        rankingPlanos[item[0]] = index + 1; 
-    });
+    // Criamos um mapa de Status para cada plano
+    const statusPlanos = {};
+    const vibPlanos = {};
 
-    // 3. Vibrações para o cálculo interno
-    const vNaturais = {
-        "Físico": reduzir(somaPlanos["Físico"]),
-        "Mental": reduzir(somaPlanos["Mental"]),
-        "Emocional": reduzir(somaPlanos["Emocional"]),
-        "Intuitivo": reduzir(somaPlanos["Intuitivo"])
-    };
+    for (let p in dadosNaturais.soma) {
+        let valor = dadosNaturais.soma[p];
+        let r = valor / ref;
+        // A REGRA DE OURO:
+        statusPlanos[p] = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
+        vibPlanos[p] = reduzir(valor);
+    }
 
-    const legendasPlanos = {
-        "Físico": "Pilar da Realização",
-        "Emocional": "Pilar do Sentimento",
-        "Intuitivo": "Pilar da Percepção",
-        "Mental": "Pilar da Racionalidade"
-    };
-
-    // 4. Loop de Atributos
+    // Loop de Atributos
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
-        
-        // Passa o rankingPlanos (baseado na soma) para a função de intensidade
+        let pKey = dados.plano.toLowerCase(); // Ajuste para bater com as chaves (fisico, mental...)
+
+        // Agora passamos o STATUS REAL do plano
         let nota = calcularIntensidadeAtributo(
             dados.nums, res, faltantes, nomeRaw, d3, 
-            regenteMatriz, negativasMatriz, vNaturais[dados.plano], 
-            "medio", dominantePerfil, dados.plano, rankingPlanos
+            regenteMatriz, negativasMatriz, vibPlanos[dados.plano], 
+            statusPlanos[dados.plano], dominantePerfil, dados.plano
         );
 
         rankingGeral.push({
@@ -754,6 +744,10 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             percentual: (nota * 10).toFixed(1)
         });
     }
+
+    // Parte do HTML... (Ordena por nota para mostrar os melhores potenciais no topo)
+    return construirHTMLGraficos(rankingGeral.sort((a,b) => b.nota - a.nota));
+}
 
     // 5. Construção do HTML
     let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Potenciais de Expressão</h2>`;
