@@ -2208,8 +2208,13 @@ const textosPlanos = {
 
 <p>O aprendizado central envolve equilibrar esse idealismo necessário com a praticidade cotidiana exigida nas pequenas tarefas de sobrevivência material. A força física de você é um exemplo de dedicação, sendo capaz de suportar longas jornadas de trabalho quando o objetivo final é nobre e transformador. É importante manter os pés no chão para que os grandes sonhos não se percam por falta de uma base organizacional mínima. A generosidade na execução das tarefas atrai colaboradores que compartilham da mesma visão, criando uma rede de apoio poderosa para a concretização dos ideais.</p>
 
-<p>Nesta vibração, a satisfação material não vem apenas do acúmulo de bens, mas da sensação de dever cumprido em relação ao mundo. O desapego e a visão global permitem que a atuação profissional alcance fronteiras além do comum, rompendo barreiras culturais ou geográficas. Cuidar da energia física através de momentos de isolamento e contato com a natureza é vital para não sofrer com a carga emocional do ambiente. Ao finalizar cada etapa com gratidão e entrega total, você se torna um canal de transformação positiva, deixando um legado de progresso e humanidade por onde passa.</p>`
-  },
+<p>Nesta vibração, a satisfação material não vem apenas do acúmulo de bens, mas da sensação de dever cumprido em relação ao mundo. O desapego e a visão global permitem que a atuação profissional alcance fronteiras além do comum, rompendo barreiras culturais ou geográficas. Cuidar da energia física através de momentos de isolamento e contato com a natureza é vital para não sofrer com a carga emocional do ambiente. Ao finalizar cada etapa com gratidão e entrega total, você se torna um canal de transformação positiva, deixando um legado de progresso e humanidade por onde passa.</p>`,
+
+ 11: `Para você a forte influência do plano físico traz firmeza e segurança em decisões espirituosas. A grande capacidade material do 11 se une a uma lógica poderosa, evitando a dispersão de recursos e focando em soluções imediatas e práticas.`,
+22: `O perfil é difícil de ser superado. A união da espontaneidade do 22 com o forte senso de valores deste plano permite lidar com a rotina de forma poderosa, transformando a extravagância em objetivos definidos e realizações concretas para você.`,
+33: `O potencial idealista de você é potencializado por atitudes muito firmes. Não há espaço para improvisos e a força deste plano garante que os propósitos bem definidos não se percam em arrogância, mas sim em resultados sólidos e úteis.`
+    
+    },
 
 
   
@@ -2266,8 +2271,13 @@ const textosPlanos = {
 
 <p>Transformar a visão ampla em passos práticos e etapas cotidianas fortalece a capacidade de realização e evita que surja a frustração com a lentidão do mundo. A disposição física é visivelmente maior quando se percebe que a ação contribui para deixar o ambiente um pouco melhor para todos. É importante manter o foco no presente para não se perder em planos futuros mirabolantes que nunca saem do papel por falta de base material. A generosidade no trabalho atrai pessoas com o mesmo espírito, criando uma rede de cooperação poderosa e muito eficiente.</p>
 
-<p>Neste ciclo, a saúde física pede um olhar atento às emoções, pois o corpo reflete diretamente o estado de ânimo e a satisfação com a vida. Praticar o desapego de resultados imediatos permite que o trabalho flua com mais serenidade e menos pressão interna. A visão global de você permite encontrar soluções inovadoras para problemas antigos, agindo como um agente de mudança no plano material. Ao encerrar cada ciclo de trabalho com gratidão e a sensação de dever cumprido, a vitalidade se renova para novos e ainda maiores desafios em prol do bem comum.</p>`
- }, 
+<p>Neste ciclo, a saúde física pede um olhar atento às emoções, pois o corpo reflete diretamente o estado de ânimo e a satisfação com a vida. Praticar o desapego de resultados imediatos permite que o trabalho flua com mais serenidade e menos pressão interna. A visão global de você permite encontrar soluções inovadoras para problemas antigos, agindo como um agente de mudança no plano material. Ao encerrar cada ciclo de trabalho com gratidão e a sensação de dever cumprido, a vitalidade se renova para novos e ainda maiores desafios em prol do bem comum.</p>`,
+
+11: `As ideias são vivas e espirituosas. Com a influência mediana deste plano, o bom senso ajudará a equilibrar o lado sensacionalista, permitindo tomar decisões materiais corretas e controlar recursos sem ultrapassar limites.`,
+22: `A rotina flui bem e existe espontaneidade. A influência média física garante o cumprimento de atividades perfeitamente, mesmo as extravagantes, pois existe uma visão equilibrada de competitividade e foco no que é urgente.`,
+33: `O sucesso como idealista dependerá de usar o bom senso deste plano para não demonstrar arrogância. É possível realizar trabalhos perfeitamente mesmo sem vontade, o que ajuda a manifestar o potencial de forma equilibrada.`    
+    
+    }, 
 
 
 
@@ -2330,8 +2340,13 @@ const textosPlanos = {
 
 <p>Aprender a ancorar o idealismo na realidade através da disciplina rigorosa é o grande aprendizado necessário para que os sonhos se tornem realizações de fato. Sem a base da organização física, as melhores intenções correm o risco de se perderem no tempo, sem gerar o impacto positivo desejado no mundo. É fundamental que você entenda que o "fazer" é tão sagrado quanto o "pensar", e que a matéria é o palco onde a alma manifesta sua verdade. A falta de foco nos detalhes práticos pode gerar perdas financeiras ou mal-entendidos profissionais que atrasam o progresso e a evolução pessoal.</p>
 
-<p>Para elevar a disposição produtiva, recomenda-se que as causas nobres sejam transformadas em metas com prazos e entregáveis bem definidos. A vitalidade de você se renova quando se percebe que o esforço está gerando um benefício real para outras pessoas. Cuidar do corpo como se fosse o templo de uma missão ajuda a manter a saúde e o vigor em alta, evitando o desânimo melancólico que às vezes acompanha o excesso de idealismo. Ao unir a visão de águia com os pés no chão, a trajetória material ganha um sentido profundo, transformando a pessoa em um realizador de mudanças concretas e duradouras.</p>`
-      }
+<p>Para elevar a disposição produtiva, recomenda-se que as causas nobres sejam transformadas em metas com prazos e entregáveis bem definidos. A vitalidade de você se renova quando se percebe que o esforço está gerando um benefício real para outras pessoas. Cuidar do corpo como se fosse o templo de uma missão ajuda a manter a saúde e o vigor em alta, evitando o desânimo melancólico que às vezes acompanha o excesso de idealismo. Ao unir a visão de águia com os pés no chão, a trajetória material ganha um sentido profundo, transformando a pessoa em um realizador de mudanças concretas e duradouras.</p>`,
+   
+ 11: `Existe uma grande capacidade para tomar decisões em assuntos materiais, mas a fraca influência do plano físico mostra que falta praticidade, com tendência a focar mais nos obstáculos do que na solução, o que pode tornar as ideias sensacionalistas difíceis de colocar em andamento.`,
+22: `A rotina é algo simples de lidar e existe boa intenção, porém, a baixa praticidade deste plano com a tendência à extravagância pode complicar as coisas mais do que realmente são, dificultando a execução de planos materiais.`,
+33: `Por ser um perfil idealista, existe um grande potencial, mas a falta de objetividade do plano físico fraco pode levar a distorcer a verdade ou demonstrar arrogância quando não se consegue tirar as ideias do papel por evitar ações rotineiras.`   
+    
+    }
 },
 
 mental : {
@@ -2388,9 +2403,14 @@ mental : {
 
 <p>O desafio central reside em manter os pés firmemente plantados no chão e conseguir equilibrar esse idealismo grandioso com as exigências da praticidade diária e da vida material. A mente funciona como um canal potente de sabedoria, integrando diversos tipos de saberes para promover uma compreensão ética e humanitária da existência. É essencial aprender a focar em uma causa de cada vez para que a energia mental de você não se disperse em planos utópicos que não geram mudanças reais no presente. A tolerância e a compreensão são as marcas registradas de cada reflexão ou parecer emitido.</p>
 
-<p>Para manter a saúde intelectual em dia, recomenda-se o contato com diferentes culturas, filosofias e projetos que visem o bem comum em larga escala. A capacidade de síntese de você permite unir pessoas de diferentes opiniões em torno de um objetivo nobre, agindo como uma liderança inspiradora e cheia de carisma espiritual. Ao compartilhar a própria visão de mundo com clareza e humildade, você se torna um farol de consciência para a sociedade. O sucesso virá da capacidade de transformar o pensamento ético em ações que deixem o mundo um lugar mais justo, consciente e iluminado para as futuras gerações.</p>`
+<p>Para manter a saúde intelectual em dia, recomenda-se o contato com diferentes culturas, filosofias e projetos que visem o bem comum em larga escala. A capacidade de síntese de você permite unir pessoas de diferentes opiniões em torno de um objetivo nobre, agindo como uma liderança inspiradora e cheia de carisma espiritual. Ao compartilhar a própria visão de mundo com clareza e humildade, você se torna um farol de consciência para a sociedade. O sucesso virá da capacidade de transformar o pensamento ético em ações que deixem o mundo um lugar mais justo, consciente e iluminado para as futuras gerações.</p>`,
+   
   
-},
+11: `O perfil de liderança é excepcional. A união da originalidade do 11 com a mente altamente analítica deste plano permite encontrar explicações para tudo, realizando projetos por meio de uma determinação racional e detalhista.`,
+22: `A capacidade de perceber detalhes é elevada ao máximo pela racionalidade deste plano. Embora a indecisão possa surgir, o apego a valores e crenças fortes ajuda a encontrar motivos lógicos para agir com rapidez e precisão.`,
+33: `Com firmeza em julgamentos e perfil muito analítico, a grande capacidade de encontrar a razão das coisas serve para confortar e orientar, tornando este perfil uma autoridade intelectual e moral.`
+  
+  },
 
 
   medio: {
@@ -2446,8 +2466,12 @@ mental : {
 
 <p>Pode surgir uma tendência a se perder em idealizações ou planos excessivamente grandiosos, por isso é fundamental manter o foco nos detalhes imediatos e na viabilidade técnica de cada ideia. A mente funciona como um sensor apurado de tendências, sendo a atuação de você extremamente útil em projetos que visam reforma social, educação global ou inovação ética. O desafio é transformar o idealismo em passos práticos que possam ser executados no presente, sem gerar frustração com a lentidão dos processos humanos. A generosidade intelectual é a marca registrada de cada reflexão compartilhada.</p>
 
-<p>Para manter o equilíbrio, recomenda-se o contato com artes, viagens internacionais e projetos que possuam um propósito maior do que o lucro imediato. A mente de você se expande ao lidar com a diversidade e com temas que desafiem o status quo, agindo como um agente de mudança consciente. Ao compartilhar sua visão de mundo com clareza e humildade, você inspira outros a buscarem caminhos mais humanos e integrados. O sucesso intelectual virá da capacidade de ser o elo entre o sonho e a realidade, deixando um legado de sabedoria e compreensão que beneficia a todos, sem distinções.</p>`
-  
+<p>Para manter o equilíbrio, recomenda-se o contato com artes, viagens internacionais e projetos que possuam um propósito maior do que o lucro imediato. A mente de você se expande ao lidar com a diversidade e com temas que desafiem o status quo, agindo como um agente de mudança consciente. Ao compartilhar sua visão de mundo com clareza e humildade, você inspira outros a buscarem caminhos mais humanos e integrados. O sucesso intelectual virá da capacidade de ser o elo entre o sonho e a realidade, deixando um legado de sabedoria e compreensão que beneficia a todos, sem distinções.</p>`,
+   
+11: `Com criatividade e espírito explorador, a cautela deste plano médio beneficia a tomada de decisões complexas. A determinação é equilibrada pela capacidade de captar dinâmicas sociais sem colocar esforço mental excessivo ou desnecessário.`,
+22: `A percepção de detalhes é aguçada. A influência mediana mental ajuda a superar a incerteza e a indecisão, permitindo escolher o melhor caminho para resolver dificuldades de forma inteligente e menos estressante.`,
+33: `A firmeza de julgamento encontra equilíbrio na facilidade deste plano em lidar com questões complexas, tornando este perfil capaz de orientar com clareza e sem sobrecarga mental.`
+   
 },
 
 
@@ -2510,7 +2534,13 @@ mental : {
 
 <p>O aprendizado pessoal ocorre ao ampliar os horizontes através do estudo de diferentes culturas, filosofias e modelos sociais, forçando a mente a sair do senso comum e da zona de conforto intelectual. Desenvolver a clareza sobre o papel individual dentro do coletivo ajuda a mente de você a se tornar mais sábia, ética e verdadeiramente útil para a sociedade. É fundamental exercitar a tolerância e a compreensão de que as grandes realizações exigem uma visão que ultrapasse o interesse próprio. A sabedoria não é apenas acumular dados, mas entender a conexão profunda entre todas as coisas e seres.</p>
 
-<p>Nesta vibração, a saúde mental de você é fortalecida por viagens, leituras humanitárias e o contato com causas que tragam um propósito maior para a existência. Ao abrir a mente para o desconhecido, a criatividade explode e soluções inovadoras começam a surgir para os problemas cotidianos. O progresso intelectual será marcado pela transição de um pensamento individualista para uma consciência visionária e altruísta. O sucesso real virá da capacidade de liderar através da inspiração e da ética, deixando um legado que será lembrado pela generosidade e pela amplitude da visão alcançada.</p>`
+<p>Nesta vibração, a saúde mental de você é fortalecida por viagens, leituras humanitárias e o contato com causas que tragam um propósito maior para a existência. Ao abrir a mente para o desconhecido, a criatividade explode e soluções inovadoras começam a surgir para os problemas cotidianos. O progresso intelectual será marcado pela transição de um pensamento individualista para uma consciência visionária e altruísta. O sucesso real virá da capacidade de liderar através da inspiração e da ética, deixando um legado que será lembrado pela generosidade e pela amplitude da visão alcançada.</p>`,
+   
+11: `Existe criatividade e originalidade, mas a fraca influência mental pode trazer dificuldade em resistir à opinião alheia. A determinação precisa de disciplina para que o entusiasmo não seja restringido por influências externas ou falta de lógica.`,
+22: `Os menores detalhes são percebidos, mas a indecisão típica do 22 unida à dificuldade de julgar situações de forma racional deste plano pode causar um estado muito emotivo e incapacidade de governar a própria vida com a clareza necessária.`,
+33: `Existe grande potencial para orientar, mas a firmeza pode ser abalada pela dificuldade em usar fatos lógicos. É preciso confiar mais nas próprias suposições do que na autoridade de outras pessoas para não haver desvios de interesse.` 
+  
+  
   }
 },
   
@@ -2569,8 +2599,12 @@ forte : {
 
 <p>Um idealismo humanitário guia todos os relacionamentos de você, buscando sempre elevar a consciência e o estado de espírito de quem compartilha a caminhada. O sentir é transcendente e universal, conectando a alma aos sofrimentos e às alegrias de uma escala muito maior, tornando você um verdadeiro canal de amor e compreensão ética. O desafio reside em manter o equilíbrio emocional básico e os pés no chão, evitando a exaustão por tentar carregar o peso do mundo ou por negligenciar a própria felicidade em prol de ideais utópicos. O autocuidado é o que garante que a luz da compaixão continue brilhando.</p>
 
-<p>Para otimizar este plano, recomenda-se o envolvimento em projetos sociais, artes ou atividades que permitam a expressão desse amor universal de forma prática. A intuição de você para as necessidades alheias é um dom que deve ser usado com sabedoria e limites claros. Ao atrair parceiros que compartilham da mesma visão de mundo generosa, a união se torna uma força de transformação poderosa para a sociedade. O sucesso afetivo virá da capacidade de amar o indivíduo com a mesma profundidade com que se ama a humanidade, criando um refúgio de paz, sabedoria e acolhimento incondicional.</p>`
-  
+<p>Para otimizar este plano, recomenda-se o envolvimento em projetos sociais, artes ou atividades que permitam a expressão desse amor universal de forma prática. A intuição de você para as necessidades alheias é um dom que deve ser usado com sabedoria e limites claros. Ao atrair parceiros que compartilham da mesma visão de mundo generosa, a união se torna uma força de transformação poderosa para a sociedade. O sucesso afetivo virá da capacidade de amar o indivíduo com a mesma profundidade com que se ama a humanidade, criando um refúgio de paz, sabedoria e acolhimento incondicional.</p>`,
+ 
+11: `As emoções são sinceras e diretas, mas muito intensas. O plano forte faz com que instintos e sentimentos dominem a razão, o que pode levar a objetivos difíceis de alcançar e a uma dependência excessiva das sensações interiores.`,
+22: `Raramente se confia nas emoções, mas neste plano elas são controladoras. Isso gera um conflito interno entre o desejo de construir algo firme e a força das emoções que insistem em vencer a racionalidade, gerando sensibilidade extrema.`,
+33: `Existe um magnetismo cativante e empático, mas a forte influência emocional pode levar a um apoio excessivo em elementos externos e em outras pessoas para haver segurança, podendo causar ilusões em relacionamentos.`  
+
 },
 
 
@@ -2627,9 +2661,14 @@ forte : {
 
 <p>Existe uma predisposição natural para o perdão e para a superação de mágoas, focando sempre na evolução contínua dos laços afetivos e na busca por uma harmonia que beneficie o maior número de pessoas. O emocional de você é inclusivo e generoso, fazendo com que todos se sintam igualmente valorizados, respeitados e amparados dentro de uma visão humanitária e compreensiva da vida. O desafio é não se perder em idealizações utópicas sobre o par, aceitando as imperfeições cotidianas sem frustração. A compaixão de você é um bálsamo que acalma as tensões e promove a cura emocional nos ambientes por onde transita.</p>
 
-<p>Para otimizar essa vibração, recomenda-se o envolvimento em causas que tragam um sentido maior para a vida e permitam a expressão desse amor incondicional. A intuição de você para as necessidades da alma humana é um dom precioso que deve ser usado com sabedoria e limites saudáveis. Ao atrair parceiros que vibram na mesma frequência de entrega e idealismo, a união se torna uma força poderosa de transformação positiva para o mundo. O sucesso afetivo virá da capacidade de amar com desprendimento, consolidando uma trajetória onde o afeto é sinônimo de sabedoria, luz e evolução espiritual constante para todos.</p>`
+<p>Para otimizar essa vibração, recomenda-se o envolvimento em causas que tragam um sentido maior para a vida e permitam a expressão desse amor incondicional. A intuição de você para as necessidades da alma humana é um dom precioso que deve ser usado com sabedoria e limites saudáveis. Ao atrair parceiros que vibram na mesma frequência de entrega e idealismo, a união se torna uma força poderosa de transformação positiva para o mundo. O sucesso afetivo virá da capacidade de amar com desprendimento, consolidando uma trajetória onde o afeto é sinônimo de sabedoria, luz e evolução espiritual constante para todos.</p>`,
+   
   
-},
+11: `O instinto é forte e, com o equilíbrio deste plano, é possível comunicar o que se sente sem confrontos desnecessários. Isso permite que a força interior apareça de forma harmoniosa, exercendo influência positiva ao redor.`,
+22: `A busca é por segurança e, com o equilíbrio emocional médio, há originalidade e saúde nos contatos. Não se diz mais do que se sente, mantendo a harmonia enquanto se constrói bases sólidas e equilibradas.`,
+33: `A natureza protetora flui bem. É possível expressar a fraternidade de maneira equilibrada, permitindo que a personalidade forte apareça sem perder a harmonia interna ou se envolver em dramas.`
+  
+  },
 
  
   fraco: {
@@ -2691,7 +2730,12 @@ forte : {
 
 <p>Relacionamentos baseados no idealismo ou em propósitos elevados parecem absurdos ou utópicos, preferindo-se manter um pragmatismo emocional seco e desprovido de qualquer generosidade ou transcendência. O aprendizado de você envolve abrir o coração para a dor do outro e entender que a verdadeira felicidade pessoal está intrinsecamente ligada à capacidade de doar-se e de ser útil ao coletivo. É necessário expandir o horizonte dos afetos, saindo do círculo vicioso das próprias necessidades para enxergar a beleza de servir a uma causa maior. A compaixão é a chave que abre as portas da evolução espiritual.</p>
 
-<p>Para otimizar este plano, recomenda-se o contato com obras humanitárias, biografias de grandes líderes éticos e o serviço voluntário, mesmo que de forma pontual. A prática da tolerância diária com as falhas alheias ajuda a limpar o coração de julgamentos estéreis. Ao perceber que todos estão na mesma jornada de aprendizado, a rigidez de você diminui e a doçura do perdão surge naturalmente. O sucesso virá da transformação do egoísmo em uma visão visionária e generosa da vida, consolidando uma trajetória marcada pela sabedoria, pela paz universal e por um amor que não conhece fronteiras.</p>`
+<p>Para otimizar este plano, recomenda-se o contato com obras humanitárias, biografias de grandes líderes éticos e o serviço voluntário, mesmo que de forma pontual. A prática da tolerância diária com as falhas alheias ajuda a limpar o coração de julgamentos estéreis. Ao perceber que todos estão na mesma jornada de aprendizado, a rigidez de você diminui e a doçura do perdão surge naturalmente. O sucesso virá da transformação do egoísmo em uma visão visionária e generosa da vida, consolidando uma trajetória marcada pela sabedoria, pela paz universal e por um amor que não conhece fronteiras.</p>`,
+
+11: `O instinto é presente, mas a fraca influência emocional dificulta a expressão do que se sente. Isso pode gerar incerteza nas relações, pois a intensidade interior pode ser vista como frieza ou desinteresse por quem não entende os reais motivos.`,
+22: `O desejo de construir uma vida firme faz com que raramente se confie nas emoções. Em um plano fraco, isso se intensifica, tornando difícil compreender as próprias necessidades afetivas, resultando em uma postura que parece insensível.`,
+33: `Pela natureza fraterna, busca-se proteger os outros, mas existem problemas em expressar esse afeto de forma adequada. A indecisão emocional deste plano pode fazer com que a vontade de ajudar seja mal interpretada.`
+   
   }
 },
 
@@ -2749,9 +2793,14 @@ intuitivo : {
 
 <p>Esta visão de longo alcance permite perceber o impacto de pequenas ações no futuro distante, agindo sempre com uma base de amor universal, ética e compaixão. A percepção de você detecta as necessidades da alma coletiva, captando tendências de cura e evolução social antes que elas se tornem movimentos organizados. O desafio é manter os pés no chão e a atenção nos detalhes práticos da vida, garantindo que o idealismo não se perca em abstrações sem utilidade real no presente. A generosidade intuitiva de você é um bálsamo que acalma as angústias de quem busca um sentido maior para a vida e para o sofrimento.</p>
 
-<p>Para manter essa conexão elevada, recomenda-se o envolvimento em causas humanitárias, artes transcendentais e o estudo de tradições de sabedoria global. Ouvir os sinais do universo através das sincronicidades diárias é o que garante que você esteja sempre no fluxo correto da evolução. O sucesso virá da capacidade de ser um canal de luz e orientação para a humanidade, consolidando uma trajetória de sabedoria, perdão e amor incondicional. Ao agir conforme essa visão ampliada, você deixa um legado de paz e compreensão que transcende a própria vida e inspira gerações a buscarem um caminho mais iluminado e justo para todos.</p>`
+<p>Para manter essa conexão elevada, recomenda-se o envolvimento em causas humanitárias, artes transcendentais e o estudo de tradições de sabedoria global. Ouvir os sinais do universo através das sincronicidades diárias é o que garante que você esteja sempre no fluxo correto da evolução. O sucesso virá da capacidade de ser um canal de luz e orientação para a humanidade, consolidando uma trajetória de sabedoria, perdão e amor incondicional. Ao agir conforme essa visão ampliada, você deixa um legado de paz e compreensão que transcende a própria vida e inspira gerações a buscarem um caminho mais iluminado e justo para todos.</p>`,
+
+11: `As emoções são sinceras e diretas, mas muito intensas. O plano forte faz com que instintos e sentimentos dominem a razão, o que pode levar a objetivos difíceis de alcançar e a uma dependência excessiva das sensações interiores.`,
+22: `Raramente se confia nas emoções, mas neste plano elas são controladoras. Isso gera um conflito interno entre o desejo de construir algo firme e a força das emoções que insistem em vencer a racionalidade, gerando sensibilidade extrema.`,
+33: `Existe um magnetismo cativante e empático, mas a forte influência emocional pode levar a um apoio excessivo em elementos externos e em outras pessoas para haver segurança, podendo causar ilusões em relacionamentos.`   
   
-},
+
+  },
 
   medio: {
     1: `<p>A intuição de você aparece de forma pontual nos momentos de grandes decisões pessoais, servindo como uma voz de alerta necessária para que se iniciem novos caminhos com coragem e determinação. Existe uma percepção interior que surge com clareza justamente quando a lógica formal falha ou se mostra insuficiente, embora ainda ocorra uma alternância frequente com a necessidade de provas materiais e dados concretos. O grande desafio desta fase é aprender a dar mais crédito a esses impulsos viscerais, que costumam representar a via mais rápida e eficiente para a solução de dilemas complexos que a mente racional demora a processar.</p>
@@ -2808,7 +2857,10 @@ intuitivo : {
 
 <p>Para manter essa conexão elevada, recomenda-se o envolvimento em projetos que tragam um sentido maior para a existência e que permitam a expressão desse amor universal. Ouvir a voz interna que pede perdão ou compreensão é o caminho para a própria paz interior. O sucesso virá da capacidade de ser uma referência moral e espiritual, consolidando uma trajetória marcada pela generosidade, pela sabedoria e por um legado de luz que inspira todos ao redor. Ao agir conforme essa percepção ampla, você descobre que a verdadeira realização nasce da entrega sincera ao fluxo da evolução coletiva.</p>`
   
-},
+11: `O instinto é forte e, com o equilíbrio deste plano, é possível comunicar o que se sente sem confrontos desnecessários. Isso permite que a força interior apareça de forma harmoniosa, exercendo influência positiva ao redor.`,
+22: `A busca é por segurança e, com o equilíbrio emocional médio, há originalidade e saúde nos contatos. Não se diz mais do que se sente, mantendo a harmonia enquanto se constrói bases sólidas e equilibradas.`,
+33: `A natureza protetora flui bem. É possível expressar a fraternidade de maneira equilibrada, permitindo que a personalidade forte apareça sem perder a harmonia interna ou se envolver em dramas.`
+  },
 
 
   fraco: {
@@ -2870,7 +2922,11 @@ intuitivo : {
 
 <p>Existe uma resistência interna a ideais humanitários ou projetos de grande escala, que muitas vezes são vistos como "perda de tempo" ou "bobagem" devido à incapacidade momentânea de perceber o todo de forma integrada e vibracional. O aprendizado de você envolve abrir-se para a percepção de que faz parte de um organismo vivo e interconectado, permitindo que a intuição guie as escolhas para caminhos que tragam benefício coletivo e progresso moral real. A felicidade duradoura nasce da generosidade e da compreensão de que o bem do outro é, em última instância, o seu próprio bem refletido no espelho da existência global.</p>
 
-<p>Para otimizar essa vibração, recomenda-se o contato com causas que exijam desprendimento e visão de longo alcance, saindo da bolha das necessidades pessoais por um momento. Ao agir com ética universal, você descobre que o universo passa a conspirar a seu favor, trazendo sincronicidades e oportunidades que a mente egoica jamais conseguiria atrair sozinha. O sucesso virá da transformação da visão limitada em uma sabedoria generosa e iluminada, consolidando uma trajetória marcada pelo perdão, pela sabedoria e por um legado de luz que traz paz para o coração e evolução para todos ao redor.</p>`
+<p>Para otimizar essa vibração, recomenda-se o contato com causas que exijam desprendimento e visão de longo alcance, saindo da bolha das necessidades pessoais por um momento. Ao agir com ética universal, você descobre que o universo passa a conspirar a seu favor, trazendo sincronicidades e oportunidades que a mente egoica jamais conseguiria atrair sozinha. O sucesso virá da transformação da visão limitada em uma sabedoria generosa e iluminada, consolidando uma trajetória marcada pelo perdão, pela sabedoria e por um legado de luz que traz paz para o coração e evolução para todos ao redor.</p>`,
+11: `O instinto é presente, mas a fraca influência emocional dificulta a expressão do que se sente. Isso pode gerar incerteza nas relações, pois a intensidade interior pode ser vista como frieza ou desinteresse por quem não entende os reais motivos.`,
+22: `O desejo de construir uma vida firme faz com que raramente se confie nas emoções. Em um plano fraco, isso se intensifica, tornando difícil compreender as próprias necessidades afetivas, resultando em uma postura que parece insensível.`,
+33: `Pela natureza fraterna, busca-se proteger os outros, mas existem problemas em expressar esse afeto de forma adequada. A indecisão emocional deste plano pode fazer com que a vontade de ajudar seja mal interpretada.`
+   
   }
    }
 };
