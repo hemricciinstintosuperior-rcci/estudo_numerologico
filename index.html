@@ -448,71 +448,61 @@ function aplicarFiltroTexto(texto) {
 }
 
         
-function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual) {
-    // 1. NOTA BASE (Influenciada pelo Status do Plano)
-    let nota = 4.5 + (nomeRaw.length % 3) * 0.13; 
-    
-    if (statusPlano === "forte") nota += 2.2;
-    else if (statusPlano === "fraco") nota -= 1.8;
-    else nota += 0.4; // Médio
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual, rankingPlanos) {
+    let nota = 4.0;
 
-    // 2. PILARES DE LUZ (DNA POSITIVO) - O CORAÇÃO DO SEU MAPA
+    // --- MOTOR 1: A ESCADA DO PLANO (PODER DO TERRENO) ---
+    const posicaoNoRanking = rankingPlanos[planoAtual]; 
+    if (posicaoNoRanking === 1) nota += 2.8; // O Plano mais forte do nome (Campeão)
+    else if (posicaoNoRanking === 2) nota += 1.2; // Segundo plano mais forte
+    else if (posicaoNoRanking === 3) nota -= 0.5; // Terceiro lugar
+    else nota -= 2.2; // O plano com menos força (Fraco)
+
+    // --- MOTOR 2: O CLIMA DO PERFIL (MODULAÇÃO) ---
+    const perfil = dominantePerfil.toLowerCase();
+    
+    // Bônus/Penalidade padrão por tipo de energia
+    if (perfil === "criativo") nota += 1.4;
+    else if (perfil === "neutro") nota += 0.7;
+    else if (perfil === "indeciso") nota -= 1.6; // O indeciso "sabota" a força do plano
+
+    // --- MOTOR 3: DNA E SOMBRAS (CONTEÚDO DO MAPA) ---
     let dnaPositivo = [
         resultados.motivacao, resultados.Personalidade, resultados.influencia, 
         resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
         resultados.subconsciente, resultados.dia, resultados.equilibrio, 
         resultados.talento, resultados.essencia, regenteMatriz
     ];
-
-    // 3. LISTA DE SOMBRAS
     let sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
 
-    // 4. MAPA DE PONTUAÇÃO ESPECÍFICA (TABELA DA FOTO)
     const tabelaPontos = {
-        "Físico": { "criativo": [5], "indeciso": [6], "neutro": [4] },
-        "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3] },
-        "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4, 6], "neutro": [] },
-        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [3, 6] }
+        "Físico": { "criativo": [5], "indeciso": [6, 5], "neutro": [4] },
+        "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3, 4] },
+        "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4], "neutro": [3] },
+        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [6] }
     };
 
-    const perfil = dominantePerfil.toLowerCase();
-
-    // 5. PROCESSAMENTO DOS NÚMEROS DO ATRIBUTO
     nums.forEach(n => {
-        let multiplicador = 2.55; 
+        let multiplicador = 2.45;
         
-        // --- BÔNUS DA TABELA DE EXPRESSÃO (POR PLANO) ---
-        if (tabelaPontos[planoAtual] && tabelaPontos[planoAtual][perfil]) {
-            if (tabelaPontos[planoAtual][perfil].includes(n)) {
-                if (perfil === "indeciso") nota -= 1.2; 
-                else nota += 1.3; 
-            }
+        // Verifica afinidade específica com a tabela da foto
+        if (tabelaPontos[planoAtual] && tabelaPontos[planoAtual][perfil] && tabelaPontos[planoAtual][perfil].includes(n)) {
+            nota += 1.1; 
         }
 
-        // Bônus se o número for a vibração do plano (Ex: Físico vibra 8 e o atributo tem 8)
-        if (n === vibPlano && statusPlano !== "fraco") {
-            multiplicador = 3.3; 
-        } else if (n === vibPlano && statusPlano === "medio") {
-            multiplicador = 2.3;
-        }
+        // Bônus se o número for a vibração regente do plano
+        if (n === vibPlano && statusPlano !== "fraco") multiplicador = 3.2;
+
+        nota += (dnaPositivo.filter(num => num === n).length * multiplicador);
+        nota -= (sombras.filter(num => num === n).length * 2.0);
         
-        // --- CÁLCULO FINAL DA NOTA ---
-        // Soma presença no DNA Positivo
-        nota += (dnaPositivo.filter(num => num === n).length * multiplicador); 
-        
-        // Subtrai Sombras
-        nota -= (sombras.filter(num => num === n).length * 1.95); 
-        
-        // Penalidade para Números Faltantes (Lições Cármicas)
         if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
-            nota -= 1.55;
+            nota -= 1.6;
         }
     });
 
-    // Limita a nota entre 1.2 e 9.3 para o gráfico não estourar
-    return Math.min(Math.max(nota, 1.2), 9.3);
+    return Math.min(Math.max(nota, 1.0), 9.5);
 }
-
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
 
 const megaBancoAtributos = {
@@ -660,28 +650,90 @@ const megaBancoAtributos = {
 
     };
 
+// --- 1. FUNÇÃO DE CÁLCULO DE INTENSIDADE (O MOTOR) ---
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual, rankingPlanos) {
+    // Nota base inicial
+    let nota = 4.2;
+
+    // --- MOTOR 1: A ESCADA DO PLANO (TERRENO) ---
+    const posicaoNoRanking = rankingPlanos[planoAtual]; 
+    if (posicaoNoRanking === 1) nota += 2.8;      // 1º lugar: Plano Dominante
+    else if (posicaoNoRanking === 2) nota += 1.2; // 2º lugar: Plano Equilibrado
+    else if (posicaoNoRanking === 3) nota -= 0.6; // 3º lugar: Plano Baixo
+    else nota -= 2.4;                            // 4º lugar: Plano Desafiador (Fraco)
+
+    // --- MOTOR 2: O CLIMA DO PERFIL (MODULAÇÃO) ---
+    const perfil = dominantePerfil.toLowerCase();
+    if (perfil === "criativo") nota += 1.5;
+    else if (perfil === "neutro") nota += 0.8;
+    else if (perfil === "indeciso") nota -= 1.8; // O "sabotador" da força do plano
+
+    // --- MOTOR 3: DNA E SOMBRAS (CONTEÚDO DO MAPA) ---
+    let dnaPositivo = [
+        resultados.motivacao, resultados.Personalidade, resultados.influencia, 
+        resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
+        resultados.subconsciente, resultados.dia, resultados.equilibrio, 
+        resultados.talento, resultados.essencia, regenteMatriz
+    ];
+    let sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
+
+    // TABELA DA FOTO (RESONÂNCIA POR PLANO)
+    const tabelaPontos = {
+        "Físico": { "criativo": [5], "indeciso": [6, 5], "neutro": [4] },
+        "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3, 4] },
+        "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4], "neutro": [3] },
+        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [6] }
+    };
+
+    nums.forEach(n => {
+        let multiplicador = 2.4;
+        
+        // Afinidade específica com a tabela de letras/planos
+        if (tabelaPontos[planoAtual] && tabelaPontos[planoAtual][perfil] && tabelaPontos[planoAtual][perfil].includes(n)) {
+            nota += 1.2; 
+        }
+
+        // Bônus da vibração regente do plano
+        if (n === vibPlano) multiplicador = 3.1;
+
+        nota += (dnaPositivo.filter(num => num === n).length * multiplicador);
+        nota -= (sombras.filter(num => num === n).length * 2.1);
+        
+        if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
+            nota -= 1.7;
+        }
+    });
+
+    return Math.min(Math.max(nota, 1.0), 9.6);
+}
+
+// --- 2. FUNÇÃO MAESTRO (GERAR TODOS OS GRÁFICOS) ---
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
     let rankingGeral = [];
     
-    // 1. Dados originais e perfil
+    // Puxa os dados naturais (Físico, Mental, etc)
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
     const dominantePerfil = dadosNaturais.dominantePerfil; 
-
-    const somaDados = dadosNaturais.soma || {};
     const qtdDados = dadosNaturais.contPerfil || {}; 
 
-    const vNaturais = {
-        "Físico": reduzir(somaDados.fisico || 0),
-        "Mental": reduzir(somaDados.mental || 0),
-        "Emocional": reduzir(somaDados.emocional || 0),
-        "Intuitivo": reduzir(somaDados.intuitivo || 0)
-    };
-
-    const qtdPorPlano = {
+    // Define a Escada de Poder (Ranking de 1 a 4)
+    const contagemPlanos = {
         "Físico": qtdDados.fisico || 0,
         "Mental": qtdDados.mental || 0,
         "Emocional": qtdDados.emocional || 0,
         "Intuitivo": qtdDados.intuitivo || 0
+    };
+
+    const escadaPoder = Object.entries(contagemPlanos).sort((a, b) => b[1] - a[1]);
+    const rankingPlanos = {};
+    escadaPoder.forEach((item, index) => { rankingPlanos[item[0]] = index + 1; });
+
+    // Vibrações regentes de cada plano
+    const vNaturais = {
+        "Físico": reduzir(dadosNaturais.soma.fisico || 0),
+        "Mental": reduzir(dadosNaturais.soma.mental || 0),
+        "Emocional": reduzir(dadosNaturais.soma.emocional || 0),
+        "Intuitivo": reduzir(dadosNaturais.soma.intuitivo || 0)
     };
 
     const legendasPlanos = {
@@ -691,20 +743,14 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Mental": "Pilar da Racionalidade"
     };
 
-    // 2. Processamento dos Atributos
+    // Loop principal no Mega Banco de Atributos
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
-        let vibraDoPlano = vNaturais[dados.plano];
-        let contagemLetras = qtdPorPlano[dados.plano];
-
-        let statusPlano = "medio";
-        if (contagemLetras <= 1) statusPlano = "fraco";
-        else if (contagemLetras >= 4) statusPlano = "forte";
-
+        
         let nota = calcularIntensidadeAtributo(
             dados.nums, res, faltantes, nomeRaw, d3, 
-            regenteMatriz, negativasMatriz, vibraDoPlano, statusPlano, 
-            dominantePerfil, dados.plano
+            regenteMatriz, negativasMatriz, vNaturais[dados.plano], 
+            "medio", dominantePerfil, dados.plano, rankingPlanos
         );
 
         rankingGeral.push({
@@ -716,19 +762,19 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         });
     }
 
-    // 3. Geração do HTML (Visual)
-    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Resultado dos Potenciais</h2>`;
+    // --- 3. CONSTRUÇÃO DO VISUAL (HTML) ---
+    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Potenciais de Expressão</h2>`;
 
     ["Físico", "Emocional", "Intuitivo", "Mental"].forEach(p => {
+        const rank = rankingPlanos[p];
+        const seloPlano = rank === 1 ? "DOMINANTE" : (rank === 4 ? "DESAFIADOR" : "ESTÁVEL");
+        const corSelo = rank === 1 ? "#827108" : (rank === 4 ? "#cc0000" : "#555");
+
         htmlFinal += `
             <div class="secao-plano" style="margin-bottom: 40px; background:#fff; padding:20px; border-radius:8px; border: 2px solid #82710822;">
                 <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #827108; padding-bottom: 10px; margin-bottom: 20px;">
-                    <h3 style="color:#827108; text-transform: uppercase; font-size: 22px; margin: 0; font-weight:bold;">
-                        ${legendasPlanos[p]}
-                    </h3>
-                    <span style="background: #827108; color: #fff; padding: 5px 15px; border-radius: 4px; font-size: 11px; font-weight: bold; text-transform: uppercase;">
-                        PLANO ${p}
-                    </span>
+                    <h3 style="color:#827108; text-transform: uppercase; font-size: 20px; margin: 0; font-weight:bold;">${legendasPlanos[p]}</h3>
+                    <span style="background: ${corSelo}; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 10px; font-weight: bold;">${seloPlano}</span>
                 </div>
         `;
 
@@ -736,24 +782,15 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         const subcategorias = [...new Set(itensDestePlano.map(i => i.sub))];
 
         subcategorias.forEach(sub => {
-            htmlFinal += `
-                <div style="margin: 25px 0 10px 0;">
-                    <h4 style="color:#555; font-size: 13px; text-transform: uppercase; border-left: 4px solid #827108; padding-left: 10px; margin-bottom: 15px; letter-spacing: 1px;">
-                        ${sub}
-                    </h4>
-            `;
-
-            const itensDaSub = itensDestePlano.filter(i => i.sub === sub).sort((a,b) => b.nota - a.nota);
+            htmlFinal += `<div style="margin: 20px 0 10px 0;"><h4 style="color:#666; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;">${sub}</h4>`;
             
-            itensDaSub.forEach(item => {
-                let corBarra = item.nota >= 7 ? "#2e7d32" : (item.nota >= 5.2 ? "#827108" : "#cc0000");
-                htmlFinal += montarBarraGrafico(item, corBarra);
+            itensDestePlano.filter(i => i.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
+                let corBarra = item.nota >= 7 ? "#2e7d32" : (item.nota >= 5 ? "#827108" : "#cc0000");
+                htmlFinal += montarBarraGrafico(item, corBarra); // Certifique-se que montarBarraGrafico existe!
             });
-
-            htmlFinal += `</div>`; 
+            htmlFinal += `</div>`;
         });
-
-        htmlFinal += `</div>`; 
+        htmlFinal += `</div>`;
     });
 
     return htmlFinal;
