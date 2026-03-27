@@ -469,10 +469,10 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 
     // 4. MAPA DE PONTUAÇÃO ESPECÍFICA (TABELA DA FOTO)
     const tabelaPontos = {
-        "Físico": { "criativo": [5], "indeciso": [6, 5], "neutro": [4] },
-        "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3, 4] },
-        "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4], "neutro": [3] },
-        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [6] }
+        "Físico": { "criativo": [5], "indeciso": [6], "neutro": [4] },
+        "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3] },
+        "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4, 6], "neutro": [] },
+        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [3, 6] }
     };
 
     const perfil = dominantePerfil.toLowerCase();
