@@ -369,7 +369,25 @@ function calcularNumerologia(valor, aceitaMestre = true) {
     return num;
 }     
         
-       
+ // 1. Função que soma a data dígito por dígito (Linear)
+function calcularCVLinear(dia, mes, ano) {
+    let dataCompleta = dia.toString() + mes.toString() + ano.toString();
+    let somaTotal = 0;
+    for (let i = 0; i < dataCompleta.length; i++) {
+        let digito = parseInt(dataCompleta[i]);
+        if (!isNaN(digito)) somaTotal += digito;
+    }
+    return reduzirRespeitandoMestres(somaTotal);
+}
+
+// 2. Função de redução que para no 11, 22 e 33
+function reduzirRespeitandoMestres(num) {
+    while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+        num = num.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+    }
+    return num;
+}
+        
     function reduzir(n) {
     if (!n || n === 0) return 0;
     
@@ -1092,7 +1110,7 @@ const mot = calcularNumerologia(sV, true); // Aceita Mestre
 // --- NOVO CÁLCULO DE DÉFICIT DE COMPORTAMENTO ---
 const diaReduzido = reduzir(dia); 
 // Onde era: const cvCalculado = reduzir(dia + mes + ano);
-const cvCalculado = calcularNumerologia(dia + mes + ano, true); // Aceita Mestre
+const cvCalculado = calcularCVLinear(dia, mes, ano);
 
 // Onde era: const propCalculado = reduzir(cvCalculado + exp);
 const propCalculado = calcularNumerologia(cvCalculado + exp, true); // Aceita Mestre
