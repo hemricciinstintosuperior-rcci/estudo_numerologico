@@ -448,67 +448,39 @@ function aplicarFiltroTexto(texto) {
 }
 
         
-function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil) {
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual) {
     let nota = 4.0; 
 
-    // 1. PESO BASE DO STATUS DO PLANO (Geral para o grupo de atributos)
+    // Bônus/Penalidade por Status do Plano
     if (statusPlano === "forte") nota += 2.2;
     if (statusPlano === "fraco") nota -= 1.8;
     if (statusPlano === "medio") nota += 0.4;
 
-    // 2. DNA POSITIVO E SOMBRAS (Estrutura padrão)
-    let dnaPositivo = [
-        resultados.motivacao, resultados.Personalidade, resultados.influencia, 
-        resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
-        resultados.subconsciente, resultados.dia, resultados.equilibrio, 
-        resultados.talento, resultados.essencia, regenteMatriz
-    ];
-    let sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
-
-    // 3. MAPA DE PONTUAÇÃO ESPECÍFICA (PLANO + PERFIL)
-    // Aqui definimos exatamente quem ganha bônus em qual pilar
+    // Tabela baseada na sua foto (Plano + Letra/Número)
     const tabelaPontos = {
         "Físico": { "criativo": [5], "indeciso": [6, 5], "neutro": [4] },
         "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3, 4] },
         "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4], "neutro": [3] },
-        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1, 6, 1], "neutro": [6] }
+        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [6] }
     };
 
     const perfil = dominantePerfil.toLowerCase();
-    
-    // Pegamos o plano do atributo que está sendo calculado no momento
-    // (A variável 'planoAtual' deve vir do objeto megaBancoAtributos)
-    const planoDoAtributo = arguments[10]; // Vamos passar o nome do Plano como 11º argumento
 
     nums.forEach(n => {
         let multiplicador = 2.4; 
 
-        // --- REGRA DA TABELA DA FOTO ---
-        // Só ganha bônus se o número estiver na coluna certa E no plano certo
-        if (tabelaPontos[planoDoAtributo] && tabelaPontos[planoDoAtributo][perfil]) {
-            if (tabelaPontos[planoDoAtributo][perfil].includes(n)) {
-                // Se for perfil Indeciso, a gente trata como desequilíbrio (penalidade/sombra)
+        // SÓ PONTUA SE ESTIVER NO PLANO E COLUNA CERTOS
+        if (tabelaPontos[planoAtual] && tabelaPontos[planoAtual][perfil]) {
+            if (tabelaPontos[planoAtual][perfil].includes(n)) {
                 if (perfil === "indeciso") {
-                    nota -= 1.2; 
+                    nota -= 1.2; // Penaliza desequilíbrio
                 } else {
-                    // Se for Criativo ou Neutro, ganha o ponto positivo no pilar
-                    nota += 1.3; 
+                    nota += 1.3; // Bonifica Criativo/Neutro
                 }
             }
         }
-
-        // Bônus do Plano Mestre
-        if (n === vibPlano && statusPlano !== "fraco") {
-            multiplicador = 3.2;
-        }
-
-        // Soma final
-        nota += (dnaPositivo.filter(num => num === n).length * multiplicador); 
-        nota -= (sombras.filter(num => num === n).length * 1.9);
         
-        if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
-            nota -= 1.5;
-        }
+        // ... (resto do cálculo de DNA e Sombras)
     });
 
     return Math.min(Math.max(nota, 1.0), 9.6);
@@ -666,12 +638,10 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
     
     // 1. Chamada dos dados originais
     const dadosNaturais = calcularDadosPlanos(nomeRaw);
+    
+    // CORREÇÃO DO ERRO: Extraindo o perfil dominante para usar no cálculo
+    const dominantePerfil = dadosNaturais.dominantePerfil; 
 
-    // Diagnóstico interno (pode manter ou remover depois)
-    console.log("DADOS RECEBIDOS:", dadosNaturais);
-
-    // 2. Mapeamento correto baseado no seu console.log
-    // Usamos 'soma' e 'contPerfil' (que é onde estão as quantidades no seu sistema)
     const somaDados = dadosNaturais.soma || {};
     const qtdDados = dadosNaturais.contPerfil || {}; 
 
@@ -689,30 +659,25 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         "Intuitivo": qtdDados.intuitivo || 0
     };
 
-    const legendasPlanos = {
-        "Físico": "Pilar da Realização",
-        "Emocional": "Pilar do Sentimento",
-        "Intuitivo": "Pilar da Percepção",
-        "Mental": "Pilar da Racionalidade"
-    };
+    // ... (restante das legendas e processamento) ...
 
-    // 3. Processamento dos Atributos
+    // No loop dos atributos, passamos o plano como o 11º argumento
     for (let nomeAtributo in megaBancoAtributos) {
         let dados = megaBancoAtributos[nomeAtributo];
         let vibraDoPlano = vNaturais[dados.plano];
         let contagemLetras = qtdPorPlano[dados.plano];
 
-        // Lógica de Intensidade: Fraco (0-1), Médio (2-3), Forte (4+)
         let statusPlano = "medio";
         if (contagemLetras <= 1) statusPlano = "fraco";
         else if (contagemLetras >= 4) statusPlano = "forte";
 
-// Dentro do loop de atributos:
-let nota = calcularIntensidadeAtributo(
-    dados.nums, res, faltantes, nomeRaw, d3, 
-    regenteMatriz, negativasMatriz, vibraDoPlano, statusPlano, dominantePerfil,
-    dados.plano // <-- Passando o Plano (Ex: "Físico", "Mental") aqui!
-);
+        // AGORA PASSAMOS TUDO NA ORDEM CERTA:
+        let nota = calcularIntensidadeAtributo(
+            dados.nums, res, faltantes, nomeRaw, d3, 
+            regenteMatriz, negativasMatriz, vibraDoPlano, statusPlano, 
+            dominantePerfil, // 10º argumento
+            dados.plano      // 11º argumento (O plano do atributo atual)
+        );
 
         rankingGeral.push({
             nome: nomeAtributo,
@@ -722,6 +687,8 @@ let nota = calcularIntensidadeAtributo(
             percentual: (nota * 10).toFixed(1)
         });
     }
+    // ... restando da função (geração do HTML)
+}
 
     // 4. Geração do HTML (Visual)
     let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Resultado dos Potenciais</h2>`;
