@@ -706,7 +706,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         const dadosNaturais = calcularDadosPlanos(nomeRaw);
         const dominantePerfil = dadosNaturais.dominantePerfil || "neutro";
         
-        // 2. Define a Referência de cálculo (Maior soma entre os 4 planos)
+        // 2. Define a Referência de cálculo
         const somasValores = [
             dadosNaturais.soma.fisico || 0,
             dadosNaturais.soma.mental || 0,
@@ -715,24 +715,25 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         ];
         const ref = Math.max(...somasValores) || 1;
 
-        // 3. Mapeia Status e Vibração de cada plano para o cálculo de atributos
+        // 3. Mapeia Status e Vibração (Normalizando as chaves para evitar o erro de 'undefined')
         const statusPlanos = {};
         const vibPlanos = {};
-        const chavesPlanos = {
-            "Físico": "fisico",
-            "Mental": "mental",
-            "Emocional": "emocional",
-            "Intuitivo": "intuitivo"
+
+        // Criamos um mapa que entende tanto "Físico" quanto "fisico"
+        const normalizar = {
+            "Físico": "fisico", "fisico": "fisico",
+            "Mental": "mental", "mental": "mental",
+            "Emocional": "emocional", "emocional": "emocional",
+            "Intuitivo": "intuitivo", "intuitivo": "intuitivo"
         };
 
-        for (let label in chavesPlanos) {
-            let chaveDados = chavesPlanos[label];
-            let valorPlano = dadosNaturais.soma[chaveDados] || 0;
+        for (let p in normalizar) {
+            let chaveOriginal = normalizar[p];
+            let valorPlano = dadosNaturais.soma[chaveOriginal] || 0;
             let razao = valorPlano / ref;
 
-            // Define Status: Forte (>75%), Médio (50%-75%), Fraco (<50%)
-            statusPlanos[label] = (razao > 0.75) ? "forte" : (razao >= 0.50) ? "medio" : "fraco";
-            vibPlanos[label] = reduzir(valorPlano);
+            statusPlanos[p] = (razao > 0.75) ? "forte" : (razao >= 0.50) ? "medio" : "fraco";
+            vibPlanos[p] = reduzir(valorPlano);
         }
 
         const legendasPlanos = {
@@ -742,41 +743,43 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             "Mental": "Pilar da Racionalidade"
         };
 
-        // 4. Processamento de cada atributo do Mega Banco
+        // 4. Processamento de cada atributo
         for (let nomeAtributo in megaBancoAtributos) {
             let configAtributo = megaBancoAtributos[nomeAtributo];
-            let planoAlvo = configAtributo.plano;
+            let planoAlvo = configAtributo.plano; // Ex: "Físico"
 
-            let notaFinal = calcularIntensidadeAtributo(
-                configAtributo.nums, 
-                res, 
-                faltantes, 
-                nomeRaw, 
-                d3, 
-                regenteMatriz, 
-                negativasMatriz, 
-                vibPlanos[planoAlvo], 
-                statusPlanos[planoAlvo], 
-                dominantePerfil, 
-                planoAlvo
-            );
+            // Só calcula se o plano existir no nosso mapa de status
+            if (statusPlanos[planoAlvo]) {
+                let notaFinal = calcularIntensidadeAtributo(
+                    configAtributo.nums, 
+                    res, 
+                    faltantes, 
+                    nomeRaw, 
+                    d3, 
+                    regenteMatriz, 
+                    negativasMatriz, 
+                    vibPlanos[planoAlvo], 
+                    statusPlanos[planoAlvo], 
+                    dominantePerfil, 
+                    planoAlvo
+                );
 
-            rankingGeral.push({
-                nome: nomeAtributo,
-                nota: notaFinal,
-                plano: planoAlvo,
-                sub: configAtributo.sub,
-                percentual: (notaFinal * 10).toFixed(1)
-            });
+                rankingGeral.push({
+                    nome: nomeAtributo,
+                    nota: notaFinal,
+                    plano: planoAlvo,
+                    sub: configAtributo.sub,
+                    percentual: (notaFinal * 10).toFixed(1)
+                });
+            }
         }
 
         // 5. Construção da Interface HTML
         let htmlFinal = `<h2 style="color:#827108; text-align:center; margin:40px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Análise de Potenciais de Expressão</h2>`;
 
-        // Ordenação visual: Planos Fortes aparecem primeiro
         const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"].sort((a, b) => {
             const pesos = { "forte": 3, "medio": 2, "fraco": 1 };
-            return pesos[statusPlanos[b]] - pesos[statusPlanos[a]];
+            return (pesos[statusPlanos[b]] || 0) - (pesos[statusPlanos[a]] || 0);
         });
 
         ordemVisual.forEach(p => {
@@ -797,13 +800,13 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             subgrupos.forEach(subNome => {
                 htmlFinal += `<h4 style="color:#888; font-size:12px; text-transform:uppercase; margin: 20px 0 15px 0; border-left: 3px solid #eee; padding-left: 10px;">${subNome}</h4>`;
                 
-                // Exibe os atributos do subgrupo em ordem decrescente de nota
                 atributosDestePlano
                     .filter(item => item.sub === subNome)
                     .sort((a, b) => b.nota - a.nota)
                     .forEach(itemFinal => {
-                        // Chama a função externa para renderizar a barra individual
-                        htmlFinal += montarBarraGrafico(itemFinal); 
+                        if (typeof montarBarraGrafico === 'function') {
+                            htmlFinal += montarBarraGrafico(itemFinal); 
+                        }
                     });
             });
 
@@ -813,10 +816,8 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         return htmlFinal;
 
     } catch (erro) {
-        console.error("Falha na geração dos gráficos de potenciais:", erro);
-        return `<div style="background:#fff5f5; color:#c0392b; padding:20px; border-radius:8px; border:1px solid #feb2b2; margin:20px 0;">
-                    <strong>Erro de Processamento:</strong> Não foi possível carregar os gráficos de potenciais. Verifique os dados de entrada.
-                </div>`;
+        console.error("Falha na geração dos gráficos:", erro);
+        return `<div style="color:red; padding:20px;">Erro técnico ao gerar os potenciais.</div>`;
     }
 }
 // FUNÇÃO PARA TROCAR AS ABAS
