@@ -504,6 +504,32 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 }
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
 
+function calcularIntensidadeMomento(configAtributo, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual) {
+    // 1. COMEÇAMOS COM A NOTA QUE ELE TERIA NO NATURAL (BASE)
+    let nota = calcularIntensidadeAtributo(configAtributo.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual);
+
+    // 2. MODIFICADORES DE TEMPO (O CLIMA)
+    const anoP = res.anoPessoal;
+    const cicloAtivo = res.ciclos[1]; // Exemplo: Pegando o ciclo atual
+    const pinaculoAtivo = res.momentos[1]; // Exemplo: Pináculo atual
+    const desafioAtivo = res.desafios[3]; // Desafio Maior
+
+    configAtributo.nums.forEach(n => {
+        // BÔNUS: Se o número do atributo é o seu ANO PESSOAL (Forte Ativação)
+        if (n === anoP) nota += 1.5;
+
+        // BÔNUS: Se o número está nos Ciclos ou Pináculos (Oportunidade)
+        if (n === cicloAtivo || n === pinaculoAtivo) nota += 1.0;
+
+        // ÔNUS: Se o número é o seu DESAFIO MAIOR (Dificuldade de manifestação)
+        if (n === desafioAtivo) nota -= 2.0;
+    });
+
+    // Garante que a nota fique no limite do gráfico
+    return Math.min(Math.max(nota, 1.0), 9.6);
+}
+
+        
 const megaBancoAtributos = {
     // --- PLANO FÍSICO ---
     "Ímpeto de Finalização": { nums: [1, 8, 9], plano: "Físico", sub: "EXECUÇÃO E FORÇA BRUTA" },
@@ -744,6 +770,78 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         return `<div style="color:red;">Erro ao processar gráficos.</div>`;
     }
 }
+
+
+function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, statusMomentoObj) {
+    try {
+        let rankingMomento = [];
+        
+        // Usamos o status e perfil que vieram do "Status do Momento"
+        const statusPlanos = statusMomentoObj.status; 
+        const vibPlanos = statusMomentoObj.vibracoes;
+        const perfilMomento = statusMomentoObj.perfil;
+
+        for (let nomeAtributo in megaBancoAtributos) {
+            let config = megaBancoAtributos[nomeAtributo];
+            let pAlvo = config.plano;
+
+            if (statusPlanos[pAlvo]) {
+                let notaFinal = calcularIntensidadeMomento(
+                    config, res, faltantes, nomeRaw, d3, 
+                    regenteMatriz, negativasMatriz, 
+                    vibPlanos[pAlvo], statusPlanos[pAlvo], 
+                    perfilMomento, pAlvo
+                );
+
+                rankingMomento.push({
+                    nome: nomeAtributo,
+                    nota: notaFinal,
+                    plano: pAlvo,
+                    sub: config.sub,
+                    percentual: (notaFinal * 10).toFixed(1)
+                });
+            }
+        }
+
+        let html = `<h2 style="color:#827108; text-align:center; margin:50px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados no Ciclo Atual</h2>`;
+        html += `<p style="text-align:center; color:#666; font-style:italic; margin-bottom:30px;">Esta análise cruza sua natureza com as vibrações do seu Ano Pessoal e Desafios atuais.</p>`;
+
+        // Reutiliza a lógica visual da gerarTodosOsGraficos original
+        const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
+        
+        ordemVisual.forEach(p => {
+            const status = statusPlanos[p];
+            const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
+            
+            html += `
+                <div style="margin-bottom: 40px; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 20px;">
+                        <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:17px;">${p} <small style="color:#999;">(Tendência de Momento)</small></h3>
+                        <span style="font-size:10px; font-weight:bold; background:${cor}; color:#fff; padding:3px 10px; border-radius:15px; text-transform:uppercase;">${status}</span>
+                    </div>
+            `;
+
+            const atributos = rankingMomento.filter(item => item.plano === p);
+            const subgrupos = [...new Set(atributos.map(item => item.sub))];
+
+            subgrupos.forEach(sub => {
+                html += `<h4 style="color:#aaa; font-size:11px; text-transform:uppercase; margin: 15px 0 10px 0;">${sub}</h4>`;
+                atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
+                    html += montarBarraGrafico(item);
+                });
+            });
+            html += `</div>`;
+        });
+
+        return html;
+    } catch (e) {
+        console.error("Erro nos gráficos de momento:", e);
+        return "";
+    }
+}
+
+
+        
 // FUNÇÃO PARA TROCAR AS ABAS
 function alternarAba(evt, nomePlano) {
     const conteudos = document.querySelectorAll(".tab-content");
@@ -975,9 +1073,25 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     
     let dominanteMomento = Object.keys(contPerfilMomento).reduce((a, b) => contPerfilMomento[a] >= contPerfilMomento[b] ? a : b);
     const planosOrdenados = Object.entries(somaMomento).sort((a, b) => b[1] - a[1]);
-    const _p1 = planosOrdenados[0];
-    const ref = _p1[1] || 1;
+    const ref = planosOrdenados[0][1] || 1;
     const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
+
+    // Objeto para o gráfico (Não mexer)
+    const dadosParaGrafico = {
+        status: {
+            "Físico": (somaMomento.fisico / ref > 0.75) ? "forte" : (somaMomento.fisico / ref >= 0.50) ? "medio" : "fraco",
+            "Mental": (somaMomento.mental / ref > 0.75) ? "forte" : (somaMomento.mental / ref >= 0.50) ? "medio" : "fraco",
+            "Emocional": (somaMomento.emocional / ref > 0.75) ? "forte" : (somaMomento.emocional / ref >= 0.50) ? "medio" : "fraco",
+            "Intuitivo": (somaMomento.intuitivo / ref > 0.75) ? "forte" : (somaMomento.intuitivo / ref >= 0.50) ? "medio" : "fraco"
+        },
+        vibracoes: {
+            "Físico": reduzir(somaMomento.fisico),
+            "Mental": reduzir(somaMomento.mental),
+            "Emocional": reduzir(somaMomento.emocional),
+            "Intuitivo": reduzir(somaMomento.intuitivo)
+        },
+        perfil: dominanteMomento
+    };
 
     const descricoesPerfilMomento = {
         criativo: `<p>"Sua energia de ação este ano está em fase de expansão e Criatividade"</p><p>Neste ciclo, sua forma de agir está mais arrojada. Você sentirá uma facilidade maior para encontrar saídas rápidas e originais para problemas que antes pareciam travados.</p>`,
@@ -985,8 +1099,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         neutro: `<p>"Este ano sua ação prioriza o equilíbrio, a observação e a Neutralidade"</p><p>Sua postura atual é de 'esperar para ver'. Você prefere analisar o terreno antes de dar qualquer passo importante, agindo com máxima prudência.</p>`
     };
 
- // --- BLOCO DO STATUS DO MOMENTO COM INTRODUÇÃO ---
-let html = `
+    let html = `
     <div class="secao-card quebra-pagina" style="border-top: 4px solid var(--gold); margin-top: 40px;">
         <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 20px;">
             <h2 class="titulo-topico" style="margin: 0;">Status do Momento</h2>
@@ -994,11 +1107,9 @@ let html = `
                 VIGÊNCIA: ${periodoVigente}
             </span>
         </div>
-
         <div class="texto-intro" style="margin-bottom: 25px; font-style: italic; color: #444; line-height: 1.6; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-            O Status do Momento revela a distribuição das suas potências vitais durante o ciclo vigente. Através da análise das frequências que compõem o seu nome, identificamos como suas energias físicas, mentais, emocionais, intuitivas e seu Perfil de ação Criativo, indeciso ou neutro  estão se manifestando neste período.
+            O Status do Momento revela a distribuição das suas potências vitais durante o ciclo vigente...
         </div>
-
         <div style="margin-bottom: 25px; padding: 20px; border: 2px solid var(--dark); border-radius: 12px; background: #fafafa; display: flex; align-items: center; gap: 20px;">
             <div style="background: var(--dark); color: var(--gold); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; border: 2px solid var(--gold); flex-shrink: 0;">
                 ${dominanteMomento[0]}
@@ -1011,7 +1122,7 @@ let html = `
             </div>
         </div>`;
 
-    // GRÁFICOS (Voltou as cores dinâmicas)
+    // GRÁFICOS DE PLANOS
     for(let p in somaMomento) {
         let porcentagem = (somaMomento[p] / ref) * 100;
         html += `
@@ -1040,37 +1151,30 @@ let html = `
         }
     }
 
-// --- BLOCO DE TRÂNSITO ATUALIZADO ---
-const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
+    // --- BLOCO DO TRÂNSITO (RESTORED) ---
+    const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
+    const textoIntroTransito = "O Número de Trânsito representa a síntese vibracional do seu momento atual, unificando as energias dos seus planos Físico, Mental, Emocional e Intuitivo.";
 
-// Texto que você pediu (duas linhas sobre a conexão com os planos)
-const novoTextoIntroducao = "O Número de Trânsito representa a síntese vibracional do seu momento atual, unificando as energias dos seus planos Físico, Mental, Emocional e Intuitivo em uma frequência única que rege este ciclo.";
-
-html += `
-<div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 30px;">
-    <h2 class="titulo-topico">Número de Trânsito</h2>
-    
-    <div class="resultado-bloco">
-        <div class="texto-intro" style="margin-bottom: 20px; font-style: italic; color: #444; line-height: 1.6;">
-            ${novoTextoIntroducao}
+    html += `
+    <div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 30px;">
+        <h2 class="titulo-topico">Número de Trânsito</h2>
+        <div class="resultado-bloco">
+            <div class="texto-intro" style="margin-bottom: 20px; font-style: italic; color: #444; line-height: 1.6;">
+                ${textoIntroTransito}
+            </div>
+            <h3 style="display: flex; align-items: center; gap: 10px;">
+                Seu Trânsito Atual: <span class="numero-destaque" style="color: var(--gold); font-size: 1.5em;">${vTransitoCalculado}</span>
+            </h3>
+            <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
+                VIGÊNCIA: ${periodoVigente}
+            </p>
+            <div class="texto-res" style="margin-top: 15px;">
+                ${aplicarFiltroTexto(window.TextosTransito ? window.TextosTransito[vTransitoCalculado] : "")}
+            </div>
         </div>
+    </div>`;
 
-        <h3 style="display: flex; align-items: center; gap: 10px;">
-            Seu Trânsito Atual: <span class="numero-destaque" style="color: var(--gold); font-size: 1.5em;">${vTransitoCalculado}</span>
-        </h3>
-        
-        <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
-            VIGÊNCIA: ${periodoVigente}
-        </p>
-
-        <div class="texto-res" style="margin-top: 15px;">
-            ${aplicarFiltroTexto(TextosTransito[vTransitoCalculado] || "")}
-        </div>
-    </div>
-</div>
-`;
-
-    return html;
+    return { html: html, dados: dadosParaGrafico };
 }
         
 function gerarMapaCompleto() {
@@ -1527,9 +1631,31 @@ html += `
             
 
 // 1. INSERIR O PLANO DE MOMENTO E VIBRAÇÃO DE TRÂNSITO AQUI
-html += montarHtmlPlanosMomento(nomeRaw, dataRaw); 
+// --- INÍCIO DO BLOCO INTEGRADO: MOMENTO + GRÁFICOS ---
+
+// 1. Geramos o Status, Trânsito e capturamos os dados técnicos do momento
+const resultadoMomentoCompleto = montarHtmlPlanosMomento(nomeRaw, dataRaw);
+
+// 2. Geramos as barrinhas do gráfico logo em seguida
+// Passamos os dados colhidos (resultadoMomentoCompleto.dados) para o gráfico
+const htmlGraficosMomento = gerarTodosOsGraficosMomento(
+    res, 
+    res.deficiencias, 
+    nomeRaw, 
+    res.desafios[3], 
+    regenteVida, 
+    dadosNegativas.nums, 
+    resultadoMomentoCompleto.dados
+);
+
+// 3. Somamos os dois ao relatório (Status primeiro, Gráfico depois)
+html += resultadoMomentoCompleto.html + htmlGraficosMomento;
+
+// --- FIM DO BLOCO INTEGRADO ---
 
 
+
+    
 // 1. CAPTURA SEGURA DA DATA (Evita o erro de 'null')
 const campoDataElemento = document.getElementById('dataNascimento');
 // --- CÁLCULO DA DATA BLINDADO ---
