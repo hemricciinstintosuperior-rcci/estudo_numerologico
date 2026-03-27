@@ -448,52 +448,70 @@ function aplicarFiltroTexto(texto) {
 }
 
         
-function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano) {
-    // Nota base baseada no comprimento do nome
-    let nota = 4.5 + (nomeRaw.length % 3) * 0.13; 
-    
-    // PILARES DE LUZ (DNA POSITIVO)
+function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil) {
+    let nota = 4.0; 
+
+    // 1. PESO BASE DO STATUS DO PLANO (Geral para o grupo de atributos)
+    if (statusPlano === "forte") nota += 2.2;
+    if (statusPlano === "fraco") nota -= 1.8;
+    if (statusPlano === "medio") nota += 0.4;
+
+    // 2. DNA POSITIVO E SOMBRAS (Estrutura padrão)
     let dnaPositivo = [
         resultados.motivacao, resultados.Personalidade, resultados.influencia, 
         resultados.comportamento, resultados.CaminhodeVida, resultados.Propósito, 
         resultados.subconsciente, resultados.dia, resultados.equilibrio, 
         resultados.talento, resultados.essencia, regenteMatriz
     ];
-
-    // LISTA DE SOMBRAS
     let sombras = [resultados.deficitRecorrente, d3].concat(resultados.deficitsOcultos || [], negativasMatriz);
 
-    // --- REGRA DOS PLANOS DE EXPRESSÃO ---
-    // Se o plano for FRACO, a vibração do plano vira uma SOMBRA.
-    // Se for MÉDIO ou FORTE, vira DNA POSITIVO.
-    if (statusPlano === "fraco") {
-        sombras.push(vibPlano);
-    } else {
-        dnaPositivo.push(vibPlano);
-    }
+    // 3. MAPA DE PONTUAÇÃO ESPECÍFICA (PLANO + PERFIL)
+    // Aqui definimos exatamente quem ganha bônus em qual pilar
+    const tabelaPontos = {
+        "Físico": { "criativo": [5], "indeciso": [6, 5], "neutro": [4] },
+        "Mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3, 4] },
+        "Emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4], "neutro": [3] },
+        "Intuitivo": { "criativo": [2], "indeciso": [6, 8, 1, 6, 1], "neutro": [6] }
+    };
+
+    const perfil = dominantePerfil.toLowerCase();
+    
+    // Pegamos o plano do atributo que está sendo calculado no momento
+    // (A variável 'planoAtual' deve vir do objeto megaBancoAtributos)
+    const planoDoAtributo = arguments[10]; // Vamos passar o nome do Plano como 11º argumento
 
     nums.forEach(n => {
-        // Multiplicador padrão
-        let multiplicador = 2.55; 
-        
-        // Bônus extra se o número do atributo for o mesmo do plano e o plano for FORTE
-        if (n === vibPlano && statusPlano === "forte") {
-            multiplicador = 3.8; 
-        } else if (n === vibPlano && statusPlano === "medio") {
-            multiplicador = 2.3;
+        let multiplicador = 2.4; 
+
+        // --- REGRA DA TABELA DA FOTO ---
+        // Só ganha bônus se o número estiver na coluna certa E no plano certo
+        if (tabelaPontos[planoDoAtributo] && tabelaPontos[planoDoAtributo][perfil]) {
+            if (tabelaPontos[planoDoAtributo][perfil].includes(n)) {
+                // Se for perfil Indeciso, a gente trata como desequilíbrio (penalidade/sombra)
+                if (perfil === "indeciso") {
+                    nota -= 1.2; 
+                } else {
+                    // Se for Criativo ou Neutro, ganha o ponto positivo no pilar
+                    nota += 1.3; 
+                }
+            }
         }
-        
-        // Cálculo final da nota do atributo
+
+        // Bônus do Plano Mestre
+        if (n === vibPlano && statusPlano !== "fraco") {
+            multiplicador = 3.2;
+        }
+
+        // Soma final
         nota += (dnaPositivo.filter(num => num === n).length * multiplicador); 
-        nota -= (sombras.filter(num => num === n).length * 1.87); // Peso da sombra levemente aumentado
+        nota -= (sombras.filter(num => num === n).length * 1.9);
         
         if (faltantes.includes(n.toString()) || faltantes.includes(Number(n))) {
-            nota -= 1.47;
+            nota -= 1.5;
         }
     });
 
-    // Limita a nota entre 1.2 e 9.8
-    return Math.min(Math.max(nota, 1.2), 9.3);
+    return Math.min(Math.max(nota, 1.0), 9.6);
 }
 
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
@@ -689,10 +707,12 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         if (contagemLetras <= 1) statusPlano = "fraco";
         else if (contagemLetras >= 4) statusPlano = "forte";
 
-        let nota = calcularIntensidadeAtributo(
-            dados.nums, res, faltantes, nomeRaw, d3, 
-            regenteMatriz, negativasMatriz, vibraDoPlano, statusPlano
-        );
+// Dentro do loop de atributos:
+let nota = calcularIntensidadeAtributo(
+    dados.nums, res, faltantes, nomeRaw, d3, 
+    regenteMatriz, negativasMatriz, vibraDoPlano, statusPlano, dominantePerfil,
+    dados.plano // <-- Passando o Plano (Ex: "Físico", "Mental") aqui!
+);
 
         rankingGeral.push({
             nome: nomeAtributo,
