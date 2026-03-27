@@ -222,7 +222,14 @@ function mascaraData(campo) {
 }
 
 
-  
+  // Função de Redução Pura (Para usar onde NÃO pode ter 11/22/33)
+function reduzirPuro(n) {
+    let num = Number(n);
+    while (num > 9) {
+        num = num.toString().split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+    }
+    return num;
+}
        
 function gerarPiramide(nome){
     let base = [];
