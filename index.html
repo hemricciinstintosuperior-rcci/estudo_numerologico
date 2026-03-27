@@ -699,90 +699,125 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 
 // --- 2. FUNÇÃO MAESTRO (GERAR TODOS OS GRÁFICOS) ---
 function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz) {
-    let rankingGeral = [];
-    const dadosNaturais = calcularDadosPlanos(nomeRaw);
-    const dominantePerfil = dadosNaturais.dominantePerfil;
-    
-    // Pegamos a maior soma para servir de referência (o "ref" da sua função)
-    const somas = [
-        dadosNaturais.soma.fisico || 0,
-        dadosNaturais.soma.mental || 0,
-        dadosNaturais.soma.emocional || 0,
-        dadosNaturais.soma.intuitivo || 0
-    ];
-    const ref = Math.max(...somas) || 1;
+    try {
+        let rankingGeral = [];
+        
+        // 1. Obtém os dados base do Plano Natural
+        const dadosNaturais = calcularDadosPlanos(nomeRaw);
+        const dominantePerfil = dadosNaturais.dominantePerfil || "neutro";
+        
+        // 2. Define a Referência de cálculo (Maior soma entre os 4 planos)
+        const somasValores = [
+            dadosNaturais.soma.fisico || 0,
+            dadosNaturais.soma.mental || 0,
+            dadosNaturais.soma.emocional || 0,
+            dadosNaturais.soma.intuitivo || 0
+        ];
+        const ref = Math.max(...somasValores) || 1;
 
-    // Criamos um mapa de Status para cada plano
-    const statusPlanos = {};
-    const vibPlanos = {};
+        // 3. Mapeia Status e Vibração de cada plano para o cálculo de atributos
+        const statusPlanos = {};
+        const vibPlanos = {};
+        const chavesPlanos = {
+            "Físico": "fisico",
+            "Mental": "mental",
+            "Emocional": "emocional",
+            "Intuitivo": "intuitivo"
+        };
 
-    for (let p in dadosNaturais.soma) {
-        let valor = dadosNaturais.soma[p];
-        let r = valor / ref;
-        // A REGRA DE OURO:
-        statusPlanos[p] = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
-        vibPlanos[p] = reduzir(valor);
-    }
+        for (let label in chavesPlanos) {
+            let chaveDados = chavesPlanos[label];
+            let valorPlano = dadosNaturais.soma[chaveDados] || 0;
+            let razao = valorPlano / ref;
 
-    // Loop de Atributos
-    for (let nomeAtributo in megaBancoAtributos) {
-        let dados = megaBancoAtributos[nomeAtributo];
-        let pKey = dados.plano.toLowerCase(); // Ajuste para bater com as chaves (fisico, mental...)
+            // Define Status: Forte (>75%), Médio (50%-75%), Fraco (<50%)
+            statusPlanos[label] = (razao > 0.75) ? "forte" : (razao >= 0.50) ? "medio" : "fraco";
+            vibPlanos[label] = reduzir(valorPlano);
+        }
 
-        // Agora passamos o STATUS REAL do plano
-        let nota = calcularIntensidadeAtributo(
-            dados.nums, res, faltantes, nomeRaw, d3, 
-            regenteMatriz, negativasMatriz, vibPlanos[dados.plano], 
-            statusPlanos[dados.plano], dominantePerfil, dados.plano
-        );
+        const legendasPlanos = {
+            "Físico": "Pilar da Realização",
+            "Emocional": "Pilar do Sentimento",
+            "Intuitivo": "Pilar da Percepção",
+            "Mental": "Pilar da Racionalidade"
+        };
 
-        rankingGeral.push({
-            nome: nomeAtributo,
-            nota: nota,
-            plano: dados.plano,
-            sub: dados.sub,
-            percentual: (nota * 10).toFixed(1)
-        });
-    }
+        // 4. Processamento de cada atributo do Mega Banco
+        for (let nomeAtributo in megaBancoAtributos) {
+            let configAtributo = megaBancoAtributos[nomeAtributo];
+            let planoAlvo = configAtributo.plano;
 
-    // Parte do HTML... (Ordena por nota para mostrar os melhores potenciais no topo)
-    return construirHTMLGraficos(rankingGeral.sort((a,b) => b.nota - a.nota));
-}
+            let notaFinal = calcularIntensidadeAtributo(
+                configAtributo.nums, 
+                res, 
+                faltantes, 
+                nomeRaw, 
+                d3, 
+                regenteMatriz, 
+                negativasMatriz, 
+                vibPlanos[planoAlvo], 
+                statusPlanos[planoAlvo], 
+                dominantePerfil, 
+                planoAlvo
+            );
 
-    // 5. Construção do HTML
-    let htmlFinal = `<h2 style="color:#827108; text-align:center; margin-top:40px; text-transform:uppercase; letter-spacing:2px;">Potenciais de Expressão</h2>`;
-
-    // Exibe na ordem do Ranking (O dominante primeiro)
-    const ordemExibicao = Object.keys(rankingPlanos).sort((a, b) => rankingPlanos[a] - rankingPlanos[b]);
-
-    ordemExibicao.forEach(p => {
-        const rank = rankingPlanos[p];
-        const seloPlano = rank === 1 ? "DOMINANTE" : (rank === 4 ? "DESAFIADOR" : "ESTÁVEL");
-        const corSelo = rank === 1 ? "#827108" : (rank === 4 ? "#cc0000" : "#555");
-
-        htmlFinal += `
-            <div class="secao-plano" style="margin-bottom: 40px; background:#fff; padding:20px; border-radius:8px; border: 2px solid #82710822;">
-                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #827108; padding-bottom: 10px; margin-bottom: 20px;">
-                    <h3 style="color:#827108; text-transform: uppercase; font-size: 20px; margin: 0; font-weight:bold;">${legendasPlanos[p]}</h3>
-                    <span style="background: ${corSelo}; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 10px; font-weight: bold;">${seloPlano}</span>
-                </div>
-        `;
-
-        const itensDestePlano = rankingGeral.filter(i => i.plano === p);
-        const subcategorias = [...new Set(itensDestePlano.map(i => i.sub))];
-
-        subcategorias.forEach(sub => {
-            htmlFinal += `<div style="margin: 20px 0 10px 0;"><h4 style="color:#666; font-size: 12px; text-transform: uppercase; margin-bottom: 12px;">${sub}</h4>`;
-            itensDestePlano.filter(i => i.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
-                let corBarra = item.nota >= 7 ? "#2e7d32" : (item.nota >= 5 ? "#827108" : "#cc0000");
-                htmlFinal += montarBarraGrafico(item, corBarra);
+            rankingGeral.push({
+                nome: nomeAtributo,
+                nota: notaFinal,
+                plano: planoAlvo,
+                sub: configAtributo.sub,
+                percentual: (notaFinal * 10).toFixed(1)
             });
+        }
+
+        // 5. Construção da Interface HTML
+        let htmlFinal = `<h2 style="color:#827108; text-align:center; margin:40px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Análise de Potenciais de Expressão</h2>`;
+
+        // Ordenação visual: Planos Fortes aparecem primeiro
+        const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"].sort((a, b) => {
+            const pesos = { "forte": 3, "medio": 2, "fraco": 1 };
+            return pesos[statusPlanos[b]] - pesos[statusPlanos[a]];
+        });
+
+        ordemVisual.forEach(p => {
+            const statusAtual = statusPlanos[p];
+            const corDestaque = statusAtual === "forte" ? "#827108" : (statusAtual === "medio" ? "#555" : "#cc0000");
+            
+            htmlFinal += `
+                <div class="card-plano-detalhe" style="margin-bottom: 40px; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid ${corDestaque}; padding-bottom: 12px; margin-bottom: 20px;">
+                        <h3 style="margin:0; color:${corDestaque}; text-transform:uppercase; font-size:19px; font-weight:bold;">${legendasPlanos[p]}</h3>
+                        <span style="font-size:11px; font-weight:bold; background:${corDestaque}; color:#fff; padding:4px 14px; border-radius:20px; text-transform:uppercase; letter-spacing:1px;">${statusAtual}</span>
+                    </div>
+            `;
+
+            const atributosDestePlano = rankingGeral.filter(item => item.plano === p);
+            const subgrupos = [...new Set(atributosDestePlano.map(item => item.sub))];
+
+            subgrupos.forEach(subNome => {
+                htmlFinal += `<h4 style="color:#888; font-size:12px; text-transform:uppercase; margin: 20px 0 15px 0; border-left: 3px solid #eee; padding-left: 10px;">${subNome}</h4>`;
+                
+                // Exibe os atributos do subgrupo em ordem decrescente de nota
+                atributosDestePlano
+                    .filter(item => item.sub === subNome)
+                    .sort((a, b) => b.nota - a.nota)
+                    .forEach(itemFinal => {
+                        // Chama a função externa para renderizar a barra individual
+                        htmlFinal += montarBarraGrafico(itemFinal); 
+                    });
+            });
+
             htmlFinal += `</div>`;
         });
-        htmlFinal += `</div>`;
-    });
 
-    return htmlFinal;
+        return htmlFinal;
+
+    } catch (erro) {
+        console.error("Falha na geração dos gráficos de potenciais:", erro);
+        return `<div style="background:#fff5f5; color:#c0392b; padding:20px; border-radius:8px; border:1px solid #feb2b2; margin:20px 0;">
+                    <strong>Erro de Processamento:</strong> Não foi possível carregar os gráficos de potenciais. Verifique os dados de entrada.
+                </div>`;
+    }
 }
 // FUNÇÃO PARA TROCAR AS ABAS
 function alternarAba(evt, nomePlano) {
