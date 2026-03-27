@@ -509,20 +509,42 @@ function calcularIntensidadeMomento(configAtributo, res, faltantes, nomeRaw, d3,
     let nota = calcularIntensidadeAtributo(configAtributo.nums, res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual);
 
     // 2. MODIFICADORES DE TEMPO (O CLIMA)
+// --- 2. MODIFICADORES DE TEMPO (AUTOMATIZADOS) ---
     const anoP = res.anoPessoal;
-    const cicloAtivo = res.ciclos[1]; // Exemplo: Pegando o ciclo atual
-    const pinaculoAtivo = res.momentos[1]; // Exemplo: Pináculo atual
-    const desafioAtivo = res.desafios[3]; // Desafio Maior
+    const d3 = res.desafios[3]; // Desafio Principal (Base fixa)
+    
+    // Identificamos qual Ciclo, Momento e Desafio estão ativos hoje pela IDADE
+    // (Usando as variáveis de fim de ciclo que você já tem no código: fim1 e fim2)
+    
+    let cicloAtivo, momentoAtivo, desafioTemporarioAtivo;
+
+    if (idadeCronologica <= fim1) {
+        cicloAtivo = res.ciclos[1];
+        momentoAtivo = res.momentos[1];
+        desafioTemporarioAtivo = res.desafios[1];
+    } else if (idadeCronologica <= fim2) {
+        cicloAtivo = res.ciclos[2];
+        momentoAtivo = res.momentos[2]; // Nota: momentos 2 e 3 costumam ser as fases intermediárias
+        desafioTemporarioAtivo = res.desafios[2];
+    } else {
+        cicloAtivo = res.ciclos[3];
+        momentoAtivo = res.momentos[4]; // Quarto momento decisivo (Maturidade)
+        desafioTemporarioAtivo = 0; // Na terceira fase, geralmente foca-se no D3
+    }
 
     configAtributo.nums.forEach(n => {
-        // BÔNUS: Se o número do atributo é o seu ANO PESSOAL (Forte Ativação)
+        // BÔNUS: Ativação pelo ANO PESSOAL
         if (n === anoP) nota += 1.5;
 
-        // BÔNUS: Se o número está nos Ciclos ou Pináculos (Oportunidade)
-        if (n === cicloAtivo || n === pinaculoAtivo) nota += 1.0;
+        // BÔNUS: Se o número do plano é o CICLO ou MOMENTO que o cliente vive HOJE
+        if (n === cicloAtivo) nota += 1.0;
+        if (n === momentoAtivo) nota += 0.8;
 
-        // ÔNUS: Se o número é o seu DESAFIO MAIOR (Dificuldade de manifestação)
-        if (n === desafioAtivo) nota -= 2.0;
+        // ÔNUS: Se o número do plano é o DESAFIO PRINCIPAL (D3)
+        if (n === d3) nota -= 2.0;
+
+        // ÔNUS: Se o número do plano é o DESAFIO TEMPORÁRIO do momento (D1 ou D2)
+        if (n === desafioTemporarioAtivo) nota -= 1.0;
     });
 
     // Garante que a nota fique no limite do gráfico
