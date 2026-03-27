@@ -911,26 +911,31 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         neutro: `<p>"Este ano sua ação prioriza o equilíbrio, a observação e a Neutralidade"</p><p>Sua postura atual é de 'esperar para ver'. Você prefere analisar o terreno antes de dar qualquer passo importante, agindo com máxima prudência.</p>`
     };
 
-    let html = `
-        <div class="secao-card quebra-pagina" style="border-top: 4px solid var(--gold); margin-top: 40px;">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 20px;">
-                <h2 class="titulo-topico" style="margin: 0;">Status do Momento</h2>
-                <span style="background: var(--dark); color: var(--gold); padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; border: 1px solid var(--gold);">
-                    VIGÊNCIA: ${periodoVigente}
-                </span>
-            </div>
+ // --- BLOCO DO STATUS DO MOMENTO COM INTRODUÇÃO ---
+let html = `
+    <div class="secao-card quebra-pagina" style="border-top: 4px solid var(--gold); margin-top: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 20px;">
+            <h2 class="titulo-topico" style="margin: 0;">Status do Momento</h2>
+            <span style="background: var(--dark); color: var(--gold); padding: 5px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; border: 1px solid var(--gold);">
+                VIGÊNCIA: ${periodoVigente}
+            </span>
+        </div>
 
-            <div style="margin-bottom: 25px; padding: 20px; border: 2px solid var(--dark); border-radius: 12px; background: #fafafa; display: flex; align-items: center; gap: 20px;">
-                <div style="background: var(--dark); color: var(--gold); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; border: 2px solid var(--gold); flex-shrink: 0;">
-                    ${dominanteMomento[0]}
+        <div class="texto-intro" style="margin-bottom: 25px; font-style: italic; color: #444; line-height: 1.6; border-bottom: 1px solid #eee; padding-bottom: 15px;">
+            O Status do Momento revela a distribuição das suas potências vitais durante o ciclo vigente. Através da análise das frequências que compõem o seu nome, identificamos como suas energias físicas, mentais, emocionais e intuitivas estão se manifestando neste período.
+        </div>
+
+        <div style="margin-bottom: 25px; padding: 20px; border: 2px solid var(--dark); border-radius: 12px; background: #fafafa; display: flex; align-items: center; gap: 20px;">
+            <div style="background: var(--dark); color: var(--gold); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; border: 2px solid var(--gold); flex-shrink: 0;">
+                ${dominanteMomento[0]}
+            </div>
+            <div>
+                <h4 style="margin: 0; color: var(--dark); text-transform: uppercase; font-weight: bold;">Perfil de Ação Atual: ${dominanteMomento}</h4>
+                <div style="margin: 5px 0 0 0; font-size: 14px; color: #555; line-height: 1.5;">
+                    ${aplicarFiltroTexto(descricoesPerfilMomento[dominanteMomento])}
                 </div>
-                <div>
-                    <h4 style="margin: 0; color: var(--dark); text-transform: uppercase; font-weight: bold;">Perfil de Ação Atual: ${dominanteMomento}</h4>
-                    <div style="margin: 5px 0 0 0; font-size: 14px; color: #555; line-height: 1.5;">
-                        ${aplicarFiltroTexto(descricoesPerfilMomento[dominanteMomento])}
-                    </div>
-                </div>
-            </div>`;
+            </div>
+        </div>`;
 
     // GRÁFICOS (Voltou as cores dinâmicas)
     for(let p in somaMomento) {
