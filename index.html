@@ -756,21 +756,32 @@ function alternarAba(evt, nomePlano) {
     evt.currentTarget.classList.add("active");
 }
 
-function montarBarraGrafico(item, cor) {
+function montarBarraGrafico(item) {
+    // Define a cor baseada na nota
+    let corBarra = item.nota >= 7.5 ? "#2e7d32" : (item.nota >= 5.0 ? "#827108" : "#cc0000");
+    
     return `
-        <div style="margin-bottom: 18px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-weight: bold; font-size: 14px; color: #333;">
-                <span>${item.nome}</span>
-                <span style="color: ${cor};">${item.percentual}%</span>
+        <div class="container-barra" style="margin-bottom: 15px; width: 100%;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px;">
+                <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
+                <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
             </div>
-            <div style="height: 12px; background: #eee; border-radius: 6px; overflow: hidden; border: 1px solid #f0f0f0;">
-                <div style="width: ${item.percentual}%; height: 100%; background: ${cor}; border-radius: 6px; transition: width 1s ease-in-out;"></div>
+            <div style="height: 12px; background: #ececec; border-radius: 6px; width: 100%; position: relative; overflow: hidden;">
+                <div style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: ${item.percentual}%; 
+                    height: 100% !important; 
+                    background-color: ${corBarra} !important; 
+                    border-radius: 6px;
+                    display: block !important;
+                    min-height: 12px !important;
+                "></div>
             </div>
-         
         </div>
     `;
 }
-
 
 function calcularDadosPlanos(nome) {
     let soma = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
