@@ -222,23 +222,7 @@ function mascaraData(campo) {
 }
 
 
- // Função Universal de Redução Numerológica
-function calcularNumerologia(valor, aceitaMestre = true) {
-    let num = parseInt(valor);
-    
-    // Se não for um número válido, retorna zero ou vazio
-    if (isNaN(num)) return 0;
-
-    while (num > 9) {
-        // Se a regra permitir (aceitaMestre) e cair em 11, 22 ou 33, para aqui.
-        if (aceitaMestre && (num === 11 || num === 22 || num === 33)) {
-            break;
-        }
-        // Soma os dígitos
-        num = String(num).split('').reduce((acc, curr) => acc + parseInt(curr), 0);
-    }
-    return num;
-}       
+  
        
 function gerarPiramide(nome){
     let base = [];
@@ -366,7 +350,28 @@ const nomesExibicao = {
      "desafios": "Desafios de Personalidade",   
       "Conclusao": "Conclusão"   
 };
+
+ // Função Universal de Redução Numerológica
+function calcularNumerologia(valor, aceitaMestre = true) {
+    let num = parseInt(valor);
+    
+    // Se não for um número válido, retorna zero ou vazio
+    if (isNaN(num)) return 0;
+
+    while (num > 9) {
+        // Se a regra permitir (aceitaMestre) e cair em 11, 22 ou 33, para aqui.
+        if (aceitaMestre && (num === 11 || num === 22 || num === 33)) {
+            break;
+        }
+        // Soma os dígitos
+        num = String(num).split('').reduce((acc, curr) => acc + parseInt(curr), 0);
+    }
+    return num;
+}     
+        
        
+    function reduzir(n) { if (n === 0) return 0; let r = Math.abs(n) % 9; return r === 0 ? 9 : r; }
+
         
       function descobrirPlano(letra) { 
     if (!letra) return "físico"; 
