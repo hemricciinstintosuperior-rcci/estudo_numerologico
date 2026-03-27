@@ -882,8 +882,14 @@ motivacao: {
     9: `<p>A motivação mais profunda de <strong>você</strong> é o desejo sincero de servir a humanidade e de deixar um mundo significativamente melhor através da compaixão e da generosidade. O que realmente impulsiona a alma de <strong>você</strong> é a busca pelo desapego, pelo perdão universal e pela compreensão das dores humanas, sem distinção de qualquer ordem social ou cultural.</p>
     <p><strong>você</strong> deseja viver uma vida com propósito espiritual e humanitário acima de tudo. O desejo íntimo é ser uma fonte de inspiração, cura e sabedoria para os outros, sentindo que a jornada só faz sentido se <strong>você</strong> puder aliviar o fardo de alguém. <strong>você</strong> valoriza o conhecimento acumulado e busca a conclusão de ciclos com dignidade, ética e amor incondicional.</p>
     <p>Para <strong>você</strong>, a realização plena vem da entrega a uma causa nobre que transcenda os interesses egoístas. A alma de <strong>você</strong> nutre-se do altruísmo e da visão de uma sociedade mais justa e equilibrada, encontrando paz quando consegue elevar a consciência daqueles que cruzam o seu caminho através de um exemplo de integridade e bondade universal.</p>
-    <p>Ao ver o impacto positivo das suas ações na vida de estranhos ou de amigos, a alma de <strong>você</strong> expande-se. A conclusão de cada etapa da vida com a sensação de dever cumprido perante o cosmos é o que traz a <strong>você</strong> a verdadeira paz, consolidando uma trajetória de desprendimento, luz e de um amor que abraça toda a existência.</p>`
-  },
+    <p>Ao ver o impacto positivo das suas ações na vida de estranhos ou de amigos, a alma de <strong>você</strong> expande-se. A conclusão de cada etapa da vida com a sensação de dever cumprido perante o cosmos é o que traz a <strong>você</strong> a verdadeira paz, consolidando uma trajetória de desprendimento, luz e de um amor que abraça toda a existência.</p>`,
+    // ... seus textos de 1 a 9 ...
+    11: `O número 11 na Motivação indica uma alma que busca a iluminação e a inspiração. Você não se contenta com o comum; seu desejo interno é compreender os mistérios da vida e servir como um farol para os outros. Possui uma intuição aguçada e um idealismo que busca a harmonia espiritual acima de tudo.`,
+    22: `Ter o 22 na Motivação significa que sua alma anseia por construir algo grandioso e duradouro. Você se sente impulsionado a realizar projetos que beneficiem a humanidade. Seu desejo interno combina a visão espiritual com a capacidade prática de materializar sonhos em estruturas concretas.`,
+    33: `O 33 na Motivação é a vibração do Mestre da Compaixão. Sua alma deseja proteger, curar e ensinar. Você sente um chamado profundo para o amor incondicional e o sacrifício pessoal em prol do bem-estar alheio, agindo como um verdadeiro guia espiritual para aqueles que cruzam seu caminho.`
+
+  
+},
 
  // --- INFLUÊNCIA (A FORÇA DAS CONSOANTES / OPORTUNIDADES) ---
 influencia: {
@@ -930,8 +936,14 @@ influencia: {
     9: `<p>A sua influência é universal, humanitária e profundamente inspiradora, transcendendo barreiras culturais, sociais e geográficas. <strong>você</strong> possui o talento raro de influenciar pessoas de todas as origens através do seu carisma desapegado e da sua visão de mundo sem fronteiras, agindo como uma ponte entre diferentes realidades e um catalisador de transformações globais. Sua força reside na compaixão e na integridade, atraindo as pessoas que buscam um sentido maior para a existência e que veem em <strong>você</strong> um exemplo vivo de generosidade e sabedoria.</p>
     <p>As oportunidades de ouro para <strong>você</strong> estão no trabalho filantrópico internacional, nas artes transformadoras, na diplomacia, na ecologia ou em qualquer área que busque a elevação da consciência humana e a cura do planeta. <strong>você</strong> influencia o mundo ao ensinar o valor do desapego e do amor incondicional, mostrando que a verdadeira grandeza de um indivíduo não reside no que ele acumula, mas no que ele é capaz de entregar para o bem comum. <strong>você</strong> é a figura que encerra ciclos com dignidade e inicia novos tempos de esperança e tolerância.</p>
     <p>Sua influência é magnética de uma forma espiritual e idealista; <strong>você</strong> atrai multidões sem precisar de imposição, apenas pela força do seu caráter e da sua visão abrangente. <strong>você</strong> tem o dom de inspirar os outros a lutarem por um mundo mais justo, agindo com uma tolerância que acolhe todas as crenças e estilos de vida. O mundo vê em <strong>você</strong> a sabedoria dos mestres, respeitando sua independência de espírito e sua coragem de ser alguém que vive para o coletivo, transformando a dor alheia em ação positiva e transformadora.</p>
-    <p>Ao consolidar essa influência altruísta, <strong>você</strong> atinge um reconhecimento que ultrapassa o tempo e o espaço. O segredo para <strong>você</strong> é manter-se conectada com a realidade prática enquanto persegue seus ideais elevados. Quando <strong>você</strong> usa seus talentos para educar, curar ou inspirar a massa, <strong>você</strong> encontra uma paz profunda e uma abundância que flui como consequência da sua entrega. Sua influência é a luz que aponta para um futuro mais fraterno, tornando <strong>você</strong> uma personalidade inesquecível e amada globalmente.</p>`
-  },
+    <p>Ao consolidar essa influência altruísta, <strong>você</strong> atinge um reconhecimento que ultrapassa o tempo e o espaço. O segredo para <strong>você</strong> é manter-se conectada com a realidade prática enquanto persegue seus ideais elevados. Quando <strong>você</strong> usa seus talentos para educar, curar ou inspirar a massa, <strong>você</strong> encontra uma paz profunda e uma abundância que flui como consequência da sua entrega. Sua influência é a luz que aponta para um futuro mais fraterno, tornando <strong>você</strong> uma personalidade inesquecível e amada globalmente.</p>`,
+    // ... seus textos de 1 a 9 ...
+    11: `Sua Influência 11 transmite uma aura de magnetismo e mistério. As pessoas te veem como alguém inspirador, intuitivo e até um pouco "fora da curva". Você passa a impressão de ter uma sabedoria que vem de outro lugar, agindo como um canal de ideias inovadoras e elevado idealismo.`,
+    22: `Com o 22 na Influência, você transmite uma imagem de extrema competência e poder de realização. Os outros te veem como o "Mestre Construtor", alguém que tem os pés no chão, mas a cabeça no futuro. Você passa a segurança de que qualquer projeto em suas mãos se tornará realidade.`,
+    33: `A Influência 33 irradia uma energia de paz, acolhimento e proteção. As pessoas sentem-se seguras e amparadas em sua presença. Você é visto como alguém extremamente bondoso, um conselheiro sábio e uma figura de autoridade moral que exala amor e compreensão.`
+
+
+},
 
 // --- PERSONALIDADE (A EXPRESSÃO EXTERNA / COMO O MUNDO VÊ VOCÊ) ---
 Personalidade: {
@@ -978,7 +990,21 @@ Personalidade: {
     9: `<p>A imagem que <strong>você</strong> projeta para o mundo é a de uma personalidade generosa, sábia e dotada de uma visão humanitária abrangente que transcende as fronteiras comuns do ego. As pessoas veem em <strong>você</strong> uma alma carismática e altruísta, percebendo alguém que possui uma compreensão profunda dos ciclos da vida e do sofrimento humano, agindo com uma tolerância e uma compaixão que inspiram confiança imediata. Sua expressão externa transmite idealismo e uma integridade moral inabalável, fazendo com que <strong>você</strong> seja vista como uma guia, uma professora ou uma artista que utiliza os seus talentos para elevar a consciência coletiva e promover a união.</p>
     <p>Sua presença é frequentemente descrita como reconfortante e inspiradora, atraindo pessoas de todas as origens sociais e culturais que buscam na sua experiência um pouco de luz, direção ou consolo. A sociedade a percebe como uma figura desapegada, capaz de realizar grandes sacrifícios por uma causa nobre ou pelo bem do próximo sem esperar nada em troca. <strong>você</strong> emana uma sabedoria que parece vir de muitas vidas, agindo com uma dignidade que não se deixa abalar pelas futilidades materiais, o que a torna uma referência de espiritualidade aplicada e de amor universal em um mundo muitas vezes cego e individualista.</p>
     <p>Para o mundo, <strong>você</strong> é a cidadã do mundo, a defensora dos desamparados e a mestre do perdão. As pessoas admiram a sua coragem de ser autêntica e a forma como <strong>você</strong> trata a todos com a mesma dignidade e respeito. Essa projeção de altruísmo faz com que <strong>você</strong> seja procurada para liderar movimentos sociais, projetos artísticos de impacto ou aconselhamentos de vida que exijam uma visão holística e profunda. <strong>você</strong> é vista como alguém que veio para curar e transformar a realidade, deixando um rastro de esperança e evolução por onde passa, sendo respeitada pela sua total entrega aos ideais superiores.</p>
-    <p>Ao manter essa imagem de luz e desprendimento, <strong>você</strong> alcança um reconhecimento que ultrapassa o plano material. Seu sucesso é medido pelo número de corações que <strong>você</strong> tocou e pelas mudanças positivas que <strong>você</strong> inspirou. Quando <strong>você</strong> assume plenamente essa missão de servir e inspirar, <strong>você</strong> se torna uma personalidade inesquecível, cuja trajetória é celebrada como um exemplo de que a verdadeira grandeza reside na generosidade e na busca por um mundo onde a compaixão seja a lei suprema.</p>`
+    <p>Ao manter essa imagem de luz e desprendimento, <strong>você</strong> alcança um reconhecimento que ultrapassa o plano material. Seu sucesso é medido pelo número de corações que <strong>você</strong> tocou e pelas mudanças positivas que <strong>você</strong> inspirou. Quando <strong>você</strong> assume plenamente essa missão de servir e inspirar, <strong>você</strong> se torna uma personalidade inesquecível, cuja trajetória é celebrada como um exemplo de que a verdadeira grandeza reside na generosidade e na busca por um mundo onde a compaixão seja a lei suprema.</p>`,
+
+    // ... seus textos de 1 a 9 ...
+    11: `A Personalidade 11 revela uma presença magnética, refinada e extremamente intuitiva. Você possui uma sensibilidade artística e intelectual que o destaca naturalmente em qualquer grupo. 
+
+Sua forma de agir é diplomática e inspiradora; você prefere persuadir pela sabedoria do que pela força. É alguém que busca constantemente o equilíbrio e a paz, sendo visto como uma mente brilhante e visionária.`,
+
+    22: `A Personalidade 22 demonstra uma força de vontade e uma capacidade executiva fora do comum. Você é prático, eficiente e possui uma visão estratégica que antecipa problemas antes mesmo deles surgirem. 
+
+Sua forma de agir no mundo é pautada pela construção e pela lógica. Você transmite autoridade e segurança, sendo a pessoa que todos procuram quando algo difícil e importante precisa ser realizado com perfeição.`,
+
+    33: `A Personalidade 33 reflete um caráter bondoso, acolhedor e profundamente responsável. Você age movido por um senso de dever em relação ao bem-estar alheio, sendo um exemplo de ética e honestidade. 
+
+Sua presença é reconfortante e você possui o dom da palavra que cura e educa. É alguém que valoriza a família, a comunidade e a justiça social acima de ganhos puramente materiais ou egoístas.`
+
  
 
   },
@@ -1019,8 +1045,14 @@ CaminhodeVida: {
 
     9: `<p>O seu caminho de vida é uma estrada de humanitarismo profundo, altruísmo e a conclusão bem-sucedida de grandes ciclos evolutivos da alma. O seu destino foi desenhado para que <strong>você</strong> aprenda a amar o próximo de forma incondicional, desenvolvendo uma visão de mundo que ultrapassa as barreiras do ego, da nacionalidade e dos interesses puramente materiais. Ao longo da sua trajetória, <strong>você</strong> enfrentará situações que exigirão um alto grau de desapego, perdão e compaixão, agindo como uma cidadã do mundo que enxerga a dor alheia como sua própria responsabilidade de cura.</p>
     <p>A vida a chamará constantemente para servir, para ensinar e para inspirar multidões, oferecendo sua sabedoria acumulada para aqueles que buscam direção. O sucesso de <strong>você</strong> virá da sua integridade moral e da sua capacidade de ser um exemplo vivo de generosidade e compreensão universal. <strong>você</strong> brilhará intensamente em causas sociais, nas artes humanitárias, na diplomacia internacional ou em áreas ligadas à espiritualidade e à educação transformadora. O seu destino é ser a luz que aponta para um novo tempo, mostrando que a verdadeira grandeza de um ser reside na sua capacidade de entrega e de amor ao todo.</p>
-    <p>Nesta estrada de entrega, <strong>você</strong> descobrirá que ao dar, <strong>você</strong> recebe em dobro em forma de proteção espiritual e realização íntima. A estrada da vida de <strong>você</strong> é um convite ao encerramento digno de velhas histórias para o nascimento de uma nova consciência planetária. Ao entregar seus talentos para o bem da humanidade, <strong>você</strong> encontrará um reconhecimento que transcende os limites do tempo e do espaço. Ao final, sua história será celebrada como a jornada de uma alma sábia que soube transformar o mundo através da bondade, da tolerância e do amor sem fronteiras.</p>`
-  },
+    <p>Nesta estrada de entrega, <strong>você</strong> descobrirá que ao dar, <strong>você</strong> recebe em dobro em forma de proteção espiritual e realização íntima. A estrada da vida de <strong>você</strong> é um convite ao encerramento digno de velhas histórias para o nascimento de uma nova consciência planetária. Ao entregar seus talentos para o bem da humanidade, <strong>você</strong> encontrará um reconhecimento que transcende os limites do tempo e do espaço. Ao final, sua história será celebrada como a jornada de uma alma sábia que soube transformar o mundo através da bondade, da tolerância e do amor sem fronteiras.</p>`,
+     // ... seus textos de 1 a 9 ...
+    11: `O Caminho de Vida 11 é uma jornada de despertar espiritual. Sua estrada será marcada por insights profundos e testes de intuição. Você está aqui para aprender a confiar na sua voz interior e para liderar pelo exemplo, trazendo mensagens importantes que podem transformar a vida das pessoas.`,
+    22: `O Caminho de Vida 22 é a trilha do realizador mestre. Sua trajetória exige disciplina e visão ampla para construir obras que ficarão para a história. Você enfrentará grandes desafios, mas terá a energia necessária para criar soluções que tragam estabilidade e progresso para o mundo.`,
+    33: `O Caminho de Vida 33 é a estrada do serviço altruísta. Sua jornada é focada na proteção da família humana e no ensino de verdades elevadas. Você encontrará realização ao se dedicar a causas nobres, sendo uma fonte de cura e inspiração constante para a coletividade.`
+
+
+},
 
 // --- PROPÓSITO (MISSÃO DE VIDA) ---
 Propósito: {
@@ -1058,8 +1090,24 @@ Propósito: {
 
     9: `<p>O propósito de <strong>você</strong> nesta existência é a conclusão de um ciclo evolutivo magistral através do humanitarismo, do desapego sábio e do amor universal sem fronteiras. <strong>você</strong> veio ao mundo com a missão de servir à humanidade, oferecendo a sua sabedoria acumulada e a sua compaixão para aliviar o fardo alheio e elevar a consciência ética do planeta. A sua missão envolve o altruísmo puro e a capacidade infinita de perdoar; <strong>você</strong> deve aprender a deixar ir o que não serve mais à alma e a ver o mundo sem as barreiras do ego ou dos interesses puramente materiais.</p>
     <p><strong>você</strong> realiza o seu propósito quando se torna um exemplo vivo de integridade moral e generosidade, inspirando multidões a buscarem um sentido espiritual e fraterno para a vida. Realizar este propósito significa ser a cidadã do mundo que cura através da palavra e ensina através do exemplo de desprendimento. <strong>você</strong> veio para mostrar que a verdadeira grandeza de um ser humano reside na entrega aos ideais superiores e que o amor incondicional é a única força capaz de encerrar conflitos e de abrir caminho para uma nova era de paz e entendimento entre todos os povos e nações da Terra.</p>
-    <p>A missão de <strong>você</strong> é ser a luz no fim do caminho, aquela que aponta para um novo e mais brilhante recomeço através da conclusão digna de velhos paradigmas. Ao longo da vida, <strong>você</strong> descobrirá que ao servir ao todo, <strong>você</strong> encontra a maior das riquezas interiores. Ao final da trajetória, o legado de <strong>você</strong> será a transformação que operou nos corações humanos e a consciência tranquila de que <strong>você</strong> deixou o mundo significativamente melhor, mais iluminado e mais unido do que o encontrou ao chegar, cumprindo um destino de pura luz.</p>`
-  },
+    <p>A missão de <strong>você</strong> é ser a luz no fim do caminho, aquela que aponta para um novo e mais brilhante recomeço através da conclusão digna de velhos paradigmas. Ao longo da vida, <strong>você</strong> descobrirá que ao servir ao todo, <strong>você</strong> encontra a maior das riquezas interiores. Ao final da trajetória, o legado de <strong>você</strong> será a transformação que operou nos corações humanos e a consciência tranquila de que <strong>você</strong> deixou o mundo significativamente melhor, mais iluminado e mais unido do que o encontrou ao chegar, cumprindo um destino de pura luz.</p>`,
+
+    // ... seus textos de 1 a 9 ...
+    11: `O seu Propósito 11 é ser um canal de inspiração e despertar para a humanidade. Você não veio ao mundo para seguir caminhos comuns, mas para elevar a consciência das pessoas ao seu redor. 
+
+Sua missão envolve o uso da intuição e da diplomacia para unir pessoas e trazer clareza a situações complexas, atuando como um verdadeiro guia espiritual ou visionário em sua área de atuação.`,
+
+    22: `O seu Propósito 22 é o de ser um mestre realizador em larga escala. Sua missão é transformar ideais abstratos em estruturas físicas e sociais que durem por gerações. 
+
+Você possui a rara habilidade de ver o "quadro geral" e organizar os detalhes necessários para construir algo que beneficie a coletividade, deixando um legado concreto de ordem, progresso e estabilidade no mundo.`,
+
+    33: `O seu Propósito 33 é a expressão máxima do amor e do serviço altruísta. Você veio para ser um amparo e um mestre para a alma humana, guiando os outros através da compaixão e da verdade. 
+
+Sua missão é ensinar pelo exemplo de integridade e proteção, dedicando sua energia para elevar o padrão moral e emocional de todos que cruzam sua jornada, agindo como um guardião da harmonia universal.`
+
+  
+
+},
 
 // --- MATURIDADE (O SEGUNDO FÔLEGO / O LEGADO DA VIDA) ---
 Maturidade: {
@@ -1088,8 +1136,14 @@ Maturidade: {
     <p><strong>você</strong> sentirá a satisfação de ter dominado as leis do mundo material sem perder a sua integridade ética. O mundo a vê como uma personalidade poderosa e resiliente, capaz de gerir crises e de expandir horizontes com uma autoconfiança admirável. O sucesso nesta etapa é a colheita de uma vida de disciplina e ambição equilibrada, resultando em prestígio e em um patrimônio moral e financeiro inatacável. Seu legado será a prova de que a competência e o comando, quando voltados para o bem comum, são os motores da civilização, tornando <strong>você</strong> uma figura icônica de vitória e eficiência.</p>`,
 
     9: `<p>A maturidade de <strong>você</strong> é um período de transcendência, onde a sua sabedoria universal e o seu amor pela humanidade se manifestam em ações de grande impacto altruísta. Nesta fase, <strong>você</strong> se torna a cidadã do mundo, agindo como uma ponte de cura, ensino e inspiração para pessoas de todas as origens. O seu legado é o da evolução humana; <strong>você</strong> será lembrada como a alma generosa que ofereceu tudo o que aprendeu para tornar o mundo um lugar mais fraterno e consciente. A maturidade para <strong>você</strong> é o encerramento magistral de um ciclo, marcado pelo desapego sábio e pela gratidão profunda por cada experiência vivida.</p>
-    <p><strong>você</strong> encontrará sua maior alegria em servir a causas globais, nas artes transformadoras ou na espiritualidade aplicada. O mundo vê em <strong>você</strong> uma luz guia, alguém cuja integridade moral e compaixão servem de bússola para um futuro melhor. O sucesso nesta etapa não é medido por posses, mas pelo número de vidas que <strong>você</strong> conseguiu tocar e elevar. Seu legado será uma trajetória de amor incondicional e sabedoria, provando que a verdadeira grandeza reside na entrega ao próximo. <strong>você</strong> encerrará esta jornada com a alma em paz, sendo amada universalmente como uma personalidade que verdadeiramente cumpriu a missão de iluminar a existência humana.</p>`
-  },
+    <p><strong>você</strong> encontrará sua maior alegria em servir a causas globais, nas artes transformadoras ou na espiritualidade aplicada. O mundo vê em <strong>você</strong> uma luz guia, alguém cuja integridade moral e compaixão servem de bússola para um futuro melhor. O sucesso nesta etapa não é medido por posses, mas pelo número de vidas que <strong>você</strong> conseguiu tocar e elevar. Seu legado será uma trajetória de amor incondicional e sabedoria, provando que a verdadeira grandeza reside na entrega ao próximo. <strong>você</strong> encerrará esta jornada com a alma em paz, sendo amada universalmente como uma personalidade que verdadeiramente cumpriu a missão de iluminar a existência humana.</p>`,
+ 
+ 
+    11: `Sua Maturidade 11 indica que, com o passar dos anos, sua espiritualidade e intuição se tornarão suas maiores forças. Você se tornará um conselheiro ou guia para as gerações mais novas.`,
+    22: `Sua Maturidade 22 aponta para uma fase de grandes realizações materiais e sociais após a maturidade. É o momento em que você consolida seu legado e constrói algo de valor eterno para a sociedade.`
+
+
+},
 // --- RELACIONAMENTO (COMO VOCÊ É E SE COMPORTA NO AMOR) ---
 Relacionamento: {
   
@@ -1302,7 +1356,17 @@ momentos: {
 <p>A experiência adquirida nesta fase permite compreender melhor a dinâmica entre esforço, planejamento e resultados concretos. <strong>você</strong> aprende a lidar com desafios competitivos e a desenvolver visão prática sobre prosperidade e realização material.</p>`,
 
     9: `<p>O primeiro momento decisivo é marcado por sensibilidade humanitária, idealismo e interesse por causas que beneficiem o coletivo. <strong>você</strong> tende a demonstrar preocupação com questões sociais, culturais ou espirituais que ultrapassam interesses exclusivamente pessoais.</p>
-<p>Esta fase favorece desenvolvimento de empatia, tolerância e compreensão mais ampla da realidade humana. Experiências culturais, viagens ou contato com diferentes ideias podem ampliar significativamente a visão de mundo de <strong>você</strong>. Ao final desta etapa, surge maior consciência sobre responsabilidade social e contribuição para o bem coletivo.</p>`
+<p>Esta fase favorece desenvolvimento de empatia, tolerância e compreensão mais ampla da realidade humana. Experiências culturais, viagens ou contato com diferentes ideias podem ampliar significativamente a visão de mundo de <strong>você</strong>. Ao final desta etapa, surge maior consciência sobre responsabilidade social e contribuição para o bem coletivo.</p>`,
+   
+     // ... (inclua aqui os textos de 1 a 9 se desejar, ou use os mesmos dos ciclos)
+    11: `Este Momento Decisivo traz uma vibração de alta voltagem espiritual e intuitiva. Você poderá ser chamado a liderar através de ideias visionárias ou tornar-se uma fonte de inspiração para um grande grupo de pessoas. 
+
+É um período de revelações e expansão da consciência, onde o seu exemplo pessoal terá um impacto direto na vida de outros. Mantenha o equilíbrio emocional para lidar com tamanha intensidade.`,
+
+    22: `Este é o Momento Decisivo do "Mestre Construtor". Sob esta influência, você tem a capacidade de realizar algo de magnitude extraordinária, possivelmente um projeto que altere a estrutura da sua comunidade ou carreira. 
+
+Não é hora de pensar pequeno. Este período exige que você aplique sua visão espiritual de forma prática e organizada para erguer obras, empresas ou sistemas que perdurem por muito tempo após o fim deste ciclo.`
+
   },
 
 
@@ -1333,7 +1397,18 @@ momentos: {
   <p>Este período exige disciplina, senso estratégico e equilíbrio entre ambição e ética. Quando bem conduzido, permite consolidar posição de influência e estabilidade material. A combinação entre organização prática e responsabilidade social fortalece os resultados alcançados.</p>`,
 
   9: `<p>Este segundo momento decisivo possui natureza humanitária e conclusiva. <strong>você</strong> pode sentir forte impulso para contribuir com causas sociais, projetos culturais ou iniciativas voltadas ao bem coletivo. Experiências desta fase ampliam a compreensão sobre responsabilidade social e interdependência humana.</p>
-  <p>Alguns ciclos podem chegar ao fim para abrir espaço a novas etapas mais alinhadas com valores elevados. O reconhecimento que surge neste período tende a estar ligado à contribuição positiva oferecida ao ambiente ao redor. Ao concluir este ciclo, <strong>você</strong> terá ampliado significativamente a percepção sobre propósito e impacto social.</p>`
+  <p>Alguns ciclos podem chegar ao fim para abrir espaço a novas etapas mais alinhadas com valores elevados. O reconhecimento que surge neste período tende a estar ligado à contribuição positiva oferecida ao ambiente ao redor. Ao concluir este ciclo, <strong>você</strong> terá ampliado significativamente a percepção sobre propósito e impacto social.</p>`,
+
+
+    // ... (inclua aqui os textos de 1 a 9 se desejar, ou use os mesmos dos ciclos)
+    11: `Este Momento Decisivo traz uma vibração de alta voltagem espiritual e intuitiva. Você poderá ser chamado a liderar através de ideias visionárias ou tornar-se uma fonte de inspiração para um grande grupo de pessoas. 
+
+É um período de revelações e expansão da consciência, onde o seu exemplo pessoal terá um impacto direto na vida de outros. Mantenha o equilíbrio emocional para lidar com tamanha intensidade.`,
+
+    22: `Este é o Momento Decisivo do "Mestre Construtor". Sob esta influência, você tem a capacidade de realizar algo de magnitude extraordinária, possivelmente um projeto que altere a estrutura da sua comunidade ou carreira. 
+
+Não é hora de pensar pequeno. Este período exige que você aplique sua visão espiritual de forma prática e organizada para erguer obras, empresas ou sistemas que perdurem por muito tempo após o fim deste ciclo.`
+
 },
 
   // --- 3º MOMENTO (O OUTONO DA VIDA / MATURIDADE) ---
@@ -1363,7 +1438,17 @@ momentos: {
   <p><strong>você</strong> poderá utilizar essa posição de prestígio para influenciar decisões importantes e promover melhorias em projetos coletivos. A habilidade de gestão e organização continuará sendo uma característica marcante nesta fase. O prestígio alcançado tende a ser acompanhado por respeito e confiança por parte das pessoas ao redor. Ao final deste ciclo, haverá a consolidação de uma imagem associada à competência, à força de realização e à capacidade de liderança duradoura.</p>`,
 
   9: `<p>Este terceiro momento decisivo representa uma etapa de desapego consciente, visão universal e dedicação a valores que transcendem interesses individuais. <strong>você</strong> poderá sentir uma conexão mais profunda com causas humanitárias, espirituais ou culturais, buscando contribuir para algo maior do que a própria trajetória pessoal. É uma fase marcada pela generosidade e pelo desejo de compartilhar sabedoria acumulada ao longo da vida.</p>
-  <p><strong>você</strong> tende a olhar para o passado com compreensão e serenidade, dissolvendo antigas mágoas e valorizando as lições aprendidas. O verdadeiro sucesso passa a ser medido pelo impacto positivo causado na vida de outras pessoas. A presença de <strong>você</strong> poderá inspirar muitos ao redor a buscar caminhos mais conscientes e solidários. Ao concluir este ciclo, haverá uma sensação profunda de paz interior e de missão cumprida, com a certeza de ter contribuído para algo significativo dentro da experiência humana.</p>`
+  <p><strong>você</strong> tende a olhar para o passado com compreensão e serenidade, dissolvendo antigas mágoas e valorizando as lições aprendidas. O verdadeiro sucesso passa a ser medido pelo impacto positivo causado na vida de outras pessoas. A presença de <strong>você</strong> poderá inspirar muitos ao redor a buscar caminhos mais conscientes e solidários. Ao concluir este ciclo, haverá uma sensação profunda de paz interior e de missão cumprida, com a certeza de ter contribuído para algo significativo dentro da experiência humana.</p>`,
+     // ... (inclua aqui os textos de 1 a 9 se desejar, ou use os mesmos dos ciclos)
+    11: `Este Momento Decisivo traz uma vibração de alta voltagem espiritual e intuitiva. Você poderá ser chamado a liderar através de ideias visionárias ou tornar-se uma fonte de inspiração para um grande grupo de pessoas. 
+
+É um período de revelações e expansão da consciência, onde o seu exemplo pessoal terá um impacto direto na vida de outros. Mantenha o equilíbrio emocional para lidar com tamanha intensidade.`,
+
+    22: `Este é o Momento Decisivo do "Mestre Construtor". Sob esta influência, você tem a capacidade de realizar algo de magnitude extraordinária, possivelmente um projeto que altere a estrutura da sua comunidade ou carreira. 
+
+Não é hora de pensar pequeno. Este período exige que você aplique sua visão espiritual de forma prática e organizada para erguer obras, empresas ou sistemas que perdurem por muito tempo após o fim deste ciclo.`
+
+
 },
 // --- 4º MOMENTO (O INVERNO DA VIDA / COLHEITA FINAL - 60 ANOS EM DIANTE) ---
 4: {
@@ -1392,7 +1477,18 @@ momentos: {
 <p><strong>você</strong> pode ser procurado para orientar decisões importantes, administrar patrimônios ou contribuir com experiência em projetos relevantes. O desafio está em equilibrar poder e generosidade, compreendendo que verdadeira liderança consiste em utilizar recursos e influência para promover equilíbrio coletivo. Ao final desta etapa, <strong>você</strong> terá consolidado reputação associada à competência, responsabilidade e capacidade de realização.</p>`,
 
 9: `<p>O quarto momento decisivo representa o ponto culminante da maturidade espiritual e humanitária. <strong>você</strong> tende a desenvolver visão ampla sobre a vida e sobre o papel de cada pessoa na construção de uma sociedade mais consciente e solidária.</p>
-<p>Nesta fase, o impulso para ajudar outras pessoas pode se tornar ainda mais forte. <strong>você</strong> poderá se envolver em atividades culturais, sociais ou espirituais que promovam transformação positiva no ambiente coletivo. O sucesso passa a ser medido pelo impacto humano e pela contribuição oferecida ao mundo. Ao concluir esta jornada, <strong>você</strong> terá a satisfação de reconhecer que sua trajetória deixou marcas positivas na vida de muitas pessoas.</p>`
+<p>Nesta fase, o impulso para ajudar outras pessoas pode se tornar ainda mais forte. <strong>você</strong> poderá se envolver em atividades culturais, sociais ou espirituais que promovam transformação positiva no ambiente coletivo. O sucesso passa a ser medido pelo impacto humano e pela contribuição oferecida ao mundo. Ao concluir esta jornada, <strong>você</strong> terá a satisfação de reconhecer que sua trajetória deixou marcas positivas na vida de muitas pessoas.</p>`,
+
+
+    // ... (inclua aqui os textos de 1 a 9 se desejar, ou use os mesmos dos ciclos)
+    11: `Este Momento Decisivo traz uma vibração de alta voltagem espiritual e intuitiva. Você poderá ser chamado a liderar através de ideias visionárias ou tornar-se uma fonte de inspiração para um grande grupo de pessoas. 
+
+É um período de revelações e expansão da consciência, onde o seu exemplo pessoal terá um impacto direto na vida de outros. Mantenha o equilíbrio emocional para lidar com tamanha intensidade.`,
+
+    22: `Este é o Momento Decisivo do "Mestre Construtor". Sob esta influência, você tem a capacidade de realizar algo de magnitude extraordinária, possivelmente um projeto que altere a estrutura da sua comunidade ou carreira. 
+
+Não é hora de pensar pequeno. Este período exige que você aplique sua visão espiritual de forma prática e organizada para erguer obras, empresas ou sistemas que perdurem por muito tempo após o fim deste ciclo.`
+
 }
   },
 
@@ -1949,9 +2045,15 @@ inclinacoes : {
 
     9: `<h4>Talento 9</h4>
         <p>A empatia e a compreensão social são características fortes, com uma disposição natural para ser alguém útil e necessário ao grupo. Há uma facilidade notável em se ajustar a mudanças estratégicas e novas circunstâncias, desde que os objetivos sejam bem fundamentados.</p>
-        <p>Em momentos críticos, o desafio é não se deixar levar pela apatia ou pelo isolamento defensivo. Quando os interesses são diretamente ameaçados ou há percepção de injustiça, uma força implacável e maliciosa pode emergir como defesa. O equilíbrio deste talento está em manter a doação ao próximo sem esquecer das próprias necessidades de afeto e reconhecimento.</p>`
+        <p>Em momentos críticos, o desafio é não se deixar levar pela apatia ou pelo isolamento defensivo. Quando os interesses são diretamente ameaçados ou há percepção de injustiça, uma força implacável e maliciosa pode emergir como defesa. O equilíbrio deste talento está em manter a doação ao próximo sem esquecer das próprias necessidades de afeto e reconhecimento.</p>`,
+     
 
-},
+
+    11: `Seu Talento Oculto 11 é a capacidade de canalizar informações e soluções que ninguém mais vê. Você possui um "sexto sentido" para resolver problemas complexos através da inspiração direta.`,
+    22: `Seu Talento Oculto 22 é a genialidade prática. Você consegue pegar conceitos espirituais ou teóricos e transformá-los em ferramentas, empresas ou estruturas que funcionam perfeitamente no mundo real.`
+
+    
+    },
 
 
 essencia : {
@@ -1989,7 +2091,12 @@ essencia : {
 
     9: `<h4>Essência 9</h4>
         <p>Sua essência responde aos desafios com uma visão ampla e humanitária. Existe uma tendência ao desprendimento e à compreensão de que tudo faz parte de um ciclo maior, o que confere uma sabedoria natural diante das crises.</p>
-        <p>O risco é cair na apatia ou no idealismo excessivo quando a realidade se mostra dura. A maturidade ensina você a usar essa compaixão universal de forma prática, transformando a sabedoria interna em ações concretas que beneficiam tanto a você quanto ao coletivo.</p>`
+        <p>O risco é cair na apatia ou no idealismo excessivo quando a realidade se mostra dura. A maturidade ensina você a usar essa compaixão universal de forma prática, transformando a sabedoria interna em ações concretas que beneficiam tanto a você quanto ao coletivo.</p>`,
+
+
+    11: `Sua Essência 11 indica que o "cerne" da sua individualidade é puramente intuitivo. Desde o primeiro contato, você emite uma vibração de sabedoria nata e originalidade, agindo como um farol de novas ideias.`,
+    22: `Sua Essência 22 revela um núcleo de grande poder realizador. A base da sua personalidade é voltada para a construção de algo sólido; você tem a semente de um mestre construtor dentro de si.`
+
 },
 
 
@@ -2030,7 +2137,13 @@ equilibrio :{
 
     9: `<h4>Equilíbrio 9</h4>
         <p>Você inicia seus ciclos com uma vibração humanitária e compreensiva. Existe um desprendimento inicial que permite enxergar o quadro geral, abordando as situações com sabedoria e uma generosidade que inspira quem compartilha de sua jornada.</p>
-        <p>A conclusão é marcada pela necessidade de encerramento emocional e espiritual. O desafio é não se perder em idealismos utópicos, garantindo que o projeto tenha um fim prático e útil. O equilíbrio está em transformar o sonho do início em uma entrega concreta para o mundo.</p>`
+        <p>A conclusão é marcada pela necessidade de encerramento emocional e espiritual. O desafio é não se perder em idealismos utópicos, garantindo que o projeto tenha um fim prático e útil. O equilíbrio está em transformar o sonho do início em uma entrega concreta para o mundo.</p>`,
+
+    // Nota: O equilíbrio geralmente reduz para 1-9, mas se o seu sistema 
+    // aceitar a vibração mestre aqui, use estes:
+    11: `Seu Equilíbrio 11 mostra que você supera crises através da diplomacia e da escuta interna. Você encontra a paz ao elevar a situação para um nível espiritual superior.`,
+    22: `Seu Equilíbrio 22 revela que, em momentos de caos, sua saída é a organização e a construção. Você resolve problemas criando novos sistemas que impedem o erro de se repetir.`
+
 
 }
 
