@@ -577,8 +577,8 @@ SeqNegVida: {
     <p><strong>você</strong> tem a habilidade de transformar ideias abstratas em lucros e estruturas concretas. Existe em <strong>você</strong> um desejo de prosperidade que vai além do ganho pessoal, buscando também o conforto da linhagem e a segurança de quem está sob sua proteção e comando no dia a dia.</p>
     <p>O aprendizado de <strong>você</strong> é entender que o poder e o dinheiro são ferramentas para o bem, e não o fim de tudo. Quando <strong>você</strong> une sua ambição com a generosidade e a ética, <strong>você</strong> constrói um império de abundância que beneficia não apenas sua vida, mas a de milhares de pessoas ao redor.</p>`,
 
-    9: ` <h4>Universalista - Dia 9 É liberal e idealista. 
-    
+    9: ` <h4>Universalista      
+    Dia 9 É liberal e idealista. 
     Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h4>
     <p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e dotada de uma visão de mundo extremamente ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar um legado positivo, agindo com um altruísmo que inspira confiança.</p>
     <p>Sua intuição é fortíssima e <strong>você</strong> possui uma sabedoria que parece vir de experiências de muitas vidas. <strong>você</strong> é capaz de grandes sacrifícios por causas nobres e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua compaixão e integridade moral.</p>
@@ -594,7 +594,8 @@ SeqNegVida: {
     <p><strong>você</strong> possui a força do número 1 potencializada pela perfeição do zero, o que indica um destino de brilho individual e grandes conquistas. Sua mente é rápida para identificar oportunidades e <strong>você</strong> não hesita em agir quando percebe que o caminho está livre para sua ascensão pessoal.</p>
     <p>O cuidado que <strong>você</strong> deve ter é com a impulsividade e o excesso de orgulho nas vitórias. Ao aprender a ouvir a intuição e a planejar cada passo com sabedoria e paciência, <strong>você</strong> se torna uma força imparável da natureza, capaz de construir uma história de vida brilhante e inspiradora.</p>`,
 
-   11: ` <h4>Idealista - Dia 11 É um bom conselheiro e curador. 
+   11: ` <h4>Idealista 
+   Dia 11 É um bom conselheiro e curador. 
    
    Possui as qualidades de um visionário que aprecia e motiva aspessoas!</h4>
    <p>O dia 11 traz para <strong>você</strong> a vibração de um Número Mestre, o que confere uma intuição extraordinária e uma sensibilidade espiritual muito acima da média. <strong>você</strong> funciona como um canal de inspiração para o mundo, possuindo ideais elevados e uma capacidade única de enxergar além das aparências materiais e das limitações do cotidiano.</p>
@@ -604,7 +605,8 @@ SeqNegVida: {
 
     12: `     <h4>Comunicador - Dia 12 
     
-    É altamente imaginativo e talentoso especialmente nas habilidades verbais e de escrita. Mas pode ser temperamental e evasivo!</h4>
+    É altamente imaginativo e talentoso especialmente nas habilidades verbais e de escrita. 
+    Mas pode ser temperamental e evasivo!</h4>
    <p>O dia 12 confere a <strong>você</strong> uma personalidade rica em criatividade, com uma habilidade de comunicação que une a lógica à sensibilidade de forma magistral. <strong>você</strong> possui um talento natural para as artes, para o ensino ou para qualquer atividade que exija expressar ideias de forma clara, equilibrada e altamente convincente para diferentes públicos.</p>
     <p>Sua mente é fértil e <strong>você</strong> tem a capacidade de analisar os problemas sob diversos ângulos simultâneos, o que faz de <strong>você</strong> uma figura de conselho muito requisitada. <strong>você</strong> valoriza as conexões sociais, possuindo um magnetismo que atrai pessoas interessadas em sua inteligência e no modo refinado e artístico com que <strong>você</strong> observa a vida.</p>
     <p>Existe em <strong>você</strong> um desejo profundo de ser útil e de trazer harmonia para o ambiente social. Sua natureza é diplomática e <strong>você</strong> sabe usar o charme pessoal para abrir portas que outros considerariam trancadas. Sua versatilidade é sua maior ferramenta de sucesso, permitindo que <strong>você</strong> se adapte e brilhe em qualquer cenário profissional ou pessoal.</p>
@@ -612,7 +614,8 @@ SeqNegVida: {
 
     13: ` <h4>Prático - Dia 13
     
-É um organizador e gerente natural, focado nos detalhes. Dotado de considerável perseverança e determinação!</h4>
+É um organizador e gerente natural, focado nos detalhes. 
+Dotado de considerável perseverança e determinação!</h4>
     <p>O dia 13 traz para <strong>você</strong> uma energia de transformação profunda e de construção sólida, capaz de erguer estruturas onde nada existia. Embora seja um número muitas vezes mal compreendido, ele confere a <strong>você</strong> uma capacidade de trabalho e uma determinação que poucas pessoas possuem, permitindo a realização de grandes feitos através do esforço contínuo.</p>
     <p><strong>você</strong> é alguém que não teme o trabalho árduo e possui um talento natural para a organização estratégica e para a reestruturação de situações caóticas. Sua vida é marcada por ciclos de renovação necessária, nos quais <strong>você</strong> aprende a deixar o que é obsoleto para trás a fim de construir algo muito mais forte, estável e duradouro no lugar.</p>
     <p>A força de vontade de <strong>você</strong> é inabalável e existe um senso de dever que guia cada passo dado na carreira e na vida familiar. <strong>você</strong> busca a eficiência e a ordem, sendo a fundação sólida sobre a qual projetos ambiciosos podem ser construídos com segurança. Sua persistência é a chave que abre as portas para o sucesso material e pessoal.</p>
@@ -669,7 +672,8 @@ Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para 
 
     20: ` <h4>Consciente - Dia 20
     
-Tem a capacidade de persuadir os outros sob o seu ponto de vista usando meios gentis. É brilhante em fazer os outros pensarem que são brilhantes!</h4>
+Tem a capacidade de persuadir os outros sob o seu ponto de vista usando meios gentis. 
+É brilhante em fazer os outros pensarem que são brilhantes!</h4>
     <p>O dia 20 traz para <strong>você</strong> a vibração da cooperação, da sensibilidade extrema e da diplomacia em sua forma mais refinada. <strong>você</strong> possui o dom da escuta e da empatia profunda, sendo aquela pessoa que consegue pacificar conflitos e criar pontes de entendimento sólido entre os lados mais opostos de uma questão.</p>
     <p>Sua força reside na suavidade, na paciência e na capacidade de aguardar o momento certo para agir. <strong>você</strong> produz resultados excepcionais quando trabalha em grupo e se revela uma parceria leal e confiável, valorizando a harmonia familiar e social acima de qualquer disputa por ego ou desejo de comando solitário.</p>
     <p>Sua intuição é um guia constante que ajuda a tomar decisões equilibradas e justas para todos os envolvidos. <strong>você</strong> tem um senso rítmico e artístico apurado, apreciando a beleza e a música como formas de manter sua paz interior. As pessoas buscam sua companhia para encontrar conforto e uma visão mais mansa da realidade.</p>
@@ -685,7 +689,8 @@ Apesar de ser idealista e liberal, necessita da companhia de outras pessoas, poi
 
     22: ` <h4>Sonhador - Dia 22
     
-Tem o dom de ver os detalhes de e como tudo deve se desenvolver. Ordeiro e paciente, pode abordar tudo de maneira metódica e sistemática!</h4>
+Tem o dom de ver os detalhes de e como tudo deve se desenvolver. 
+Ordeiro e paciente, pode abordar tudo de maneira metódica e sistemática!</h4>
     <p>O dia 22 é a vibração do "Mestre Construtor", o que confere a <strong>você</strong> o potencial de realizar projetos de escala monumental e impacto coletivo. <strong>você</strong> possui a intuição elevada do número 11 combinada com a capacidade prática e realizadora do número 4, permitindo que <strong>você</strong> transforme sonhos abstratos em realidades concretas.</p>
     <p>Sua visão de mundo é ampla e existe a sensação de que <strong>você</strong> nasceu para deixar um legado duradouro e benéfico para a humanidade. <strong>você</strong> tem um talento natural para a organização de grandes sistemas, empresas ou movimentos, agindo com uma responsabilidade e uma ética que inspiram confiança absoluta em parceiros e colaboradores.</p>
     <p><strong>você</strong> possui uma força de trabalho inesgotável e uma mente capaz de coordenar detalhes complexos sem perder de vista o objetivo final. Para <strong>você</strong>, a realização material é um meio de servir ao bem comum e de estruturar um futuro mais seguro para as próximas gerações, o que confere um respeito imenso à sua trajetória profissional.</p>
@@ -716,7 +721,8 @@ O sucesso é indispensável para sua autoestima. Estabelece para si, padrões de
 
     26: ` <h4>Controlador - Dia 26
     
-Pode ser muito diplomático e convincente. Prefere persuasivo, em vez da impositivo!</h4>
+Pode ser muito diplomático e convincente. 
+Prefere persuasivo, em vez da impositivo!</h4>
     <p>O dia 26 confere a <strong>você</strong> um talento excepcional para os negócios, para a gestão financeira e para uma liderança executiva pautada pelo equilíbrio. <strong>você</strong> possui uma visão prática e ambiciosa da vida, mas não abre mão da diplomacia e da consideração pelo bem-estar das pessoas envolvidas em seus projetos e metas.</p>
     <p>Sua capacidade de organização é aliada a um forte senso de justiça social e familiar. <strong>você</strong> sabe como atrair a prosperidade e como gerir recursos com extrema eficiência, sendo frequentemente o pilar de sustentação para quem está ao redor, agindo com uma autoridade que é respeitada por sua generosidade e competência.</p>
     <p><strong>você</strong> entende as leis do mundo material e sabe que o sucesso duradouro exige cooperação. Sua liderança é firme, porém justa, buscando sempre o crescimento mútuo. Existe em <strong>você</strong> um talento para transformar crises financeiras ou estruturais em oportunidades de lucro e estabilidade para todos os envolvidos.</p>
@@ -732,7 +738,8 @@ Pode ser muito diplomático e convincente. Prefere persuasivo, em vez da imposit
 
     28: ` <h4>Obstinado - Dia 28
     
-É genioso, controverso e aberto a novas ideias dentro dos limites do convencional. Nasceu com o dom do querer, e vive se queixando de tudo!</h4>
+É genioso, controverso e aberto a novas ideias dentro dos limites do convencional. 
+Nasceu com o dom do querer, e vive se queixando de tudo!</h4>
     <p>O dia 28 indica que <strong>você</strong> possui uma liderança forte, mas que se manifesta de forma estratégica, cooperativa e diplomática. <strong>você</strong> tem o talento de iniciar grandes projetos contando com o apoio de parceiros que confiam em sua visão e em sua garra inesgotável para vencer desafios e obstáculos.</p>
     <p>Sua determinação é mesclada com uma intuição aguçada sobre as necessidades e potenciais alheios. <strong>você</strong> é alguém de realização que busca o topo, mas que entende perfeitamente que a união de forças é o caminho mais curto e seguro para o sucesso sustentável, agindo com uma coragem que é sempre inteligente e bem planejada.</p>
     <p><strong>você</strong> possui a força do pioneirismo temperada pela experiência de saber lidar com o outro. Existe um magnetismo de sucesso em sua trajetória, pois <strong>você</strong> sabe como delegar e como motivar as pessoas a darem o melhor de si em prol de um objetivo comum, mantendo sempre o comando com muita elegância e tato social.</p>
@@ -839,55 +846,100 @@ O 9 é o Número do Comportamento das pessoas nascidas nos dias 9, 18 e 27 do m�
   },
 // --- MOTIVAÇÃO (O DESEJO ÍNTIMO DA ALMA) ---
 motivacao: {
-    1: `<p>A motivação mais profunda de <strong>você</strong> é a busca incessante pela autonomia total e pelo reconhecimento pleno de sua individualidade e originalidade. O que realmente faz o coração de <strong>você</strong> vibrar é a sensação de ser mestre do próprio destino, sem amarras, dependências ou submissões a vontades alheias que não condizem com a sua própria verdade interior.</p>
+    1: ` <h4>Ter o controle sobre seu destino 
+    
+    Motivação 1</h4>
+    <p>A motivação mais profunda de <strong>você</strong> é a busca incessante pela autonomia total e pelo reconhecimento pleno de sua individualidade e originalidade. O que realmente faz o coração de <strong>você</strong> vibrar é a sensação de ser mestre do próprio destino, sem amarras, dependências ou submissões a vontades alheias que não condizem com a sua própria verdade interior.</p>
     <p>Existe uma urgência interna de destaque e liderança, motivada não por vaidade superficial, mas por uma necessidade vital de provar a si que é possível conquistar o topo através do mérito pessoal e da inovação. <strong>você</strong> sente um desconforto profundo diante da mediocridade ou da estagnação; qualquer cenário que limite a liberdade de ação ou abafe o brilho pessoal gera uma inquietação que só é aplacada pelo movimento e pela conquista.</p>
     <p>O desejo íntimo é ser a figura pioneira, a referência máxima e o ponto de partida em tudo o que se propõe a realizar. O sucesso, para <strong>você</strong>, só possui um significado real se carregar a sua própria assinatura e for fruto de uma coragem inabalável de ser quem realmente é, desafiando convenções para abrir novos caminhos que outros seguirão posteriormente.</p>
     <p>Essa alma anseia pela vitória solitária se necessário, pois a independência é o valor supremo. Quando <strong>você</strong> assume o controlo da própria vida e vê os seus projetos ganharem forma através da sua força de vontade, atinge um estado de satisfação que alimenta a confiança para enfrentar desafios ainda maiores, consolidando uma trajetória de independência e poder pessoal absoluto.</p>`,
 
-    2: `<p>A motivação íntima de <strong>você</strong> é a busca constante pela paz, pela harmonia e pela conexão profunda com as pessoas e com o ambiente ao redor. O que o coração de <strong>você</strong> mais deseja é viver numa realidade onde o amor, a gentileza e a compreensão mútua prevaleçam sobre qualquer tipo de disputa de ego, competição agressiva ou conflito desnecessário.</p>
+    2: ` <h4>Estar em paz e em harmonia
+    
+     Motivação 2</h4>
+    <p>A motivação íntima de <strong>você</strong> é a busca constante pela paz, pela harmonia e pela conexão profunda com as pessoas e com o ambiente ao redor. O que o coração de <strong>você</strong> mais deseja é viver numa realidade onde o amor, a gentileza e a compreensão mútua prevaleçam sobre qualquer tipo de disputa de ego, competição agressiva ou conflito desnecessário.</p>
     <p><strong>você</strong> sente uma satisfação imensa ao colaborar e ao ser a peça fundamental que une diferentes partes em prol de um objetivo comum e harmonioso. O desejo secreto é de aceitação e valorização pela capacidade de ouvir, apoiar e nutrir relacionamentos. <strong>você</strong> não busca o palco principal por necessidade de ego, mas sim a segurança de vínculos sólidos e de uma vida emocional estável e equilibrada.</p>
     <p>Para <strong>você</strong>, a felicidade reside nos gestos de carinho, na lealdade e na certeza de ser alguém útil para o bem-estar daqueles que ama. A alma de <strong>você</strong> nutre-se da beleza, da tranquilidade e de tudo o que acalma os sentidos, buscando a serenidade como o bem mais precioso e a diplomacia como a ferramenta principal para manter o equilíbrio do mundo particular.</p>
     <p>A realização da alma ocorre quando existe um clima de união e partilha. Ao sentir que as suas palavras e o seu jeito cuidadoso trouxeram conforto a alguém ou resolveram uma tensão, <strong>você</strong> atinge uma plenitude interior que justifica todo o seu esforço, tornando a sua existência uma constante busca pela unidade e pelo entendimento entre os seres.</p>`,
 
-    3: `<p>A motivação mais profunda de <strong>você</strong> é a necessidade vital de se expressar, de criar e de brilhar nos círculos sociais através do intelecto e do carisma. O que realmente impulsiona o coração de <strong>você</strong> é a oportunidade de transmitir ideias, sentimentos e uma alegria contagiante para o maior número possível de pessoas, agindo como uma fonte de luz e entusiasmo.</p>
+    3: ` <h4>Se divertir e ser o centro das atenções
+    
+Motivação 3
+</h4>
+    <p>A motivação mais profunda de <strong>você</strong> é a necessidade vital de se expressar, de criar e de brilhar nos círculos sociais através do intelecto e do carisma. O que realmente impulsiona o coração de <strong>você</strong> é a oportunidade de transmitir ideias, sentimentos e uma alegria contagiante para o maior número possível de pessoas, agindo como uma fonte de luz e entusiasmo.</p>
     <p><strong>você</strong> deseja ser figura de reconhecimento pela inteligência, pelo bom humor e pela capacidade única de tornar a vida mais leve, colorida e interessante. O isolamento ou a repressão da criatividade são fatores que sufocam a alma de <strong>você</strong>, que precisa de movimento, de conversas estimulantes, de trocas culturais e de um público que valorize o seu talento natural para a comunicação.</p>
     <p>O desejo íntimo é viver a experiência terrena com prazer, explorando todas as formas de arte e interação. <strong>você</strong> sente realização ao motivar os outros a observarem o lado positivo das situações, funcionando como um íman para amizades e oportunidades que surgem através da sua simpatia. A vida, para <strong>você</strong>, deve ser uma celebração constante da expressão e da liberdade.</p>
     <p>Quando <strong>você</strong> consegue canalizar esse potencial criativo para projetos que trazem felicidade e inspiração ao próximo, a sua alma atinge o ápice da satisfação. O sucesso de <strong>você</strong> está diretamente ligado à capacidade de transformar o quotidiano em algo extraordinário através da palavra, do riso e da beleza que emana da sua personalidade vibrante.</p>`,
 
-    4: `<p>A motivação íntima de <strong>você</strong> é a busca pela segurança absoluta, pela ordem estruturada e pela construção de algo duradouro que mereça o respeito da sociedade. O que realmente impulsiona a alma de <strong>você</strong> é o desejo de manter os pés em terra firme e saber que existe uma base sólida, tanto material quanto familiar, que nenhuma crise externa poderá abalar.</p>
+    4: `<h4>Ter uma vida estável e organizada
+    
+Motivação 4
+</h4>
+    <p>A motivação íntima de <strong>você</strong> é a busca pela segurança absoluta, pela ordem estruturada e pela construção de algo duradouro que mereça o respeito da sociedade. O que realmente impulsiona a alma de <strong>você</strong> é o desejo de manter os pés em terra firme e saber que existe uma base sólida, tanto material quanto familiar, que nenhuma crise externa poderá abalar.</p>
     <p><strong>você</strong> sente uma satisfação profunda no trabalho bem executado, na organização meticulosa da rotina e no cumprimento rigoroso dos deveres assumidos. O desejo secreto é ser alguém de honra, eficiência e indispensabilidade. <strong>você</strong> valoriza as tradições, a justiça e a estabilidade, sentindo que a sua missão pessoal é trazer estrutura ao mundo e proteger quem depende da sua força.</p>
     <p>Para <strong>você</strong>, a felicidade não se encontra em aventuras incertas, mas na tranquilidade de uma carreira estável, de uma casa bem cuidada e da consciência limpa de quem cumpre cada promessa com lealdade. A alma de <strong>você</strong> busca a perfeição nos detalhes técnicos e a solidez nos resultados financeiros e patrimoniais, planeando sempre a longo prazo.</p>
     <p>A alma atinge a paz quando percebe que todos os tijolos da sua construção de vida estão no lugar certo. Ver a família protegida e o património a crescer de forma honesta e disciplinada é o que dá sentido à existência de <strong>você</strong>, consolidando um perfil de resiliência e de construção de um legado que resistirá ao passar do tempo.</p>`,
 
-    5: `<p>A motivação mais profunda de <strong>você</strong> é a liberdade absoluta de movimento, de pensamento e de ação. O que realmente faz a alma de <strong>você</strong> vibrar é a possibilidade constante de mudança, de exploração de novos horizontes, de viagens e de contacto com experiências sensoriais e intelectuais diversificadas, sem as correntes de rotinas sufocantes.</p>
+    5: `<h4>Ter novas novas e intensas experiências
+    
+Motivação 5
+</h4>
+    <p>A motivação mais profunda de <strong>você</strong> é a liberdade absoluta de movimento, de pensamento e de ação. O que realmente faz a alma de <strong>você</strong> vibrar é a possibilidade constante de mudança, de exploração de novos horizontes, de viagens e de contacto com experiências sensoriais e intelectuais diversificadas, sem as correntes de rotinas sufocantes.</p>
     <p><strong>você</strong> deseja viver intensamente, desafiando limites pessoais e explorando a versatilidade da mente humana. O desejo íntimo é ser uma presença moderna, desimpedida e capaz de adaptação imediata a qualquer cenário imprevisto. A monotonia é o maior temor de <strong>você</strong>, que está sempre em busca da próxima grande descoberta ou de uma forma inovadora de observar a realidade.</p>
     <p>Para <strong>você</strong>, a realização vem através do conhecimento direto e da vivência de mundo. <strong>você</strong> sente-se com vida quando pode expressar opiniões livremente e quando percebe que o futuro é um mistério excitante a ser desvendado pela curiosidade infinita. A alma de <strong>você</strong> anseia por novidades que estimulem os sentidos e tragam novos significados à jornada pessoal.</p>
     <p>Ao conseguir conciliar essa sede de aventura com um propósito que traga progresso, <strong>você</strong> atinge o seu potencial máximo. O sucesso é medido pela quantidade de experiências acumuladas e pela capacidade de manter a juventude de espírito, tornando a trajetória de <strong>você</strong> uma sucessão de descobertas brilhantes e de uma autonomia que poucos conseguem alcançar.</p>`,
 
-    6: `<p>A motivação íntima de <strong>você</strong> é o desejo de amar, de cuidar e de ser a figura protetora por excelência do lar, dos amigos e da comunidade. O que realmente impulsiona o coração de <strong>você</strong> é a busca pelo bem-estar alheio e pela criação de um ambiente onde reine a harmonia, a justiça, o conforto emocional e a beleza estética em cada pormenor.</p>
+    6: `<h4>Ajudar e cuidar daqueles que você estima.
+    
+Motivação 6
+</h4>
+    <p>A motivação íntima de <strong>você</strong> é o desejo de amar, de cuidar e de ser a figura protetora por excelência do lar, dos amigos e da comunidade. O que realmente impulsiona o coração de <strong>você</strong> é a busca pelo bem-estar alheio e pela criação de um ambiente onde reine a harmonia, a justiça, o conforto emocional e a beleza estética em cada pormenor.</p>
     <p><strong>você</strong> sente-se em plenitude quando assume responsabilidades em favor daqueles que ama, agindo como o porto seguro para quem busca aconselhamento e acolhimento. O desejo secreto é ser o pilar de sustentação afetiva, alguém em quem todos podem confiar cegamente. <strong>você</strong> valoriza a ética, a paz doméstica e a concórdia social acima de qualquer ambição de poder solitário.</p>
     <p>Para <strong>você</strong>, a felicidade plena é observar a união e a prosperidade do núcleo familiar. A alma de <strong>você</strong> nutre-se do serviço desinteressado e do carinho retribuído, buscando transformar o ambiente ao redor num lugar mais humano, acolhedor e visualmente agradável. O sentido da vida para <strong>você</strong> está no ato de nutrir e de manter os laços de afeto sempre fortalecidos.</p>
     <p>Quando <strong>você</strong> percebe que a sua intervenção trouxe equilíbrio a uma situação difícil ou que o seu lar exala harmonia, a alma atinge um estado de êxtase. Ser a presença que pacifica e que embeleza a vida dos outros é o que confere a <strong>você</strong> a certeza de estar a cumprir uma missão nobre de amor e dedicação incondicional.</p>`,
 
-    7: `<p>A motivação mais profunda de <strong>você</strong> é a busca pelo conhecimento oculto, pela verdade espiritual e pela perfeição técnica e intelectual. O que realmente impulsiona a alma de <strong>você</strong> é o desejo de compreender as causas fundamentais da existência e de atingir um nível de sabedoria que coloque a mente acima das futilidades e distrações do quotidiano social.</p>
+    7: `<h4>Se destacar e ter conhecimento
+    
+Motivação 7
+</h4>
+    <p>A motivação mais profunda de <strong>você</strong> é a busca pelo conhecimento oculto, pela verdade espiritual e pela perfeição técnica e intelectual. O que realmente impulsiona a alma de <strong>você</strong> é o desejo de compreender as causas fundamentais da existência e de atingir um nível de sabedoria que coloque a mente acima das futilidades e distrações do quotidiano social.</p>
     <p><strong>você</strong> deseja o silêncio, a privacidade e o tempo necessário para o estudo e para a reflexão profunda sobre os mistérios da vida e da ciência. O desejo íntimo é ser uma autoridade respeitada no campo de conhecimento escolhido, com base na profundidade da análise e não na aparência. <strong>você</strong> possui um radar infalível para a falsidade e busca a autenticidade pura em si e nos outros.</p>
     <p>Para <strong>você</strong>, a realização vem através da descoberta de respostas que a maioria das pessoas nem sequer ousa perguntar. A alma de <strong>você</strong> busca a conexão com o divino ou com a lógica pura da natureza, encontrando paz na solidão produtiva e na clareza de uma mente bem treinada para o discernimento. A busca pela perfeição é o que guia cada passo de <strong>você</strong>.</p>
     <p>A satisfação total ocorre quando uma peça de um quebra-cabeça complexo é finalmente encaixada através da dedicação mental. Ao atingir patamares elevados de compreensão e ao partilhar essa luz técnica ou espiritual com quem demonstra real interesse, <strong>você</strong> consolida uma jornada de profunda paz interior e de reconhecimento pela sua integridade intelectual.</p>`,
 
-    8: `<p>A motivação íntima de <strong>você</strong> é a conquista do poder material, da autoridade executiva e do sucesso em grande escala. O que realmente impulsiona o coração de <strong>você</strong> é o desejo de gerir grandes recursos, liderar pessoas com justiça e ser alguém de influência, competência e vitória reconhecida no mundo prático e nos negócios.</p>
+    8: `<h4>Ser reconhecido por suas realizações
+    
+Motivação 8
+</h4>
+    <p>A motivação íntima de <strong>você</strong> é a conquista do poder material, da autoridade executiva e do sucesso em grande escala. O que realmente impulsiona o coração de <strong>você</strong> é o desejo de gerir grandes recursos, liderar pessoas com justiça e ser alguém de influência, competência e vitória reconhecida no mundo prático e nos negócios.</p>
     <p><strong>você</strong> sente uma satisfação profunda ao observar os seus esforços transformarem-se em prosperidade tangível e duradoura. O desejo secreto é o controlo total sobre a própria realidade financeira e o reconhecimento social da sua força de comando. <strong>você</strong> não teme o trabalho exaustivo, desde que ele conduza ao topo e permita exercer um senso de justiça e de organização eficiente.</p>
     <p>Para <strong>você</strong>, a felicidade está ligada à eficiência, à autoridade e à capacidade de realizar sonhos grandiosos que beneficiem a linhagem familiar. A alma de <strong>você</strong> busca a mestria sobre as leis da matéria, encontrando realização na construção de um legado de abundância e na capacidade de organizar o caos para gerar resultados de excelência e prestígio.</p>
     <p>A plenitude da alma acontece quando o sucesso é partilhado através da responsabilidade social. Ao usar a força e o dinheiro como ferramentas para estruturar vidas e promover o crescimento de quem está sob a sua gestão, <strong>você</strong> atinge o nível mais alto de autoridade moral, tornando-se uma figura de sucesso admirada por toda a comunidade.</p>`,
 
-    9: `<p>A motivação mais profunda de <strong>você</strong> é o desejo sincero de servir a humanidade e de deixar um mundo significativamente melhor através da compaixão e da generosidade. O que realmente impulsiona a alma de <strong>você</strong> é a busca pelo desapego, pelo perdão universal e pela compreensão das dores humanas, sem distinção de qualquer ordem social ou cultural.</p>
+    9: `<h4>Ser útil e servir à todos
+    
+Motivação 9
+</h4>
+    <p>A motivação mais profunda de <strong>você</strong> é o desejo sincero de servir a humanidade e de deixar um mundo significativamente melhor através da compaixão e da generosidade. O que realmente impulsiona a alma de <strong>você</strong> é a busca pelo desapego, pelo perdão universal e pela compreensão das dores humanas, sem distinção de qualquer ordem social ou cultural.</p>
     <p><strong>você</strong> deseja viver uma vida com propósito espiritual e humanitário acima de tudo. O desejo íntimo é ser uma fonte de inspiração, cura e sabedoria para os outros, sentindo que a jornada só faz sentido se <strong>você</strong> puder aliviar o fardo de alguém. <strong>você</strong> valoriza o conhecimento acumulado e busca a conclusão de ciclos com dignidade, ética e amor incondicional.</p>
     <p>Para <strong>você</strong>, a realização plena vem da entrega a uma causa nobre que transcenda os interesses egoístas. A alma de <strong>você</strong> nutre-se do altruísmo e da visão de uma sociedade mais justa e equilibrada, encontrando paz quando consegue elevar a consciência daqueles que cruzam o seu caminho através de um exemplo de integridade e bondade universal.</p>
     <p>Ao ver o impacto positivo das suas ações na vida de estranhos ou de amigos, a alma de <strong>você</strong> expande-se. A conclusão de cada etapa da vida com a sensação de dever cumprido perante o cosmos é o que traz a <strong>você</strong> a verdadeira paz, consolidando uma trajetória de desprendimento, luz e de um amor que abraça toda a existência.</p>`,
     // ... seus textos de 1 a 9 ...
-    11: `O número 11 na Motivação indica uma alma que busca a iluminação e a inspiração. Você não se contenta com o comum; seu desejo interno é compreender os mistérios da vida e servir como um farol para os outros. Possui uma intuição aguçada e um idealismo que busca a harmonia espiritual acima de tudo.`,
-    22: `Ter o 22 na Motivação significa que sua alma anseia por construir algo grandioso e duradouro. Você se sente impulsionado a realizar projetos que beneficiem a humanidade. Seu desejo interno combina a visão espiritual com a capacidade prática de materializar sonhos em estruturas concretas.`,
-    33: `O 33 na Motivação é a vibração do Mestre da Compaixão. Sua alma deseja proteger, curar e ensinar. Você sente um chamado profundo para o amor incondicional e o sacrifício pessoal em prol do bem-estar alheio, agindo como um verdadeiro guia espiritual para aqueles que cruzam seu caminho.`
-
+    11: `<h4>Compreender os mistérios da Vida
+    
+Motivação 11
+</h4>
+    O número 11 na Motivação indica uma alma que busca a iluminação e a inspiração. Você não se contenta com o comum; seu desejo interno é compreender os mistérios da vida e servir como um farol para os outros. Possui uma intuição aguçada e um idealismo que busca a harmonia espiritual acima de tudo.`,
+    22: `<h4>Materialização de desejos internos
+    
+Motivação 22
+</h4>
+    Ter o 22 na Motivação significa que sua alma anseia por construir algo grandioso e duradouro. Você se sente impulsionado a realizar projetos que beneficiem a humanidade. Seu desejo interno combina a visão espiritual com a capacidade prática de materializar sonhos em estruturas concretas.`,
+   
+ 33: `<h4>Amor incondicional<h4>
+    
+    Motivação 33
+ O 33 na Motivação é a vibração do Mestre da Compaixão. Sua alma deseja proteger, curar e ensinar. Você sente um chamado profundo para o amor incondicional e o sacrifício pessoal em prol do bem-estar alheio, agindo como um verdadeiro guia espiritual para aqueles que cruzam seu caminho.`
   
 },
 
