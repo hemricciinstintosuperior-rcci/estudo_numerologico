@@ -1057,6 +1057,9 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 // ============================================
 // FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (AUTOMÁTICO)
 // ============================================
+// ============================================
+// FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (CORRIGIDA)
+// ============================================
 
 function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     const agora = new Date();
@@ -1104,19 +1107,19 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     const _p4 = planosOrdenados[3];
     const ref = _p1.valor || 1;
 
-    // --- LÓGICA DE DADOS PARA OS POTENCIAIS (O QUE ESTAVA FALTANDO) ---
+    // --- CORREÇÃO DAS CHAVES (MAIÚSCULAS PARA O BANCO DE ATRIBUTOS) ---
     const dadosParaRetorno = {
         status: {
-            "fisico": (somaMomento.fisico / ref > 0.75) ? "forte" : (somaMomento.fisico / ref >= 0.50) ? "medio" : "fraco",
-            "mental": (somaMomento.mental / ref > 0.75) ? "forte" : (somaMomento.mental / ref >= 0.50) ? "medio" : "fraco",
-            "emocional": (somaMomento.emocional / ref > 0.75) ? "forte" : (somaMomento.emocional / ref >= 0.50) ? "medio" : "fraco",
-            "intuitivo": (somaMomento.intuitivo / ref > 0.75) ? "forte" : (somaMomento.intuitivo / ref >= 0.50) ? "medio" : "fraco"
+            "Físico": (somaMomento.fisico / ref > 0.75) ? "forte" : (somaMomento.fisico / ref >= 0.50) ? "medio" : "fraco",
+            "Mental": (somaMomento.mental / ref > 0.75) ? "forte" : (somaMomento.mental / ref >= 0.50) ? "medio" : "fraco",
+            "Emocional": (somaMomento.emocional / ref > 0.75) ? "forte" : (somaMomento.emocional / ref >= 0.50) ? "medio" : "fraco",
+            "Intuitivo": (somaMomento.intuitivo / ref > 0.75) ? "forte" : (somaMomento.intuitivo / ref >= 0.50) ? "medio" : "fraco"
         },
         vibracoes: {
-            "fisico": reduzir(somaMomento.fisico),
-            "mental": reduzir(somaMomento.mental),
-            "emocional": reduzir(somaMomento.emocional),
-            "intuitivo": reduzir(somaMomento.intuitivo)
+            "Físico": reduzir(somaMomento.fisico),
+            "Mental": reduzir(somaMomento.mental),
+            "Emocional": reduzir(somaMomento.emocional),
+            "Intuitivo": reduzir(somaMomento.intuitivo)
         },
         perfil: dominanteMomento
     };
@@ -1137,7 +1140,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         <h2 class="titulo-topico">Status do Momento</h2>
         
         <div style="margin-bottom: 25px; padding: 20px; border: 2px solid var(--gold); border-radius: 12px; background: #fff; display: flex; align-items: center; gap: 20px;">
-            <div style="background: var(--gold); color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase;">
+            <div style="background: var(--gold); color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; flex-shrink: 0;">
                 ${dominanteMomento[0]}
             </div>
             <div>
@@ -1176,7 +1179,6 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         }
     }
 
-    // SÍNTESE E DIRETRIZ
     html += `
         <div style="margin-top:40px; border:2px solid var(--gold); padding:25px; border-radius:12px; background:#fff;">
             <div style="text-align:center; margin-bottom:20px;">
@@ -1197,7 +1199,6 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         </div>
     </div>`;
 
-    // NÚMERO DE TRÂNSITO
     const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
     html += `
     <div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 30px;">
@@ -1213,7 +1214,6 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
         </div>
     </div>`;
 
-    // AQUI O PULO DO GATO: Devolve os dados certinhos para a próxima função não bugar
     return { html: html, dados: dadosParaRetorno };
 }
 function gerarMapaCompleto() {
