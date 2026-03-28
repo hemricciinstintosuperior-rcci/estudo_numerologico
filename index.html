@@ -1098,30 +1098,15 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
     const ref = planosOrdenados[0][1] || 1;
     const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
 
-    // --- LÓGICA DA SÍNTESE DO MOMENTO ---
-    let planosFortes = [];
-    for(let p in somaMomento) {
-        if ((somaMomento[p] / ref) > 0.75) planosFortes.push(nomesAmigaveis[p]);
-    }
-    let textoSintese = planosFortes.length > 0 
-        ? `Neste ciclo, sua maior carga vibracional está concentrada no(s) plano(s) <strong>${planosFortes.join(' e ')}</strong>, indicando onde sua energia vital buscará maior expressão imediata.`
-        : "Neste ciclo, suas energias estão distribuídas de forma equilibrada, sem um único plano dominante absoluto, permitindo uma atuação versátil.";
-
-    const dadosParaGrafico = {
-        status: {
-            "Físico": (somaMomento.fisico / ref > 0.75) ? "forte" : (somaMomento.fisico / ref >= 0.50) ? "medio" : "fraco",
-            "Mental": (somaMomento.mental / ref > 0.75) ? "forte" : (somaMomento.mental / ref >= 0.50) ? "medio" : "fraco",
-            "Emocional": (somaMomento.emocional / ref > 0.75) ? "forte" : (somaMomento.emocional / ref >= 0.50) ? "medio" : "fraco",
-            "Intuitivo": (somaMomento.intuitivo / ref > 0.75) ? "forte" : (somaMomento.intuitivo / ref >= 0.50) ? "medio" : "fraco"
-        },
-        vibracoes: {
-            "Físico": reduzir(somaMomento.fisico),
-            "Mental": reduzir(somaMomento.mental),
-            "Emocional": reduzir(somaMomento.emocional),
-            "Intuitivo": reduzir(somaMomento.intuitivo)
-        },
-        perfil: dominanteMomento
-    };
+    // --- LÓGICA DE SÍNTESE IGUAL AO NATURAL (BUSCANDO TEXTOS PROFUNDOS) ---
+    const p1 = planosOrdenados[0][0];
+    const p2 = planosOrdenados[1][0];
+    const chaveSintese = `${p1}_${p2}`;
+    
+    // Aqui ele busca no seu arquivo de textos a interpretação combinada do momento
+    const textoSinteseLongo = (window.textosSintesePlanos && window.textosSintesePlanos[chaveSintese]) 
+        ? window.textosSintesePlanos[chaveSintese] 
+        : `Sua vibração atual combina a força do plano ${nomesAmigaveis[p1]} com a influência do plano ${nomesAmigaveis[p2]}.`;
 
     const descricoesPerfilMomento = {
         criativo: `<p>"Sua energia de ação este ano está em fase de expansão e Criatividade"</p><p>Neste ciclo, sua forma de agir está mais arrojada. Você sentirá uma facilidade maior para encontrar saídas rápidas e originais para problemas que antes pareciam travados.</p>`,
@@ -1137,85 +1122,74 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
                 VIGÊNCIA: ${periodoVigente}
             </span>
         </div>
-        <div class="texto-intro" style="margin-bottom: 25px; font-style: italic; color: #444; line-height: 1.6; border-bottom: 1px solid #eee; padding-bottom: 15px;">
-            O Status do Momento revela a distribuição das suas potências vitais durante o ciclo vigente...
-        </div>
 
-        <div style="margin-bottom: 25px; padding: 20px; border: 2px solid var(--dark); border-radius: 12px; background: #fafafa; display: flex; align-items: center; gap: 20px;">
-            <div style="background: var(--dark); color: var(--gold); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; border: 2px solid var(--gold); flex-shrink: 0;">
-                ${dominanteMomento[0]}
-            </div>
-            <div>
-                <h4 style="margin: 0; color: var(--dark); text-transform: uppercase; font-weight: bold;">Perfil de Ação Atual: ${dominanteMomento}</h4>
-                <div style="margin: 5px 0 0 0; font-size: 14px; color: #555; line-height: 1.5;">
-                    ${aplicarFiltroTexto(descricoesPerfilMomento[dominanteMomento])}
+        <div style="margin-bottom: 30px; padding: 25px; border: 1px solid var(--gold); border-radius: 15px; background: linear-gradient(145deg, #ffffff, #f9f9f9); box-shadow: 5px 5px 15px rgba(0,0,0,0.05);">
+            <div style="display: flex; align-items: center; gap: 20px; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                <div style="background: var(--dark); color: var(--gold); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; border: 2px solid var(--gold); box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                    ${dominanteMomento[0]}
+                </div>
+                <div>
+                    <h4 style="margin: 0; color: var(--dark); text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">Perfil de Ação: ${dominanteMomento}</h4>
+                    <small style="color: var(--gold); font-weight: bold; text-transform: uppercase; font-size: 11px;">Frequência Vibracional de Trânsito</small>
                 </div>
             </div>
+            <div class="texto-res" style="font-size: 15px; line-height: 1.7; color: #444;">
+                ${aplicarFiltroTexto(descricoesPerfilMomento[dominanteMomento])}
+            </div>
         </div>
 
-        <div style="margin-bottom: 30px;">
-            <h3 style="font-size: 14px; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Distribuição de Potencial</h3>
+        <div style="margin-bottom: 35px;">
+            <h3 style="font-size: 14px; color: #827108; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; border-left: 4px solid var(--gold); padding-left: 10px;">Gráfico de Frequências do Ciclo</h3>
             ${Object.keys(somaMomento).map(p => {
                 let porcentagem = (somaMomento[p] / ref) * 100;
                 return `
-                <div style="margin-bottom: 15px;">
-                    <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
-                        <span style="font-weight:bold; font-size:12px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
-                        <span style="font-weight:bold; color:${coresPlanos[p] || 'var(--dark)'};">Vibração ${reduzir(somaMomento[p])}</span>
+                <div style="margin-bottom: 18px;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom: 6px;">
+                        <span style="font-weight:bold; font-size:12px; text-transform:uppercase; color: #555;">${nomesAmigaveis[p]}</span>
+                        <span style="font-weight:bold; color:${coresPlanos[p] || 'var(--dark)'}; font-size: 13px;">Vibração ${reduzir(somaMomento[p])}</span>
                     </div>
-                    <div style="height:8px; background:#ddd; border-radius:4px; overflow:hidden;">
-                        <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p] || 'var(--dark)'};"></div>
+                    <div style="height:10px; background:#ececec; border-radius:10px; overflow:hidden; border: 1px solid #eee;">
+                        <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p] || 'var(--dark)'}; border-radius: 10px;"></div>
                     </div>
                 </div>`;
             }).join('')}
         </div>
 
-        <div style="margin-bottom: 30px; background: #fdfaf3; padding: 15px; border-radius: 8px; border: 1px solid #eee;">
-            <h4 style="margin: 0 0 10px 0; font-size: 13px; color: #827108; text-transform: uppercase; border-bottom: 1px solid #e0d0a0; padding-bottom: 5px;">Síntese do Momento</h4>
-            <div style="font-size: 15px; color: #333; line-height: 1.6;">
-                ${textoSintese}
+        <div style="margin-top: 40px; border: 2px solid #827108; padding: 30px; border-radius: 10px; background: #fff;">
+            <h4 style="margin: -45px 0 20px 0; background: #fff; width: fit-content; padding: 0 15px; color: #827108; text-transform: uppercase; font-size: 14px; letter-spacing: 2px;">Síntese do Momento</h4>
+            <div class="texto-res" style="font-size: 16px; line-height: 1.8; color: #333; text-align: justify;">
+                ${aplicarFiltroTexto(textoSinteseLongo)}
             </div>
         </div>
-    `;
+    </div>`;
 
-    // INTERPRETAÇÃO DETALHADA DOS PLANOS
+    // INTERPRETAÇÃO INDIVIDUAL DOS PLANOS (Para fechar a seção)
     for(let p in somaMomento) {
         let r = somaMomento[p] / ref;
         let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
         const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][int][reduzir(somaMomento[p])] : "";
         if(textoIndiv) {
             html += `
-                <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p] || 'var(--gold)'}; padding-left: 15px;">
-                    <h4 style="margin:0; color:${coresPlanos[p] || 'var(--dark)'}; text-transform:uppercase; font-size:14px;">${nomesAmigaveis[p]} no Momento</h4>
-                    <div class="texto-res">${aplicarFiltroTexto(textoIndiv)}</div>
+                <div class="secao-card" style="border-left: 5px solid ${coresPlanos[p] || 'var(--gold)'}; margin-top: 15px; padding: 20px; background: #fafafa;">
+                    <h4 style="margin:0 0 10px 0; color:${coresPlanos[p] || 'var(--dark)'}; text-transform:uppercase; font-size:13px; letter-spacing:1px;">${nomesAmigaveis[p]} no Momento</h4>
+                    <div class="texto-res" style="font-size: 14px;">${aplicarFiltroTexto(textoIndiv)}</div>
                 </div>`;
         }
     }
 
     // --- BLOCO DO TRÂNSITO ---
     const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
-    const textoIntroTransito = "O Número de Trânsito representa a síntese vibracional do seu momento atual, unificando as energias dos seus planos Físico, Mental, Emocional e Intuitivo.";
-
     html += `
-    <div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 30px;">
-        <h2 class="titulo-topico">Número de Trânsito</h2>
-        <div class="resultado-bloco">
-            <div class="texto-intro" style="margin-bottom: 20px; font-style: italic; color: #444; line-height: 1.6;">
-                ${textoIntroTransito}
-            </div>
-            <h3 style="display: flex; align-items: center; gap: 10px;">
-                Seu Trânsito Atual: <span class="numero-destaque" style="color: var(--gold); font-size: 1.5em;">${vTransitoCalculado}</span>
-            </h3>
-            <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
-                VIGÊNCIA: ${periodoVigente}
-            </p>
-            <div class="texto-res" style="margin-top: 15px;">
-                ${aplicarFiltroTexto(window.TextosTransito ? window.TextosTransito[vTransitoCalculado] : "")}
-            </div>
+    <div class="secao-card" style="border: 2px solid var(--gold); margin-top: 40px; text-align: center; background: var(--dark); color: #fff;">
+        <h2 class="titulo-topico" style="color: var(--gold); border: none;">Número de Trânsito Atual</h2>
+        <div style="font-size: 60px; font-weight: bold; color: var(--gold); margin: 20px 0;">${vTransitoCalculado}</div>
+        <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 12px; margin-bottom: 20px; opacity: 0.8;">Vigência: ${periodoVigente}</p>
+        <div class="texto-res" style="color: #eee; padding: 0 20px 20px 20px; text-align: justify; font-size: 15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+            ${aplicarFiltroTexto(window.TextosTransito ? window.TextosTransito[vTransitoCalculado] : "")}
         </div>
     </div>`;
 
-    return { html: html, dados: dadosParaGrafico };
+    return { html: html, dados: { status: {}, vibracoes: {}, perfil: dominanteMomento } };
 }
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
