@@ -3077,7 +3077,7 @@ window.TextosTransito = {
 
 const conectores = ["Além disso,", "Também,", "Outro ponto importante,", "Somando-se a isso,", "Em complemento,"];
 
-window. textosSinteseExpressao = {
+const textosSinteseExpressao = {
     // 1. DUAS POTÊNCIAS E DOIS EQUILÍBRIOS (Caso do Carlos)
     "FFMM": "O perfil apresenta uma **Dualidade de Potência**. Existem dois motores principais que operam em alta frequência, garantindo força de realização e intensidade. Os outros dois planos atuam como estabilizadores, operando no nível médio (equilíbrio). O desafio é não deixar que as duas potências dominantes abafem a voz dos planos equilibrados, mantendo a fluidez entre a ação e a moderação.",
 
