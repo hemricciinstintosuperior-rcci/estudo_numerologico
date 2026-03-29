@@ -1561,7 +1561,7 @@ html += `
 `;
 if (res.deficiencias.length > 0) {
     res.deficiencias.forEach(f => {
-        html += `<p><strong>Número ${f}:</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
+        html += `<p><strong>Falta do Número ${f} no Nome</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
     });
 } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
 html += `</div>`;
@@ -1591,7 +1591,7 @@ itensAlinhamento.forEach(chave => {
     if (chave === "inclinacoes") {
         if (res.inclinacoes && res.inclinacoes.length > 0) {
             res.inclinacoes.forEach(num => {
-                conteudoFinal += `<p><strong>Número ${num}:</strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #eee">`;
+                conteudoFinal += `<p><strong> </strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #eee">`;
             });
         } else {
             conteudoFinal = "<p>Nenhuma inclinação específica detectada.</p>";
@@ -1656,7 +1656,7 @@ html += `
                     ${info.idade} | ${info.anos}
                 </span>
                 <p style="margin-top: 5px;">
-                    <strong>${labelFase} (Número ${res[sec][i]}):</strong><br>
+                    <strong>${labelFase} ( N° ${res[sec][i]}): </strong><br>
                     ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
                 </p>
                 <hr style="border:0; border-top:1px solid #eee">
