@@ -446,7 +446,39 @@ function aplicarFiltroTexto(texto) {
     let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
     return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
 }
+// Função para calcular o Desejo Oculto (Número que mais se repete no nome todo)
+function calcularDesejoOculto(nome) {
+    const contagem = {};
+    const numeros = converterNomeParaNumeros(nome); // Use sua função existente de conversão
+    numeros.forEach(n => contagem[n] = (contagem[n] || 0) + 1);
+    
+    let maxRepeticoes = 0;
+    let numeroDesejo = 0;
+    for (const n in contagem) {
+        if (contagem[n] > maxRepeticoes) {
+            maxRepeticoes = contagem[n];
+            numeroDesejo = n;
+        }
+    }
+    return { numero: numeroDesejo, qtd: maxRepeticoes };
+}
 
+// Função para Talentos Especiais (Baseado apenas no PRIMEIRO NOME)
+function calcularTalentoEspecial(primeiroNome) {
+    const contagem = {};
+    const numeros = converterNomeParaNumeros(primeiroNome);
+    numeros.forEach(n => contagem[n] = (contagem[n] || 0) + 1);
+    
+    const frequencias = Object.values(contagem).sort((a, b) => b - a);
+    const maior = frequencias[0] || 0;
+    const segundaMaior = frequencias[1] || 0;
+
+    // Critério: aparece o dobro ou mais vezes que qualquer outro
+    if (maior >= (segundaMaior * 2) && maior > 0) {
+        return Object.keys(contagem).find(key => contagem[key] === maior);
+    }
+    return null; // Caso não haja predominância de dobro
+}
         
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual) {
     let nota = 5.5; 
@@ -1516,7 +1548,7 @@ let html = `
 html += `
     <div class="capa-transicao">
         <p>PARTE 01</p>
-        <h2>Seus Graficos de Performance Técnica</h2>
+        <h2>Seus Graficos de Performance Natural</h2>
         <p>A decodificação das Energias e Potenciais nativas que definem sua personalidade.</p>
     </div>
 
@@ -1601,6 +1633,36 @@ if (res.deficitsOcultos.length > 0) {
     });
 }
 html += `</div>`;
+
+
+// --- INCLUSÃO: DESEJO OCULTO E TALENTOS ESPECIAIS ---
+const dadosDesejo = calcularDesejoOculto(nomeRaw);
+const primeiroNome = nomeRaw.split(' ')[0];
+const talentoNum = calcularTalentoEspecial(primeiroNome);
+
+html += `
+    <div class="secao-card quebra-pagina">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Vibração do Desejo Oculto</h2>
+        <div class="intro-texto">${textos.introducoes.desejoOculto || "Esta vibração molda sua personalidade e guia comportamentos recorrentes."}</div>
+        <div class="resultado-bloco" style="text-align: center; margin-bottom: 20px;">
+            <span style="font-size: 1.2rem; color: var(--gold);">Número Identificado: </span>
+            <span class="numero-destaque" style="font-size: 2.5rem; font-weight: bold;">${dadosDesejo.numero}</span>
+        </div>
+        <div class="texto-res">${aplicarFiltroTexto(textos.desejoOculto[dadosDesejo.numero])}</div>
+    </div>
+
+    <div class="secao-card quebra-pagina">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Talentos Especiais e Deficiências</h2>
+        <div class="intro-texto">${textos.introducoes.talentosEspeciais || "Análise de habilidades naturais predominantes no primeiro nome."}</div>
+        ${talentoNum ? `
+            <p><strong>Talento Predominante Detectado: Número ${talentoNum}</strong></p>
+            <div class="texto-res">${aplicarFiltroTexto(textos.talentosEspeciais[talentoNum])}</div>
+        ` : `
+            <p style="font-style: italic; color: #666;">Não foi detectada uma predominância numérica (dobro de frequência) no primeiro nome para um talento especial específico.</p>
+        `}
+    </div>
+`;
+    
 
 // C. INCLINAÇÕES, SUBCONSCIENTE E EQUILÍBRIO (O FECHAMENTO DO ALINHAMENTO)
 const itensAlinhamento = ["inclinacoes", "subconsciente", "equilibrio"];
