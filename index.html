@@ -796,6 +796,12 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
 function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, statusMomentoObj, dataNascimento) {
     try {
+        // Validação Crítica: Se o objeto de status não existir, interrompe o erro aqui
+        if (!statusMomentoObj || !statusMomentoObj.status || !statusMomentoObj.vibracoes) {
+            console.error("statusMomentoObj incompleto:", statusMomentoObj);
+            return `<div style="color:#827108; padding:20px; text-align:center; border:1px dashed #ddd;">Dados de vibração temporariamente indisponíveis para este ciclo.</div>`;
+        }
+
         const agora = new Date();
         const anoBase = agora.getFullYear();
         const partesData = dataNascimento.split("/");
@@ -803,25 +809,24 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
 
         // --- FUNÇÃO INTERNA PARA GERAR O BLOCO DE UM ANO ESPECÍFICO ---
         const renderizarBlocoAno = (anoRef, titulo) => {
-            // 1. Cálculo da Vigência
             let inicio = new Date(anoRef, dtNasci.getMonth(), dtNasci.getDate());
             if (agora < inicio && anoRef === anoBase) { inicio.setFullYear(anoRef - 1); }
             let fim = new Date(inicio.getFullYear() + 1, dtNasci.getMonth(), dtNasci.getDate());
             const vigencia = `${inicio.toLocaleDateString('pt-BR')} a ${fim.toLocaleDateString('pt-BR')}`;
 
-            // 2. Cálculo dos Status do Momento para este ano específico
-            // (Simulando o recálculo para o segundo ano baseado na data)
+            // Captura os dados validados
             const statusPlanos = statusMomentoObj.status; 
             const vibPlanos = statusMomentoObj.vibracoes;
             const perfilMomento = statusMomentoObj.perfil;
 
             let rankingMomento = [];
 
-            // 3. Processamento do Mega Banco de Atributos
+            // Processamento do Banco de Atributos
             for (let nomeAtributo in megaBancoAtributos) {
                 let config = megaBancoAtributos[nomeAtributo];
                 let pAlvo = config.plano;
 
+                // Só processa se o plano existir no status enviado
                 if (statusPlanos[pAlvo]) {
                     let notaFinal = calcularIntensidadeMomento(
                         config, res, faltantes, nomeRaw, d3, 
@@ -840,15 +845,9 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                 }
             }
 
-            // 4. Montagem do HTML do Bloco
             let htmlAno = `
-                <div class="quebra-pagina" style="margin-top:50px;">
-                    <h2 style="border-bottom: 2px solid var(--gold); color:#827108; text-align:center; text-transform:uppercase; letter-spacing:2px; font-weight:bold; margin-bottom:10px;">${titulo}</h2>
-                    <p class="vigencia-texto" style="text-align:center; font-weight:bold; color:#666; margin-bottom:20px;">VIGÊNCIA: ${vigencia}</p>
-                    
-                    <p style="text-align:center; color:#666; font-style:italic; margin-bottom:30px; font-size: 14px; padding: 0 20px;">
-                        Esta análise cruza sua natureza com as vibrações do período: Ano Pessoal, Trânsito, Energia dos planos e Desafios atuais.
-                    </p>
+                <div class="quebra-pagina" style="margin-top:20px;">
+                    <p class="vigencia-texto" style="text-align:center; font-weight:bold; color:#666; margin-bottom:20px;">VIGÊNCIA DOS POTENCIAIS: ${vigencia}</p>
             `;
 
             const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
@@ -858,10 +857,10 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                 const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
                 
                 htmlAno += `
-                    <div style="margin-bottom: 40px; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor}; shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 20px;">
-                            <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:17px;">${p} <small style="color:#999;">(Tendência do Ciclo)</small></h3>
-                            <span style="font-size:10px; font-weight:bold; background:${cor}; color:#fff; padding:3px 10px; border-radius:15px; text-transform:uppercase;">${status}</span>
+                    <div style="margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
+                            <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:15px;">${p}</h3>
+                            <span style="font-size:9px; font-weight:bold; background:${cor}; color:#fff; padding:2px 8px; border-radius:10px; text-transform:uppercase;">${status}</span>
                         </div>
                 `;
 
@@ -869,7 +868,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                 const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
                 subgrupos.forEach(sub => {
-                    htmlAno += `<h4 style="color:#aaa; font-size:11px; text-transform:uppercase; margin: 15px 0 10px 0; letter-spacing:1px;">${sub}</h4>`;
+                    htmlAno += `<h4 style="color:#aaa; font-size:10px; text-transform:uppercase; margin: 10px 0 8px 0;">${sub}</h4>`;
                     atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
                         htmlAno += montarBarraGrafico(item);
                     });
@@ -881,17 +880,12 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             return htmlAno;
         };
 
-        // --- GERAÇÃO DOS DOIS CICLOS ---
-        let htmlFinal = renderizarBlocoAno(anoBase, "Potenciais Ativados: Ciclo Atual");
-        
-        // Para o segundo ciclo, passamos o ano seguinte
-        htmlFinal += renderizarBlocoAno(anoBase + 1, "Potenciais Ativados: Próximo Ciclo");
-
-        return htmlFinal;
+        // Renderiza apenas o bloco correspondente ao status enviado
+        return renderizarBlocoAno(statusMomentoObj.anoReferencia || anoBase, "");
 
     } catch (e) {
-        console.error("Erro nos gráficos de momento:", e);
-        return `<div style="color:red; padding:20px; text-align:center;">Erro ao processar potenciais do ciclo.</div>`;
+        console.error("Erro interno no processamento dos potenciais:", e);
+        return `<div style="color:red; padding:20px; text-align:center;">Erro ao carregar gráficos deste ciclo.</div>`;
     }
 }
 
