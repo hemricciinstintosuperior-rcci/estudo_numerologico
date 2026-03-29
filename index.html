@@ -1060,7 +1060,7 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 // FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (AUTOMÁTICO)
 // ============================================
 // FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (CICLO ATUAL E PRÓXIMO)
-function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
+function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d3, regenteMatriz, negativasMatriz) {
     const agora = new Date();
     const anoBase = agora.getFullYear();
     const partesData = dataNascimento.split("/");
