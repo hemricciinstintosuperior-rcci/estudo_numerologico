@@ -181,6 +181,7 @@ input:focus {
         "FMff": "Pico de Transição Dinâmica"
     };
 const mapaMatriz = { A:1,I:1,Q:1,J:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5, U:6,V:6,W:6,X:6, O:7,Z:7, F:8,P:8 };
+const vogais = ["A","E","I","O","U","Y"];        
 // Tabelas para o Plano de Expressão
 const tabelaExpressao = {
     'E':'criativo','W':'indeciso','D':'neutro','M':'neutro',
@@ -447,10 +448,18 @@ function aplicarFiltroTexto(texto) {
     return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
 }
 // Função para calcular o Desejo Oculto (Número que mais se repete no nome todo)
+// Função para calcular o Desejo Oculto usando a SUA Matriz Cabalística
 function calcularDesejoOculto(nome) {
     const contagem = {};
-    const numeros = converterNomeParaNumeros(nome); // Use sua função existente de conversão
-    numeros.forEach(n => contagem[n] = (contagem[n] || 0) + 1);
+    // Limpa o nome (tira acentos e espaços) e deixa em maiúsculo para bater com a Matriz
+    const nomeLimpo = nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+    
+    for (let letra of nomeLimpo) {
+        if (Matriz[letra]) { // Usa o objeto Matriz que aparece na sua foto
+            const num = Matriz[letra];
+            contagem[num] = (contagem[num] || 0) + 1;
+        }
+    }
     
     let maxRepeticoes = 0;
     let numeroDesejo = 0;
@@ -466,8 +475,14 @@ function calcularDesejoOculto(nome) {
 // Função para Talentos Especiais (Baseado apenas no PRIMEIRO NOME)
 function calcularTalentoEspecial(primeiroNome) {
     const contagem = {};
-    const numeros = converterNomeParaNumeros(primeiroNome);
-    numeros.forEach(n => contagem[n] = (contagem[n] || 0) + 1);
+    const nomeLimpo = primeiroNome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+    
+    for (let letra of nomeLimpo) {
+        if (Matriz[letra]) {
+            const num = Matriz[letra];
+            contagem[num] = (contagem[num] || 0) + 1;
+        }
+    }
     
     const frequencias = Object.values(contagem).sort((a, b) => b - a);
     const maior = frequencias[0] || 0;
@@ -475,11 +490,10 @@ function calcularTalentoEspecial(primeiroNome) {
 
     // Critério: aparece o dobro ou mais vezes que qualquer outro
     if (maior >= (segundaMaior * 2) && maior > 0) {
-        return Object.keys(contagem).find(key => contagem[key] === maior);
+        return Object.keys(contagem).find(key => contagem[key] == maior);
     }
-    return null; // Caso não haja predominância de dobro
+    return null;
 }
-        
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual) {
     let nota = 5.5; 
 
