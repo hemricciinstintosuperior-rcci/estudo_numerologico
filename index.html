@@ -447,16 +447,18 @@ function aplicarFiltroTexto(texto) {
     let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
     return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
 }
-// Função para calcular o Desejo Oculto (Número que mais se repete no nome todo)
-// Função para calcular o Desejo Oculto usando a SUA Matriz Cabalística
+
+
+        
+// Função para calcular o Desejo Oculto usando a SUA 'tabela' Cabalística
 function calcularDesejoOculto(nome) {
     const contagem = {};
-    // Limpa o nome (tira acentos e espaços) e deixa em maiúsculo para bater com a Matriz
+    // Limpa o nome e deixa em maiúsculo para bater com a sua const tabela
     const nomeLimpo = nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
     
     for (let letra of nomeLimpo) {
-        if (Matriz[letra]) { // Usa o objeto Matriz que aparece na sua foto
-            const num = Matriz[letra];
+        if (tabela[letra]) { // AQUI: Usando o nome exato da sua constante
+            const num = tabela[letra];
             contagem[num] = (contagem[num] || 0) + 1;
         }
     }
@@ -478,8 +480,8 @@ function calcularTalentoEspecial(primeiroNome) {
     const nomeLimpo = primeiroNome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
     
     for (let letra of nomeLimpo) {
-        if (Matriz[letra]) {
-            const num = Matriz[letra];
+        if (tabela[letra]) { // AQUI: Usando o nome exato da sua constante
+            const num = tabela[letra];
             contagem[num] = (contagem[num] || 0) + 1;
         }
     }
@@ -494,6 +496,9 @@ function calcularTalentoEspecial(primeiroNome) {
     }
     return null;
 }
+
+
+        
 function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, vibPlano, statusPlano, dominantePerfil, planoAtual) {
     let nota = 5.5; 
 
