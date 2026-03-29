@@ -1205,6 +1205,27 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             </div>
         </div>
         </div>`;
+
+                const statusParaGrafico = {
+            status: {
+                "Físico": (somaMomento.fisico / ref > 0.75) ? "forte" : (somaMomento.fisico / ref >= 0.50) ? "medio" : "fraco",
+                "Mental": (somaMomento.mental / ref > 0.75) ? "forte" : (somaMomento.mental / ref >= 0.50) ? "medio" : "fraco",
+                "Emocional": (somaMomento.emocional / ref > 0.75) ? "forte" : (somaMomento.emocional / ref >= 0.50) ? "medio" : "fraco",
+                "Intuitivo": (somaMomento.intuitivo / ref > 0.75) ? "forte" : (somaMomento.intuitivo / ref >= 0.50) ? "medio" : "fraco"
+            },
+            vibracoes: {
+                "Físico": reduzir(somaMomento.fisico), 
+                "Mental": reduzir(somaMomento.mental), 
+                "Emocional": reduzir(somaMomento.emocional), 
+                "Intuitivo": reduzir(somaMomento.intuitivo)
+            },
+            perfil: dominanteMomento
+        };
+
+        // Esta linha chama as barrinhas e gruda elas no HTML do ano
+        h += gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGrafico);
+        // --- FIM DO QUE VOCÊ COLOU ---
+
         return h;
     };
 
@@ -1686,27 +1707,24 @@ html += `
 // 1. INSERIR O PLANO DE MOMENTO E VIBRAÇÃO DE TRÂNSITO AQUI
 // --- INÍCIO DO BLOCO INTEGRADO: MOMENTO + GRÁFICOS ---
 
-// 1. Geramos o Status, Trânsito e capturamos os dados técnicos do momento
-const resultadoMomentoCompleto = montarHtmlPlanosMomento(nomeRaw, dataRaw);
+// --- INÍCIO DO BLOCO INTEGRADO: MOMENTO + GRÁFICOS ---
 
-// 2. Geramos as barrinhas do gráfico logo em seguida
-// Passamos os dados colhidos (resultadoMomentoCompleto.dados) para o gráfico
-const htmlGraficosMomento = gerarTodosOsGraficosMomento(
+// 1. Chamamos a função passando TODOS os dados necessários
+// Note que agora passamos res, res.deficiencias, etc., dentro dos parênteses
+const resultadoMomentoCompleto = montarHtmlPlanosMomento(
+    nomeRaw, 
+    dataRaw, 
     res, 
     res.deficiencias, 
-    nomeRaw, 
     res.desafios[3], 
     regenteVida, 
-    dadosNegativas.nums, 
-    resultadoMomentoCompleto.dados
+    dadosNegativas.nums
 );
 
-// 3. Somamos os dois ao relatório (Status primeiro, Gráfico depois)
-html += resultadoMomentoCompleto.html + htmlGraficosMomento;
+// 2. Como o gráfico já está embutido no HTML da função, basta somar o resultado
+html += resultadoMomentoCompleto.html;
 
 // --- FIM DO BLOCO INTEGRADO ---
-
-
 
     
 // 1. CAPTURA SEGURA DA DATA (Evita o erro de 'null')
