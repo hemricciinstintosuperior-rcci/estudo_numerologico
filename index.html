@@ -1359,7 +1359,8 @@ const anoNasc = ano; // Variável 'ano' que vem do split da data
 const cv = res. CaminhodeVida;
 
 // A idade de mudança principal (Maturidade)
-const fim1 = 37 - cv; 
+// O cálculo correto para travar a idade de transição:
+const fim1 = 37 - reduzirPuro(res.CaminhodeVida);
 const fim2 = fim1 + 27; // Ciclo 2 dura 27 anos
 
 const datasFases = {
