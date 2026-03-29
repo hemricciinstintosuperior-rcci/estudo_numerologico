@@ -1065,18 +1065,13 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 
 // ============================================
 // FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (AUTOMÁTICO)
+// ============================================
+// FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (RESTAURADA E CORRIGIDA)
 function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d3, regenteMatriz, negativasMatriz) {
-    if (!res) return { html: "", dados: {} };
-
     const agora = new Date();
     const anoBase = agora.getFullYear();
     const partesData = dataNascimento.split("/");
     const dtNasci = new Date(partesData[2], partesData[1] - 1, partesData[0]);
-
-    // GARANTE QUE AS VARIÁVEIS DE IDADE EXISTAM PARA NÃO QUEBRAR O GRÁFICO
-    const idadeCronologica = res.idade || 0;
-    const fim1 = res.fim1 || 0;
-    const fim2 = res.fim2 || 0;
 
     const processarCicloParaHtml = (anoReferencia, tituloSecao) => {
         let inicio = new Date(anoReferencia, dtNasci.getMonth(), dtNasci.getDate());
@@ -1195,7 +1190,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
 
         h += `<div style="margin-top:50px; border-top: 3px double #eee; padding-top: 30px;">
                 <h2 style="text-align:center; color:var(--gold); text-transform:uppercase; font-size:1.4em; margin-bottom:30px;">Potenciais Ativados no Ciclo</h2>
-                ${gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGraficos, dataNascimento, idadeCronologica, fim1, fim2)}
+                ${gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGraficos, dataNascimento, res.idade, res.fim1, res.fim2)}
               </div>
         </div>`;
         return h;
@@ -1204,9 +1199,8 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
     let htmlFinal = processarCicloParaHtml(anoBase, "Status do Momento: Ciclo Atual");
     htmlFinal += processarCicloParaHtml(anoBase + 1, "Status do Momento: Próximo Ciclo");
 
-    return { html: htmlFinal, dados: {} };
+    return { html: htmlFinal, dados: { status: {}, vibracoes: {}, perfil: "" } };
 }
-
 
 
 
