@@ -750,9 +750,9 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
                     percentual: (notaFinal * 10).toFixed(1)
                 });
             }
-        }
+        }                                         
 
-        let htmlFinal = `<h2 style="color:#827108; text-align:center; margin:40px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Análise de Potenciais de Expressão</h2>`;
+        let htmlFinal = `<h2 style="color:#827108; text-align:center; margin:40px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais de Nascimento</h2>`;
 
         const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"].sort((a, b) => {
             const pesos = { "forte": 3, "medio": 2, "fraco": 1 };
@@ -823,10 +823,12 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                     percentual: (notaFinal * 10).toFixed(1)
                 });
             }
-        }
+        }                                    
 
-        let html = `<h2 style="color:#827108; text-align:center; margin:50px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados no Ciclo Atual</h2>`;
-        html += `<p style="text-align:center; color:#666; font-style:italic; margin-bottom:30px;">Esta análise cruza sua natureza com as vibrações do seu Momento, Ano Pessoal, Transito, Energia dos planos, Potências Numéricas da Matriz e Desafios atuais.</p>`;
+        let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:50px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados no Ciclo Atual</h2>`;
+        html += `<p style="text-align:center; color:#666; font-style:italic; margin-bottom:30px;">Esta análise cruza sua natureza com as vibrações do seu Momento. 
+        
+        O Ano Pessoal, Trânsito, Energia dos planos, Potências Numéricas da Matriz e Desafios atuais.</p>`;
 
         // Reutiliza a lógica visual da gerarTodosOsGraficos original
         const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
@@ -979,7 +981,7 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 
     let html = `
         <div class="secao-card quebra-pagina">
-            <h2 class="titulo-topico">Plano de Expressão Natural</h2>
+            <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Plano de Expressão Natural</h2>
             
             <div class="intro-texto" style="margin-bottom: 25px; line-height: 1.6; color: #444;">
                 ${aplicarFiltroTexto(textos.introducoes.natural ||  `<p>O **Plano de Expressão Natural** revela como sua energia se distribui entre as quatro instâncias fundamentais da vida — Físico, Mental, Emocional e Intuitivo — definindo seu temperamento e sua forma instintiva de reagir ao mundo. Esta análise identifica onde reside sua maior força de realização e quais áreas exigem mais atenção para o seu equilíbrio pessoal.</p>
@@ -1131,7 +1133,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento) {
 
     let html = `
     <div class="secao-card quebra-pagina">
-        <h2 class="titulo-topico">Status do Momento</h2>
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Status do Momento</h2>
         
         <div class="intro-texto" style="margin-bottom: 25px; line-height: 1.6; color: #444;">
             <p>O **Status do Momento** revela como sua configuração energética está operando *exatamente agora*. Diferente da sua natureza fixa, esta análise mostra quais planos (Físico, Mental, Emocional ou Intuitivo) estão recebendo mais carga vibracional neste ciclo de 12 meses. É o seu "clima interno" atual, indicando onde você tem mais facilidade de realizar e onde pode sentir sobrecarga ou lentidão.</p>
@@ -1507,7 +1509,7 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 
 html += `
     <div class="secao-card quebra-pagina">
-        <h2 class="titulo-topico">Análise de Potenciais</h2>
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);>Análise de Potenciais</h2>
         <div class="intro-texto">${textos.introducoes.graficos}</div>
         ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3], regenteVida, dadosNegativas.nums)}
     </div>
@@ -1554,7 +1556,7 @@ html += `
 // A. LIÇÕES CÁRMICAS
 html += `
     <div class="secao-card quebra-pagina">
-        <h2 class="titulo-topico">Deficiências (Lições de Vida)</h2>
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);>Deficiências (Lições de Vida)</h2>
         <div class="intro-texto">${textos.introducoes.deficiencias}</div>
 `;
 if (res.deficiencias.length > 0) {
@@ -1567,7 +1569,7 @@ html += `</div>`;
 // B. DÉFICITS DE COMPORTAMENTO
 html += `
     <div class="secao-card quebra-pagina">
-        <h2 class="titulo-topico">Déficits de Comportamento</h2>
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);>Déficits de Comportamento</h2>
         <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
         <p><strong>Déficit Recorrente (${res.deficitRecorrente}):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
         <hr style="border:0; border-top:1px solid #eee">
@@ -1611,7 +1613,7 @@ itensAlinhamento.forEach(chave => {
 // --- INSERINDO O DESAFIO PRINCIPAL NO PILAR 03 ---
 html += `
     <div class="secao-card quebra-pagina">
-        <h2 class="titulo-topico">Desafio Principal de Vida</h2>
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);>Desafio Principal de Vida</h2>
         <div class="intro-texto">Este é o desafio mestre que acompanha toda a sua trajetória, servindo como o grande filtro de evolução da sua alma.</div>
         <p><strong>Desafio Principal (Número ${res.desafios[3]}):</strong></p>
         <div class="texto-res">${aplicarFiltroTexto(textos.desafios[3][res.desafios[3]])}</div>
@@ -1635,7 +1637,7 @@ html += `
 ["ciclos", "momentos", "desafios"].forEach(sec => {
     html += `
         <div class="secao-card quebra-pagina">
-            <h2 class="titulo-topico">${sec}</h2>
+            <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);>${sec}</h2>
             <div class="intro-texto">${textos.introducoes[sec] || ""}</div>
     `;
     for(let i in res[sec]) {
@@ -1723,7 +1725,7 @@ if (dataRaw && dataRaw.includes('-')) {
 // --- BLOCO DO ANO PESSOAL ---
 html += `
 <div class="secao-card quebra-pagina">
-    <h2 class="titulo-topico">${nomesExibicao.anoPessoal}</h2>
+    <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);>${nomesExibicao.anoPessoal}</h2>
     
     <div class="resultado-bloco">
         <div class="intro-texto" style="margin-bottom:15px; font-style:italic; color:#555;">
@@ -1745,8 +1747,8 @@ html += `
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
     <div class="capa-transicao">
-        <p>Matriz da Vida</p>
-        <h2>Regente, Sequências de Vulnerabilidade e <br> Potências Numéricas de impacto</h2>
+        <h3>A GRANDE MATRIZ<h3>
+        <h2>Regente, Sequências de Vulnerabilidade e Potências Numéricas de impacto</h2>
         <p>Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. </p>
     </div>
 `;
@@ -1754,7 +1756,7 @@ html += `
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
 <div class="secao-card quebra-pagina">
-    <h2 class="titulo-topico"> Pirâmide da Vida</h2>
+    <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);> Pirâmide da Vida</h2>
     
     <div class="intro-texto">${textos.introducoes.piramide}</div>
 
