@@ -1662,7 +1662,10 @@ const talentoNum = calcularTalentoEspecial(primeiroNome);
 html += `
     <div class="secao-card quebra-pagina">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Vibração do Desejo Oculto</h2>
-        <div class="intro-texto">${textos.introducoes.desejoOculto || "Esta vibração molda sua personalidade e guia comportamentos recorrentes."}</div>
+        <div class="intro-texto">${textos.introducoes.desejoOculto ||  `
+    <p>A Vibração do Desejo Oculto possui um poder próprio para moldar a trajetória de <strong>você</strong>, gerando um impulso profundo para desenvolver e expressar habilidades muito específicas. Ter essa força interna exige que <strong>você</strong> experimente essa parte da própria natureza e viva de acordo com essa essência, permitindo que esse potencial guie a personalidade e a jornada de forma consciente.</p>
+    <p>No Estudo Numerológico Quântico, esta é uma das vibrações mais poderosas, pois revela comportamentos e atitudes que tendem a se manifestar de forma cíclica. É fundamental que <strong>você</strong> mantenha a atenção a esses padrões recorrentes, pois eles podem se tornar vícios de comportamento que aprisionam em círculos viciosos. O reconhecimento dessa energia permite que <strong>você</strong> escolha a melhor direção, quebrando tendências negativas e transformando esse desejo em uma ferramenta de evolução constante.</p>
+`}</div>
         <div class="resultado-bloco" style="text-align: center; margin-bottom: 20px;">
             <span style="font-size: 1.2rem; color: var(--gold);">Número Identificado: </span>
             <span class="numero-destaque" style="font-size: 2.5rem; font-weight: bold;">${dadosDesejo.numero}</span>
@@ -1672,7 +1675,10 @@ html += `
 
     <div class="secao-card quebra-pagina">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Talentos Especiais e Deficiências</h2>
-        <div class="intro-texto">${textos.introducoes.talentosEspeciais || "Análise de habilidades naturais predominantes no primeiro nome."}</div>
+        <div class="intro-texto">${textos.introducoes.talentosEspeciais ||  `
+    <p>Muitas vezes, o foco de <strong>você</strong> acaba se voltando apenas para as medidas tradicionais de sucesso, o que pode causar o esquecimento de uma série de dons e talentos naturais que operam silenciosamente em sua jornada. É fundamental que <strong>você</strong> preste atenção às habilidades mais sutis, garantindo que se sinta em pleno amparo e competência em todas as áreas da vida.</p>
+    <p>Por outro lado, é necessário que <strong>você</strong> mantenha o cuidado com as crenças e classificações internas, pois o que acreditamos molda nossos pensamentos e, consequentemente, nossas ações. Nem todas as capacidades são equilibradas; algumas identificam aptidões brilhantes, enquanto outras revelam qualidades conflitantes que exigem atenção. O autoconhecimento permite que <strong>você</strong> encontre o equilíbrio exato entre o talento nato e a superação das próprias deficiências.</p>
+`}</div>
         ${talentoNum ? `
             <p><strong>Talento Predominante Detectado: Número ${talentoNum}</strong></p>
             <div class="texto-res">${aplicarFiltroTexto(textos.talentosEspeciais[talentoNum])}</div>
