@@ -1946,27 +1946,85 @@ Potencias: {
 },      
         
 talentosEspeciais : {
-    1: "Possui um talento nato para iniciar projetos e comandar equipes de forma independente. Sua força de vontade é sua maior ferramenta de sucesso.",
-    2: "Talento excepcional para a diplomacia e mediação. Consegue enxergar todos os lados de uma situação e promover a paz onde há conflito.",
-    3: "Destaque absoluto na comunicação e no entretenimento. Seu talento é encantar e motivar as pessoas através da palavra ou da arte.",
-    4: "Capacidade técnica e organizacional acima da média. Seu talento está em construir bases sólidas e transformar ideias abstratas em realidade prática.",
-    5: "Talento para o marketing, vendas e adaptação rápida. Você possui uma versatilidade que permite prosperar em ambientes de crise ou mudança constante.",
-    6: "Dom para o ensino, aconselhamento e cura. Seu talento especial é criar ambientes acolhedores e promover o bem-estar das pessoas ao seu redor.",
-    7: "Mente analítica e científica altamente desenvolvida. Seu talento é a observação profunda e a capacidade de encontrar soluções onde ninguém mais vê.",
-    8: "Visão estratégica e talento para a gestão financeira e de grandes negócios. Você tem o dom de organizar o caos e gerar prosperidade.",
-    9: "Talento para a filantropia e compreensão das leis universais. Sua capacidade de visão holística permite ajudar grandes grupos de pessoas de forma altruísta."
+
+    1: `
+        <p><strong>você</strong> demonstra uma independência e ambição acima da média. O talento natural reside na determinação e na capacidade de manter a firmeza sob pressão, agindo com brilhantismo em momentos de estresse e grandes desafios.</p>
+        <p>Entretanto, essa força pode se tornar excessiva, transformando determinação em obstinação rígida. A deficiência surge quando há um fechamento excessivo em um ponto de vista próprio, ignorando ideias valiosas ao redor e gerando traços de possessividade que só aparecem após o calor do momento.</p>
+    `,
+    2: `
+        <p><strong>você</strong> possui um dom nato para a diplomacia e a organização. A natureza gentil e cooperativa faz de <strong>você</strong> alguém excelente na mediação, capaz de resolver conflitos sem recorrer a ofensas, sendo uma presença que as pessoas procuram naturalmente para ouvir a opinião.</p>
+        <p>O excesso desta vibração, porém, pode se manifestar como uma insegurança que paralisa. A receptividade constante pode permitir que outras pessoas se aproveitem dessa bondade, e o excesso de opções tende a dispersar o foco, fazendo com que a prioridade se perca em favor do desejo de manter a harmonia a qualquer custo.</p>
+    `,
+    3: `
+        <p>A mente de <strong>você</strong> é uma usina de criatividade e lógica própria. O talento especial reside em uma imaginação extraordinária e na capacidade de surpreender a todos com ideias concebidas de forma única, comunicando tudo com clareza e entusiasmo.</p>
+        <p>A deficiência desse número excessivo é a impaciência com o mundo material e com o ritmo de raciocínio alheio. Por estar em uma velocidade diferente, <strong>você</strong> pode demonstrar certa imprudência, esquecendo de aterrar as ideias e lidar com as responsabilidades práticas e burocráticas do cotidiano.</p>
+    `,
+    4: `
+        <p><strong>você</strong> tem o talento de construir bases sólidas. É alguém com perfil trabalhador, estável e diplomático, que sabe respeitar limites e oferece segurança para quem convive ao seu redor, mantendo uma postura regular e de extrema confiança.</p>
+        <p>O lado excessivo dessa vibração revela um tradicionalismo que pode travar a evolução. A desconfiança com o novo e a teimosia em aceitar o que foge ao convencional podem tornar <strong>você</strong> alguém de difícil convencimento, que reluta em arriscar fora do que já foi comprovado ou considerado normal.</p>
+    `,
+    5: `
+        <p>O talento de <strong>você</strong> brilha intensamente no meio do caos. Existe uma capacidade incrível de ajuste a situações desafiadoras e estressantes, conseguindo obter vantagens e agir de forma dinâmica onde outras pessoas entrariam em colapso.</p>
+        <p>Todavia, esse excesso de energia gera uma impulsividade nervosa e, por vezes, inconsequente. A deficiência aqui é a falta de filtros; <strong>você</strong> pode reagir de forma direta demais a críticas ou opiniões, parecendo alguém distante ou impaciente, precisando de atenção redobrada sobre o que dizer e como agir para não romper conexões importantes.</p>
+    `,
+    6: `
+        <p><strong>você</strong> atua como um pilar de apoio e responsabilidade. O talento especial é o protecionismo e a atenção aos detalhes, mantendo prontidão para defender causas e cuidar do ambiente com um senso de justiça muito apurado e humanitário.</p>
+        <p>O excesso desse cuidado, porém, traz um perfil polêmico ou detalhista demais. A deficiência surge quando o envolvimento em tudo gera preocupações pouco práticas, fazendo com que problemas pareçam maiores do que são. A dificuldade em esquecer falhas pode custar caro para a paz de espírito de <strong>você</strong>, gerando um peso excessivo por responsabilidades alheias.</p>
+    `,
+    7: `
+        <p><strong>você</strong> possui uma mente analítica e perfeccionista de alto nível. O talento é a disciplina e a busca pela verdade, o que faz com que as conclusões sejam precisas e as ideias profundamente respeitadas por quem busca qualidade e profundidade técnica.</p>
+        <p>Por outro lado, o excesso dessa vibração cria um perfil contestador que dificilmente aceita perder discussões. A deficiência se mostra na irritação com falhas e na dificuldade em dar segundas chances. Esse padrão de exigência máxima pode isolar <strong>você</strong>, tornando a convivência desafiadora para quem não atinge esse rigoroso critério de perfeição.</p>
+    `,
+    8: `
+        <p>O talento especial de <strong>você</strong> é o poder de comando e a visão estratégica. Existe uma habilidade em combinar lógica e caos para realizar grandes ideias, mantendo uma iniciativa que inspira e surpreende pela eficiência e capacidade de realização material.</p>
+        <p>A deficiência dessa força é o risco da vaidade excessiva ou da prepotência. Quando esse número está em excesso, <strong>você</strong> pode demonstrar um perfil controlador ou agressivo, perdendo a paciência com quem não acompanha o seu ritmo acelerado. Equilibrar a liderança com a empatia é o grande desafio aqui.</p>
+    `,
+    9: `
+        <p><strong>você</strong> possui um talento nato para a compaixão e a compreensão das leis universais. Existe uma visão holística e generosa, capaz de entender as necessidades do coletivo com sabedoria e atuar de forma humanitária.</p>
+        <p>O excesso, contudo, pode levar <strong>você</strong> ao papel de mártir, esquecendo totalmente das próprias necessidades. A deficiência aqui é a perda do senso prático e a tendência a se envolver em dramas alheios de forma excessiva, gerando um desgaste emocional que impede a manifestação desse talento de forma equilibrada e real.</p>
+    `
+
 },
 
  desejoOculto : {
-    1: "Indica uma forte tendência à liderança e ao pioneirismo. O desafio aqui é não se tornar autoritário ou excessivamente egocêntrico. O desejo é de ser o primeiro e o melhor no que faz.",
-    2: "Revela um desejo profundo de harmonia e cooperação. O padrão recorrente pode ser a dependência emocional ou a dificuldade em tomar decisões sozinho. Busca sempre o equilíbrio nas relações.",
-    3: "Manifesta-se através da necessidade de expressão e criatividade. O ciclo de alerta é para não dispersar talentos ou se perder em superficialidades e fofocas.",
-    4: "Busca por segurança, ordem e trabalho árduo. O vício de comportamento pode ser a teimosia ou o conservadorismo excessivo que impede o progresso e a inovação.",
-    5: "Desejo de liberdade, mudanças e novas experiências. O padrão a ser quebrado é a impaciência e a instabilidade, que podem levar a abandonar projetos pela metade.",
-    6: "Foco total na família, no lar e no serviço ao próximo. O alerta vai para o excesso de perfeccionismo com os outros e a tendência a se sobrecarregar com problemas alheios.",
-    7: "Inclinação ao estudo, à introspecção e à busca da verdade. O padrão cíclico pode ser o isolamento excessivo ou o sarcasmo com quem não compartilha do mesmo nível intelectual.",
-    8: "Forte desejo de realização material, poder e justiça. O comportamento recorrente pode ser a ambição desmedida ou a frieza ao lidar com questões emocionais.",
-    9: "Vibração de compaixão e humanitarismo. O desafio é não se tornar um 'mártir' ou se perder em idealismos impraticáveis, esquecendo-se das próprias necessidades."
+ 
+    1: `
+        <p><strong>você</strong> carrega uma vibração que impulsiona fortemente para a liderança e o pioneirismo. Esse acúmulo numérico no nome gera um desejo ardente de ser a primeira pessoa em tudo e alcançar o topo, buscando constantemente o reconhecimento pela própria individualidade e capacidade de comando.</p>
+        <p>Entretanto, esse excesso pode tornar <strong>você</strong> alguém autoritário ou excessivamente egocêntrico. O padrão a ser quebrado é a necessidade constante de estar em evidência, o que pode gerar comportamentos cíclicos de arrogância ou uma busca desenfreada pelo poder que acaba isolando as pessoas ao redor.</p>
+    `,
+    2: `
+        <p>O desejo profundo de <strong>você</strong> é pela harmonia, cooperação e pelo equilíbrio absoluto nas relações. Por possuir essa frequência em abundância, existe uma busca constante pela paz e por ambientes onde a diplomacia prevaleça, agindo sempre como o ponto de união entre as pessoas.</p>
+        <p>Por outro lado, essa carga excessiva pode levar <strong>você</strong> a uma dependência emocional prejudicial. O padrão recorrente aqui é a dificuldade extrema em tomar decisões sem a aprovação alheia, permitindo que a própria vontade seja anulada apenas para evitar qualquer tipo de confronto ou desequilíbrio externo.</p>
+    `,
+    3: `
+        <p>Existe em <strong>você</strong> uma necessidade vital de expressão, comunicação e criatividade. Essa vibração elevada no nome indica um talento nato para encantar e motivar, buscando sempre o brilho social e a manifestação das ideias de forma extraordinária e alegre.</p>
+        <p>O alerta para <strong>você</strong> reside na dispersão desse potencial. O excesso de energia criativa pode resultar em comportamentos superficiais, onde se perde o foco em fofocas ou em múltiplos projetos que nunca chegam ao fim, transformando o dom da palavra em uma ferramenta de distração e falta de compromisso com a verdade prática.</p>
+    `,
+    4: `
+        <p><strong>você</strong> busca incessantemente por segurança, ordem e estabilidade através do trabalho árduo. Essa concentração numérica cria um desejo de construir estruturas indestrutíveis e manter tudo sob controle rigoroso, valorizando a tradição e a eficiência acima de tudo.</p>
+        <p>A deficiência desse excesso se manifesta como uma teimosia crônica e um conservadorismo que impede o progresso. <strong>você</strong> pode se tornar alguém excessivamente rígido, que bloqueia a inovação e o fluxo da vida por medo de perder o controle ou por se apegar a métodos que já não funcionam mais na realidade atual.</p>
+    `,
+    5: `
+        <p>A alma de <strong>você</strong> anseia por liberdade total, mudanças constantes e novas experiências sensoriais. Essa forte presença no nome indica alguém que detesta a rotina e busca no movimento dinâmico a razão de sua existência, adaptando-se com facilidade a qualquer cenário desafiador.</p>
+        <p>Contudo, essa vibração em excesso gera uma instabilidade perigosa e uma impaciência crônica. O vício de comportamento a ser observado por <strong>você</strong> é a tendência a abandonar tudo o que exige persistência, agindo de forma inconsequente e desapegada demais, o que impede a construção de algo duradouro na vida.</p>
+    `,
+    6: `
+        <p>O foco de <strong>você</strong> está totalmente voltado para o lar, para a família e para o serviço ao próximo. É um desejo profundo de ser o porto seguro de todos, assumindo responsabilidades e buscando a perfeição estética e emocional em cada detalhe do ambiente doméstico ou profissional.</p>
+        <p>A armadilha desse excesso é o perfeccionismo sufocante e a tendência a se sobrecarregar com problemas que não são seus. <strong>você</strong> pode se tornar uma pessoa polêmica ou intrometida, tentando controlar a vida alheia sob o pretexto de "ajudar", o que acaba gerando conflitos e um peso emocional desnecessário.</p>
+    `,
+    7: `
+        <p><strong>você</strong> possui uma inclinação natural e poderosa para o estudo, para a introspecção e para a decifração dos mistérios da vida. É o desejo de encontrar a verdade absoluta e a perfeição técnica em tudo o que se propõe a analisar ou realizar intelectualmente.</p>
+        <p>O lado sombrio desse excesso é o isolamento elitista e o sarcasmo. O padrão cíclico de <strong>você</strong> pode ser o de se afastar do mundo por julgar que ninguém compartilha do mesmo nível de sabedoria, tornando-se alguém frio e excessivamente crítico, que perde a conexão emocional com a realidade ao redor.</p>
+    `,
+    8: `
+        <p>Existe um forte desejo em <strong>você</strong> por realização material, poder executivo e justiça. Essa abundância numérica no nome gera uma ambição legítima de organizar grandes estruturas e alcançar a prosperidade financeira, utilizando a lógica e a autoridade para manifestar resultados concretos.</p>
+        <p>Porém, o excesso dessa vibração pode transformar <strong>você</strong> em alguém frio, calculista e prepotente. O comportamento recorrente é o de colocar os interesses materiais acima dos sentimentos humanos, agindo de forma controladora e agressiva para manter o status e a autoridade a qualquer custo.</p>
+    `,
+    9: `
+        <p>A vibração de <strong>você</strong> é movida pela compaixão universal e pelo humanitarismo. Existe um desejo sincero de ajudar o mundo e de se dedicar a causas maiores, buscando a finalização de ciclos e a elevação espiritual através do desprendimento e da sabedoria.</p>
+        <p>A deficiência aqui surge quando <strong>você</strong> se perde em idealismos impraticáveis ou assume o papel de mártir. O padrão negativo é o esquecimento total das próprias necessidades básicas em favor de um salvacionismo irreal, o que gera um esgotamento profundo e a sensação de que ninguém valoriza o seu sacrifício.</p>
+    `
+
 },
  
 deficits : {
