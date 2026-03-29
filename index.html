@@ -1136,13 +1136,13 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             ((ordenados[2].valor / ref > 0.75) ? "F" : (ordenados[2].valor / ref >= 0.50) ? "M" : "f") +
             ((ordenados[3].valor / ref > 0.75) ? "F" : (ordenados[3].valor / ref >= 0.50) ? "M" : "f");
 
+        // --- RESTAURAÇÃO DOS TEXTOS DE PERFIL ---
         const descricoesPerfil = {
-            criativo: `<p>"Sua energia de ação este ano está em fase de expansão e Criatividade"</p><p>Neste ciclo, sua forma de agir está mais arrojada. Você sentirá uma facilidade maior para encontrar saídas rápidas e originais para problemas.</p>`,
-            indeciso: `<p>"Sua forma de agir este ano está sob o filtro da sensibilidade e da Indecisão"</p><p>Este ciclo pede que você tenha mais cautela antes de tomar grandes decisões. É um ano para agir com diplomacia.</p>`,
-            neutro: `<p>"Este ano sua ação prioriza o equilíbrio, a observação e a Neutralidade"</p><p>Sua postura atual é de 'esperar para ver'. Você prefere analisar o terreno antes de dar qualquer passo importante.</p>`
+            criativo: `<p>"Sua energia de ação este ano está em fase de expansão e Criatividade"</p><p>Neste ciclo, sua forma de agir está mais arrojada. Você sentirá uma facilidade maior para encontrar saídas rápidas e originais para problemas que antes pareciam travados. É um momento de 'fazer acontecer' com originalidade.</p>`,
+            indeciso: `<p>"Sua forma de agir este ano está sob o filtro da sensibilidade e da Indecisão"</p><p>Este ciclo pede que você tenha mais cautela antes de tomar grandes decisões. É um ano para agir com diplomacia e ouvir sua intuição, evitando confrontos diretos ou passos precipitados por pressão externa.</p>`,
+            neutro: `<p>"Este ano sua ação prioriza o equilíbrio, as observação e a Neutralidade"</p><p>Sua postura atual é de 'esperar para ver'. Você prefere analisar o terreno antes de dar qualquer passo importante, agindo com máxima prudência e mantendo o que já está conquistado.</p>`
         };
 
-        // Dados para os Gráficos
         const statusParaGraficos = {
             status: {
                 "Físico": (soma.fisico / ref > 0.75) ? "forte" : (soma.fisico / ref >= 0.50) ? "medio" : "fraco",
@@ -1157,7 +1157,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
         };
 
         let h = `
-        <div class="secao-card quebra-pagina" style="border: 1px solid var(--gold); padding: 25px; border-radius: 15px; background: #fff; margin-bottom: 40px;">
+        <div class="secao-card quebra-pagina" style="border: 1px solid var(--gold); padding: 25px; border-radius: 15px; background: #fff; margin-bottom: 50px;">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloSecao}</h2>
             <p style="text-align:center; font-weight:bold; color:#666; margin-bottom: 25px;">VIGÊNCIA: ${vigencia}</p>
 
@@ -1168,7 +1168,6 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             </div>
 
             <div style="margin: 25px 0; background: #f9f9f9; padding: 20px; border-radius: 8px;">`;
-        
         for(let p in soma) {
             let porc = (soma[p] / ref) * 100;
             h += `<div style="margin-bottom: 15px;">
@@ -1178,7 +1177,6 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
         }
         h += `</div>`;
 
-        // Textos dos Planos
         for(let p in soma) {
             let r = soma[p] / ref;
             let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
@@ -1191,38 +1189,32 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             }
         }
 
-        // --- SÍNTESE E DIRETRIZ ---
         h += `
             <div style="margin-top:30px; border-top: 1px dashed #ccc; padding-top:20px;">
                 <div style="text-align:center; margin-bottom:15px;">
                     <span style="background:var(--gold); color:white; padding:3px 10px; border-radius:15px; font-size:10px; font-weight:bold;">${titulosEstrutura[sigla] || "SÍNTESE"}</span>
                     <h3 style="margin-top:8px; text-transform:uppercase; font-size:16px;">Diretriz de Equilíbrio</h3>
                 </div>
-                <div class="texto-res">${aplicarFiltroTexto(textosSinteseExpressao[sigla] || textosSinteseExpressao["padrao"])}</div>
+                <div class="texto-res">${aplicarFiltroTexto(textosSinteseExpressao[sigla] || "")}</div>
+                <div style="background: #1a1a1a; color: #d4af37; padding: 18px; border-radius: 8px; text-align: center; margin-top: 20px; border: 1px solid #333; font-size: 14px;">
+                    Utilize a potência do plano <strong style="color:#fff;">${nomesAmigaveis[_p1.chave]}</strong> para sustentar as fragilidades do plano <strong style="color:#fff;">${nomesAmigaveis[_p4.chave]}</strong>.
+                </div>
             </div>`;
 
-        // --- NÚMERO DE TRÂNSITO (REINSERIDO) ---
         const vTransito = reduzir(soma.fisico + soma.mental + soma.emocional + soma.intuitivo);
         h += `
-            <div style="margin-top:30px; background:#fff8e1; border:1px solid var(--gold); padding:20px; border-radius:12px;">
-                <h3 style="margin:0; text-align:center;">Número de Trânsito: <span style="color:var(--gold); font-size:1.5em;">${vTransito}</span></h3>
-                <div class="texto-res" style="margin-top:10px; font-size:13px;">
+            <div style="margin-top:35px; background:#fff8e1; border:1px solid var(--gold); padding:25px; border-radius:12px; text-align:center;">
+                <h3 style="margin:0; color:var(--dark); text-transform:uppercase;">Número de Trânsito: <span style="color:var(--gold); font-size:1.8em; margin-left:10px;">${vTransito}</span></h3>
+                <div class="texto-res" style="margin-top:15px; font-size:14px; border-top: 1px solid #eee; pt: 15px;">
                     ${aplicarFiltroTexto(window.TextosTransito ? window.TextosTransito[vTransito] : "")}
                 </div>
             </div>`;
 
-        // --- POTENCIAIS DO CICLO (COM CORREÇÃO DE ERRO) ---
-        try {
-            // Chamamos a função garantindo que todos os dados do ciclo atual/próximo sejam passados
-            h += `<div style="margin-top:40px; border-top: 2px solid #eee; padding-top: 30px;">
-                    ${gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGraficos, dataNascimento)}
-                  </div>`;
-        } catch (err) {
-            console.error("Erro interno nos gráficos:", err);
-            h += `<p style="color:red; text-align:center;">Erro ao carregar gráficos de potenciais.</p>`;
-        }
-
-        h += `</div>`; // Fechamento do card
+        h += `<div style="margin-top:50px; border-top: 3px double #eee; padding-top: 30px;">
+                <h2 style="text-align:center; color:var(--gold); text-transform:uppercase; font-size:1.4em; margin-bottom:30px;">Potenciais Ativados no Ciclo</h2>
+                ${gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGraficos, dataNascimento)}
+              </div>
+        </div>`;
         return h;
     };
 
