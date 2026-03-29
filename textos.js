@@ -1945,7 +1945,30 @@ Potencias: {
   
 },      
         
+talentosEspeciais : {
+    1: "Possui um talento nato para iniciar projetos e comandar equipes de forma independente. Sua força de vontade é sua maior ferramenta de sucesso.",
+    2: "Talento excepcional para a diplomacia e mediação. Consegue enxergar todos os lados de uma situação e promover a paz onde há conflito.",
+    3: "Destaque absoluto na comunicação e no entretenimento. Seu talento é encantar e motivar as pessoas através da palavra ou da arte.",
+    4: "Capacidade técnica e organizacional acima da média. Seu talento está em construir bases sólidas e transformar ideias abstratas em realidade prática.",
+    5: "Talento para o marketing, vendas e adaptação rápida. Você possui uma versatilidade que permite prosperar em ambientes de crise ou mudança constante.",
+    6: "Dom para o ensino, aconselhamento e cura. Seu talento especial é criar ambientes acolhedores e promover o bem-estar das pessoas ao seu redor.",
+    7: "Mente analítica e científica altamente desenvolvida. Seu talento é a observação profunda e a capacidade de encontrar soluções onde ninguém mais vê.",
+    8: "Visão estratégica e talento para a gestão financeira e de grandes negócios. Você tem o dom de organizar o caos e gerar prosperidade.",
+    9: "Talento para a filantropia e compreensão das leis universais. Sua capacidade de visão holística permite ajudar grandes grupos de pessoas de forma altruísta."
+},
 
+ desejoOculto : {
+    1: "Indica uma forte tendência à liderança e ao pioneirismo. O desafio aqui é não se tornar autoritário ou excessivamente egocêntrico. O desejo é de ser o primeiro e o melhor no que faz.",
+    2: "Revela um desejo profundo de harmonia e cooperação. O padrão recorrente pode ser a dependência emocional ou a dificuldade em tomar decisões sozinho. Busca sempre o equilíbrio nas relações.",
+    3: "Manifesta-se através da necessidade de expressão e criatividade. O ciclo de alerta é para não dispersar talentos ou se perder em superficialidades e fofocas.",
+    4: "Busca por segurança, ordem e trabalho árduo. O vício de comportamento pode ser a teimosia ou o conservadorismo excessivo que impede o progresso e a inovação.",
+    5: "Desejo de liberdade, mudanças e novas experiências. O padrão a ser quebrado é a impaciência e a instabilidade, que podem levar a abandonar projetos pela metade.",
+    6: "Foco total na família, no lar e no serviço ao próximo. O alerta vai para o excesso de perfeccionismo com os outros e a tendência a se sobrecarregar com problemas alheios.",
+    7: "Inclinação ao estudo, à introspecção e à busca da verdade. O padrão cíclico pode ser o isolamento excessivo ou o sarcasmo com quem não compartilha do mesmo nível intelectual.",
+    8: "Forte desejo de realização material, poder e justiça. O comportamento recorrente pode ser a ambição desmedida ou a frieza ao lidar com questões emocionais.",
+    9: "Vibração de compaixão e humanitarismo. O desafio é não se tornar um 'mártir' ou se perder em idealismos impraticáveis, esquecendo-se das próprias necessidades."
+},
+ 
 deficits : {
     1: `<h3>Egoismo - Déficit de Comportamento 1</h3>
         <p>Está ligado ao princípio de causa e efeito, ou seja: tudo o que acontece em sua vida é consequência de seus próprios atos e escolhas. Em algum momento de sua existência pode ter sido intolerante e controlador tentando se impor a qualquer custo e visando seu próprio benefício. Compreenda que a vida é reativa, e que toda ação causa um resultado. Se causou prejuízos e cometeu injustiças, em algum momento terá que confrontar seus erros e arcar com a sua parte da responsabilidade.</p>
