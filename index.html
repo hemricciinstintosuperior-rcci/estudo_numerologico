@@ -1390,7 +1390,7 @@ const dadosNegativas = detectarNegativas(piramideVida);
 
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
-    <button class="btn-pdf no-print" onclick="window.print()">📥 SALVAR PDF PREMIUM</button>
+    <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
 
     <div class="capa">
         <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png" class="logo-capa" alt="Logo">
@@ -1785,7 +1785,7 @@ htmlPiramide += `</div>
     <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
 
 if(dadosNegativas.detalhes.length > 0){
-    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px;">⚠️ Sequências de Vulnerabilidade </h3>`;
+    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade </h3>`;
     
     const arcanosTopo = topo(piramideVida[0]);
 
@@ -1809,8 +1809,8 @@ if(dadosNegativas.detalhes.length > 0){
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
-            <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: left;">
-                <b style="color:red; font-size: 18px;">Bloqueio ${neg.numero}</b><br>
+            <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: center;">
+                <b style="color:red; font-size: 18px;">Bloqueio n°  ${neg.numero}</b><br>
                 <span style="color:#111; font-weight: bold;">📅 Período: de ${datas.ini} até ${datas.fim}</span><br>
                 <span style="color:#d32f2f; font-weight: bold;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos)</span>
                 <p style="margin-top: 8px; color: #333;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
