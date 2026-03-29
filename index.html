@@ -794,45 +794,38 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 }
 
 
-function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, statusMomentoObj, dataNascimento) {
+function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, statusMomentoObj, dataNascimento, idade, f1, f2) {
     try {
-        // Validação Crítica: Se o objeto de status não existir, interrompe o erro aqui
-        if (!statusMomentoObj || !statusMomentoObj.status || !statusMomentoObj.vibracoes) {
-            console.error("statusMomentoObj incompleto:", statusMomentoObj);
-            return `<div style="color:#827108; padding:20px; text-align:center; border:1px dashed #ddd;">Dados de vibração temporariamente indisponíveis para este ciclo.</div>`;
-        }
+        if (!statusMomentoObj || !statusMomentoObj.status) return "";
 
         const agora = new Date();
         const anoBase = agora.getFullYear();
         const partesData = dataNascimento.split("/");
         const dtNasci = new Date(partesData[2], partesData[1] - 1, partesData[0]);
 
-        // --- FUNÇÃO INTERNA PARA GERAR O BLOCO DE UM ANO ESPECÍFICO ---
-        const renderizarBlocoAno = (anoRef, titulo) => {
+        const renderizarBlocoAno = (anoRef) => {
             let inicio = new Date(anoRef, dtNasci.getMonth(), dtNasci.getDate());
             if (agora < inicio && anoRef === anoBase) { inicio.setFullYear(anoRef - 1); }
             let fim = new Date(inicio.getFullYear() + 1, dtNasci.getMonth(), dtNasci.getDate());
             const vigencia = `${inicio.toLocaleDateString('pt-BR')} a ${fim.toLocaleDateString('pt-BR')}`;
 
-            // Captura os dados validados
             const statusPlanos = statusMomentoObj.status; 
             const vibPlanos = statusMomentoObj.vibracoes;
             const perfilMomento = statusMomentoObj.perfil;
 
             let rankingMomento = [];
 
-            // Processamento do Banco de Atributos
             for (let nomeAtributo in megaBancoAtributos) {
                 let config = megaBancoAtributos[nomeAtributo];
                 let pAlvo = config.plano;
 
-                // Só processa se o plano existir no status enviado
                 if (statusPlanos[pAlvo]) {
+                    // AQUI ESTAVA O ERRO: Adicionados os 3 parâmetros faltantes no final
                     let notaFinal = calcularIntensidadeMomento(
                         config, res, faltantes, nomeRaw, d3, 
                         regenteMatriz, negativasMatriz, 
                         vibPlanos[pAlvo], statusPlanos[pAlvo], 
-                        perfilMomento, pAlvo
+                        perfilMomento, pAlvo, idade, f1, f2
                     );
 
                     rankingMomento.push({
@@ -845,28 +838,21 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                 }
             }
 
-            let htmlAno = `
-                <div class="quebra-pagina" style="margin-top:20px;">
-                    <p class="vigencia-texto" style="text-align:center; font-weight:bold; color:#666; margin-bottom:20px;">VIGÊNCIA DOS POTENCIAIS: ${vigencia}</p>
-            `;
-
+            let htmlAno = `<p style="text-align:center; font-weight:bold; color:#666; margin-bottom:20px;">VIGÊNCIA DOS POTENCIAIS: ${vigencia}</p>`;
             const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
             
             ordemVisual.forEach(p => {
                 const status = statusPlanos[p];
                 const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
-                
                 htmlAno += `
                     <div style="margin-bottom: 30px; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
                         <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
                             <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:15px;">${p}</h3>
                             <span style="font-size:9px; font-weight:bold; background:${cor}; color:#fff; padding:2px 8px; border-radius:10px; text-transform:uppercase;">${status}</span>
-                        </div>
-                `;
+                        </div>`;
 
                 const atributos = rankingMomento.filter(item => item.plano === p);
                 const subgrupos = [...new Set(atributos.map(item => item.sub))];
-
                 subgrupos.forEach(sub => {
                     htmlAno += `<h4 style="color:#aaa; font-size:10px; text-transform:uppercase; margin: 10px 0 8px 0;">${sub}</h4>`;
                     atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
@@ -875,17 +861,14 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                 });
                 htmlAno += `</div>`;
             });
-
-            htmlAno += `</div>`;
             return htmlAno;
         };
 
-        // Renderiza apenas o bloco correspondente ao status enviado
-        return renderizarBlocoAno(statusMomentoObj.anoReferencia || anoBase, "");
+        return renderizarBlocoAno(anoBase);
 
     } catch (e) {
-        console.error("Erro interno no processamento dos potenciais:", e);
-        return `<div style="color:red; padding:20px; text-align:center;">Erro ao carregar gráficos deste ciclo.</div>`;
+        console.error("Erro nos gráficos:", e);
+        return "";
     }
 }
 
@@ -1206,7 +1189,8 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
 
         h += `<div style="margin-top:50px; border-top: 3px double #eee; padding-top: 30px;">
                 <h2 style="text-align:center; color:var(--gold); text-transform:uppercase; font-size:1.4em; margin-bottom:30px;">Potenciais Ativados no Ciclo</h2>
-                ${gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGraficos, dataNascimento)}
+                // Substitua a linha da chamada por esta:
+${gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGraficos, dataNascimento, res.idade, res.fim1, res.fim2)}
               </div>
         </div>`;
         return h;
