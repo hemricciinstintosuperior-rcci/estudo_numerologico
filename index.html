@@ -9,39 +9,50 @@
         
 /* Ajuste para Impressão/PDF Atualizado */
 @media print {
-    /* Remove o fundo escuro do body e margens padrão do navegador */
-    body { 
-        background: white !important; 
-        color: black !important; 
-        padding: 0 !important; 
+    /* 1. Reset total de margens do navegador */
+    @page {
+        margin: 0;
+        size: auto;
+    }
+
+    body {
+        background: white !important;
         margin: 0 !important;
-    }
-
-    /* Esconde o formulário de entrada e outros botões */
-    .no-print, .container, .btn-pdf { 
-        display: none !important; 
-    }
-
-    /* FAZ O RELATÓRIO OCUPAR A FOLHA TODA */
-    .relatorio-premium { 
-        width: 100% !important; 
-        max-width: 100% !important; 
-        margin: 0 !important; 
         padding: 0 !important;
-        box-shadow: none !important; 
-    }
-
-    /* Ajusta os cards internos para não ficarem "esmagados" */
-    .secao-card { 
         width: 100% !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        padding: 20mm !important; /* Margem interna para o texto não encostar no corte do papel */
-        box-sizing: border-box !important;
-        page-break-inside: avoid; /* Evita que um card corte no meio de uma página */
     }
 
-    .quebra-pagina { page-break-before: always; }
+    /* 2. Esconde o que não deve sair no papel */
+    .no-print, .container, .btn-pdf, .tabs-planos {
+        display: none !important;
+    }
+
+    /* 3. Força o container principal a ignorar os 850px e ocupar a tela toda */
+    .relatorio-premium {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important; /* IMPORTANTE: Remove o limite de 850px */
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+
+    /* 4. Ajusta os cards para ocuparem a largura total com respiro interno */
+    .secao-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin: 0 0 20px 0 !important;
+        padding: 15mm !important; /* Margem interna para o texto não colar na borda */
+        border: none !important;
+        page-break-inside: avoid;
+    }
+
+    /* Ajuste de imagens/logos para não estourarem */
+    .logo-capa, .logo-conclusao {
+        max-width: 90% !important;
+        height: auto !important;
+    }
 }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
         /* Estilo para os Logos */
