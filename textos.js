@@ -1270,7 +1270,7 @@ Relacionamento: {
 },
 
 // --- 1º CICLO (FORMAÇÃO / JUVENTUDE) ---
-Ciclos: {
+ciclos: {
     1: {
       1: `<h3>1º Ciclo 1: O Despertar da Individualidade e Coragem</h3>
       <p>O seu primeiro ciclo de vida foi marcado por uma necessidade visceral de autoafirmação e o despertar de uma independência precoce que moldou o seu caráter de forma definitiva. Desde os primeiros anos, <strong>você</strong> sentiu um impulso indomável de trilhar o próprio caminho, em situações onde a coragem e a autossuficiência foram exigidas antes mesmo do que seria esperado para a idade. Esta fase não foi apenas um período de crescimento físico, mas um verdadeiro batismo de fogo para a vontade individual, forçando <strong>você</strong> a descobrir recursos internos de bravura para enfrentar desafios sem depender do apoio constante de terceiros.</p>
@@ -1426,7 +1426,7 @@ Ciclos: {
 
  // --- 1º MOMENTO (A PRIMAVERA DA VIDA / JUVENTUDE) ---
 // --- 1º MOMENTO (A PRIMAVERA DA VIDA / JUVENTUDE) ---
-Momentos: {
+momentos: {
   1: {
     1: `<h3>1º Momento 1: Independência e Força de Caráter</h3>
         <p>Neste primeiro momento decisivo, a vida exige que <strong>você</strong> desenvolva independência precoce e uma força de caráter que servirá de alicerce para toda a existência. Esta é uma fase de descoberta intensiva do próprio "eu", onde as circunstâncias ao redor impulsionam <strong>você</strong> a tomar iniciativas corajosas e a confiar na própria capacidade de conduzir o destino, muitas vezes sem o suporte imediato de figuras de autoridade. O desafio central para <strong>você</strong> é superar inseguranças naturais da juventude e agir com ousadia suficiente para se destacar, transformando a necessidade de autonomia em um motor potente de crescimento pessoal e realização inicial.</p>
