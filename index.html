@@ -7,15 +7,42 @@
 <style>
         :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
         
-        /* Ajuste para Impressão/PDF */
-        @media print {
-            body { background: white !important; color: white !important; padding: 0 !important; }
-            .no-print, .container { display: none !important; }
-            .relatorio-premium { width: 100% !important; max-width: 100% !important; margin: 0 !important; box-shadow: none !important; }
-            .quebra-pagina { page-break-before: always; }
-            .secao-card { border: 1px solid #eee !important; break-inside: avoid; }
-        }
+/* Ajuste para Impressão/PDF Atualizado */
+@media print {
+    /* Remove o fundo escuro do body e margens padrão do navegador */
+    body { 
+        background: white !important; 
+        color: black !important; 
+        padding: 0 !important; 
+        margin: 0 !important;
+    }
 
+    /* Esconde o formulário de entrada e outros botões */
+    .no-print, .container, .btn-pdf { 
+        display: none !important; 
+    }
+
+    /* FAZ O RELATÓRIO OCUPAR A FOLHA TODA */
+    .relatorio-premium { 
+        width: 100% !important; 
+        max-width: 100% !important; 
+        margin: 0 !important; 
+        padding: 0 !important;
+        box-shadow: none !important; 
+    }
+
+    /* Ajusta os cards internos para não ficarem "esmagados" */
+    .secao-card { 
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 20mm !important; /* Margem interna para o texto não encostar no corte do papel */
+        box-sizing: border-box !important;
+        page-break-inside: avoid; /* Evita que um card corte no meio de uma página */
+    }
+
+    .quebra-pagina { page-break-before: always; }
+}
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
         /* Estilo para os Logos */
 .logo-capa {
