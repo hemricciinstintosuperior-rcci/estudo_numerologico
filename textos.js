@@ -1726,39 +1726,48 @@ desafios:{
 // --- ANO PESSOAL (A ENERGIA DO SEU MOMENTO ATUAL) ---
 anoPessoal:{
     // --- ANO PESSOAL (A ENERGIA DO SEU MOMENTO ATUAL) ---
-    1: `<h3>Ano 1: O Plantio e a Nova Identidade</h3>
+    1: `<h3>Ano Pessoal 1: 
+    O Plantio e a Nova Identidade</h3>
     <p>Este é o marco zero de um novo ciclo de nove anos para <strong>você</strong>, uma fase de renascimento absoluto onde a energia do pioneirismo deve ser a bússola principal. A vida exige que <strong>você</strong> deixe para trás o que foi concluído no ciclo anterior e assuma uma postura de liderança ativa sobre o próprio destino, agindo com audácia.</p>
     <p>É o momento ideal para <strong>você</strong> lançar projetos autorais, mudar de carreira ou iniciar novos hábitos. <strong>você</strong> sentirá um impulso vibrante para tomar decisões solitárias; lembre-se de que este é o custo necessário para abrir trilhas novas. O foco deve ser o desenvolvimento de <strong>você</strong> e a plantação das sementes que deseja ver florescer na próxima década. Ao final deste período, <strong>você</strong> terá consolidado uma nova identidade, muito mais forte e decidida.</p>`,
 
-    2: `<h3>Ano 2: Cooperação e Gestação Estratégica</h3>
+    2: `<h3>Ano Pessoal 2: 
+    Cooperação e Gestação Estratégica</h3>
     <p>Após a intensidade do início do ciclo, este é um ano para <strong>você</strong> cultivar a paciência e a diplomacia. A energia agora não é de ação direta, mas de fortalecimento dos bastidores, exigindo que <strong>você</strong> aprenda a trabalhar em parceria e a ouvir com atenção as necessidades alheias. As coisas podem parecer lentas, mas este é o tempo de germinação para <strong>você</strong>.</p>
     <p>É um período excelente para focar em relacionamentos e sociedades. <strong>você</strong> será testada em sua capacidade de manter o equilíbrio emocional diante de atrasos. A intuição de <strong>você</strong> estará aguçada, e o sucesso virá ao agir com sensibilidade. O aprendizado para <strong>você</strong> é o de que a suavidade é uma forma de poder e que saber esperar o momento certo é tão importante quanto saber agir com firmeza.</p>`,
 
-    3: `<h3>Ano 3: Expansão Criativa e Magnetismo Social</h3>
+    3: `<h3>Ano Pessoal 3: 
+    Expansão Criativa e Magnetismo Social</h3>
     <p>Este é o ano da expansão social e da plena expressão dos talentos criativos de <strong>você</strong> para o mundo. <strong>você</strong> sentirá uma necessidade vital de se comunicar e de circular em novos ambientes. A energia é de fertilidade e brilho, o que atrai para <strong>você</strong> amizades influentes e convites inesperados baseados no magnetismo pessoal.</p>
     <p>O desafio central para <strong>você</strong> será manter o foco em meio a tanta estimulação, evitando que a energia se disperse em projetos inacabados. <strong>você</strong> deve usar este otimismo para abrir portas, mas precisa canalizar essa vitalidade para objetivos que tenham significado real. Ao final deste ano, <strong>você</strong> terá expandido significativamente o círculo de influência e descoberto novas facetas do próprio gênio criativo.</p>`,
 
-    4: `<h3>Ano 4: Estrutura, Trabalho e Fundamentos</h3>
+    4: `<h3>Ano Pessoal 4: 
+    Estrutura, Trabalho e Fundamentos</h3>
     <p>Após a expansão do ano anterior, a vida exige que <strong>você</strong> coloque os pés no chão e foque intensamente na organização e na disciplina. Este é o ano de construir a estrutura que sustentará os sonhos, exigindo que <strong>você</strong> preste atenção aos detalhes técnicos, às finanças e à saúde física com rigor e método.</p>
     <p><strong>você</strong> sentirá o peso das responsabilidades aumentar, o que serve para testar a persistência e o senso de dever. O sucesso para <strong>você</strong> virá da constância e da honestidade de propósitos em cada pequena tarefa. <strong>você</strong> deve ser a pessoa confiável em quem todos buscam apoio. Ao concluir este período, <strong>você</strong> sentirá o orgulho de ter erguido bases sólidas e inabaláveis para o futuro.</p>`,
 
-    5: `<h3>Ano 5: Transição, Versatilidade e Liberdade</h3>
+    5: `<h3>Ano Pessoal 5: 
+    Transição, Versatilidade e Liberdade</h3>
     <p>Prepare-se para um ano de mudanças rápidas e uma sede de liberdade que impulsionará <strong>você</strong> para horizontes novos. Este é um período de transição intensa, onde a versatilidade será a melhor aliada para lidar com o inesperado. <strong>você</strong> poderá sentir uma inquietação que levará a mudar interesses ou estilo de vida.</p>
     <p>É um excelente momento para <strong>você</strong> viajar e aprender novas tecnologias, expandindo a percepção da realidade. O desafio central é não se perder na impulsividade. <strong>você</strong> deve aprender a navegar na incerteza com inteligência, usando a curiosidade como combustível para a evolução. Ao final deste ciclo, <strong>você</strong> se sentirá muito mais desimpedida e pronta para abraçar as múltiplas possibilidades do futuro.</p>`,
 
-    6: `<h3>Ano 6: Harmonia Familiar e Responsabilidade Afetiva</h3>
+    6: `<h3>Ano Pessoal 6: 
+    Harmonia Familiar e Responsabilidade Afetiva</h3>
     <p>O foco central deste ano para <strong>você</strong> é o lar, a família e as responsabilidades afetivas que exigem equilíbrio e dedicação. <strong>você</strong> será chamada a atuar como mediadora de conflitos, agindo com uma maturidade emocional que traz paz aos ambientes. É um período de ajustes domésticos e fortalecimento de laços.</p>
     <p>A energia favorece o cuidado com a estética e o bem-estar coletivo. O desafio para <strong>você</strong> é encontrar o ponto ideal entre o cuidado dedicado aos outros e a preservação da própria individualidade. <strong>você</strong> deve oferecer suporte sem se anular emocionalmente no processo. Ao concluir este período, <strong>você</strong> terá construído um legado de amor e respeito, consolidando a posição de figura essencial para a harmonia do grupo.</p>`,
 
-    7: `<h3>Ano 7: Introspecção, Sabedoria e Refinamento</h3>
+    7: `<h3>Ano Pessoal 7: 
+    Introspecção, Sabedoria e Refinamento</h3>
     <p>Este é um ano de profunda introspecção e refinamento intelectual, onde a vida convida <strong>você</strong> a se afastar do barulho social para buscar respostas internas. <strong>você</strong> sentirá uma necessidade maior de silêncio e recolhimento produtivo, focando na especialização de conhecimentos ou na investigação de verdades ocultas.</p>
     <p>É um período excelente para <strong>você</strong> se dedicar a estudos complexos ou meditação. O universo pede que <strong>você</strong> refine a qualidade do próprio ser antes de buscar resultados externos. O desafio para <strong>você</strong> é usar o tempo de solidão para se tornar uma autoridade na própria verdade. Ao final deste ano, <strong>você</strong> emergirá com uma clareza mental e uma sabedoria superior que a colocarão em um novo patamar de distinção.</p>`,
 
-    8: `<h3>Ano 8: Colheita Material e Poder Executivo</h3>
+    8: `<h3>Ano Pessoal 8: 
+    Colheita Material e Poder Executivo</h3>
     <p>Este é o ano da grande colheita material e da manifestação do poder executivo de <strong>você</strong> na sociedade. A vida agora exige que <strong>você</strong> aja com pragmatismo, ambição ética e foco absoluto em resultados tangíveis. <strong>você</strong> terá oportunidades reais de expansão financeira e de assumir cargos de liderança.</p>
     <p>O poder de manifestação de <strong>você</strong> estará no auge, e a colheita será proporcional ao trabalho realizado nos anos anteriores. <strong>você</strong> deve agir com autoconfiança, garantindo que o sucesso esteja alinhado com a justiça. O desafio é gerir grandes responsabilidades sem se deixar cegar pelo ego. Ao concluir esta etapa, <strong>você</strong> terá alcançado um patamar de segurança e influência que consolidará sua posição no mundo material.</p>`,
 
-    9: `<h3>Ano 9: Finalização, Limpeza e Humanitarismo</h3>
+    9: `<h3>Ano Pessoal 9: 
+    Finalização, Limpeza e Humanitarismo</h3>
     <p>Este é o ano da conclusão e do desapego sábio de tudo o que não serve mais para o crescimento de <strong>você</strong>. <strong>você</strong> está encerrando um ciclo de nove anos e a vida exige que finalize projetos pendentes e perdoe mágoas do passado. É um período de balanço emocional intenso e sensibilidade humanitária.</p>
     <p>O foco de <strong>você</strong> deve ser a limpeza interna para que o novo ciclo comece com leveza. <strong>você</strong> poderá enfrentar finalizações que parecem desafiadoras, mas que são necessárias para a libertação. O aprendizado para <strong>você</strong> é o de que soltar o passado com gratidão é o segredo para receber o futuro. Ao final deste ano, <strong>você</strong> se sentirá plena e purificada, com a alma pronta para o renascimento.</p>`
 },
