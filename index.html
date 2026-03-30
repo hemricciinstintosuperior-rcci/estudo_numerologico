@@ -1633,7 +1633,7 @@ html += `
 `;
 if (res.deficiencias.length > 0) {
     res.deficiencias.forEach(f => {
-        html += `<p><strong>Falta do Número ${f} no Nome</strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
+        html += `<p><strong></strong> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #eee">`;
     });
 } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
 html += `</div>`;
@@ -1753,7 +1753,7 @@ html += `
         if (sec === "desafios" && i == 3) continue;
 
         const info = datasFases[sec][i];
-        let labelFase = ` ${i}`;
+        let labelFase = ``;
         if(sec === "desafios") {
             labelFase = i == 1 ? "Primeiro Desafio" : "Segundo Desafio";
         }
@@ -1764,7 +1764,7 @@ html += `
                     ${info.idade} | ${info.anos}
                 </span>
                 <p style="margin-top: 5px;">
-                    <strong>${labelFase}  ${res[sec][i]} </strong><br>
+                    <strong> </strong><br>
                     ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
                 </p>
                 <hr style="border:0; border-top:1px solid #eee">
