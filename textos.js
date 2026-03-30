@@ -78,13 +78,9 @@ sobre a melhor forma de lidar com situações difíceis ou ameaçadoras, pois qu
      
         
         
-        talento: `<p>Às vezes, o foco nas métricas tradicionais de sucesso é tão intenso que impede notar a existência de dons e talentos naturais que operam silenciosamente. São habilidades sutis que auxiliam você a alcançar grandes resultados, muitas vezes sem que exista uma percepção clara dessa maestria em cada ação.</p>
-
-<p>É fundamental dedicar um olhar atento a essas capacidades inatas. Ao reconhecer esses recursos internos, você passa a sentir mais competência e segurança em todas as esferas da vida, transformando potencial bruto em realização cotidiana.</p>
-
-<p>Contudo, é necessário cautela com as percepções que nutre sobre si e com as classificações adotadas. As crenças que você carrega moldam pensamentos que se cristalizam em ações concretas. Em última análise, o que você pensa é o que você se torna.</p>
-
-<p>Este estudo revela que certas características podem apresentar naturezas conflitantes, enquanto outras apontam para aptidões únicas. O segredo reside no equilíbrio, e com as qualidades pessoais não é diferente. Tudo deve passar por análise, pois cada traço pode descrever tanto um talento especial a ser lapidado quanto uma deficiência que exige superação.</p>`,
+        talento: `
+    <p>O talento é frequentemente compreendido como a habilidade de realizar determinadas tarefas com excelência e o mínimo de esforço consciente. Muitas vezes, essas capacidades permanecem latentes na mente, operando de forma automática sem que haja uma percepção clara de sua existência. O Talento Oculto representa essas habilidades especiais que, quando identificadas e desenvolvidas, permitem que o indivíduo se sobressaia em atividades específicas, utilizando inclinações naturais a seu favor.</p>
+    <p>Mesmo sem o conhecimento técnico dessas predisposições, é comum que a utilização ocorra de maneira inconsciente no cotidiano. A identificação desse número revela ferramentas internas que podem ser potencializadas para gerar resultados extraordinários com fluidez e naturalidade.</p>`,
 
 
         
@@ -2213,46 +2209,32 @@ inclinacoes : {
 },
     talento:    {     
     
-    1: `<h4>Talento 1</h4>
-        <p>Existe em você uma natureza independente e ambiciosa, com um ponto de vista muito próprio sobre todos os temas. O interesse e a inteligência guiam suas ações, mantendo o foco e a determinação em níveis elevados, embora a busca pela autonomia possa, por vezes, resultar em uma postura obstinada.</p>
-        <p>É importante observar a tendência a priorizar apenas interesses particulares, o que pode gerar inquietude ou sentimentos de posse. O foco excessivo na própria visão pode fechar portas para ideias externas valiosas, sendo comum perceber as oportunidades perdidas apenas quando o entusiasmo do momento arrefece. Contudo, em situações de alta pressão, sua manifestação é brilhante, mantendo a firmeza e a consistência necessárias para não recuar.</p>`,
+     1: `<h4>Liderança Pioneira e Iniciativa Independente - Talento 1</h4>
+    <p>O talento oculto de <strong>você</strong> reside na capacidade inata de abrir caminhos onde outros veem apenas obstáculos. Existe uma facilidade natural para tomar decisões rápidas e assumir o comando de situações complexas sem hesitação. <strong>você</strong> possui a habilidade de criar soluções originais e agir com um pioneirismo que inspira confiança, mesmo que isso ocorra de forma silenciosa ou instintiva no dia a dia.</p>`,
 
-    2: `<h4>Talento 2</h4>
-        <p>A comunicação e a gentileza são suas marcas registradas. Existe uma disposição natural para a cooperação e a cautela, buscando resolver divergências com diplomacia e equilíbrio. Entretanto, essa receptividade pode ser confundida com insegurança, permitindo que pessoas mal-intencionadas tentem exercer influência sobre suas decisões.</p>
-        <p>Embora a proatividade seja uma força interna, a presença de muitas opções pode causar dispersão e perda do foco prioritário. Sua grande capacidade de organização e mediação é essencial para conciliar conflitos. O desafio é orientar as ações para o próprio bem-estar, garantindo que a bondade inata não seja utilizada por terceiros em benefício próprio.</p>`,
+    2: `<h4>Mediação Diplomática e Percepção de Detalhes - Talento 2</h4>
+    <p><strong>você</strong> possui o talento de perceber as nuances e sentimentos que passam despercebidos pela maioria. Essa habilidade permite que <strong>você</strong> atue como um ponto de equilíbrio em qualquer ambiente, resolvendo conflitos através da diplomacia e da cooperação. O talento de <strong>você</strong> flui na arte de unir pessoas e na execução de tarefas que exigem minúcia, paciência e um tato social refinado.</p>`,
 
-    3: `<h4>Talento 3</h4>
-        <p>A alegria e uma imaginação fértil permitem que a expressão ocorra de forma clara, embora o conteúdo da sua mente seja sempre uma surpresa para os demais devido à criatividade extraordinária. Seu raciocínio segue uma lógica própria e original, capaz de surpreender a todos com soluções inesperadas.</p>
-        <p>Essa forma singular de pensar pode gerar certa impaciência com processos lentos ou imprudência em relação a questões materiais. É um talento que brilha na inovação, exigindo apenas que o entusiasmo criativo seja equilibrado com a atenção aos detalhes práticos do cotidiano.</p>`,
+    3: `<h4>Comunicação Criativa e Expressão Cativante - Talento 3</h4>
+    <p>O talento oculto de <strong>você</strong> é a facilidade de transformar ideias em mensagens envolventes e inspiradoras. Existe um dom natural para a comunicação, seja através da fala, da escrita ou das artes, que atrai a atenção de forma espontânea. <strong>você</strong> consegue trazer leveza e entusiasmo para os projetos, utilizando o carisma para motivar grupos e dar cor a conceitos que pareciam monótonos.</p>`,
 
-    4: `<h4>Talento 4</h4>
-        <p>A dedicação ao trabalho e a visão de futuro são pilares de sua personalidade. Existe uma preocupação constante com as consequências das ações, o que traz um planejamento rigoroso. A melhor característica aqui é o respeito aos limites e a diplomacia, permitindo que o diálogo flua livremente com as pessoas ao redor.</p>
-        <p>Por ser uma natureza que valoriza as tradições e o que é comprovado, pode haver certa relutância ou demora em aceitar inovações repentinas. A estabilidade e a regularidade de comportamento são buscadas a todo custo, fazendo o possível para evitar distrações ou conflitos que tirem o foco da construção sólida que você realiza.</p>`,
+    4: `<h4>Organização Estrutural e Eficiência Prática - Talento 4</h4>
+    <p><strong>você</strong> tem o talento de trazer ordem ao caos com extrema facilidade. Essa habilidade se manifesta na capacidade de planejar, estruturar e executar tarefas com uma precisão técnica admirável. O talento de <strong>você</strong> reside na construção de bases sólidas e na gestão de processos que garantem segurança e resultados duradouros, agindo com uma disciplina que parece natural e sem esforço.</p>`,
 
-    5: `<h4>Talento 5</h4>
-        <p>Uma personalidade vibrante, ágil e magnética define este perfil. A reação diante do que desagrada é imediata e direta, o que pode dificultar a comunicação com quem prefere ritmos mais lentos. Aprender a estabelecer limites sobre o que e quando dizer é o grande aprendizado para que esse caráter forte seja bem compreendido.</p>
-        <p>O verdadeiro desenvolvimento ocorre no meio do caos e de projetos desafiadores. Enquanto outros se sentem pressionados pelo estresse, você encontra abordagens dinâmicas e confiantes, ajustando-se a qualquer circunstância para extrair vantagem das situações mais triviais.</p>`,
+    5: `<h4>Adaptabilidade Veloz e Inovação Dinâmica - Talento 5</h4>
+    <p>O talento oculto de <strong>você</strong> é a versatilidade absoluta diante das mudanças. Existe uma facilidade incomum para aprender novas habilidades em tempo recorde e se adaptar a diferentes cenários ou culturas. <strong>você</strong> possui o dom da inovação, conseguindo comunicar ideias modernas e promover transformações rápidas que mantêm os projetos em constante evolução e movimento.</p>`,
 
-    6: `<h4>Talento 6</h4>
-        <p>A confiabilidade e o apego às responsabilidades fazem de você alguém presente em todos os momentos. A atenção aos detalhes do ambiente, seja no trabalho ou no lar, permite identificar pequenas mudanças e oferecer ajuda prontamente. Por vezes, esse instinto protecionista pode ser interpretado como uma interferência excessiva.</p>
-        <p>Existe um forte senso de justiça social e a disposição para defender quem parece estar em desvantagem, mesmo com custos pessoais. A memória para as ações alheias é vasta, e o desejo de cuidar faz com que os problemas, às vezes, pareçam maiores do que são, apenas pelo excesso de zelo e dedicação.</p>`,
+    6: `<h4>Harmonização de Ambientes e Cuidado Educativo - Talento 6</h4>
+    <p><strong>você</strong> possui o talento natural de criar harmonia e bem-estar onde quer que esteja. Essa habilidade se traduz na capacidade de aconselhar, cuidar e organizar espaços ou grupos de forma que todos se sintam acolhidos e seguros. O talento de <strong>você</strong> flui na responsabilidade afetiva e na busca pela justiça social, agindo como um pilar de equilíbrio ético e estético.</p>`,
 
-    7: `<h4>Talento 7</h4>
-        <p>O perfeccionismo e a disciplina são as bases deste talento reservado. Existe um instinto de contestação natural, que leva à dúvida saudável até que a informação seja comprovada pela experiência própria. Quando há segurança sobre um tema, a ação é espontânea; do contrário, o recolhimento serve como proteção para as ideias e sentimentos.</p>
-        <p>O pensamento analítico produz conclusões precisas e interessantes. Há uma aversão à repetição de tarefas e ao erro evitável, pois a busca é pela perfeição desde a primeira tentativa. O debate intelectual é apreciado, especialmente quando permite o aprofundamento em informações que sustentem a palavra final.</p>`,
+    7: `<h4>Análise Profunda e Especialização Técnica - Talento 7</h4>
+    <p>O talento oculto de <strong>você</strong> reside na mente analítica e na busca pela perfeição intelectual. Existe uma facilidade nata para investigar a fundo qualquer tema, detectando falhas ou verdades ocultas que outros ignoram. <strong>você</strong> possui o dom da observação e do estudo especializado, conseguindo atingir níveis de conhecimento e compreensão que conferem uma autoridade natural no campo escolhido.</p>`,
 
-    8: `<h4>Talento 8</h4>
-        <p>O poder de inspirar pessoas é um dom natural, aliado a uma engenhosidade que não se deixa surpreender por imprevistos. Existe uma grande habilidade de comando e iniciativa, focada em realizações materiais e tangíveis. Sua capacidade de combinar lógica com situações caóticas leva a produtividade ao limite.</p>
-        <p>A visão vai muito além do óbvio, o que garante uma enorme vantagem competitiva, mas também pode gerar irritação quando os outros não acompanham seu ritmo acelerado. É fundamental equilibrar essa força realizadora para evitar que a prepotência ou o controle excessivo sobreponham-se ao brilho das conquistas.</p>`,
+    8: `<h4>Visão Estratégica e Gestão de Resultados - Talento 8</h4>
+    <p><strong>você</strong> tem o talento nato para lidar com o poder, as finanças e a administração de grandes recursos. Essa habilidade se manifesta na visão estratégica que permite identificar oportunidades de crescimento onde ninguém mais vê. O talento de <strong>você</strong> flui na organização de sistemas produtivos e na liderança executiva, transformando esforços em prosperidade tangível e duradoura.</p>`,
 
-    9: `<h4>Talento 9</h4>
-        <p>A empatia e a compreensão social são características fortes, com uma disposição natural para ser alguém útil e necessário ao grupo. Há uma facilidade notável em se ajustar a mudanças estratégicas e novas circunstâncias, desde que os objetivos sejam bem fundamentados.</p>
-        <p>Em momentos críticos, o desafio é não se deixar levar pela apatia ou pelo isolamento defensivo. Quando os interesses são diretamente ameaçados ou há percepção de injustiça, uma força implacável e maliciosa pode emergir como defesa. O equilíbrio deste talento está em manter a doação ao próximo sem esquecer das próprias necessidades de afeto e reconhecimento.</p>`,
-     
-
-
-    11: `Seu Talento Oculto 11 é a capacidade de canalizar informações e soluções que ninguém mais vê. Você possui um "sexto sentido" para resolver problemas complexos através da inspiração direta.`,
-    22: `Seu Talento Oculto 22 é a genialidade prática. Você consegue pegar conceitos espirituais ou teóricos e transformá-los em ferramentas, empresas ou estruturas que funcionam perfeitamente no mundo real.`
+    9: `<h4>Visão Humanitária e Compreensão Universal - Talento 9</h4>
+    <p>O talento oculto de <strong>você</strong> é a capacidade de compreender as necessidades humanas em uma escala global. Existe um dom para inspirar o altruísmo, o perdão e a generosidade, transcendendo interesses individuais. <strong>você</strong> possui a habilidade de concluir ciclos com sabedoria e servir como um guia para a transformação positiva do ambiente, agindo com uma ética que abraça toda a existência.</p>`
 
     
     },
