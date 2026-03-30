@@ -508,258 +508,258 @@ SeqNegVida: {
 },
   // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 31) ---
  dia: {
-    1: ` <h4>Desbravador - Dia 1 
+    1: ` <h3>Desbravador - Dia 1 
     
-    É um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!</h4>
+    É um pioneiro, um jogador, que tem uma grande ambição e um forte desejo de sucesso!</h3>
     <p>O dia 1 traz para <strong>você</strong> uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. <strong>você</strong> traz consigo uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em todos os setores da vida e da jornada pessoal.</p>
     <p>Sua mente funciona de forma independente e <strong>você</strong> sente uma necessidade vital de manter o controle sobre a própria trajetória. Seu talento natural é a iniciativa pura; <strong>você</strong> não sente conforto em seguir fórmulas prontas ou ordens que não façam sentido para a sua lógica, buscando sempre a própria verdade interna acima de opiniões alheias.</p>
     <p>Na vida prática, <strong>você</strong> possui uma coragem que muitas vezes beira o pioneirismo, sendo aquela pessoa que dá o primeiro passo em projetos ousados e desafiadores que exigem pulso firme. <strong>você</strong> tem a marca da individualidade e o desejo de ser alguém de destaque em sua área de atuação.</p>
     <p>O grande desafio de <strong>você</strong> é equilibrar essa força de vontade para não transmitir uma imagem de autoridade excessiva, transformando sua determinação em uma fonte de inspiração constante. Ao liderar pelo exemplo, <strong>você</strong> demonstra que o sucesso é fruto da autoconfiança e da persistência que habitam seu espírito realizador.</p>`,
 
-    2: ` <h4>Pacificador - Dia 2 
+    2: ` <h3>Pacificador - Dia 2 
     
-    Está ciente do que acontece ao seu redor e é facilmente influenciado pelas pessoas e pelo ambiente!</h4>
+    Está ciente do que acontece ao seu redor e é facilmente influenciado pelas pessoas e pelo ambiente!</h3>
     <p>O dia 2 confere a <strong>você</strong> uma natureza extremamente diplomática, sensível e voltada para a cooperação. <strong>você</strong> possui o dom de perceber as nuances nos relacionamentos e no ambiente que a maioria das pessoas ignora, o que faz de <strong>você</strong> uma figura de mediação excelente em qualquer conflito ou negociação.</p>
     <p>Sua força não reside na agressividade, mas na persuasão suave e na capacidade de unir pessoas em torno de um objetivo comum com muita paciência. <strong>você</strong> produz resultados melhores em parceria do que em total isolamento, e seu talento natural brilha quando existe um ambiente de harmonia onde sua intuição aguçada pode ser ouvida.</p>
     <p><strong>você</strong> é o suporte emocional de muitos, possuindo uma empatia que acolhe e traz segurança para quem compartilha a vida ao seu lado. Existe em seu interior um apreço profundo pelas artes e pela beleza, refletindo uma alma que busca o equilíbrio estético e emocional em cada detalhe do cotidiano.</p>
     <p>O aprendizado para <strong>você</strong> é fortalecer a autoconfiança para não depender tanto da aprovação externa. Quando <strong>você</strong> aprende a unir sua sensibilidade com a firmeza nas decisões, <strong>você</strong> se torna uma peça fundamental e indispensável em qualquer estrutura familiar ou profissional de sucesso.</p>`,
 
-    3: ` <h4>Carsimático - Dia 3 
-    É amigável e sociável, mas pode ser temperamental e sujeito a variações de humor instantâneas! </h4>
+    3: ` <h3>Carsimático - Dia 3 
+    É amigável e sociável, mas pode ser temperamental e sujeito a variações de humor instantâneas! </h3>
     <p>O dia 3 traz para <strong>você</strong> o dom da comunicação, da expressão criativa e de um carisma social inigualável. <strong>você</strong> é uma pessoa que possui luz própria e uma facilidade imensa em transmitir ideias, seja pela fala, pela escrita ou pelas artes, atraindo a atenção de todos com naturalidade e alegria.</p>
     <p>O otimismo é uma marca registrada da personalidade de <strong>você</strong>, que tem o talento de elevar o espírito das pessoas ao redor. Para <strong>você</strong>, a vida é um palco onde a criatividade deve ser explorada ao máximo, e sua mente está sempre em movimento, criando conexões sociais interessantes e descobrindo novas possibilidades de diversão.</p>
     <p><strong>você</strong> tem uma alma jovem e vibrante que detesta o tédio e a rotina pesada. Sua presença costuma ser o ponto alto de qualquer evento, pois <strong>você</strong> traz consigo uma vibração de leveza e uma inteligência rápida que cativa tanto amigos quanto desconhecidos em poucos minutos de conversa.</p>
     <p>O cuidado que <strong>você</strong> deve ter é com a dispersão de energia; por possuir tantos talentos, existe o risco de começar muitos projetos e ter dificuldade em concluí-los. Ao focar sua expressão em objetivos claros, <strong>você</strong> ganha o poder de influenciar multidões e espalhar entusiasmo por onde passar.</p>`,
 
-    4: ` <h4>Disciplinado - Dia 4 
+    4: ` <h3>Disciplinado - Dia 4 
     
     É altamente ético, possui princípios elevados. 
-    É disciplinado e responsável! </h4>
+    É disciplinado e responsável! </h3>
     <p>O dia 4 indica que <strong>você</strong> possui um talento natural para a organização, a disciplina e a construção de bases sólidas. <strong>você</strong> é a pessoa que traz estrutura para o caos, agindo com uma responsabilidade e uma honestidade que são pilares fundamentais para o desenvolvimento de qualquer projeto duradouro.</p>
     <p>Sua abordagem da vida é prática e realista, sem espaço para ilusões sem fundamento. <strong>você</strong> valoriza o trabalho árduo e entende perfeitamente que o sucesso duradouro é construído tijolo por tijolo, com paciência. Para <strong>você</strong>, a segurança da família e a estabilidade financeira são prioridades absolutas.</p>
     <p><strong>você</strong> é alguém em quem todos podem confiar, pois sua palavra tem valor de lei e sua lealdade é inabalável. Existe um prazer íntimo em ver as coisas em ordem e em saber que cada esforço empreendido hoje trará a colheita de uma vida tranquila e segura no futuro próximo.</p>
     <p>O desafio para <strong>você</strong> é não permitir que a mente se torne rígida demais ou resistente às mudanças necessárias do mundo moderno. Ao unir sua incrível persistência com um pouco mais de flexibilidade, <strong>você</strong> torna suas conquistas absolutamente inabaláveis e admiradas por todos ao seu redor.</p>`,
 
-    5: ` <h4>Independente - Dia 5 
+    5: ` <h3>Independente - Dia 5 
     
-    É altamente adaptável, curioso, se entedia facilmente e precisa aprender a ter disciplina e organização!</h4>
+    É altamente adaptável, curioso, se entedia facilmente e precisa aprender a ter disciplina e organização!</h3>
     <p>O dia 5 traz para <strong>você</strong> uma alma livre, versátil e amante profunda das mudanças. <strong>você</strong> possui um talento natural para a adaptação e uma curiosidade intelectual que leva a explorar novos horizontes, viagens e experiências sensoriais de forma constante e entusiasmada.</p>
     <p>Sua energia é magnética e <strong>você</strong> aprende com uma rapidez impressionante, especialmente através da vivência direta com o mundo. <strong>você</strong> possui aversão à rotina e às limitações impostas por sistemas fechados, pois sua mente precisa de estímulos constantes e de liberdade para descobrir o que há além do óbvio.</p>
     <p><strong>você</strong> é uma pessoa de pensamento progressista, que está sempre buscando a modernidade e formas mais eficientes e interessantes de viver a vida. Sua versatilidade permite que <strong>você</strong> transite entre diferentes grupos sociais e áreas profissionais com uma facilidade que muitos invejam.</p>
     <p>O aprendizado para <strong>você</strong> é desenvolver o foco e a disciplina, para que a busca por liberdade não se transforme em uma instabilidade crônica. Quando <strong>você</strong> canaliza essa inteligência rápida para um propósito maior, <strong>você</strong> se torna alguém brilhante e capaz de realizar transformações profundas na sociedade.</p>`,
 
-    6: ` <h4>Zeloso - Dia 6 
+    6: ` <h3>Zeloso - Dia 6 
     
-    É um zelador orientado para cuidar das pessoas e capaz de sacrificar seu próprio bem estar para apoiar e ajuda-las!</h4>
+    É um zelador orientado para cuidar das pessoas e capaz de sacrificar seu próprio bem estar para apoiar e ajuda-las!</h3>
     <p>O dia 6 confere a <strong>você</strong> um talento profundo para cuidar, aconselhar e criar harmonia nos ambientes em que habita. <strong>você</strong> é alguém que se move pelo amor, pela justiça e por um senso de dever muito forte em relação à família e à comunidade, sendo o porto seguro de muita gente.</p>
     <p>Sua sensibilidade estética e artística também é marcante; <strong>você</strong> tem o dom de tornar tudo ao redor mais belo, acolhedor e equilibrado. Para <strong>você</strong>, o lar é o centro do universo, e a realização pessoal vem quando <strong>você</strong> consegue ajudar alguém ou resolver um conflito através da compreensão e do carinho.</p>
     <p><strong>você</strong> possui uma natureza protetora e uma capacidade de doação que é raramente vista. Existe um compromisso interno com a verdade e com a ética que guia cada passo de <strong>você</strong>, tornando sua presença uma garantia de paz e de bons conselhos para quem atravessa momentos de dificuldade.</p>
     <p>O desafio de <strong>você</strong> é não se sobrecarregar com os problemas alheios ou se perder em um perfeccionismo excessivo. Ao aprender a cuidar de si com a mesma dedicação que oferece aos outros, <strong>você</strong> atinge uma plenitude emocional que irradia luz e conforto para o mundo inteiro.</p>`,
 
-    7: ` <h4>Pefecionista - Dia 7 
+    7: ` <h3>Pefecionista - Dia 7 
     
-    É exigente e difícil de se conhecer. Introspectivo, tranquilo e analítico, seu objetivo é sempre a perfeição!</h4>
+    É exigente e difícil de se conhecer. Introspectivo, tranquilo e analítico, seu objetivo é sempre a perfeição!</h3>
     <p>O dia 7 indica que <strong>você</strong> possui uma mente analítica, intuitiva e totalmente voltada para a busca da verdade interior. <strong>você</strong> é uma pessoa de investigação nata, sentindo uma necessidade profunda de entender os mistérios da existência, da ciência ou dos caminhos da espiritualidade.</p>
     <p>Sua natureza é mais introspectiva e <strong>você</strong> valoriza o silêncio e a solidão produtiva como ferramentas essenciais para recarregar as energias e processar pensamentos complexos. <strong>você</strong> possui um radar natural para a falsidade e raramente se contenta com explicações superficiais sobre qualquer assunto importante.</p>
     <p><strong>você</strong> busca a perfeição em tudo o que estuda ou executa, tornando-se uma autoridade técnica ou intelectual em seus temas de interesse. Existe uma elegância e uma discrição no comportamento de <strong>você</strong> que impõe respeito e desperta a curiosidade de quem deseja conhecer sua mente brilhante.</p>
     <p>O desafio para <strong>você</strong> é não se isolar excessivamente ou se tornar alguém de crítica impiedosa com as imperfeições humanas. Ao compartilhar sua sabedoria e suas descobertas com o próximo, <strong>você</strong> se torna uma figura de orientação ou guia espiritual de grande profundidade e impacto real.</p>`,
 
-    8: ` <h4>Original - Dia 8   
+    8: ` <h3>Original - Dia 8   
     
     É altamente competitivo. Gosta de  desafios. 
-    As expectativas dos outros o estimulam, especialmente se duvidam de sua capacidade!</h4>
+    As expectativas dos outros o estimulam, especialmente se duvidam de sua capacidade!</h3>
     <p>O dia 8 traz para <strong>você</strong> um talento natural para a gestão, para os negócios e para a realização material em larga escala. <strong>você</strong> possui uma visão executiva invejável e um senso de justiça muito apurado, sabendo exatamente como organizar recursos e pessoas para atingir metas grandiosas.</p>
     <p>Sua determinação é impressionante e <strong>você</strong> encara os desafios com uma seriedade profissional que impõe autoridade imediata. Para <strong>você</strong>, o sucesso é uma consequência natural do esforço disciplinado e da capacidade de liderar com equilíbrio emocional e foco inabalável nos resultados práticos.</p>
     <p><strong>você</strong> tem a habilidade de transformar ideias abstratas em lucros e estruturas concretas. Existe em <strong>você</strong> um desejo de prosperidade que vai além do ganho pessoal, buscando também o conforto da linhagem e a segurança de quem está sob sua proteção e comando no dia a dia.</p>
     <p>O aprendizado de <strong>você</strong> é entender que o poder e o dinheiro são ferramentas para o bem, e não o fim de tudo. Quando <strong>você</strong> une sua ambição com a generosidade e a ética, <strong>você</strong> constrói um império de abundância que beneficia não apenas sua vida, mas a de milhares de pessoas ao redor.</p>`,
 
-    9: ` <h4>Universalista      
+    9: ` <h3>Universalista      
     Dia 9 É liberal e idealista. 
-    Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h4>
+    Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h3>
     <p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e dotada de uma visão de mundo extremamente ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar um legado positivo, agindo com um altruísmo que inspira confiança.</p>
     <p>Sua intuição é fortíssima e <strong>você</strong> possui uma sabedoria que parece vir de experiências de muitas vidas. <strong>você</strong> é capaz de grandes sacrifícios por causas nobres e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua compaixão e integridade moral.</p>
     <p><strong>você</strong> está em uma vibração de encerramento de ciclos e de compreensão total. Sua mente não se prende a detalhes mesquinhos, pois <strong>você</strong> enxerga o quadro geral da existência, buscando sempre a evolução espiritual e o auxílio ao próximo como metas principais de sua jornada na terra.</p>
     <p>O desafio para <strong>você</strong> é aprender o desapego em relação ao passado e às situações que não estão sob seu controle. Ao focar sua energia no serviço desinteressado, <strong>você</strong> atinge um estado de plenitude e paz interior que é a verdadeira e mais alta recompensa da sua história.</p>`,
 
-    10: ` <h4>Ambicioso - Dia 10 
+    10: ` <h3>Ambicioso - Dia 10 
     
     É audacioso, progressista, prestativo e independente. 
-    Está sempre disposto a ajudar àqueles que lhe pedem auxílio!</h4>
+    Está sempre disposto a ajudar àqueles que lhe pedem auxílio!</h3>
     <p>O dia 10 traz para <strong>você</strong> a energia vibrante do "novo começo" com uma potência redobrada. <strong>você</strong> possui um talento nato para a liderança e uma capacidade única de se reinventar, não importa quantas vezes a vida apresente desafios que exijam começar do zero absoluto.</p>
     <p>Sua autoconfiança é um grande trunfo, e <strong>você</strong> possui uma coragem pioneira que leva a explorar campos onde pouca gente se atreve a ir. <strong>você</strong> é uma figura realizadora por excelência e sua presença é marcante, transmitindo uma vibração de independência e sucesso por onde decide passar.</p>
     <p><strong>você</strong> possui a força do número 1 potencializada pela perfeição do zero, o que indica um destino de brilho individual e grandes conquistas. Sua mente é rápida para identificar oportunidades e <strong>você</strong> não hesita em agir quando percebe que o caminho está livre para sua ascensão pessoal.</p>
     <p>O cuidado que <strong>você</strong> deve ter é com a impulsividade e o excesso de orgulho nas vitórias. Ao aprender a ouvir a intuição e a planejar cada passo com sabedoria e paciência, <strong>você</strong> se torna uma força imparável da natureza, capaz de construir uma história de vida brilhante e inspiradora.</p>`,
 
-   11: ` <h4>Idealista 
+   11: ` <h3>Idealista 
    Dia 11 É um bom conselheiro e curador. 
    
-   Possui as qualidades de um visionário que aprecia e motiva aspessoas!</h4>
+   Possui as qualidades de um visionário que aprecia e motiva aspessoas!</h3>
    <p>O dia 11 traz para <strong>você</strong> a vibração de um Número Mestre, o que confere uma intuição extraordinária e uma sensibilidade espiritual muito acima da média. <strong>você</strong> funciona como um canal de inspiração para o mundo, possuindo ideais elevados e uma capacidade única de enxergar além das aparências materiais e das limitações do cotidiano.</p>
     <p>Sua presença é magnética e <strong>você</strong> tem o dom de iluminar a vida das pessoas com palavras e percepções profundas que tocam a alma. No entanto, por ser uma vibração de alta voltagem, <strong>você</strong> pode sentir uma tensão interna constante ou uma exigência própria muito forte para realizar algo grandioso pela humanidade, o que exige momentos de pausa e recolhimento.</p>
     <p><strong>você</strong> possui uma mente visionária que capta tendências e verdades antes de todos os outros. Existe um compromisso intrínseco com a evolução da consciência, e sua jornada é marcada pela busca de um propósito que transcenda o ego, tornando sua trajetória uma referência de sabedoria e luz para quem busca orientação em tempos de incerteza.</p>
     <p>O desafio para <strong>você</strong> é manter o pragmatismo e aprender a confiar na própria voz interior sem se deixar levar pela ansiedade ou pelo perfeccionismo. Quando <strong>você</strong> equilibra essa mente brilhante com a ação prática, <strong>você</strong> se torna uma liderança espiritual ou intelectual capaz de transformar profundamente a realidade de todos ao seu redor.</p>`,
 
-    12: `     <h4>Comunicador - Dia 12 
+    12: `     <h3>Comunicador - Dia 12 
     
     É altamente imaginativo e talentoso especialmente nas habilidades verbais e de escrita. 
-    Mas pode ser temperamental e evasivo!</h4>
+    Mas pode ser temperamental e evasivo!</h3>
    <p>O dia 12 confere a <strong>você</strong> uma personalidade rica em criatividade, com uma habilidade de comunicação que une a lógica à sensibilidade de forma magistral. <strong>você</strong> possui um talento natural para as artes, para o ensino ou para qualquer atividade que exija expressar ideias de forma clara, equilibrada e altamente convincente para diferentes públicos.</p>
     <p>Sua mente é fértil e <strong>você</strong> tem a capacidade de analisar os problemas sob diversos ângulos simultâneos, o que faz de <strong>você</strong> uma figura de conselho muito requisitada. <strong>você</strong> valoriza as conexões sociais, possuindo um magnetismo que atrai pessoas interessadas em sua inteligência e no modo refinado e artístico com que <strong>você</strong> observa a vida.</p>
     <p>Existe em <strong>você</strong> um desejo profundo de ser útil e de trazer harmonia para o ambiente social. Sua natureza é diplomática e <strong>você</strong> sabe usar o charme pessoal para abrir portas que outros considerariam trancadas. Sua versatilidade é sua maior ferramenta de sucesso, permitindo que <strong>você</strong> se adapte e brilhe em qualquer cenário profissional ou pessoal.</p>
     <p>O cuidado que <strong>você</strong> deve ter é para não se sacrificar em excesso pelos desejos alheios a ponto de esquecer os próprios sonhos. Ao aprender a estabelecer limites saudáveis e a usar a criatividade para a própria realização, <strong>você</strong> se torna uma pessoa multifacetada e profundamente admirada por sua integridade e talento.</p>`,
 
-    13: ` <h4>Prático - Dia 13
+    13: ` <h3>Prático - Dia 13
     
 É um organizador e gerente natural, focado nos detalhes. 
-Dotado de considerável perseverança e determinação!</h4>
+Dotado de considerável perseverança e determinação!</h3>
     <p>O dia 13 traz para <strong>você</strong> uma energia de transformação profunda e de construção sólida, capaz de erguer estruturas onde nada existia. Embora seja um número muitas vezes mal compreendido, ele confere a <strong>você</strong> uma capacidade de trabalho e uma determinação que poucas pessoas possuem, permitindo a realização de grandes feitos através do esforço contínuo.</p>
     <p><strong>você</strong> é alguém que não teme o trabalho árduo e possui um talento natural para a organização estratégica e para a reestruturação de situações caóticas. Sua vida é marcada por ciclos de renovação necessária, nos quais <strong>você</strong> aprende a deixar o que é obsoleto para trás a fim de construir algo muito mais forte, estável e duradouro no lugar.</p>
     <p>A força de vontade de <strong>você</strong> é inabalável e existe um senso de dever que guia cada passo dado na carreira e na vida familiar. <strong>você</strong> busca a eficiência e a ordem, sendo a fundação sólida sobre a qual projetos ambiciosos podem ser construídos com segurança. Sua persistência é a chave que abre as portas para o sucesso material e pessoal.</p>
     <p>O desafio para <strong>você</strong> é aprender a expressar os sentimentos de forma mais aberta e flexível, evitando a rigidez mental. Quando <strong>você</strong> aceita as mudanças com naturalidade, <strong>você</strong> se torna uma força realizadora imparável, capaz de alcançar o topo através da disciplina e de uma inteligência prática fora do comum.</p>`,
 
-    14: ` <h4>Aventureiro - Dia 14
+    14: ` <h3>Aventureiro - Dia 14
     
-É altamente adaptável, mas fica entediado facilmente e precisa do novo e do exótico para se sentir estimulado e vivo!</h4>
+É altamente adaptável, mas fica entediado facilmente e precisa do novo e do exótico para se sentir estimulado e vivo!</h3>
     <p>O dia 14 confere a <strong>você</strong> um talento nato para lidar com o público, com a comunicação de massa e com o dinamismo do mundo moderno. <strong>você</strong> possui uma mente rápida, versátil e uma curiosidade que leva a querer experimentar tudo o que a existência oferece, agindo sempre com uma agilidade mental que desperta a admiração de todos.</p>
     <p>Sua natureza é inquieta e <strong>você</strong> possui uma facilidade extrema de adaptação a novos ambientes e situações imprevistas. <strong>você</strong> detém o dom da persuasão e consegue transmitir ideias ou conceitos com uma clareza impressionante, pois as pessoas confiam naturalmente em sua energia vibrante e em sua visão progressista sobre o futuro.</p>
     <p><strong>você</strong> busca a liberdade acima de tudo, mas possui a inteligência necessária para entender que a verdadeira autonomia vem da autodisciplina. Sua vida é uma sucessão de aprendizados práticos e <strong>você</strong> tem a habilidade de transformar contatos sociais em oportunidades valiosas de crescimento pessoal e profissional, sempre com muito tato.</p>
     <p>O aprendizado para <strong>você</strong> é buscar a temperança, evitando a impulsividade em momentos de tédio. Ao canalizar essa energia vibrante para objetivos claros e construtivos, <strong>você</strong> se torna profissional de destaque e uma pessoa que vive experiências ricas, transformadoras e repletas de significado profundo.</p>`,
 
-    15: ` <h4>Sedutor - Dia 15
+    15: ` <h3>Sedutor - Dia 15
     
-É muito sensível, não suporta ser criticado e por isso tende a apoiar os outros a ponto de negar a si mesmo!</h4>
+É muito sensível, não suporta ser criticado e por isso tende a apoiar os outros a ponto de negar a si mesmo!</h3>
 
     <p>O dia 15 traz para <strong>você</strong> um magnetismo pessoal fortíssimo, aliado a um talento nato para o ensino e para o auxílio ao próximo através da generosidade. <strong>você</strong> possui uma natureza acolhedora e se sente em plenitude quando pode prover bem-estar para a família ou para a comunidade, agindo como uma figura central de apoio e equilíbrio.</p>
     <p>Sua sensibilidade artística e estética é muito aguçada, e <strong>você</strong> possui o dom de atrair os recursos materiais necessários para viver com conforto, beleza e harmonia. <strong>você</strong> é uma presença carismática e as pessoas buscam sua companhia por se sentirem seguras, valorizadas e ouvidas ao seu lado, o que reforça sua liderança natural.</p>
     <p>Existe em <strong>você</strong> uma forte ligação com as tradições e com o cuidado com o lar, mas sua mente é aberta o suficiente para entender as necessidades de mudança. Sua força vem do amor e da responsabilidade, e <strong>você</strong> tem a capacidade de curar ambientes tensos apenas com sua presença tranquila e suas palavras de sabedoria emocional.</p>
     <p>O desafio para <strong>você</strong> é não se deixar levar por tentativas de manipulação externa ou pelo desejo de controlar excessivamente a vida alheia. Ao usar seu magnetismo para elevar as pessoas e criar união, <strong>você</strong> atinge um nível de prosperidade e satisfação pessoal que é fruto direto da nobreza que habita seu coração.</p>`,
 
-    16: ` <h4>Extremista - Dia 16
+    16: ` <h3>Extremista - Dia 16
     
-Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para terminar o que começou!</h4>
+Pode perder facilmente o interesse em seus projetos e deve trabalhar muito para terminar o que começou!</h3>
     <p>O dia 16 indica que <strong>você</strong> possui uma mente analítica e uma intuição profunda, voltada para a descoberta da verdade e da essência real das coisas. Sua vida é pontuada por experiências que levam a questionar valores meramente materiais, desenvolvendo em <strong>você</strong> uma sabedoria espiritual e intelectual que poucos conseguem alcançar.</p>
     <p><strong>você</strong> tem o talento de enxergar através das máscaras sociais e possui um discernimento infalível para detectar a falsidade ou a superficialidade. Embora possa parecer uma pessoa reservada ou até misteriosa, sua profundidade de pensamento é o que a torna profissional de excelência em estratégia, pesquisa ou orientação em temas complexos.</p>
     <p>Sua jornada é de constante aperfeiçoamento da alma. <strong>você</strong> busca respostas para os grandes mistérios e não descansa enquanto não encontra a lógica por trás dos fatos. Essa busca pela perfeição faz com que <strong>você</strong> desenvolva uma resiliência única, sendo capaz de se reconstruir após qualquer desafio com ainda mais força e clareza mental.</p>
     <p>O desafio para <strong>você</strong> é aprender a lidar com as mudanças bruscas como oportunidades de evolução, sem se fechar em um isolamento defensivo. Quando <strong>você</strong> entende que o desapego é o caminho para o verdadeiro poder, <strong>você</strong> se torna alguém inabalável e detentor de um conhecimento que ilumina o caminho de todos ao redor.</p>`,
 
-    17: ` <h4>Orgulhoso - Dia 17
+    17: ` <h3>Orgulhoso - Dia 17
     
-É muito ambicioso e independente. Seu desafio é evitar ficar obcecado com seu próprio julgamento e se tornar um ditador!</h4>
+É muito ambicioso e independente. Seu desafio é evitar ficar obcecado com seu próprio julgamento e se tornar um ditador!</h3>
     <p>O dia 17 confere a <strong>você</strong> uma vibração de sucesso, reconhecimento e brilho pessoal. <strong>você</strong> possui o talento raro de unir a espiritualidade e a intuição com a capacidade executiva de alto nível, o que permite alcançar posições de grande destaque e prosperidade mantendo a integridade e os valores éticos elevados.</p>
     <p>Sua mente é organizada, lógica e <strong>você</strong> possui uma visão de longo alcance para os negócios e para a estruturação da vida profissional. <strong>você</strong> impõe respeito pela competência e pela forma justa como conduz projetos, agindo sempre com uma autoridade natural que dispensa a força, baseando-se no conhecimento e na eficiência técnica.</p>
     <p>Existe um magnetismo de "estrela" em <strong>você</strong>, atraindo oportunidades de crescimento material que parecem surgir no momento exato. <strong>você</strong> sabe planejar e executar com precisão, e sua ambição é temperada por um senso de responsabilidade que garante que suas conquistas sejam sólidas e respeitadas por toda a sociedade.</p>
     <p>O aprendizado para <strong>você</strong> é manter a conexão com o propósito interior enquanto sobe os degraus da realização material, evitando o excesso de frieza. Quando <strong>você</strong> usa sua influência e abundância para o bem comum, <strong>você</strong> brilha como uma das vibrações mais vitoriosas e afortunadas de toda a numerologia.</p>`,
 
-    18: ` <h4>Contestador - Dia 18
+    18: ` <h3>Contestador - Dia 18
     
-É capaz de organizar e inspirar outras pessoas, sua satisfação mais profunda é realizar algo que beneficie outras pessoas!</h4>
+É capaz de organizar e inspirar outras pessoas, sua satisfação mais profunda é realizar algo que beneficie outras pessoas!</h3>
     <p>O dia 18 traz para <strong>você</strong> uma natureza humanitária, combativa e dotada de uma grande força emocional e resiliência. <strong>você</strong> é alguém que se sente em movimento quando pode lutar por justiça ou ajudar quem precisa de proteção, possuindo um talento natural para liderar grandes causas sociais ou movimentos de transformação coletiva.</p>
     <p>Sua intuição é muito forte e <strong>você</strong> possui uma capacidade de superação impressionante, conseguindo transformar crises profundas em vitórias pessoais e aprendizados valiosos. <strong>você</strong> entende os processos de encerramento e transição, o que permite finalizar ciclos com dignidade e iniciar novas etapas com coragem e sabedoria renovadas.</p>
     <p><strong>você</strong> tem uma mente aberta para o mundo e para diferentes culturas, buscando sempre a expansão de horizontes. Sua energia é intensa e sua presença exige respeito, pois <strong>você</strong> não tolera a injustiça. Existe em <strong>você</strong> um magnetismo que atrai pessoas que buscam força e direção em momentos de caos ou mudança social.</p>
     <p>O desafio para <strong>você</strong> é controlar as oscilações emocionais e evitar o acúmulo de mágoas do passado. Ao focar toda essa energia no serviço desinteressado e na cura do ambiente ao seu redor, <strong>você</strong> encontra uma paz profunda e um reconhecimento que vem do impacto positivo e real que gera na vida das pessoas.</p>`,
 
-    19: ` <h4>Individualista - Dia 19
+    19: ` <h3>Individualista - Dia 19
     
-É muito determinado e independente é altamente idealista, mas se seus ideais falharem, pode se tornar amargo e negativo!</h4>
+É muito determinado e independente é altamente idealista, mas se seus ideais falharem, pode se tornar amargo e negativo!</h3>
     <p>O dia 19 confere a <strong>você</strong> uma energia de independência total, criatividade exuberante e brilho pessoal intenso. <strong>você</strong> é uma liderança nata que possui a capacidade de realizar desejos através da pura força de vontade, mas a vida sempre apresentará situações para que <strong>você</strong> aprenda a considerar a importância do coletivo.</p>
     <p>Sua personalidade é vibrante e <strong>você</strong> tem o talento de iniciar novos empreendimentos com muito entusiasmo e originalidade. <strong>você</strong> nasceu para ser protagonista da própria história e possui todas as ferramentas mentais para alcançar o topo, desde que desenvolva a habilidade de ouvir e colaborar com as outras pessoas.</p>
     <p>Existe em <strong>você</strong> uma luz solar que atrai atenção e seguidores. Sua capacidade de resistência é enorme e <strong>você</strong> possui a coragem de ser quem realmente é, sem se importar com julgamentos superficiais. Quando decide focar em uma meta, <strong>você</strong> move montanhas para chegar lá, demonstrando uma autossuficiência que serve de inspiração.</p>
     <p>O aprendizado central de <strong>você</strong> é superar o egoísmo e entender que o verdadeiro poder vem da união de forças. Quando <strong>você</strong> brilha sem apagar a luz alheia e compartilha suas vitórias, <strong>você</strong> atinge uma realização plena e se torna fonte inesgotável de calor e direção para todos que cruzam seu caminho.</p>`,
 
-    20: ` <h4>Consciente - Dia 20
+    20: ` <h3>Consciente - Dia 20
     
 Tem a capacidade de persuadir os outros sob o seu ponto de vista usando meios gentis. 
-É brilhante em fazer os outros pensarem que são brilhantes!</h4>
+É brilhante em fazer os outros pensarem que são brilhantes!</h3>
     <p>O dia 20 traz para <strong>você</strong> a vibração da cooperação, da sensibilidade extrema e da diplomacia em sua forma mais refinada. <strong>você</strong> possui o dom da escuta e da empatia profunda, sendo aquela pessoa que consegue pacificar conflitos e criar pontes de entendimento sólido entre os lados mais opostos de uma questão.</p>
     <p>Sua força reside na suavidade, na paciência e na capacidade de aguardar o momento certo para agir. <strong>você</strong> produz resultados excepcionais quando trabalha em grupo e se revela uma parceria leal e confiável, valorizando a harmonia familiar e social acima de qualquer disputa por ego ou desejo de comando solitário.</p>
     <p>Sua intuição é um guia constante que ajuda a tomar decisões equilibradas e justas para todos os envolvidos. <strong>você</strong> tem um senso rítmico e artístico apurado, apreciando a beleza e a música como formas de manter sua paz interior. As pessoas buscam sua companhia para encontrar conforto e uma visão mais mansa da realidade.</p>
     <p>O desafio para <strong>você</strong> é não se deixar levar pela insegurança ou pela passividade excessiva diante de personalidades mais agressivas. Ao confiar no seu valor imenso como mediadora e fortalecer a própria voz, <strong>você</strong> se torna a peça essencial que mantém qualquer estrutura unida e funcionando em perfeita paz.</p>`,
 
-21: ` <h4>Disperso - Dia 21
+21: ` <h3>Disperso - Dia 21
 
-Apesar de ser idealista e liberal, necessita da companhia de outras pessoas, pois disso depende o seu sucesso e bem estar!</h4>
+Apesar de ser idealista e liberal, necessita da companhia de outras pessoas, pois disso depende o seu sucesso e bem estar!</h3>
 <p>O dia 21 traz para <strong>você</strong> uma vibração de expansão, sorte e grande capacidade de comunicação social. <strong>você</strong> possui um magnetismo natural que atrai oportunidades e figuras influentes, agindo com uma alegria de viver que se torna contagiante para todos ao redor, criando um ambiente de leveza e descontração.</p>
     <p>Sua mente é criativa e versátil, permitindo que <strong>você</strong> se destaque em atividades que envolvam o público, as artes ou a escrita. <strong>você</strong> tem o dom de transformar palavras em pontes para o sucesso, possuindo uma habilidade única de expressar desejos de forma clara, encantadora e extremamente convincente em qualquer círculo social.</p>
     <p><strong>você</strong> é alguém que busca o sucesso e a realização pessoal, mas sabe que a vida deve ser desfrutada no processo. Existe um equilíbrio entre a ambição e o prazer de viver, o que faz com que <strong>você</strong> seja uma companhia muito querida. Sua presença é sinônimo de boas notícias e de uma visão otimista que abre portas e facilita parcerias valiosas.</p>
     <p>O desafio para <strong>você</strong> é evitar a dispersão de talentos e a ansiedade por resultados imediatos. Quando <strong>você</strong> foca a energia em um objetivo central e mantém a persistência, <strong>você</strong> atinge uma colheita de reconhecimento e prosperidade que flui de forma natural e constante para a sua vida.</p>`,
 
-    22: ` <h4>Sonhador - Dia 22
+    22: ` <h3>Sonhador - Dia 22
     
 Tem o dom de ver os detalhes de e como tudo deve se desenvolver. 
-Ordeiro e paciente, pode abordar tudo de maneira metódica e sistemática!</h4>
+Ordeiro e paciente, pode abordar tudo de maneira metódica e sistemática!</h3>
     <p>O dia 22 é a vibração do "Mestre Construtor", o que confere a <strong>você</strong> o potencial de realizar projetos de escala monumental e impacto coletivo. <strong>você</strong> possui a intuição elevada do número 11 combinada com a capacidade prática e realizadora do número 4, permitindo que <strong>você</strong> transforme sonhos abstratos em realidades concretas.</p>
     <p>Sua visão de mundo é ampla e existe a sensação de que <strong>você</strong> nasceu para deixar um legado duradouro e benéfico para a humanidade. <strong>você</strong> tem um talento natural para a organização de grandes sistemas, empresas ou movimentos, agindo com uma responsabilidade e uma ética que inspiram confiança absoluta em parceiros e colaboradores.</p>
     <p><strong>você</strong> possui uma força de trabalho inesgotável e uma mente capaz de coordenar detalhes complexos sem perder de vista o objetivo final. Para <strong>você</strong>, a realização material é um meio de servir ao bem comum e de estruturar um futuro mais seguro para as próximas gerações, o que confere um respeito imenso à sua trajetória profissional.</p>
     <p>O aprendizado para <strong>você</strong> é lidar com a imensa pressão que essa capacidade gera na vida pessoal. Ao manter o equilíbrio emocional e a humildade diante das grandes conquistas, <strong>você</strong> se torna uma força realizadora inigualável, capaz de mudar a estrutura do mundo ao seu redor para muito melhor.</p>`,
 
-    23: ` <h4>Versatil - Dia 23
+    23: ` <h3>Versatil - Dia 23
     
-A vida é uma aventura, a ser vivida ao máximo, adora mudança e emoção e precisa dos dois para se sentir verdadeiramente vivo!</h4>
+A vida é uma aventura, a ser vivida ao máximo, adora mudança e emoção e precisa dos dois para se sentir verdadeiramente vivo!</h3>
     <p>O dia 23 confere a <strong>você</strong> uma inteligência brilhante, versatilidade e uma facilidade incrível para aprender qualquer assunto com profundidade. <strong>você</strong> possui um talento especial para a comunicação e para a persuasão, conseguindo convencer as pessoas através de uma lógica rápida, um charme pessoal único e muita agilidade mental.</p>
     <p>Sua natureza é curiosa e amante da liberdade, e <strong>você</strong> se adapta a mudanças com uma rapidez que impressiona a todos. <strong>você</strong> brilha em ambientes dinâmicos onde pode usar a criatividade para resolver problemas complexos de forma inovadora e eficiente, buscando sempre expandir horizontes e descobrir novas formas de atuação.</p>
     <p>Existe em <strong>você</strong> um magnetismo que atrai viagens, novas amizades e experiências diversificadas. <strong>você</strong> detesta a estagnação e sua mente está sempre um passo à frente, antecipando tendências e encontrando saídas inteligentes onde outros veem obstáculos. Sua versatilidade é a sua maior aliada para o sucesso em múltiplas áreas.</p>
     <p>O cuidado que <strong>você</strong> deve ter é para não se tornar alguém de impaciência excessiva com quem possui um ritmo mais lento. Ao cultivar a persistência nos projetos de longo prazo, <strong>você</strong> transforma sua agilidade mental em uma carreira de sucesso sólido e uma vida repleta de conquistas memoráveis.</p>`,
 
-    24: ` <h4>Prestativo - Dia 24
+    24: ` <h3>Prestativo - Dia 24
     
-É enérgico, responsável e prestativo, mas sua natureza solidária pode fazer com que enfrente muitas dificuldades!</h4>
+É enérgico, responsável e prestativo, mas sua natureza solidária pode fazer com que enfrente muitas dificuldades!</h3>
     <p>O dia 24 indica que <strong>você</strong> possui um talento nato para a diplomacia, para o cuidado com as relações e para a promoção da harmonia através da presença. <strong>você</strong> é a "âncora" emocional de seu círculo social e familiar, possuindo um senso de dever e de justiça que faz de <strong>você</strong> uma figura de conselho e apoio muito procurada.</p>
     <p>Sua energia é voltada para a criação de equilíbrio e beleza nos ambientes. <strong>você</strong> se sente em plenitude quando pode servir ao próximo ou zelar pelo bem-estar de quem ama, agindo sempre com uma doçura que protege uma grande força interior e uma determinação inabalável para manter a paz e a segurança de todos.</p>
     <p><strong>você</strong> valoriza a estabilidade e a integridade acima de tudo. Existe um compromisso profundo com a verdade e com as responsabilidades assumidas, o que torna <strong>você</strong> a pessoa ideal para gerir projetos que exijam confiança mútua. Sua vida é pautada pelo afeto e pela construção de relacionamentos duradouros e profundos.</p>
     <p>O desafio para <strong>você</strong> é não se anular ou se sobrecarregar em favor dos desejos alheios. Ao aprender a cuidar de si com a mesma dedicação que oferece aos outros, <strong>você</strong> alcança uma estabilidade emocional e uma satisfação pessoal que se tornam o alicerce inabalável de sua jornada.</p>`,
 
-    25: ` <h4>Inconformado - Dia 25
-O sucesso é indispensável para sua autoestima. Estabelece para si, padrões de perfeição, ficando deprimido se não consegue alcançá-los!</h4>
+    25: ` <h3>Inconformado - Dia 25
+O sucesso é indispensável para sua autoestima. Estabelece para si, padrões de perfeição, ficando deprimido se não consegue alcançá-los!</h3>
     <p>O dia 25 traz para <strong>você</strong> uma mente investigativa, perfeccionista e dotada de uma intuição técnica muito aguçada. <strong>você</strong> possui o talento de analisar dados, comportamentos ou mistérios com uma profundidade que poucas pessoas conseguem atingir, buscando sempre a excelência e a compreensão real de cada situação.</p>
     <p>Sua natureza é mais reservada e <strong>você</strong> valoriza o conhecimento acadêmico, técnico ou espiritual como a base para cada decisão tomada. <strong>você</strong> tem o dom da observação e raramente se engana sobre o caráter das pessoas, agindo com uma cautela que protege <strong>você</strong> de erros impulsivos e de superficialidades do cotidiano.</p>
     <p>Existe em seu interior um desejo de perfeição que a leva a ser especialista em sua área de atuação. <strong>você</strong> prefere a qualidade à quantidade e busca o silêncio para processar pensamentos e recarregar as energias. Sua sabedoria é construída através da experiência e da reflexão profunda, tornando sua opinião muito respeitada.</p>
     <p>O aprendizado para <strong>você</strong> é confiar mais na própria intuição do que apenas na lógica racional. Quando <strong>você</strong> une sua capacidade analítica com a sabedoria do coração, <strong>você</strong> se torna profissional de destaque, referência em seu campo e alguém dotado de uma profunda paz interior.</p>`,
 
-    26: ` <h4>Controlador - Dia 26
+    26: ` <h3>Controlador - Dia 26
     
 Pode ser muito diplomático e convincente. 
-Prefere persuasivo, em vez da impositivo!</h4>
+Prefere persuasivo, em vez da impositivo!</h3>
     <p>O dia 26 confere a <strong>você</strong> um talento excepcional para os negócios, para a gestão financeira e para uma liderança executiva pautada pelo equilíbrio. <strong>você</strong> possui uma visão prática e ambiciosa da vida, mas não abre mão da diplomacia e da consideração pelo bem-estar das pessoas envolvidas em seus projetos e metas.</p>
     <p>Sua capacidade de organização é aliada a um forte senso de justiça social e familiar. <strong>você</strong> sabe como atrair a prosperidade e como gerir recursos com extrema eficiência, sendo frequentemente o pilar de sustentação para quem está ao redor, agindo com uma autoridade que é respeitada por sua generosidade e competência.</p>
     <p><strong>você</strong> entende as leis do mundo material e sabe que o sucesso duradouro exige cooperação. Sua liderança é firme, porém justa, buscando sempre o crescimento mútuo. Existe em <strong>você</strong> um talento para transformar crises financeiras ou estruturais em oportunidades de lucro e estabilidade para todos os envolvidos.</p>
     <p>O desafio para <strong>você</strong> é equilibrar a busca pelo sucesso material com as necessidades da vida emocional e afetiva. Ao manter o foco no propósito maior e não apenas nos números, <strong>você</strong> constrói uma trajetória de prestígio sólido e um legado de abundância que atravessa o tempo.</p>`,
 
-    27: ` <h4>Político - Dia 27
+    27: ` <h3>Político - Dia 27
     
-É idealista, sensível e analítico. Sua mente fértil e criativa, impressiona facilmente as pessoas através de suas ideias inusitadas!</h4>
+É idealista, sensível e analítico. Sua mente fértil e criativa, impressiona facilmente as pessoas através de suas ideias inusitadas!</h3>
     <p>O dia 27 traz para <strong>você</strong> uma vibração humanitária elevada, aliada a uma mente intelectualmente poderosa e independente. <strong>você</strong> possui o talento de compreender conceitos complexos e de aplicá-los para o benefício do coletivo, agindo como uma figura de orientação, educação ou guia para muitas pessoas.</p>
     <p>Sua visão de mundo é espiritualizada e <strong>você</strong> sente uma forte necessidade de se envolver em causas que tragam progresso e cura para a humanidade. <strong>você</strong> é alguém de carisma e inspiração, cuja integridade e sabedoria atraem a admiração de pessoas de todas as classes sociais, culturas e níveis de conhecimento.</p>
     <p>Existe em <strong>você</strong> uma conexão profunda com o conhecimento universal. <strong>você</strong> é capaz de grandes atos de desapego em nome de um ideal, possuindo uma intuição que ajuda a enxergar soluções onde outros veem apenas sofrimento. Sua jornada é marcada pelo serviço e pela busca constante por uma consciência mais elevada e fraterna.</p>
     <p>O aprendizado para <strong>você</strong> é lidar com a sensibilidade aos problemas do mundo sem se deixar abater por eles. Ao focar na sua imensa capacidade de ensino e auxílio, <strong>você</strong> encontra a realização plena e deixa um rastro de luz, transformação e esperança por onde decide passar.</p>`,
 
-    28: ` <h4>Obstinado - Dia 28
+    28: ` <h3>Obstinado - Dia 28
     
 É genioso, controverso e aberto a novas ideias dentro dos limites do convencional. 
-Nasceu com o dom do querer, e vive se queixando de tudo!</h4>
+Nasceu com o dom do querer, e vive se queixando de tudo!</h3>
     <p>O dia 28 indica que <strong>você</strong> possui uma liderança forte, mas que se manifesta de forma estratégica, cooperativa e diplomática. <strong>você</strong> tem o talento de iniciar grandes projetos contando com o apoio de parceiros que confiam em sua visão e em sua garra inesgotável para vencer desafios e obstáculos.</p>
     <p>Sua determinação é mesclada com uma intuição aguçada sobre as necessidades e potenciais alheios. <strong>você</strong> é alguém de realização que busca o topo, mas que entende perfeitamente que a união de forças é o caminho mais curto e seguro para o sucesso sustentável, agindo com uma coragem que é sempre inteligente e bem planejada.</p>
     <p><strong>você</strong> possui a força do pioneirismo temperada pela experiência de saber lidar com o outro. Existe um magnetismo de sucesso em sua trajetória, pois <strong>você</strong> sabe como delegar e como motivar as pessoas a darem o melhor de si em prol de um objetivo comum, mantendo sempre o comando com muita elegância e tato social.</p>
     <p>O desafio para <strong>você</strong> é não cair na teimosia ou no desejo de dominar as situações de forma unilateral. Ao usar seu poder para empoderar sua equipe, família ou parceiros, <strong>você</strong> se torna uma liderança inesquecível e alcança uma prosperidade invejável, sólida e merecida.</p>`,
 
-    29: ` <h4>Instintivo - Dia 29
+    29: ` <h3>Instintivo - Dia 29
     
-Vivenciam muitas oscilações emocionais. Por sua tendência melancolia e vulnerabilidade, tende a ver tudo de forma exagerada!</h4>
+Vivenciam muitas oscilações emocionais. Por sua tendência melancolia e vulnerabilidade, tende a ver tudo de forma exagerada!</h3>
     <p>O dia 29 confere a <strong>você</strong> uma sensibilidade espiritual e intuitiva altíssima, sendo uma vibração que carrega o potencial do Número Mestre 11. <strong>você</strong> possui uma mente visionária e uma capacidade de percepção que ultrapassa em muito os limites do óbvio, agindo como um verdadeiro farol de consciência para os outros.</p>
     <p>Sua vida é marcada por uma intensidade emocional profunda e <strong>você</strong> tem o dom de inspirar multidões através de sua fé, de seus ideais ou de suas ideias inovadoras. <strong>você</strong> atrai os extremos e deve aprender a navegar entre a rica vida interior e as exigências do mundo material com equilíbrio e muita sabedoria prática.</p>
     <p>Existe em <strong>você</strong> uma força de cura e de transformação que muitas vezes <strong>você</strong> mesma desconhece. Sua presença é capaz de alterar a vibração de um ambiente e sua palavra tem o poder de despertar potencias adormecidos em quem a escuta. Sua jornada exige o equilíbrio entre o céu e a terra de forma constante.</p>
     <p>O aprendizado para <strong>você</strong> é a busca pela estabilidade emocional. Ao ancorar sua intuição em ações concretas e manter a confiança na própria força, <strong>você</strong> se torna uma figura de guia espiritual ou intelectual poderosa, capaz de realizar mudanças profundas e positivas na sociedade.</p>`,
 
-    30: ` <h4>Teimoso - Dia 30 É teimoso! 
+    30: ` <h3>Teimoso - Dia 30 É teimoso! 
     
-    Tem sua própria opinião e estará sempre convencido de que seu modo de fazer as coisas é o único certo!</h4>
+    Tem sua própria opinião e estará sempre convencido de que seu modo de fazer as coisas é o único certo!</h3>
     <p>O dia 30 traz para <strong>você</strong> o poder da autoexpressão absoluta, do otimismo e da alegria criativa em sua forma mais pura. <strong>você</strong> possui o talento de enxergar o lado bom da vida e de comunicar essa vibração positiva através da fala, da arte, do ensino ou de qualquer forma de interação social produtiva.</p>
     <p>Sua mente é brilhante e <strong>você</strong> possui um magnetismo que faz com que as pessoas queiram estar perto de <strong>você</strong> para absorver sua energia vibrante e renovadora. <strong>você</strong> tem o dom de tornar leves as situações pesadas e de encontrar soluções criativas onde outros veem apenas becos sem saída ou problemas insolúveis.</p>
     <p><strong>você</strong> é uma figura social por excelência, que entende que a felicidade é um ingrediente essencial para o sucesso em qualquer área. Sua comunicação é sua maior ferramenta de trabalho e de realização pessoal, permitindo que <strong>você</strong> abra caminhos e conquiste aliados através do carisma e da inteligência social apurada.</p>
     <p>O desafio para <strong>você</strong> é evitar a dispersão e a tendência a críticas superficiais. Ao usar sua comunicação para elevar, educar e motivar o próximo, <strong>você</strong> atinge uma realização imensa e se torna uma figura querida, respeitada e central em qualquer grupo que integre.</p>`,
 
-    31: ` <h4>Tradicionalista - Dia 31
+    31: ` <h3>Tradicionalista - Dia 31
     
-Pode ser teimoso e rígido, se recusando a permitir que ideias novas e criativas tenham lugar em seu apego rígido aos padrões pré-estabelecidos!</h4>
+Pode ser teimoso e rígido, se recusando a permitir que ideias novas e criativas tenham lugar em seu apego rígido aos padrões pré-estabelecidos!</h3>
     <p>O dia 31 indica que <strong>você</strong> possui uma mente prática, organizada e disciplinada, mas com uma pitada de criatividade e originalidade que a diferencia da maioria. <strong>você</strong> é uma figura de construção que não tem medo de inovar, agindo com uma responsabilidade que garante a segurança e a prosperidade do futuro.</p>
     <p>Sua natureza é persistente e <strong>você</strong> valoriza a honestidade e os valores tradicionais, mas está sempre com a mente aberta para novas ideias que possam melhorar sua eficiência e seus resultados. <strong>você</strong> possui um talento natural para a estruturação de bases familiares e profissionais sólidas, prósperas e muito respeitadas.</p>
     <p><strong>você</strong> sabe que nada cai do céu e valoriza cada conquista obtida através do mérito. Existe em <strong>você</strong> uma força silenciosa que transmite segurança a todos ao redor. Sua capacidade de planejar e executar é admirável, tornando <strong>você</strong> a pessoa ideal para liderar projetos que exijam tanto visão quanto pés no chão.</p>
@@ -768,73 +768,73 @@ Pode ser teimoso e rígido, se recusando a permitir que ideias novas e criativas
    
 // --- COMPORTAMENTO (NÚMERO PSÍQUICO) ---
 comportamento: {
-    1: ` <h4>Determinado e convicto Comportamento 1
+    1: ` <h3>Determinado e convicto Comportamento 1
     
-O 1 é o Número do Comportamento das pessoas nascidas nos dias 01, 10, 19 e 28 de cada mês.</h4>
+O 1 é o Número do Comportamento das pessoas nascidas nos dias 01, 10, 19 e 28 de cada mês.</h3>
 
     <p>O comportamento psíquico de <strong>você</strong> é marcado por uma autoconfiança inabalável e uma postura extremamente decidida diante de qualquer desafio que a vida apresente. Existe em seu íntimo uma preferência clara por agir através da própria iniciativa em vez de aguardar por decisões alheias, demonstrando uma independência mental que impressiona a todos ao redor pela firmeza e clareza de propósitos.</p>
     <p>A forma de <strong>você</strong> processar o mundo é direta e objetiva: ocorre uma análise rápida dos fatos, seguida de uma tomada de decisão segura que não permite espaço para dúvidas paralisantes ou hesitações. Essa determinação natural faz com que <strong>você</strong> projete a imagem de uma figura forte, resolutiva e plenamente capaz de liderar em situações de crise ou incerteza absoluta, onde outros costumam vacilar.</p>
     <p>No entanto, internamente, existe a percepção de que carregar essa postura de comando exige um alto investimento de energia, pois <strong>você</strong> raramente se permite demonstrar vulnerabilidade ou solicitar auxílio externo. O comportamento instintivo é o de proteção e direção, agindo como um pilar de sustentação para os próprios ideais e para as pessoas que estão sob sua responsabilidade direta ou afeto.</p>
     <p>O grande talento de <strong>você</strong> reside na originalidade do pensamento e na coragem de ser quem realmente é. Ao longo da vida, esse comportamento atrai o respeito de figuras influentes e abre portas para cargos de comando, consolidando <strong>você</strong> como uma referência de autonomia e sucesso que inspira todos a buscarem sua própria força interior.</p>`,
 
-    2: ` <h4>Romantico e emotivo Comportamento 2
+    2: ` <h3>Romantico e emotivo Comportamento 2
     
-O 2 é o Número do Comportamento das pessoas nascidas nos dias 02, 11, 20 e 29 do mês.</h4>
+O 2 é o Número do Comportamento das pessoas nascidas nos dias 02, 11, 20 e 29 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> revela uma alma diplomática, gentil e profundamente voltada para a promoção da harmonia e da cooperação mútua. <strong>você</strong> possui uma sensibilidade aguçada que permite captar nuances emocionais e intenções alheias muito antes que qualquer palavra seja proferida, agindo sempre com uma cautela respeitosa e muito tato social.</p>
     <p><strong>você</strong> tende a evitar conflitos diretos, preferindo resolver impasses através da persuasão suave, da escuta ativa e do equilíbrio entre as partes envolvidas. Sua mente busca incessantemente o ponto de união, tornando <strong>você</strong> uma figura de mediação excelente. O comportamento de <strong>você</strong> é pautado pela convicção de que a verdadeira força reside na união de esforços e na gentileza, não na imposição de vontades.</p>
     <p>As pessoas sentem uma confiança natural em <strong>você</strong>, pois sua presença transmite calma e acolhimento. Existe uma preocupação real com o bem-estar coletivo, o que faz de <strong>você</strong> a parceria ideal para projetos que exijam paciência e atenção aos detalhes. Sua intuição funciona como uma bússola infalível, guiando cada passo de <strong>você</strong> em direção a relações sólidas e duradouras.</p>
     <p>O desafio desse comportamento é não absorver as tensões externas ou se anular em favor da vontade alheia. Quando <strong>você</strong> aprende a confiar no próprio valor e a expressar suas necessidades com clareza, seu comportamento se transforma em uma fonte inesgotável de paz e estabilidade emocional para todo o círculo social e familiar.</p>`,
 
-    3: ` <h4>Otimista e despreocupado Comportamento 3
+    3: ` <h3>Otimista e despreocupado Comportamento 3
     
-O 3 é o Número do Comportamento das pessoas nascidas nos dias 3, 12, 21 ou 30 do mês.</h4>
+O 3 é o Número do Comportamento das pessoas nascidas nos dias 3, 12, 21 ou 30 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> é vibrante, criativo e movido por uma necessidade intrínseca de interação e expressão pessoal. Existe um otimismo natural na personalidade de <strong>você</strong> que contagia qualquer ambiente, agindo sempre com uma vivacidade que atrai as pessoas para perto dessa energia luminosa, comunicativa e repleta de carisma.</p>
     <p>Para <strong>você</strong>, a vida é observada como uma oportunidade constante de criar, aprender e compartilhar ideias inovadoras. O comportamento é o de uma pessoa curiosa, que gosta de se manter informada e de participar ativamente da vida social. <strong>você</strong> possui o dom da palavra e sabe como usar o magnetismo pessoal para motivar os outros de forma leve, transformando problemas pesados em soluções criativas.</p>
     <p>Sua inteligência é rápida e multifacetada, permitindo que <strong>você</strong> transite entre diferentes temas com facilidade. Existe um desejo profundo de ser fonte de alegria e inspiração, e por isso <strong>você</strong> valoriza tanto a liberdade de expressão. Sua presença costuma ser o ponto de equilíbrio que traz entusiasmo para grupos de trabalho ou núcleos familiares em momentos de desânimo.</p>
     <p>O cuidado necessário é com a tendência a dispersar a atenção em muitos interesses simultâneos. Quando <strong>você</strong> consegue focar esse comportamento dinâmico em uma direção específica, sua capacidade de realização se torna brilhante, transformando o potencial criativo em resultados concretos, admirados e amplamente reconhecidos pela sociedade.</p>`,
 
-    4: ` <h4>Teimoso e observador Comportamento 4
+    4: ` <h3>Teimoso e observador Comportamento 4
     
-O 4 é o Número do Comportamento das pessoas nascidas nos dias 4, 13, 22 e 31 do mês.</h4>
+O 4 é o Número do Comportamento das pessoas nascidas nos dias 4, 13, 22 e 31 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> é pautado pela lógica rigorosa, pela autodisciplina e por um senso de responsabilidade extremamente elevado. <strong>você</strong> valoriza a ordem, a pontualidade e a integridade acima de tudo, agindo sempre com uma seriedade profissional que transmite total confiança e segurança absoluta para quem convive ao seu lado.</p>
     <p>Sua mente busca bases sólidas, por isso o comportamento de <strong>você</strong> é o de alguém que planeja cada etapa com cuidado minucioso e prefere caminhos comprovadamente seguros a aventuras incertas. <strong>você</strong> é o alicerce onde as outras pessoas se apoiam, sendo uma figura reconhecida pela imensa capacidade de trabalho e pela lealdade inabalável aos próprios princípios e à família.</p>
     <p>Existe um apreço profundo pela rotina produtiva e pela eficiência. Para <strong>você</strong>, nada supera a satisfação de um dever cumprido com perfeição. Esse comportamento faz com que <strong>você</strong> se destaque em cargos que exigem organização estratégica e gestão de detalhes complexos, onde sua persistência garante que nenhum erro passe despercebido e nenhum prazo seja negligenciado.</p>
     <p>O desafio para <strong>você</strong> é permitir que a flexibilidade e a inovação entrem em sua rotina, evitando a rigidez excessiva. Ao unir a incrível capacidade de construção com uma mente aberta a novas formas de fazer as coisas, <strong>você</strong> se torna uma presença invencível na conquista de metas de longo prazo e na manutenção de um legado estável.</p>`,
 
-    5: ` <h4>Impulsivo e imediatista Comportamento 5
+    5: ` <h3>Impulsivo e imediatista Comportamento 5
     
-O 5 é o Número do Comportamento das pessoas nascidas nos dias 5, 14 e 23 do mês.</h4>
+O 5 é o Número do Comportamento das pessoas nascidas nos dias 5, 14 e 23 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> é marcado pela versatilidade, pela rapidez de raciocínio e por uma busca incessante por autonomia e novas experiências. Existe uma mente inquieta em <strong>você</strong> que se aborrece facilmente com o que é repetitivo, agindo sempre com uma curiosidade que leva a explorar o mundo, as ideias e as pessoas sem qualquer receio.</p>
     <p><strong>você</strong> possui uma facilidade impressionante de adaptação e um magnetismo que atrai mudanças constantes para a trajetória pessoal. O pensamento de <strong>você</strong> é progressista e está sempre à frente do tempo, buscando novas formas de viver, trabalhar e se relacionar. Esse comportamento dinâmico faz com que <strong>você</strong> seja uma figura influente em processos de modernização e quebra de paradigmas.</p>
     <p>A liberdade é o oxigênio de sua alma. <strong>você</strong> valoriza o conhecimento obtido através da experiência direta e da troca com diferentes culturas ou áreas do saber. Seu comportamento social é cativante, pois <strong>você</strong> sempre tem uma história interessante ou uma perspectiva inovadora para compartilhar, tornando sua companhia estimulante para quem busca sair da zona de conforto.</p>
     <p>O aprendizado central para o comportamento de <strong>você</strong> é lidar com a impaciência e a ansiedade por novidades. Quando <strong>você</strong> consegue canalizar essa energia vibrante para um propósito específico e persistente, <strong>você</strong> se torna uma força de transformação poderosa e uma referência de vitalidade e plenitude em qualquer setor da vida.</p>`,
 
-    6: ` <h4>Protecionista e sentimental Comportamento 6
+    6: ` <h3>Protecionista e sentimental Comportamento 6
     
-O 6 é o Número do Comportamento das pessoas nascidas nos dias 6, 15 e 24 do mês.</h4>
+O 6 é o Número do Comportamento das pessoas nascidas nos dias 6, 15 e 24 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> é profundamente voltado para o cuidado, a proteção e o bem-estar dos entes queridos e da comunidade. Existe um senso de dever e de justiça muito forte em sua personalidade, agindo sempre como o coração do grupo social e buscando criar harmonia estética e emocional em cada detalhe do ambiente ao redor.</p>
     <p><strong>você</strong> sente uma necessidade vital de ser útil e de oferecer conselhos sábios a quem atravessa dificuldades. O comportamento é acolhedor e <strong>você</strong> valoriza imensamente a beleza, o conforto do lar e a estabilidade das relações. As pessoas sentem uma atração natural pela energia bondosa de <strong>você</strong>, buscando o apoio e a compreensão que apenas sua presença equilibrada pode oferecer.</p>
     <p>Sua dedicação é exemplar e <strong>você</strong> assume responsabilidades com um prazer genuíno quando sabe que isso trará felicidade aos outros. Existe um talento para o ensino e para a organização de espaços que exalam paz. Para <strong>você</strong>, o sucesso não é uma conquista solitária, mas sim o resultado de ver todos ao redor em segurança e harmonia plena.</p>
     <p>O desafio para <strong>você</strong> é não se tornar uma presença excessivamente controladora ou perfeccionista com o ritmo alheio. Ao entender que cada um tem sua própria jornada, <strong>você</strong> transforma seu comportamento em um exemplo vivo de amor e sabedoria, consolidando-se como uma figura central, amada e respeitada por todos.</p>`,
 
-    7: ` <h4>Temperamental e questionador Comportamento 7
-O 7 é o Número do Comportamento das pessoas nascidas nos dias 7, 16 e 25 do mês.</h4>
+    7: ` <h3>Temperamental e questionador Comportamento 7
+O 7 é o Número do Comportamento das pessoas nascidas nos dias 7, 16 e 25 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> é introspectivo, analítico e totalmente voltado para a compreensão profunda dos mistérios da vida, da ciência e da alma. Existe em <strong>você</strong> uma mente que não se contenta com respostas superficiais ou explicações simplistas, agindo sempre com uma cautela observadora que valoriza o silêncio e a reflexão.</p>
     <p>Para <strong>você</strong>, o conhecimento e a busca pela verdade são os pilares da existência. O comportamento revela alguém que aprecia a solidão como um espaço sagrado de crescimento intelectual e espiritual. <strong>você</strong> possui uma intuição refinada e um radar natural para detectar incoerências ou segundas intenções, o que torna muito difícil qualquer tentativa de enganar sua percepção aguçada.</p>
     <p>A profundidade de pensamento de <strong>você</strong> atrai o respeito de quem busca sabedoria técnica ou filosófica. <strong>você</strong> prefere a qualidade de poucas e boas relações à superficialidade de grandes eventos sociais. Esse comportamento mais reservado esconde um universo interno riquíssimo, repleto de descobertas que <strong>você</strong> só compartilha com quem demonstra real interesse e profundidade.</p>
     <p>O cuidado necessário é para não se isolar em demasia ou se tornar uma figura excessivamente crítica com as falhas humanas. Ao compartilhar sua sabedoria com o mundo de forma generosa, seu comportamento se transforma em um guia luminoso para todos os que buscam o autoconhecimento e o entendimento real da vida.</p>`,
 
-    8: ` <h4>Determinado e competitivo Comportamento 8
+    8: ` <h3>Determinado e competitivo Comportamento 8
     
-O 8 é o Número do Comportamento das pessoas nascidas nos dias 8, 17 e 26 do mês.</h4>
+O 8 é o Número do Comportamento das pessoas nascidas nos dias 8, 17 e 26 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> é marcado pela ambição elevada, pelo pragmatismo e por uma visão executiva invejável da realidade. <strong>você</strong> compreende perfeitamente as leis da causa e efeito no mundo material, agindo sempre com uma determinação focada na conquista de autoridade, prestígio e prosperidade sólida para si e para os seus.</p>
     <p><strong>você</strong> não recua diante de desafios grandiosos e possui um comportamento que impõe respeito de forma natural, sem necessidade de artifícios. Sua mente é voltada para a gestão eficiente de recursos, tempo e pessoas, buscando sempre o resultado concreto e a excelência. Para <strong>você</strong>, a vida é uma jornada de mérito, onde o esforço disciplinado deve ser recompensado com o sucesso.</p>
     <p>Sua liderança é percebida pela competência técnica e pela firmeza nas decisões. Existe um desejo de construir um legado que perdure, e por isso <strong>você</strong> investe tanta energia em projetos de longo alcance. Esse comportamento focado na eficiência faz de <strong>você</strong> a pessoa ideal para comandar grandes estruturas ou administrar situações financeiras complexas com maestria.</p>
     <p>O aprendizado para <strong>você</strong> é equilibrar o exercício do poder com a compaixão e o afeto. Quando <strong>você</strong> usa sua força para construir algo que beneficia o coletivo e não apenas o benefício próprio, seu comportamento atrai uma abundância inesgotável e <strong>você</strong> se torna uma liderança admirada, vitoriosa e influente.</p>`,
 
-    9: ` <h4>Inquieto e inconformado Comportamento 9
+    9: ` <h3>Inquieto e inconformado Comportamento 9
     
-O 9 é o Número do Comportamento das pessoas nascidas nos dias 9, 18 e 27 do mês.</h4>
+O 9 é o Número do Comportamento das pessoas nascidas nos dias 9, 18 e 27 do mês.</h3>
     <p>O comportamento psíquico de <strong>você</strong> é humanitário, altruísta e dotado de uma sensibilidade que abrange as necessidades do mundo inteiro. <strong>você</strong> possui uma sabedoria que parece vir de outras épocas, agindo sempre com uma generosidade que não espera recompensa e uma compreensão profunda das fragilidades e dores humanas.</p>
     <p><strong>você</strong> sente uma ligação intrínseca com causas sociais e com o desenvolvimento espiritual. O comportamento de <strong>você</strong> é o de alguém que está sempre em prontidão para encerrar ciclos, perdoar e buscar a evolução da consciência acima de qualquer ganho material imediato. Existe um carisma universal em <strong>você</strong> que atrai pessoas de todas as origens para perto de sua luz e tolerância.</p>
     <p>Sua mente é ampla e não aceita preconceitos ou limitações de pensamento. <strong>você</strong> atua como uma figura de cura ou de inspiração para quem atravessa momentos de transição. Para <strong>você</strong>, a realização pessoal está conectada ao impacto positivo que <strong>você</strong> gera na vida do próximo, tornando sua jornada uma sucessão de atos de bondade e desprendimento admiráveis.</p>
@@ -844,60 +844,60 @@ O 9 é o Número do Comportamento das pessoas nascidas nos dias 9, 18 e 27 do m�
  
 // --- MOTIVAÇÃO (O DESEJO ÍNTIMO DA ALMA) ---
 motivacao: {
-    1: `<h4>Ter o controle sobre seu destino - Motivação 1</h4>
+    1: `<h3>Ter o controle sobre seu destino - Motivação 1</h3>
     <p>A motivação mais profunda de <strong>você</strong> é a busca incessante pela autonomia total e pelo reconhecimento pleno da individualidade e originalidade. O que realmente faz o coração de <strong>você</strong> vibrar é a sensação de ser mestre do próprio destino, sem amarras, dependências ou submissões a vontades alheias que não condizem com a própria verdade interior.</p>
     <p>Existe uma urgência interna de destaque e liderança, motivada por uma necessidade vital de provar a si que é possível conquistar o topo através do mérito pessoal e da inovação. <strong>você</strong> sente um desconforto profundo diante da mediocridade; qualquer cenário que limite a liberdade de ação ou abafe o brilho pessoal gera uma inquietação que só é aplacada pelo movimento e pela conquista.</p>
     <p>O desejo íntimo é ser a figura pioneira, a referência máxima e o ponto de partida em tudo o que se propõe a realizar. O sucesso, para <strong>você</strong>, só possui um significado real se carregar a própria assinatura e for fruto de uma coragem inabalável de desafiar convenções para abrir novos caminhos.</p>`,
 
-    2: `<h4>Estar em paz e em harmonia - Motivação 2</h4>
+    2: `<h3>Estar em paz e em harmonia - Motivação 2</h3>
     <p>A motivação íntima de <strong>você</strong> é a busca constante pela paz, pela harmonia e pela conexão profunda com as pessoas e com o ambiente ao redor. O que o coração de <strong>você</strong> mais deseja é viver em uma realidade onde o afeto, a gentileza e a compreensão mútua prevaleçam sobre qualquer tipo de disputa de ego ou conflito desnecessário.</p>
     <p><strong>você</strong> sente uma satisfação imensa ao colaborar e ao ser a peça fundamental que une diferentes partes em prol de um objetivo comum. O desejo secreto é de aceitação e valorização pela capacidade de ouvir, apoiar e nutrir relacionamentos. <strong>você</strong> não busca o palco principal por necessidade de destaque, mas sim a segurança de vínculos sólidos e de uma vida emocional equilibrada.</p>
     <p>A realização da alma ocorre quando existe um clima de união e partilha. Ao sentir que as palavras e o jeito cuidadoso de <strong>você</strong> trouxeram conforto a alguém ou resolveram uma tensão, atinge-se uma plenitude interior que justifica todo o esforço, tornando a existência uma busca pelo entendimento entre os seres.</p>`,
 
-    3: `<h4>Se divertir e expressar a criatividade - Motivação 3</h4>
+    3: `<h3>Se divertir e expressar a criatividade - Motivação 3</h3>
     <p>A motivação mais profunda de <strong>você</strong> é a necessidade vital de se expressar, de criar e de brilhar nos círculos sociais através do intelecto e do carisma. O que realmente impulsiona o coração de <strong>você</strong> é a oportunidade de transmitir ideias, sentimentos e uma alegria contagiante para as pessoas, agindo como uma fonte de luz e entusiasmo.</p>
     <p><strong>você</strong> deseja reconhecimento pela inteligência, pelo bom humor e pela capacidade única de tornar a vida mais leve e interessante. A repressão da criatividade sufoca a alma de <strong>você</strong>, que precisa de movimento, de conversas estimulantes e de trocas culturais que valorizem o talento natural para a comunicação e autoexpressão.</p>
     <p>Quando <strong>você</strong> consegue canalizar esse potencial criativo para projetos que trazem felicidade e inspiração ao próximo, a alma atinge o ápice da satisfação. O sucesso de <strong>você</strong> está diretamente ligado à capacidade de transformar o cotidiano em algo extraordinário através da palavra, do riso e da beleza que emana da personalidade.</p>`,
 
-    4: `<h4>Ter uma vida estável e organizada - Motivação 4</h4>
+    4: `<h3>Ter uma vida estável e organizada - Motivação 4</h3>
     <p>A motivação íntima de <strong>você</strong> é a busca pela segurança absoluta, pela ordem estruturada e pela construção de algo duradouro. O que realmente impulsiona a alma de <strong>você</strong> é o desejo de manter os pés em terra firme e saber que existe uma base sólida, tanto material quanto familiar, que nenhuma crise externa poderá abalar.</p>
     <p><strong>você</strong> sente uma satisfação profunda no trabalho bem executado, na organização meticulosa da rotina e no cumprimento rigoroso dos deveres assumidos. O desejo secreto é de ser alguém de honra, eficiência e indispensabilidade. <strong>você</strong> valoriza as tradições e a estabilidade, sentindo que a missão pessoal é trazer estrutura ao mundo e proteger quem depende da própria força.</p>
     <p>A alma de <strong>você</strong> atinge a paz quando percebe que todos os pilares da construção de vida estão no lugar certo. Ver o grupo familiar protegido e o patrimônio crescer de forma honesta e disciplinada é o que dá sentido à existência de <strong>você</strong>, consolidando um legado que resistirá ao passar do tempo.</p>`,
 
-    5: `<h4>Ter novas e intensas experiências - Motivação 5</h4>
+    5: `<h3>Ter novas e intensas experiências - Motivação 5</h3>
     <p>A motivação mais profunda de <strong>você</strong> é a liberdade absoluta de movimento, de pensamento e de ação. O que realmente faz a alma de <strong>você</strong> vibrar é a possibilidade constante de mudança, de exploração de novos horizontes, de viagens e de contato com experiências sensoriais e intelectuais diversificadas.</p>
     <p><strong>você</strong> deseja viver intensamente, desafiando limites pessoais e explorando a versatilidade humana. O desejo íntimo é ser uma presença moderna, desimpedida e capaz de adaptação imediata a qualquer cenário imprevisto. A monotonia é o maior temor de <strong>você</strong>, que está sempre em busca da próxima descoberta ou de uma forma inovadora de observar a realidade.</p>
     <p>Ao conseguir conciliar essa sede de aventura com um propósito que traga progresso, <strong>você</strong> atinge o potencial máximo. O sucesso é medido pela quantidade de experiências acumuladas e pela capacidade de manter a juventude de espírito, tornando a trajetória de <strong>você</strong> uma sucessão de descobertas e de uma autonomia singular.</p>`,
 
-    6: `<h4>Ajudar e cuidar daqueles que estima - Motivação 6</h4>
+    6: `<h3>Ajudar e cuidar daqueles que estima - Motivação 6</h3>
     <p>A motivação íntima de <strong>você</strong> é o desejo de amar, de cuidar e de ser a figura protetora por excelência do lar e da comunidade. O que realmente impulsiona o coração de <strong>você</strong> é a busca pelo bem-estar alheio e pela criação de um ambiente onde reine a harmonia, a justiça, o conforto emocional e a beleza estética.</p>
     <p><strong>você</strong> sente plenitude quando assume responsabilidades em favor daqueles que estima, agindo como porto seguro para quem busca acolhimento. O desejo secreto é ser o pilar de sustentação afetiva, alguém em quem todos podem confiar. <strong>você</strong> valoriza a ética e a concórdia social acima de qualquer ambição de poder solitário ou puramente material.</p>
     <p>Quando <strong>você</strong> percebe que a sua intervenção trouxe equilíbrio a uma situação difícil ou que o ambiente exala harmonia, a alma atinge um estado de satisfação. Ser a presença que pacifica e embeleza a vida alheia é o que confere a <strong>você</strong> a certeza de estar cumprindo uma missão nobre de dedicação incondicional.</p>`,
 
-    7: `<h4>Se destacar pelo conhecimento e verdade - Motivação 7</h4>
+    7: `<h3>Se destacar pelo conhecimento e verdade - Motivação 7</h3>
     <p>A motivação mais profunda de <strong>você</strong> é a busca pelo conhecimento oculto, pela verdade espiritual e pela perfeição técnica. O que realmente impulsiona a alma de <strong>você</strong> é o desejo de compreender as causas fundamentais da existência e de atingir um nível de sabedoria que coloque a mente acima das futilidades do cotidiano.</p>
     <p><strong>você</strong> deseja o silêncio, a privacidade e o tempo necessário para o estudo e para a reflexão profunda sobre os mistérios da vida. O desejo íntimo é ser uma autoridade respeitada no campo de conhecimento escolhido, com base na profundidade da análise. <strong>você</strong> possui um radar apurado para a falsidade e busca a autenticidade pura em si e nos outros.</p>
     <p>A satisfação total de <strong>você</strong> ocorre quando uma peça de um quebra-cabeça complexo é finalmente encaixada através da dedicação mental. Ao atingir patamares elevados de compreensão e partilhar essa luz técnica ou espiritual com quem demonstra real interesse, <strong>você</strong> consolida uma jornada de profunda paz interior e integridade intelectual.</p>`,
 
-    8: `<h4>Ser reconhecido por realizações e poder - Motivação 8</h4>
+    8: `<h3>Ser reconhecido por realizações e poder - Motivação 8</h3>
     <p>A motivação íntima de <strong>você</strong> é a conquista do poder material, da autoridade executiva e do sucesso em grande escala. O que realmente impulsiona o coração de <strong>você</strong> é o desejo de gerir grandes recursos, liderar pessoas com justiça e ser alguém de influência, competência e vitória reconhecida no mundo prático.</p>
     <p><strong>você</strong> sente uma satisfação profunda ao observar os esforços se transformarem em prosperidade tangível e duradoura. O desejo secreto é o controle sobre a própria realidade financeira e o reconhecimento social da força de comando. <strong>você</strong> não teme o trabalho exaustivo, desde que ele conduza ao topo e permita exercer um senso de organização eficiente.</p>
     <p>A plenitude da alma de <strong>você</strong> acontece quando o sucesso é utilizado com responsabilidade social. Ao usar a força e os recursos como ferramentas para estruturar vidas e promover o crescimento coletivo, <strong>você</strong> atinge o nível mais alto de autoridade moral, tornando-se uma figura de sucesso admirada por toda a comunidade.</p>`,
 
-    9: `<h4>Ser útil e servir à humanidade - Motivação 9</h4>
+    9: `<h3>Ser útil e servir à humanidade - Motivação 9</h3>
     <p>A motivação mais profunda de <strong>você</strong> é o desejo sincero de servir à humanidade e deixar um mundo melhor através da compaixão e generosidade. O que realmente impulsiona a alma de <strong>você</strong> é a busca pelo desapego, pelo perdão universal e pela compreensão das dores humanas, sem distinção de qualquer ordem social ou cultural.</p>
     <p><strong>você</strong> deseja viver uma vida com propósito espiritual e humanitário. O desejo íntimo é ser uma fonte de inspiração, cura e sabedoria, sentindo que a jornada só faz sentido se puder aliviar o fardo alheio. <strong>você</strong> valoriza o conhecimento acumulado e busca a conclusão de ciclos com dignidade, ética e amor incondicional.</p>
     <p>Ao ver o impacto positivo das ações na vida das pessoas, a alma de <strong>você</strong> expande-se. A conclusão de cada etapa com a sensação de dever cumprido perante o coletivo é o que traz a <strong>você</strong> a verdadeira paz, consolidando uma trajetória de desprendimento, luz e de um amor que abraça toda a existência.</p>`,
 
-    11: `<h4>Compreender os mistérios da Vida - Motivação 11</h4>
+    11: `<h3>Compreender os mistérios da Vida - Motivação 11</h3>
     <p>A motivação de 11 indica uma alma que busca a iluminação, a inspiração e a transcendência do comum. O desejo interno de <strong>você</strong> é compreender os mistérios da existência e servir como um farol para os outros. <strong>você</strong> possui uma intuição aguçada e um idealismo que busca a harmonia espiritual acima de qualquer conquista puramente material.</p>
     <p>O coração de <strong>você</strong> anseia por revelar verdades ocultas e por elevar a consciência das pessoas ao redor. A realização de <strong>você</strong> vem de viver em alinhamento com princípios éticos superiores, atuando como ponte entre o mundo físico e o espiritual, sempre em busca de um propósito que faça a diferença no despertar coletivo.</p>`,
 
-    22: `<h4>Materialização de desejos internos - Motivação 22</h4>
+    22: `<h3>Materialização de desejos internos - Motivação 22</h3>
     <p>Ter o 22 na Motivação significa que a alma de <strong>você</strong> anseia por construir algo grandioso e duradouro na matéria. <strong>você</strong> sente-se impulsionado a realizar projetos de larga escala que beneficiem a humanidade. O desejo interno combina a visão idealista com a capacidade prática de materializar sonhos em estruturas concretas e funcionais.</p>
     <p>A alma de <strong>você</strong> sente-se plena ao ver grandes ideias saindo do papel para se tornarem realidades que trazem progresso e estabilidade para a sociedade. O sucesso íntimo para <strong>você</strong> é a maestria sobre o mundo físico, unindo a sabedoria da alma à eficiência construtora de quem veio para erguer obras que desafiam o tempo.</p>`,
 
-    33: `<h4>Amor incondicional e Guia Espiritual - Motivação 33</h4>
+    33: `<h3>Amor incondicional e Guia Espiritual - Motivação 33</h3>
     <p>A Motivação 33 representa a vibração da maestria na compaixão. A alma de <strong>você</strong> deseja proteger, curar e ensinar em um nível universal. Existe um chamado profundo para o amor incondicional e o sacrifício pessoal em prol do bem-estar alheio, agindo como um guia para aqueles que cruzam o caminho de <strong>você</strong>.</p>
     <p>O desejo íntimo de <strong>você</strong> é elevar o nível de paz no mundo através da entrega generosa e do exemplo de bondade. <strong>você</strong> sente realização ao nutrir a alma dos outros e ao atuar como um pilar de sustentação emocional e espiritual, transformando a dor em cura e o desequilíbrio em harmonia suprema.</p>`
 },
@@ -2010,85 +2010,82 @@ Potencias: {
   
 },      
         
-talentosEspeciais : {
+// --- POTENCIAL E DESAFIO (TALENTOS ESPECIAIS / EXCESSOS) ---
+talentosEspeciais: {
+    1: `<h3>Potencial de Firmeza e Desafio da Obstinação - 1</h3>
+    <p><strong>você</strong> demonstra uma independência e ambição acima da média. O potencial natural reside na determinação e na capacidade de manter a firmeza sob pressão, agindo com brilhantismo em momentos de grandes desafios estratégicos.</p>
+    <p>Entretanto, essa força pode se tornar uma deficiência quando se transforma em obstinação rígida. O risco surge quando há um fechamento excessivo em um ponto de vista próprio, ignorando ideias valiosas ao redor e gerando traços de possessividade que podem surgir após o calor do momento.</p>`,
 
-    1: `
-        <p><strong>você</strong> demonstra uma independência e ambição acima da média. O talento natural reside na determinação e na capacidade de manter a firmeza sob pressão, agindo com brilhantismo em momentos de estresse e grandes desafios.</p>
-        <p>Entretanto, essa força pode se tornar excessiva, transformando determinação em obstinação rígida. A deficiência surge quando há um fechamento excessivo em um ponto de vista próprio, ignorando ideias valiosas ao redor e gerando traços de possessividade que só aparecem após o calor do momento.</p>
-    `,
-    2: `
-        <p><strong>você</strong> possui um dom nato para a diplomacia e a organização. A natureza gentil e cooperativa faz de <strong>você</strong> alguém excelente na mediação, capaz de resolver conflitos sem recorrer a ofensas, sendo uma presença que as pessoas procuram naturalmente para ouvir a opinião.</p>
-        <p>O excesso desta vibração, porém, pode se manifestar como uma insegurança que paralisa. A receptividade constante pode permitir que outras pessoas se aproveitem dessa bondade, e o excesso de opções tende a dispersar o foco, fazendo com que a prioridade se perca em favor do desejo de manter a harmonia a qualquer custo.</p>
-    `,
-    3: `
-        <p>A mente de <strong>você</strong> é uma usina de criatividade e lógica própria. O talento especial reside em uma imaginação extraordinária e na capacidade de surpreender a todos com ideias concebidas de forma única, comunicando tudo com clareza e entusiasmo.</p>
-        <p>A deficiência desse número excessivo é a impaciência com o mundo material e com o ritmo de raciocínio alheio. Por estar em uma velocidade diferente, <strong>você</strong> pode demonstrar certa imprudência, esquecendo de aterrar as ideias e lidar com as responsabilidades práticas e burocráticas do cotidiano.</p>
-    `,
-    4: `
-        <p><strong>você</strong> tem o talento de construir bases sólidas. É alguém com perfil trabalhador, estável e diplomático, que sabe respeitar limites e oferece segurança para quem convive ao seu redor, mantendo uma postura regular e de extrema confiança.</p>
-        <p>O lado excessivo dessa vibração revela um tradicionalismo que pode travar a evolução. A desconfiança com o novo e a teimosia em aceitar o que foge ao convencional podem tornar <strong>você</strong> alguém de difícil convencimento, que reluta em arriscar fora do que já foi comprovado ou considerado normal.</p>
-    `,
-    5: `
-        <p>O talento de <strong>você</strong> brilha intensamente no meio do caos. Existe uma capacidade incrível de ajuste a situações desafiadoras e estressantes, conseguindo obter vantagens e agir de forma dinâmica onde outras pessoas entrariam em colapso.</p>
-        <p>Todavia, esse excesso de energia gera uma impulsividade nervosa e, por vezes, inconsequente. A deficiência aqui é a falta de filtros; <strong>você</strong> pode reagir de forma direta demais a críticas ou opiniões, parecendo alguém distante ou impaciente, precisando de atenção redobrada sobre o que dizer e como agir para não romper conexões importantes.</p>
-    `,
-    6: `
-        <p><strong>você</strong> atua como um pilar de apoio e responsabilidade. O talento especial é o protecionismo e a atenção aos detalhes, mantendo prontidão para defender causas e cuidar do ambiente com um senso de justiça muito apurado e humanitário.</p>
-        <p>O excesso desse cuidado, porém, traz um perfil polêmico ou detalhista demais. A deficiência surge quando o envolvimento em tudo gera preocupações pouco práticas, fazendo com que problemas pareçam maiores do que são. A dificuldade em esquecer falhas pode custar caro para a paz de espírito de <strong>você</strong>, gerando um peso excessivo por responsabilidades alheias.</p>
-    `,
-    7: `
-        <p><strong>você</strong> possui uma mente analítica e perfeccionista de alto nível. O talento é a disciplina e a busca pela verdade, o que faz com que as conclusões sejam precisas e as ideias profundamente respeitadas por quem busca qualidade e profundidade técnica.</p>
-        <p>Por outro lado, o excesso dessa vibração cria um perfil contestador que dificilmente aceita perder discussões. A deficiência se mostra na irritação com falhas e na dificuldade em dar segundas chances. Esse padrão de exigência máxima pode isolar <strong>você</strong>, tornando a convivência desafiadora para quem não atinge esse rigoroso critério de perfeição.</p>
-    `,
-    8: `
-        <p>O talento especial de <strong>você</strong> é o poder de comando e a visão estratégica. Existe uma habilidade em combinar lógica e caos para realizar grandes ideias, mantendo uma iniciativa que inspira e surpreende pela eficiência e capacidade de realização material.</p>
-        <p>A deficiência dessa força é o risco da vaidade excessiva ou da prepotência. Quando esse número está em excesso, <strong>você</strong> pode demonstrar um perfil controlador ou agressivo, perdendo a paciência com quem não acompanha o seu ritmo acelerado. Equilibrar a liderança com a empatia é o grande desafio aqui.</p>
-    `,
-    9: `
-        <p><strong>você</strong> possui um talento nato para a compaixão e a compreensão das leis universais. Existe uma visão holística e generosa, capaz de entender as necessidades do coletivo com sabedoria e atuar de forma humanitária.</p>
-        <p>O excesso, contudo, pode levar <strong>você</strong> ao papel de mártir, esquecendo totalmente das próprias necessidades. A deficiência aqui é a perda do senso prático e a tendência a se envolver em dramas alheios de forma excessiva, gerando um desgaste emocional que impede a manifestação desse talento de forma equilibrada e real.</p>
-    `
+    2: `<h3>Potencial de Diplomacia e Desafio da Insegurança - 2</h3>
+    <p><strong>você</strong> possui um dom nato para a organização harmoniosa. A natureza gentil e cooperativa faz de <strong>você</strong> alguém excelente na mediação, capaz de resolver conflitos sem recorrer a ofensas, sendo uma presença que as pessoas procuram naturalmente para obter equilíbrio.</p>
+    <p>A deficiência desta vibração em excesso, porém, pode se manifestar como uma insegurança que paralisa a tomada de decisão. A receptividade constante pode permitir que outras pessoas se aproveitem dessa bondade, fazendo com que o foco de <strong>você</strong> se perca em favor do desejo de manter a paz a qualquer custo.</p>`,
 
+    3: `<h3>Potencial de Criatividade e Desafio da Impaciência - 3</h3>
+    <p>A mente de <strong>você</strong> é uma usina de lógica própria. O potencial especial reside em uma imaginação extraordinária e na capacidade de surpreender a todos com ideias concebidas de forma única, comunicando conceitos com clareza e entusiasmo contagiante.</p>
+    <p>A deficiência desse excesso é a impaciência com o ritmo de raciocínio alheio. Por estar em uma velocidade diferente, <strong>você</strong> pode demonstrar certa imprudência, esquecendo de aterrar as ideias e de lidar com as responsabilidades práticas e burocráticas do cotidiano.</p>`,
+
+    4: `<h3>Potencial de Estabilidade e Desafio da Resistência - 4</h3>
+    <p><strong>você</strong> tem o potencial de construir bases sólidas e duradouras. É alguém com perfil estável e metódico, que sabe respeitar limites e oferece segurança para quem convive ao seu redor, mantendo uma postura de extrema confiança técnica.</p>
+    <p>A deficiência dessa vibração revela um tradicionalismo que pode travar a evolução pessoal. A desconfiança com o novo e a teimosia em aceitar o que foge ao convencional podem tornar <strong>você</strong> alguém de difícil convencimento, que reluta em arriscar fora do que já foi comprovado ou considerado normal.</p>`,
+
+    5: `<h3>Potencial de Ajuste e Desafio da Impulsividade - 5</h3>
+    <p>O potencial de <strong>você</strong> brilha intensamente no meio do caos e da imprevisibilidade. Existe uma capacidade incrível de ajuste a situações estressantes, conseguindo obter vantagens e agir de forma dinâmica onde outras pessoas entrariam em colapso emocional.</p>
+    <p>Todavia, esse excesso de energia gera uma deficiência na forma de impulsividade nervosa. A falta de filtros pode fazer com que <strong>você</strong> reaja de forma direta demais a críticas, parecendo alguém distante ou impaciente, precisando de atenção para não romper conexões importantes por puro impulso.</p>`,
+
+    6: `<h3>Potencial de Proteção e Desafio do Detalhismo - 6</h3>
+    <p><strong>você</strong> atua como um pilar de apoio e responsabilidade coletiva. O potencial especial é o protecionismo e a atenção minuciosa, mantendo prontidão para defender causas e cuidar do ambiente com um senso de justiça muito apurado.</p>
+    <p>A deficiência surge quando o envolvimento em tudo gera preocupações pouco práticas, fazendo com que problemas pareçam maiores do que realmente são. A dificuldade em esquecer falhas alheias ou o excesso de cobrança pode custar caro para a paz de espírito de <strong>você</strong>.</p>`,
+
+    7: `<h3>Potencial de Análise e Desafio do Isolamento - 7</h3>
+    <p><strong>você</strong> possui uma mente analítica e perfeccionista de alto nível. O potencial é a disciplina intelectual e a busca pela verdade, o que faz com que as conclusões de <strong>você</strong> sejam precisas e profundamente respeitadas por quem busca qualidade técnica.</p>
+    <p>Por outro lado, a deficiência desse excesso cria um perfil contestador que dificilmente aceita perder discussões. A irritação com falhas e a dificuldade em dar segundas chances podem isolar <strong>você</strong>, tornando a convivência desafiadora para quem não atinge esse rigoroso critério de perfeição.</p>`,
+
+    8: `<h3>Potencial de Comando e Desafio do Controle - 8</h3>
+    <p>O potencial especial de <strong>você</strong> é o poder de comando e a visão estratégica de longo alcance. Existe uma habilidade em organizar o caos para realizar grandes ideias, mantendo uma iniciativa que surpreende pela eficiência e capacidade de realização material.</p>
+    <p>A deficiência dessa força é o risco da prepotência. Quando esse número está em excesso, <strong>você</strong> pode demonstrar um perfil excessivamente controlador, perdendo a paciência com quem não acompanha o ritmo acelerado de produção. O desafio para <strong>você</strong> é equilibrar a liderança com a empatia.</p>`,
+
+    9: `<h3>Potencial de Compaixão e Desafio do Desgaste - 9</h3>
+    <p><strong>você</strong> possui um potencial nato para a compaixão e a compreensão das leis universais. Existe uma visão generosa, capaz de entender as necessidades do coletivo com sabedoria e de atuar de forma humanitária em diversos níveis.</p>
+    <p>A deficiência, contudo, pode levar <strong>você</strong> ao papel de sacrifício excessivo, esquecendo das próprias necessidades fundamentais. Existe uma tendência a se envolver em dramas alheios de forma desproporcional, gerando um desgaste emocional que impede a manifestação desse potencial de forma equilibrada.</p>`
 },
 
  desejoOculto : {
  
-    1: `
-        <p><strong>você</strong> carrega uma vibração que impulsiona fortemente para a liderança e o pioneirismo. Esse acúmulo numérico no nome gera um desejo ardente de ser a primeira pessoa em tudo e alcançar o topo, buscando constantemente o reconhecimento pela própria individualidade e capacidade de comando.</p>
-        <p>Entretanto, esse excesso pode tornar <strong>você</strong> alguém autoritário ou excessivamente egocêntrico. O padrão a ser quebrado é a necessidade constante de estar em evidência, o que pode gerar comportamentos cíclicos de arrogância ou uma busca desenfreada pelo poder que acaba isolando as pessoas ao redor.</p>
-    `,
-    2: `
-        <p>O desejo profundo de <strong>você</strong> é pela harmonia, cooperação e pelo equilíbrio absoluto nas relações. Por possuir essa frequência em abundância, existe uma busca constante pela paz e por ambientes onde a diplomacia prevaleça, agindo sempre como o ponto de união entre as pessoas.</p>
-        <p>Por outro lado, essa carga excessiva pode levar <strong>você</strong> a uma dependência emocional prejudicial. O padrão recorrente aqui é a dificuldade extrema em tomar decisões sem a aprovação alheia, permitindo que a própria vontade seja anulada apenas para evitar qualquer tipo de confronto ou desequilíbrio externo.</p>
-    `,
-    3: `
-        <p>Existe em <strong>você</strong> uma necessidade vital de expressão, comunicação e criatividade. Essa vibração elevada no nome indica um talento nato para encantar e motivar, buscando sempre o brilho social e a manifestação das ideias de forma extraordinária e alegre.</p>
-        <p>O alerta para <strong>você</strong> reside na dispersão desse potencial. O excesso de energia criativa pode resultar em comportamentos superficiais, onde se perde o foco em fofocas ou em múltiplos projetos que nunca chegam ao fim, transformando o dom da palavra em uma ferramenta de distração e falta de compromisso com a verdade prática.</p>
-    `,
-    4: `
-        <p><strong>você</strong> busca incessantemente por segurança, ordem e estabilidade através do trabalho árduo. Essa concentração numérica cria um desejo de construir estruturas indestrutíveis e manter tudo sob controle rigoroso, valorizando a tradição e a eficiência acima de tudo.</p>
-        <p>A deficiência desse excesso se manifesta como uma teimosia crônica e um conservadorismo que impede o progresso. <strong>você</strong> pode se tornar alguém excessivamente rígido, que bloqueia a inovação e o fluxo da vida por medo de perder o controle ou por se apegar a métodos que já não funcionam mais na realidade atual.</p>
-    `,
-    5: `
-        <p>A alma de <strong>você</strong> anseia por liberdade total, mudanças constantes e novas experiências sensoriais. Essa forte presença no nome indica alguém que detesta a rotina e busca no movimento dinâmico a razão de sua existência, adaptando-se com facilidade a qualquer cenário desafiador.</p>
-        <p>Contudo, essa vibração em excesso gera uma instabilidade perigosa e uma impaciência crônica. O vício de comportamento a ser observado por <strong>você</strong> é a tendência a abandonar tudo o que exige persistência, agindo de forma inconsequente e desapegada demais, o que impede a construção de algo duradouro na vida.</p>
-    `,
-    6: `
-        <p>O foco de <strong>você</strong> está totalmente voltado para o lar, para a família e para o serviço ao próximo. É um desejo profundo de ser o porto seguro de todos, assumindo responsabilidades e buscando a perfeição estética e emocional em cada detalhe do ambiente doméstico ou profissional.</p>
-        <p>A armadilha desse excesso é o perfeccionismo sufocante e a tendência a se sobrecarregar com problemas que não são seus. <strong>você</strong> pode se tornar uma pessoa polêmica ou intrometida, tentando controlar a vida alheia sob o pretexto de "ajudar", o que acaba gerando conflitos e um peso emocional desnecessário.</p>
-    `,
-    7: `
-        <p><strong>você</strong> possui uma inclinação natural e poderosa para o estudo, para a introspecção e para a decifração dos mistérios da vida. É o desejo de encontrar a verdade absoluta e a perfeição técnica em tudo o que se propõe a analisar ou realizar intelectualmente.</p>
-        <p>O lado sombrio desse excesso é o isolamento elitista e o sarcasmo. O padrão cíclico de <strong>você</strong> pode ser o de se afastar do mundo por julgar que ninguém compartilha do mesmo nível de sabedoria, tornando-se alguém frio e excessivamente crítico, que perde a conexão emocional com a realidade ao redor.</p>
-    `,
-    8: `
-        <p>Existe um forte desejo em <strong>você</strong> por realização material, poder executivo e justiça. Essa abundância numérica no nome gera uma ambição legítima de organizar grandes estruturas e alcançar a prosperidade financeira, utilizando a lógica e a autoridade para manifestar resultados concretos.</p>
-        <p>Porém, o excesso dessa vibração pode transformar <strong>você</strong> em alguém frio, calculista e prepotente. O comportamento recorrente é o de colocar os interesses materiais acima dos sentimentos humanos, agindo de forma controladora e agressiva para manter o status e a autoridade a qualquer custo.</p>
-    `,
-    9: `
-        <p>A vibração de <strong>você</strong> é movida pela compaixão universal e pelo humanitarismo. Existe um desejo sincero de ajudar o mundo e de se dedicar a causas maiores, buscando a finalização de ciclos e a elevação espiritual através do desprendimento e da sabedoria.</p>
-        <p>A deficiência aqui surge quando <strong>você</strong> se perde em idealismos impraticáveis ou assume o papel de mártir. O padrão negativo é o esquecimento total das próprias necessidades básicas em favor de um salvacionismo irreal, o que gera um esgotamento profundo e a sensação de que ninguém valoriza o seu sacrifício.</p>
-    `
+    1: `<h3>Impulso de Liderança e Desafio do Egocentrismo - 1</h3>
+    <p><strong>você</strong> carrega uma vibração que impulsiona fortemente para a liderança e o pioneirismo. Esse acúmulo numérico gera um desejo ardente de ser a primeira pessoa em tudo e alcançar o topo, buscando constantemente o reconhecimento pela própria individualidade e capacidade de comando.</p>
+    <p>Entretanto, esse excesso pode tornar <strong>você</strong> alguém autoritário ou excessivamente egocêntrico. O padrão a ser quebrado é a necessidade constante de estar em evidência, o que pode gerar comportamentos cíclicos de arrogância ou uma busca desenfreada pelo poder que acaba isolando as pessoas ao redor.</p>`,
+
+    2: `<h3>Impulso de Harmonia e Desafio da Dependência - 2</h3>
+    <p>O desejo profundo de <strong>você</strong> é pela harmonia, cooperação e pelo equilíbrio absoluto nas relações. Por possuir essa frequência em abundância, existe uma busca constante pela paz e por ambientes onde a diplomacia prevaleça, agindo sempre como o ponto de união entre as pessoas.</p>
+    <p>Por outro lado, essa carga excessiva pode levar <strong>você</strong> a uma dependência emocional prejudicial. O padrão recorrente aqui é a dificuldade extrema em tomar decisões sem a aprovação alheia, permitindo que a própria vontade seja anulada apenas para evitar qualquer tipo de confronto ou desequilíbrio externo.</p>`,
+
+    3: `<h3>Impulso de Expressão e Desafio da Dispersão - 3</h3>
+    <p>Existe em <strong>você</strong> uma necessidade vital de expressão, comunicação e criatividade. Essa vibração elevada indica um talento nato para encantar e motivar, buscando sempre o brilho social e a manifestação das ideias de forma extraordinária e alegre.</p>
+    <p>O alerta para <strong>você</strong> reside na dispersão desse potencial. O excesso de energia criativa pode resultar em comportamentos superficiais, onde se perde o foco em distrações ou em múltiplos projetos que nunca chegam ao fim, transformando o dom da palavra em uma falta de compromisso com a verdade prática.</p>`,
+
+    4: `<h3>Impulso de Segurança e Desafio da Rigidez - 4</h3>
+    <p><strong>você</strong> busca incessantemente por segurança, ordem e estabilidade através do trabalho estruturado. Essa concentração numérica cria um desejo de construir bases indestrutíveis e manter tudo sob controle rigoroso, valorizando a tradição e a eficiência acima de tudo.</p>
+    <p>A deficiência desse excesso se manifesta como uma teimosia crônica e um conservadorismo que impede o progresso. <strong>você</strong> pode se tornar alguém excessivamente rígido, que bloqueia a inovação e o fluxo da vida por medo de perder o controle ou por se apegar a métodos que já não funcionam mais.</p>`,
+
+    5: `<h3>Impulso de Liberdade e Desafio da Instabilidade - 5</h3>
+    <p>A alma de <strong>você</strong> anseia por liberdade total, mudanças constantes e novas experiências sensoriais. Essa forte presença indica alguém que detesta a rotina e busca no movimento dinâmico a razão de sua existência, adaptando-se com facilidade a qualquer cenário desafiador.</p>
+    <p>Contudo, essa vibração em excesso gera uma instabilidade e uma impaciência crônica. O vício de comportamento a ser observado por <strong>você</strong> é a tendência a abandonar tudo o que exige persistência, agindo de forma inconsequente, o que impede a construção de algo duradouro na vida.</p>`,
+
+    6: `<h3>Impulso de Serviço e Desafio do Perfeccionismo - 6</h3>
+    <p>O foco de <strong>você</strong> está totalmente voltado para o lar, para a família e para o serviço ao próximo. É um desejo profundo de ser o porto seguro de todos, assumindo responsabilidades e buscando a perfeição estética e emocional em cada detalhe do ambiente ao redor.</p>
+    <p>A armadilha desse excesso é o perfeccionismo sufocante e a tendência a se sobrecarregar com problemas alheios. <strong>você</strong> pode se tornar uma pessoa polêmica ou intrometida, tentando controlar a vida de outros sob o pretexto de ajudar, o que acaba gerando conflitos e um peso emocional desnecessário.</p>`,
+
+    7: `<h3>Impulso de Introspecção e Desafio do Isolamento - 7</h3>
+    <p><strong>você</strong> possui uma inclinação natural e poderosa para o estudo e para a decifração dos mistérios da vida. É o desejo de encontrar a verdade absoluta e a perfeição técnica em tudo o que se propõe a analisar ou realizar intelectualmente.</p>
+    <p>O lado sombrio desse excesso é o isolamento e o sarcasmo. O padrão cíclico de <strong>você</strong> pode ser o de se afastar do mundo por julgar que ninguém compartilha do mesmo nível de sabedoria, tornando-se alguém frio e excessivamente crítico, que perde a conexão emocional com a realidade ao redor.</p>`,
+
+    8: `<h3>Impulso de Realização e Desafio do Materialismo - 8</h3>
+    <p>Existe um forte desejo em <strong>você</strong> por realização material, poder executivo e justiça. Essa abundância numérica gera uma ambição legítima de organizar grandes estruturas e alcançar a prosperidade financeira, utilizando a lógica e a autoridade para manifestar resultados concretos.</p>
+    <p>Porém, o excesso dessa vibração pode transformar <strong>você</strong> em alguém frio e calculista. O comportamento recorrente é o de colocar os interesses materiais acima dos sentimentos humanos, agindo de forma controladora e agressiva para manter o status e a autoridade a qualquer custo.</p>`,
+
+    9: `<h3>Impulso de Humanitarismo e Desafio do Mártir - 9</h3>
+    <p>A vibração de <strong>você</strong> é movida pela compaixão universal e pelo altruísmo. Existe um desejo sincero de ajudar o mundo e de se dedicar a causas maiores, buscando a finalização de ciclos e a elevação através do desprendimento e da sabedoria acumulada.</p>
+    <p>A deficiência aqui surge quando <strong>você</strong> se perde em idealismos impraticáveis ou assume o papel de mártir. O padrão negativo é o esquecimento total das próprias necessidades básicas em favor de um salvacionismo irreal, o que gera um esgotamento profundo e a sensação de falta de valorização.</p>`
 
 },
  
@@ -2241,45 +2238,49 @@ inclinacoes : {
 
 
 essencia : {
- 1: `<h4>Essência 1</h4>
-        <p>Sua reação interna primária é marcada por um forte impulso de liderança e autoconfiança. Diante do inesperado, o desejo de assumir o controle surge quase instantaneamente, impulsionando ações rápidas e decididas para solucionar qualquer impasse.</p>
-        <p>O desafio está em não permitir que essa força se transforme em uma postura defensiva ou autoritária no calor do momento. Ao equilibrar a coragem do começo com a escuta atenta, você transforma a impulsividade em uma autoridade respeitada e eficiente.</p>`,
+    1: `<h3>Reação de Liderança e Controle - Essência 1</h3>
+    <p>A reação interna primária de <strong>você</strong> é marcada por um forte impulso de autonomia e autoconfiança. Diante do inesperado, o desejo de assumir o comando surge quase instantaneamente, impulsionando ações rápidas e decididas para solucionar qualquer impasse com independência.</p>
+    <p>O desafio de <strong>você</strong> está em não permitir que essa força se transforme em uma postura autoritária no calor do momento. Ao equilibrar a coragem do começo com a escuta atenta, <strong>você</strong> transforma a impulsividade inicial em uma autoridade respeitada e altamente eficiente.</p>`,
 
-    2: `<h4>Essência 2</h4>
-        <p>Sua resposta interna é de natureza diplomática e receptiva. Ao enfrentar uma dificuldade, a primeira tendência é buscar o equilíbrio e considerar os sentimentos envolvidos, evitando ao máximo qualquer tipo de ruptura ou confronto direto.</p>
-        <p>A maturidade ensina a não transformar essa busca por harmonia em uma omissão de si. O equilíbrio real ocorre quando você utiliza sua sensibilidade para mediar a situação sem permitir que a indecisão ou a dependência emocional paralisem sua capacidade de agir.</p>`,
+    2: `<h3>Reação de Diplomacia e Sensibilidade - Essência 2</h3>
+    <p>A resposta interna de <strong>você</strong> é de natureza diplomática, receptiva e cooperativa. Ao enfrentar uma dificuldade, a primeira tendência é buscar o equilíbrio e considerar os sentimentos envolvidos, evitando ao máximo qualquer tipo de ruptura ou confronto direto e desnecessário.</p>
+    <p>A maturidade ensina <strong>você</strong> a não transformar essa busca por harmonia em uma omissão de si. O equilíbrio real ocorre quando <strong>você</strong> utiliza a sensibilidade para mediar a situação sem permitir que a indecisão ou a dependência emocional paralisem a capacidade de agir.</p>`,
 
-    3: `<h4>Essência 3</h4>
-        <p>A reação imediata da sua essência é a criatividade e a comunicação. Existe um otimismo nato que busca encontrar saídas originais e leves, utilizando o pensamento rápido para desarmar tensões e transformar problemas em oportunidades de expressão.</p>
-        <p>O cuidado necessário é para que a agitação mental não gere dispersão. Quando a criatividade inicial é canalizada com foco, os resultados são brilhantes; do contrário, a tendência é gastar energia com reclamações ou superficialidades que não resolvem a questão central.</p>`,
+    3: `<h3>Reação de Criatividade e Otimismo - Essência 3</h3>
+    <p>A reação imediata da essência de <strong>você</strong> é pautada pela criatividade e pela comunicação fluida. Existe um otimismo nato que busca encontrar saídas originais e leves, utilizando o pensamento rápido para desarmar tensões e transformar problemas em oportunidades de expressão.</p>
+    <p>O cuidado necessário para <strong>você</strong> é evitar que a agitação mental gere dispersão. Quando a criatividade inicial é canalizada com foco, os resultados são brilhantes; do contrário, a tendência de <strong>você</strong> pode ser gastar energia com superficialidades que não resolvem a questão central.</p>`,
 
-    4: `<h4>Essência 4</h4>
-        <p>Internamente, sua resposta é pragmática e fundamentada na segurança. Diante de imprevistos, você busca se ancorar em métodos conhecidos e na organização, preferindo a estabilidade à inovação arriscada.</p>
-        <p>A rigidez pode ser o seu maior obstáculo em momentos de crise. O desenvolvimento pessoal auxilia você a manter a estrutura necessária, mas com a flexibilidade suficiente para aceitar que nem tudo pode ser planejado. A eficiência surge da união entre método e adaptação.</p>`,
+    4: `<h3>Reação de Pragmatismo e Estrutura - Essência 4</h3>
+    <p>Internamente, a resposta de <strong>você</strong> é pragmática e fundamentada na busca por segurança. Diante de imprevistos, <strong>você</strong> busca se ancorar em métodos conhecidos e na organização meticulosa, preferindo a estabilidade à inovação arriscada ou sem fundamentos sólidos.</p>
+    <p>A rigidez pode ser o maior obstáculo para <strong>você</strong> em momentos de crise. O desenvolvimento pessoal auxilia <strong>você</strong> a manter a estrutura necessária, mas com a flexibilidade suficiente para aceitar o imprevisto. A eficiência surge da união entre o método de <strong>você</strong> e a capacidade de adaptação.</p>`,
 
-    5: `<h4>Essência 5</h4>
-        <p>Sua essência vibra na rapidez e na adaptabilidade. A resposta interna ao desafio é a curiosidade e o movimento, buscando soluções fora do comum e agindo com uma agilidade que surpreende os ritmos mais lentos.</p>
-        <p>A impulsividade, contudo, pode levar a escolhas precipitadas das quais você pode se arrepender mais tarde. O equilíbrio reside em usar sua versatilidade de forma estratégica, aprendendo a pausar antes de agir para que a liberdade de escolha seja sempre produtiva.</p>`,
+    5: `<h3>Reação de Agilidade e Adaptabilidade - Essência 5</h3>
+    <p>A essência de <strong>você</strong> vibra na rapidez e na versatilidade absoluta. A resposta interna ao desafio é a curiosidade e o movimento, buscando soluções fora do comum e agindo com uma agilidade mental que surpreende os ritmos mais lentos ao redor.</p>
+    <p>A impulsividade, contudo, pode levar <strong>você</strong> a escolhas precipitadas. O equilíbrio reside em usar essa versatilidade de forma estratégica, aprendendo a pausar antes de agir para que a liberdade de escolha de <strong>você</strong> seja sempre produtiva e direcionada ao progresso real.</p>`,
 
-    6: `<h4>Essência 6</h4>
-        <p>Diante de conflitos, sua reação interna é de proteção e responsabilidade. O instinto de cuidar das pessoas e do ambiente sobressai, fazendo com que você tome as dores alheias como se fossem suas, buscando restaurar a paz a qualquer custo.</p>
-        <p>É preciso cuidado para que esse zelo não se torne um controle excessivo ou uma interferência intrusiva. A verdadeira eficácia da sua essência aparece quando você apoia o próximo sem anular a autonomia dele, mantendo o equilíbrio emocional próprio no processo.</p>`,
+    6: `<h3>Reação de Proteção e Responsabilidade - Essência 6</h3>
+    <p>Diante de conflitos, a reação interna de <strong>você</strong> é de proteção e cuidado imediato. O instinto de preservar as pessoas e o ambiente sobressai, fazendo com que <strong>você</strong> tome as responsabilidades como se fossem próprias, buscando restaurar a paz e a harmonia social.</p>
+    <p>É preciso cuidado para que esse zelo de <strong>você</strong> não se torne um controle excessivo ou uma interferência intrusiva. A verdadeira eficácia da essência aparece quando <strong>você</strong> apoia o próximo sem anular a autonomia alheia, mantendo o equilíbrio emocional próprio no processo de ajuda.</p>`,
 
-    7: `<h4>Essência 7</h4>
-        <p>Sua primeira resposta é o recolhimento analítico e introspectivo. Você tende a se afastar do ruído externo para processar os fatos em silêncio, buscando uma compreensão profunda antes de manifestar qualquer opinião ou ação.</p>
-        <p>O desafio é não permitir que esse afastamento se torne um isolamento frio ou melancólico. Ao compartilhar suas conclusões de forma clara e segura, você transforma o conhecimento em uma ferramenta poderosa para resolver problemas complexos com precisão cirúrgica.</p>`,
+    7: `<h3>Reação de Análise e Introspecção - Essência 7</h3>
+    <p>A primeira resposta de <strong>você</strong> é o recolhimento analítico e o processamento interno. <strong>você</strong> tende a se afastar do ruído externo para avaliar os fatos em silêncio, buscando uma compreensão profunda e técnica antes de manifestar qualquer opinião ou ação definitiva.</p>
+    <p>O desafio de <strong>você</strong> é não permitir que esse afastamento se torne um isolamento frio ou melancólico. Ao compartilhar as conclusões de forma clara, <strong>você</strong> transforma o conhecimento em uma ferramenta poderosa para resolver problemas complexos com uma precisão cirúrgica.</p>`,
 
-    8: `<h4>Essência 8</h4>
-        <p>A reação interna é de autoridade e ambição. Diante de um obstáculo, sua mente processa imediatamente o custo-benefício e a melhor estratégia para vencer, agindo com uma objetividade que foca nos resultados materiais e práticos.</p>
-        <p>No calor do momento, a sede de poder ou o apego ao controle podem gerar tensões desnecessárias. O autodesenvolvimento permite que você lidere com justiça e ética, garantindo que o sucesso seja alcançado sem ferir os relacionamentos ou a própria integridade.</p>`,
+    8: `<h3>Reação de Autoridade e Objetividade - Essência 8</h3>
+    <p>A reação interna de <strong>você</strong> é de autoridade, ambição e foco prático. Diante de um obstáculo, a mente de <strong>você</strong> processa imediatamente a melhor estratégia para vencer, agindo com uma objetividade que foca nos resultados materiais e na eficiência executiva.</p>
+    <p>No calor do momento, a sede de controle de <strong>você</strong> pode gerar tensões desnecessárias. O autodesenvolvimento permite que <strong>você</strong> lidere com justiça e ética, garantindo que o sucesso seja alcançado sem ferir os relacionamentos ou a integridade dos processos envolvidos.</p>`,
 
-    9: `<h4>Essência 9</h4>
-        <p>Sua essência responde aos desafios com uma visão ampla e humanitária. Existe uma tendência ao desprendimento e à compreensão de que tudo faz parte de um ciclo maior, o que confere uma sabedoria natural diante das crises.</p>
-        <p>O risco é cair na apatia ou no idealismo excessivo quando a realidade se mostra dura. A maturidade ensina você a usar essa compaixão universal de forma prática, transformando a sabedoria interna em ações concretas que beneficiam tanto a você quanto ao coletivo.</p>`,
+    9: `<h3>Reação de Humanitarismo e Sabedoria - Essência 9</h3>
+    <p>A essência de <strong>você</strong> responde aos desafios com uma visão ampla, generosa e humanitária. Existe uma tendência ao desprendimento e à compreensão de que tudo faz parte de um ciclo maior, o que confere a <strong>você</strong> uma sabedoria natural diante de crises profundas.</p>
+    <p>O risco para <strong>você</strong> é cair no idealismo excessivo quando a realidade se mostra dura. A maturidade ensina <strong>você</strong> a usar essa compaixão universal de forma prática, transformando a sabedoria interna em ações concretas que beneficiam tanto a <strong>você</strong> quanto ao coletivo social.</p>`,
 
+    11: `<h3>Reação de Intuição Visionária - Essência 11</h3>
+    <p>A Essência 11 indica que o cerne da individualidade de <strong>você</strong> é puramente intuitivo e sutil. Diante de qualquer estímulo, <strong>você</strong> emite uma vibração de sabedoria nata e originalidade, agindo como um farol de novas ideias que transcendem a lógica comum.</p>
+    <p>A reação interna de <strong>você</strong> busca sempre o significado espiritual ou elevado por trás dos fatos. O desafio é aterrar essa percepção aguçada, transformando o idealismo de <strong>você</strong> em uma força inspiradora que guia os outros através de um exemplo de integridade e percepção superior.</p>`,
 
-    11: `Sua Essência 11 indica que o "cerne" da sua individualidade é puramente intuitivo. Desde o primeiro contato, você emite uma vibração de sabedoria nata e originalidade, agindo como um farol de novas ideias.`,
-    22: `Sua Essência 22 revela um núcleo de grande poder realizador. A base da sua personalidade é voltada para a construção de algo sólido; você tem a semente de um mestre construtor dentro de si.`
+    22: `<h3>Reação de Maestria Realizadora - Essência 22</h3>
+    <p>A Essência 22 revela um núcleo de grande poder realizador e pragmatismo em larga escala. A base da personalidade de <strong>você</strong> é voltada para a construção de algo sólido; <strong>você</strong> possui a semente de mestre construtor operando em cada resposta interna ao mundo.</p>
+    <p>Ao enfrentar desafios, a mente de <strong>você</strong> organiza recursos e projeta estruturas duradouras de forma quase automática. O objetivo central da essência de <strong>você</strong> é materializar sonhos elevados em realidades concretas, unindo a visão de longo alcance à competência técnica absoluta.</p>`
 
 },
 
@@ -2287,48 +2288,49 @@ essencia : {
 
 equilibrio :{
 
-    1: `<h4>Equilíbrio 1</h4>
-        <p>Sua força reside na autonomia e no pioneirismo. A vibração inicial impele você a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades.</p>
-        <p>Para o sucesso pleno, o desafio é manter essa chama acesa até a conclusão. Quando a iniciativa do começo se une à determinação final, você se torna uma força imparável. O equilíbrio aqui é não permitir que a impaciência interrompa o fluxo antes que o objetivo seja alcançado.</p>`,
+    1: `<h3>Autonomia e Persistência na Conclusão - Equilíbrio 1</h3>
+    <p>A força de <strong>você</strong> reside na autonomia e no pioneirismo. A vibração inicial impele <strong>você</strong> a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades que surgem na jornada.</p>
+    <p>Para o sucesso pleno, o desafio é manter essa chama acesa até a conclusão definitiva. Quando a iniciativa do começo se une à determinação final, <strong>você</strong> se torna uma força imparável. O equilíbrio aqui é não permitir que a impaciência interrompa o fluxo antes que o objetivo de <strong>você</strong> seja plenamente alcançado.</p>`,
 
-    2: `<h4>Equilíbrio 2</h4>
-        <p>A abordagem inicial é marcada pela diplomacia e pela sensibilidade. Você prefere analisar o terreno e buscar parcerias antes de agir, utilizando a intuição como bússola. Essa postura cooperativa facilita a entrada em novos ambientes e a resolução de conflitos precoces.</p>
-        <p>A conclusão de seus projetos depende da confiança que deposita em si. O equilíbrio consiste em não se deixar paralisar pela dúvida ou pela dependência alheia no estágio final. Ao finalizar suas metas com suavidade e firmeza, você consolida sua capacidade de realização harmoniosa.</p>`,
+    2: `<h3>Diplomacia e Confiança na Realização - Equilíbrio 2</h3>
+    <p>A abordagem inicial de <strong>você</strong> é marcada pela diplomacia e pela sensibilidade aguçada. <strong>você</strong> prefere analisar o terreno e buscar parcerias antes de agir, utilizando a intuição como bússola. Essa postura cooperativa facilita a entrada em novos ambientes e a resolução de conflitos precoces.</p>
+    <p>A conclusão dos projetos depende da confiança que <strong>você</strong> deposita em si. O equilíbrio consiste em não se deixar paralisar pela dúvida ou pela dependência alheia no estágio final. Ao finalizar as metas com suavidade e firmeza, <strong>você</strong> consolida a capacidade de realização harmoniosa e estável.</p>`,
 
-    3: `<h4>Equilíbrio 3</h4>
-        <p>Sua atitude inicial é vibrante, criativa e repleta de otimismo. A facilidade de comunicação permite que novas ideias sejam lançadas com entusiasmo, atraindo a atenção e o apoio necessários para o início de qualquer jornada ou empreendimento.</p>
-        <p>O grande aprendizado está em evitar a dispersão de energia no meio do caminho. Manter o foco até o último detalhe é o que garante que seu brilho criativo se transforme em algo concreto. Ao equilibrar a alegria do começo com a disciplina do fim, seus projetos ganham uma forma extraordinária.</p>`,
+    3: `<h3>Criatividade e Foco nos Detalhes - Equilíbrio 3</h3>
+    <p>A atitude inicial de <strong>você</strong> é vibrante, criativa e repleta de otimismo. A facilidade de comunicação permite que novas ideias sejam lançadas com entusiasmo, atraindo a atenção e o apoio necessários para o início de qualquer jornada ou empreendimento que <strong>você</strong> se proponha a realizar.</p>
+    <p>O grande aprendizado está em evitar a dispersão de energia no meio do caminho. Manter o foco até o último detalhe é o que garante que o brilho criativo de <strong>você</strong> se transforme em algo concreto. Ao equilibrar a alegria do começo com a disciplina do fim, os projetos de <strong>você</strong> ganham uma forma extraordinária.</p>`,
 
-    4: `<h4>Equilíbrio 4</h4>
-        <p>A entrada em qualquer situação ocorre de forma metódica e pragmática. Existe um respeito profundo pelas bases e pela estrutura, o que garante que o primeiro passo seja dado com segurança e planejamento, evitando riscos desnecessários logo de partida.</p>
-        <p>Sua capacidade de finalização é sólida, mas pode ser limitada por uma rigidez excessiva. O equilíbrio reside em permitir que o processo flua sem tanta resistência a imprevistos. Ao unir a organização inicial à persistência final, você constrói legados duradouros e estáveis.</p>`,
+    4: `<h3>Pragmatismo e Flexibilidade Estrutural - Equilíbrio 4</h3>
+    <p>A entrada de <strong>você</strong> em qualquer situação ocorre de forma metódica e pragmática. Existe um respeito profundo pelas bases e pela estrutura, o que garante que o primeiro passo seja dado com segurança e planejamento, evitando riscos desnecessários logo de partida.</p>
+    <p>A capacidade de finalização de <strong>você</strong> é sólida, mas pode ser limitada por uma rigidez excessiva. O equilíbrio reside em permitir que o processo flua sem tanta resistência a imprevistos. Ao unir a organização inicial à persistência final, <strong>você</strong> constrói legados duradouros, estáveis e respeitados.</p>`,
 
-    5: `<h4>Equilíbrio 5</h4>
-        <p>Você aborda as oportunidades com uma agilidade mental invejável e um desejo de renovação. O início de seus ciclos é marcado pela versatilidade e pela coragem de arriscar, o que torna sua presença dinâmica e magnética desde o primeiro instante.</p>
-        <p>Para concluir com êxito, é preciso domar a inquietude que surge quando a novidade passa. O sucesso vem ao transformar a impulsividade inicial em uma estratégia de finalização consistente. O equilíbrio está em aproveitar a liberdade do processo sem perder de vista o porto de chegada.</p>`,
+    5: `<h3>Agilidade e Estratégia de Chegada - Equilíbrio 5</h3>
+    <p><strong>você</strong> aborda as oportunidades com uma agilidade mental invejável e um constante desejo de renovação. O início dos ciclos é marcado pela versatilidade e pela coragem de arriscar, o que torna a presença de <strong>você</strong> dinâmica e magnética desde o primeiro instante da ação.</p>
+    <p>Para concluir com êxito, é preciso domar a inquietude que surge quando a novidade passa. O sucesso vem ao transformar a impulsividade inicial em uma estratégia de finalização consistente. O equilíbrio para <strong>você</strong> está em aproveitar a liberdade do processo sem perder de vista o porto de chegada.</p>`,
 
-    6: `<h4>Equilíbrio 6</h4>
-        <p>A motivação inicial é o senso de responsabilidade e o cuidado com o bem-estar coletivo. Você inicia projetos com um olhar voltado para a harmonia e para o serviço ao próximo, estabelecendo um ambiente de confiança mútua logo no primeiro contato.</p>
-        <p>A conclusão de seus objetivos é guiada pelo perfeccionismo e pelo afeto. O desafio é não se sobrecarregar com as expectativas alheias no estágio final. Ao equilibrar o desejo de ajudar com a necessidade de finalizar suas próprias metas, você alcança uma realização plena e gratificante.</p>`,
+    6: `<h3>Responsabilidade e Equilíbrio de Metas - Equilíbrio 6</h3>
+    <p>A motivação inicial de <strong>você</strong> é o senso de responsabilidade e o cuidado com o bem-estar coletivo. <strong>você</strong> inicia projetos com um olhar voltado para a harmonia e para o serviço ao próximo, estabelecendo um ambiente de confiança mútua logo no primeiro contato social ou profissional.</p>
+    <p>A conclusão dos objetivos é guiada pelo perfeccionismo e pelo afeto. O desafio de <strong>você</strong> é não se sobrecarregar com as expectativas alheias no estágio final. Ao equilibrar o desejo de ajudar com a necessidade de finalizar as próprias metas, <strong>você</strong> alcança uma realização plena e gratificante.</p>`,
 
-    7: `<h4>Equilíbrio 7</h4>
-        <p>Sua atitude inicial é introspectiva e analítica. Antes de se comprometer, existe uma busca profunda por conhecimento e verdade, o que confere às suas ações uma base intelectual muito sólida e diferenciada perante os obstáculos.</p>
-        <p>O sucesso na finalização depende de superar a tendência ao isolamento ou à crítica excessiva. Ao compartilhar os resultados de sua análise e concluir seus projetos com clareza, você transforma sabedoria em resultados práticos. O equilíbrio está em unir a profundidade do início com a entrega do fim.</p>`,
+    7: `<h3>Análise Profunda e Entrega Prática - Equilíbrio 7</h3>
+    <p>A atitude inicial de <strong>você</strong> é introspectiva e analítica. Antes de se comprometer, existe uma busca profunda por conhecimento e verdade, o que confere às ações de <strong>você</strong> uma base intelectual muito sólida e diferenciada perante os obstáculos que surgem no caminho.</p>
+    <p>O sucesso na finalização depende de superar a tendência ao isolamento ou à crítica excessiva. Ao compartilhar os resultados da análise e concluir os projetos com clareza, <strong>você</strong> transforma sabedoria em resultados práticos. O equilíbrio está em unir a profundidade do início com a entrega do fim.</p>`,
 
-    8: `<h4>Equilíbrio 8</h4>
-        <p>A abordagem de novas oportunidades é executada com autoridade e visão de poder. Existe uma capacidade executiva latente que permite visualizar o sucesso material antes mesmo do primeiro movimento, conferindo uma postura de comando natural.</p>
-        <p>Para que o ciclo se complete, a ética e a justiça devem guiar a finalização tanto quanto a ambição guiou o começo. O equilíbrio entre o desejo de conquista e a responsabilidade social é o que garante que suas vitórias sejam sólidas e respeitadas por todos ao redor.</p>`,
+    8: `<h3>Autoridade e Ética nos Resultados - Equilíbrio 8</h3>
+    <p>A abordagem de <strong>você</strong> perante novas oportunidades é executada com autoridade e visão de poder. Existe uma capacidade executiva latente que permite visualizar o sucesso material antes mesmo do primeiro movimento, conferindo a <strong>você</strong> uma postura de comando natural e eficiente.</p>
+    <p>Para que o ciclo se complete, a ética e a justiça devem guiar a finalização tanto quanto a ambição guiou o começo. O equilíbrio entre o desejo de conquista de <strong>você</strong> e a responsabilidade social é o que garante que as vitórias sejam sólidas e respeitadas por todos ao redor.</p>`,
 
-    9: `<h4>Equilíbrio 9</h4>
-        <p>Você inicia seus ciclos com uma vibração humanitária e compreensiva. Existe um desprendimento inicial que permite enxergar o quadro geral, abordando as situações com sabedoria e uma generosidade que inspira quem compartilha de sua jornada.</p>
-        <p>A conclusão é marcada pela necessidade de encerramento emocional e espiritual. O desafio é não se perder em idealismos utópicos, garantindo que o projeto tenha um fim prático e útil. O equilíbrio está em transformar o sonho do início em uma entrega concreta para o mundo.</p>`,
+    9: `<h3>Humanitarismo e Realização Concreta - Equilíbrio 9</h3>
+    <p><strong>você</strong> inicia os ciclos com uma vibração humanitária, compreensiva e generosa. Existe um desprendimento inicial que permite enxergar o quadro geral, abordando as situações com sabedoria e uma tolerância que inspira quem compartilha da jornada de <strong>você</strong>.</p>
+    <p>A conclusão é marcada pela necessidade de encerramento emocional e espiritual. O desafio de <strong>você</strong> é não se perder em idealismos utópicos, garantindo que o projeto tenha um fim prático e útil. O equilíbrio está em transformar o sonho do início em uma entrega concreta para o benefício do mundo.</p>`,
 
-    // Nota: O equilíbrio geralmente reduz para 1-9, mas se o seu sistema 
-    // aceitar a vibração mestre aqui, use estes:
-    11: `Seu Equilíbrio 11 mostra que você supera crises através da diplomacia e da escuta interna. Você encontra a paz ao elevar a situação para um nível espiritual superior.`,
-    22: `Seu Equilíbrio 22 revela que, em momentos de caos, sua saída é a organização e a construção. Você resolve problemas criando novos sistemas que impedem o erro de se repetir.`
+    11: `<h3>Inspiração Visionária e Paz Interna - Equilíbrio 11</h3>
+    <p>O Equilíbrio 11 mostra que <strong>você</strong> possui a capacidade de superar crises através da diplomacia elevada e da escuta interna profunda. Diante do caos, a saída de <strong>você</strong> é elevar a situação para um nível espiritual ou intuitivo superior, encontrando soluções que transcendem o óbvio.</p>
+    <p>A finalização dos processos de <strong>você</strong> ocorre através da inspiração. Ao manter a calma e agir como um canal de harmonia, <strong>você</strong> resolve impasses complexos e traz uma clareza visionária que pacifica os ambientes e garante que o fechamento do ciclo seja transformador e evolutivo.</p>`,
 
-
+    22: `<h3>Maestria Organizacional e Construção de Sistemas - Equilíbrio 22</h3>
+    <p>O Equilíbrio 22 revela que, em momentos de instabilidade ou crise, a saída de <strong>você</strong> é a organização pragmática e a construção em larga escala. <strong>você</strong> resolve problemas criando novos sistemas e estruturas que impedem o erro de se repetir no futuro.</p>
+    <p>Para <strong>você</strong>, a finalização bem-sucedida de um projeto significa deixá-lo tão sólido que ele funcione como uma base para outros. O equilíbrio reside na união da visão idealista com a competência técnica, permitindo que <strong>você</strong> materialize soluções duradouras que beneficiam a coletividade de forma prática.</p>`
 }
 
 };
