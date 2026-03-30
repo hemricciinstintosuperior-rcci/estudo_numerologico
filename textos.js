@@ -2293,31 +2293,31 @@ inclinacoes : {
 },
     talento:    {     
     
-     1: `<h4>Liderança Pioneira e Iniciativa Independente - Talento 1</h4>
+     1: `<h3>Liderança Pioneira e Iniciativa Independente - Talento 1</h3>
     <p>O talento oculto de <strong>você</strong> reside na capacidade inata de abrir caminhos onde outros veem apenas obstáculos. Existe uma facilidade natural para tomar decisões rápidas e assumir o comando de situações complexas sem hesitação. <strong>você</strong> possui a habilidade de criar soluções originais e agir com um pioneirismo que inspira confiança, mesmo que isso ocorra de forma silenciosa ou instintiva no dia a dia.</p>`,
 
-    2: `<h4>Mediação Diplomática e Percepção de Detalhes - Talento 2</h4>
+    2: `<h3>Mediação Diplomática e Percepção de Detalhes - Talento 2</h3>
     <p><strong>você</strong> possui o talento de perceber as nuances e sentimentos que passam despercebidos pela maioria. Essa habilidade permite que <strong>você</strong> atue como um ponto de equilíbrio em qualquer ambiente, resolvendo conflitos através da diplomacia e da cooperação. O talento de <strong>você</strong> flui na arte de unir pessoas e na execução de tarefas que exigem minúcia, paciência e um tato social refinado.</p>`,
 
-    3: `<h4>Comunicação Criativa e Expressão Cativante - Talento 3</h4>
+    3: `<h3>Comunicação Criativa e Expressão Cativante - Talento 3</h3>
     <p>O talento oculto de <strong>você</strong> é a facilidade de transformar ideias em mensagens envolventes e inspiradoras. Existe um dom natural para a comunicação, seja através da fala, da escrita ou das artes, que atrai a atenção de forma espontânea. <strong>você</strong> consegue trazer leveza e entusiasmo para os projetos, utilizando o carisma para motivar grupos e dar cor a conceitos que pareciam monótonos.</p>`,
 
-    4: `<h4>Organização Estrutural e Eficiência Prática - Talento 4</h4>
+    4: `<h3>Organização Estrutural e Eficiência Prática - Talento 4</h3>
     <p><strong>você</strong> tem o talento de trazer ordem ao caos com extrema facilidade. Essa habilidade se manifesta na capacidade de planejar, estruturar e executar tarefas com uma precisão técnica admirável. O talento de <strong>você</strong> reside na construção de bases sólidas e na gestão de processos que garantem segurança e resultados duradouros, agindo com uma disciplina que parece natural e sem esforço.</p>`,
 
-    5: `<h4>Adaptabilidade Veloz e Inovação Dinâmica - Talento 5</h4>
+    5: `<h3>Adaptabilidade Veloz e Inovação Dinâmica - Talento 5</h3>
     <p>O talento oculto de <strong>você</strong> é a versatilidade absoluta diante das mudanças. Existe uma facilidade incomum para aprender novas habilidades em tempo recorde e se adaptar a diferentes cenários ou culturas. <strong>você</strong> possui o dom da inovação, conseguindo comunicar ideias modernas e promover transformações rápidas que mantêm os projetos em constante evolução e movimento.</p>`,
 
-    6: `<h4>Harmonização de Ambientes e Cuidado Educativo - Talento 6</h4>
+    6: `<h3>Harmonização de Ambientes e Cuidado Educativo - Talento 6</h3>
     <p><strong>você</strong> possui o talento natural de criar harmonia e bem-estar onde quer que esteja. Essa habilidade se traduz na capacidade de aconselhar, cuidar e organizar espaços ou grupos de forma que todos se sintam acolhidos e seguros. O talento de <strong>você</strong> flui na responsabilidade afetiva e na busca pela justiça social, agindo como um pilar de equilíbrio ético e estético.</p>`,
 
-    7: `<h4>Análise Profunda e Especialização Técnica - Talento 7</h4>
+    7: `<h3>Análise Profunda e Especialização Técnica - Talento 7</h3>
     <p>O talento oculto de <strong>você</strong> reside na mente analítica e na busca pela perfeição intelectual. Existe uma facilidade nata para investigar a fundo qualquer tema, detectando falhas ou verdades ocultas que outros ignoram. <strong>você</strong> possui o dom da observação e do estudo especializado, conseguindo atingir níveis de conhecimento e compreensão que conferem uma autoridade natural no campo escolhido.</p>`,
 
-    8: `<h4>Visão Estratégica e Gestão de Resultados - Talento 8</h4>
+    8: `<h3>Visão Estratégica e Gestão de Resultados - Talento 8</h3>
     <p><strong>você</strong> tem o talento nato para lidar com o poder, as finanças e a administração de grandes recursos. Essa habilidade se manifesta na visão estratégica que permite identificar oportunidades de crescimento onde ninguém mais vê. O talento de <strong>você</strong> flui na organização de sistemas produtivos e na liderança executiva, transformando esforços em prosperidade tangível e duradoura.</p>`,
 
-    9: `<h4>Visão Humanitária e Compreensão Universal - Talento 9</h4>
+    9: `<h3>Visão Humanitária e Compreensão Universal - Talento 9</h3>
     <p>O talento oculto de <strong>você</strong> é a capacidade de compreender as necessidades humanas em uma escala global. Existe um dom para inspirar o altruísmo, o perdão e a generosidade, transcendendo interesses individuais. <strong>você</strong> possui a habilidade de concluir ciclos com sabedoria e servir como um guia para a transformação positiva do ambiente, agindo com uma ética que abraça toda a existência.</p>`
 
     
