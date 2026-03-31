@@ -11,7 +11,7 @@
 
     @page {
         size: A4;
-        margin: 5mm 3mm; /* equilíbrio perfeito PDF + impressão */
+        margin: 3mm 2mm; /* equilíbrio perfeito PDF + impressão */
     }
 
     body {
@@ -35,9 +35,9 @@
 
     /* 🔥 CORREÇÃO PRINCIPAL */
     .page {
-        width: 100%;
-        padding: 15mm 3mm 10mm 3mm; 
-        box-sizing: border-box;
+    width: calc(100% - 2mm);
+    margin: 0 auto;
+    padding: 18mm 2mm 14mm 2mm;
 
         page-break-after: always;
         break-after: page;
@@ -77,6 +77,11 @@
     }
 }
 
+html, body {
+    width: 100%;
+    max-width: 100%;
+}
+    
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: block;  }
         /* Estilo para os Logos */
 .logo-capa {
@@ -117,6 +122,13 @@
 .secao-card, .card { 
     border-left: none !important; 
 }
+
+.secao-card,
+.container-barra,
+.resultado-bloco {
+    width: 100%;
+}
+    
         .secao-card { background: var(--card-bg); color: var(--text); padding: 25px; border-radius: 4px; margin-bottom: 30px; border-left: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
         .titulo-topico { font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
         .intro-texto { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
