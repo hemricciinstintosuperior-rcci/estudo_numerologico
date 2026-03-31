@@ -11,7 +11,7 @@
 
     @page {
         size: A4;
-        margin: 12mm 10mm; /* equilíbrio perfeito PDF + impressão */
+        margin: 8mm 5mm; /* equilíbrio perfeito PDF + impressão */
     }
 
     body {
@@ -36,7 +36,7 @@
     /* 🔥 CORREÇÃO PRINCIPAL */
     .page {
         width: 100%;
-        padding: 15mm 10mm;
+        padding: 12mm 5mm 10mm 5mm; 
         box-sizing: border-box;
 
         page-break-after: always;
@@ -59,6 +59,7 @@
     .bloco-potencia {
         page-break-inside: avoid;
         break-inside: avoid;
+         max-width: 100%;
     }
 
     h1, h2, h3 {
@@ -90,6 +91,10 @@
     margin-top: 0px;
     opacity: 0.9;
 }
+
+* {
+    box-sizing: border-box;
+}    
         /* Container de Entrada */
         .container { width: 100%; max-width: 650px; background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 40px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
         h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
@@ -107,7 +112,7 @@
 .secao-card, .card { 
     border-left: none !important; 
 }
-        .secao-card { background: var(--card-bg); color: var(--text); padding: 40px; border-radius: 4px; margin-bottom: 30px; border-left: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        .secao-card { background: var(--card-bg); color: var(--text); padding: 25px; border-radius: 4px; margin-bottom: 30px; border-left: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
         .titulo-topico { font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
         .intro-texto { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
         .texto-res { line-height: 1.8; font-size: 16px; white-space: pre-line; }
