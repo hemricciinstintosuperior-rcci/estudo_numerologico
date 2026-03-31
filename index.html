@@ -5,31 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinto Superior - Numerologia Premium</title>
 <style>
-:root {
-    --gold: #d4af37;
-    --dark: #000000;
-    --card-bg: #ffffff;
-    --text: #1a1a1a;
-}
-
-/* ================= IMPRESSÃO / PDF ================= */
+        :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
+        
 @media print {
 
     @page {
         size: A4;
-        margin: 8mm 6mm; /* 🔥 margem mínima lateral */
+        margin: 12mm 10mm; /* equilíbrio perfeito PDF + impressão */
     }
 
-    html, body {
-        width: 210mm;
-        height: auto;
+    body {
+        background: white !important;
+        color: #1a1a1a !important;
         margin: 0;
         padding: 0;
-        background: #fff !important;
-        color: #000 !important;
     }
 
-    /* Remove coisas inúteis */
     .no-print, .container, .btn-pdf, .btn-gerar, input {
         display: none !important;
     }
@@ -39,45 +30,43 @@
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: none !important;
-        background: #fff !important;
+        background: white !important;
     }
 
-    /* 🔥 ESSENCIAL: NÃO ESTOURAR LARGURA */
+    /* 🔥 CORREÇÃO PRINCIPAL */
     .page {
         width: 100%;
-        min-height: 100vh;
-        padding: 10mm 6mm; /* 🔥 menor padding lateral */
+        padding: 15mm 10mm;
         box-sizing: border-box;
+
         page-break-after: always;
         break-after: page;
     }
 
-    /* Evita quebra feia */
+    /* 🔥 REMOVE ALTURAS PROBLEMÁTICAS */
+    .capa, .capa-transicao {
+        height: auto !important;
+        min-height: 260mm; /* simula página cheia sem quebrar */
+        margin: 0;
+        border: 10px double #d4af37;
+        page-break-before: always;
+    }
+
+    /* 🔥 EVITA QUEBRAS FEIAS */
     .secao-card,
     .resultado-bloco,
     .container-barra,
     .bloco-potencia {
-        break-inside: avoid;
         page-break-inside: avoid;
+        break-inside: avoid;
     }
 
     h1, h2, h3 {
-        break-after: avoid;
         page-break-after: avoid;
     }
 
     p {
-        break-inside: avoid;
-    }
-
-    /* 🔥 CAPAS AJUSTADAS */
-    .capa,
-    .capa-transicao {
-        height: 100vh;
-        width: 100%;
-        margin: 0;
-        border: 8px double var(--gold);
-        page-break-before: always;
+        page-break-inside: avoid;
     }
 
     /* 🔥 GARANTE CORES */
@@ -87,95 +76,143 @@
     }
 }
 
-/* ================= LAYOUT GERAL ================= */
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--dark);
-    color: #fff;
-    margin: 0;
-    padding: 0;
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
+        /* Estilo para os Logos */
+.logo-capa {
+    width: 700px; /* Ajuste o tamanho conforme seu logo */
+    height: 500px;
+    margin-bottom: 0px;
 }
 
-/* Container principal */
-.relatorio-premium {
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
+.logo-conclusao {
+    width: 2000px;
+    height: auto;
+    margin-top: 0px;
+    opacity: 0.9;
+}
+        /* Container de Entrada */
+        .container { width: 100%; max-width: 650px; background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 40px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
+        h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #fff; color: #000; font-size: 16px; box-sizing: border-box; }
+        .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
+
+        /* Estrutura do Relatório */
+        .relatorio-premium { width: 100%; max-width: 850px; margin: 40px auto; background: transparent; }
+        
+        .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double var(--gold); background: #000; text-align: center; margin-bottom: 50px; }
+        .capa h1 { font-size: 45px; margin: 10px 0; }
+        .capa-cliente { font-size: 22px; text-transform: uppercase; border-top: 1px solid var(--gold); padding-top: 15px; width: 60%; }
+
+        .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+.secao-card, .card { 
+    border-left: none !important; 
+}
+        .secao-card { background: var(--card-bg); color: var(--text); padding: 40px; border-radius: 4px; margin-bottom: 30px; border-left: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+        .titulo-topico { font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+        .intro-texto { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
+        .texto-res { line-height: 1.8; font-size: 16px; white-space: pre-line; }
+        
+        /* Gráficos dentro do card */
+        .barra-vermelha { height: 14px; background: #ddd; border-radius: 7px; overflow: hidden; margin-top: 5px; }
+        .progresso-vermelho { height: 100%; background: linear-gradient(90deg, #ff9999, #cc0000); }
+        .card-necessidades { background: #fdf5e6; padding: 25px; border-radius: 4px; border-left: 12px solid #ffffff; margin-top: 20px; }
+       /* ESSENCIAL: Faz as cores das barras aparecerem no PDF/PWA */
+        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    .piramide { display: flex; flex-direction: column; align-items: center; margin: 20px auto; }
+.linha { display: flex; justify-content: center; gap: 2px; margin: 1px 0; }
+.num { width: 12px; height: 12px; display: flex; align-items: center; justify-content: center; background: #28d3ee; color: #000; font-size: 12px; font-weight: bold; border-radius: 2px; }
+.num.negativo { background-color: #FF0000 !important; color: #ffffff !important; }
+.bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
+
+  /* Estilo Premium para a Seção de Potências */
+.secao-potencias {
+    background: #ffffff;
+    color: #1a1a1a; /* Texto quase preto para leitura fácil */
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
 }
 
-/* 🔥 REMOVE LIMITE LATERAL */
-.secao-card {
-    width: 100%;
-    padding: 30px;
-    box-sizing: border-box;
-    overflow: hidden;
+.bloco-potencia {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
-/* TEXTOS */
-.texto-res {
-    line-height: 1.8;
-    font-size: 16px;
+.bloco-potencia b {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-/* GRÁFICOS */
-.container-barra {
-    width: 100%;
-}
+.item-potencia-tag {
+    background: #827108;
+    color: #ffffff !important; /* Força o número a ser branco dentro da tag dourada */
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-block;
+}  
 
-.barra-vermelha {
-    height: 14px;
-    background: #ddd;
-    border-radius: 7px;
-    overflow: hidden;
-}
-
-.progresso-vermelho {
-    height: 100%;
-    background: linear-gradient(90deg, #ff9999, #cc0000);
-}
-
-/* PIRÂMIDE */
-.piramide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.linha {
-    display: flex;
-    justify-content: center;
-}
-
-.num {
-    width: 14px;
-    height: 14px;
-    background: #28d3ee;
-    font-size: 10px;
-}
-
-/* REGENTE */
+/* Cor Especial para o Regente da Vida */
 .num.regente-destaque {
-    background: gold !important;
+    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c) !important;
     color: #000 !important;
-}
+    box-shadow: 0 0 10px rgba(184, 134, 11, 0.6) !important;
+    border: 1px solid #827108 !important;
+    font-weight: 900 !important;
+}    
 
-/* CAPAS */
-.capa,
+/* Estilo das Abas de Planos */
+.tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
+.tab-btn { 
+    padding: 10px 15px; border: 1px solid #827108; background: #fff; color: #827108; 
+    cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 12px; border-radius: 4px; transition: 0.3s;
+}
+.tab-btn.active { background: #827108; color: #fff; }
+.tab-content { display: none; animation: fadeIn 0.5s; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
 .capa-transicao {
+    height: 95vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    background: #000;
+    border: 5px solid var(--gold);
+    margin: 40px 0;
+    text-align: center;
+    page-break-before: always;
+}
+.capa-transicao h2 {
+    font-size: 35px;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.capa-transicao p {
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.7;
+    max-width: 80%;
 }
 
-/* INPUT MOBILE BUG */
 input {
-    outline: none;
-    box-shadow: none;
-    -webkit-appearance: none;
+    outline: none !important; /* Tira o traço de seleção ao clicar */
+    box-shadow: none !important; /* Tira sombras que o celular cria */
+    border: 1px solid #d4af37; /* Mantém apenas a sua borda dourada */
+    -webkit-appearance: none; /* Remove estética padrão do iPhone/Android */
 }
-</style>
+
+/* Isso remove aquele destaque azul/cinza que o celular coloca ao focar */
+input:focus {
+    border: 2px solid #d4af37;
+    background-color: #fff;
+}    
+
+    </style>
 </head>
 <body>
 
