@@ -11,7 +11,7 @@
 @media print {
     @page {
         size: A4;
-        margin: 2.0cm; /* Margem equilibrada para não cortar conteúdo */
+        margin: 20mm; /* Margem equilibrada para não cortar conteúdo */
     }
 
     body {
@@ -1654,7 +1654,7 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 `;
 
 html += `
-    <div class="secao-card quebra-pagina">
+    <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Análise de Potenciais</h2>
         <div class="intro-texto">${textos.introducoes.graficos}</div>
         ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3], regenteVida, dadosNegativas.nums)}
@@ -1678,7 +1678,7 @@ const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", 
 listaPremium.forEach(chave => {
     const tituloBonito = nomesExibicao[chave] || chave;
     html += `
-        <div class="secao-card">
+        <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
             <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
             <div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>
@@ -1701,7 +1701,7 @@ html += `
 
 // A. LIÇÕES CÁRMICAS
 html += `
-    <div class="secao-card quebra-pagina">
+    <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Deficiências (Lições de Vida)</h2>
         <div class="intro-texto">${textos.introducoes.deficiencias}</div>
 `;
@@ -1714,7 +1714,7 @@ html += `</div>`;
 
 // B. DÉFICITS DE COMPORTAMENTO
 html += `
-    <div class="secao-card quebra-pagina">
+    <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Déficits de Comportamento</h2>
         <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
         <p><strong>Déficit Recorrente (${res.deficitRecorrente}):</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
@@ -1734,7 +1734,7 @@ const primeiroNome = nomeRaw.split(' ')[0];
 const talentoNum = calcularTalentoEspecial(primeiroNome);
 
 html += `
-    <div class="secao-card quebra-pagina">
+    <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Seu Desejo Oculto</h2>
         <div class="intro-texto">${aplicarFiltroTexto(textos.introducoes.desejoOculto) ||  `
     <p>A Vibração do Desejo Oculto possui um poder próprio para moldar a trajetória humana, gerando um impulso profundo para o desenvolvimento e a expressão de habilidades muito específicas. Esta força exige que a própria natureza seja experimentada em sua essência, permitindo que esse potencial guie a personalidade de forma autêntica.</p>
@@ -1747,7 +1747,7 @@ html += `
         <div class="texto-res">${aplicarFiltroTexto(textos.desejoOculto[dadosDesejo.numero])}</div>
     </div>
 
-    <div class="secao-card quebra-pagina">
+    <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Habilidades Especiais e Deficiências</h2>
         <div class="intro-texto">${aplicarFiltroTexto(textos.introducoes.talentosEspeciais) ||  `
     <p>Muitas vezes, o foco nas medidas tradicionais de sucesso impede a percepção de uma série de dons e talentos naturais que operam de forma silenciosa. É fundamental prestar atenção às habilidades mais sutis, pois elas são as ferramentas que garantem a sensação de competência e amparo em todas as áreas da vida.</p>
@@ -1783,7 +1783,7 @@ itensAlinhamento.forEach(chave => {
     }
 
     html += `
-        <div class="secao-card">
+        <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
             <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
             ${conteudoFinal}
@@ -1794,7 +1794,7 @@ itensAlinhamento.forEach(chave => {
 
 // --- INSERINDO O DESAFIO PRINCIPAL NO PILAR 03 ---
 html += `
-    <div class="secao-card quebra-pagina">
+    <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">O Desafio Principal</h2>
         <div class="intro-texto"> "<p>O Desafio Principal é a vibração mestra que permeia toda a jornada de um indivíduo, do nascimento à maturidade. Diferente dos desafios temporários das fases iniciais ou adultas, esta é a lição central que a alma busca integrar. Ela representa a sombra mais persistente e, simultaneamente, a maior oportunidade de crescimento espiritual e autorrealização.</p>
     <p>Superar o Desafio Principal exige uma vigilância constante sobre padrões repetitivos de comportamento. Ele funciona como um "norte" para o desenvolvimento do caráter: ao enfrentar e transmutar as dificuldades impostas por essa frequência, <strong>você</strong> desbloqueia o fluxo de todos os outros talentos do mapa. É o ponto onde a resistência se transforma em maestria, permitindo que a vida seja conduzida com integridade, consciência e propósito real.</p>"</div>
@@ -1819,7 +1819,7 @@ html += `
 // 5. CICLOS, MOMENTOS E DESAFIOS
 ["ciclos", "momentos", "desafios"].forEach(sec => {
     html += `
-        <div class="secao-card quebra-pagina">
+        <div class="page">
             <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">${sec}</h2>
             <div class="intro-texto">${textos.introducoes[sec] || ""}</div>
     `;
@@ -1856,7 +1856,7 @@ html += `
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
 html += `
-    <div class="secao-card quebra-pagina">
+    <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloMat}</h2>
         <div class="intro-texto">${textos.introducoes.Maturidade || ""}</div>
         <div class="texto-res">${aplicarFiltroTexto(textos.Maturidade[res.Maturidade])}</div>
@@ -1922,7 +1922,7 @@ if (proximoAnoPessoal > 9) proximoAnoPessoal = 1;
 
 // --- BLOCO DO ANO PESSOAL (CICLO ATUAL) ---
 html += `
-<div class="secao-card quebra-pagina">
+<div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Ciclo Atual</h2>
     
     <div class="resultado-bloco">
@@ -1940,7 +1940,7 @@ html += `
     </div>
 </div>
 
-<div class="secao-card quebra-pagina" style="margin-top: 40px; border-top: 1px dashed var(--gold);">
+<div class="page" style="margin-top: 40px; border-top: 1px dashed var(--gold);">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Próximo Ciclo</h2>
     
     <div class="resultado-bloco">
@@ -1967,7 +1967,7 @@ html += `
     
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
-<div class="secao-card quebra-pagina">
+<div class="page">
     <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
     
     <div class="intro-texto">${textos.introducoes.piramide}</div>
