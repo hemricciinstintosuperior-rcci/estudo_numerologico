@@ -13,7 +13,16 @@
         size: A4;
         margin: 20mm; /* Margem equilibrada para não cortar conteúdo */
     }
+    
+body {
+  margin: 0;
+}
 
+@media print {
+  body {
+    width: 210mm;
+  }
+}
     body {
         background: white !important;
         color: #1a1a1a !important;
@@ -62,6 +71,29 @@
         print-color-adjust: exact !important;
         color-adjust: exact !important;
     }
+
+   .page {
+  width: 210mm;
+  height: 297mm;
+  padding: 20mm;
+  box-sizing: border-box;
+} 
+
+.page {
+  page-break-after: always;
+  break-after: page;
+}
+
+h1, h2, h3 {
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+p {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+    
 
     /* Ajuste da Capa para ocupar a folha toda no PDF */
     .capa, .capa-transicao {
