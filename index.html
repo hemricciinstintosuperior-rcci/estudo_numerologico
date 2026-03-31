@@ -7,14 +7,88 @@
 <style>
         :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
         
-        /* Ajuste para Impressão/PDF */
-        @media print {
-            body { background: white !important; color: white !important; padding: 0 !important; }
-            .no-print, .container { display: none !important; }
-            .relatorio-premium { width: 100% !important; max-width: 100% !important; margin: 0 !important; box-shadow: none !important; }
-            .quebra-pagina { page-break-before: always; }
-            .secao-card { border: 1px solid #eee !important; break-inside: avoid; }
-        }
+/* --- CONFIGURAÇÕES DE IMPRESSÃO / PDF --- */
+@media print {
+    @page {
+        size: A4;
+        margin: 1.5cm; /* Margem equilibrada para não cortar conteúdo */
+    }
+
+    body {
+        background: white !important;
+        color: #1a1a1a !important;
+        width: 100%;
+    }
+
+    /* Esconde elementos desnecessários no PDF */
+    .no-print, .container, .btn-pdf, .btn-gerar, input {
+        display: none !important;
+    }
+
+    .relatorio-premium {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        background: white !important;
+    }
+
+    /* FORÇAR QUEBRA DE PÁGINA antes de seções importantes */
+    .quebra-pagina {
+        page-break-before: always !important;
+        break-before: page !important;
+        margin-top: 0 !important;
+    }
+
+    /* IMPEDIR QUEBRA DE CONTEÚDO dentro de um card */
+    /* Isso evita que um gráfico ou parágrafo comece em uma página e termine em outra */
+    .secao-card, .resultado-bloco, .item-potencia, .container-barra {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 20px !important;
+        display: block; /* Garante que o 'avoid' funcione */
+    }
+
+    /* Ajuste de títulos para não ficarem sozinhos no final da página */
+    h2, h3 {
+        page-break-after: avoid !important;
+        break-after: avoid !important;
+    }
+
+    /* Garantir que cores e fundos apareçam (Gráficos) */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+
+    /* Ajuste da Capa para ocupar a folha toda no PDF */
+    .capa, .capa-transicao {
+        height: 100vh !important;
+        margin: 0 !important;
+        border: 15px double #d4af37 !important;
+    }
+}
+
+/* --- AJUSTES DE LEIAUTE GERAL (WEB E PDF) --- */
+.relatorio-premium {
+    background: #fff;
+    color: #1a1a1a;
+}
+
+/* Garante que os textos e gráficos usem a largura total disponível */
+.secao-card {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; /* Evita vazamentos horizontais */
+}
+
+/* Ajuste das barras de gráfico para preencherem o container */
+.container-barra {
+    width: 100%;
+    max-width: 100%;
+}
 
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
         /* Estilo para os Logos */
