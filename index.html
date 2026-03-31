@@ -5,260 +5,336 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinto Superior - Numerologia Premium</title>
 <style>
-        :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
-        
-/* --- CONFIGURAÇÕES DE IMPRESSÃO / PDF --- */
+:root { 
+    --gold: #d4af37; 
+    --dark: #000000; 
+    --card-bg: #ffffff; 
+    --text: #1a1a1a; 
+}
+
+/* =========================
+   CONFIGURAÇÃO DE IMPRESSÃO (PDF A4)
+========================= */
 @media print {
+
     @page {
         size: A4;
-        margin: 20mm; /* Margem equilibrada para não cortar conteúdo */
+        margin: 15mm;
     }
-    
-body {
-  margin: 0;
-}
 
-@media print {
-  body {
-    width: 210mm;
-  }
-}
     body {
-        background: white !important;
+        margin: 0;
+        background: #fff !important;
         color: #1a1a1a !important;
-        width: 100%;
     }
 
-    /* Esconde elementos desnecessários no PDF */
+    /* Esconder elementos desnecessários */
     .no-print, .container, .btn-pdf, .btn-gerar, input {
         display: none !important;
     }
 
     .relatorio-premium {
         width: 100% !important;
-        max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: none !important;
         background: white !important;
     }
 
-    /* FORÇAR QUEBRA DE PÁGINA antes de seções importantes */
+    /* Páginas fluem naturalmente */
+    .page {
+        width: 100%;
+        box-sizing: border-box;
+        page-break-after: always;
+        break-after: page;
+    }
+
+    /* Quebra antes quando necessário */
     .quebra-pagina {
-        page-break-before: always !important;
-        break-before: page !important;
-        margin-top: 0 !important;
+        page-break-before: always;
+        break-before: page;
     }
 
-    /* IMPEDIR QUEBRA DE CONTEÚDO dentro de um card */
-    /* Isso evita que um gráfico ou parágrafo comece em uma página e termine em outra */
-    .secao-card, .resultado-bloco, .item-potencia, .container-barra {
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
-        margin-bottom: 20px !important;
-        display: block; /* Garante que o 'avoid' funcione */
+    /* Evita cortes ruins */
+    .secao-card {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
-    /* Ajuste de títulos para não ficarem sozinhos no final da página */
-    h2, h3 {
-        page-break-after: avoid !important;
-        break-after: avoid !important;
+    h1, h2, h3 {
+        page-break-after: avoid;
+        break-after: avoid;
     }
 
-    /* Garantir que cores e fundos apareçam (Gráficos) */
+    p {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* Mantém cores no PDF */
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-        color-adjust: exact !important;
     }
 
-   .page {
-  width: 210mm;
-  height: 297mm;
-  padding: 20mm;
-  box-sizing: border-box;
-} 
-
-.page {
-  page-break-after: always;
-  break-after: page;
-}
-
-h1, h2, h3 {
-  page-break-after: avoid;
-  break-after: avoid;
-}
-
-p {
-  page-break-inside: avoid;
-  break-inside: avoid;
-}
-    
-
-    /* Ajuste da Capa para ocupar a folha toda no PDF */
+    /* CAPAS AJUSTADAS PARA A4 */
     .capa, .capa-transicao {
-        height: 100vh !important;
+        min-height: 260mm;
+        height: auto;
         margin: 0 !important;
-        border: 15px double #d4af37 !important;
+        border: 10px double var(--gold);
     }
 }
 
-/* --- AJUSTES DE LEIAUTE GERAL (WEB E PDF) --- */
-.relatorio-premium {
-    background: #fff;
-    color: #1a1a1a;
+/* =========================
+   BASE
+========================= */
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: var(--dark); 
+    color: #fff; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
 
-/* Garante que os textos e gráficos usem a largura total disponível */
-.secao-card {
-    width: 100%;
-    box-sizing: border-box;
-    overflow: hidden; /* Evita vazamentos horizontais */
-}
-
-/* Ajuste das barras de gráfico para preencherem o container */
-.container-barra {
-    width: 100%;
-    max-width: 100%;
-}
-
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
-        /* Estilo para os Logos */
+/* =========================
+   LOGOS
+========================= */
 .logo-capa {
-    width: 700px; /* Ajuste o tamanho conforme seu logo */
+    width: 700px;
     height: 500px;
-    margin-bottom: 0px;
 }
 
 .logo-conclusao {
-    width: 2000px;
+    width: 100%;
+    max-width: 600px;
     height: auto;
-    margin-top: 0px;
     opacity: 0.9;
 }
-        /* Container de Entrada */
-        .container { width: 100%; max-width: 850px; background: #111; padding: 30px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 40px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
-        h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
-        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #fff; color: #000; font-size: 16px; box-sizing: border-box; }
-        .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
 
-        /* Estrutura do Relatório */
-        .relatorio-premium { width: 100%; max-width: 850px; margin: 40px auto; background: transparent; }
-        
-        .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double var(--gold); background: #000; text-align: center; margin-bottom: 50px; }
-        .capa h1 { font-size: 45px; margin: 10px 0; }
-        .capa-cliente { font-size: 22px; text-transform: uppercase; border-top: 1px solid var(--gold); padding-top: 15px; width: 60%; }
-
-        .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-.secao-card, .card { 
-    border-left: none !important; 
+/* =========================
+   CONTAINER INPUT
+========================= */
+.container { 
+    width: 100%; 
+    max-width: 850px; 
+    background: #111; 
+    padding: 30px; 
+    border-radius: 20px; 
+    border: 1px solid var(--gold); 
+    margin-top: 40px; 
 }
-        .secao-card { background: var(--card-bg); color: var(--text); padding: 40px; border-radius: 4px; margin-bottom: 30px; border-left: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
-        .titulo-topico { font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-        .intro-texto { font-style: italic; color: #666; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
-        .texto-res { line-height: 1.8; font-size: 16px; white-space: pre-line; }
-        
-        /* Gráficos dentro do card */
-        .barra-vermelha { height: 14px; background: #ddd; border-radius: 7px; overflow: hidden; margin-top: 5px; }
-        .progresso-vermelho { height: 100%; background: linear-gradient(90deg, #ff9999, #cc0000); }
-        .card-necessidades { background: #fdf5e6; padding: 25px; border-radius: 4px; border-left: 12px solid #ffffff; margin-top: 20px; }
-       /* ESSENCIAL: Faz as cores das barras aparecerem no PDF/PWA */
-        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-    .piramide { display: flex; flex-direction: column; align-items: center; margin: 20px auto; }
-.linha { display: flex; justify-content: center; gap: 2px; margin: 1px 0; }
-.num { width: 12px; height: 12px; display: flex; align-items: center; justify-content: center; background: #28d3ee; color: #000; font-size: 12px; font-weight: bold; border-radius: 2px; }
-.num.negativo { background-color: #FF0000 !important; color: #ffffff !important; }
-.bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
 
-  /* Estilo Premium para a Seção de Potências */
+h1 { 
+    color: var(--gold); 
+    text-align: center; 
+    text-transform: uppercase; 
+}
+
+input { 
+    width: 100%; 
+    padding: 15px; 
+    margin: 10px 0; 
+    border-radius: 10px; 
+    border: 1px solid var(--gold); 
+    background: #fff; 
+    color: #000; 
+    font-size: 16px; 
+}
+
+.btn-gerar { 
+    width: 100%; 
+    padding: 20px; 
+    background: var(--gold); 
+    color: #000; 
+    border: none; 
+    border-radius: 10px; 
+    font-weight: bold; 
+    font-size: 20px; 
+    cursor: pointer; 
+}
+
+/* =========================
+   RELATÓRIO
+========================= */
+.relatorio-premium { 
+    width: 100%; 
+    max-width: 850px; 
+    margin: 40px auto; 
+}
+
+.btn-pdf { 
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    background: #cc0000; 
+    color: white; 
+    padding: 12px 25px; 
+    border-radius: 50px; 
+    font-weight: bold; 
+    border: none; 
+    cursor: pointer; 
+}
+
+/* =========================
+   CAPA
+========================= */
+.capa { 
+    min-height: 90vh; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    border: 10px double var(--gold); 
+    background: #000; 
+    text-align: center; 
+}
+
+.capa-cliente { 
+    font-size: 22px; 
+    text-transform: uppercase; 
+    border-top: 1px solid var(--gold); 
+    padding-top: 15px; 
+}
+
+/* =========================
+   CARDS
+========================= */
+.secao-card { 
+    background: var(--card-bg); 
+    color: var(--text); 
+    padding: 30px; 
+    margin-bottom: 25px; 
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); 
+    overflow: visible;
+}
+
+.titulo-topico { 
+    font-size: 22px; 
+    color: #000; 
+    text-transform: uppercase; 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px; 
+}
+
+.intro-texto { 
+    font-style: italic; 
+    color: #666; 
+    margin-bottom: 20px; 
+}
+
+.texto-res { 
+    line-height: 1.8; 
+    font-size: 15px; 
+}
+
+/* =========================
+   GRÁFICOS
+========================= */
+.barra-vermelha { 
+    height: 14px; 
+    background: #ddd; 
+    border-radius: 7px; 
+}
+
+.progresso-vermelho { 
+    height: 100%; 
+    background: linear-gradient(90deg, #ff9999, #cc0000); 
+}
+
+/* =========================
+   PIRÂMIDE
+========================= */
+.piramide { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.linha { 
+    display: flex; 
+    gap: 2px; 
+}
+
+.num { 
+    width: 12px; 
+    height: 12px; 
+    background: #28d3ee; 
+    font-size: 10px; 
+}
+
+.num.negativo { 
+    background: red !important; 
+    color: #fff; 
+}
+
+.num.regente-destaque {
+    background: linear-gradient(135deg, #bf953f, #fcf6ba);
+    color: #000;
+}
+
+/* =========================
+   POTÊNCIAS
+========================= */
 .secao-potencias {
-    background: #ffffff;
-    color: #1a1a1a; /* Texto quase preto para leitura fácil */
+    background: #fff;
+    color: #000;
     padding: 20px;
-    border-radius: 8px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .bloco-potencia {
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
 }
 
-.bloco-potencia b {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
+/* =========================
+   ABAS
+========================= */
+.tabs-planos { 
+    display: flex; 
+    gap: 5px; 
+    flex-wrap: wrap; 
 }
 
-.item-potencia-tag {
-    background: #827108;
-    color: #ffffff !important; /* Força o número a ser branco dentro da tag dourada */
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    display: inline-block;
-}  
-
-/* Cor Especial para o Regente da Vida */
-.num.regente-destaque {
-    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c) !important;
-    color: #000 !important;
-    box-shadow: 0 0 10px rgba(184, 134, 11, 0.6) !important;
-    border: 1px solid #827108 !important;
-    font-weight: 900 !important;
-}    
-
-/* Estilo das Abas de Planos */
-.tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
 .tab-btn { 
-    padding: 10px 15px; border: 1px solid #827108; background: #fff; color: #827108; 
-    cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 12px; border-radius: 4px; transition: 0.3s;
+    padding: 8px; 
+    border: 1px solid var(--gold); 
+    cursor: pointer; 
 }
-.tab-btn.active { background: #827108; color: #fff; }
-.tab-content { display: none; animation: fadeIn 0.5s; }
-.tab-content.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+.tab-btn.active { 
+    background: var(--gold); 
+    color: #000; 
+}
+
+/* =========================
+   CAPA TRANSIÇÃO
+========================= */
 .capa-transicao {
-    height: 95vh;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #000;
     border: 5px solid var(--gold);
-    margin: 40px 0;
     text-align: center;
-    page-break-before: always;
 }
+
 .capa-transicao h2 {
-    font-size: 35px;
     color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 5px;
+    font-size: 30px;
 }
+
 .capa-transicao p {
-    font-size: 18px;
     color: #fff;
     opacity: 0.7;
-    max-width: 80%;
 }
-
-input {
-    outline: none !important; /* Tira o traço de seleção ao clicar */
-    box-shadow: none !important; /* Tira sombras que o celular cria */
-    border: 1px solid #d4af37; /* Mantém apenas a sua borda dourada */
-    -webkit-appearance: none; /* Remove estética padrão do iPhone/Android */
-}
-
-/* Isso remove aquele destaque azul/cinza que o celular coloca ao focar */
-input:focus {
-    border: 2px solid #d4af37;
-    background-color: #fff;
-}    
-
-    </style>
+</style>
 </head>
 <body>
 
