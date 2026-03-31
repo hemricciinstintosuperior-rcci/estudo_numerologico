@@ -7,14 +7,6 @@
 <style>
         :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
         
-        /* Ajuste para Impressão/PDF */
-        @media print {
-            body { background: white !important; color: white !important; padding: 0 !important; }
-            .no-print, .container { display: none !important; }
-            .relatorio-premium { width: 150% !important; max-width: 100% !important; margin: 0 !important; box-shadow: none !important; }
-            .quebra-pagina { page-break-before: always; }
-            .secao-card { border: 1px solid #eee !important; break-inside: avoid; }
-        }
 
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; }
         /* Estilo para os Logos */
@@ -151,6 +143,18 @@ input:focus {
     border: 2px solid #d4af37;
     background-color: #fff;
 }    
+
+
+        /* Ajuste para Impressão/PDF */
+        @media print {
+            body { background: white !important; color: white !important; padding: 0 !important; }
+            .no-print, .container { display: none !important; }
+            .relatorio-premium { width: 150% !important; max-width: 150% !important; margin: 0 !important; box-shadow: none !important; }
+            .quebra-pagina { page-break-before: always; }
+            .secao-card { border: 1px solid #eee !important; break-inside: avoid; }
+        }
+
+    
 
     </style>
 </head>
