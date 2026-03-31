@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinto Superior - Numerologia Premium</title>
 <style>
-:root { 
-    --gold: #d4af37; 
-    --dark: #000000; 
-    --card-bg: #ffffff; 
-    --text: #1a1a1a; 
+:root {
+    --gold: #d4af37;
+    --dark: #000000;
+    --card-bg: #ffffff;
+    --text: #1a1a1a;
 }
 
-/* =========================
-   CONFIGURAÇÃO DE IMPRESSÃO (PDF A4)
-========================= */
+/* ================= IMPRESSÃO / PDF ================= */
 @media print {
 
     @page {
         size: A4;
-        margin: 15mm;
+        margin: 8mm 6mm; /* 🔥 margem mínima lateral */
     }
 
-    body {
+    html, body {
+        width: 210mm;
+        height: auto;
         margin: 0;
+        padding: 0;
         background: #fff !important;
-        color: #1a1a1a !important;
+        color: #000 !important;
     }
 
-    /* Esconder elementos desnecessários */
+    /* Remove coisas inúteis */
     .no-print, .container, .btn-pdf, .btn-gerar, input {
         display: none !important;
     }
@@ -38,301 +39,141 @@
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: none !important;
-        background: white !important;
+        background: #fff !important;
     }
 
-    /* Páginas fluem naturalmente */
+    /* 🔥 ESSENCIAL: NÃO ESTOURAR LARGURA */
     .page {
         width: 100%;
+        min-height: 100vh;
+        padding: 10mm 6mm; /* 🔥 menor padding lateral */
         box-sizing: border-box;
         page-break-after: always;
         break-after: page;
     }
 
-    /* Quebra antes quando necessário */
-    .quebra-pagina {
-        page-break-before: always;
-        break-before: page;
-    }
-
-    /* Evita cortes ruins */
-    .secao-card {
-        page-break-inside: avoid;
+    /* Evita quebra feia */
+    .secao-card,
+    .resultado-bloco,
+    .container-barra,
+    .bloco-potencia {
         break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     h1, h2, h3 {
-        page-break-after: avoid;
         break-after: avoid;
+        page-break-after: avoid;
     }
 
     p {
-        page-break-inside: avoid;
         break-inside: avoid;
     }
 
-    /* Mantém cores no PDF */
+    /* 🔥 CAPAS AJUSTADAS */
+    .capa,
+    .capa-transicao {
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        border: 8px double var(--gold);
+        page-break-before: always;
+    }
+
+    /* 🔥 GARANTE CORES */
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
-
-    /* CAPAS AJUSTADAS PARA A4 */
-    .capa, .capa-transicao {
-        min-height: 260mm;
-        height: auto;
-        margin: 0 !important;
-        border: 10px double var(--gold);
-    }
 }
 
-/* =========================
-   BASE
-========================= */
-body { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background: var(--dark); 
-    color: #fff; 
-    margin: 0; 
-    padding: 0; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
+/* ================= LAYOUT GERAL ================= */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--dark);
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
-/* =========================
-   LOGOS
-========================= */
-.logo-capa {
-    width: 700px;
-    height: 500px;
-}
-
-.logo-conclusao {
+/* Container principal */
+.relatorio-premium {
     width: 100%;
-    max-width: 600px;
-    height: auto;
-    opacity: 0.9;
+    max-width: 900px;
+    margin: 40px auto;
 }
 
-/* =========================
-   CONTAINER INPUT
-========================= */
-.container { 
-    width: 100%; 
-    max-width: 850px; 
-    background: #111; 
-    padding: 30px; 
-    border-radius: 20px; 
-    border: 1px solid var(--gold); 
-    margin-top: 40px; 
+/* 🔥 REMOVE LIMITE LATERAL */
+.secao-card {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-h1 { 
-    color: var(--gold); 
-    text-align: center; 
-    text-transform: uppercase; 
+/* TEXTOS */
+.texto-res {
+    line-height: 1.8;
+    font-size: 16px;
 }
 
-input { 
-    width: 100%; 
-    padding: 15px; 
-    margin: 10px 0; 
-    border-radius: 10px; 
-    border: 1px solid var(--gold); 
-    background: #fff; 
-    color: #000; 
-    font-size: 16px; 
+/* GRÁFICOS */
+.container-barra {
+    width: 100%;
 }
 
-.btn-gerar { 
-    width: 100%; 
-    padding: 20px; 
-    background: var(--gold); 
-    color: #000; 
-    border: none; 
-    border-radius: 10px; 
-    font-weight: bold; 
-    font-size: 20px; 
-    cursor: pointer; 
+.barra-vermelha {
+    height: 14px;
+    background: #ddd;
+    border-radius: 7px;
+    overflow: hidden;
 }
 
-/* =========================
-   RELATÓRIO
-========================= */
-.relatorio-premium { 
-    width: 100%; 
-    max-width: 850px; 
-    margin: 40px auto; 
+.progresso-vermelho {
+    height: 100%;
+    background: linear-gradient(90deg, #ff9999, #cc0000);
 }
 
-.btn-pdf { 
-    position: fixed; 
-    top: 20px; 
-    right: 20px; 
-    background: #cc0000; 
-    color: white; 
-    padding: 12px 25px; 
-    border-radius: 50px; 
-    font-weight: bold; 
-    border: none; 
-    cursor: pointer; 
-}
-
-/* =========================
-   CAPA
-========================= */
-.capa { 
-    min-height: 90vh; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    border: 10px double var(--gold); 
-    background: #000; 
-    text-align: center; 
-}
-
-.capa-cliente { 
-    font-size: 22px; 
-    text-transform: uppercase; 
-    border-top: 1px solid var(--gold); 
-    padding-top: 15px; 
-}
-
-/* =========================
-   CARDS
-========================= */
-.secao-card { 
-    background: var(--card-bg); 
-    color: var(--text); 
-    padding: 30px; 
-    margin-bottom: 25px; 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2); 
-    overflow: visible;
-}
-
-.titulo-topico { 
-    font-size: 22px; 
-    color: #000; 
-    text-transform: uppercase; 
-    border-bottom: 2px solid #eee; 
-    padding-bottom: 10px; 
-}
-
-.intro-texto { 
-    font-style: italic; 
-    color: #666; 
-    margin-bottom: 20px; 
-}
-
-.texto-res { 
-    line-height: 1.8; 
-    font-size: 15px; 
-}
-
-/* =========================
-   GRÁFICOS
-========================= */
-.barra-vermelha { 
-    height: 14px; 
-    background: #ddd; 
-    border-radius: 7px; 
-}
-
-.progresso-vermelho { 
-    height: 100%; 
-    background: linear-gradient(90deg, #ff9999, #cc0000); 
-}
-
-/* =========================
-   PIRÂMIDE
-========================= */
-.piramide { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-}
-
-.linha { 
-    display: flex; 
-    gap: 2px; 
-}
-
-.num { 
-    width: 12px; 
-    height: 12px; 
-    background: #28d3ee; 
-    font-size: 10px; 
-}
-
-.num.negativo { 
-    background: red !important; 
-    color: #fff; 
-}
-
-.num.regente-destaque {
-    background: linear-gradient(135deg, #bf953f, #fcf6ba);
-    color: #000;
-}
-
-/* =========================
-   POTÊNCIAS
-========================= */
-.secao-potencias {
-    background: #fff;
-    color: #000;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.bloco-potencia {
-    border-bottom: 1px solid #eee;
-    padding: 10px 0;
-}
-
-/* =========================
-   ABAS
-========================= */
-.tabs-planos { 
-    display: flex; 
-    gap: 5px; 
-    flex-wrap: wrap; 
-}
-
-.tab-btn { 
-    padding: 8px; 
-    border: 1px solid var(--gold); 
-    cursor: pointer; 
-}
-
-.tab-btn.active { 
-    background: var(--gold); 
-    color: #000; 
-}
-
-/* =========================
-   CAPA TRANSIÇÃO
-========================= */
-.capa-transicao {
-    min-height: 90vh;
+/* PIRÂMIDE */
+.piramide {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.linha {
+    display: flex;
+    justify-content: center;
+}
+
+.num {
+    width: 14px;
+    height: 14px;
+    background: #28d3ee;
+    font-size: 10px;
+}
+
+/* REGENTE */
+.num.regente-destaque {
+    background: gold !important;
+    color: #000 !important;
+}
+
+/* CAPAS */
+.capa,
+.capa-transicao {
+    display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;
-    border: 5px solid var(--gold);
-    text-align: center;
+    flex-direction: column;
 }
 
-.capa-transicao h2 {
-    color: var(--gold);
-    font-size: 30px;
-}
-
-.capa-transicao p {
-    color: #fff;
-    opacity: 0.7;
+/* INPUT MOBILE BUG */
+input {
+    outline: none;
+    box-shadow: none;
+    -webkit-appearance: none;
 }
 </style>
 </head>
