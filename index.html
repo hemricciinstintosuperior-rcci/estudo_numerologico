@@ -7,36 +7,14 @@
 <style>
         :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
         
-/* Ajuste para Impressão/PDF Atualizado */
-@media print {
-    /* 1. Reset total de margens do navegador */
-    @page {
-        margin: 0;
-        size: auto;
-    }
-
-    body {
-        background: white !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        width: 100% !important;
-    }
-
-    /* 2. Esconde o que não deve sair no papel */
-    .no-print, .container, .btn-pdf, .tabs-planos {
-        display: none !important;
-    }
-
-    /* 3. Força o container principal a ignorar os 850px e ocupar a tela toda */
-    .relatorio-premium {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important; /* IMPORTANTE: Remove o limite de 850px */
-        margin: 0 !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-        
-    }
+        /* Ajuste para Impressão/PDF */
+        @media print {
+            body { background: white !important; color: white !important; padding: 0 !important; }
+            .no-print, .container { display: none !important; }
+            .relatorio-premium { width: 100% !important; max-width: 100% !important; margin: 0 !important; box-shadow: none !important; }
+            .quebra-pagina { page-break-before: always; }
+            .secao-card { border: 1px solid #eee !important; break-inside: avoid; }
+        }
 
     /* 4. Ajusta os cards para ocuparem a largura total com respiro interno */
     .secao-card {
