@@ -131,9 +131,9 @@
 .linha-separadora-premium {
     border: 0;
     height: 12px;           /* Bem grossa agora */
-    background: #000080;    /* Outra forma de escrever Azul Marinho (Navy) */
+    background: #8A8A8A;    /* Outra forma de escrever Azul Marinho (Navy) */
     margin: 50px auto;      /* Espaçamento generoso */
-    width: 95%;             /* Quase a largura toda da página */
+    width: 110%;             /* Quase a largura toda da página */
     border-radius: 20px;    /* Pontas bem redondas */
     display: block;
 }
@@ -975,11 +975,11 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
         }                                    
 
         let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
-        html += `<p style="text-align:center; color:#444; font-style:italic; margin-bottom:30px;">O estudo numerológico completo parte de uma base natural, formada pelas vibrações essenciais do indivíduo, como dia de nascimento, motivação, influência, personalidade, comportamento, essência, desafios, lições e possíveis déficits. Essa estrutura representa o padrão original da pessoa, aquilo que ela carrega como tendência ao longo da vida. No entanto, além dessa base, existe a atuação dos ciclos, que introduzem energias momentâneas e modificam a forma como esses potenciais se manifestam.</p>
+        html += `<p style="text-align:center; color:#333; font-style:italic; font-size:20px; margin-bottom:30px;">O estudo numerológico completo parte de uma base natural, formada pelas vibrações essenciais do indivíduo, como dia de nascimento, motivação, influência, personalidade, comportamento, essência, desafios, lições e possíveis déficits. Essa estrutura representa o padrão original da pessoa, aquilo que ela carrega como tendência ao longo da vida. No entanto, além dessa base, existe a atuação dos ciclos, que introduzem energias momentâneas e modificam a forma como esses potenciais se manifestam.
 
-<p>Dentro de cada ciclo vigente, a pessoa passa a vivenciar uma configuração energética específica, que incide diretamente sobre os quatro estados: mental, físico, intuitivo e emocional. Essas energias não permanecem estáticas, podendo oscilar entre níveis forte, médio ou fraco conforme a combinação entre base natural e influências do momento.</p>
+Dentro de cada ciclo vigente, a pessoa passa a vivenciar uma configuração energética específica, que incide diretamente sobre os quatro estados: mental, físico, intuitivo e emocional. Essas energias não permanecem estáticas, podendo oscilar entre níveis forte, médio ou fraco conforme a combinação entre base natural e influências do momento.
 
-<p>O gráfico numerológico surge justamente da integração desses fatores, consolidando todas as informações do estudo em uma leitura objetiva. A partir de uma soma de pontuações, ele define a predominância de cada plano de expressão e apresenta, em porcentagem, qual energia está mais ativa no período atual. Dessa forma, é possível compreender com precisão o estado energético presente e como ele se relaciona com o potencial geral do indivíduo ao longo de sua jornada.</p>`;
+O gráfico numerológico surge justamente da integração desses fatores, consolidando todas as informações do estudo em uma leitura objetiva. A partir de uma soma de pontuações, ele define a predominância de cada plano de expressão e apresenta, em porcentagem, qual energia está mais ativa no período atual. Dessa forma, é possível compreender com precisão o estado energético presente e como ele se relaciona com o potencial geral do indivíduo ao longo de sua jornada.</p>`;
 
         // Reutiliza a lógica visual da gerarTodosOsGraficos original
                const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
