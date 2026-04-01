@@ -114,7 +114,7 @@
         
         .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double var(--gold); background: #000; text-align: center; margin-bottom: 20px; }
         .capa h1 { font-size: 45px; margin: 10px 0; }
-        .capa-cliente { font-size: 22px; text-transform: uppercase; border-top: 1px solid var(--gold); padding-top: 15px; width: 60%; }
+        .capa-cliente { font-size: 22px; color: #fff; text-transform: uppercase; border-top: 1px solid var(--gold); padding-top: 15px; width: 60%; }
 
         .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 .secao-card, .card { 
@@ -129,7 +129,7 @@
     
         .secao-card { background: var(--card-bg); color: var(--text); padding: 25px; border-radius: 4px; margin-bottom: 30px; border-left: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
         .titulo-topico { font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-        .intro-texto { font-style: italic; color: #444; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
+        .intro-texto { font-style: italic; color: #444;font-size: 20px; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #f0f0f0; padding-bottom: 15px; }
         .texto-res { line-height: 1.8; font-size: 18px; white-space: pre-line; }
         
         /* Gráficos dentro do card */
@@ -964,7 +964,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
 <p>O gráfico numerológico surge justamente da integração desses fatores, consolidando todas as informações do estudo em uma leitura objetiva. A partir de uma soma de pontuações, ele define a predominância de cada plano de expressão e apresenta, em porcentagem, qual energia está mais ativa no período atual. Dessa forma, é possível compreender com precisão o estado energético presente e como ele se relaciona com o potencial geral do indivíduo ao longo de sua jornada.</p>`;
 
         // Reutiliza a lógica visual da gerarTodosOsGraficos original
-        const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
+        const ordemVisual = { "Físico": "Pilar da Realização", "Emocional": "Pilar do Sentimento", "Intuitivo": "Pilar da Percepção", "Mental": "Pilar da Racionalidade" };
         
         ordemVisual.forEach(p => {
             const status = statusPlanos[p];
@@ -1145,7 +1145,7 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
                     <span style="font-weight:bold; font-size:12px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
                     <span style="font-weight:bold; color:${coresPlanos[p]};">Vibração ${reduzir(dados.soma[p])}</span>
                 </div>
-                <div style="height:8px; background:#ddd; border-radius:4px; overflow:hidden;">
+                <div style="height:8px; background:#fff; border-radius:4px; overflow:hidden;">
                     <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p]};"></div>
                 </div>
             </div>
@@ -1287,7 +1287,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
                         <span style="font-weight:bold; font-size:12px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
                         <span style="font-weight:bold; color:${coresPlanos[p] || 'var(--dark)'};">Vibração ${reduzir(somaMomento[p])}</span>
                     </div>
-                    <div style="height:8px; background:#ddd; border-radius:4px; overflow:hidden;">
+                    <div style="height:8px; background:#fff; border-radius:4px; overflow:hidden;">
                         <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p] || 'var(--dark)'};"></div>
                     </div>
                 </div>`;
