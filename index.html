@@ -35,18 +35,15 @@
 
     /* 🔥 CORREÇÃO PRINCIPAL */
     .page {
-    width: calc(100% - 2mm);
+    width: calc(100% - 3mm);
     margin: 0 auto;
-    padding: 18mm 2mm 14mm 2mm;
-
-        page-break-after: always;
-        break-after: page;
-    }
+    padding: 10mm 3mm 14mm 3mm;
+          }
 
     /* 🔥 REMOVE ALTURAS PROBLEMÁTICAS */
     .capa, .capa-transicao {
         height: auto !important;
-        min-height: 260mm; /* simula página cheia sem quebrar */
+        min-height: 250mm; /* simula página cheia sem quebrar */
         margin: 0;
         border: 10px double #d4af37;
         page-break-before: always;
