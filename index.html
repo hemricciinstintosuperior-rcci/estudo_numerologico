@@ -897,7 +897,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
             
             htmlFinal += `
-                <div style="margin-bottom: 40px; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
+                <div style="margin-top: 20px; margin-bottom: 40px; break-inside: avoid;  border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid ${cor}; padding-bottom: 12px; margin-bottom: 20px;">
                         <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:19px; font-weight:bold;">${legendas[p]}</h3>
                         <span style="font-size:11px; font-weight:bold; background:${cor}; color:#fff; padding:4px 14px; border-radius:20px; text-transform:uppercase;">${status}</span>
@@ -1014,7 +1014,7 @@ function montarBarraGrafico(item) {
     let corBarra = item.nota >= 7.5 ? "#2e7d32" : (item.nota >= 5.0 ? "#827108" : "#cc0000");
     
     return `
-        <div class="container-barra" style="margin-bottom: 15px; width: 100%;">
+        <div class="container-barra" style="margin-bottom: 15px; width: 100%; break-inside: avoid; page-break-inside: avoid; padding-top: 10px;">
             <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px;">
                 <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
                 <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
