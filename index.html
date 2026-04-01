@@ -11,7 +11,7 @@
 
     @page {
         size: A4;
-        margin: 15mm 10mm; /* equilíbrio perfeito PDF + impressão */
+        margin: 20mm 3mm  15mm  3mm; /* equilíbrio perfeito PDF + impressão */
     }
 
     body {
@@ -1014,26 +1014,28 @@ function montarBarraGrafico(item) {
     let corBarra = item.nota >= 7.5 ? "#2e7d32" : (item.nota >= 5.0 ? "#827108" : "#cc0000");
     
     return `
-        <div class="container-barra" style="margin-bottom: 15px; width: 100%; break-inside: avoid; page-break-inside: avoid; padding-top: 10px;">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 13px;">
-                <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
-                <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
-            </div>
-            <div style="height: 12px; background: #ececec; border-radius: 6px; width: 100%; position: relative; overflow: hidden;">
-                <div style="
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: ${item.percentual}%; 
-                    height: 100% !important; 
-                    background-color: ${corBarra} !important; 
-                    border-radius: 6px;
-                    display: block !important;
-                    min-height: 12px !important;
-                "></div>
-            </div>
+
+    
+    <div class="container-barra" style="margin-bottom: 20px; width: 100%; break-inside: avoid; page-break-inside: avoid; padding-top: 10px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 13px;">
+            <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
+            <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
         </div>
-    `;
+        <div style="height: 12px; background: #ececec; border-radius: 6px; width: 100%; position: relative; overflow: hidden;">
+            <div style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: ${item.percentual}%; 
+                height: 100% !important; 
+                background-color: ${corBarra} !important; 
+                border-radius: 6px;
+                display: block !important;
+                min-height: 12px !important;
+            "></div>
+        </div>
+    </div>
+`;
 }
 
 function calcularDadosPlanos(nome) {
