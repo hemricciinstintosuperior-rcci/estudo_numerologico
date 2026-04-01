@@ -1681,7 +1681,7 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 
   
 `;
- html += <hr class="linha-separadora-premium">; 
+ html += `<hr class="linha-separadora-premium">`; 
 html += `
     <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Análise de Potenciais</h2>
@@ -1706,7 +1706,7 @@ const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", 
 
 listaPremium.forEach(chave => {
     const tituloBonito = nomesExibicao[chave] || chave;
-     html += <hr class="linha-separadora-premium">; 
+     html += `<hr class="linha-separadora-premium">`; 
     html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
@@ -1728,7 +1728,7 @@ html += `
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
     </div>
 `;
- html += <hr class="linha-separadora-premium">; 
+  html += `<hr class="linha-separadora-premium">`; 
 // A. LIÇÕES CÁRMICAS
 html += `
     <div class="page">
@@ -1742,7 +1742,7 @@ if (res.deficiencias.length > 0) {
 } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
 html += `</div>`;
     
- html += <hr class="linha-separadora-premium">; 
+ html += `<hr class="linha-separadora-premium">`; 
 // B. DÉFICITS DE COMPORTAMENTO
 html += `
     <div class="page">
@@ -1763,7 +1763,7 @@ html += `</div>`;
 const dadosDesejo = calcularDesejoOculto(nomeRaw);
 const primeiroNome = nomeRaw.split(' ')[0];
 const talentoNum = calcularTalentoEspecial(primeiroNome);
- html += <hr class="linha-separadora-premium">; 
+  html += `<hr class="linha-separadora-premium">`; 
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Seu Desejo Oculto</h2>
@@ -1812,7 +1812,7 @@ itensAlinhamento.forEach(chave => {
     } else {
         conteudoFinal = `<div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
     }
- html += <hr class="linha-separadora-premium">; 
+  html += `<hr class="linha-separadora-premium">`; 
     html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
@@ -1822,7 +1822,7 @@ itensAlinhamento.forEach(chave => {
     `;
 });
 
- html += <hr class="linha-separadora-premium">; 
+  html += `<hr class="linha-separadora-premium">`; 
 // --- INSERINDO O DESAFIO PRINCIPAL NO PILAR 03 ---
 html += `
     <div class="page">
@@ -1849,7 +1849,7 @@ html += `
             // 5. CICLOS, MOMENTOS E DESAFIOS
 // 5. CICLOS, MOMENTOS E DESAFIOS
 ["ciclos", "momentos", "desafios"].forEach(sec => {
-     html += <hr class="linha-separadora-premium">; 
+      html += `<hr class="linha-separadora-premium">`; 
     html += `
         <div class="page">
             <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">${sec}</h2>
@@ -1887,7 +1887,7 @@ html += `
 
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
- html += <hr class="linha-separadora-premium">;     
+  html += `<hr class="linha-separadora-premium">`;   
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloMat}</h2>
@@ -1952,7 +1952,7 @@ if (dataRaw) {
 // Se o atual é 9, o próximo é 1. Caso contrário, é apenas +1.
 let proximoAnoPessoal = parseInt(res.anoPessoal) + 1;
 if (proximoAnoPessoal > 9) proximoAnoPessoal = 1;
- html += <hr class="linha-separadora-premium">; 
+ html += `<hr class="linha-separadora-premium">`; 
 // --- BLOCO DO ANO PESSOAL (CICLO ATUAL) ---
 html += `
 <div class="page">
@@ -2030,7 +2030,7 @@ htmlPiramide += `</div>
     <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
 
 if(dadosNegativas.detalhes.length > 0){
-     html += <hr class="linha-separadora-premium">; 
+  html += `<hr class="linha-separadora-premium">`; 
     htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade </h3>`;
     
     const arcanosTopo = topo(piramideVida[0]);
@@ -2053,7 +2053,7 @@ if(dadosNegativas.detalhes.length > 0){
         }
 
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
- html += <hr class="linha-separadora-premium">; 
+ 
         htmlPiramide += `
             <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: center;">
                 <b style="color:red; font-size: 18px;">Bloqueio n°  ${neg.numero}</b><br>
@@ -2095,10 +2095,10 @@ while (idadeAcumulada < 100) {
                     <h3 style="color: #827108; font-size: 18px; margin: 0;">Potência ${p} ✡︎</h3>
                     ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
                 </div>
-                <div style="font-size: 11px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
+                <div style="font-size: 14px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
-                <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#444;'}">
+                <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#222;'}">
                     ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
                 </div>
             </div>`;
