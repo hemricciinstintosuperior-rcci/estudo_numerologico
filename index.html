@@ -899,8 +899,15 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
                     percentual: (notaFinal * 10).toFixed(1)
                 });
             }
-        }                                         
-
+        }       
+        
+       html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
         let htmlFinal = `<h2 style="color:#827108; text-align:center; margin:10px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais de Nascimento</h2>`;
 
         const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"].sort((a, b) => {
@@ -913,13 +920,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         ordemVisual.forEach(p => {
             const status = statusPlanos[p];
             const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
-            html += `
-    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
-        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
-        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
-        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
-    </div>
-`;
+
             htmlFinal += `
                 <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid;  border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid ${cor}; padding-bottom: 12px; margin-bottom: 20px;">
@@ -978,9 +979,8 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                     percentual: (notaFinal * 10).toFixed(1)
                 });
             }
-        }                                    
-
-        let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
+        }   
+        
        html += `
     <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
         <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
@@ -988,6 +988,8 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
         <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
     </div>
 `;
+        let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
+
         html += `<p style="text-align:center; color:#333; font-style:italic; font-size:20px; margin-bottom:30px;">O estudo numerológico completo parte de uma base natural, formada pelas vibrações essenciais do indivíduo, como dia de nascimento, motivação, influência, personalidade, comportamento, essência, desafios, lições e possíveis déficits. Essa estrutura representa o padrão original da pessoa, aquilo que ela carrega como tendência ao longo da vida. No entanto, além dessa base, existe a atuação dos ciclos, que introduzem energias momentâneas e modificam a forma como esses potenciais se manifestam.
 
 Dentro de cada ciclo vigente, a pessoa passa a vivenciar uma configuração energética específica, que incide diretamente sobre os quatro estados: mental, físico, intuitivo e emocional. Essas energias não permanecem estáticas, podendo oscilar entre níveis forte, médio ou fraco conforme a combinação entre base natural e influências do momento.
@@ -1144,6 +1146,7 @@ Agindo por interesses próprios, você raramente sai da zona de conforto, manten
 Com facilidade de adaptação, **você** mantém o autocontrole em situações difíceis, preferindo rotinas pacíficas. 
 No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, mantendo-se neutro e com baixa inclinação criativa.</p>`
     };
+    
 
     let html = `
         <div class="secao-card quebra-pagina">
@@ -1289,6 +1292,14 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             neutro: `<p>"Este ano sua ação prioriza o equilíbrio, a observação e a Neutralidade"</p><p>Sua postura atual é de 'esperar para ver'. Você prefere analisar o terreno antes de dar qualquer passo importante, agindo com máxima prudência.</p>`
         };
 
+        
+       html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
         let h = `
         <div class="secao-card quebra-pagina">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloSecao}</h2>
