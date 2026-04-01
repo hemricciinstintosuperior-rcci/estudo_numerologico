@@ -901,13 +901,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             }
         }       
         
-       html += `
-    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
-        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
-        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
-        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
-    </div>
-`;
+
         let htmlFinal = `<h2 style="color:#827108; text-align:center; margin:10px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais de Nascimento</h2>`;
 
         const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"].sort((a, b) => {
@@ -981,13 +975,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             }
         }   
         
-       html += `
-    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
-        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
-        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
-        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
-    </div>
-`;
+
         let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
 
         html += `<p style="text-align:center; color:#333; font-style:italic; font-size:20px; margin-bottom:30px;">O estudo numerológico completo parte de uma base natural, formada pelas vibrações essenciais do indivíduo, como dia de nascimento, motivação, influência, personalidade, comportamento, essência, desafios, lições e possíveis déficits. Essa estrutura representa o padrão original da pessoa, aquilo que ela carrega como tendência ao longo da vida. No entanto, além dessa base, existe a atuação dos ciclos, que introduzem energias momentâneas e modificam a forma como esses potenciais se manifestam.
@@ -1293,13 +1281,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
         };
 
         
-       html += `
-    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
-        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
-        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
-        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
-    </div>
-`;
+
         let h = `
         <div class="secao-card quebra-pagina">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloSecao}</h2>
@@ -2163,13 +2145,13 @@ while (idadeAcumulada < 100) {
         htmlPotenciasCalculadas += `
             <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 15px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 10px; opacity: 0.7;'}">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <h3 style="color: #827108; font-size: 18px; margin: 0;">Potência ${p} ✡︎</h3>
+                    <h3 style="color: #827108; font-size: 20px; margin: 0;">Potência ${p} ✡︎</h3>
                     ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
                 </div>
                 <div style="font-size: 14px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
-                <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#222;'}">
+                <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#111;'}">
                     ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
                 </div>
             </div>`;
