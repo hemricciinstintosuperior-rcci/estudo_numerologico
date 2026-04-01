@@ -133,7 +133,7 @@
     height: 12px;           /* Bem grossa agora */
     background: #8A8A8A;    /* Outra forma de escrever Azul Marinho (Navy) */
     margin: 50px auto;      /* Espaçamento generoso */
-    width: 110%;             /* Quase a largura toda da página */
+    width: 100%;             /* Quase a largura toda da página */
     border-radius: 20px;    /* Pontas bem redondas */
     display: block;
 }
@@ -1914,7 +1914,7 @@ const resultadoMomentoCompleto = montarHtmlPlanosMomento(
     regenteVida, 
     dadosNegativas.nums
 );
-
+html += `<hr class="linha-separadora-premium">`;  
 // 2. Como o gráfico já está embutido no HTML da função, basta somar o resultado
 html += resultadoMomentoCompleto.html;
 
@@ -2029,7 +2029,7 @@ htmlPiramide += `</div>
     <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
 
 if(dadosNegativas.detalhes.length > 0){
-  html += `<hr class="linha-separadora-premium">`; 
+ 
     htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade </h3>`;
     
     const arcanosTopo = topo(piramideVida[0]);
