@@ -908,7 +908,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
             subgrupos.forEach(sub => {
-                htmlFinal += `<h4 style="color:#888; font-size:12px; text-transform:uppercase; margin: 20px 0 15px 0;">${sub}</h4>`;
+                htmlFinal += `<h4 style="color:#666; font-size:18px; text-transform:uppercase; margin: 20px 0 15px 0;">${sub}</h4>`;
                 atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
                     if (typeof montarBarraGrafico === 'function') htmlFinal += montarBarraGrafico(item);
                 });
