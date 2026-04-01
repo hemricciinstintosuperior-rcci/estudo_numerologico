@@ -900,7 +900,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
                 <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid;  border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid ${cor}; padding-bottom: 12px; margin-bottom: 20px;">
                         <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:20px; font-weight:bold;">${legendas[p]}</h3>
-                        <span style="font-size:14px; font-weight:bold; background:${cor}; color:#fff; padding:4px 14px; border-radius:20px; text-transform:uppercase;">${status}</span>
+                        <span style="font-size:16px; font-weight:bold; background:${cor}; color:#fff; padding:4px 14px; border-radius:20px; text-transform:uppercase;">${status}</span>
                     </div>
             `;
 
@@ -971,7 +971,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             html += `
                 <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 20px;">
-                        <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:17px;">${p} <small style="color:#999;">(Tendência de Momento)</small></h3>
+                        <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:19px;">${p} <small style="color:#444;">(Tendência de Momento)</small></h3>
                         <span style="font-size:16px; font-weight:bold; background:${cor}; color:#fff; padding:3px 10px; border-radius:15px; text-transform:uppercase;">${status}</span>
                     </div>
             `;
@@ -1021,7 +1021,7 @@ function montarBarraGrafico(item) {
             <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
             <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
         </div>
-        <div style="height: 16px; background: #fff; border-radius: 6px; width: 100%; position: relative; overflow: hidden;">
+        <div style="height: 16px; background: #F2F2F2; border-radius: 6px; width: 100%; position: relative; overflow: hidden;">
             <div style="
                 position: absolute;
                 top: 0;
