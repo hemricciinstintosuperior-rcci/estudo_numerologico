@@ -913,7 +913,13 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         ordemVisual.forEach(p => {
             const status = statusPlanos[p];
             const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
-            
+            html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
             htmlFinal += `
                 <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid;  border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid ${cor}; padding-bottom: 12px; margin-bottom: 20px;">
@@ -975,6 +981,13 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
         }                                    
 
         let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
+       html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
         html += `<p style="text-align:center; color:#333; font-style:italic; font-size:20px; margin-bottom:30px;">O estudo numerológico completo parte de uma base natural, formada pelas vibrações essenciais do indivíduo, como dia de nascimento, motivação, influência, personalidade, comportamento, essência, desafios, lições e possíveis déficits. Essa estrutura representa o padrão original da pessoa, aquilo que ela carrega como tendência ao longo da vida. No entanto, além dessa base, existe a atuação dos ciclos, que introduzem energias momentâneas e modificam a forma como esses potenciais se manifestam.
 
 Dentro de cada ciclo vigente, a pessoa passa a vivenciar uma configuração energética específica, que incide diretamente sobre os quatro estados: mental, físico, intuitivo e emocional. Essas energias não permanecem estáticas, podendo oscilar entre níveis forte, médio ou fraco conforme a combinação entre base natural e influências do momento.
@@ -1680,7 +1693,13 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 
   
 `;
- html += `<hr class="linha-separadora-premium">`; 
+html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
 html += `
     <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Análise de Potenciais</h2>
@@ -1705,7 +1724,13 @@ const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", 
 
 listaPremium.forEach(chave => {
     const tituloBonito = nomesExibicao[chave] || chave;
-     html += `<hr class="linha-separadora-premium">`; 
+    html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
     html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
@@ -1727,7 +1752,7 @@ html += `
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
     </div>
 `;
-  html += `<hr class="linha-separadora-premium">`; 
+
 // A. LIÇÕES CÁRMICAS
 html += `
     <div class="page">
@@ -1741,7 +1766,13 @@ if (res.deficiencias.length > 0) {
 } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
 html += `</div>`;
     
- html += `<hr class="linha-separadora-premium">`; 
+html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
 // B. DÉFICITS DE COMPORTAMENTO
 html += `
     <div class="page">
@@ -1762,7 +1793,13 @@ html += `</div>`;
 const dadosDesejo = calcularDesejoOculto(nomeRaw);
 const primeiroNome = nomeRaw.split(' ')[0];
 const talentoNum = calcularTalentoEspecial(primeiroNome);
-  html += `<hr class="linha-separadora-premium">`; 
+  html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Seu Desejo Oculto</h2>
@@ -1811,7 +1848,13 @@ itensAlinhamento.forEach(chave => {
     } else {
         conteudoFinal = `<div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
     }
-  html += `<hr class="linha-separadora-premium">`; 
+  html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
     html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
@@ -1821,7 +1864,13 @@ itensAlinhamento.forEach(chave => {
     `;
 });
 
-  html += `<hr class="linha-separadora-premium">`; 
+  html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
 // --- INSERINDO O DESAFIO PRINCIPAL NO PILAR 03 ---
 html += `
     <div class="page">
@@ -1848,7 +1897,13 @@ html += `
             // 5. CICLOS, MOMENTOS E DESAFIOS
 // 5. CICLOS, MOMENTOS E DESAFIOS
 ["ciclos", "momentos", "desafios"].forEach(sec => {
-      html += `<hr class="linha-separadora-premium">`; 
+     html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
     html += `
         <div class="page">
             <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">${sec}</h2>
@@ -1886,7 +1941,13 @@ html += `
 
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
-  html += `<hr class="linha-separadora-premium">`;   
+  html += `
+    <div style="display: flex; align-items: center; justify-content: center; margin: 60px 0;">
+        <div style="flex: 1; height: 2px; background: linear-gradient(to left, navy, transparent);"></div>
+        <div style="width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); margin: 0 15px; box-shadow: 0 0 8px var(--gold);"></div>
+        <div style="flex: 1; height: 2px; background: linear-gradient(to right, navy, transparent);"></div>
+    </div>
+`;
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloMat}</h2>
@@ -1914,7 +1975,7 @@ const resultadoMomentoCompleto = montarHtmlPlanosMomento(
     regenteVida, 
     dadosNegativas.nums
 );
-html += `<hr class="linha-separadora-premium">`;  
+
 // 2. Como o gráfico já está embutido no HTML da função, basta somar o resultado
 html += resultadoMomentoCompleto.html;
 
