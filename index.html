@@ -26,7 +26,7 @@
     }
 
     .relatorio-premium {
-        width: 100% !important;
+        width: 150% !important;
         margin: 0 !important;
         padding: 0 !important;
         box-shadow: none !important;
@@ -43,7 +43,7 @@
     /* 🔥 REMOVE ALTURAS PROBLEMÁTICAS */
     .capa, .capa-transicao {
         height: auto !important;
-        min-height: 250mm; /* simula página cheia sem quebrar */
+        min-height: 260mm; /* simula página cheia sem quebrar */
         margin: 0;
         border: 10px double #d4af37;
         page-break-before: always;
@@ -56,7 +56,7 @@
     .bloco-potencia {
         page-break-inside: avoid;
         break-inside: avoid;
-         max-width: 100%;
+         max-width: 150%;
     }
 
     h1, h2, h3 {
@@ -76,7 +76,7 @@
 
 html, body {
     width: 100%;
-    max-width: 100%;
+    max-width: 150%;
 }
     
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #fff; margin: 0; padding: 0; display: block;  }
@@ -98,14 +98,14 @@ html, body {
     box-sizing: border-box;
 }    
         /* Container de Entrada */
-        .container { width: 130%; max-width: 650px; background: #111; padding: 25px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 30px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
+        .container { width: 150%; max-width: 650px; background: #111; padding: 25px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 30px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
         h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
         input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #fff; color: #000; font-size: 16px; box-sizing: border-box; }
         .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
 
         /* Estrutura do Relatório */
        .relatorio-premium { 
-    width: 130%;
+    width: 100%;
     max-width: none;        /* 🔥 remove limite */
     margin: 25px 0;         /* 🔥 tira centralização */
     background: transparent;
