@@ -908,7 +908,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
             subgrupos.forEach(sub => {
-                htmlFinal += `<h4 style="color:#666; font-size:18px; text-transform:uppercase; margin: 20px 0 15px 0;">${sub}</h4>`;
+                htmlFinal += `<h4 style="color:#666; font-size:18px; text-transform:uppercase; margin: 15px 0 10px 0;">${sub}</h4>`;
                 atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
                     if (typeof montarBarraGrafico === 'function') htmlFinal += montarBarraGrafico(item);
                 });
@@ -956,7 +956,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             }
         }                                    
 
-        let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:50px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
+        let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
         html += `<p style="text-align:center; color:#444; font-style:italic; margin-bottom:30px;">Esta análise cruza sua natureza com as vibrações do seu Momento. 
         
         O Ano Pessoal, Trânsito, Energia dos planos, Potências Numéricas da Matriz e Desafios atuais.</p>`;
@@ -980,7 +980,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
             subgrupos.forEach(sub => {
-                html += `<h4 style="color:#aaa; font-size:11px; text-transform:uppercase; margin: 15px 0 10px 0;">${sub}</h4>`;
+                html += `<h4 style="color:#666; font-size:18px; text-transform:uppercase; margin: 15px 0 10px 0;">${sub}</h4>`;
                 atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
                     html += montarBarraGrafico(item);
                 });
@@ -1017,7 +1017,7 @@ function montarBarraGrafico(item) {
 
     
     <div class="container-barra" style="margin-bottom: 30px; width: 100%; break-inside: avoid; page-break-inside: avoid; padding-top: 20px;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 16px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 16px;">
             <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
             <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
         </div>
