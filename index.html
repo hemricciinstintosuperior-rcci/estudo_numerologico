@@ -161,6 +161,16 @@
 .num.negativo { background-color: #FF0000 !important; color: #ffffff !important; }
 .bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
 
+    .container-piramide {
+        page-break-inside: avoid !important; /* Impede que quebre no meio */
+        break-inside: avoid !important;      /* Reforço para navegadores modernos */
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    
   /* Estilo Premium para a Seção de Potências */
 .secao-potencias {
     background: #ffffff;
@@ -2200,7 +2210,7 @@ html += `
     
     // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
-<div class="page">
+<div class="page bloco-impenetravel">
     <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
     
     <div class="intro-texto">${textos.introducoes.piramide}</div>
