@@ -2350,8 +2350,11 @@ htmlPiramide += `<h4 style="color:black; margin-top: 60px; margin-bottom: 30px; 
         htmlPiramide += `
             <div style="margin-bottom: 25px; border-left: none; padding-left: 15px; text-align: left;">
                 <b style="color:red; font-size: 24px;">Bloqueio n°  ${neg.numero}</b><br>
+                
                 <span style="color:#111; font-weight: bold;">📅 Período: de ${datas.ini} até ${datas.fim}</span><br>
+                
                 <span style="color:#111; font-weight: bold;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span>
+                
                 <p style="margin-top: 8px; color: #111;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
             </div>`;
     });
@@ -2393,6 +2396,7 @@ while (idadeAcumulada < 100) {
                     <h3 style="color: #827108; font-size: 24px; margin: 0;">Potência ${p} ✡︎</h3>
                     ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
                 </div>
+                
                 <div style="font-size: 20px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
