@@ -2324,7 +2324,7 @@ if(dadosNegativas.detalhes.length > 0){
     </div>`;
     
    // Aumentei o margin-top para 60px
-htmlPiramide += `<h4 style="color:black; margin-top: 60px; margin-bottom: 30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">`;
+htmlPiramide += `<h4 style="color:black; margin-top: 60px; margin-bottom: 30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;"></h4>`;
     
     const arcanosTopo = topo(piramideVida[0]);
 
@@ -2332,13 +2332,11 @@ htmlPiramide += `<h4 style="color:black; margin-top: 60px; margin-bottom: 30px; 
         let idadeInicio = 0;
         let duracaoTotal = 0;
 
-        // 1. Soma as durações de todas as colunas ANTES da sequência começar
         for (let a = 0; a < neg.colunaInicio; a++) {
             let arcRef = arcanosTopo[a] || arcanosTopo[arcanosTopo.length - 1];
             idadeInicio += parseInt(arcRef.toString()[0]) || 1;
         }
 
-        // 2. Soma a duração das colunas que a sequência OCUPA na pirâmide
         for (let b = 0; b < neg.repeticoes; b++) {
             let colReal = neg.colunaInicio + b;
             let arcAtual = arcanosTopo[colReal] || arcanosTopo[arcanosTopo.length - 1];
@@ -2347,65 +2345,54 @@ htmlPiramide += `<h4 style="color:black; margin-top: 60px; margin-bottom: 30px; 
 
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
+        // AQUI ESTAVA O ERRO: Divs e Spans sem fechamento
         htmlPiramide += `
-            <div style="margin-bottom: 25px; border-left: none; padding-left: 15px; text-align: left;">
-                <b style="color:red; font-size: 24px;">Bloqueio n°  ${neg.numero}</b><br></div>
+            <div style="margin-bottom: 35px; text-align: left; clear: both;">
+                <b style="color:red; font-size: 24px; display: block; margin-bottom: 10px;">Bloqueio n° ${neg.numero}</b>
                 
-                <span style="color:#111; font-weight: bold;">📅 Período: de ${datas.ini} até ${datas.fim}</span><br>
+                <span style="color:#111; font-weight: bold; font-size: 18px; display: block;">📅 Período: de ${datas.ini} até ${datas.fim}</span>
                 
-                <span style="color:#111; font-weight: bold;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span>
-                <p style="margin-top: 8px; color: #111;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
+                <span style="color:#444; font-weight: bold; font-size: 16px; display: block; margin-bottom: 10px;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos)</span>
+                
+                <div class="texto-res" style="color: #111; font-size: 18px;">
+                    ${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}
+                </div>
             </div>`;
     });
 }
-htmlPiramide += `</div>`;
 
-
-
-
-    
-
-// --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
-const potenciasTopo = topo(piramideVida[0]); // As potências originais do nome
-const dataEntrada = document.getElementById("data").value;
-const anoNascPot = new Date(dataEntrada).getUTCFullYear();
-
-let htmlPotenciasCalculadas = "";
-let idadeAcumulada = 0;
-let indiceLoop = 0;
-
-// O loop continua enquanto a idade acumulada não atingir 100 anos
+// --- BLOCO DAS POTÊNCIAS CORRIGIDO ---
 while (idadeAcumulada < 100) {
-        const p = potenciasTopo[indiceLoop % potenciasTopo.length];
-        const duracaoAnos = parseInt(p.toString()[0]) || 1; 
-        
-        const idadeInicio = idadeAcumulada;
-        const idadeFim = idadeAcumulada + duracaoAnos;
+    const p = potenciasTopo[indiceLoop % potenciasTopo.length];
+    const duracaoAnos = parseInt(p.toString()[0]) || 1; 
+    
+    const idadeInicio = idadeAcumulada;
+    const idadeFim = idadeAcumulada + duracaoAnos;
+    const potenciaAtivaAgora = (idadeCronologica >= idadeInicio && idadeCronologica < idadeFim);
 
-        // AQUI É A ÚNICA MUDANÇA: O ALINHAMENTO VISUAL
-        const potenciaAtivaAgora = (idadeCronologica >= idadeInicio && idadeCronologica < idadeFim);
+    const dataIniPot = new Date(dtNasci.getFullYear() + idadeInicio, dtNasci.getMonth(), dtNasci.getDate());
+    const dataFimPot = new Date(dtNasci.getFullYear() + idadeFim, dtNasci.getMonth(), dtNasci.getDate());
 
-        // Datas baseadas no nascimento (mantendo o seu padrão)
-        const dataIniPot = new Date(dtNasci.getFullYear() + idadeInicio, dtNasci.getMonth(), dtNasci.getDate());
-        const dataFimPot = new Date(dtNasci.getFullYear() + idadeFim, dtNasci.getMonth(), dtNasci.getDate());
+    // CORREÇÃO: Fechamento das divs internas e do título
+    htmlPotenciasCalculadas += `
+        <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 20px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 15px; opacity: 0.8;'} margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <h3 style="color: #827108; font-size: 24px; margin: 0;">Potência ${p} ✡︎</h3>
+                ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:11px; padding:4px 12px; border-radius:10px; font-weight:bold;">ATIVO NESTE CICLO</span>' : ''}
+            </div>
+            
+            <div style="font-size: 18px; color: #b8860b; margin-bottom: 10px; font-weight: bold;">
+                📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
+            </div>
 
-        htmlPotenciasCalculadas += `
-            <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 15px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 10px; opacity: 0.7;'}">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <h3 style="color: #827108; font-size: 24px; margin: 0;">Potência ${p} ✡︎</h3>
-                    ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
-                               
-                <div style="font-size: 20px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
-                    📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
-                
-                <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#111;'}">
-                    ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
-                </div>
-            </div>`;
-        
-        idadeAcumulada = idadeFim;
-        indiceLoop++;
-    }     
+            <div class="texto-res" style="font-size: 18px; color: #111; line-height: 1.6;">
+                ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
+            </div>
+        </div>`;
+    
+    idadeAcumulada = idadeFim;
+    indiceLoop++;
+}
 // --- TRECHO DAS CAIXINHAS DOURADAS (VITRINE) ---
 let htmlCaixinhas = `<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">`;
 potenciasTopo.forEach(p => {
