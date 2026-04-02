@@ -2245,7 +2245,7 @@ if(dadosNegativas.detalhes.length > 0){
 
 
     
-    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">⚠️ Sequências de Vulnerabilidade </h3>`;
+    htmlPiramide += `<h2 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">⚠️ Sequências de Vulnerabilidade </h2>`;
     
     const arcanosTopo = topo(piramideVida[0]);
 
@@ -2343,9 +2343,12 @@ htmlCaixinhas += `</div>`;
 htmlPiramide += `
     <div class="secao-potencias" style="background: #fff; color: #000; padding: 25px; border-radius: 8px; border: 1px solid #827108; margin-top: 25px;">  
         <h2 style="color: #827108; text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #827108; padding-bottom: 10px;">⚡ Ciclos das Potências Numéricas</h2>
-        <p style="text-align: center; font-style: italic; color: #333; margin-bottom: 20px;">As potencias refletem suas mudanças e influências internas. O nome que lhe foi dado ao nascer; pode ser visto e lido da mesma forma como se lê uma partitura musical; sua vida pode ser visualizada através das letras de seu nome, da mesma forma como uma sequência de notas se apresenta em uma partitura musical; onde cada letra individualmente pode ser vista como uma nota que é entonada em um momento específico, com uma determinada intensidade e característica.
-Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. Horas mais intensa, em outra mais amena ou tênue.</p> <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 20px;"> Professor e Físico "Reinaldo Martins Garcia". 
-</p>
+       
+        <p style="text-align: center; font-size: 20px; font-style: italic; color: #222; margin-bottom: 20px;">As potencias refletem suas mudanças e influências internas. O nome que lhe foi dado ao nascer; pode ser visto e lido da mesma forma como se lê uma partitura musical; sua vida pode ser visualizada através das letras de seu nome, da mesma forma como uma sequência de notas se apresenta em uma partitura musical; onde cada letra individualmente pode ser vista como uma nota que é entonada em um momento específico, com uma determinada intensidade e característica.</p>
+ 
+ <p style="text-align: center; font-size: 20px; font-style: italic; color: #222; margin-bottom: 20px;">Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. Horas mais intensa, em outra mais amena ou tênue.</p>
+ 
+ <p style="text-align: center; font-size: 20px; font-style: italic; color: #444; margin-bottom: 20px;"> Professor e Físico "Reinaldo Martins Garcia".</p>
           ${htmlCaixinhas} 
         ${htmlPotenciasCalculadas}
     </div>
@@ -2369,6 +2372,18 @@ html += `
     </div>
 `;
 
+
+// Crie esta linha logo ACIMA do código da ondinha:
+ tituloBonito = "Conclusão e Direcionamento"; 
+ // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;    
+   
 // --- BLOCO DE CONCLUSÃO E DIRECIONAMENTO FINAL ---
 html += `
 <div class="secao-card quebra-pagina" style="margin-top: 50px; border: 3px solid var(--dark); background: #fdfdfd; padding: 40px; border-radius: 15px; position: relative; overflow: hidden;">
@@ -2391,7 +2406,19 @@ html += `
     </div>
 </div>
 `;
-    
+
+
+
+// Crie esta linha logo ACIMA do código da ondinha:
+ tituloBonito = "Agradecimento "; 
+ // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;    
 // 6. CONCLUSÃO E RODAPÉ FINAL DE GALA
 html += `
     <div class="secao-card quebra-pagina" style="text-align:center; border: 2px solid var(--gold); padding: 60px 40px; background: #fff; position: relative;">
