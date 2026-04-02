@@ -301,7 +301,31 @@
         line-height: 1; /* Evita que o texto suba ou desça demais */
     }
 
-    
+        /* PADRÃO PARA TODAS AS INTRODUÇÕES */
+    .intro-texto, .intro-secao {
+        font-size: 18px !important; /* Tamanho fixo para todas */
+        line-height: 1.6 !important;
+        color: #444 !important;
+        text-align: justify !important;
+        margin-bottom: 30px !important;
+        font-family: 'Arial', sans-serif; /* Ou a fonte de sua preferência */
+        font-style: italic;
+    }
+
+    /* PADRÃO PARA TODOS OS RESULTADOS (CONTEÚDO BRUTO) */
+    .texto-res {
+        font-size: 19px !important; /* Um pouquinho maior que a intro para dar peso */
+        line-height: 1.8 !important;
+        color: #111 !important;
+        text-align: justify !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* FORÇAR PARÁGRAFOS DENTRO DOS RESULTADOS */
+    .texto-res p, .intro-texto p {
+        font-size: inherit !important; /* Herda o tamanho da classe pai */
+        margin-bottom: 15px !important;
+    }
 
 input {
     outline: none !important; /* Tira o traço de seleção ao clicar */
