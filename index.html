@@ -2347,7 +2347,7 @@ if(dadosNegativas.detalhes.length > 0){
 
         htmlPiramide += `
             <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
-               <span  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}</span></b><br>
+               <h3  style="color:red; font-size: 24px;">Bloqueio n°  ${neg.numero}</h3></b><br>
                 <span style="color:#111; font-weight: bold;">📅 Período mais intenso: de ${datas.ini} até ${datas.fim}</span><br><br>
                 <span style="color:#111; font-weight: bold;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                 <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
@@ -2387,7 +2387,7 @@ while (idadeAcumulada < 100) {
                     ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
                 </div>
 
-                <div style="font-size: 18px; color: #827108; margin-top: 10px; font-weight: bold;">
+                <div style="font-size: 20px; color: #827108; margin-top: 10px; font-weight: bold;">
     ⏳ Ciclo: dos ${idadeInicio} aos ${idadeFim} anos
 </div>
 
