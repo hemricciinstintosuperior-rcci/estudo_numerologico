@@ -266,7 +266,7 @@
     }
 
     .separador-luxo h2 {
-        color: #fff !important;
+        color: #DEBF00 !important;
         font-size: 1.8rem !important;
         text-transform: uppercase !important;
         letter-spacing: 5px !important;
@@ -2138,13 +2138,7 @@ let proximoAnoPessoal = parseInt(res.anoPessoal) + 1;
 if (proximoAnoPessoal > 9) proximoAnoPessoal = 1;
 
 
-  html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
+
 // --- BLOCO DO ANO PESSOAL (CICLO ATUAL) ---
 html += `
 <div class="page mostrar-titulo">
@@ -2163,18 +2157,8 @@ html += `
 
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
     </div>
-</div>`
+</div> 
 
-
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
-    
-html += `
 <div class="page mostrar-titulo" style="margin-top: 40px; border-top: 1px dashed var(--gold);">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Próximo Ciclo</h2>
     
