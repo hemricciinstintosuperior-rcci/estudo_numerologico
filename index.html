@@ -1686,14 +1686,34 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 
   
 `;
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+
+    
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+
+    
 html += `
     <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Análise de Potenciais</h2>
@@ -1718,14 +1738,35 @@ const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", 
 
 listaPremium.forEach(chave => {
     const tituloBonito = nomesExibicao[chave] || chave;
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+
+    
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+
+
+    
     html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
@@ -1761,14 +1802,30 @@ if (res.deficiencias.length > 0) {
 } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
 html += `</div>`;
     
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
 // B. DÉFICITS DE COMPORTAMENTO
 html += `
     <div class="page">
@@ -1789,14 +1846,32 @@ html += `</div>`;
 const dadosDesejo = calcularDesejoOculto(nomeRaw);
 const primeiroNome = nomeRaw.split(' ')[0];
 const talentoNum = calcularTalentoEspecial(primeiroNome);
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+    
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+    
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Seu Desejo Oculto</h2>
@@ -1845,14 +1920,34 @@ itensAlinhamento.forEach(chave => {
     } else {
         conteudoFinal = `<div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
     }
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+
+    
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+
+    
     html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
@@ -1862,14 +1957,32 @@ html += `
     `;
 });
 
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+
+    
 // --- INSERINDO O DESAFIO PRINCIPAL NO PILAR 03 ---
 html += `
     <div class="page">
@@ -1896,14 +2009,33 @@ html += `
             // 5. CICLOS, MOMENTOS E DESAFIOS
 // 5. CICLOS, MOMENTOS E DESAFIOS
 ["ciclos", "momentos", "desafios"].forEach(sec => {
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+
+    
     html += `
         <div class="page">
             <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">${sec}</h2>
@@ -1943,14 +2075,33 @@ html += `
 
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+    
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+
+    
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloMat}</h2>
@@ -1962,12 +2113,31 @@ html += `
 
             
 
-// 1. INSERIR O PLANO DE MOMENTO E VIBRAÇÃO DE TRÂNSITO AQUI
-// --- INÍCIO DO BLOCO INTEGRADO: MOMENTO + GRÁFICOS ---
 
-// --- INÍCIO DO BLOCO INTEGRADO: MOMENTO + GRÁFICOS ---
-
-// 1. Chamamos a função passando TODOS os dados necessários
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
 // Note que agora passamos res, res.deficiencias, etc., dentro dos parênteses
 const resultadoMomentoCompleto = montarHtmlPlanosMomento(
     nomeRaw, 
@@ -2050,14 +2220,32 @@ html += `
     </div>
 </div>
 `;
-html += `
-<div style="margin: 70px auto 40px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 500 60" style="height: 60px; width: 90%;">
-        <path d="M0,30 Q125,0 250,30 T500,30" style="stroke: navy; stroke-width: 4; fill: none; opacity: 0.9;"></path>
-        <path d="M0,35 Q125,5 250,35 T500,35" style="stroke: navy; stroke-width: 1; fill: none; opacity: 0.4;"></path>
-    </svg>
-</div>
-`;
+
+    
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
     <div class="capa-transicao">
@@ -2185,7 +2373,33 @@ potenciasTopo.forEach(p => {
             
 htmlCaixinhas += `</div>`;
 // ----------------------------------------------
-  
+
+
+    html += `
+    <div style="margin: 60px 0 30px 0; position: relative; width: 100%; text-align: center;">
+        
+        <div style="height: 120px; width: 100%; 
+            background-color: navy; 
+            background-image: radial-gradient(circle at 100% 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 0 150%, navy 24%, #00004d 24%, #00004d 28%, navy 28%, navy 36%, #00004d 36%, #00004d 40%, transparent 40%, transparent),
+                              radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent),
+                              radial-gradient(circle at 100% 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent),
+                              radial-gradient(circle at 0 50%, #00004d 5%, navy 5%, navy 15%, #00004d 15%, #00004d 20%, navy 20%, navy 29%, #00004d 29%, #00004d 34%, navy 34%, navy 44%, #00004d 44%, #00004d 49%, transparent 49%, transparent);
+            background-size: 100px 50px;
+            border-top: 3px solid var(--gold);
+            border-bottom: 3px solid var(--gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+            
+            <h2 style="color: #fff; font-size: 2rem; text-transform: uppercase; letter-spacing: 6px; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                ${tituloBonito}
+            </h2>
+        </div>
+    </div>
+    `;
+    
 htmlPiramide += `
     <div class="secao-potencias" style="background: #fff; color: #000; padding: 25px; border-radius: 8px; border: 1px solid #827108; margin-top: 25px;">  
         <h2 style="color: #827108; text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #827108; padding-bottom: 10px;">⚡ Ciclos das Potências Numéricas</h2>
