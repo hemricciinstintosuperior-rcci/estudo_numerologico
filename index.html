@@ -258,7 +258,7 @@
 
     .separador-luxo .caixa-interna {
         position: relative;
-        width: 95%; /* Largura da barra escura */
+        width: 110%; /* Largura da barra escura */
         height: 110px;
         background-color: #1a1a1a; /* Cor Blackout */
         background-image: radial-gradient(circle at 50% 100%, #000 10%, #1a1a1a 10%, #1a1a1a 23%, #000 23%, #000 30%, #1a1a1a 30%, #1a1a1a 43%, #000 43%, #000 50%, #1a1a1a 50%, #1a1a1a 63%, #000 63%, #000 71%, transparent 71%, transparent);
@@ -2245,7 +2245,7 @@ if(dadosNegativas.detalhes.length > 0){
 
 
     
-    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade </h3>`;
+    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">⚠️ Sequências de Vulnerabilidade </h3>`;
     
     const arcanosTopo = topo(piramideVida[0]);
 
@@ -2314,7 +2314,7 @@ while (idadeAcumulada < 100) {
                     <h3 style="color: #827108; font-size: 24px; margin: 0;">Potência ${p} ✡︎</h3>
                     ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
                 </div>
-                <div style="font-size: 14px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
+                <div style="font-size: 20px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
                 <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#111;'}">
