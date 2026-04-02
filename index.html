@@ -2347,7 +2347,7 @@ if(dadosNegativas.detalhes.length > 0){
 
         htmlPiramide += `
             <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
-                <b style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}</b><br>
+               <span  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}</span></b><br>
                 <span style="color:#111; font-weight: bold;">📅 Período mais intenso: de ${datas.ini} até ${datas.fim}</span><br><br>
                 <span style="color:#111; font-weight: bold;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                 <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
@@ -2386,9 +2386,16 @@ while (idadeAcumulada < 100) {
                     <h2 style="color: #827108; font-size: 24px; margin: 0;">Potência ${p} ✡︎</h2>
                     ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
                 </div>
+
+                <div style="font-size: 18px; color: #827108; margin-top: 10px; font-weight: bold;">
+    ⏳ Ciclo: dos ${idadeInicio} aos ${idadeFim} anos
+</div>
+
                 <div style="font-size: 20px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
+
+                
                 <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#222;'}">
                     ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
                 </div>
@@ -2424,6 +2431,8 @@ htmlPiramide += `
   <div class="intro-secao"> <p>As potências refletem as suas mudanças e influências internas ao longo do tempo. O nome que lhe foi dado ao nascer pode ser lido como uma partitura musical: cada letra é uma nota entoada num momento específico, com uma determinada intensidade.</p>
     <p>Assim como as notas determinam o ritmo da música, estas vibrações determinam o ritmo da sua vida, ora mais intensas, ora mais amenas.</p>
     <p style="font-style: italic; color: #777; font-size: 14px; text-align: center;">— Professor e Físico "Reinaldo Martins Garcia"</p>
+        </div>
+          
           ${htmlCaixinhas} 
         ${htmlPotenciasCalculadas}
     </div>
