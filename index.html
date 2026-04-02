@@ -2348,11 +2348,11 @@ htmlPiramide += `<h2 style="color:red; margin-top: 60px; margin-bottom: 30px; bo
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
-            <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: center;">
-                <b style="color:red; font-size: 18px;">Bloqueio n°  ${neg.numero}</b><br>
+            <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: left;">
+                <b style="color:red; font-size: 24px;">Bloqueio n°  ${neg.numero}</b><br>
                 <span style="color:#111; font-weight: bold;">📅 Período: de ${datas.ini} até ${datas.fim}</span><br>
-                <span style="color:#d32f2f; font-weight: bold;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span>
-                <p style="margin-top: 8px; color: #333;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
+                <span style="color:#111; font-weight: bold;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span>
+                <p style="margin-top: 8px; color: #111;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
             </div>`;
     });
 }
@@ -2407,7 +2407,7 @@ while (idadeAcumulada < 100) {
 // --- TRECHO DAS CAIXINHAS DOURADAS (VITRINE) ---
 let htmlCaixinhas = `<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">`;
 potenciasTopo.forEach(p => {
-    htmlCaixinhas += `<span style="background: #827108; color: #fff; padding: 6px 14px; border-radius: 5px; font-weight: bold; font-size: 18px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${p}</span>`;
+    htmlCaixinhas += `<span style="background: #827108; color: #fff; padding: 6px 14px; border-radius: 5px; font-weight: bold; font-size: 24px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${p}</span>`;
     
 });
 
