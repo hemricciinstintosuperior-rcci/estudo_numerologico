@@ -2301,30 +2301,10 @@ htmlPiramide += `</div>
     </div>`;
    
 
+// --- BLOCO DAS NEGATIVAS CORRIGIDO ---
 if(dadosNegativas.detalhes.length > 0){
-
-
-
-    tituloBonito = "Vulnerabilidades e Bloqueios  ⚠️";
-    htmlPiramide += `
-    <div class="separador-luxo">
-        <div class="caixa-interna">
-            <h2>${tituloBonito}</h2>
-        </div>
-    </div>
-    
-    <div class="intro-secao">
-        ${textos.introducoes.vulnerabilidades || `<p>As Sequências Negativas indicam pontos de tensão dentro da estrutura energética da sua vida. Elas não representam punições nem destinos inevitáveis, mas sim padrões que revelam áreas onde a energia tende a se repetir de maneira desafiadora. Funcionam como sinais que mostram onde determinados comportamentos ou situações podem gerar desgaste ou bloqueios.</p>
-
-<p>Muitas dessas sequências estão associadas a experiências que exigem aprendizado e amadurecimento. Elas surgem quando certos aspectos da sua natureza ainda não foram plenamente compreendidos ou integrados. Por isso, podem se manifestar como situações recorrentes que parecem reaparecer em diferentes fases da vida.</p>
-
-<p>Reconhecer essas vibrações permite que você desenvolva consciência sobre os próprios padrões. Em vez de reagir automaticamente aos desafios, torna-se possível observar o que está acontecendo e escolher respostas mais equilibradas. Esse processo transforma aquilo que antes parecia um obstáculo inevitável em uma oportunidade real de evolução.</p>
-
-<p>Ao identificar essas sequências dentro da sua Pirâmide da Vida, você passa a compreender com maior clareza quais aspectos da sua jornada pedem atenção e fortalecimento, abrindo espaço para que a energia vital circule de forma mais harmoniosa.</p>`}
-    </div>`;
-    
-   // Aumentei o margin-top para 60px
-htmlPiramide += `<h4 style="color:black; margin-top: 60px; margin-bottom: 30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;"></h4>`;
+    // Título da seção (H4) fechado corretamente
+    htmlPiramide += `<h4 style="color:black; margin-top: 60px; margin-bottom: 30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">Bloqueios Identificados</h4>`;
     
     const arcanosTopo = topo(piramideVida[0]);
 
