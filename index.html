@@ -1673,37 +1673,25 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 `;
 
     
-// SEPARADOR ORNAMENTAL GRANDE E ROBUSTO (ESTILO DA FOTO)
+// --- COLE ESTE BLOCO ACIMA DAS SUAS DIVS DE CLASSE PAGE ---
 html += `
-<div style="margin: 70px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 1200 80" style="width: 95%; height: 80px; fill: navy;">
+<div style="margin: 80px auto 40px auto; width: 100%; text-align: center; page-break-before: always;">
+    <div style="position: relative; width: 95%; height: 110px; margin: 0 auto; 
+        background-color: navy; 
+        background-image: radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent);
+        background-size: 80px 40px;
+        border-top: 4px solid #d4af37;
+        border-bottom: 4px solid #d4af37;
+        display: flex; justify-content: center; align-items: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3), inset 0 0 50px rgba(0,0,0,0.5);
+        border-radius: 4px;">
         
-        <circle cx="50" cy="40" r="3" />
-        <circle cx="80" cy="40" r="4.5" />
-        <circle cx="115" cy="40" r="6" />
-        <circle cx="155" cy="40" r="8" />
-        
-        <path d="M 180 40 L 400 40 Q 430 40 440 35 L 440 45 Q 430 40 400 40 Z" />
-
-        <g style="fill: none; stroke: navy; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.9;">
-            
-            <path d="M 450 40 Q 480 15 510 40 T 570 40 T 630 40 T 690 40 T 750 40" />
-            
-            <path d="M 510 40 C 510 60 490 60 490 40 C 490 30 505 30 510 35" />
-            <path d="M 630 40 C 630 60 650 60 650 40 C 650 30 635 30 630 35" />
-            <path d="M 570 40 C 570 20 590 20 590 40 C 590 50 575 50 570 45" />
-            
-            <path d="M 590 40 Q 610 20 630 40 Q 610 60 590 40 Z" fill="navy" stroke="none" opacity="0.8" />
-        </g>
-
-        <path d="M 1020 40 L 800 40 Q 770 40 760 35 L 760 45 Q 770 40 800 40 Z" />
-
-        <circle cx="1045" cy="40" r="8" />
-        <circle cx="1085" cy="40" r="6" />
-        <circle cx="1120" cy="40" r="4.5" />
-        <circle cx="1150" cy="40" r="3" />
-        
-    </svg>
+        <h2 style="color: #fff; font-size: 1.8rem; text-transform: uppercase; 
+            letter-spacing: 5px; margin: 0; font-family: 'Times New Roman', serif; font-weight: bold;
+            text-shadow: 2px 2px 8px #000;">
+            ${tituloBonito}
+        </h2>
+    </div>
 </div>
 `;
     
@@ -1733,37 +1721,25 @@ listaPremium.forEach(chave => {
     const tituloBonito = nomesExibicao[chave] || chave;
 
     
-// SEPARADOR ORNAMENTAL GRANDE E ROBUSTO (ESTILO DA FOTO)
+// --- COLE ESTE BLOCO ACIMA DAS SUAS DIVS DE CLASSE PAGE ---
 html += `
-<div style="margin: 70px auto; width: 100%; text-align: center; line-height: 0;">
-    <svg viewBox="0 0 1200 80" style="width: 95%; height: 80px; fill: navy;">
+<div style="margin: 80px auto 40px auto; width: 100%; text-align: center; page-break-before: always;">
+    <div style="position: relative; width: 95%; height: 110px; margin: 0 auto; 
+        background-color: navy; 
+        background-image: radial-gradient(circle at 50% 100%, #00004d 10%, navy 10%, navy 23%, #00004d 23%, #00004d 30%, navy 30%, navy 43%, #00004d 43%, #00004d 50%, navy 50%, navy 63%, #00004d 63%, #00004d 71%, transparent 71%, transparent);
+        background-size: 80px 40px;
+        border-top: 4px solid #d4af37;
+        border-bottom: 4px solid #d4af37;
+        display: flex; justify-content: center; align-items: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3), inset 0 0 50px rgba(0,0,0,0.5);
+        border-radius: 4px;">
         
-        <circle cx="50" cy="40" r="3" />
-        <circle cx="80" cy="40" r="4.5" />
-        <circle cx="115" cy="40" r="6" />
-        <circle cx="155" cy="40" r="8" />
-        
-        <path d="M 180 40 L 400 40 Q 430 40 440 35 L 440 45 Q 430 40 400 40 Z" />
-
-        <g style="fill: none; stroke: navy; stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; opacity: 0.9;">
-            
-            <path d="M 450 40 Q 480 15 510 40 T 570 40 T 630 40 T 690 40 T 750 40" />
-            
-            <path d="M 510 40 C 510 60 490 60 490 40 C 490 30 505 30 510 35" />
-            <path d="M 630 40 C 630 60 650 60 650 40 C 650 30 635 30 630 35" />
-            <path d="M 570 40 C 570 20 590 20 590 40 C 590 50 575 50 570 45" />
-            
-            <path d="M 590 40 Q 610 20 630 40 Q 610 60 590 40 Z" fill="navy" stroke="none" opacity="0.8" />
-        </g>
-
-        <path d="M 1020 40 L 800 40 Q 770 40 760 35 L 760 45 Q 770 40 800 40 Z" />
-
-        <circle cx="1045" cy="40" r="8" />
-        <circle cx="1085" cy="40" r="6" />
-        <circle cx="1120" cy="40" r="4.5" />
-        <circle cx="1150" cy="40" r="3" />
-        
-    </svg>
+        <h2 style="color: #fff; font-size: 1.8rem; text-transform: uppercase; 
+            letter-spacing: 5px; margin: 0; font-family: 'Times New Roman', serif; font-weight: bold;
+            text-shadow: 2px 2px 8px #000;">
+            ${tituloBonito}
+        </h2>
+    </div>
 </div>
 `;
 
