@@ -2245,135 +2245,135 @@ html += `
 `;
    
     
-// --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
+            // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
-<div class="page bloco-impenetravel">
-    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
+<div class="page">
+    <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
+    
     <div class="intro-texto">${textos.introducoes.piramide}</div>
+
     <div class="piramide">`;
 
-// Desenho das linhas da pirâmide
+// ... (continua o código que desenha as linhas da pirâmide)
+    
 piramideVida.forEach((linha, i) => {
-    htmlPiramide += <div class="linha">;
+    htmlPiramide += `<div class="linha">`;
     linha.forEach((n, j) => {
+        // 1. Verifica se é uma sequência negativa
         let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
-        if (i === piramideVida.length - 1) cl += " regente-destaque";
-        htmlPiramide += <div class="${cl}">${n}</div>;
+
+        // 2. NOVA LÓGICA: Se for a última linha (i) e o único número (j), é o REGENTE
+        if (i === piramideVida.length - 1) {
+            cl += " regente-destaque";
+        }
+
+        htmlPiramide += `<div class="${cl}">${n}</div>`;
     });
-    htmlPiramide += </div>;
+    htmlPiramide += `</div>`;
 });
 
-htmlPiramide += </div></div>; // Fecha a div piramide e a div page bloco-impenetravel
+htmlPiramide += `</div>
+    
+    <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
 
-// --- SEPARADOR LUXO PARA O REGENTE ---
-tituloBonito = "O Regente da sua Matriz 🔱"; 
-html += htmlPiramide; // Joga a pirâmide no HTML principal antes de seguir
-
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-
-<div class="page">
-    <div class="intro-secao">
-        ${textos.introducoes.regente || <p>O Regente da Vida representa o núcleo vibracional da sua existência...</p>}
-    </div>
-    <div class="bloco-regente" style="margin-top: 50px; padding-top: 20px; border-top: 1px inset #eee;">
-        <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>
-    </div>
-</div>`;
-
-// --- BLOCO DAS NEGATIVAS ---
 if(dadosNegativas.detalhes.length > 0){
-    html += `<div class="page">
-    <h4 style="color:black; margin-top: 60px; margin-bottom: 30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">Bloqueios Identificados</h4>`;
+    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade </h3>`;
     
     const arcanosTopo = topo(piramideVida[0]);
 
     dadosNegativas.detalhes.forEach(neg => {
-        let idadeInicio = 0; let duracaoTotal = 0;
+        let idadeInicio = 0;
+        let duracaoTotal = 0;
+
+        // 1. Soma as durações de todas as colunas ANTES da sequência começar
         for (let a = 0; a < neg.colunaInicio; a++) {
             let arcRef = arcanosTopo[a] || arcanosTopo[arcanosTopo.length - 1];
             idadeInicio += parseInt(arcRef.toString()[0]) || 1;
         }
+
+        // 2. Soma a duração das colunas que a sequência OCUPA na pirâmide
         for (let b = 0; b < neg.repeticoes; b++) {
             let colReal = neg.colunaInicio + b;
             let arcAtual = arcanosTopo[colReal] || arcanosTopo[arcanosTopo.length - 1];
             duracaoTotal += parseInt(arcAtual.toString()[0]) || 1;
         }
+
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
-        html += `
-            <div style="margin-bottom: 35px; text-align: left; clear: both;">
-                <b style="color:red; font-size: 24px; display: block; margin-bottom: 10px;">Bloqueio n° ${neg.numero}</b>
-                <span style="color:#111; font-weight: bold; font-size: 18px; display: block;">📅 Período: de ${datas.ini} até ${datas.fim}</span>
-                <span style="color:#444; font-weight: bold; font-size: 16px; display: block; margin-bottom: 10px;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos)</span>
-                <div class="texto-res" style="color: #111; font-size: 18px;">
-                    ${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}
-                </div>
+        htmlPiramide += `
+            <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: center;">
+                <b style="color:red; font-size: 18px;">Bloqueio n°  ${neg.numero}</b><br>
+                <span style="color:#111; font-weight: bold;">📅 Período: de ${datas.ini} até ${datas.fim}</span><br>
+                <span style="color:#d32f2f; font-weight: bold;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span>
+                <p style="margin-top: 8px; color: #333;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
             </div>`;
     });
-    html += </div>;
 }
+htmlPiramide += `</div>`;
 
-// --- BLOCO DAS POTÊNCIAS (ONDE ESTAVA O ERRO DE DEFINIÇÃO) ---
-const potenciasTopo = topo(piramideVida[0]);
+// --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
+const potenciasTopo = topo(piramideVida[0]); // As potências originais do nome
+const dataEntrada = document.getElementById("data").value;
+const anoNascPot = new Date(dataEntrada).getUTCFullYear();
+
 let htmlPotenciasCalculadas = "";
-let idadeAcumulada = 0; // DEFININDO A VARIÁVEL AQUI PARA EVITAR O ERRO
+let idadeAcumulada = 0;
 let indiceLoop = 0;
 
+// O loop continua enquanto a idade acumulada não atingir 100 anos
 while (idadeAcumulada < 100) {
-    const p = potenciasTopo[indiceLoop % potenciasTopo.length];
-    const duracaoAnos = parseInt(p.toString()[0]) || 1; 
-    const idadeInicio = idadeAcumulada;
-    const idadeFim = idadeAcumulada + duracaoAnos;
-    const potenciaAtivaAgora = (idadeCronologica >= idadeInicio && idadeCronologica < idadeFim);
+        const p = potenciasTopo[indiceLoop % potenciasTopo.length];
+        const duracaoAnos = parseInt(p.toString()[0]) || 1; 
+        
+        const idadeInicio = idadeAcumulada;
+        const idadeFim = idadeAcumulada + duracaoAnos;
 
-    const dataIniPot = new Date(dtNasci.getFullYear() + idadeInicio, dtNasci.getMonth(), dtNasci.getDate());
-    const dataFimPot = new Date(dtNasci.getFullYear() + idadeFim, dtNasci.getMonth(), dtNasci.getDate());
+        // AQUI É A ÚNICA MUDANÇA: O ALINHAMENTO VISUAL
+        const potenciaAtivaAgora = (idadeCronologica >= idadeInicio && idadeCronologica < idadeFim);
 
-    htmlPotenciasCalculadas += `
-        <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 20px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 15px; opacity: 0.8;'} margin-bottom: 20px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h3 style="color: #827108; font-size: 24px; margin: 0;">Potência ${p} ✡︎</h3>
-                ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:11px; padding:4px 12px; border-radius:10px; font-weight:bold;">ATIVO NESTE CICLO</span>' : ''}
-            </div>
-            <div style="font-size: 18px; color: #b8860b; margin-bottom: 10px; font-weight: bold;">
-                📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
-            </div>
-            <div class="texto-res" style="font-size: 18px; color: #111; line-height: 1.6;">
-                ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
-            </div>
-        </div>`;
-    idadeAcumulada = idadeFim;
-    indiceLoop++;
-}
+        // Datas baseadas no nascimento (mantendo o seu padrão)
+        const dataIniPot = new Date(dtNasci.getFullYear() + idadeInicio, dtNasci.getMonth(), dtNasci.getDate());
+        const dataFimPot = new Date(dtNasci.getFullYear() + idadeFim, dtNasci.getMonth(), dtNasci.getDate());
 
-// Vitrine das Caixinhas
-let htmlCaixinhas = <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">;
+        htmlPotenciasCalculadas += `
+            <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 15px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 10px; opacity: 0.7;'}">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="color: #827108; font-size: 18px; margin: 0;">Potência ${p} ✡︎</h3>
+                    ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
+                </div>
+                <div style="font-size: 11px; color: #b8860b; margin: 8px 0; font-weight: bold; letter-spacing: 0.5px;">
+                    📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
+                </div>
+                <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#444;'}">
+                    ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
+                </div>
+            </div>`;
+        
+        idadeAcumulada = idadeFim;
+        indiceLoop++;
+    }     
+// --- TRECHO DAS CAIXINHAS DOURADAS (VITRINE) ---
+let htmlCaixinhas = `<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 25px;">`;
 potenciasTopo.forEach(p => {
-    htmlCaixinhas += <span style="background: #827108; color: #fff; padding: 6px 14px; border-radius: 5px; font-weight: bold; font-size: 24px;">${p}</span>;
+    htmlCaixinhas += `<span style="background: #827108; color: #fff; padding: 6px 14px; border-radius: 5px; font-weight: bold; font-size: 18px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">${p}</span>`;
+    
 });
-htmlCaixinhas += </div>;
 
-// Adicionando Separador e Seção de Potências
-tituloBonito = "Ciclos de Potências Numéricas";
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-<div class="page">
-    <div class="secao-potencias" style="background: #fff; color: #000; padding: 25px; border-radius: 8px; border: 1px solid #827108; margin-top: 20px;">
-        <h2 style="color: #827108; text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 40px; border-bottom: 2px solid #827108; padding-bottom: 10px;">⚡ Ciclos das Potências Numéricas</h2>
-        <p style="text-align: center; font-size: 20px; font-style: italic; color: #222;">As potencias refletem suas mudanças e influências internas...</p>
-        ${htmlCaixinhas} 
+            
+htmlCaixinhas += `</div>`;
+// ----------------------------------------------
+         
+htmlPiramide += `
+    <div class="secao-potencias" style="background: #fff; color: #000; padding: 25px; border-radius: 8px; border: 1px solid #827108; margin-top: 25px;">  
+        <h2 style="color: #827108; text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #827108; padding-bottom: 10px;">⚡ Ciclos das Potências Numéricas</h2>
+        <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 20px;">As potencias refletem suas mudanças e influências internas. O nome que lhe foi dado ao nascer; pode ser visto e lido da mesma forma como se lê uma partitura musical; sua vida pode ser visualizada através das letras de seu nome, da mesma forma como uma sequência de notas se apresenta em uma partitura musical; onde cada letra individualmente pode ser vista como uma nota que é entonada em um momento específico, com uma determinada intensidade e característica.
+Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. Horas mais intensa, em outra mais amena ou tênue.</p> <p style="text-align: center; font-style: italic; color: #666; margin-bottom: 20px;"> Professor e Físico "Reinaldo Martins Garcia". 
+</p>
+          ${htmlCaixinhas} 
         ${htmlPotenciasCalculadas}
     </div>
-</div>`;
+`;
+
 
 // 4. FINALMENTE: JUNTA A PIRÂMIDE NO CORPO DO RELATÓRIO
 html += htmlPiramide;
