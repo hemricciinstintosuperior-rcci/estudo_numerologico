@@ -2275,20 +2275,26 @@ piramideVida.forEach((linha, i) => {
 htmlPiramide += `</div>`
 
 
-    // --- COLI AQUI O SEPARADOR DO REGENTE ---
-    tituloBonito = "O Regente da sua Matriz 🔱"; 
-    htmlPiramide += `
-    <div class="separador-luxo">
-        <div class="caixa-interna">
-            <h2>${tituloBonito}</h2>
-        </div>
+// --- 2. SEPARADOR E CONTEÚDO DO REGENTE (CORRIGIDO) ---
+tituloBonito = "O Regente da sua Matriz 🔱"; 
+
+// A crase ( ` ) ANTES do <div é o que impede o erro de 'Unexpected token class'
+htmlPiramide += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
     </div>
-    <div class="intro-secao" style="margin: 20px 0; text-align: center; font-style: italic; color: #555;">
-        ${textos.introducoes.regente || "O Regente representa a frequência mestre que governa sua jornada pessoal."}
+</div>
+
+<div style="margin: 25px auto; max-width: 90%; font-size: 19px; line-height: 1.8; color: #333; text-align: justify;">
+    ${textos.introducoes.regente || "O Regente representa a frequência mestre que governa sua jornada pessoal."}
+</div>
+
+<div class="bloco-regente" style="margin-top: 50px; padding-top: 20px; border-top: 1px inset #eee;">
+    <div class="texto-res" style="font-size: 20px; color: #111;">
+        ${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}
     </div>
-    `;
-    
-    <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
+</div>`; 
 
 if(dadosNegativas.detalhes.length > 0){
 
