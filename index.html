@@ -2305,7 +2305,7 @@ htmlPiramide += `
 if(dadosNegativas.detalhes.length > 0){
 
     // 1. TÍTULO E SEPARADOR
-    tituloBonito = "Vulnerabilidades e Bloqueios";
+    tituloBonito = "Vulnerabilidades e Bloqueios  ⚠️ ";
     htmlPiramide += `
     <div class="separador-luxo">
         <div class="caixa-interna">
@@ -2321,7 +2321,7 @@ if(dadosNegativas.detalhes.length > 0){
         `}
     </div>
 
-    <h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade</h3>
+    <h2 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;"> Sequências de Vulnerabilidade</h2>
     `;
     
     const arcanosTopo = topo(piramideVida[0]);
@@ -2346,11 +2346,11 @@ if(dadosNegativas.detalhes.length > 0){
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
-            <div style="margin-bottom: 25px; border-left: 5px solid red; padding-left: 15px; text-align: center;">
+            <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
                 <b style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}</b><br>
-                <span style="color:#111; font-weight: bold;">📅 Período: de ${datas.ini} até ${datas.fim}</span><br><br>
-                <span style="color:#111; font-weight: bold;">Período mais intenso: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
-                <p style="margin-top: 8px; color: #222;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
+                <span style="color:#111; font-weight: bold;">📅 Período mais intenso: de ${datas.ini} até ${datas.fim}</span><br><br>
+                <span style="color:#111; font-weight: bold;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
+                <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
             </div>`;
     });
 }
