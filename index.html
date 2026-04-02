@@ -2298,7 +2298,7 @@ htmlPiramide += `
 
 if(dadosNegativas.detalhes.length > 0){
 
-    // --- COLE AQUI O SEPARADOR DE VULNERABILIDADE ---
+    // 1. TÍTULO E SEPARADOR
     tituloBonito = "Vulnerabilidades e Bloqueios";
     htmlPiramide += `
     <div class="separador-luxo">
@@ -2306,18 +2306,17 @@ if(dadosNegativas.detalhes.length > 0){
             <h2>${tituloBonito}</h2>
         </div>
     </div>
-    <div class="intro-secao" style="margin: 20px 0; text-align: center; font-style: italic; color: #555;">
-        ${textos.introducoes.vulnerabilidades || "<p>As Sequências Negativas indicam pontos de tensão dentro da estrutura energética da sua vida. Elas não representam punições nem destinos inevitáveis, mas sim padrões que revelam áreas onde a energia tende a se repetir de maneira desafiadora. Funcionam como sinais que mostram onde determinados comportamentos ou situações podem gerar desgaste ou bloqueios.</p>
-
-<p>Muitas dessas sequências estão associadas a experiências que exigem aprendizado e amadurecimento. Elas surgem quando certos aspectos da sua natureza ainda não foram plenamente compreendidos ou integrados. Por isso, podem se manifestar como situações recorrentes que parecem reaparecer em diferentes fases da vida.</p>
-
-<p>Reconhecer essas vibrações permite que você desenvolva consciência sobre os próprios padrões. Em vez de reagir automaticamente aos desafios, torna-se possível observar o que está acontecendo e escolher respostas mais equilibradas. Esse processo transforma aquilo que antes parecia um obstáculo inevitável em uma oportunidade real de evolução.</p>
-
-<p>Ao identificar essas sequências dentro da sua Pirâmide da Vida, você passa a compreender com maior clareza quais aspectos da sua jornada pedem atenção e fortalecimento, abrindo espaço para que a energia vital circule de forma mais harmoniosa.</p>"}
-    </div>
-    `;
     
-    htmlPiramide += `<h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade </h3>`;
+    <div class="intro-secao" style="margin: 30px auto; max-width: 90%; font-size: 19px; line-height: 1.8; color: #333; text-align: justify;">
+        ${textos.introducoes.vulnerabilidades || `
+            <p>As Sequências Negativas indicam pontos de tensão dentro da estrutura energética da sua vida. Elas não representam punições nem destinos inevitáveis, mas sim padrões que revelam áreas onde a energia tende a se repetir de maneira desafiadora.</p>
+            <p>Muitas dessas sequências estão associadas a experiências que exigem aprendizado e amadurecimento. Elas surgem quando certos aspectos da sua natureza ainda não foram plenamente compreendidos ou integrados.</p>
+            <p>Reconhecer essas vibrações permite que você desenvolva consciência sobre os próprios padrões. Esse processo transforma aquilo que antes parecia um obstáculo inevitável em uma oportunidade real de evolução.</p>
+        `}
+    </div>
+
+    <h3 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;">⚠️ Sequências de Vulnerabilidade</h3>
+    `;
     
     const arcanosTopo = topo(piramideVida[0]);
 
