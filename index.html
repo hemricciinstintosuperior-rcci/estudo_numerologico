@@ -2236,8 +2236,11 @@ piramideVida.forEach((linha, i) => {
 });
 
 htmlPiramide += `</div>
-    
-    <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>`; // AJUSTADO AQUI
+
+   <div class="bloco-regente" style="margin-top: 50px; padding-top: 20px; border-top: 1px inset #eee;">
+        <div class="texto-res">${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}</div>
+    </div>`;
+   
 
 if(dadosNegativas.detalhes.length > 0){
 
@@ -2245,7 +2248,8 @@ if(dadosNegativas.detalhes.length > 0){
 
 
     
-    htmlPiramide += `<h2 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">⚠️ Sequências de Vulnerabilidade </h2>`;
+   // Aumentei o margin-top para 60px
+htmlPiramide += `<h2 style="color:red; margin-top: 60px; margin-bottom: 30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: left;">⚠️ Sequências de Vulnerabilidade </h2>`;
     
     const arcanosTopo = topo(piramideVida[0]);
 
@@ -2341,8 +2345,7 @@ htmlCaixinhas += `</div>`;
 
     
 htmlPiramide += `
-    <div class="secao-potencias" style="background: #fff; color: #000; padding: 25px; border-radius: 8px; border: 1px solid #827108; margin-top: 25px;">  
-        <h2 style="color: #827108; text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 20px; border-bottom: 2px solid #827108; padding-bottom: 10px;">⚡ Ciclos das Potências Numéricas</h2>
+    <div class="secao-potencias" style="background: #fff; color: #000; padding: 25px; border-radius: 8px; border: 1px solid #827108; margin-top: 80px;"> <h2 style="color: #827108; text-align: center; font-size: 24px; text-transform: uppercase; margin-bottom: 40px; border-bottom: 2px solid #827108; padding-bottom: 10px;">⚡ Ciclos das Potências Numéricas</h2>
        
         <p style="text-align: center; font-size: 20px; font-style: italic; color: #222; margin-bottom: 20px;">As potencias refletem suas mudanças e influências internas. O nome que lhe foi dado ao nascer; pode ser visto e lido da mesma forma como se lê uma partitura musical; sua vida pode ser visualizada através das letras de seu nome, da mesma forma como uma sequência de notas se apresenta em uma partitura musical; onde cada letra individualmente pode ser vista como uma nota que é entonada em um momento específico, com uma determinada intensidade e característica.</p>
  
