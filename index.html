@@ -2049,6 +2049,11 @@ html += `
 // 5. CICLOS, MOMENTOS E DESAFIOS
 ["ciclos", "momentos", "desafios"].forEach(sec => {
 
+    // --- TRADUÇÃO AUTOMÁTICA DO TÍTULO ---
+    // Esta linha garante que o "tituloBonito" mude em cada volta do loop
+    tituloBonito = sec === "ciclos" ? "Ciclos de Vida" : 
+                   sec === "momentos" ? "Momentos Decisivos" : "Desafios de Jornada";    
+
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
 <div style="margin: 80px auto 40px auto; width: 100%; text-align: center; page-break-before: always;">
