@@ -328,11 +328,22 @@
     }
 
 h3 {
-    background-color: #fff;
-    border-bottom: 3px solid #d4af37;
-    padding: 2px 8px;
-    color: #8A772F;
-    display: inline; /* Fica como um realce de texto comum */
+    /* 1. A cor da letra (Dourado mais fechado/escuro) */
+    color: #b8860b !important; 
+    
+    /* 2. O CONTORNO PRETO (Espessura de 1px e cor preta) */
+    -webkit-text-stroke: 1px #000; 
+    
+    /* 3. Garante que não tenha sublinhado */
+    text-decoration: none !important;
+    
+    /* 4. Estética para combinar com seus outros títulos */
+    font-family: serif; /* Ou a fonte que você usa nos títulos principais */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    display: block;
 }
     
 
