@@ -2205,7 +2205,7 @@ html += `
 
         html += `
             <div style="margin-bottom: 20px;">
-                <span style="color: #b8860b; font-weight: bold; font-size: 13px; text-transform: uppercase;">
+                <span style="color: #b8860b; font-weight: bold; font-size: 24px; text-transform: uppercase;">
                     ${info.idade} | ${info.anos}
                 </span>
                 <p style="margin-top: 5px;">
@@ -2301,7 +2301,7 @@ let proximoAnoPessoal = parseInt(res.anoPessoal) + 1;
 if (proximoAnoPessoal > 9) proximoAnoPessoal = 1;
 
 
- tituloBonito = "Ano Pessoal";  
+ tituloBonito = "Ano Pessoal - Ciclo Atual";  
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
 <div class="separador-luxo">
@@ -2309,11 +2309,11 @@ html += `
         <h2>${tituloBonito}</h2>
     </div>
 </div>
-`;
+
 
 // --- BLOCO DO ANO PESSOAL (CICLO ATUAL) ---
-html += `
-<div class="page mostrar-titulo">
+
+<div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Ciclo Atual</h2>
     
     <div class="resultado-bloco">
@@ -2329,17 +2329,29 @@ html += `
 
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
     </div>
-</div> 
+</div> `,
 
-<div class="page mostrar-titulo" style="margin-top: 40px; border-top: 1px dashed var(--gold);">
+
+ tituloBonito = "Ano Pessoal - Próximo Ciclo";  
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+
+
+
+<div class="page" style="margin-top: 40px; border-top: 1px dashed var(--gold);">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Próximo Ciclo</h2>
     
     <div class="resultado-bloco">
        
         
-        <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
+        <h3 class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
             Vigência: ${vigenciaCiclo2}
-        </p>
+        </h3>
 
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[proximoAnoPessoal])}</div>
     </div>
@@ -2555,7 +2567,7 @@ htmlPiramide += `
 
 <div class="intro-secao" style="margin: 35px auto; max-width: 92%; font-size: 19px; line-height: 1.8; color: #1a1a1a; text-align: justify; background: #fdfbf7; padding: 30px; border-radius: 15px; border-left: 5px solid #d4af37; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
     
-    <h3 style="color: #827108; text-align: center; margin-bottom: 25px; font-variant: small-caps; letter-spacing: 2px;">🎼 A Sinfonia do Destino: O Poder das Potências Numéricas</h3>
+    <h2 style="color: #827108; text-align: center; margin-bottom: 25px; font-variant: small-caps; letter-spacing: 2px;">🎼 A Sinfonia do Destino: O Poder das Potências Numéricas</h2>
 
     <p style="margin-bottom: 20px;">Imagine que o seu nome de batismo não é apenas um conjunto de letras, mas uma <b>partitura musical sagrada</b> escrita no momento em que você chegou ao mundo. Na Numerologia Quântica, entendemos que cada letra do seu nome carrega uma frequência específica — uma <b>Potência</b> — que funciona como uma nota musical batida no silêncio do tempo. A sua vida não acontece ao acaso; ela segue um ritmo orquestrado por essas vibrações que emanam do topo da sua <b>Pirâmide da Vida</b>.</p>
 
