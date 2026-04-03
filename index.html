@@ -11,8 +11,28 @@
 
     @page {
         size: A4;
-        margin: 100% ; /* equilíbrio perfeito PDF + impressão */
+        /* Ordem: TOPO | DIREITA | BASE | ESQUERDA */
+        /* Deixamos 25mm (2.5cm) no topo e na base. Laterais em 0. */
+        margin: 25mm 0mm 25mm 0mm; 
     }
+
+    /* O restante do seu código se mantém, mas adicione este reforço: */
+    .page {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Isso aqui é o que vai garantir que o texto não "atropele" a margem que criamos */
+    .secao-card, .resultado-bloco, .texto-res, .intro-texto {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        /* Um pequeno respiro entre blocos para o PDF não colar um no outro */
+        margin-bottom: 30px !important; 
+    }
+}
+    
 
     body {
         background: white !important;
