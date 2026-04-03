@@ -1348,7 +1348,9 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 
         html += `
            
-            <div style="margin: 0 auto 20px auto; width: 85%; padding-top: 60px; background: #eee; border-radius: 8px; height: 42px; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
+            <div style="margin: 0 auto 20px auto; width: 85%;  background: #eee; border-radius: 8px; height: 42px; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;break-inside: avoid; 
+page-break-inside: avoid;
+margin-top: 10px;">
                 
                
                 <div style="width:${porcentagem}%; height:100%; background:${fundoBarra}; position: absolute; left: 0; top: 0; transition: width 1s ease; z-index: 1;"></div>
@@ -1515,7 +1517,9 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             const fundoBarra = degradês[p] || 'linear-gradient(to right, #444, #000)';
 
             h += `
-                <div style="margin: 0 auto 20px auto; width: 85%; padding-top: 60px; background: #eee; border-radius: 8px; height: 42px; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;">
+                <div style="margin: 0 auto 20px auto; width: 85%; background: #eee; border-radius: 8px; height: 42px; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;break-inside: avoid; 
+page-break-inside: avoid;
+margin-top: 10px;">
                     
                     <div style="width:${porcentagem}%; height:100%; background:${fundoBarra}; position: absolute; left: 0; top: 0; transition: width 1s ease; z-index: 1;"></div>
                     
