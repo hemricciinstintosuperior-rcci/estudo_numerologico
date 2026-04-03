@@ -11,8 +11,7 @@
 
     @page {
         size: A4;
-        /* Ordem: TOPO | DIREITA | BASE | ESQUERDA */
-        /* Deixamos 25mm (2.5cm) no topo e na base. Laterais em 0. */
+    
         margin: 25mm 0mm 25mm 0mm; 
     }
 
@@ -53,12 +52,7 @@
         background: white !important;
     }
 
-    /* 🔥 CORREÇÃO PRINCIPAL */
-    .page {
-    width: calc(100% - 2mm);
-    margin: 0 auto;
-    padding: 0 2mm;
-          
+
 
     /* 🔥 REMOVE ALTURAS PROBLEMÁTICAS */
     .capa, .capa-transicao {
@@ -92,7 +86,7 @@
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
     }
-}
+
 
 
     
