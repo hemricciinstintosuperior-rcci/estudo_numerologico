@@ -1246,17 +1246,27 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
     `;
 
     // Gráficos
+// Gráficos (ESTILO LUXO DEGRADÊ - NATURAL)
     for(let p in dados.soma) {
         let porcentagem = (dados.soma[p] / ref) * 100;
+        let valorReduzido = reduzir(dados.soma[p]);
+
+        // Mapeamento de degradês baseados nas suas cores originais
+        const degradês = {
+            fisico: 'linear-gradient(to right, #2ecc71, #0a3d1d)',    // Verde -> Verde Escuro
+            mental: 'linear-gradient(to right, #f1c40f, #b8860b)',    // Amarelo -> Dourado/Ouro
+            emocional: 'linear-gradient(to right, #3498db, #1a5276)', // Azul -> Azul Marinho
+            intuitivo: 'linear-gradient(to right, #9b59b6, #4a235a)'  // Roxo -> Roxo Profundo
+        };
+
+        const fundoBarra = degradês[p] || 'linear-gradient(to right, #ccc, #666)';
+
         html += `
-            
-             <div style="margin: 0 auto 25px auto; width: 85%;"> 
-                <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
-                    <span style="font-weight:bold; font-size:14px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
-                    <span style="font-weight:bold; color:${coresPlanos[p]};"> ${reduzir(dados.soma[p])}</span>
-                </div>
-                <div style="height:12px; background:#fff; border-radius:4px; overflow:hidden;">
-                    <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p]};"></div>
+            <div style="margin: 0 auto 20px auto; width: 85%; background: #eee; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+                <div style="width:${porcentagem}%; height:42px; background:${fundoBarra}; display: flex; align-items: center; justify-content: center; transition: width 1s ease;">
+                    <span style="color: #fff; font-weight: bold; font-size: 16px; text-transform: uppercase; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); letter-spacing: 1px;">
+                        ${nomesAmigaveis[p]} EXP ${valorReduzido}
+                    </span>
                 </div>
             </div>
         `;
@@ -1399,16 +1409,26 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
 
             <div style="margin: 25px 0; background: #fff; padding: 20px; border-radius: 8px;">`;
 
+   // Gráficos (ESTILO LUXO DEGRADÊ - MOMENTO)
         for(let p in somaMomento) {
             let porcentagem = (somaMomento[p] / ref) * 100;
+            let valorReduzido = reduzir(somaMomento[p]);
+
+            const degradês = {
+                fisico: 'linear-gradient(to right, #2ecc71, #0a3d1d)',
+                mental: 'linear-gradient(to right, #f1c40f, #b8860b)',
+                emocional: 'linear-gradient(to right, #3498db, #1a5276)',
+                intuitivo: 'linear-gradient(to right, #9b59b6, #4a235a)'
+            };
+
+            const fundoBarra = degradês[p] || 'linear-gradient(to right, #444, #000)';
+
             h += `
-                <div style="margin: 0 auto 25px auto; width: 85%;"> 
-                    <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
-                        <span style="font-weight:bold; font-size:14px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
-                        <span style="font-weight:bold; color:${coresPlanos[p] || 'var(--dark)'};"> ${reduzir(somaMomento[p])}</span>
-                    </div>
-                    <div style="height:12px; background:#fff; border-radius:4px; overflow:hidden;">
-                        <div style="width:${porcentagem}%; height:100%; background:${coresPlanos[p] || 'var(--dark)'};"></div>
+                <div style="margin: 0 auto 20px auto; width: 85%; background: #eee; border-radius: 8px; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);">
+                    <div style="width:${porcentagem}%; height:42px; background:${fundoBarra}; display: flex; align-items: center; justify-content: center; transition: width 1s ease;">
+                        <span style="color: #fff; font-weight: bold; font-size: 16px; text-transform: uppercase; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); letter-spacing: 1px;">
+                            ${nomesAmigaveis[p]} EXP ${valorReduzido}
+                        </span>
                     </div>
                 </div>`;
         }
