@@ -1120,34 +1120,44 @@ function alternarAba(evt, nomePlano) {
 }
 
 function montarBarraGrafico(item) {
-    // Define a cor baseada na nota
+    // Define a cor baseada na nota (Vermelho, Amarelo/Dourado, Verde)
     let corBarra = item.nota >= 7.5 ? "#2e7d32" : (item.nota >= 5.0 ? "#827108" : "#cc0000");
     
-    return `
+    // Criamos um degradê que começa suave e ganha cor, para dar o efeito da foto
+    let degradêLuxo = `linear-gradient(to right, #ddd 0%, ${corBarra} 100%)`;
 
-    
-    <div class="container-barra" style="margin-bottom: 30px; width: 90%; break-inside: avoid; page-break-inside: avoid; padding-top: 20px;">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 16px;">
-            <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
-            <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
+    return `
+    <div style="display: flex; align-items: center; margin-bottom: 15px; width: 100%; break-inside: avoid;">
+        
+        <div style="width: 200px; text-align: right; padding-right: 15px; flex-shrink: 0;">
+            <span style="font-weight: 600; color: #444; font-size: 14px; font-family: sans-serif; text-transform: capitalize;">
+                ${item.nome}
+            </span>
         </div>
-        <div style="height: 16px; background: #F2F2F2; border-radius: 6px; width: 100%; position: relative; overflow: hidden;">
-            <div style="
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: ${item.percentual}%; 
-                height: 100% !important; 
-                background-color: ${corBarra} !important; 
-                border-radius: 6px;
-                display: block !important;
-                min-height: 16px !important;
-            "></div>
+
+        <div style="flex-grow: 1; position: relative;">
+            
+            /* TRILHO DE FUNDO */
+            <div style="height: 18px; background: #f0f0f0; border-radius: 4px; width: 100%; overflow: hidden; box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);">
+                
+                /* BARRA COLORIDA */
+                <div style="
+                    width: ${item.percentual}%; 
+                    height: 100%; 
+                    background: ${degradêLuxo}; 
+                    border-radius: 4px;
+                    transition: width 1s ease;
+                "></div>
+
+                /* PORCENTAGEM DISCRETA NO FINAL DA BARRA (Opcional) */
+                <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 11px; font-weight: bold; color: #888; pointer-events: none;">
+                    ${item.percentual}%
+                </span>
+            </div>
         </div>
     </div>
-`;
+    `;
 }
-
 function calcularDadosPlanos(nome) {
     let soma = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
     let contPerfil = { criativo: 0, indeciso: 0, neutro: 0 };
