@@ -1072,7 +1072,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
 
 
    // Reutiliza a lógica visual da gerarTodosOsGraficos original
-               const ordemVisual = ["Físico", "Mental", "Emocional", "Percepção"];
+               const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
         
         ordemVisual.forEach(p => {
             const status = statusPlanos[p];
@@ -1126,7 +1126,7 @@ function montarBarraGrafico(item) {
     return `
 
     
-    <div class="container-barra" style="margin-bottom: 30px; width: 100%; break-inside: avoid; page-break-inside: avoid; padding-top: 20px;">
+    <div class="container-barra" style="margin-bottom: 30px; width: 80%; break-inside: avoid; page-break-inside: avoid; padding-top: 20px;">
         <div style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 16px;">
             <span style="font-weight: 600; color: #1a1a1a; font-family: sans-serif;">${item.nome}</span>
             <span style="font-weight: bold; color: ${corBarra}; font-family: sans-serif;">${item.percentual}%</span>
