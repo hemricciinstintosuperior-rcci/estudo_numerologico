@@ -1001,7 +1001,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             return (pesos[statusPlanos[b]] || 0) - (pesos[statusPlanos[a]] || 0);
         });
 
-        const legendas = { "Físico": "Pilar da Realização", "Emocional": "Pilar do Sentimento", "Intuitivo": "Pilar da Percepção", "Mental": "Pilar da Racionalidade" };
+        const legendas = { "Físico": "Físico", "Emocional": "Emocional", "Intuitivo": "Intuitivo", "Mental": "Mental" };
 
         ordemVisual.forEach(p => {
             const status = statusPlanos[p];
@@ -1072,7 +1072,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
 
 
    // Reutiliza a lógica visual da gerarTodosOsGraficos original
-               const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
+               const ordemVisual = ["Físico", "Mental", "Emocional", "Percepção"];
         
         ordemVisual.forEach(p => {
             const status = statusPlanos[p];
