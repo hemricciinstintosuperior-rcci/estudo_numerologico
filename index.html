@@ -1447,14 +1447,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
 
         const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
 
-                tituloBonito = tituloSecao;
-         let h = `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
+
         h += `
         <div class="secao-card" style="border-top: 4px solid var(--gold); margin-top: 30px;">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Número de Trânsito</h2>
