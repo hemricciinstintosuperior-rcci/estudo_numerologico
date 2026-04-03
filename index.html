@@ -2311,8 +2311,6 @@ html += `
 </div>
 
 
-// --- BLOCO DO ANO PESSOAL (CICLO ATUAL) ---
-
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Ciclo Atual</h2>
     
@@ -2320,12 +2318,10 @@ html += `
         <div class="intro-texto" style="margin-bottom:15px; font-style:italic; color:#555;">
             ${aplicarFiltroTexto(textos.introducoes.anoPessoal || "")}
         </div>
-
-         
-        
-        <p class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
+               
+        <h3 class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
             Vigência: ${vigenciaCiclo1}
-        </p>
+        </h3>
 
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
     </div>
