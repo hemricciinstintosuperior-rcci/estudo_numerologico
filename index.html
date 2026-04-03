@@ -1098,15 +1098,15 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
 
 subgrupos.forEach(sub => {
     // Espaço grande (50px) antes de começar cada novo título de grupo
-    htmlFinal += `<div style="margin-bottom: 50px; break-inside: avoid;">`;
+    html += `<div style="margin-bottom: 50px; break-inside: avoid;">`;
     
-    htmlFinal += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px;">${sub}</h4>`;
+    html += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px;">${sub}</h4>`;
     
     atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
-        htmlFinal += montarBarraGrafico(item);
+        html += montarBarraGrafico(item);
     });
 
-    htmlFinal += `</div>`; // Fecha o bloco do grupo
+    html += `</div>`; // Fecha o bloco do grupo
 });
 
         return html;
