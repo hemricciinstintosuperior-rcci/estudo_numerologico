@@ -15,30 +15,24 @@
         margin: 25mm 0mm 25mm 0mm; 
     }
 
-    /* O restante do seu código se mantém, mas adicione este reforço: */
-    .page {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-    }
 
-    /* Isso aqui é o que vai garantir que o texto não "atropele" a margem que criamos */
-    .secao-card, .resultado-bloco, .texto-res, .intro-texto {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        /* Um pequeno respiro entre blocos para o PDF não colar um no outro */
-        margin-bottom: 30px !important; 
-    }
-}
-    
-
-    body {
+        body {
         background: white !important;
         color: #1a1a1a !important;
         margin: 0;
         padding: 0;
     }
+
+    
+
+
+
+        /* 🔥 CORREÇÃO PRINCIPAL */
+    .page {
+    width: calc(100% - 2mm);
+    margin: 0 auto;
+    padding: 0 2mm;
+        }   
 
     .no-print, .container, .btn-pdf, .btn-gerar, input {
         display: none !important;
@@ -62,6 +56,9 @@
         border: 10px double #d4af37;
         page-break-before: always;
     }
+
+
+    
 
     /* 🔥 EVITA QUEBRAS FEIAS */
     .secao-card,
@@ -125,6 +122,24 @@
     margin: 25px 0;         /* 🔥 tira centralização */
     background: transparent;
 }
+
+  
+    /* O restante do seu código se mantém, mas adicione este reforço: */
+    .page {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    /* Isso aqui é o que vai garantir que o texto não "atropele" a margem que criamos */
+    .secao-card, .resultado-bloco, .texto-res, .intro-texto {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        /* Um pequeno respiro entre blocos para o PDF não colar um no outro */
+        margin-bottom: 30px !important; 
+    }
+}  
         
         .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double var(--gold); background: #000; text-align: center; margin-bottom: 20px; }
         .capa h1 { font-size: 45px; margin: 10px 0; }
