@@ -12,7 +12,7 @@ introducoes: {
     <p>Basicamente, quando este conhecimento é corretamente entendido e aplicado, ele se torna um sistema de suporte que trabalha a seu favor. Você só precisa absorver as informações e aplicar as orientações em sua rotina para observar a mudança imediata na fluidez dos seus caminhos. É importante ressaltar que nada acontece ao acaso: o sucesso exige atitude, empenho e dedicação. No entanto, ao caminhar alinhado com sua vibração numérica, o esforço deixa de ser um fardo e passa a ser o motor de resultados que irão, genuinamente, impressionar você.</p>`,
 
         
-        graficos: `<p>A *Análise de Potenciais* é o coração estratégico do seu mapa, onde consolidamos as vibrações do seu Pilar 1 e Pilar 2. Exemplo: Influência, Dia de Nascimento, Comportamento, Essência, Personalidade, Motivação, Destino e Desafios gerais para mensurar sua real capacidade de entrega ao mundo. Diferente dos ciclos temporais, estes gráficos revelam sua estrutura natural e permanente: como você processa a realidade e quais ferramentas internas possui para construir sua jornada de sucesso.</p>
+        graficos: `<p>A *Análise de Potenciais* é o coração estratégico do seu estudo, onde consolidamos as vibrações do seu Nascimento. Exemplo: Influência, Dia de Nascimento, Comportamento, Essência, Personalidade, Motivação, Destino e Desafios gerais para mensurar sua real capacidade de entrega ao mundo. Diferente dos ciclos temporais, estes gráficos revelam sua estrutura natural e permanente: como você processa a realidade e quais ferramentas internas possui para construir sua jornada de sucesso.</p>
 
 <p>Cada indicador reflete a união de suas forças nativas distribuídas nos quatro planos de ação. No *Físico, medimos seu poder de realização e comando; no **Emocional, sua essência e conexão com a vida; no **Intuitivo, seus valores internos e sabedoria espiritual; e no **Mental*, sua capacidade estratégica e lógica de decisão. Ao ler esses dados, você não está vendo apenas números, mas sim a integração total do seu propósito, permitindo identificar onde sua energia flui com maestria e onde residem os pontos de superação para alcançar sua máxima performance humana.</p>`,
 
@@ -20,7 +20,7 @@ introducoes: {
 
 
         
-        piramide: `<p>​A Pirâmide da Vida Principal é o alicerce absoluto de todo o seu mapa numerológico Cabalístico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Diferente das outras pirâmides que focam em áreas específicas, esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
+        piramide: `<p>​A Matriz da Vida  é o alicerce absoluto de todo o seu mapa numerológico Cabalístico. Ela funciona como o "DNA" da sua jornada, representando a estrutura macro da sua existência. Esta matriz revela o caminho mestre, as fases evolutivas e as potências que regem a sua história do início ao fim.</p>
 
 <p>​Esta pirâmide é construída exclusivamente a partir do seu nome de batismo, o que, na numerologia cabalística, representa a sua essência imutável e a vibração que você trouxe ao mundo. Ela reflete os aspectos gerais da vida e serve como o cenário onde todos os outros eventos acontecem. É por isso que todas as vigências de idade e períodos cronológicos do seu relatório são baseados nesta pirâmide central; ela é o relógio biológico e espiritual que governa todas as outras influências.</p>
 
@@ -158,7 +158,7 @@ Ele mostra quais qualidades devem ser desenvolvidas para alcançar realização 
     <p>Ao identificar em qual fase do ciclo <strong>você</strong> se encontra, torna-se possível tomar decisões mais estratégicas sobre carreira, relacionamentos e saúde. Cada ano traz oportunidades e desafios únicos; saber aproveitá-los com consciência transforma o tempo em um aliado da evolução pessoal, garantindo que cada passo contribua para a construção de uma trajetória equilibrada e próspera.</p>`,
  
         
-        deficiencias: ` Fraquezas e inibições  são comportamentos e habilidades que precisam ser tratados em sua personalidade. Essas características podem ser comparadas a uma caixa de ferramentas onde algumas ferramentas estão disponíveis para você e outras precisam ser adquiridas.
+        deficiencias: ` O que são fraquezas e inibições que precisam ser tratados em sua personalidade. Essas características podem ser comparadas a uma caixa de ferramentas onde algumas ferramentas estão disponíveis para você e outras precisam ser adquiridas.
    
 Imagine que cada letra em seu nome é uma ferramenta que você tem disponível e que as letras faltantes em seu nome de nascimento, representam as ferramentas que não estão disponíveis e devem ser aprendidas e dominadas.
    
