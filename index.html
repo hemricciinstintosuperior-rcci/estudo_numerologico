@@ -5,368 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinto Superior - Numerologia Premium</title>
 <style>
-        :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
-        
-@media print {
+    :root { --gold: #d4af37; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
 
-    @page {
-        size: A4;
-        margin: 100% ; /* equilíbrio perfeito PDF + impressão */
+    /* --- CONFIGURAÇÃO DE IMPRESSÃO (PDF) --- */
+    @media print {
+        @page {
+            size: A4;
+            /* Margem vertical de 25mm para não cortar topo/base. Laterais zeradas. */
+            margin: 25mm 0mm 25mm 0mm; 
+        }
+
+        body {
+            background: white !important;
+            color: #1a1a1a !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .no-print, .container, .btn-pdf, .btn-gerar, input, .tabs-planos {
+            display: none !important;
+        }
+
+        .relatorio-premium {
+            width: 135% !important; /* Mantém sua largura horizontal desejada */
+            margin: 0 !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            background: white !important;
+        }
+
+        .page {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        /* 🔥 EVITA CORTES VERTICAIS NO MEIO DO TEXTO */
+        .secao-card,
+        .resultado-bloco,
+        .container-barra,
+        .bloco-potencia,
+        .container-piramide,
+        p, h3, h4 {
+            page-break-inside: avoid !important;
+            break-inside: avoid !important;
+            margin-bottom: 20px !important;
+        }
+
+        .capa, .capa-transicao {
+            height: 85vh !important;
+            min-height: 260mm;
+            margin: 0;
+            border: 10px double #d4af37;
+            page-break-before: always;
+        }
+
+        h1, h2, h3 { page-break-after: avoid; }
+
+        * {
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
     }
 
-    body {
-        background: white !important;
-        color: #1a1a1a !important;
-        margin: 0;
-        padding: 0;
-    }
-
-    .secao-card, .resultado-bloco, .texto-res, .intro-texto {
-    page-break-inside: avoid !important;
-    break-inside: avoid !important;
-    margin-bottom: 20px !important;
-}
-
-    .no-print, .container, .btn-pdf, .btn-gerar, input {
-        display: none !important;
-    }
-
-    .relatorio-premium {
-        width: 135% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-        background: white !important;
-    }
-
-    /* 🔥 CORREÇÃO PRINCIPAL */
-    .page {
-    width: calc(100% - 2mm);
-    margin: 0 auto;
-    padding: 0 2mm;
-          }
-
-    /* 🔥 REMOVE ALTURAS PROBLEMÁTICAS */
-    .capa, .capa-transicao {
-        height: 85vh !important;
-        min-height: 260mm; /* simula página cheia sem quebrar */
-        margin: 0;
-        border: 10px double #d4af37;
-        page-break-before: always;
-    }
-
-    /* 🔥 EVITA QUEBRAS FEIAS */
-    .secao-card,
-    .resultado-bloco,
-    .container-barra,
-    .bloco-potencia {
-        page-break-inside: avoid;
-        break-inside: avoid;
-         max-width: 100%;
-    }
-
-    h1, h2, h3 {
-        page-break-after: avoid;
-    }
-
-    p {
-        page-break-inside: avoid;
-    }
-
-    /* 🔥 GARANTE CORES */
-    * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-}
-
-
-    
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #A38A2A; margin: 0; padding: 0; display: block;}
-        /* Estilo para os Logos */
-.logo-capa {
-    width: 700px; /* Ajuste o tamanho conforme seu logo */
-    height: 500px;
-    margin-bottom: 0px;
-}
-
-.logo-conclusao {
-    width: 2000px;
-    height: auto;
-    margin-top: 0px;
-    opacity: 0.9;
-}
-
- html, body {
-    width: 135%;
-    max-width: 100%;
-}   
-* {
-    box-sizing: border-box;
-}    
-        /* Container de Entrada */
-        .container { width: 100%; max-width: 850px; background: #111; padding: 25px; border-radius: 20px; border: 1px solid var(--gold); margin-top: 30px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
-        h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
-        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #333; background: #fff; color: #000; font-size: 16px; box-sizing: border-box; }
-        .btn-gerar { width: 100%; padding: 20px; background: var(--gold); color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
-
-        /* Estrutura do Relatório */
-       .relatorio-premium { 
-    width: 100%;
-    max-width: none;        /* 🔥 remove limite */
-    margin: 25px 0;         /* 🔥 tira centralização */
-    background: transparent;
-}
-        
-        .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double var(--gold); background: #000; text-align: center; margin-bottom: 20px; }
-        .capa h1 { font-size: 45px; margin: 10px 0; }
-        .capa-cliente { font-size: 24px; color: #fff; text-transform: uppercase; border-top: 1px solid var(--gold); padding-top: 15px; width: 60%; }
-
-        .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-.secao-card, .card { 
-    border-left: none !important; 
-}
-
-.secao-card,
-.container-barra,
-.resultado-bloco {
-    width: 100%;
-}
-
-
-    /* ESCONDE O TÍTULO AMARELO ANTIGO EM TODO O RELATÓRIO */
-.titulo-topico {
-    display: none !important;
-}
-
-    /* 2. EXCEÇÃO: Se a página tiver a classe 'mostrar-titulo', o título APARECE */
-    .page.mostrar-titulo .titulo-topico {
-        display: block !important;
-    }    
-
-/* AJUSTE OPCIONAL: DIMINUI O ESPAÇO NO TOPO DA PÁGINA PARA O TEXTO SUBIR */
-.page {
-    margin-top: 0 !important;
-    padding-top: 5px !important;
-}
-    
-        .secao-card { background: var(--card-bg); color: var(--text); padding: 25px; border-radius: 4px; margin-bottom: 30px; border-left: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
-        .titulo-topico {   text-align: center; font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-        .intro-texto { font-style: arial; color: #333; font-size: 24px; margin-bottom: 20px; white-space: pre-line; border-bottom: 1px solid #BDBDBD; padding-bottom: 15px; }
-        .texto-res { line-height: 1.6; font-size: 20px; white-space: pre-line; }
-        
-        /* Gráficos dentro do card */
-        .barra-vermelha { height: 14px; background: #ddd; border-radius: 7px; overflow: hidden; margin-top: 5px; }
-        .progresso-vermelho { height: 100%; background: linear-gradient(90deg, #ff9999, #cc0000); }
-        .card-necessidades { background: #fdf5e6; padding: 20px; border-radius: 4px; border-left: 12px solid #ffffff; margin-top: 10px; }
-       /* ESSENCIAL: Faz as cores das barras aparecerem no PDF/PWA */
-        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-    .piramide { display: flex; flex-direction: column; align-items: center; margin: 20px auto; }
-.linha { display: flex; justify-content: center; gap: 2px; margin: 1px 0; }
-.num { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; background: #28d3ee; color: #000; font-size: 12px; font-weight: bold; border-radius: 2px; }
-.num.negativo { background-color: #FF0000 !important; color: #ffffff !important; }
-.bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ddd; }
-
-    .container-piramide {
-        page-break-inside: avoid !important; /* Impede que quebre no meio */
-        break-inside: avoid !important;      /* Reforço para navegadores modernos */
+    /* --- ESTILOS VISUAIS DO SITE E RELATÓRIO --- */
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        background: var(--dark); 
+        color: #A38A2A; 
+        margin: 0; 
+        padding: 0; 
         display: block;
-        width: 100%;
-        margin: 20px auto;
-        text-align: center;
     }
 
-       .piramide {
-        /* Margem superior de 60px para descolar do texto de introdução */
-        margin-top: 60px !important; 
-        
-        /* Margem inferior de 40px para não colar no que vem depois */
-        margin-bottom: 40px !important; 
-        
-        /* Garante que ela fique centralizada e isolada */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        clear: both;
-    } 
-  /* Estilo Premium para a Seção de Potências */
-.secao-potencias {
-    background: #ffffff;
-    color: #1a1a1a; /* Texto quase preto para leitura fácil */
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
+    html, body {
+        width: 135%;
+        max-width: 100%;
+    }   
 
-.bloco-potencia {
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-}
+    * { box-sizing: border-box; }
 
-.bloco-potencia b {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
+    /* Logos */
+    .logo-capa { width: 700px; height: 500px; margin-bottom: 0px; }
+    .logo-conclusao { width: 2000px; height: auto; margin-top: 0px; opacity: 0.9; }
 
-.item-potencia-tag {
-    background: #827108;
-    color: #ffffff !important; /* Força o número a ser branco dentro da tag dourada */
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    display: inline-block;
-}  
-
-/* Cor Especial para o Regente da Vida */
-.num.regente-destaque {
-    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c) !important;
-    color: #000 !important;
-    box-shadow: 0 0 10px rgba(184, 134, 11, 0.6) !important;
-    border: 1px solid #827108 !important;
-    font-weight: 900 !important;
-}    
-
-/* Estilo das Abas de Planos */
-.tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
-.tab-btn { 
-    padding: 10px 15px; border: 1px solid #827108; background: #fff; color: #827108; 
-    cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 12px; border-radius: 4px; transition: 0.3s;
-}
-.tab-btn.active { background: #827108; color: #fff; }
-.tab-content { display: none; animation: fadeIn 0.5s; }
-.tab-content.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-.capa-transicao {
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-    border: 5px solid var(--gold);
-    margin: 40px 0;
-    text-align: center;
-    page-break-before: always;
-}
-.capa-transicao h2 {
-    font-size: 35px;
-    color: var(--gold);
-    text-transform: uppercase;
-    letter-spacing: 5px;
-}
-.capa-transicao p {
-    font-size: 18px;
-    color: #fff;
-   
-    max-width: 80%;
-}
-
-
-    .separador-luxo {
-        /* Espaçamento e Quebra de Página */
-        margin: 80px auto 40px auto;
-        page-break-before: always;
-        width: 100%; /* Ocupa a largura total para centralizar o interno */
-        display: flex;
-        justify-content: center;
+    /* Container de Entrada */
+    .container { 
+        width: 100%; max-width: 850px; background: #111; padding: 25px; 
+        border-radius: 20px; border: 1px solid var(--gold); margin: 30px auto; 
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); 
     }
 
-    .separador-luxo .caixa-interna {
-        position: relative;
-        width: 110%; /* Largura da barra escura */
-        height: 110px;
-        background-color: #1a1a1a; /* Cor Blackout */
-        background-image: radial-gradient(circle at 50% 100%, #000 10%, #1a1a1a 10%, #1a1a1a 23%, #000 23%, #000 30%, #1a1a1a 30%, #1a1a1a 43%, #000 43%, #000 50%, #1a1a1a 50%, #1a1a1a 63%, #000 63%, #000 71%, transparent 71%, transparent);
-        background-size: 80px 40px;
-        border-top: 4px solid #d4af37;
-        border-bottom: 4px solid #d4af37;
-        border-radius: 4px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3), inset 0 0 50px rgba(0,0,0,0.5);
-        
-        /* Centralização Absoluta do Título */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
+    h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+    
+    input { 
+        width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; 
+        border: 1px solid #d4af37; background: #fff; color: #000; font-size: 16px; 
+        outline: none; -webkit-appearance: none;
     }
 
-    .separador-luxo h2 {
-        color: #DEBF00 !important;
-        font-size: 1.8rem !important;
-        text-transform: uppercase !important;
-        letter-spacing: 5px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        font-family: 'Times New Roman', serif !important;
-        font-weight: bold !important;
-        text-shadow: 2px 2px 8px #000 !important;
-        line-height: 1; /* Evita que o texto suba ou desça demais */
+    .btn-gerar { 
+        width: 100%; padding: 20px; background: var(--gold); color: #000; 
+        border: none; border-radius: 10px; font-weight: bold; font-size: 20px; 
+        cursor: pointer; margin-top: 15px; text-transform: uppercase; 
     }
 
-        /* PADRÃO PARA TODAS AS INTRODUÇÕES */
+    /* Relatório */
+    .relatorio-premium { width: 100%; max-width: none; margin: 25px 0; background: transparent; }
+    
+    .capa { 
+        height: 90vh; display: flex; flex-direction: column; justify-content: center; 
+        align-items: center; border: 10px double var(--gold); background: #000; 
+        text-align: center; margin-bottom: 20px; 
+    }
+
+    .capa-cliente { 
+        font-size: 24px; color: #fff; text-transform: uppercase; 
+        border-top: 1px solid var(--gold); padding-top: 15px; width: 60%; 
+    }
+
+    .btn-pdf { 
+        position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; 
+        padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; 
+        cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); 
+    }
+
+    .secao-card { 
+        background: var(--card-bg); color: var(--text); padding: 25px; 
+        border-radius: 4px; margin-bottom: 30px; box-shadow: 0 5px 20px rgba(0,0,0,0.3); 
+    }
+
+    .titulo-topico { display: none !important; text-align: center; font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
+    .page.mostrar-titulo .titulo-topico { display: block !important; }    
+
+    .page { margin-top: 0 !important; padding-top: 5px !important; }
+
+    /* Textos */
     .intro-texto, .intro-secao {
-        font-size: 18px !important; /* Tamanho fixo para todas */
-        line-height: 1.6 !important;
-        color: #444 !important;
-        text-align: justify !important;
-        margin-bottom: 30px !important;
-        font-family: 'Arial', sans-serif; /* Ou a fonte de sua preferência */
-        font-style: italic;
+        font-size: 18px !important; line-height: 1.6 !important; color: #444 !important;
+        text-align: justify !important; margin-bottom: 30px !important;
+        font-family: 'Arial', sans-serif; font-style: italic;
     }
 
-    /* PADRÃO PARA TODOS OS RESULTADOS (CONTEÚDO BRUTO) */
     .texto-res {
-        font-size: 19px !important; /* Um pouquinho maior que a intro para dar peso */
-        line-height: 1.8 !important;
-        color: #111 !important;
-        text-align: justify !important;
-        margin-bottom: 20px !important;
+        font-size: 19px !important; line-height: 1.8 !important; color: #111 !important;
+        text-align: justify !important; margin-bottom: 20px !important;
     }
 
-    /* FORÇAR PARÁGRAFOS DENTRO DOS RESULTADOS */
-    .texto-res p, .intro-texto p {
-        font-size: inherit !important; /* Herda o tamanho da classe pai */
-        margin-bottom: 15px !important;
+    /* Pirâmide */
+    .container-piramide { display: block; width: 100%; margin: 20px auto; text-align: center; }
+    .piramide { display: flex; flex-direction: column; align-items: center; margin-top: 60px !important; margin-bottom: 40px !important; width: 100%; }
+    .linha { display: flex; justify-content: center; gap: 2px; margin: 1px 0; }
+    .num { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; background: #28d3ee; color: #000; font-size: 12px; font-weight: bold; border-radius: 2px; }
+    .num.negativo { background-color: #FF0000 !important; color: #ffffff !important; }
+    .num.regente-destaque {
+        background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c) !important;
+        color: #000 !important; border: 1px solid #827108 !important; font-weight: 900 !important;
     }
 
-h3 {
-    /* 1. A cor da letra (Dourado mais fechado/escuro) */
-    color: #b8860b !important; 
-    
-    /* 2. O CONTORNO PRETO (Espessura de 1px e cor preta) */
-    -webkit-text-stroke: 1px #000; 
-    
-    /* 3. Garante que não tenha sublinhado */
-    text-decoration: none !important;
-    
-    /* 4. Estética para combinar com seus outros títulos */
-    font-family: serif; /* Ou a fonte que você usa nos títulos principais */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    display: block;
-}
-    
+    /* Títulos H3 com Contorno */
+    h3 {
+        color: #b8860b !important; 
+        -webkit-text-stroke: 1px #000; 
+        text-decoration: none !important;
+        font-family: serif; font-weight: bold; text-transform: uppercase;
+        letter-spacing: 1px; margin-bottom: 15px; display: block;
+    }
 
-input {
-    outline: none !important; /* Tira o traço de seleção ao clicar */
-    box-shadow: none !important; /* Tira sombras que o celular cria */
-    border: 1px solid #d4af37; /* Mantém apenas a sua borda dourada */
-    -webkit-appearance: none; /* Remove estética padrão do iPhone/Android */
-}
-
-/* Isso remove aquele destaque azul/cinza que o celular coloca ao focar */
-input:focus {
-    border: 2px solid #d4af37;
-    background-color: #fff;
-}    
-
-    </style>
+    /* Separador Luxo */
+    .separador-luxo { margin: 80px auto 40px auto; page-break-before: always; width: 100%; display: flex; justify-content: center; }
+    .separador-luxo .caixa-interna {
+        width: 110%; height: 110px; background-color: #1a1a1a; 
+        border-top: 4px solid #d4af37; border-bottom: 4px solid #d4af37;
+        display: flex; justify-content: center; align-items: center;
+    }
+    .separador-luxo h2 {
+        color: #DEBF00 !important; font-size: 1.8rem !important; text-transform: uppercase !important;
+        letter-spacing: 5px !important; font-family: 'Times New Roman', serif !important;
+    }
+</style>
 </head>
 <body>
 
