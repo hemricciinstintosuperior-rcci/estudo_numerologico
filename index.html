@@ -1018,14 +1018,21 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             const atributos = rankingGeral.filter(item => item.plano === p);
             const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
-            subgrupos.forEach(sub => {
-                htmlFinal += `<h4 style="color:#666; font-size:18px; text-transform:uppercase; margin: 15px 0 10px 0;">${sub}</h4>`;
-                atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
-                    if (typeof montarBarraGrafico === 'function') htmlFinal += montarBarraGrafico(item);
-                });
-            });
-            htmlFinal += `</div>`;
-        });
+subgrupos.forEach(sub => {
+    // ABRE O BLOCO: Espaço de 50px no final e evita corte de página
+    html += `<div style="margin-bottom: 50px; break-inside: avoid; page-break-inside: avoid;">`;
+    
+    // TÍTULO DO SUBGRUPO: Com a barrinha dourada na esquerda
+    html += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
+    
+    // FILTRA E GERA AS BARRAS:
+    atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
+        html += montarBarraGrafico(item);
+    });
+
+    // FECHA O BLOCO
+    html += `</div>`; 
+});
 
         return htmlFinal;
 
@@ -1089,14 +1096,18 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             const atributos = rankingMomento.filter(item => item.plano === p);
             const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
-            subgrupos.forEach(sub => {
-                html += `<h4 style="color:#666; font-size:18px; text-transform:uppercase; margin: 15px 0 10px 0;">${sub}</h4>`;
-                atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
-                    html += montarBarraGrafico(item);
-                });
-            });
-            html += `</div>`;
-        });
+subgrupos.forEach(sub => {
+    // Espaço grande (50px) antes de começar cada novo título de grupo
+    html += `<div style="margin-bottom: 50px; break-inside: avoid;">`;
+    
+    html += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px;">${sub}</h4>`;
+    
+    atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
+        html += montarBarraGrafico(item);
+    });
+
+    html += `</div>`; // Fecha o bloco do grupo
+});
 
         return html;
     } catch (e) {
