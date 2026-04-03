@@ -360,11 +360,11 @@ input:focus {
         const vogais = ["A","E","I","O","U","Y"];
     // Títulos amigáveis para cada estrutura
     const titulosEstrutura = {
-        "FMMM": "Platô de Estabilidade (Equilíbrio)",
+        "FMMM": "Ponto de Equilíbrio",
         "FFMM": "Dualidade de Potência",
         "FFFM": "Tripé de Sustentação Ampla",
         "FMMf": "Equilíbrio com Ponto de Resgate",
-        "Ffff": "Monolito de Especialização",
+        "Ffff": "Estrutura de Especialização",
         "FFff": "Binário de Extremos",
         "FMff": "Pico de Transição Dinâmica"
     };
@@ -1072,7 +1072,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
 
 
         // Reutiliza a lógica visual da gerarTodosOsGraficos original
-               const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
+               const ordemVisual = { "Físico": "Pilar da Realização", "Emocional": "Pilar do Sentimento", "Intuitivo": "Pilar da Percepção", "Mental": "Pilar da Racionalidade" };
         
         ordemVisual.forEach(p => {
             const status = statusPlanos[p];
@@ -1672,8 +1672,8 @@ let html = `
         
               <div class="capa-cliente">
             <strong>${nomeRaw}</strong><br>
-            <span style="font-size: 16px; opacity: 0.8;">${dataRaw.split('-').reverse().join('/')}</span> </div>
-            <div style="font-size: 14px; color: var(--gold); letter-spacing: 8px;"> 
+            <span style="font-size: 16px; opacity: 0.4;">${dataRaw.split('-').reverse().join('/')}</span> </div>
+            <div style="font-size: 16px; color: var(--gold); letter-spacing: 8px;"> 
         </div>
     </div>
                 
@@ -1702,12 +1702,12 @@ let html = `
 
     
 <div class="secao-card quebra-pagina" style="border: 2px solid var(--gold); background: #fff; padding: 50px 30px;">
-    <h2 class="titulo-topico" style="text-align: center; letter-spacing: 5px; border-bottom: 2px solid var(--gold); padding-bottom: 20px; color: #000;">Conteúdo do Estudo</h2>
+    <h2 class="titulo-topico mostrar-titulo" style="text-align: center; letter-spacing: 5px; border-bottom: 2px solid var(--gold); padding-bottom: 20px; color: #000;">Conteúdo do Estudo</h2>
     
     <div style="margin-top: 30px;">
         
         <div style="margin-bottom: 30px;">
-            <h3 style="color: #827108; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte I: Arquitetura Vibracional</h3>
+            <h3 style="color: #827108; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte I: Arquitetura Vibracional</h3>
             <ul style="list-style: none; padding-left: 20px; color: #444; line-height: 2;">
                 <li>• Plano de Expressão Natural</li>
                 <li>• Gráfico de Frequências Nativas</li>
@@ -1717,7 +1717,7 @@ let html = `
         </div>
 
         <div style="margin-bottom: 30px;">
-            <h3 style="color: #827108; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte II: Identidade Quântica</h3>
+            <h3 style="color: #827108; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte II: Identidade Numerológica</h3>
             <ul style="list-style: none; padding-left: 20px; color: #444; line-height: 2;">
                 <li>• Vibração do Dia de Nascimento</li>
                 <li>• Essência da Alma e Talentos Ocultos</li>
@@ -1728,7 +1728,7 @@ let html = `
         </div>
 
         <div style="margin-bottom: 30px;">
-            <h3 style="color: #827108; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte III: Sombra e Alinhamento</h3>
+            <h3 style="color: #827108; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte III: Sombra e Alinhamento</h3>
             <ul style="list-style: none; padding-left: 20px; color: #444; line-height: 2;">
                 <li>• Lições de Vida (Deficiências)</li>
                 <li>• Déficits de Comportamento (Recorrentes e Ocultos)</li>
@@ -1739,19 +1739,19 @@ let html = `
         </div>
 
         <div style="margin-bottom: 30px;">
-            <h3 style="color: #827108; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte IV: Linha do Tempo e Destino</h3>
+            <h3 style="color: #827108; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte IV: Linha do Tempo e Destino</h3>
             <ul style="list-style: none; padding-left: 20px; color: #444; line-height: 2;">
                 <li>• Ciclos de Vida e Momentos Decisivos</li>
                 <li>• Desafios de ciclos</li>
                 <li>• Fase de Maturidade</li>
-                <li>• Status do Momento Atual </li>
-                <li>• Tendências: Ano Pessoal e Vibração de Trânsito</li>
+                <li>• Status do Momento e trânsito Atual e Próximo</li>
+                <li>• Ano Pessoal Atual e Próximo</li>
                 
             </ul>
         </div>
 
         <div style="margin-bottom: 30px;">
-            <h3 style="color: #827108; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte V: A Grande Matriz</h3>
+            <h3 style="color: #827108; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 12px; border-left: 4px solid var(--gold); padding-left: 15px;">Parte V: A Grande Matriz</h3>
             <ul style="list-style: none; padding-left: 20px; color: #444; line-height: 2;">
                 <li>• Pirâmide da Vida (Matriz)</li>
                 <li>• Regente de Vida e Sequências de Vulnerabilidade</li>
@@ -1760,7 +1760,7 @@ let html = `
         </div>
 
         <div style="text-align: center; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
-            <span style="color: #b8860b; font-style: italic; font-size: 14px;">"O autoconhecimento é a chave para a maestria do destino."</span>
+            <span style="color: #b8860b; font-style: italic; font-size: 16px;">"O autoconhecimento é a chave para a maestria do destino."</span>
         </div>
 
     </div>
@@ -1769,14 +1769,14 @@ let html = `
             
 html += `
     <div class="capa-transicao">
-        <p>PARTE 01</p>
+        <p> PARTE 01 </p>
         <h2>Seus Graficos de Performance Natural</h2>
         <p>A decodificação das Energias e Potenciais nativas que definem sua personalidade.</p>
     </div>
 `;
 
 
- tituloBonito = "Análise de Planos naturais";    
+ tituloBonito = "Performance do Plano de Energia Natural";    
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -1794,7 +1794,7 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 
 
 
-tituloBonito = "Análise de Potenciais naturais";  
+tituloBonito = "Performance de Potenciais Naturais";  
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
 <div class="separador-luxo">
@@ -1806,7 +1806,7 @@ html += `
     
 html += `
     <div class="page">
-        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Análise de Potenciais</h2>
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Potenciais</h2>
         <div class="intro-texto">${textos.introducoes.graficos}</div>
         ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3], regenteVida, dadosNegativas.nums)}
     </div>
@@ -1815,7 +1815,7 @@ html += `
 // INSERIR CAPA 1 AQUI
 html += `
     <div class="capa-transicao">
-        <p>PARTE 02</p>
+        <p> PARTE 02 </p>
         <h2>Sua Essência e <br> Identidade Numerológica</h2>
         <p>A definição da sua personalidade e propósito original..</p>
     </div>
@@ -1858,13 +1858,13 @@ html += `
 // --- INÍCIO DO PILAR 02 ORGANIZADO ---
 html += `
     <div class="capa-transicao">
-        <p>PARTE 03</p>
+        <p> PARTE 03 </p>
         <h2>Alinhamento e <br> Superação de Desafios</h2>
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
     </div>
 `;
 
- tituloBonito = "Deficiências Lições de Vida";   
+ tituloBonito = "Deficiências e Lições de Vida";   
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
 <div class="separador-luxo">
@@ -2017,7 +2017,7 @@ html += `
 
     
 // Crie esta linha logo ACIMA do código da ondinha:
- tituloBonito = "O DESAFIO PRINCIPAL"; 
+ tituloBonito = "O seu DESAFIO PRINCIPAL"; 
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
 <div class="separador-luxo">
@@ -2046,7 +2046,7 @@ html += `
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
     <div class="capa-transicao">
-        <p>PARTE 04</p>
+        <p> PARTE 04 </p>
         <h2>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
         <p>A análise das janelas de oportunidade e as frequências que regem o seu agora.</p>
     </div>
@@ -2058,7 +2058,7 @@ html += `
     // --- TRADUÇÃO AUTOMÁTICA DO TÍTULO ---
     // Esta linha garante que o "tituloBonito" mude em cada volta do loop
     tituloBonito = sec === "ciclos" ? "Ciclos de Vida" : 
-                   sec === "momentos" ? "Momentos Decisivos" : "Desafios de Jornada";    
+                   sec === "momentos" ? "Momentos de decisão" : "Desafios de Jornada";    
 
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
@@ -2185,6 +2185,15 @@ let proximoAnoPessoal = parseInt(res.anoPessoal) + 1;
 if (proximoAnoPessoal > 9) proximoAnoPessoal = 1;
 
 
+ tituloBonito = "Ano Pessoal";  
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;
 
 // --- BLOCO DO ANO PESSOAL (CICLO ATUAL) ---
 html += `
@@ -2234,7 +2243,7 @@ html += `
 `;
     
 // Crie esta linha logo ACIMA do código da ondinha:
- tituloBonito = "A Piramide da Vida"; 
+ tituloBonito = "A Matriz da Vida"; 
  // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
 <div class="separador-luxo">
