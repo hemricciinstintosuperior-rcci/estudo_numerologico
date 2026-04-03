@@ -1249,7 +1249,8 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
     for(let p in dados.soma) {
         let porcentagem = (dados.soma[p] / ref) * 100;
         html += `
-            <div style="margin-bottom: 15px;">
+            
+             <div style="margin: 0 auto 25px auto; width: 90%;"> 
                 <div style="display:flex; justify-content:space-between; margin-bottom: 5px;">
                     <span style="font-weight:bold; font-size:14px; text-transform:uppercase;">${nomesAmigaveis[p]}</span>
                     <span style="font-weight:bold; color:${coresPlanos[p]};"> ${reduzir(dados.soma[p])}</span>
