@@ -1030,7 +1030,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             htmlFinal += `
                 <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid;  border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid ${cor}; padding-bottom: 12px; margin-bottom: 20px;">
-                        <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:20px; font-weight:bold;">${legendas[p]}</h3>
+                        <h2 style="margin:0; color:${cor}; text-transform:uppercase; font-size:20px; font-weight:bold;">${legendas[p]}</h2>
                         <span style="font-size:16px; font-weight:bold; background:${cor}; color:#fff; padding:4px 14px; border-radius:20px; text-transform:uppercase;">${status}</span>
                     </div>
             `;
@@ -1040,7 +1040,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
 subgrupos.forEach(sub => {
     // ABRE O BLOCO: Espaço de 50px no final e evita corte de página
-    htmlFinal += `<div style="margin-bottom: 50px; padding-top: 45px; break-inside: avoid; page-break-inside: avoid;">`;
+    htmlFinal += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid; page-break-inside: avoid;">`;
     
     // TÍTULO DO SUBGRUPO: Com a barrinha dourada na esquerda
     htmlFinal += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
@@ -1111,7 +1111,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             html += `
                 <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 20px;">
-                        <h3 style="margin:0; color:${cor}; text-transform:uppercase; font-size:19px;">${p} <small style="color:#444;">(Tendência de Momento)</small></h3>
+                        <h2 style="margin:0; color:${cor}; text-transform:uppercase; font-size:19px;">${p} <small style="color:#444;">(Tendência de Momento)</small></h2>
                         <span style="font-size:16px; font-weight:bold; background:${cor}; color:#fff; padding:3px 10px; border-radius:15px; text-transform:uppercase;">${status}</span>
                     </div>
             `;
@@ -1121,7 +1121,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
 
 subgrupos.forEach(sub => {
     // Espaço grande (50px) antes de começar cada novo título de grupo
-    html += `<div style="margin-bottom: 50px; padding-top: 45px; break-inside: avoid;">`;
+    html += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid;">`;
     
     html += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px;">${sub}</h4>`;
     
@@ -2311,7 +2311,7 @@ html += `
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
     <div class="capa-transicao">
-        <h3>A GRANDE MATRIZ<h3>
+        <h4>A GRANDE MATRIZ<h4>
         <h2>Regente, Sequências de Vulnerabilidade e Potências Numéricas de impacto</h2>
         <p>Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. </p>
     </div>
@@ -2405,7 +2405,7 @@ if(dadosNegativas.detalhes.length > 0){
         `}
     </div>
 
-    <h2 style="color:red; margin-top:20px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;"> Sequências de Vulnerabilidade</h2>
+    <h2 style="color:red; margin-top:30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;"> Sequências de Vulnerabilidade</h2>
     `;
     
     const arcanosTopo = topo(piramideVida[0]);
@@ -2431,7 +2431,7 @@ if(dadosNegativas.detalhes.length > 0){
 
         htmlPiramide += `
             <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
-               <h3  style="color:red; font-size: 24px;">Bloqueio n°  ${neg.numero}</h3></b><br>
+               <h2  style="color:red; font-size: 20px;">Bloqueio n°  ${neg.numero}  ⚠️</h2></b><br>
                 <span style="color:#111; font-weight: bold;">📅 Período mais intenso: de ${datas.ini} até ${datas.fim}</span><br><br>
                 <span style="color:#111; font-weight: bold;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                 <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
@@ -2465,7 +2465,7 @@ while (idadeAcumulada < 100) {
         const dataFimPot = new Date(dtNasci.getFullYear() + idadeFim, dtNasci.getMonth(), dtNasci.getDate());
 
         htmlPotenciasCalculadas += `
-            <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 15px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 10px; opacity: 0.7;'}">
+            <div class="bloco-potencia" style="${potenciaAtivaAgora ? 'border: 2px solid var(--gold); background: #fffcf0; padding: 15px; border-radius: 8px;' : 'border-bottom: 1px solid #eee; padding: 10px; opacity: 0.3;'}">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <h2 style="color: #827108; font-size: 24px; margin: 0;">Potência ${p} ✡︎</h2>
                     ${potenciaAtivaAgora ? '<span style="background:var(--gold); color:black; font-size:10px; padding:2px 14px; border-radius:10px; font-weight:bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">ATIVO NESTE CICLO</span>' : ''}
