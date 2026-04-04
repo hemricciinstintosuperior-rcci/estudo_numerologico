@@ -1412,7 +1412,9 @@ margin-top: 10px;">
     for(let p in dados.soma) {
         let r = dados.soma[p] / ref;
         let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
-        const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][int][reduzir(dados.soma[p])] : "";
+       let vNatural = reduzir(dados.soma[p]);
+let vFinalNatural = (vNatural > 9) ? reduzir(vNatural) : vNatural;
+const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][int][vFinalNatural] : "";
         if(textoIndiv) {
             html += `
                 <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
@@ -1632,12 +1634,12 @@ const vTransitoCalculado = (vTransitoBase > 9) ? reduzir(vTransitoBase) : vTrans
                 "Emocional": (somaMomento.emocional / ref > 0.75) ? "forte" : (somaMomento.emocional / ref >= 0.50) ? "medio" : "fraco",
                 "Intuitivo": (somaMomento.intuitivo / ref > 0.75) ? "forte" : (somaMomento.intuitivo / ref >= 0.50) ? "medio" : "fraco"
             },
-            vibracoes: {
-                "Físico": reduzir(somaMomento.fisico), 
-                "Mental": reduzir(somaMomento.mental), 
-                "Emocional": reduzir(somaMomento.emocional), 
-                "Intuitivo": reduzir(somaMomento.intuitivo)
-            },
+vibracoes: {
+    "Físico": (reduzir(somaMomento.fisico) > 9) ? reduzir(reduzir(somaMomento.fisico)) : reduzir(somaMomento.fisico), 
+    "Mental": (reduzir(somaMomento.mental) > 9) ? reduzir(reduzir(somaMomento.mental)) : reduzir(somaMomento.mental), 
+    "Emocional": (reduzir(somaMomento.emocional) > 9) ? reduzir(reduzir(somaMomento.emocional)) : reduzir(somaMomento.emocional), 
+    "Intuitivo": (reduzir(somaMomento.intuitivo) > 9) ? reduzir(reduzir(somaMomento.intuitivo)) : reduzir(somaMomento.intuitivo)
+},
             perfil: dominanteMomento
         };
 
