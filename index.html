@@ -239,63 +239,88 @@
     height: 95vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centraliza o logo (background) */
+    justify-content: center;
     align-items: center;
     text-align: center;
+
     margin: 40px 0;
     page-break-before: always;
-    border: 5px solid #A65F00;
-    color: #fff; /* Cor padrão para textos que não tiverem classe */
 
-    /* --- CONFIGURAÇÃO DO LOGO NO FUNDO --- */
-    background-image: url('https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/ícone-512.jpg'); /* 👈 TROQUE PELO CAMINHO REAL DO LOGO */
-    background-color: #000; /* Fundo preto */
-    background-position: center; /* Logo centralizado no meio da capa */
+    border: 4px solid #c57a1a;
+    color: #fff;
+
+    /* FUNDO COM PROFUNDIDADE */
+    background:
+        linear-gradient(180deg, rgba(0,0,0,0.9), rgba(15,42,54,0.95)),
+        url('https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/ícone-512.jpg');
+
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain; /* Mantém o logo inteiro e centralizado */
-    
-    /* --- PREPARAÇÃO PARA POSICIONAMENTO --- */
-    position: relative; /* Essencial para que os textos absolutos fiquem "presos" aqui dentro */
+    background-size: contain;
+
+    position: relative;
+    overflow: hidden;
 }
 
-/* --- TEXTO "PARTE 01" (Já está na sua foto, mas garantimos que fique no topo) --- */
+/* VINHETA (INTEGRA O LOGO AO FUNDO) */
+.capa-transicao::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 35%, rgba(0,0,0,0.75));
+    z-index: 1;
+}
+
+/* TEXTO "PARTE 01" */
 .capa-transicao .parte-texto {
-    position: absolute; /* Descola o elemento do fluxo normal */
-    top: 50px;          /* Distância do topo da capa (vertical) */
-    left: 50%;          /* Centraliza horizontalmente (passo 1) */
-    transform: translateX(-50%); /* Centraliza horizontalmente (passo 2) */
-    font-size: 16px;
-    opacity: 0.8;
-}
-
-/* --- LEGENDA AMARELA (H2) - Posicionada ACIMA do logo --- */
-.capa-transicao h2 {
-    position: absolute; /* Descola o elemento do fluxo normal */
-    top: 150px;         /* Empurra para baixo do topo, mas ACIMA do logo centralizado */
+    position: absolute;
+    top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    
-    color: #A65F00; /* Dourado */
+
+    font-size: 16px;
+    opacity: 0.7;
+    letter-spacing: 2px;
+    z-index: 2;
+}
+
+/* TÍTULO (LARANJA LUXO) */
+.capa-transicao h2 {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #d97a1e;
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 5px;
     margin: 0;
-    width: 90%; /* Largura para garantir centralização e quebra de linha se necessário */
-    z-index: 2; /* Garante que fique SOBRE o logo */
+    width: 90%;
+
+    /* GLOW CONTROLADO */
+    text-shadow:
+        0 0 8px rgba(217,122,30,0.6),
+        0 0 20px rgba(217,122,30,0.3);
+
+    z-index: 2;
 }
 
-/* --- LEGENDA BRANCA (P) - Posicionada ABAIXO do logo --- */
+/* TEXTO INFERIOR */
 .capa-transicao p {
-    position: absolute; /* Descola o elemento do fluxo normal */
-    bottom: 50px;       /* Distância da base da capa (vertical) */
+    position: absolute;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
 
-    color: #fff; /* Branco */
+    color: #ffffff;
     font-size: 18px;
     max-width: 80%;
     margin: 0;
-    z-index: 2; /* Garante que fique SOBRE o logo */
+
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+
+    z-index: 2;
 }
 
 
