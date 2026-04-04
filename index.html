@@ -254,7 +254,7 @@
     background-image: url('https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 500px; /* controla peso */
+    background-size: 600px; /* controla peso */
 
     position: relative;
 }
@@ -466,7 +466,7 @@ input:focus {
         "FFff": "Binário de Extremos",
         "FMff": "Pico de Transição Dinâmica"
     };
-const mapaMatriz = { A:1,I:1,Q:1,J:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5, U:6,V:6,W:6,X:6, O:7,Z:7, F:8,P:8 };
+const mapaMatriz = { A:1,I:1,Q:1,J:1,Y:1, B:2,K:2,R:2, C:3,G:3,L:3,S:3, D:4,M:4,T:4, E:5,H:5,N:5, U:6,V:6,W:6,X:6,Ç:6, O:7,Z:7, F:8,P:8 };
    
 // Tabelas para o Plano de Expressão
 const tabelaExpressao = {
@@ -810,10 +810,10 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
 
     // TABELA DE PONTOS (Normalizada internamente para evitar o erro de leitura)
     const tabelaPontos = {
-        "fisico": { "criativo": [5], "indeciso": [6, 5], "neutro": [4] },
-        "mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3, 4] },
-        "emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4], "neutro": [3] },
-        "intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [6] }
+        "fisico": { "criativo": [5], "indeciso": [6], "neutro": [4] },
+        "mental": { "criativo": [1], "indeciso": [1, 5, 8], "neutro": [3] },
+        "emocional": { "criativo": [1, 7, 2], "indeciso": [2, 3, 4, 6] },
+        "intuitivo": { "criativo": [2], "indeciso": [6, 8, 1], "neutro": [3, 6] }
     };
 
     // Normaliza o nome do plano para minúsculo e sem acento para ler a tabela acima
@@ -1272,6 +1272,9 @@ function montarBarraGrafico(item) {
     </div>
     `;
 }
+
+
+        
 function calcularDadosPlanos(nome) {
     let soma = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
     let contPerfil = { criativo: 0, indeciso: 0, neutro: 0 };
@@ -1373,7 +1376,8 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 // Gráficos (TEXTO FIXO NO CENTRO - NATURAL)
     for(let p in dados.soma) {
         let porcentagem = (dados.soma[p] / ref) * 100;
-        let valorReduzido = reduzir(dados.soma[p]);
+   let vSimples = reduzir(dados.soma[p]);
+let valorReduzido = (vSimples > 9) ? reduzir(vSimples) : vSimples;
 
         const degradês = {
             fisico: 'linear-gradient(to right, #e74c3c, #7b241c)',
@@ -1572,7 +1576,9 @@ margin-top: 10px;">
         for(let p in somaMomento) {
             let r = somaMomento[p] / ref;
             let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
-            const textoIndiv = (textosPlanosMomento[p] && textosPlanosMomento[p][int]) ? textosPlanosMomento[p][int][reduzir(somaMomento[p])] : "";
+            let vT = reduzir(somaMomento[p]);
+let vFinal = (vT > 9) ? reduzir(vT) : vT;
+const textoIndiv = (textosPlanosMomento[p] && textosPlanosMomento[p][int]) ? textosPlanosMomento[p][int][vFinal] : "";
             if(textoIndiv) {
                 h += `
                     <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p] || 'var(--gold)'}; padding-left: 15px;">
@@ -1601,7 +1607,8 @@ margin-top: 10px;">
                 </div>
             </div>`;
 
-        const vTransitoCalculado = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
+       let vTransitoBase = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
+const vTransitoCalculado = (vTransitoBase > 9) ? reduzir(vTransitoBase) : vTransitoBase;
 
 
         h += `
