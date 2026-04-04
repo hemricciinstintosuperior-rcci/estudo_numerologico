@@ -197,8 +197,7 @@ conforme orientadas pelo respectivo número de suas fraquezas e inibições.
     
 Note, porém, que isso não significa de forma alguma que o período será ruim, mas indica que você poderá enfrentar algumas dificuldades e adversidades muitas vezes desnecessárias e evitáveis causadas por essa deficiência em sua personalidade até que a mesma seja aperfeiçoada e dominada. 
     
-Perceba que quanto mais habilidades você tiver a sua disposição e quanto mais puder evitar suas fraquezas mais capaz você será de lidar com qualquer evento ou situação que se apresente em seu caminho e mais 
-fácil será superá-las. `,
+Perceba que quanto mais habilidades você tiver a sua disposição e quanto mais puder evitar suas fraquezas mais capaz você será de lidar com qualquer evento ou situação que se apresente em seu caminho e mais fácil será superá-las. `,
  
         
         momentos: `Os Momentos Decisivos representam períodos de virada, mudança e redefinição de direção na vida. Eles indicam fases em que decisões, oportunidades e acontecimentos tendem a provocar transformações
@@ -265,7 +264,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
     // Nova chave para a Vibração de Trânsito
  
 
-       Conclusao: `    <p style="font-size: 16px; color: var(--dark); line-height: 1.6;"> *Você*, agradeço profundamente pela confiança depositada em meu trabalho ao permitir que a Numerologia guie seus próximos passos. 
+       Conclusao: `    <p style="font-size: 16px; color: var(--dark); line-height: 1.6;"> Você, agradeço profundamente pela confiança depositada em meu trabalho ao permitir que a Numerologia guie seus próximos passos. 
        É uma honra fazer parte da sua jornada de autodescoberta. 
        Que o Universo ilumine seus caminhos, abençoe suas escolhas e que cada vibração numérica aqui revelada se transforme em força, prosperidade e luz em sua vida. Siga com coragem e sabedoria!
     </p>`,
@@ -467,8 +466,7 @@ SeqNegVida: {
     <p><strong>você</strong> tem a habilidade de transformar ideias abstratas em lucros e estruturas concretas. Existe em <strong>você</strong> um desejo de prosperidade que vai além do ganho pessoal, buscando também o conforto da linhagem e a segurança de quem está sob sua proteção e comando no dia a dia.</p>
     <p>O aprendizado de <strong>você</strong> é entender que o poder e o dinheiro são ferramentas para o bem, e não o fim de tudo. Quando <strong>você</strong> une sua ambição com a generosidade e a ética, <strong>você</strong> constrói um império de abundância que beneficia não apenas sua vida, mas a de milhares de pessoas ao redor.</p>`,
 
-    9: ` <h3>Universalista      
-    Dia 9 É liberal e idealista. 
+    9: ` <h3>Universalista - Dia 9   É liberal e idealista. 
     Seu desafio é encontrar seu lugar no mundo e para onde direcionar seus esforços!</h3>
     <p>O dia 9 confere a <strong>você</strong> uma alma humanitária, generosa e dotada de uma visão de mundo extremamente ampla. <strong>você</strong> possui o talento de compreender as dores da humanidade e sente um desejo profundo de deixar um legado positivo, agindo com um altruísmo que inspira confiança.</p>
     <p>Sua intuição é fortíssima e <strong>você</strong> possui uma sabedoria que parece vir de experiências de muitas vidas. <strong>você</strong> é capaz de grandes sacrifícios por causas nobres e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua compaixão e integridade moral.</p>
@@ -484,8 +482,7 @@ SeqNegVida: {
     <p><strong>você</strong> possui a força do número 1 potencializada pela perfeição do zero, o que indica um destino de brilho individual e grandes conquistas. Sua mente é rápida para identificar oportunidades e <strong>você</strong> não hesita em agir quando percebe que o caminho está livre para sua ascensão pessoal.</p>
     <p>O cuidado que <strong>você</strong> deve ter é com a impulsividade e o excesso de orgulho nas vitórias. Ao aprender a ouvir a intuição e a planejar cada passo com sabedoria e paciência, <strong>você</strong> se torna uma força imparável da natureza, capaz de construir uma história de vida brilhante e inspiradora.</p>`,
 
-   11: ` <h3>Idealista 
-   Dia 11 É um bom conselheiro e curador. 
+   11: ` <h3>Idealista - Dia 11 É um bom conselheiro e curador. 
    
    Possui as qualidades de um visionário que aprecia e motiva aspessoas!</h3>
    <p>O dia 11 traz para <strong>você</strong> a vibração de um Número Mestre, o que confere uma intuição extraordinária e uma sensibilidade espiritual muito acima da média. <strong>você</strong> funciona como um canal de inspiração para o mundo, possuindo ideais elevados e uma capacidade única de enxergar além das aparências materiais e das limitações do cotidiano.</p>
@@ -502,9 +499,7 @@ SeqNegVida: {
     <p>Existe em <strong>você</strong> um desejo profundo de ser útil e de trazer harmonia para o ambiente social. Sua natureza é diplomática e <strong>você</strong> sabe usar o charme pessoal para abrir portas que outros considerariam trancadas. Sua versatilidade é sua maior ferramenta de sucesso, permitindo que <strong>você</strong> se adapte e brilhe em qualquer cenário profissional ou pessoal.</p>
     <p>O cuidado que <strong>você</strong> deve ter é para não se sacrificar em excesso pelos desejos alheios a ponto de esquecer os próprios sonhos. Ao aprender a estabelecer limites saudáveis e a usar a criatividade para a própria realização, <strong>você</strong> se torna uma pessoa multifacetada e profundamente admirada por sua integridade e talento.</p>`,
 
-    13: ` <h3>Prático - Dia 13
-    
-É um organizador e gerente natural, focado nos detalhes. 
+    13: ` <h3>Prático - Dia 13  É um organizador e gerente natural, focado nos detalhes. 
 Dotado de considerável perseverança e determinação!</h3>
     <p>O dia 13 traz para <strong>você</strong> uma energia de transformação profunda e de construção sólida, capaz de erguer estruturas onde nada existia. Embora seja um número muitas vezes mal compreendido, ele confere a <strong>você</strong> uma capacidade de trabalho e uma determinação que poucas pessoas possuem, permitindo a realização de grandes feitos através do esforço contínuo.</p>
     <p><strong>você</strong> é alguém que não teme o trabalho árduo e possui um talento natural para a organização estratégica e para a reestruturação de situações caóticas. Sua vida é marcada por ciclos de renovação necessária, nos quais <strong>você</strong> aprende a deixar o que é obsoleto para trás a fim de construir algo muito mais forte, estável e duradouro no lugar.</p>
