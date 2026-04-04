@@ -1376,8 +1376,7 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 // Gráficos (TEXTO FIXO NO CENTRO - NATURAL)
     for(let p in dados.soma) {
         let porcentagem = (dados.soma[p] / ref) * 100;
-   let vSimples = reduzir(dados.soma[p]);
-let valorReduzido = (vSimples > 9) ? reduzir(vSimples) : vSimples;
+let valorReduzido = reduzirPuro(dados.soma[p]);
 
         const degradês = {
             fisico: 'linear-gradient(to right, #e74c3c, #7b241c)',
@@ -1413,7 +1412,7 @@ margin-top: 10px;">
         let r = dados.soma[p] / ref;
         let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
        let vNatural = reduzir(dados.soma[p]);
-let vFinalNatural = (vNatural > 9) ? reduzir(vNatural) : vNatural;
+let vFinalNatural = reduzirPuro(dados.soma[p]);
 const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][int][vFinalNatural] : "";
         if(textoIndiv) {
             html += `
@@ -1549,7 +1548,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
 // Gráficos (TEXTO FIXO NO CENTRO - MOMENTO)
         for(let p in somaMomento) {
             let porcentagem = (somaMomento[p] / ref) * 100;
-            let valorReduzido = reduzir(somaMomento[p]);
+           let valorReduzido = reduzirPuro(somaMomento[p]);
 
             const degradês = {
                 fisico: 'linear-gradient(to right, #e74c3c, #7b241c)',
@@ -1578,8 +1577,7 @@ margin-top: 10px;">
         for(let p in somaMomento) {
             let r = somaMomento[p] / ref;
             let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
-            let vT = reduzir(somaMomento[p]);
-let vFinal = (vT > 9) ? reduzir(vT) : vT;
+          let vFinal = reduzirPuro(somaMomento[p]);
 const textoIndiv = (textosPlanosMomento[p] && textosPlanosMomento[p][int]) ? textosPlanosMomento[p][int][vFinal] : "";
             if(textoIndiv) {
                 h += `
@@ -1609,8 +1607,7 @@ const textoIndiv = (textosPlanosMomento[p] && textosPlanosMomento[p][int]) ? tex
                 </div>
             </div>`;
 
-       let vTransitoBase = reduzir(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
-const vTransitoCalculado = (vTransitoBase > 9) ? reduzir(vTransitoBase) : vTransitoBase;
+const vTransitoCalculado = reduzirPuro(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
 
 
         h += `
