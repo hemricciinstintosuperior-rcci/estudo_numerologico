@@ -227,6 +227,7 @@ Cada desafio mostra uma etapa específica do processo de evolução e revela qua
  
  Sempre que o número de um Desafio coincidir com o número de um Ciclo de Vida, Momento Decisivo ou Propósito de Vida, pode sugerir alguma predisposição a questões de saúde, que podem se apresentar no período conforme descrito abaixo:
   Possíveis Problemas
+  
 1️⃣
 Região da cabeça, coração, sistema circulatório e respiratório, alergias, ferimentos nos olhos, rosto, orelhas e maxilar, problemas circulatórios e cardíacos. Especialmente em idades mais avançadas; 
 anorexia, edema pulmonar, tosse, tuberculose, impotência masculina. Na fase infantil: facilidade para urinar na cama.
@@ -282,162 +283,71 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
  
     
 RegenteVida: {
- 1:` <h2>🔱  Regente da Piramide N°1</h2> 
-<h3>1️⃣Iniciativa, Autonomia e Caminho Individual.1️⃣</h3> 
+ 1:` <h3>🔱  Regente da Piramide N° 1</h3> 
+<h3>Iniciativa, Autonomia e Caminho Individual.</h3> 
 <p>Para você, o Regente 1 da Vida representa a força que impulsiona a construção da própria identidade e o desenvolvimento da independência. Essa vibração indica uma trajetória marcada pela iniciativa, pela coragem de tomar decisões e pela capacidade de abrir caminhos novos ao longo da existência.</p> 
 <p>A presença do Regente 1 revela natureza ativa, espírito de liderança e desejo profundo de conquistar espaço próprio no mundo. Ao longo da vida você tende a desenvolver autonomia, aprendendo através das experiências a confiar na própria capacidade de agir, decidir e conduzir o próprio destino.</p> 
-<p>Quando essa vibração se origina da potência 10 pode indicar momentos de reconhecimento ou mudanças favoráveis que impulsionam novas oportunidades na vida.</p> 
-<p>Quando se origina da potência 19 pode revelar desafios relacionados ao orgulho ou à necessidade de aprender lições importantes sobre responsabilidade e humildade.</p> 
-<p>Quando se origina da potência 28 pode indicar experiências ligadas a disputas, rivalidades ou situações que exigem firmeza para defender seus interesses.</p> 
-<p>Quando se origina da potência 37 revela potencial para crescimento através da inteligência, da estratégia e da capacidade de tomar decisões firmes.</p> 
-<p>Quando se origina da potência 46 pode indicar conquistas materiais alcançadas através de esforço constante e disciplina.</p> 
-<p>Quando se origina da potência 55 revela forte impulso de liberdade e necessidade de viver experiências intensas ao longo da vida.</p> 
-<p>Quando se origina da potência 64 pode indicar mudanças repentinas ou situações inesperadas que servem como aprendizado e transformação.</p> 
-<p>Quando se origina da potência 73 pode revelar natureza reflexiva e tendência a desenvolver sabedoria através das experiências pessoais.</p> 
-<p>Quando se origina da potência 82 pode indicar aprendizado sobre poder pessoal, liderança e responsabilidade diante das consequências das próprias ações.</p> 
-<p>Quando se origina da potência 91 pode revelar forte processo de maturidade espiritual, conduzindo a pessoa a compreender a vida através de experiências profundas.</p> 
 <p>No aspecto positivo manifesta liderança, coragem, criatividade, iniciativa e capacidade de abrir novos caminhos.</p> 
 <p>No aspecto negativo pode gerar arrogância, impulsividade, individualismo excessivo ou conflitos provocados pelo desejo de dominar situações.</p> 
 <p>O aprendizado do Regente 1 da Vida consiste em desenvolver liderança com consciência, utilizando a força interior para construir caminhos positivos para si e para os outros.</p> `,
 
 
-2:`<h2>🔱  Regente da Piramide N°2</h2> 
-<h3>2️⃣Sensibilidade, Dualidade e Consciência das Relações2️⃣</h3> 
+2:`<h3>🔱  Regente da Piramide N° 2</h3> 
+<h3>Sensibilidade, Dualidade e Consciência das Relações</h3> 
 <p>Para você, o Regente 2 da Vida representa a vibração da sensibilidade, da percepção intuitiva e da busca constante por equilíbrio nas relações humanas. Essa regência indica uma trajetória marcada pelo desenvolvimento da empatia, da cooperação e da compreensão emocional.</p>
 <p>A presença do Regente 2 revela natureza sensível e observadora. Ao longo da vida você tende a perceber com facilidade os sentimentos das pessoas e os movimentos sutis das situações. Muitas experiências surgem para ensinar equilíbrio entre razão e emoção.</p>
-<p>Quando essa vibração se origina da potência 29 pode indicar inteligência brilhante, porém acompanhada de desafios emocionais que exigem maturidade e discernimento.</p>
-<p>Quando se origina da potência 38 revela capacidade de adaptação, sensibilidade artística e facilidade para lidar com pessoas.</p>
-<p>Quando se origina da potência 47 pode indicar habilidade para lidar com questões materiais e capacidade de organização.</p>
-<p>Quando se origina da potência 56 revela natureza ativa e potencial para conquistar posições de destaque através da iniciativa.</p>
-<p>Quando se origina da potência 65 pode indicar aprendizado através das relações afetivas e das responsabilidades emocionais.</p>
-<p>Quando se origina da potência 74 revela necessidade de disciplina e estrutura para alcançar estabilidade na vida.</p>
-<p>Quando se origina da potência 83 pode indicar talento intelectual e facilidade de comunicação.</p>
-<p>Quando se origina da potência 92 revela sensibilidade espiritual e forte intuição.</p>
-<p>No aspecto positivo manifesta empatia, diplomacia, cooperação e grande percepção emocional.</p>
 <p>No aspecto negativo pode gerar insegurança, dependência emocional ou tendência a viver preso às expectativas dos outros.</p>
 <p>O aprendizado do Regente 2 da Vida consiste em desenvolver equilíbrio emocional e confiar na própria intuição.</p>`,
 
-3:`<h2>🔱  Regente da Piramide N°3</h2> 
-<h3> 3️⃣Criatividade, Expressão e Expansão da Consciência3️⃣ </h3> 
+3:`<h3>🔱  Regente da Piramide N° 3</h3> 
+<h3> Criatividade, Expressão e Expansão da Consciência </h3> 
 <p>Para você, o Regente 3 da Vida representa a vibração da criatividade, da comunicação e da expressão dos talentos naturais. Essa regência indica uma trajetória marcada pela busca de experiências que estimulem o pensamento, a imaginação e o contato com diferentes ambientes.</p>
 <p>A presença do Regente 3 revela mente ativa, espírito curioso e grande capacidade de expressão. Ao longo da vida você tende a desenvolver habilidades relacionadas à comunicação, às artes ou à transmissão de ideias.</p>
-<p>Quando essa vibração se origina da potência 12 pode indicar aprendizado através de sacrifícios ou experiências que exigem mudança de perspectiva.</p>
-<p>Quando se origina da potência 21 revela potencial para crescimento social e reconhecimento através da comunicação.</p>
-<p>Quando se origina da potência 30 pode indicar forte criatividade e imaginação.</p>
-<p>Quando se origina da potência 39 revela natureza entusiasta e facilidade de interação social.</p>
-<p>Quando se origina da potência 48 pode indicar desafios ligados à disciplina ou à organização da vida prática.</p>
-<p>Quando se origina da potência 57 revela inteligência estratégica e capacidade de adaptação.</p>
-<p>Quando se origina da potência 66 pode indicar grande sensibilidade emocional e inclinação para ajudar outras pessoas.</p>
-<p>Quando se origina da potência 75 revela natureza reflexiva e capacidade de aprendizado profundo.</p>
-<p>Quando se origina da potência 84 pode indicar experiências ligadas à responsabilidade material.</p>
-<p>Quando se origina da potência 93 revela maturidade espiritual e compreensão mais ampla da vida.</p>
-<p>No aspecto positivo manifesta criatividade, entusiasmo, sociabilidade e talento para comunicação.</p>
 <p>No aspecto negativo pode gerar dispersão, instabilidade emocional ou tendência a prometer mais do que consegue realizar.</p>
 <p>O aprendizado do Regente 3 da Vida consiste em transformar criatividade em realização concreta.</p>`,
 
-4:`<h2>🔱  Regente da Piramide N°4</h2> 
-<h3> 4️⃣Estrutura, Disciplina e Construção da Vida4️⃣ </h3> 
+4:`<h3>🔱  Regente da Piramide N° 4</h3> 
+<h3> Estrutura, Disciplina e Construção da Vida </h3> 
 <p>Para você, o Regente 4 da Vida representa a vibração da estabilidade, da organização e do esforço constante para construir bases sólidas. Essa regência indica uma trajetória marcada pelo trabalho persistente e pela necessidade de criar segurança material e emocional.</p>
 <p>A presença do Regente 4 revela natureza responsável, disciplinada e prática. Ao longo da vida você tende a desenvolver habilidades relacionadas à organização, à estrutura e ao planejamento.</p>
-<p>Quando essa vibração se origina da potência 13 pode indicar experiências desafiadoras que exigem transformação e coragem.</p>
-<p>Quando se origina da potência 22 revela potencial para liderança e construção de projetos importantes.</p>
-<p>Quando se origina da potência 31 pode indicar talento intelectual e capacidade de expressão.</p>
-<p>Quando se origina da potência 40 revela necessidade de superar períodos de estagnação ou reflexão profunda.</p>
-<p>Quando se origina da potência 49 pode indicar experiências intensas que transformam sua visão de mundo.</p>
-<p>Quando se origina da potência 58 revela desafios ligados ao poder material ou às ambições pessoais.</p>
-<p>Quando se origina da potência 67 pode indicar desenvolvimento espiritual através do conhecimento.</p>
-<p>Quando se origina da potência 76 revela natureza introspectiva e tendência ao estudo profundo.</p>
-<p>Quando se origina da potência 85 pode indicar lições relacionadas ao uso equilibrado do poder.</p>
-<p>Quando se origina da potência 94 revela processos de transformação que levam à maturidade.</p>
 <p>No aspecto positivo manifesta disciplina, responsabilidade e capacidade de construir estabilidade duradoura.</p>
 <p>No aspecto negativo pode gerar rigidez, teimosia ou excesso de preocupação material.</p>
 <p>O aprendizado do Regente 4 da Vida consiste em equilibrar disciplina com flexibilidade.</p>`,
 
-5:`<h2>🔱  Regente da Piramide N°5</h2> 
-<h3> 5️⃣Movimento, Experiência e Liberdade5️⃣ </h3> 
+5:`<h3>🔱  Regente da Piramide N° 5</h3> 
+<h3> Movimento, Experiência e Liberdade </h3> 
 <p>Para você, o Regente 5 da Vida representa a vibração da mudança, da curiosidade e da busca por experiências variadas. Essa regência indica uma trajetória marcada pelo aprendizado através do movimento e da adaptação às circunstâncias.</p>
 <p>A presença do Regente 5 revela natureza inquieta e mente aberta para novas possibilidades. Ao longo da vida você tende a buscar conhecimento através da experiência direta.</p>
-<p>Quando essa vibração se origina da potência 14 pode indicar habilidade para comunicação e expressão pública.</p>
-<p>Quando se origina da potência 23 revela proteção ou auxílio de pessoas influentes.</p>
-<p>Quando se origina da potência 32 pode indicar talento criativo e facilidade de comunicação.</p>
-<p>Quando se origina da potência 41 revela capacidade de liderança prática.</p>
-<p>Quando se origina da potência 50 pode indicar momentos de pausa ou reflexão importantes.</p>
-<p>Quando se origina da potência 59 revela sensibilidade espiritual e intuição.</p>
-<p>Quando se origina da potência 68 pode indicar aprendizado sobre poder material.</p>
-<p>Quando se origina da potência 77 revela forte inclinação para conhecimento profundo.</p>
-<p>Quando se origina da potência 86 pode indicar experiências intensas ligadas a responsabilidades materiais.</p>
-<p>Quando se origina da potência 95 revela processos de transformação e renovação.</p>
 <p>No aspecto positivo manifesta versatilidade, inteligência e grande capacidade de adaptação.</p>
 <p>No aspecto negativo pode gerar instabilidade, impulsividade ou dificuldade em manter constância.</p>
 <p>O aprendizado do Regente 5 da Vida consiste em transformar experiência em sabedoria.</p>`,
 
-6:`<h2>🔱  Regente da Piramide N°6</h2> 
-<h3>6️⃣Amor, Harmonia e Responsabilidade Afetiva6️⃣ </h3>
+6:`<h3>🔱  Regente da Piramide N° 6</h3> 
+<h3>Amor, Harmonia e Responsabilidade Afetiva </h3>
 <p>Para você, o Regente 6 da Vida representa a vibração do amor, da família e da responsabilidade emocional. Essa regência indica uma trajetória marcada por experiências relacionadas ao cuidado, à proteção e ao desenvolvimento das relações afetivas.</p>
 <p>A presença do Regente 6 revela natureza sensível e desejo de construir harmonia nas relações.</p>
-<p>Quando essa vibração se origina da potência 15 pode indicar forte magnetismo pessoal.</p>
-<p>Quando se origina da potência 24 revela facilidade para construir relações estáveis.</p>
-<p>Quando se origina da potência 33 indica grande potencial de prosperidade e ajuda aos outros.</p>
-<p>Quando se origina da potência 42 pode indicar aprendizado através das responsabilidades familiares.</p>
-<p>Quando se origina da potência 51 revela experiências de mudança importantes.</p>
-<p>Quando se origina da potência 60 pode indicar períodos de reflexão emocional.</p>
-<p>Quando se origina da potência 69 revela sensibilidade profunda e busca de equilíbrio afetivo.</p>
-<p>Quando se origina da potência 78 pode indicar desafios relacionados à disciplina emocional.</p>
-<p>Quando se origina da potência 87 revela desenvolvimento espiritual através das relações.</p>
-<p>Quando se origina da potência 96 pode indicar maturidade emocional conquistada através das experiências.</p>
-<p>No aspecto positivo manifesta amor, generosidade e capacidade de harmonizar ambientes.</p>
 <p>No aspecto negativo pode gerar ciúme, dependência emocional ou excesso de preocupação com os outros.</p>
 <p>O aprendizado do Regente 6 da Vida consiste em amar com equilíbrio e responsabilidade.</p>`,
 
-7:`<h2>🔱  Regente da Piramide N°7</h2> 
-<h3>7️⃣Busca de Conhecimento e Evolução Interior7️⃣ </h3>
+7:`<h3>🔱  Regente da Piramide N° 7</h3> 
+<h3>Busca de Conhecimento e Evolução Interior </h3>
 <p>Para você, o Regente 7 da Vida representa a vibração da introspecção, da investigação e da busca por sabedoria. Essa regência indica uma trajetória marcada pelo desenvolvimento intelectual e espiritual.</p>
 <p>A presença do Regente 7 revela mente analítica e necessidade de compreender profundamente os mistérios da vida.</p>
-<p>Quando essa vibração se origina da potência 16 pode indicar experiências que levam a profundas transformações pessoais.</p>
-<p>Quando se origina da potência 25 revela sensibilidade intelectual e capacidade de reflexão.</p>
-<p>Quando se origina da potência 34 pode indicar criatividade aliada à inteligência.</p>
-<p>Quando se origina da potência 43 revela capacidade de liderança intelectual.</p>
-<p>Quando se origina da potência 52 pode indicar aprendizado através das experiências práticas.</p>
-<p>Quando se origina da potência 61 revela sensibilidade espiritual.</p>
-<p>Quando se origina da potência 70 pode indicar períodos de recolhimento e reflexão.</p>
-<p>Quando se origina da potência 79 revela busca intensa por conhecimento.</p>
-<p>Quando se origina da potência 88 pode indicar grande poder mental.</p>
-<p>Quando se origina da potência 97 revela maturidade espiritual profunda.</p>
 <p>No aspecto positivo manifesta sabedoria, intuição e grande capacidade de análise.</p>
 <p>No aspecto negativo pode gerar isolamento, excesso de introspecção ou dificuldade de convivência social.</p>
 <p>O aprendizado do Regente 7 da Vida consiste em transformar conhecimento em sabedoria.</p>`,
 
-8:`<h2>🔱  Regente da Piramide N°8</h2> 
-<h3>8️⃣Poder, Justiça e Responsabilidade Material8️⃣</h3> 
+8:`<h3>🔱  Regente da Piramide N° 8</h3> 
+<h3>Poder, Justiça e Responsabilidade Material</h3> 
 <p>Para você, o Regente 8 da Vida representa a vibração do poder, da organização e da lei de causa e efeito. Essa regência indica uma trajetória marcada por experiências relacionadas à liderança, à administração e ao equilíbrio entre conquistas materiais e valores morais.</p>
-<p>Quando essa vibração se origina da potência 17 pode indicar proteção espiritual e sucesso gradual.</p>
-<p>Quando se origina da potência 26 revela aprendizado através de responsabilidades financeiras.</p>
-<p>Quando se origina da potência 35 pode indicar inteligência estratégica.</p>
-<p>Quando se origina da potência 44 revela grande potencial de liderança.</p>
-<p>Quando se origina da potência 53 pode indicar mudanças inesperadas.</p>
-<p>Quando se origina da potência 62 revela aprendizado através das relações.</p>
-<p>Quando se origina da potência 71 pode indicar forte capacidade de análise.</p>
-<p>Quando se origina da potência 80 revela necessidade de disciplina material.</p>
-<p>Quando se origina da potência 89 pode indicar experiências intensas relacionadas ao poder.</p>
-<p>Quando se origina da potência 98 revela maturidade e compreensão profunda da justiça da vida.</p>
 <p>No aspecto positivo manifesta liderança equilibrada, disciplina e senso de justiça.</p>
 <p>No aspecto negativo pode gerar autoritarismo, materialismo excessivo ou abuso de poder.</p>
 <p>O aprendizado do Regente 8 da Vida consiste em utilizar o poder com responsabilidade.</p>`,
 
-9:`<h2>🔱  Regente da Piramide N°9</h2> 
-<h3> 9️⃣Sabedoria, Conclusões e Consciência Universal9️⃣</h3>  
+9:`<h3>🔱  Regente da Piramide N° 9</h3> 
+<h3> Sabedoria, Conclusões e Consciência Universal</h3>  
 <p>Para você, o Regente 9 da Vida representa a vibração da experiência acumulada, da maturidade espiritual e da compreensão profunda da existência.</p>
 <p>Essa regência indica uma trajetória marcada por aprendizados intensos e momentos de reflexão que conduzem ao desenvolvimento da sabedoria.</p>
-<p>Quando essa vibração se origina da potência 18 pode indicar desafios emocionais ou situações que exigem grande discernimento.</p>
-<p>Quando se origina da potência 27 revela sensibilidade espiritual e capacidade de ajudar outras pessoas.</p>
-<p>Quando se origina da potência 36 pode indicar forte criatividade aliada à sensibilidade.</p>
-<p>Quando se origina da potência 45 revela aprendizado através de responsabilidades materiais.</p>
-<p>Quando se origina da potência 54 pode indicar experiências ligadas a mudanças e transformações.</p>
-<p>Quando se origina da potência 63 revela maturidade emocional.</p>
-<p>Quando se origina da potência 72 pode indicar grande percepção intuitiva.</p>
-<p>Quando se origina da potência 81 revela forte capacidade de liderança espiritual.</p>
-<p>Quando se origina da potência 90 pode indicar encerramento de ciclos importantes.</p>
-<p>Quando se origina da potência 99 revela vibração espiritual elevada e profunda compreensão da vida.</p>
 <p>No aspecto positivo manifesta sabedoria, generosidade e compaixão.</p>
 <p>No aspecto negativo pode gerar isolamento, pessimismo ou dificuldade em desapegar do passado.</p>
 <p>O aprendizado do Regente 9 da Vida consiste em transformar experiência em sabedoria e utilizar esse conhecimento para ajudar outras pessoas.</p>`
