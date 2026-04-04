@@ -300,46 +300,73 @@
 
 
 
-    .separador-luxo {
-        /* Espaçamento e Quebra de Página */
-        margin: 80px auto 40px auto;
-        page-break-before: always;
-        width: 100%; /* Ocupa a largura total para centralizar o interno */
-        display: flex;
-        justify-content: center;
-    }
+.separador-luxo {
+    /* Espaçamento e Quebra de Página */
+    margin: 80px auto 40px auto;
+    page-break-before: always;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-    .separador-luxo .caixa-interna {
-        position: relative;
-        width: 110%; /* Largura da barra escura */
-        height: 110px;
-        background-color: #1a1a1a; /* Cor Blackout */
-        background-image: radial-gradient(circle at 50% 100%, #000 10%, #1a1a1a 10%, #1a1a1a 23%, #000 23%, #000 30%, #1a1a1a 30%, #1a1a1a 43%, #000 43%, #000 50%, #1a1a1a 50%, #1a1a1a 63%, #000 63%, #000 71%, transparent 71%, transparent);
-        background-size: 80px 40px;
-        border-top: 4px solid #A65F00;
-        border-bottom: 4px solid #A65F00;
-        border-radius: 4px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3), inset 0 0 50px rgba(0,0,0,0.5);
-        
-        /* Centralização Absoluta do Título */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+.separador-luxo .caixa-interna {
+    position: relative;
+    width: 110%;
+    height: 110px;
 
-    .separador-luxo h2 {
-        color: #A65F00 !important;
-        font-size: 1.8rem !important;
-        text-transform: uppercase !important;
-        letter-spacing: 5px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        font-family: 'Times New Roman', serif !important;
-        font-weight: bold !important;
-        text-shadow: 2px 2px 8px #000 !important;
-        line-height: 1; /* Evita que o texto suba ou desça demais */
-    }
+    /* FUNDO COM PROFUNDIDADE (PRETO + AZUL PETRÓLEO) */
+    background: linear-gradient(180deg, #000000 0%, #0f2a36 100%);
+
+    /* ESPIRAIS SUAVES (EFEITO LUXO) */
+    background-image:
+        radial-gradient(circle at 50% 100%, rgba(212,175,55,0.06) 10%, transparent 11%),
+        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.04) 10%, transparent 11%);
+    background-size: 120px 60px;
+
+    /* BORDA MAIS NOBRE */
+    border-top: 3px solid #c57a1a;
+    border-bottom: 3px solid #c57a1a;
+
+    border-radius: 6px;
+
+    /* SOMBRA MAIS PROFUNDA */
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.5),
+        inset 0 0 80px rgba(0,0,0,0.7);
+
+    /* CENTRALIZAÇÃO */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* VINHETA INTERNA (EFEITO PREMIUM) */
+.separador-luxo .caixa-interna::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.6));
+    pointer-events: none;
+}
+
+.separador-luxo h2 {
+    color: #d97a1e !important;
+    font-size: 1.8rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 5px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Times New Roman', serif !important;
+    font-weight: bold !important;
+
+    /* GLOW CONTROLADO */
+    text-shadow:
+        0 0 5px rgba(217,122,30,0.6),
+        0 0 15px rgba(217,122,30,0.3);
+
+    line-height: 1;
+}
 
         /* PADRÃO PARA TODAS AS INTRODUÇÕES */
     .intro-texto, .intro-secao {
