@@ -259,14 +259,7 @@
     position: relative;
 }
 
-/* VINHETA (INTEGRA O LOGO AO FUNDO) */
-.capa-transicao::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, transparent 35%, rgba(0,0,0,0.75));
-    z-index: 1;
-}
+
 
 /* TEXTO "PARTE 01" */
 .capa-transicao .parte-texto {
@@ -295,14 +288,11 @@
     margin: 0;
     width: 90%;
 
-    /* GLOW CONTROLADO */
-    text-shadow:
-        0 0 8px rgba(217,122,30,0.6),
-        0 0 20px rgba(217,122,30,0.3);
+    /* 🔥 SOMBRA LEVE (antes era pesada) */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 
     z-index: 2;
 }
-
 /* TEXTO INFERIOR */
 .capa-transicao p {
     position: absolute;
