@@ -1532,6 +1532,21 @@ desafios:{
 
 1:{
 
+ 0: `<h3>O Desafio da Escolha na Juventude - 0</h3>
+
+    <p>Nesta primeira fase da vida, o desafio zero indica que não existe um obstáculo fixo, mas sim a tarefa de aprender a navegar entre múltiplas direções. Durante a juventude e a transição para a maioridade, a maior prova será descobrir a identidade real e o que se projeta para o futuro, sem que ocorra paralisia pela indecisão típica deste período de descobertas e primeiras grandes escolhas.</p>
+
+    <p>O foco agora é o cultivo da força de vontade para moldar o próprio destino. Para superar este desafio, o aprendizado inicial exige o domínio sobre as bases de todos os pilares numerológicos:</p>
+
+    <p>1. Ser independente</p>
+    <p>2. Saber agir com diplomacia e ser cooperativo</p>
+    <p>3. Saber se expressar</p>
+    <p>4. Ser persistente, dedicado e disciplinado</p>
+    <p>5. Ser responsável e autocentrado</p>
+    <p>6. Ter o controle sobre os sentimentos</p>
+    <p>7. Ser tolerante e superar os medos</p>
+    <p>8. Manter o equilíbrio e agir com justiça</p>`,
+
     1: `<h3>Desafio da Individualidade e Independência - 1</h3>
     <p>Este primeiro desafio foca na conquista da individualidade e na superação das dependências que cercam o início da vida. <strong>você</strong> poderá enfrentar situações onde a própria vontade será testada por figuras de autoridade ou por ambientes que insistem em determinar o que deve ser feito. A sombra aqui é o medo de ser diferente e a tendência de se esconder atrás de opiniões alheias para evitar o peso da responsabilidade individual.</p>
     <p>Durante esta fase, <strong>você</strong> poderá sentir dificuldade para dar o primeiro passo sozinho, temendo julgamento ou fracasso. A vida provoca <strong>você</strong> a sair da influência dominante de outras pessoas e desenvolver uma autoconfiança que não dependa de aprovação constante. Superar este desafio significa transformar insegurança em iniciativa, permitindo que <strong>você</strong> se posicione com firmeza diante do mundo e assuma o comando das próprias escolhas.</p>`,
@@ -1568,6 +1583,21 @@ desafios:{
         
         // --- DESAFIO 2 (FASE ADULTA / REALIZAÇÃO) ---
 2: {
+
+ 0: `<h3>O Desafio da Escolha na Maturidade - 0</h3>
+
+    <p>Ao atingir a vida adulta, o desafio zero se manifesta como a necessidade de manter o domínio sobre todas as áreas da existência. Nesta fase de maturidade, a escolha deixa de ser apenas sobre o futuro e passa a ser sobre a manutenção da integridade e do foco. O desafio consiste em permanecer em sintonia com valores fundamentais enquanto ocorre a gestão das complexas responsabilidades do cotidiano.</p>
+
+    <p>Para lidar positivamente com este período, haverá a exigência de demonstrar maestria em todas as frentes de ação, integrando com perfeição os seguintes pilares:</p>
+
+    <p>1. Ser independente</p>
+    <p>2. Saber agir com diplomacia e ser cooperativo</p>
+    <p>3. Saber se expressar</p>
+    <p>4. Ser persistente, dedicado e disciplinado</p>
+    <p>5. Ser responsável e autocentrado</p>
+    <p>6. Ter o controle sobre os sentimentos</p>
+    <p>7. Ser tolerante e superar os medos</p>
+    <p>8. Manter o equilíbrio e agir com justiça</p>`,
 
     1: `<h3>Desafio da Autoridade e Protagonismo Original - 1</h3>
     <p>Este seu segundo desafio foca na consolidação da sua autoridade pessoal e na superação definitiva de qualquer resquício de dependência. Na fase adulta, <strong>você</strong> será testado em sua capacidade de se manter firme em suas convicções, mesmo quando o círculo social exigir conformidade. A sombra aqui é o medo de assumir a liderança total da própria vida.</p>
@@ -1606,9 +1636,19 @@ desafios:{
 3: {
 0: `<h3>O Desafio da Escolha e Autoconhecimento - 0</h3>
 
-    <p>Ter um desafio zero não significa a ausência de obstáculos, mas sim que você enfrenta a complexidade de não ter um caminho único predefinido. O seu maior embate nesta vida reside na capacidade de fazer escolhas bem-feitas, sendo desafiado constantemente a permanecer fiel e focado em seus próprios ideais em meio a tantas possibilidades.</p>
-    <p>Este período é uma oportunidade valiosa para você se aprofundar em si mesmo, descobrindo sua verdadeira essência e o que realmente espera da vida. O objetivo central para você é o desenvolvimento do caráter e da força de vontade, vencendo o desânimo e a indecisão. Para transitar com sucesso por este caminho, você precisará integrar as lições de independência, diplomacia, disciplina e equilíbrio, transformando a dúvida na maestria de tomar decisões e realizá-las com soberania.</p>`,
-   
+    <p>Ter um desafio zero como guia para a vida inteira significa que o embate principal reside na capacidade de fazer escolhas bem-feitas em qualquer idade. Não há um caminho único predefinido; você enfrentará uma existência onde todos os desafios podem estar disponíveis e ativos simultaneamente, exigindo vigilância constante para permanecer em fidelidade aos próprios ideais.</p>
+
+    <p>O objetivo para toda a vida é o desenvolvimento do caráter soberano, vencendo o desânimo e a indecisão através do domínio total sobre os seguintes aspectos:</p>
+
+    <p>1. Ser independente</p>
+    <p>2. Saber agir com diplomacia e ser cooperativo</p>
+    <p>3. Saber se expressar</p>
+    <p>4. Ser persistente, dedicado e disciplinado</p>
+    <p>5. Ser responsável e autocentrado</p>
+    <p>6. Ter o controle sobre os sentimentos</p>
+    <p>7. Ser tolerante e superar os medos</p>
+    <p>8. Manter o equilíbrio e agir com justiça</p>`,
+ 
  1: `<h3>O Desafio da Independência e Soberania Pessoal - 1</h3>
     <p>O seu desafio principal nesta vida é a conquista da independência total e a superação da tendência a se anular para caber em moldes externos. <strong>você</strong> nasceu para ser uma força única, mas a sombra que acompanhará o seu caminho é a dúvida sobre o próprio valor e a tentação de buscar aprovação em cada passo dado.</p>
     <p>A lição de vida para <strong>você</strong> é o desenvolvimento de um "eu" inabalável, que não teme a solidão que a liderança às vezes impõe. <strong>você</strong> precisará aprender que a sua originalidade é o seu maior trunfo. O desafio para <strong>você</strong> é transformar a insegurança em uma coragem serena, agindo como pioneiro do próprio caminho e provando que o mérito individual é a base de todo o sucesso real e duradouro.</p>`,
