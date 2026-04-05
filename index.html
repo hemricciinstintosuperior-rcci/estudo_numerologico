@@ -1148,7 +1148,7 @@ subgrupos.forEach(sub => {
 }
 
 
-function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, statusMomentoObj) {
+function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, statusMomentoObj, indiceAno, periodoVigente) {
     try {
         let rankingMomento = [];
         
@@ -1662,7 +1662,7 @@ vibracoes: {
         };
 
         // Esta linha chama as barrinhas e gruda elas no HTML do ano
-        h += gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGrafico);
+       h += gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGrafico, indiceAno, periodoVigente);
         // --- FIM DO QUE VOCÊ COLOU ---
 
         return h;
