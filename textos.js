@@ -1604,7 +1604,12 @@ desafios:{
 },
 // --- DESAFIO 3 (DESAFIO PRINCIPAL / LIÇÃO DE VIDA) ---
 3: {
-    1: `<h3>O Desafio da Independência e Soberania Pessoal - 1</h3>
+0: `<h3>O Desafio da Escolha e Autoconhecimento - 0</h3>
+
+    <p>Ter um desafio zero não significa a ausência de obstáculos, mas sim que você enfrenta a complexidade de não ter um caminho único predefinido. O seu maior embate nesta vida reside na capacidade de fazer escolhas bem-feitas, sendo desafiado constantemente a permanecer fiel e focado em seus próprios ideais em meio a tantas possibilidades.</p>
+    <p>Este período é uma oportunidade valiosa para você se aprofundar em si mesmo, descobrindo sua verdadeira essência e o que realmente espera da vida. O objetivo central para você é o desenvolvimento do caráter e da força de vontade, vencendo o desânimo e a indecisão. Para transitar com sucesso por este caminho, você precisará integrar as lições de independência, diplomacia, disciplina e equilíbrio, transformando a dúvida na maestria de tomar decisões e realizá-las com soberania.</p>`,
+   
+ 1: `<h3>O Desafio da Independência e Soberania Pessoal - 1</h3>
     <p>O seu desafio principal nesta vida é a conquista da independência total e a superação da tendência a se anular para caber em moldes externos. <strong>você</strong> nasceu para ser uma força única, mas a sombra que acompanhará o seu caminho é a dúvida sobre o próprio valor e a tentação de buscar aprovação em cada passo dado.</p>
     <p>A lição de vida para <strong>você</strong> é o desenvolvimento de um "eu" inabalável, que não teme a solidão que a liderança às vezes impõe. <strong>você</strong> precisará aprender que a sua originalidade é o seu maior trunfo. O desafio para <strong>você</strong> é transformar a insegurança em uma coragem serena, agindo como pioneiro do próprio caminho e provando que o mérito individual é a base de todo o sucesso real e duradouro.</p>`,
 
