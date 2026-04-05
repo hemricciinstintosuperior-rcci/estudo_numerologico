@@ -1167,7 +1167,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
     try {
         let rankingMomento = [];
         
-        // Usamos o status e perfil que vieram do "Status do Momento"
+        // Mantendo sua lógica original de captura de status e vibrações
         const statusPlanos = statusMomentoObj.status; 
         const vibPlanos = statusMomentoObj.vibracoes;
         const perfilMomento = statusMomentoObj.perfil;
@@ -1194,65 +1194,62 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             }
         }   
         
-
-// 1. Criamos um container principal para segurar tudo junto
-let html = `<div class="container-potenciais-momento" style="page-break-inside: avoid; break-inside: avoid;">`;
-
-// 2. Adicionamos o cabeçalho (Título, Idade, Período)
-html += `
-    <div class="cabecalho-potenciais" style="text-align:center; margin-top:20px;">
-        <h2 style="border-bottom: 0px; color:#000000; margin:0 0 5px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold; font-size: 22px;">
-            Indicador de Potenciais do Momento
-        </h2>
-        <div style="margin-bottom:20px;">
-            <span style="color:var(--gold); font-weight:bold; font-size:16px;">IDADE: ${indiceAno} ANOS</span><br>
-            <span style="color:#666; font-size:14px; letter-spacing:1px;">PERÍODO: ${periodoVigente}</span>
-        </div>
-    </div>
-`;
-
-// 3. Adicionamos a Introdução (Ajustei as margens para "colar" no gráfico)
-html += `
-    <div class="intro-secao" style="margin: 0 auto 10px auto; max-width: 95%; font-size: 19px; line-height: 1.8; color: #333; text-align: justify; padding-bottom: 10px; border-bottom: 1px solid #eee;">
-        <p>Os <b>Potenciais do Momento</b> revelam como suas habilidades naturais estão sendo filtradas pelo ciclo atual. Esta análise indica quais talentos estão mais vibrantes e quais exigem mais atenção para serem manifestados agora, servindo como um guia prático para suas ações neste período específico.</p>
-    </div>
-`;
-
-
-
-   // Reutiliza a lógica visual da gerarTodosOsGraficos original
-               const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
+        let html = ""; // Começamos o HTML vazio para injetar o título no momento certo
+        const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
         
-        ordemVisual.forEach(p => {
+        ordemVisual.forEach((p, index) => {
             const status = statusPlanos[p];
             const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
             
+            // Início do Card Individual (com regra para não quebrar página)
             html += `
-                <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
-                    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 20px;">
-                        <h2 style="margin:0; color:${cor}; text-transform:uppercase; font-size:19px;">${p} <small style="color:#444;">(Tendência de Momento)</small></h2>
-                        <span style="font-size:16px; font-weight:bold; background:${cor}; color:#fff; padding:3px 10px; border-radius:15px; text-transform:uppercase;">${status}</span>
+                <div style="margin-top: 20px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
+            `;
+
+            // SE FOR O PRIMEIRO ITEM (FÍSICO), INJETA O TÍTULO E INTRODUÇÃO AQUI DENTRO
+            if (index === 0) {
+                html += `
+                    <div style="text-align:center; border-bottom: 1px solid #eee; margin-bottom: 25px; padding-bottom: 15px;">
+                        <h2 style="color:#000; margin:0; text-transform:uppercase; letter-spacing:1px; font-weight:bold; font-size: 20px;">
+                            Indicador de Potenciais do Momento
+                        </h2>
+                        <div style="margin: 8px 0 15px 0;">
+                            <span style="color:var(--gold); font-weight:bold; font-size:15px;">IDADE: ${indiceAno} ANOS</span> | 
+                            <span style="color:#666; font-size:13px; letter-spacing:1px;">PERÍODO: ${periodoVigente}</span>
+                        </div>
+                        <div style="font-size: 17px; line-height: 1.6; color: #333; text-align: justify; max-width: 95%; margin: 0 auto;">
+                            <p style="margin:0;">Os <b>Potenciais do Momento</b> revelam como suas habilidades naturais estão sendo filtradas pelo ciclo atual. Esta análise indica quais talentos estão mais vibrantes e quais exigem mais atenção agora, servindo como um guia prático para este período específico.</p>
+                        </div>
                     </div>
+                `;
+            }
+
+            // Linha do Status do Plano (Ex: Físico - Tendência de Momento)
+            html += `
+                <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 20px;">
+                    <h2 style="margin:0; color:${cor}; text-transform:uppercase; font-size:18px;">${p} <small style="color:#444; font-size:12px;">(Tendência de Momento)</small></h2>
+                    <span style="font-size:14px; font-weight:bold; background:${cor}; color:#fff; padding:2px 10px; border-radius:15px; text-transform:uppercase;">${status}</span>
+                </div>
             `;
 
             const atributos = rankingMomento.filter(item => item.plano === p);
             const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
-subgrupos.forEach(sub => {
-    // Espaço grande (50px) antes de começar cada novo título de grupo
-    html += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid;">`;
-    
-    html += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0;  padding-left: 10px;">${sub}</h4>`;
-    
-    atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
-        html += montarBarraGrafico(item);
-    });
+            subgrupos.forEach(sub => {
+                // Mantive o break-inside avoid aqui para os subgrupos não quebrarem
+                html += `<div style="margin-bottom: 30px; padding-top: 10px; break-inside: avoid;">`;
+                html += `<h4 style="color:#000000; font-size:16px; text-align:center; text-transform:uppercase; margin: 0 0 15px 0;">${sub}</h4>`;
+                
+                atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
+                    html += montarBarraGrafico(item);
+                });
 
-    html += `</div>`; // Fecha o bloco do grupo
-});
+                html += `</div>`; 
+            });
 
-    html += `</div>`; 
-});
+            html += `</div>`; // Fecha o card do plano
+        });
+
         return html;
     } catch (e) {
         console.error("Erro nos gráficos de momento:", e);
