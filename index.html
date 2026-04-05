@@ -1096,7 +1096,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
 
         
-        let htmlFinal = `<div class="page mostrar-titulo"><h2 style="color:#827108; text-align:center; margin:10px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais de Nascimento</h2>`;
+        let htmlFinal = `<div class="page mostrar-titulo"><h2 style="color:#000000; text-align:center; margin:10px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Indicador de Potenciais de Nascimento(Permanente)</h2>`;
 
         const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"].sort((a, b) => {
             const pesos = { "forte": 3, "medio": 2, "fraco": 1 };
@@ -1125,7 +1125,7 @@ subgrupos.forEach(sub => {
     htmlFinal += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid; page-break-inside: avoid;">`;
     
     // TÍTULO DO SUBGRUPO: Com a barrinha dourada na esquerda
-    htmlFinal += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
+    htmlFinal += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
     
     // FILTRA E GERA AS BARRAS:
     atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
@@ -1180,7 +1180,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
         }   
         
 
-        let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#827108; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Potenciais Ativados nesse Ciclo</h2>`;
+        let html = `<h2 style="border-bottom: 2px solid var(--gold);color:#000000; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Indicador de Potenciais do Momento</h2>`;
 
 
    // Reutiliza a lógica visual da gerarTodosOsGraficos original
@@ -1205,7 +1205,7 @@ subgrupos.forEach(sub => {
     // Espaço grande (50px) antes de começar cada novo título de grupo
     html += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid;">`;
     
-    html += `<h4 style="color:#827108; font-size:18px; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px;">${sub}</h4>`;
+    html += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px;">${sub}</h4>`;
     
     atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
         html += montarBarraGrafico(item);
