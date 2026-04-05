@@ -2069,12 +2069,12 @@ html += `
     <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Déficits de Comportamento</h2>
         <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
-        <pfont-size: 1.2rem; color: var(--gold)><strong>Déficit Recorrente </strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
+        <pfont-size: 1.2rem; color: var(--gold)><strong> </strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
         <hr style="border:0; border-top:1px solid #969696">
 `;
 if (res.deficitsOcultos.length > 0) {
     res.deficitsOcultos.forEach(d => {
-        html += `<p><strong>Déficit Oculto </strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #969696">`;
+        html += `<p><strong></strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #969696">`;
     });
 }
 html += `</div>`;
