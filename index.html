@@ -387,7 +387,7 @@
         color: #111 !important;
         text-align: justify !important;
         margin-bottom: 50px !important;
-        border-bottom: 1px solid #222!important;
+        border-bottom: 1px solid #969696!important;
         font-family: 'Arial', sans-serif; /* Ou a fonte de sua preferência */
         font-style: arial;
     }
@@ -399,7 +399,7 @@
         color: #000 !important;
         text-align: justify !important;
         margin-bottom: 30px !important;
-       border-bottom: 1px solid #222!important;
+       border-bottom: 1px solid #969696!important;
     }
 
     /* FORÇAR PARÁGRAFOS DENTRO DOS RESULTADOS */
@@ -2070,11 +2070,11 @@ html += `
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Déficits de Comportamento</h2>
         <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
         <p><strong>Déficit Recorrente ${res.deficitRecorrente}</strong> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</p>
-        <hr style="border:0; border-top:1px solid #d97a1e">
+        <hr style="border:0; border-botoom:1px solid #969696">
 `;
 if (res.deficitsOcultos.length > 0) {
     res.deficitsOcultos.forEach(d => {
-        html += `<p><strong>Déficit Oculto </strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #d97a1e">`;
+        html += `<p><strong>Déficit Oculto </strong> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-botoom:1px solid #969696">`;
     });
 }
 html += `</div>`;
@@ -2150,7 +2150,7 @@ itensAlinhamento.forEach(chave => {
     if (chave === "inclinacoes") {
         if (res.inclinacoes && res.inclinacoes.length > 0) {
             res.inclinacoes.forEach(num => {
-                conteudoFinal += `<p><strong> </strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #eee">`;
+                conteudoFinal += `<p><strong> </strong><br>${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #969696">`;
             });
         } else {
             conteudoFinal = "<p>Nenhuma inclinação específica detectada.</p>";
