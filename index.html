@@ -2454,6 +2454,14 @@ let htmlPiramide = `
 
     <div class="piramide">`;
 
+    // --- NOVA PARTE: LINHA DO NOME NO TOPO ---
+const letrasNome = nomeCompleto.toUpperCase().replace(/\s+/g, '').split('');
+htmlPiramide += `<div class="linha linha-letras" style="margin-bottom: 5px;">`;
+letrasNome.forEach(letra => {
+    htmlPiramide += `<div class="num-letra" style="width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; color: #827108; font-size: 14px; font-weight: bold; border-radius: 2px;">${letra}</div>`;
+});
+htmlPiramide += `</div>`;
+
 // ... (continua o código que desenha as linhas da pirâmide)
     
 piramideVida.forEach((linha, i) => {
