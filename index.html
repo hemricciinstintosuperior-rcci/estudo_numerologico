@@ -1070,7 +1070,6 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
         const statusPlanos = {};
         const vibPlanos = {};
 
-        // Normalização rigorosa para cruzamento de dados
         const mapaChaves = {
             "Físico": "fisico", "Mental": "mental", "Emocional": "emocional", "Intuitivo": "intuitivo"
         };
@@ -1087,7 +1086,6 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             let config = megaBancoAtributos[nomeAtributo];
             let pAlvo = config.plano; 
 
-            // Se o plano no banco estiver como "Físico", ele agora encontra o status corretamente
             let statusRelativo = statusPlanos[pAlvo];
             let vibRelativa = vibPlanos[pAlvo];
 
@@ -1108,10 +1106,8 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             }
         }       
         
-
-
-        
-        let htmlFinal = `<div class="page mostrar-titulo"><h2 style="color:#000000; text-align:center; margin:10px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Indicador de Potenciais de Nascimento(Permanente)</h2>`;
+        // 1. Começamos o HTML vazio para injetar o título no momento certo
+        let htmlFinal = ""; 
 
         const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"].sort((a, b) => {
             const pesos = { "forte": 3, "medio": 2, "fraco": 1 };
@@ -1120,12 +1116,28 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
         const legendas = { "Físico": "Físico", "Emocional": "Emocional", "Intuitivo": "Intuitivo", "Mental": "Mental" };
 
-        ordemVisual.forEach(p => {
+        ordemVisual.forEach((p, index) => {
             const status = statusPlanos[p];
             const cor = status === "forte" ? "#827108" : (status === "medio" ? "#555" : "#cc0000");
 
+            // 2. Abertura do Card com 'break-inside: avoid' para não separar o título do conteúdo
             htmlFinal += `
-                <div style="margin-top: 30px; margin-bottom: 30px; break-inside: avoid;  border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
+                <div style="margin-top: 20px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
+            `;
+
+            // 3. INJEÇÃO DO TÍTULO: Apenas no primeiro item do ranking (index 0)
+            if (index === 0) {
+                htmlFinal += `
+                    <div style="text-align:center; border-bottom: 1px solid #eee; margin-bottom: 25px; padding-bottom: 10px;">
+                        <h2 style="color:#000000; margin:10px 0 15px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold; font-size: 20px;">
+                            Indicador de Potenciais de Nascimento (Permanente)
+                        </h2>
+                    </div>
+                `;
+            }
+
+            // 4. Cabeçalho do Plano (Físico, Mental, etc.)
+            htmlFinal += `
                     <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid ${cor}; padding-bottom: 12px; margin-bottom: 20px;">
                         <h2 style="margin:0; color:${cor}; text-transform:uppercase; font-size:20px; font-weight:bold;">${legendas[p]}</h2>
                         <span style="font-size:16px; font-weight:bold; background:${cor}; color:#fff; padding:4px 14px; border-radius:20px; text-transform:uppercase;">${status}</span>
@@ -1135,24 +1147,19 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
             const atributos = rankingGeral.filter(item => item.plano === p);
             const subgrupos = [...new Set(atributos.map(item => item.sub))];
 
-subgrupos.forEach(sub => {
-    // ABRE O BLOCO: Espaço de 50px no final e evita corte de página
-    htmlFinal += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid; page-break-inside: avoid;">`;
-    
-    // TÍTULO DO SUBGRUPO: Com a barrinha dourada na esquerda
-    htmlFinal += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0;  padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
-    
-    // FILTRA E GERA AS BARRAS:
-    atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
-        htmlFinal += montarBarraGrafico(item);
-    });
+            subgrupos.forEach(sub => {
+                htmlFinal += `<div style="margin-bottom: 40px; padding-top: 20px; break-inside: avoid; page-break-inside: avoid;">`;
+                htmlFinal += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0; padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
+                
+                atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
+                    htmlFinal += montarBarraGrafico(item);
+                });
 
-    // FECHA O BLOCO
-    htmlFinal += `</div>`; 
-});
+                htmlFinal += `</div>`; 
+            });
 
-    htmlFinal += `</div>`; 
-});
+            htmlFinal += `</div>`; // Fecha o card do plano
+        });
 
         return htmlFinal;
 
@@ -1161,7 +1168,6 @@ subgrupos.forEach(sub => {
         return `<div style="color:red;">Erro ao processar gráficos.</div>`;
     }
 }
-
 
 function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz, negativasMatriz, statusMomentoObj, indiceAno, periodoVigente) {
     try {
