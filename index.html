@@ -1238,29 +1238,29 @@ function alternarAba(evt, nomePlano) {
 }
 
 function montarBarraGrafico(item) {
-    // 1. Lógica de Cores Dinâmica (Mantida para o Premium)
-    let corPrincipal;
-    let corBrilho;
-
+    // 1. Definição das cores base (iguais às da sua foto de exemplo)
+    let corBase;
     if (item.nota >= 7.5) {
-        // Verde Profissional (Forte/Positivo)
-        corPrincipal = "#2e7d32"; 
-        corBrilho = "#4caf50";
+        corBase = "#32CD32"; // LimeGreen (Verde vibrante da foto)
     } else if (item.nota >= 5.0) {
-        // Dourado/Amarelo (Médio)
-        corPrincipal = "#FFCC5E";
-        corBrilho = "#ffe082";
+        corBase = "#FFD700"; // Gold (Amarelo dourado da foto)
     } else {
-        // Vermelho (Baixo/Alerta)
-        corPrincipal = "#cc0000";
-        corBrilho = "#ff5252";
+        corBase = "#FF4500"; // OrangeRed (Laranja/Vermelho vibrante da foto)
     }
 
-    // Criamos um degradê suave da mesma cor para dar profundidade (efeito 3D)
-    let degradêLuxo = `linear-gradient(to right, ${corPrincipal} 0%, ${corBrilho} 100%)`;
+    // 2. >>> A MÁGICA DO ESTILO DINÂMICO ESTÁ AQUI <<<
+    // Criamos o efeito de reflexo e profundidade (não linear) usando transparências.
+    // Isso simula o efeito de "lente" da primeira foto.
+    let degradêDinamico = `linear-gradient(180deg, 
+        ${corBase} 0%, 
+        ${corBase}cc 40%, /* cc = ~80% opacidade */
+        rgba(255,255,255,0.4) 45%, /* Ponto de luz intenso */
+        rgba(255,255,255,0.1) 60%, /* Suavização da luz */
+        ${corBase}99 100% /* 99 = ~60% opacidade */
+    )`;
 
     return `
-    <div style="display: flex; align-items: center; margin-bottom: 12px; width: 100%; break-inside: avoid;">
+    <div style="display: flex; align-items: center; margin-bottom: 15px; width: 100%; break-inside: avoid;">
         
         <div style="width: 200px; text-align: right; padding-right: 15px; flex-shrink: 0;">
             <span style="font-weight: 600; color: #444; font-size: 14px; font-family: sans-serif; text-transform: capitalize;">
@@ -1268,21 +1268,17 @@ function montarBarraGrafico(item) {
             </span>
         </div>
 
-        <div style="flex-grow: 1; position: relative;">
-            
-            <div style="height: 14px; background: transparent; border-radius: 10px; width: 100%; position: relative;">
+        <div style="flex-grow: 1; position: relative; height: 18px;">
+            <div style="height: 100%; background: transparent; width: 100%;">
                 
                 <div style="
                     width: ${item.percentual}%; 
                     height: 100%; 
-                    background: ${degradêLuxo}; 
-                    border-radius: 10px;
+                    background: ${degradêDinamico}; 
+                    border-radius: 4px; /* Cantos levemente arredondados */
                     transition: width 1s ease;
-                    /* Adicionei uma sombra leve para destacar a barra flutuante */
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
-                    position: absolute; /* Para garantir o alinhamento sem o overflow */
-                    left: 0;
-                    top: 0;
+                    /* Adiciona uma sombra suave para o efeito '3D' da foto */
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
                 "></div>
             </div>
         </div>
