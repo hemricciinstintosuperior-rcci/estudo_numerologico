@@ -1238,34 +1238,52 @@ function alternarAba(evt, nomePlano) {
 }
 
 function montarBarraGrafico(item) {
-    // 1. Criamos o gradiente fixo que vai do vermelho ao verde escuro
-    // Esse degradê representa o "caminho" completo da evolução
-    const gradienteCaminho = "linear-gradient(to right, #cc0000 0%, #FFCC5E 50%, #2e7d32 100%)";
+    // 1. Lógica de Cores Dinâmica (Mantida para o Premium)
+    let corPrincipal;
+    let corBrilho;
+
+    if (item.nota >= 7.5) {
+        // Verde Profissional (Forte/Positivo)
+        corPrincipal = "#2e7d32"; 
+        corBrilho = "#4caf50";
+    } else if (item.nota >= 5.0) {
+        // Dourado/Amarelo (Médio)
+        corPrincipal = "#FFCC5E";
+        corBrilho = "#ffe082";
+    } else {
+        // Vermelho (Baixo/Alerta)
+        corPrincipal = "#cc0000";
+        corBrilho = "#ff5252";
+    }
+
+    // Criamos um degradê suave da mesma cor para dar profundidade (efeito 3D)
+    let degradêLuxo = `linear-gradient(to right, ${corPrincipal} 0%, ${corBrilho} 100%)`;
 
     return `
-    <div style="display: flex; align-items: center; margin-bottom: 15px; width: 100%; break-inside: avoid;">
+    <div style="display: flex; align-items: center; margin-bottom: 12px; width: 100%; break-inside: avoid;">
         
         <div style="width: 200px; text-align: right; padding-right: 15px; flex-shrink: 0;">
-            <span style="font-weight: 600; color: #444; font-size: 16px; font-family: sans-serif; text-transform: capitalize;">
+            <span style="font-weight: 600; color: #444; font-size: 14px; font-family: sans-serif; text-transform: capitalize;">
                 ${item.nome}
             </span>
         </div>
 
         <div style="flex-grow: 1; position: relative;">
-            <div style="height: 18px; background: #eee; border-radius: 4px; width: 100%; overflow: hidden; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);">
+            
+            <div style="height: 14px; background: transparent; border-radius: 10px; width: 100%; position: relative;">
                 
                 <div style="
                     width: ${item.percentual}%; 
                     height: 100%; 
-                    background: ${gradienteCaminho}; 
-                    background-size: 100vw; /* Faz a cor acompanhar a posição horizontal */
-                    border-radius: 4px;
+                    background: ${degradêLuxo}; 
+                    border-radius: 10px;
                     transition: width 1s ease;
+                    /* Adicionei uma sombra leve para destacar a barra flutuante */
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+                    position: absolute; /* Para garantir o alinhamento sem o overflow */
+                    left: 0;
+                    top: 0;
                 "></div>
-
-                <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 11px; font-weight: bold; color: transparent; pointer-events: none;">
-                    ${item.percentual}%
-                </span>
             </div>
         </div>
     </div>
