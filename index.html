@@ -2446,6 +2446,9 @@ html += `
    
     
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
+
+ // ADICIONE ESTA LINHA ABAIXO PARA CAPTURAR O NOME DO SEU INPUT:
+const nomeParaPiramide = document.getElementById("nome").value.toUpperCase().replace(/\s+/g, '');   
 let htmlPiramide = `
 <div class="page">
     <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
