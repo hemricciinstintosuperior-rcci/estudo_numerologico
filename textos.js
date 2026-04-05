@@ -282,7 +282,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
  
     
 RegenteVida: {
- 1:` <h3>🔱  Regente da Piramide N° 1</h3> 
+ 1:` <h3>🔱  Regente  N° 1</h3> 
 <h3>Iniciativa, Autonomia e Caminho Individual.</h3> 
 <p>Para você, o Regente 1 da Vida representa a força que impulsiona a construção da própria identidade e o desenvolvimento da independência. Essa vibração indica uma trajetória marcada pela iniciativa, pela coragem de tomar decisões e pela capacidade de abrir caminhos novos ao longo da existência.</p> 
 <p>A presença do Regente 1 revela natureza ativa, espírito de liderança e desejo profundo de conquistar espaço próprio no mundo. Ao longo da vida você tende a desenvolver autonomia, aprendendo através das experiências a confiar na própria capacidade de agir, decidir e conduzir o próprio destino.</p> 
@@ -291,14 +291,14 @@ RegenteVida: {
 <p>O aprendizado do Regente 1 da Vida consiste em desenvolver liderança com consciência, utilizando a força interior para construir caminhos positivos para si e para os outros.</p> `,
 
 
-2:`<h3>🔱  Regente da Piramide N° 2</h3> 
+2:`<h3>🔱  Regente  N° 2</h3> 
 <h3>Sensibilidade, Dualidade e Consciência das Relações</h3> 
 <p>Para você, o Regente 2 da Vida representa a vibração da sensibilidade, da percepção intuitiva e da busca constante por equilíbrio nas relações humanas. Essa regência indica uma trajetória marcada pelo desenvolvimento da empatia, da cooperação e da compreensão emocional.</p>
 <p>A presença do Regente 2 revela natureza sensível e observadora. Ao longo da vida você tende a perceber com facilidade os sentimentos das pessoas e os movimentos sutis das situações. Muitas experiências surgem para ensinar equilíbrio entre razão e emoção.</p>
 <p>No aspecto negativo pode gerar insegurança, dependência emocional ou tendência a viver preso às expectativas dos outros.</p>
 <p>O aprendizado do Regente 2 da Vida consiste em desenvolver equilíbrio emocional e confiar na própria intuição.</p>`,
 
-3:`<h3>🔱  Regente da Piramide N° 3</h3> 
+3:`<h3>🔱  Regente  N° 3</h3> 
 <h3> Criatividade, Expressão e Expansão da Consciência </h3> 
 <p>Para você, o Regente 3 da Vida representa a vibração da criatividade, da comunicação e da expressão dos talentos naturais. Essa regência indica uma trajetória marcada pela busca de experiências que estimulem o pensamento, a imaginação e o contato com diferentes ambientes.</p>
 <p>A presença do Regente 3 revela mente ativa, espírito curioso e grande capacidade de expressão. Ao longo da vida você tende a desenvolver habilidades relacionadas à comunicação, às artes ou à transmissão de ideias.</p>
@@ -313,7 +313,7 @@ RegenteVida: {
 <p>No aspecto negativo pode gerar rigidez, teimosia ou excesso de preocupação material.</p>
 <p>O aprendizado do Regente 4 da Vida consiste em equilibrar disciplina com flexibilidade.</p>`,
 
-5:`<h3>🔱  Regente da Piramide N° 5</h3> 
+5:`<h3>🔱  Regente  N° 5</h3> 
 <h3> Movimento, Experiência e Liberdade </h3> 
 <p>Para você, o Regente 5 da Vida representa a vibração da mudança, da curiosidade e da busca por experiências variadas. Essa regência indica uma trajetória marcada pelo aprendizado através do movimento e da adaptação às circunstâncias.</p>
 <p>A presença do Regente 5 revela natureza inquieta e mente aberta para novas possibilidades. Ao longo da vida você tende a buscar conhecimento através da experiência direta.</p>
@@ -321,14 +321,14 @@ RegenteVida: {
 <p>No aspecto negativo pode gerar instabilidade, impulsividade ou dificuldade em manter constância.</p>
 <p>O aprendizado do Regente 5 da Vida consiste em transformar experiência em sabedoria.</p>`,
 
-6:`<h3>🔱  Regente da Piramide N° 6</h3> 
+6:`<h3>🔱  Regente  N° 6</h3> 
 <h3>Amor, Harmonia e Responsabilidade Afetiva </h3>
 <p>Para você, o Regente 6 da Vida representa a vibração do amor, da família e da responsabilidade emocional. Essa regência indica uma trajetória marcada por experiências relacionadas ao cuidado, à proteção e ao desenvolvimento das relações afetivas.</p>
 <p>A presença do Regente 6 revela natureza sensível e desejo de construir harmonia nas relações.</p>
 <p>No aspecto negativo pode gerar ciúme, dependência emocional ou excesso de preocupação com os outros.</p>
 <p>O aprendizado do Regente 6 da Vida consiste em amar com equilíbrio e responsabilidade.</p>`,
 
-7:`<h3>🔱  Regente da Piramide N° 7</h3> 
+7:`<h3>🔱  Regente  N° 7</h3> 
 <h3>Busca de Conhecimento e Evolução Interior </h3>
 <p>Para você, o Regente 7 da Vida representa a vibração da introspecção, da investigação e da busca por sabedoria. Essa regência indica uma trajetória marcada pelo desenvolvimento intelectual e espiritual.</p>
 <p>A presença do Regente 7 revela mente analítica e necessidade de compreender profundamente os mistérios da vida.</p>
@@ -336,14 +336,14 @@ RegenteVida: {
 <p>No aspecto negativo pode gerar isolamento, excesso de introspecção ou dificuldade de convivência social.</p>
 <p>O aprendizado do Regente 7 da Vida consiste em transformar conhecimento em sabedoria.</p>`,
 
-8:`<h3>🔱  Regente da Piramide N° 8</h3> 
+8:`<h3>🔱  Regente  N° 8</h3> 
 <h3>Poder, Justiça e Responsabilidade Material</h3> 
 <p>Para você, o Regente 8 da Vida representa a vibração do poder, da organização e da lei de causa e efeito. Essa regência indica uma trajetória marcada por experiências relacionadas à liderança, à administração e ao equilíbrio entre conquistas materiais e valores morais.</p>
 <p>No aspecto positivo manifesta liderança equilibrada, disciplina e senso de justiça.</p>
 <p>No aspecto negativo pode gerar autoritarismo, materialismo excessivo ou abuso de poder.</p>
 <p>O aprendizado do Regente 8 da Vida consiste em utilizar o poder com responsabilidade.</p>`,
 
-9:`<h3>🔱  Regente da Piramide N° 9</h3> 
+9:`<h3>🔱  Regente  N° 9</h3> 
 <h3> Sabedoria, Conclusões e Consciência Universal</h3>  
 <p>Para você, o Regente 9 da Vida representa a vibração da experiência acumulada, da maturidade espiritual e da compreensão profunda da existência.</p>
 <p>Essa regência indica uma trajetória marcada por aprendizados intensos e momentos de reflexão que conduzem ao desenvolvimento da sabedoria.</p>
@@ -1768,13 +1768,13 @@ deficiencias: {
 },
 
 Potencias: {
-  11:`<p>Na estrutura principal de você, a Potência 11 se manifesta como um pilar de força e autodomínio. Ela indica que sua jornada física é movida por uma energia vital intensa, que exige direção consciente e inteligência estratégica para não se dispersar no caos cotidiano. É o símbolo do controle absoluto sobre os instintos em favor de objetivos elevados, mostrando que sua realização no mundo depende da sua capacidade de canalizar esse vigor interno para construções sólidas.</p>
+  11:`<p>Na estrutura principal de você, a Potência 11 se manifesta como um pilar de força e autodomínio. Ela indica que sua jornada é movida por uma energia vital intensa, que exige direção consciente e inteligência estratégica para não se dispersar no caos cotidiano. É o símbolo do controle absoluto sobre os instintos em favor de objetivos elevados, mostrando que sua realização no mundo depende da sua capacidade de canalizar esse vigor interno para construções sólidas.</p>
 <p>No aspecto positivo, esta influência traz uma capacidade ímpar de liderança e resiliência, permitindo que você supere obstáculos com disciplina e coragem inabalável. Você se torna uma figura influente e respeitada, capaz de inspirar confiança através da sua autoconfiança e do domínio que exerce sobre suas próprias reações e decisões.</p>
 <p>No entanto, o aspecto negativo alerta para o risco da agressividade, do orgulho e do autoritarismo. Sem o devido controle emocional, essa força bruta pode se transformar em impulsividade, gerando conflitos desnecessários e um grande desgaste de energia vital. A Potência 11 ensina que a sua verdadeira soberania na vida surge apenas quando você conquista o domínio total e consciente de si mesmo.</p>`,
-12:`<p>Na estrutura principal de você, a Potência 12 atua como um ciclo necessário de renúncia consciente e profunda transformação interior. Ela marca momentos onde a realidade física exige uma pausa para introspecção, indicando que o seu crescimento real virá do abandono de padrões obsoletos e comportamentos que já não servem mais à sua evolução. É o tempo de sacrificar o ego em favor de uma maturidade muito maior e mais estável.</p>
+12:`<p>Na estrutura principal de você, a Potência 12 atua como um ciclo necessário de renúncia consciente e profunda transformação interior. Ela marca momentos onde a realidade atual exige uma pausa para introspecção, indicando que o seu crescimento real virá do abandono de padrões obsoletos e comportamentos que já não servem mais à sua evolução. É o tempo de sacrificar o ego em favor de uma maturidade muito maior e mais estável.</p>
 <p>Quando vivida positivamente, esta potência manifesta uma grande humildade e paciência, permitindo que você extraia aprendizados valiosos através das dificuldades aparentes. É um período de maturação silenciosa da personalidade, onde o desapego de desejos imediatos prepara o terreno para uma conquista muito mais sólida, significativa e duradoura no seu futuro.</p>
 <p>Pelo lado negativo, há o perigo da vitimização, da estagnação e do sentimento de impotência diante dos fatos. Você pode se sentir preso em indecisões crônicas ou aceitar sofrimentos desnecessários por medo de avançar e mudar. A Potência 12 ensina que toda renúncia feita com consciência não é uma perda material, mas sim uma preparação espiritual e física essencial para um renascimento maior.</p>`,
-13:`<p>Na estrutura principal de você, a Potência 13 representa a morte simbólica e a renovação radical em sua trajetória de vida física. Ela atua como um agente de limpeza profunda, forçando o encerramento definitivo de ciclos que já perderam a função e promovendo uma ruptura necessária com estruturas rígidas e obsoletas. É o momento em que a vida exige um desapego total para que uma nova identidade e novas oportunidades possam finalmente florescer.</p>
+13:`<p>Na estrutura principal de você, a Potência 13 representa a morte simbólica e a renovação radical em sua trajetória de vida. Ela atua como um agente de limpeza profunda, forçando o encerramento definitivo de ciclos que já perderam a função e promovendo uma ruptura necessária com estruturas rígidas e obsoletas. É o momento em que a vida exige um desapego total para que uma nova identidade e novas oportunidades possam finalmente florescer.</p>
 <p>No aspecto positivo, essa influência gera uma libertação poderosa e uma reconstrução autêntica de todos os seus caminhos. Você descobre fontes inesperadas de força ao se permitir renovar, vivendo de forma mais leve e alinhada com sua verdade presente, livre dos fardos e das máscaras do passado que antes limitavam seu movimento e seu sucesso.</p>
 <p>Já no aspecto negativo, pode surgir um medo paralisante da mudança e um apego doentio ao que está sendo deixado para trás. A resistência ao fim natural das coisas pode trazer perdas dolorosas e uma sensação constante de ruína. A Potência 13 ensina que na mecânica da vida, todo fim é apenas o prelúdio indispensável para um recomeço vigoroso e cheio de novas possibilidades.</p>`,
 14:`<p>Na estrutura principal de você, a Potência 14 manifesta-se como a busca contínua pelo equilíbrio e pela harmonia entre as forças opostas do seu dia a dia. Ela indica um caminho onde a moderação, a paciência e a conciliação são as chaves mestras para o sucesso tanto material quanto emocional. É a habilidade de integrar a razão e a emoção de maneira fluida e produtiva, evitando os extremos que geram instabilidade.</p>
