@@ -1195,19 +1195,32 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
         }   
         
 
- let html = `<h2 style="border-bottom: 0px ;color:#000000; text-align:center; margin:20px 0 25px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold;">Indicador de Potenciais do Momento</h2>
-           <div style="text-align:center; margin-bottom:30px;">
-                <span style="color:var(--gold); font-weight:bold; font-size:16px;">IDADE: ${indiceAno} ANOS</span><br>
-                <span style="color:#666; font-size:14px; letter-spacing:1px;">PERÍODO: ${periodoVigente}</span>
-            </div>
-        `;
+// 1. Criamos um container principal para segurar tudo junto
+let html = `<div class="container-potenciais-momento" style="page-break-inside: avoid; break-inside: avoid;">`;
+
+// 2. Adicionamos o cabeçalho (Título, Idade, Período)
 html += `
-    <div class="intro-secao" style="margin: 0 auto 35px auto; max-width: 90%; font-size: 19px; line-height: 1.8; color: #333; text-align: justify;">
-        ${textos.introducoes.potenciaisMomento || `
-            <p>Os **Potenciais do Momento** indicam como suas habilidades naturais estão sendo filtradas pelo ciclo atual. Diferente do seu mapa fixo, esta análise revela quais talentos estão mais "vibrantes" e quais exigem mais esforço para serem manifestados agora. É o mapa das suas ferramentas de ação para este período específico.</p>
-        `}
+    <div class="cabecalho-potenciais" style="text-align:center; margin-top:20px;">
+        <h2 style="border-bottom: 0px; color:#000000; margin:0 0 5px 0; text-transform:uppercase; letter-spacing:2px; font-weight:bold; font-size: 22px;">
+            Indicador de Potenciais do Momento
+        </h2>
+        <div style="margin-bottom:20px;">
+            <span style="color:var(--gold); font-weight:bold; font-size:16px;">IDADE: ${indiceAno} ANOS</span><br>
+            <span style="color:#666; font-size:14px; letter-spacing:1px;">PERÍODO: ${periodoVigente}</span>
+        </div>
     </div>
 `;
+
+// 3. Adicionamos a Introdução (Ajustei as margens para "colar" no gráfico)
+html += `
+    <div class="intro-secao" style="margin: 0 auto 10px auto; max-width: 95%; font-size: 19px; line-height: 1.8; color: #333; text-align: justify; padding-bottom: 10px; border-bottom: 1px solid #eee;">
+        <p>Os <b>Potenciais do Momento</b> revelam como suas habilidades naturais estão sendo filtradas pelo ciclo atual. Esta análise indica quais talentos estão mais vibrantes e quais exigem mais atenção para serem manifestados agora, servindo como um guia prático para suas ações neste período específico.</p>
+    </div>
+`;
+
+// 4. Fechamos o container ANTES de começar o loop dos gráficos
+// Isso força o título e a intro a ficarem na mesma página que o início dos resultados.
+html += `</div>`; 
 
    // Reutiliza a lógica visual da gerarTodosOsGraficos original
                const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
