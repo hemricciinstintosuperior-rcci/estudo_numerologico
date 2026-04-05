@@ -1238,29 +1238,22 @@ function alternarAba(evt, nomePlano) {
 }
 
 function montarBarraGrafico(item) {
-    // 1. Definição das cores base (iguais às da sua foto de exemplo)
-    let corBase;
+    let gradientePremium;
+
+    // Lógica baseada na sua descrição da pontuação:
     if (item.nota >= 7.5) {
-        corBase = "#32CD32"; // LimeGreen (Verde vibrante da foto)
+        // FORTE: Do verde claro para o verde escuro
+        gradientePremium = "linear-gradient(to right, #98fb98 0%, #2e7d32 100%)";
     } else if (item.nota >= 5.0) {
-        corBase = "#FFD700"; // Gold (Amarelo dourado da foto)
+        // MÉDIO: Do cor de fogo/laranja para o amarelo/dourado
+        gradientePremium = "linear-gradient(to right, #ff4500 0%, #ffcc5e 100%)";
     } else {
-        corBase = "#FF4500"; // OrangeRed (Laranja/Vermelho vibrante da foto)
+        // FRACO: Do vermelho vivo para o laranja/amarelo
+        gradientePremium = "linear-gradient(to right, #cc0000 0%, #ff8c00 100%)";
     }
 
-    // 2. >>> A MÁGICA DO ESTILO DINÂMICO ESTÁ AQUI <<<
-    // Criamos o efeito de reflexo e profundidade (não linear) usando transparências.
-    // Isso simula o efeito de "lente" da primeira foto.
-    let degradêDinamico = `linear-gradient(180deg, 
-        ${corBase} 0%, 
-        ${corBase}cc 40%, /* cc = ~80% opacidade */
-        rgba(255,255,255,0.4) 45%, /* Ponto de luz intenso */
-        rgba(255,255,255,0.1) 60%, /* Suavização da luz */
-        ${corBase}99 100% /* 99 = ~60% opacidade */
-    )`;
-
     return `
-    <div style="display: flex; align-items: center; margin-bottom: 15px; width: 100%; break-inside: avoid;">
+    <div style="display: flex; align-items: center; margin-bottom: 12px; width: 100%; break-inside: avoid;">
         
         <div style="width: 200px; text-align: right; padding-right: 15px; flex-shrink: 0;">
             <span style="font-weight: 600; color: #444; font-size: 14px; font-family: sans-serif; text-transform: capitalize;">
@@ -1268,24 +1261,29 @@ function montarBarraGrafico(item) {
             </span>
         </div>
 
-        <div style="flex-grow: 1; position: relative; height: 18px;">
-            <div style="height: 100%; background: transparent; width: 100%;">
+        <div style="flex-grow: 1; position: relative;">
+            <div style="height: 16px; background: transparent; width: 100%; position: relative;">
                 
                 <div style="
                     width: ${item.percentual}%; 
                     height: 100%; 
-                    background: ${degradêDinamico}; 
-                    border-radius: 4px; /* Cantos levemente arredondados */
+                    background: ${gradientePremium}; 
+                    border-radius: 20px; /* Bem arredondada para ficar igual à foto */
                     transition: width 1s ease;
-                    /* Adiciona uma sombra suave para o efeito '3D' da foto */
-                    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
                 "></div>
+
+                <span style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); font-size: 10px; color: transparent;">
+                    ${item.percentual}%
+                </span>
             </div>
         </div>
     </div>
     `;
 }
-
 
         
 function calcularDadosPlanos(nome) {
