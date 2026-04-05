@@ -230,14 +230,52 @@
     display: inline-block;
 }  
 
-/* Cor Especial para o Regente da Vida */
+/* Cor Especial para o Regente da Vida - FORMATO TRIÂNGULO */
 .num.regente-destaque {
-    background: #ffffff!important;
+    background: none !important;
     color: #827108 !important;
-    box-shadow: 0 0 10px rgba(184, 134, 11, 0.6) !important;
-    border: 1px solid #827108 !important;
     font-weight: 900 !important;
-}    
+    border: none !important;
+    box-shadow: none !important;
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Ajuste a largura se precisar */
+    height: 40px; /* Ajuste a altura se precisar */
+}
+
+.num.regente-destaque::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    /* Aqui acontece a mágica do triângulo invertido */
+    border-left: 22px solid transparent;  /* Lado esquerdo */
+    border-right: 22px solid transparent; /* Lado direito */
+    border-top: 38px solid #ffffff;       /* Fundo Branco do triângulo */
+    filter: drop-shadow(0 0 5px rgba(184, 134, 11, 0.6)); /* Brilho dourado */
+    z-index: -1;
+}
+
+/* Opcional: Se quiser uma bordinha fina no triângulo */
+.num.regente-destaque::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-top: 41px solid #827108; /* Cor da "borda" dourada */
+    z-index: -2;
+}
 
 /* Estilo das Abas de Planos */
 .tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
