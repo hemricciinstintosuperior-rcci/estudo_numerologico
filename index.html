@@ -1239,7 +1239,7 @@ function alternarAba(evt, nomePlano) {
 
 function montarBarraGrafico(item) {
     // Define a cor baseada na nota (Vermelho, Amarelo/Dourado, Verde)
-    let corBarra = item.nota >= 7.5 ? "#2e7d32" : (item.nota >= 5.0 ? "#827108" : "#cc0000");
+    let corBarra = item.nota >= 7.5 ? "#2e7d32" : (item.nota >= 5.0 ? "#FFCC5E" : "#cc0000");
     
     // Criamos um degradê que começa suave e ganha cor, para dar o efeito da foto
     let degradêLuxo = `linear-gradient(to right, #ddd 0%, ${corBarra} 100%)`;
