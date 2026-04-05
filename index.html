@@ -1201,7 +1201,13 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
                 <span style="color:#666; font-size:14px; letter-spacing:1px;">PERÍODO: ${periodoVigente}</span>
             </div>
         `;
-
+html += `
+    <div class="intro-secao" style="margin: 0 auto 35px auto; max-width: 90%; font-size: 19px; line-height: 1.8; color: #333; text-align: justify;">
+        ${textos.introducoes.potenciaisMomento || `
+            <p>Os **Potenciais do Momento** indicam como suas habilidades naturais estão sendo filtradas pelo ciclo atual. Diferente do seu mapa fixo, esta análise revela quais talentos estão mais "vibrantes" e quais exigem mais esforço para serem manifestados agora. É o mapa das suas ferramentas de ação para este período específico.</p>
+        `}
+    </div>
+`;
 
    // Reutiliza a lógica visual da gerarTodosOsGraficos original
                const ordemVisual = ["Físico", "Mental", "Emocional", "Intuitivo"];
@@ -2475,7 +2481,7 @@ let htmlPiramide = `
 const letrasNomeTopo = nomeRaw.toUpperCase().replace(/\s+/g, '').split('');
 htmlPiramide += `<div class="linha linha-letras" style="margin-bottom: 5px;">`;
 letrasNomeTopo.forEach(letra => {
-    htmlPiramide += `<div class="num-letra" style="width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; color: #827108; font-size: 14px; font-weight: bold; border-radius: 2px;">${letra}</div>`;
+    htmlPiramide += `<div class="num-letra" style="width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; color: #000000; font-size: 14px; font-weight: bold; border-radius: 2px;">${letra}</div>`;
 });
 htmlPiramide += `</div>`;
 
