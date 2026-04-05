@@ -1125,7 +1125,7 @@ subgrupos.forEach(sub => {
     htmlFinal += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid; page-break-inside: avoid;">`;
     
     // TÍTULO DO SUBGRUPO: Com a barrinha dourada na esquerda
-    htmlFinal += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
+    htmlFinal += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #000000; padding-left: 10px; font-family: sans-serif;">${sub}</h4>`;
     
     // FILTRA E GERA AS BARRAS:
     atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
@@ -1205,7 +1205,7 @@ subgrupos.forEach(sub => {
     // Espaço grande (50px) antes de começar cada novo título de grupo
     html += `<div style="margin-bottom: 50px; padding-top: 60px; break-inside: avoid;">`;
     
-    html += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #827108; padding-left: 10px;">${sub}</h4>`;
+    html += `<h4 style="color:#000000; font-size:18px; text-align:center; text-transform:uppercase; margin: 0 0 25px 0; border-left: 4px solid #000000; padding-left: 10px;">${sub}</h4>`;
     
     atributos.filter(item => item.sub === sub).sort((a,b) => b.nota - a.nota).forEach(item => {
         html += montarBarraGrafico(item);
