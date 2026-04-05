@@ -1535,9 +1535,7 @@ desafios:{
  0: `<h3>O Desafio da Escolha na Juventude - 0</h3>
 
     <p>Nesta primeira fase da vida, o desafio zero indica que não existe um obstáculo fixo, mas sim a tarefa de aprender a navegar entre múltiplas direções. Durante a juventude e a transição para a maioridade, a maior prova será descobrir a identidade real e o que se projeta para o futuro, sem que ocorra paralisia pela indecisão típica deste período de descobertas e primeiras grandes escolhas.</p>
-
     <p>O foco agora é o cultivo da força de vontade para moldar o próprio destino. Para superar este desafio, o aprendizado inicial exige o domínio sobre as bases de todos os pilares numerológicos:</p>
-
     <p>1. Ser independente</p>
     <p>2. Saber agir com diplomacia e ser cooperativo</p>
     <p>3. Saber se expressar</p>
@@ -1587,9 +1585,7 @@ desafios:{
  0: `<h3>O Desafio da Escolha na Maturidade - 0</h3>
 
     <p>Ao atingir a vida adulta, o desafio zero se manifesta como a necessidade de manter o domínio sobre todas as áreas da existência. Nesta fase de maturidade, a escolha deixa de ser apenas sobre o futuro e passa a ser sobre a manutenção da integridade e do foco. O desafio consiste em permanecer em sintonia com valores fundamentais enquanto ocorre a gestão das complexas responsabilidades do cotidiano.</p>
-
     <p>Para lidar positivamente com este período, haverá a exigência de demonstrar maestria em todas as frentes de ação, integrando com perfeição os seguintes pilares:</p>
-
     <p>1. Ser independente</p>
     <p>2. Saber agir com diplomacia e ser cooperativo</p>
     <p>3. Saber se expressar</p>
@@ -1637,17 +1633,8 @@ desafios:{
 0: `<h3>O Desafio da Escolha e Autoconhecimento - 0</h3>
 
     <p>Ter um desafio zero como guia para a vida inteira significa que o embate principal reside na capacidade de fazer escolhas bem-feitas em qualquer idade. Não há um caminho único predefinido; você enfrentará uma existência onde todos os desafios podem estar disponíveis e ativos simultaneamente, exigindo vigilância constante para permanecer em fidelidade aos próprios ideais.</p>
-
     <p>O objetivo para toda a vida é o desenvolvimento do caráter soberano, vencendo o desânimo e a indecisão através do domínio total sobre os seguintes aspectos:</p>
-
-    <p>1. Ser independente</p>
-    <p>2. Saber agir com diplomacia e ser cooperativo</p>
-    <p>3. Saber se expressar</p>
-    <p>4. Ser persistente, dedicado e disciplinado</p>
-    <p>5. Ser responsável e autocentrado</p>
-    <p>6. Ter o controle sobre os sentimentos</p>
-    <p>7. Ser tolerante e superar os medos</p>
-    <p>8. Manter o equilíbrio e agir com justiça</p>`,
+    <p>1. Ser independente</p>    <p>2. Saber agir com diplomacia e ser cooperativo</p>    <p>3. Saber se expressar</p>    <p>4. Ser persistente, dedicado e disciplinado</p>    <p>5. Ser responsável e autocentrado</p>    <p>6. Ter o controle sobre os sentimentos</p>    <p>7. Ser tolerante e superar os medos</p>    <p>8. Manter o equilíbrio e agir com justiça</p>`,
  
  1: `<h3>O Desafio da Independência e Soberania Pessoal - 1</h3>
     <p>O seu desafio principal nesta vida é a conquista da independência total e a superação da tendência a se anular para caber em moldes externos. <strong>você</strong> nasceu para ser uma força única, mas a sombra que acompanhará o seu caminho é a dúvida sobre o próprio valor e a tentação de buscar aprovação em cada passo dado.</p>
