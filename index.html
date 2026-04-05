@@ -1253,7 +1253,7 @@ function montarBarraGrafico(item) {
     }
 
     return `
-    <div style="display: flex; align-items: center; margin-bottom: 12px; width: 100%; break-inside: avoid;">
+    <div style="display: flex; align-items: center; margin-bottom: 14px; width: 100%; border: none; box-shadow: none; background: transparent;">
         
         <div style="width: 200px; text-align: right; padding-right: 15px; flex-shrink: 0;">
             <span style="font-weight: 600; color: #444; font-size: 14px; font-family: sans-serif; text-transform: capitalize;">
@@ -1262,13 +1262,13 @@ function montarBarraGrafico(item) {
         </div>
 
         <div style="flex-grow: 1; position: relative;">
-            <div style="height: 16px; background: transparent; width: 100%; position: relative;">
+            <div style="height: 24px; background: transparent; width: 100%; position: relative;">
                 
                 <div style="
                     width: ${item.percentual}%; 
                     height: 100%; 
                     background: ${gradientePremium}; 
-                    border-radius: 20px; /* Bem arredondada para ficar igual à foto */
+                    border-radius: 4px; /* Bem arredondada para ficar igual à foto */
                     transition: width 1s ease;
                     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
                     position: absolute;
