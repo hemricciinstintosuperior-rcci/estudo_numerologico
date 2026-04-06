@@ -1970,6 +1970,9 @@ const listaItensSintese = [
     { label: "Equilíbrio", valor: res.equilibrio },
     { label: "Inclinações", valor: res.inclinacoes }, // Exibe múltiplos números
     { label: "Subconsciente", valor: res.subconsciente },
+    { label: "Fraquezas / Inibições", valor: res.deficiencias || res.inibicoes },
+    { label: "Déficit Comportamental", valor: res.deficitComportamento },
+    { label: "Habilidades / Deficiências", valor: res.habilidadesDeficiencias },
     { label: "Ano Pessoal", valor: res.anoPessoal },
     { label: "Trânsito", valor: typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--" },
     { label: "Ciclos", valor: res.ciclos }, // Exibe a tríade
