@@ -1900,7 +1900,31 @@ desafios: {
  anoPessoal: resultadoAnoPessoal
 };
 
+// --- 1. CÁLCULOS DE APOIO (RODANDO ANTES DO PAINEL) ---
+const dadosDesejoObj = calcularDesejoOculto(nomeRaw);
+const nomeParaTalento = nomeRaw.split(' ')[0];
+const talentoNumEspecial = calcularTalentoEspecial(nomeParaTalento);
 
+// --- 2. CÁLCULO DO TRÂNSITO (EXTRAÇÃO MANUAL RÁPIDA) ---
+// Precisamos dessa lógica aqui para o valor aparecer no painel lá no topo
+const idadeParaTrânsito = idadeCronologica; 
+const partesDoNome = nomeRaw.toUpperCase().split(/\s+/);
+let somaTransitoFisico = 0;
+partesDoNome.forEach(p => {
+    let t = [];
+    for(let l of p) { 
+        let v = calcularValorLetra(l); 
+        for(let i=0; i<v; i++) t.push(l); 
+    }
+    let letraAtiva = t[idadeParaTrânsito % t.length];
+    if(letraAtiva) somaTransitoFisico += calcularValorLetra(letraAtiva);
+});
+const vTrânsitoFinal = reduzirPuro(somaTransitoFisico); // Simplificado para o painel
+
+// --- 3. PREPARAÇÃO DE TEXTOS PARA O PAINEL ---
+let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filter(x => x).join(" · ") || "--";
+let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
+let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== null) ? talentoNumEspecial : "Equilibrado";
 
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
@@ -1953,7 +1977,6 @@ let html = `
 
 
 
-// 1. Primeiro, definimos a lista de dados (fora da string do HTML para ficar limpo)
 const listaItensSintese = [
     { label: "Dia Natal", valor: res.dia },
     { label: "Essência", valor: res.essencia },
@@ -1970,15 +1993,13 @@ const listaItensSintese = [
     { label: "Inclinações", valor: res.inclinacoes },
     { label: "Subconsciente", valor: res.subconsciente },
     { label: "Ano Pessoal", valor: res.anoPessoal },
-    { label: "Trânsito", valor: vTrânsitoFinal },
+    { label: "Trânsito", valor: vTrânsitoFinal }, // <--- AGORA VAI APARECER!
     { label: "Ciclos", valor: res.ciclos },
     { label: "Desafios", valor: res.desafios },
     { label: "Momentos Decisivos", valor: res.momentos },
-    
-    // CAMPOS QUE VOCÊ QUERIA:
-    { label: "Desejo Oculto", valor: vDesejoOculto },
-    { label: "Déficit Comportamental", valor: vDeficitFinal },
-    { label: "Habilidades / Deficiências", valor: vHabDef },
+    { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
+    { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
+    { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
     { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" }
 ];
 
