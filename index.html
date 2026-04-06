@@ -1969,7 +1969,7 @@ let vTalentosDef = res.habilidadesDeficiencias || res.talentosEspeciais || "--";
 // 4. Prepara o Trânsito (Segurança contra erros)
 let vTrânsito = typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--";
 
-
+console.log("CONTEÚDO DO RES:", res);
 // 1. Primeiro, definimos a lista de dados (fora da string do HTML para ficar limpo)
 const listaItensSintese = [
     { label: "Dia Natal", valor: res.dia },
