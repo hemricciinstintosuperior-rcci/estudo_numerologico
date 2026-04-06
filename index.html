@@ -1976,7 +1976,7 @@ const listaItensSintese = [
     { label: "Desafios", valor: res.desafios } // Exibe a sequência
 ];
 
-// 2. Agora montamos o HTML do Painel
+// 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
 html += `
 <div id="folha-resumo-premium" style="width: 100%; min-height: 100vh; page-break-after: always; background: #fff; padding: 20px; box-sizing: border-box; border: 4px double #827108;">
     
@@ -1991,22 +1991,40 @@ html += `
         ${listaItensSintese.map(item => {
             let exibicaoValor = "--";
             
-            // Trata múltiplos resultados (Arrays) como Inclinações e Ciclos
-            if (Array.isArray(item.valor)) {
-                exibicaoValor = item.valor.filter(v => v !== undefined && v !== null).join(" · ");
-            } else {
+            // TRATAMENTO PARA OBJETOS (Ciclos e Desafios da sua planilha)
+            if (item.valor && typeof item.valor === 'object' && !Array.isArray(item.valor)) {
+                // Pega os valores dentro do objeto (ex: as 3 vibrações dos ciclos)
+                exibicaoValor = Object.values(item.valor)
+                    .filter(v => v !== undefined && v !== null && v !== "")
+                    .join(" · ");
+            } 
+            // TRATAMENTO PARA LISTAS (Inclinações)
+            else if (Array.isArray(item.valor)) {
+                exibicaoValor = item.valor.join(" · ");
+            } 
+            else {
                 exibicaoValor = item.valor || "--";
             }
 
             return `
-                <div style="border: 1px solid #eee; border-top: 3px solid #827108; background: #fff; padding: 10px; text-align: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <div style="border: 1px solid #eee; border-top: 3px solid #827108; background: #fff; padding: 10px; text-align: center; border-radius: 5px;">
                     <div style="font-size: 9px; text-transform: uppercase; color: #666; font-weight: bold; margin-bottom: 5px; height: 25px; display: flex; align-items: center; justify-content: center; line-height: 1.1;">
                         ${item.label}
                     </div>
-                    <div style="font-size: ${exibicaoValor.toString().length > 6 ? '15px' : '24px'}; font-weight: bold; color: #111; letter-spacing: 1px;">
+                    <div style="font-size: ${exibicaoValor.toString().length > 8 ? '14px' : '22px'}; font-weight: bold; color: #111;">
                         ${exibicaoValor}
                     </div>
                 </div>
+            `;
+        }).join('')}
+    </div>
+
+    <div style="margin-top: 25px; border: 1px solid #827108; background: #fdfaf0; padding: 15px; text-align: center; border-radius: 8px;">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 12px; color: #827108; letter-spacing: 2px;">Vibração de Destino Principal</span>
+        <div style="font-size: 50px; font-weight: bold; color: #000; line-height: 1;">${res.CaminhodeVida}</div>
+    </div>
+</div>
+
             `;
         }).join('')}
     </div>
