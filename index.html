@@ -1851,7 +1851,7 @@ let mesR = reduzir(mes);
 // O Ano de referência para o Ano Pessoal depende se o aniversário já passou
 let anoReferencia = (agora < new Date(agora.getFullYear(), mes - 1, dia)) ? agora.getFullYear() - 1 : agora.getFullYear();
 let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
-    
+ let vTransitoCalculado = "--";   
 const res = {
     dia: dia,
     motivacao: mot, // Já calculado com Mestre
