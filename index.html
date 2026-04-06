@@ -2000,26 +2000,27 @@ const listaItensSintese = [
     { label: "Dia Natal", valor: res.dia },
     { label: "Essência", valor: res.essencia },
     { label: "Motivação", valor: res.motivacao },
+    { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
     { label: "Influência", valor: res.influencia },
     { label: "Personalidade", valor: res.Personalidade },
     { label: "Comportamento", valor: res.comportamento },
-    { label: "Caminho de Vida", valor: res.CaminhodeVida },
-    { label: "Propósito", valor: res.Propósito },
-    { label: "Maturidade", valor: res.Maturidade },
     { label: "Relacionamento", valor: res.Relacionamento },
     { label: "Talento Oculto", valor: res.talento },
     { label: "Equilíbrio", valor: res.equilibrio },
     { label: "Inclinações", valor: res.inclinacoes },
     { label: "Subconsciente", valor: res.subconsciente },
+    { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
+    { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
+    { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
+    { label: "Caminho de Vida", valor: res.CaminhodeVida },
+    { label: "Propósito", valor: res.Propósito },
+    { label: "Maturidade", valor: res.Maturidade },
     { label: "Ano Pessoal", valor: res.anoPessoal },
-    { label: "Trânsito", valor: vTrânsitoFinal }, // <--- AGORA VAI APARECER!
     { label: "Ciclos", valor: res.ciclos },
     { label: "Desafios", valor: res.desafios },
     { label: "Momentos Decisivos", valor: res.momentos },
-    { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
-    { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
-    { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
-    { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" }
+    { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
+
 ];
 
 // 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
