@@ -1903,34 +1903,38 @@ desafios: {
 // --- INJEÇÃO NA FOLHA DE RESUMO GERAL ---
 // Localize o final da definição do objeto 'res' e cole isso:
 
-const campoGrid = document.getElementById("grid-resumo");
-const campoMestre = document.getElementById("numero-mestre-resumo");
+setTimeout(() => {
+    const campoGrid = document.getElementById("grid-resumo");
+    const campoMestre = document.getElementById("numero-mestre-resumo");
 
-// SÓ EXECUTA SE OS CAMPOS EXISTIREM NO HTML
-if (campoGrid && campoMestre) {
-    const itensParaExibir = [
-        { label: "Motivação", valor: res.motivacao },
-        { label: "Influência", valor: res.influencia },
-        { label: "Expressão", valor: res.Personalidade },
-        { label: "Caminho de Vida", valor: res.CaminhodeVida },
-        { label: "Propósito", valor: res.Propósito },
-        { label: "D. Nascimento", valor: res.dia },
-        { label: "Ano Pessoal", valor: res.anoPessoal },
-        { label: "Maturidade", valor: res.Maturidade }
-    ];
+    if (campoGrid && campoMestre) {
+        // Mapeamento dos dados conforme a sua planilha
+        const dadosMapa = [
+            { label: "Motivação", valor: res.motivacao },
+            { label: "Influência", valor: res.influencia },
+            { label: "Expressão", valor: res.Personalidade },
+            { label: "Ano Pessoal", valor: res.anoPessoal },
+            { label: "Caminho Vida", valor: res.CaminhodeVida },
+            { label: "Maturidade", valor: res.Maturidade },
+            { label: "Propósito", valor: res.Propósito },
+            { label: "Dia Natal", valor: res.dia },
+            { label: "Desafio", valor: res.D1 || "---" } // Exemplo de campo extra
+        ];
 
-    // Monta o HTML interno
-    campoGrid.innerHTML = itensParaExibir.map(item => `
-        <div style="border-bottom: 1px solid #eee; padding: 10px; display: flex; justify-content: space-between;">
-            <b style="font-size: 13px; color: #666; text-transform: uppercase;">${item.label}</b>
-            <span style="font-size: 20px; color: #827108; font-weight: bold;">${item.valor}</span>
-        </div>
-    `).join('');
+        campoGrid.innerHTML = dadosMapa.map(item => `
+            <div style="border: 1px solid #ddd; border-left: 5px solid #827108; background: #fcfcfc; padding: 15px; text-align: center; border-radius: 4px;">
+                <div style="font-size: 11px; text-transform: uppercase; color: #888; font-weight: bold; margin-bottom: 10px; height: 25px; display: flex; align-items: center; justify-content: center;">
+                    ${item.label}
+                </div>
+                <div style="font-size: 32px; font-weight: bold; color: #000;">
+                    ${item.valor}
+                </div>
+            </div>
+        `).join('');
 
-    campoMestre.innerText = res.CaminhodeVida;
-} else {
-    console.error("Erro: Os elementos 'grid-resumo' ou 'numero-mestre-resumo' não foram encontrados no HTML.");
-}
+        campoMestre.innerText = res.CaminhodeVida;
+    }
+}, 150);
 
 // Adicione a variável htmlPiramide na montagem final do seu 'html'
             
@@ -1981,15 +1985,18 @@ let html = `
     </div>
                 
 
-<div id="folha-resumo-premium" style="page-break-after: always; padding: 40px; background: #fff; border: 4px double #827108; margin: 20px;">
-    <h2 style="text-align: center; color: #000; text-transform: uppercase; letter-spacing: 2px;">Resumo do Mapa Quântico</h2>
+<div id="folha-resumo-premium" style="width: 100%; min-height: 100vh; page-break-after: always; background: #fff; padding: 30px; box-sizing: border-box;">
     
-    <div id="grid-resumo" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px;">
+    <h2 style="text-align: center; text-transform: uppercase; letter-spacing: 3px; color: #000; margin-bottom: 30px; border-bottom: 2px solid #827108; padding-bottom: 10px;">
+        Painel de Síntese Numerológica
+    </h2>
+
+    <div id="grid-resumo" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
         </div>
 
-    <div style="margin-top: 40px; text-align: center; border-top: 2px solid #827108; padding-top: 20px;">
-        <span style="font-size: 14px; color: #827108; font-weight: bold; text-transform: uppercase;">Caminho de Vida Dominante</span>
-        <div id="numero-mestre-resumo" style="font-size: 70px; font-weight: bold; color: #000;">--</div>
+    <div style="margin-top: 30px; border: 2px solid #827108; background: #f9f9f9; padding: 20px; text-align: center;">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 14px; color: #666;">Número de Destino Principal</span>
+        <div id="numero-mestre-resumo" style="font-size: 80px; font-weight: bold; color: #827108; line-height: 1;">--</div>
     </div>
 </div>
 
