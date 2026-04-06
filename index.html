@@ -1904,6 +1904,16 @@ desafios: {
 const dadosDesejoObj = calcularDesejoOculto(nomeRaw);
 const nomeParaTalento = nomeRaw.split(' ')[0];
 const talentoNumEspecial = calcularTalentoEspecial(nomeParaTalento);
+// --- CÁLCULO DO PLANO DOMINANTE PARA O PAINEL ---
+const dadosPlanosParaPainel = calcularDadosPlanos(nomeRaw);
+const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
+
+// Descobre qual chave tem o maior valor
+const planoChaveDominante = Object.keys(dadosPlanosParaPainel.soma).reduce((a, b) => 
+    dadosPlanosParaPainel.soma[a] > dadosPlanosParaPainel.soma[b] ? a : b
+);
+
+const vPlanoDominanteNome = nomesAmigaveis[planoChaveDominante];    
 
 // --- 2. CÁLCULO DO TRÂNSITO (EXTRAÇÃO MANUAL RÁPIDA) ---
 // Precisamos dessa lógica aqui para o valor aparecer no painel lá no topo
