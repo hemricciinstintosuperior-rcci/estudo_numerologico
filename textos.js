@@ -295,6 +295,7 @@ RegenteVida: {
 <h3>Sensibilidade, Dualidade e Consciência das Relações</h3> 
 <p>Para você, o Regente 2 da Vida representa a vibração da sensibilidade, da percepção intuitiva e da busca constante por equilíbrio nas relações humanas. Essa regência indica uma trajetória marcada pelo desenvolvimento da empatia, da cooperação e da compreensão emocional.</p>
 <p>A presença do Regente 2 revela natureza sensível e observadora. Ao longo da vida você tende a perceber com facilidade os sentimentos das pessoas e os movimentos sutis das situações. Muitas experiências surgem para ensinar equilíbrio entre razão e emoção.</p>
+<p>No aspecto positivo manifesta empatia, diplomacia, cooperação e grande percepção emocional.</p><p>No aspecto positivo manifesta empatia, diplomacia, cooperação e grande percepção emocional.</p>
 <p>No aspecto negativo pode gerar insegurança, dependência emocional ou tendência a viver preso às expectativas dos outros.</p>
 <p>O aprendizado do Regente 2 da Vida consiste em desenvolver equilíbrio emocional e confiar na própria intuição.</p>`,
 
@@ -302,6 +303,7 @@ RegenteVida: {
 <h3> Criatividade, Expressão e Expansão da Consciência </h3> 
 <p>Para você, o Regente 3 da Vida representa a vibração da criatividade, da comunicação e da expressão dos talentos naturais. Essa regência indica uma trajetória marcada pela busca de experiências que estimulem o pensamento, a imaginação e o contato com diferentes ambientes.</p>
 <p>A presença do Regente 3 revela mente ativa, espírito curioso e grande capacidade de expressão. Ao longo da vida você tende a desenvolver habilidades relacionadas à comunicação, às artes ou à transmissão de ideias.</p>
+<p>No aspecto positivo manifesta criatividade, entusiasmo, sociabilidade e talento para comunicação.</p>
 <p>No aspecto negativo pode gerar dispersão, instabilidade emocional ou tendência a prometer mais do que consegue realizar.</p>
 <p>O aprendizado do Regente 3 da Vida consiste em transformar criatividade em realização concreta.</p>`,
 
@@ -325,6 +327,7 @@ RegenteVida: {
 <h3>Amor, Harmonia e Responsabilidade Afetiva </h3>
 <p>Para você, o Regente 6 da Vida representa a vibração do amor, da família e da responsabilidade emocional. Essa regência indica uma trajetória marcada por experiências relacionadas ao cuidado, à proteção e ao desenvolvimento das relações afetivas.</p>
 <p>A presença do Regente 6 revela natureza sensível e desejo de construir harmonia nas relações.</p>
+<p>No aspecto positivo manifesta amor, generosidade e capacidade de harmonizar ambientes.</p>
 <p>No aspecto negativo pode gerar ciúme, dependência emocional ou excesso de preocupação com os outros.</p>
 <p>O aprendizado do Regente 6 da Vida consiste em amar com equilíbrio e responsabilidade.</p>`,
 
