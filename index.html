@@ -1900,7 +1900,25 @@ desafios: {
  anoPessoal: resultadoAnoPessoal
 };
 
+// Estas linhas precisam estar ANTES de montar o Painel Premium
+const dadosDesejo = calcularDesejoOculto(nomeRaw);
+const primeiroNome = nomeRaw.split(' ')[0];
+const talentoNum = calcularTalentoEspecial(primeiroNome);
+// --- PREPARAÇÃO DOS DADOS (CONECTANDO AO SEU MOTOR) ---
 
+// 1. Desejo Oculto: Pega o .numero de dentro do objeto dadosDesejo que você criou
+let vDesejoOculto = (dadosDesejo && dadosDesejo.numero) ? dadosDesejo.numero : "--";
+
+// 2. Déficits: Junta o Recorrente (que é o dia) com a lista de Ocultos que você calculou
+let dRec = res.deficitRecorrente || "--";
+let dOcu = (res.deficitsOcultos && res.deficitsOcultos.length > 0) ? res.deficitsOcultos.join(" · ") : "";
+let vDeficitFinal = [dRec, dOcu].filter(x => x !== "" && x !== "--").join(" · ") || dRec;
+
+// 3. Talentos / Deficiências (Habilidades Especiais): Usa a variável talentoNum
+let vHabDef = (talentoNum !== undefined && talentoNum !== null) ? talentoNum : "Equilibrado";
+
+// 4. Trânsito: Usa a sua variável vTransitoCalculado
+let vTrânsitoFinal = (typeof vTransitoCalculado !== 'undefined') ? vTransitoCalculado : "--";    
 
 // Adicione a variável htmlPiramide na montagem final do seu 'html'
             
@@ -1952,21 +1970,7 @@ let html = `
                 
 
 
-// --- EXTRAÇÃO DIRETA DOS SEUS CÁLCULOS ---
 
-// 1. Desejo Oculto (Pegando do objeto dadosDesejo que você criou)
-let vDesejoOculto = (typeof dadosDesejo !== 'undefined' && dadosDesejo.numero) ? dadosDesejo.numero : "--";
-
-// 2. Déficits (Unindo o Recorrente com a lista de Ocultos)
-let dRec = res.deficitRecorrente || "";
-let dOcu = (res.deficitsOcultos && res.deficitsOcultos.length > 0) ? res.deficitsOcultos.join(" · ") : "";
-let vDeficitFinal = [dRec, dOcu].filter(x => x !== "").join(" · ") || "--";
-
-// 3. Talentos / Deficiências (Pegando da variável talentoNum do seu primeiro nome)
-let vTalentoEspecial = (typeof talentoNum !== 'undefined' && talentoNum !== null) ? talentoNum : "Equilibrado";
-
-// 4. Trânsito (Pegando a letra que o seu código já calculou)
-let vTrânsitoFinal = typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--";
 // 5. LOG DE CONTROLE (Isso vai mostrar no console se o caçador achou)
 console.log("ACHADOS:", { vDesejoOculto, vDeficitComp, vTalentosDef });
 
