@@ -295,7 +295,7 @@ RegenteVida: {
 <h3>Sensibilidade, Dualidade e Consciência das Relações</h3> 
 <p>Para você, o Regente 2 da Vida representa a vibração da sensibilidade, da percepção intuitiva e da busca constante por equilíbrio nas relações humanas. Essa regência indica uma trajetória marcada pelo desenvolvimento da empatia, da cooperação e da compreensão emocional.</p>
 <p>A presença do Regente 2 revela natureza sensível e observadora. Ao longo da vida você tende a perceber com facilidade os sentimentos das pessoas e os movimentos sutis das situações. Muitas experiências surgem para ensinar equilíbrio entre razão e emoção.</p>
-<p>No aspecto positivo manifesta empatia, diplomacia, cooperação e grande percepção emocional.</p><p>No aspecto positivo manifesta empatia, diplomacia, cooperação e grande percepção emocional.</p>
+<p>No aspecto positivo manifesta empatia, diplomacia, cooperação e grande percepção emocional.</p>
 <p>No aspecto negativo pode gerar insegurança, dependência emocional ou tendência a viver preso às expectativas dos outros.</p>
 <p>O aprendizado do Regente 2 da Vida consiste em desenvolver equilíbrio emocional e confiar na própria intuição.</p>`,
 
