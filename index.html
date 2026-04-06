@@ -1905,15 +1905,24 @@ const dadosDesejoObj = calcularDesejoOculto(nomeRaw);
 const nomeParaTalento = nomeRaw.split(' ')[0];
 const talentoNumEspecial = calcularTalentoEspecial(nomeParaTalento);
 // --- CÁLCULO DO PLANO DOMINANTE PARA O PAINEL ---
+// --- SEU BLOCO DE CÁLCULO ATUALIZADO COM CORES ---
 const dadosPlanosParaPainel = calcularDadosPlanos(nomeRaw);
-const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
+const nomesAmigaveisPlanos = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
 
-// Descobre qual chave tem o maior valor
+// Mapa de cores seguindo o padrão do seu relatório
+const coresPlanosDinamicas = {
+    fisico: "#e74c3c",    // Vermelho
+    mental: "#3498db",    // Azul
+    emocional: "#2ecc71", // Verde
+    intuitivo: "#b8860b"  // Dourado/Gold
+};
+
 const planoChaveDominante = Object.keys(dadosPlanosParaPainel.soma).reduce((a, b) => 
     dadosPlanosParaPainel.soma[a] > dadosPlanosParaPainel.soma[b] ? a : b
 );
 
-const vPlanoDominanteNome = nomesAmigaveis[planoChaveDominante];    
+const vPlanoDominanteNome = nomesAmigaveisPlanos[planoChaveDominante];
+const vCorPlanoDominante = coresPlanosDinamicas[planoChaveDominante]; // <--- NOVA VARIÁVEL DE COR
 
 // --- 2. CÁLCULO DO TRÂNSITO (EXTRAÇÃO MANUAL RÁPIDA) ---
 // Precisamos dessa lógica aqui para o valor aparecer no painel lá no topo
@@ -2087,22 +2096,28 @@ html += `
 
 <div style="
         margin-top: 15px; 
-        border: 1px solid #827108; 
-        background: #fdfaf0; 
+        border: 2px solid ${vCorPlanoDominante}; 
+        background: ${vCorPlanoDominante}15; /* O '15' no final deixa a cor bem clarinha no fundo */
         padding: 10px; 
         text-align: center; 
         border-radius: 8px;
         flex-shrink: 0;
     ">
-        <span style="text-transform: uppercase; font-weight: bold; font-size: 11px; color: #827108; letter-spacing: 2px;">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 11px; color: ${vCorPlanoDominante}; letter-spacing: 2px;">
             Plano de Expressão Dominante
         </span>
-        <div style="font-size: 38px; font-weight: bold; color: #000; line-height: 1.2; text-transform: uppercase;">
+        <div style="
+            font-size: 38px; 
+            font-weight: bold; 
+            color: ${vCorPlanoDominante}; /* O nome do plano agora assume a cor dele */
+            line-height: 1.2; 
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        ">
             ${vPlanoDominanteNome}
         </div>
     </div>
 </div>
-`;
     
 html += `
 <div class="secao-card quebra-pagina" style="padding: 40px; border: 2px solid var(--gold); background: #fff; position: relative;">
