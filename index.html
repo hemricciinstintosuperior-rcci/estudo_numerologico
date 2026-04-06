@@ -1901,23 +1901,7 @@ desafios: {
 };
 
 
-// --- PREPARAÇÃO DOS DADOS (CONECTANDO AO SEU MOTOR) ---
 
-// 1. Desejo Oculto: Pega o .numero de dentro do objeto dadosDesejo que você criou
-let vDesejoOculto = (dadosDesejo && dadosDesejo.numero) ? dadosDesejo.numero : "--";
-
-// 2. Déficits: Junta o Recorrente (que é o dia) com a lista de Ocultos que você calculou
-let dRec = res.deficitRecorrente || "--";
-let dOcu = (res.deficitsOcultos && res.deficitsOcultos.length > 0) ? res.deficitsOcultos.join(" · ") : "";
-let vDeficitFinal = [dRec, dOcu].filter(x => x !== "" && x !== "--").join(" · ") || dRec;
-
-// 3. Talentos / Deficiências (Habilidades Especiais): Usa a variável talentoNum
-let vHabDef = (talentoNum !== undefined && talentoNum !== null) ? talentoNum : "Equilibrado";
-
-// 4. Trânsito: Usa a sua variável vTransitoCalculado
-let vTrânsitoFinal = (typeof vTransitoCalculado !== 'undefined') ? vTransitoCalculado : "--";    
-
-// Adicione a variável htmlPiramide na montagem final do seu 'html'
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
 const anoNasc = ano; // Variável 'ano' que vem do split da data
