@@ -1943,7 +1943,7 @@ const vTrânsitoFinal = reduzirPuro(somaTransitoFisico); // Simplificado para o 
 // --- 3. PREPARAÇÃO DE TEXTOS PARA O PAINEL ---
 let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filter(x => x).join(" · ") || "--";
 let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
-let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== null) ? talentoNumEspecial : "Equilibrado";
+let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
 
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
