@@ -1952,22 +1952,26 @@ let html = `
                 
 
 
-// 1. Prepara o Desejo Oculto
-let vDesejoOculto = res.desejoOculto || res.DesejoOculto || "--";
+// --- PREPARAÇÃO REFORÇADA ---
 
-// 2. Une os dois Déficits (Recorrente + Oculto)
-let vDeficitComp = "";
-if (res.deficitRecorrente || res.deficitOculto) {
-    vDeficitComp = [res.deficitRecorrente, res.deficitOculto].filter(x => x).join(" · ");
-} else {
-    vDeficitComp = "--";
+// 1. Desejo Oculto (Tenta todas as combinações de nomes possíveis)
+let vDesejoOculto = res.desejoOculto || res.DesejoOculto || res.desejo_oculto || (typeof desejoOculto !== 'undefined' ? desejoOculto : "--");
+
+// 2. Déficit Comportamental (Unindo o Recorrente e o Oculto/Dia)
+let p1 = res.deficitRecorrente || res.deficit_recorrente || "";
+let p2 = res.deficitOculto || res.deficit_oculto || res.deficitDia || "";
+let vDeficitComp = [p1, p2].filter(x => x && x !== "").join(" · ") || "--";
+
+// 3. Talentos e Deficiências (Habilidades)
+let vTalentosDef = res.habilidadesDeficiencias || res.talentoDeficiencia || (typeof habilidadesDeficiencias !== 'undefined' ? habilidadesDeficiencias : "--");
+
+// 4. Trânsito (Verifica se a variável global vTransitoCalculado existe)
+let vTrânsito = "--";
+if (typeof vTransitoCalculado !== 'undefined') {
+    vTrânsito = vTransitoCalculado;
+} else if (res.transito) {
+    vTrânsito = res.transito;
 }
-
-// 3. Prepara Talentos e Deficiências
-let vTalentosDef = res.habilidadesDeficiencias || res.talentosEspeciais || "--";
-
-// 4. Prepara o Trânsito (Segurança contra erros)
-let vTrânsito = typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--";
 
 console.log("CONTEÚDO DO RES:", res);
 // 1. Primeiro, definimos a lista de dados (fora da string do HTML para ficar limpo)
