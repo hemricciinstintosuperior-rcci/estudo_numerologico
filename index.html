@@ -1986,45 +1986,55 @@ let html = `
                 
 
 
+// 1. DEFINIÇÃO DE SEGURANÇA (Para não dar erro de undefined)
+let vTransitoCalculado = typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--";
+
+// 2. MONTAGEM DO PAINEL COMPLETO
 html += `
-<div id="folha-resumo-premium" style="width: 100%; min-height: 100vh; page-break-after: always; background: #fff; padding: 30px; box-sizing: border-box; border: 4px double #827108;">
+<div id="folha-resumo-premium" style="width: 100%; min-height: 100vh; page-break-after: always; background: #fff; padding: 20px; box-sizing: border-box; border: 4px double #827108;">
     
-    <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/logosite.png" style="width: 180px; filter: contrast(1.1);">
-        <h2 style="text-transform: uppercase; letter-spacing: 4px; color: #000; margin-top: 15px; border-bottom: 2px solid #827108; display: inline-block; padding-bottom: 5px;">
-            Painel de Síntese Numerológica
+    <div style="text-align: center; margin-bottom: 15px;">
+        <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/logosite.png" style="width: 150px;">
+        <h2 style="text-transform: uppercase; letter-spacing: 3px; color: #000; margin-top: 10px; border-bottom: 2px solid #827108; display: inline-block; padding-bottom: 5px; font-size: 20px;">
+            Painel de Síntese Numerológica Premium
         </h2>
     </div>
 
-    <div id="grid-resumo" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px;">
+    <div id="grid-resumo" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px;">
         ${[
+            { label: "Dia Natal", valor: res.dia },
+            { label: "Essência", valor: res.essencia },
             { label: "Motivação", valor: res.motivacao },
             { label: "Influência", valor: res.influencia },
-            { label: "Expressão", valor: res.Personalidade },
+            { label: "Personalidade", valor: res.Personalidade },
+            { label: "Comportamento", valor: res.comportamento },
             { label: "Caminho de Vida", valor: res.CaminhodeVida },
-            { label: "Maturidade", valor: res.Maturidade },
             { label: "Propósito", valor: res.Propósito },
-            { label: "Dia Natal", valor: res.dia },
+            { label: "Maturidade", valor: res.Maturidade },
+            { label: "Relacionamento", valor: res.Relacionamento },
+            { label: "Talento Oculto", valor: res.talento },
+            { label: "Equilíbrio", valor: res.equilibrio },
+            { label: "Subconsciente", valor: res.subconsciente },
             { label: "Ano Pessoal", valor: res.anoPessoal },
-            { label: "Trânsito", valor: vTransitoCalculado }
+            { label: "Trânsito", valor: vTransitoCalculado },
+            { label: "Ciclos (Atual)", valor: res.ciclos ? res.ciclos[0] : "--" },
+            { label: "Desafios", valor: res.desafios ? res.desafios[3] : "--" },
+            { label: "Inibições", valor: res.deficiencias ? res.deficiencias.length : "0" }
         ].map(item => `
-            <div style="border: 1px solid #ddd; border-left: 5px solid #827108; background: #fcfcfc; padding: 15px; text-align: center; border-radius: 4px; transition: transform 0.3s;">
-                <div style="font-size: 11px; text-transform: uppercase; color: #888; font-weight: bold; margin-bottom: 5px; height: 30px; display: flex; align-items: center; justify-content: center;">
+            <div style="border: 1px solid #eee; border-top: 3px solid #827108; background: #fff; padding: 10px; text-align: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                <div style="font-size: 9px; text-transform: uppercase; color: #666; font-weight: bold; margin-bottom: 5px; height: 25px; display: flex; align-items: center; justify-content: center; line-height: 1.1;">
                     ${item.label}
                 </div>
-                <div style="font-size: 34px; font-weight: bold; color: #111;">
-                    ${item.valor}
+                <div style="font-size: 24px; font-weight: bold; color: #111;">
+                    ${item.valor || "--"}
                 </div>
             </div>
         `).join('')}
     </div>
 
-    <div style="margin-top: 35px; border: 2px solid #827108; background: var(--dark); padding: 30px; text-align: center; border-radius: 8px; position: relative;">
-        <span style="text-transform: uppercase; font-weight: bold; font-size: 14px; color: var(--gold); letter-spacing: 2px;">Caminho de Vida Principal</span>
-        <div style="font-size: 90px; font-weight: bold; color: #fff; line-height: 1; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); margin-top: 10px;">
-            ${res.CaminhodeVida}
-        </div>
-        <p style="color: var(--gold); font-size: 12px; margin-top: 15px; opacity: 0.8; text-transform: uppercase;">A frequência mestre da sua jornada</p>
+    <div style="margin-top: 25px; border: 1px solid #827108; background: #fdfaf0; padding: 15px; text-align: center; border-radius: 8px;">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 12px; color: #827108; letter-spacing: 2px;">Vibração de Destino Principal</span>
+        <div style="font-size: 50px; font-weight: bold; color: #000; line-height: 1;">${res.CaminhodeVida}</div>
     </div>
 </div>
 `;
