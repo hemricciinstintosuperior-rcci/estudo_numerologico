@@ -2005,40 +2005,69 @@ const listaItensSintese = [
 
 // 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
 html += `
-<div id="folha-resumo-premium" style="width: 100%; min-height: 100vh; page-break-after: always; background: #fff; padding: 20px; box-sizing: border-box; border: 4px double #827108;">
+<div id="folha-resumo-premium" style="
+    width: 210mm; 
+    height: 297mm; 
+    page-break-after: always; 
+    page-break-before: always; 
+    page-break-inside: avoid; 
+    background: #fff; 
+    padding: 15mm; 
+    box-sizing: border-box; 
+    border: 4px double #827108; 
+    margin: 0 auto; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+">
     
-    <div style="text-align: center; margin-bottom: 15px;">
-        <img src="" style="width: 150px;">
-        <h2 style="text-transform: uppercase; letter-spacing: 3px; color: #000; margin-top: 10px; border-bottom: 2px solid #827108; display: inline-block; padding-bottom: 5px; font-size: 20px;">
+    <div style="text-align: center; margin-bottom: 10px; flex-shrink: 0;">
+        <h2 style="text-transform: uppercase; letter-spacing: 2px; color: #000; margin: 0; border-bottom: 2px solid #827108; display: inline-block; padding-bottom: 5px; font-size: 18px;">
             Painel de Síntese Numerológica Premium
         </h2>
     </div>
 
-    <div id="grid-resumo" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 10px;">
+    <div id="grid-resumo" style="
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 8px; 
+        margin-top: 10px;
+        flex-grow: 1;
+    ">
         ${listaItensSintese.map(item => {
             let exibicaoValor = "--";
-            
-            // TRATAMENTO PARA OBJETOS (Ciclos e Desafios da sua planilha)
             if (item.valor && typeof item.valor === 'object' && !Array.isArray(item.valor)) {
-                // Pega os valores dentro do objeto (ex: as 3 vibrações dos ciclos)
-                exibicaoValor = Object.values(item.valor)
-                    .filter(v => v !== undefined && v !== null && v !== "")
-                    .join(" · ");
-            } 
-            // TRATAMENTO PARA LISTAS (Inclinações)
-            else if (Array.isArray(item.valor)) {
+                exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
+            } else if (Array.isArray(item.valor)) {
                 exibicaoValor = item.valor.join(" · ");
-            } 
-            else {
+            } else {
                 exibicaoValor = item.valor || "--";
             }
 
+            // Ajuste dinâmico de fonte para valores longos não quebrarem o layout
+            let fontSize = "20px";
+            if (exibicaoValor.toString().length > 5) fontSize = "16px";
+            if (exibicaoValor.toString().length > 10) fontSize = "13px";
+
             return `
-                <div style="border: 1px solid #eee; border-top: 3px solid #827108; background: #fff; padding: 10px; text-align: center; border-radius: 5px;">
-                    <div style="font-size: 9px; text-transform: uppercase; color: #666; font-weight: bold; margin-bottom: 5px; height: 25px; display: flex; align-items: center; justify-content: center; line-height: 1.1;">
+                <div style="
+                    border: 1px solid #eee; 
+                    border-top: 3px solid #827108; 
+                    background: #fff; 
+                    padding: 8px 4px; 
+                    text-align: center; 
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 65px;
+                ">
+                    <div style="font-size: 8px; text-transform: uppercase; color: #666; font-weight: bold; margin-bottom: 4px; line-height: 1.1;">
                         ${item.label}
                     </div>
-                    <div style="font-size: ${exibicaoValor.toString().length > 8 ? '14px' : '22px'}; font-weight: bold; color: #111;">
+                    <div style="font-size: ${fontSize}; font-weight: bold; color: #111; word-break: break-word;">
                         ${exibicaoValor}
                     </div>
                 </div>
@@ -2046,9 +2075,17 @@ html += `
         }).join('')}
     </div>
 
-    <div style="margin-top: 25px; border: 1px solid #827108; background: #fdfaf0; padding: 15px; text-align: center; border-radius: 8px;">
-        <span style="text-transform: uppercase; font-weight: bold; font-size: 12px; color: #827108; letter-spacing: 2px;">Vibração de Destino Principal</span>
-        <div style="font-size: 50px; font-weight: bold; color: #000; line-height: 1;">${res.CaminhodeVida}</div>
+    <div style="
+        margin-top: 15px; 
+        border: 1px solid #827108; 
+        background: #fdfaf0; 
+        padding: 10px; 
+        text-align: center; 
+        border-radius: 8px;
+        flex-shrink: 0;
+    ">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 11px; color: #827108; letter-spacing: 2px;">Vibração de Destino Principal</span>
+        <div style="font-size: 45px; font-weight: bold; color: #000; line-height: 1;">${res.CaminhodeVida}</div>
     </div>
 </div>
 `;
