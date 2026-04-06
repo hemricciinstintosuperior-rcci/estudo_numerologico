@@ -1952,6 +1952,22 @@ let html = `
                 
 
 
+// 1. Prepara o Desejo Oculto
+let vDesejoOculto = res.desejoOculto || res.DesejoOculto || "--";
+
+// 2. Une os dois Déficits (Recorrente + Oculto)
+let vDeficitComp = "";
+if (res.deficitRecorrente || res.deficitOculto) {
+    vDeficitComp = [res.deficitRecorrente, res.deficitOculto].filter(x => x).join(" · ");
+} else {
+    vDeficitComp = "--";
+}
+
+// 3. Prepara Talentos e Deficiências
+let vTalentosDef = res.habilidadesDeficiencias || res.talentosEspeciais || "--";
+
+// 4. Prepara o Trânsito (Segurança contra erros)
+let vTrânsito = typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--";
 
 
 // 1. Primeiro, definimos a lista de dados (fora da string do HTML para ficar limpo)
@@ -1960,7 +1976,7 @@ const listaItensSintese = [
     { label: "Essência", valor: res.essencia },
     { label: "Motivação", valor: res.motivacao },
     { label: "Influência", valor: res.influencia },
-    { label: "Desejo Oculto", valor: res.vDesejoOculto },
+    { label: "Desejo Oculto", valor: vDesejoOculto },
     { label: "Personalidade", valor: res.Personalidade },
     { label: "Comportamento", valor: res.comportamento },
     { label: "Caminho de Vida", valor: res.CaminhodeVida },
@@ -1972,10 +1988,10 @@ const listaItensSintese = [
     { label: "Inclinações", valor: res.inclinacoes }, // Exibe múltiplos números
     { label: "Subconsciente", valor: res.subconsciente },
     { label: "Fraquezas / Inibições", valor: res.deficiencias || res.inibicoes },
-     { label: "Déficit Comportamental", valor: res.vDeficitComp },
-     { label: "Talentos / Deficiências", valor: res.vTalentosDef },
+     { label: "Déficit Comportamental", valor: vDeficitComp },
+     { label: "Talentos / Deficiências", valor: vTalentosDef },
     { label: "Ano Pessoal", valor: res.anoPessoal },
-    { label: "Trânsito", valor: res.vTrânsito },
+    { label: "Trânsito", valor: vTrânsito },
     { label: "Ciclos", valor: res.ciclos }, // Exibe a tríade
     { label: "Desafios", valor: res.desafios }, // Exibe a sequência
     { label: "Momentos Decisivos", valor: res.momentos } 
