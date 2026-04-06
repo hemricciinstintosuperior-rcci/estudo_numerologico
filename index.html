@@ -1954,24 +1954,28 @@ let html = `
 
 // --- PREPARAÇÃO REFORÇADA ---
 
-// 1. Desejo Oculto (Tenta todas as combinações de nomes possíveis)
-let vDesejoOculto = res.desejoOculto || res.DesejoOculto || res.desejo_oculto || (typeof desejoOculto !== 'undefined' ? desejoOculto : "--");
+// --- PESCA OS DADOS DO SEU MOTOR DE CÁLCULO ---
 
-// 2. Déficit Comportamental (Unindo o Recorrente e o Oculto/Dia)
-let p1 = res.deficitRecorrente || res.deficit_recorrente || "";
-let p2 = res.deficitOculto || res.deficit_oculto || res.deficitDia || "";
-let vDeficitComp = [p1, p2].filter(x => x && x !== "").join(" · ") || "--";
+// 1. Desejo Oculto: No seu código ele vem da função 'calcularMotivacao'
+let vDesejoOculto = typeof desejoOculto !== 'undefined' ? desejoOculto : (res.desejoOculto || "--");
 
-// 3. Talentos e Deficiências (Habilidades)
-let vTalentosDef = res.habilidadesDeficiencias || res.talentoDeficiencia || (typeof habilidadesDeficiencias !== 'undefined' ? habilidadesDeficiencias : "--");
+// 2. Déficits: Você calculou o 'deficitRecorrente' e o 'deficitOculto' em funções separadas
+let vDeficitComp = "";
+let dRec = typeof deficitRecorrente !== 'undefined' ? deficitRecorrente : "";
+let dOcu = typeof deficitOculto !== 'undefined' ? deficitOculto : "";
+vDeficitComp = [dRec, dOcu].filter(x => x && x !== "").join(" · ") || "--";
 
-// 4. Trânsito (Verifica se a variável global vTransitoCalculado existe)
-let vTrânsito = "--";
-if (typeof vTransitoCalculado !== 'undefined') {
-    vTrânsito = vTransitoCalculado;
-} else if (res.transito) {
-    vTrânsito = res.transito;
-}
+// 3. Talentos e Deficiências: No seu código você chama de 'habilidades' e 'deficiencias'
+// Aqui pegamos o resultado da contagem de letras que você fez
+let vTalentosDef = typeof habilidades !== 'undefined' ? habilidades : (res.talento || "--");
+
+// 4. Trânsito: Como você usa as letras do nome para a idade atual
+let vTrânsito = typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--";
+
+// 5. Inibições: Você usa a contagem de números ausentes
+let vInibicoes = typeof inibicoes !== 'undefined' ? inibicoes : (res.deficiencias ? res.deficiencias.length : "0");
+// 5. LOG DE CONTROLE (Isso vai mostrar no console se o caçador achou)
+console.log("ACHADOS:", { vDesejoOculto, vDeficitComp, vTalentosDef });
 
 console.log("CONTEÚDO DO RES:", res);
 // 1. Primeiro, definimos a lista de dados (fora da string do HTML para ficar limpo)
