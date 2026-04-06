@@ -1901,27 +1901,36 @@ desafios: {
 };
 
 // --- INJEÇÃO NA FOLHA DE RESUMO GERAL ---
-const gridResumo = document.getElementById("grid-resumo");
-const itensResumo = [
-    { label: "Motivação (Alma)", valor: res.motivacao },
-    { label: "Influência (Aparência)", valor: res.influencia },
-    { label: "Expressão (Personalidade)", valor: res.Personalidade },
-    { label: "Caminho de Vida (Destino)", valor: res.CaminhodeVida },
-    { label: "Propósito de Vida", valor: res.Propósito },
-    { label: "Dia de Nascimento", valor: res.dia },
-    { label: "Ano Pessoal Atual", valor: res.anoPessoal },
-    { label: "Maturidade", valor: res.Maturidade }
-];
+// Localize o final da definição do objeto 'res' e cole isso:
 
-gridResumo.innerHTML = itensResumo.map(item => `
-    <div style="border-bottom: 1px solid #f0f0f0; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
-        <span style="font-size: 14px; color: #666; text-transform: uppercase; font-weight: bold;">${item.label}</span>
-        <span style="font-size: 24px; color: #827108; font-weight: bold;">${item.valor}</span>
-    </div>
-`).join('');
+const campoGrid = document.getElementById("grid-resumo");
+const campoMestre = document.getElementById("numero-mestre-resumo");
 
-// Coloca o Destino em destaque no final da folha
-document.getElementById("numero-mestre-resumo").innerText = res.CaminhodeVida;
+// SÓ EXECUTA SE OS CAMPOS EXISTIREM NO HTML
+if (campoGrid && campoMestre) {
+    const itensParaExibir = [
+        { label: "Motivação", valor: res.motivacao },
+        { label: "Influência", valor: res.influencia },
+        { label: "Expressão", valor: res.Personalidade },
+        { label: "Caminho de Vida", valor: res.CaminhodeVida },
+        { label: "Propósito", valor: res.Propósito },
+        { label: "D. Nascimento", valor: res.dia },
+        { label: "Ano Pessoal", valor: res.anoPessoal },
+        { label: "Maturidade", valor: res.Maturidade }
+    ];
+
+    // Monta o HTML interno
+    campoGrid.innerHTML = itensParaExibir.map(item => `
+        <div style="border-bottom: 1px solid #eee; padding: 10px; display: flex; justify-content: space-between;">
+            <b style="font-size: 13px; color: #666; text-transform: uppercase;">${item.label}</b>
+            <span style="font-size: 20px; color: #827108; font-weight: bold;">${item.valor}</span>
+        </div>
+    `).join('');
+
+    campoMestre.innerText = res.CaminhodeVida;
+} else {
+    console.error("Erro: Os elementos 'grid-resumo' ou 'numero-mestre-resumo' não foram encontrados no HTML.");
+}
 
 // Adicione a variável htmlPiramide na montagem final do seu 'html'
             
@@ -1972,18 +1981,15 @@ let html = `
     </div>
                 
 
-<div id="folha-resumo-premium" class="secao-card" style="page-break-after: always; border: 3px double #827108; padding: 30px; background: #fff; min-height: 900px;">
-    <div style="text-align: center; margin-bottom: 30px;">
-        <h2 style="color: #000; text-transform: uppercase; letter-spacing: 3px; font-weight: bold; margin-bottom: 5px;">Síntese do Mapa Quântico</h2>
-        <div style="width: 100px; height: 2px; background: #827108; margin: 0 auto;"></div>
-    </div>
-
-    <div id="grid-resumo" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+<div id="folha-resumo-premium" style="page-break-after: always; padding: 40px; background: #fff; border: 4px double #827108; margin: 20px;">
+    <h2 style="text-align: center; color: #000; text-transform: uppercase; letter-spacing: 2px;">Resumo do Mapa Quântico</h2>
+    
+    <div id="grid-resumo" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 30px;">
         </div>
 
-    <div id="destaque-assinatura" style="margin-top: 50px; text-align: center; border-top: 1px solid #eee; padding-top: 30px;">
-        <h3 style="color: #827108; font-size: 14px; text-transform: uppercase;">Vibração Mestra de Destino</h3>
-        <div id="numero-mestre-resumo" style="font-size: 80px; font-weight: bold; color: #000; line-height: 1;">--</div>
+    <div style="margin-top: 40px; text-align: center; border-top: 2px solid #827108; padding-top: 20px;">
+        <span style="font-size: 14px; color: #827108; font-weight: bold; text-transform: uppercase;">Caminho de Vida Dominante</span>
+        <div id="numero-mestre-resumo" style="font-size: 70px; font-weight: bold; color: #000;">--</div>
     </div>
 </div>
 
