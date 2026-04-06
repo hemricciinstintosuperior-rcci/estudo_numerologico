@@ -1900,7 +1900,28 @@ desafios: {
  anoPessoal: resultadoAnoPessoal
 };
 
+// --- INJEÇÃO NA FOLHA DE RESUMO GERAL ---
+const gridResumo = document.getElementById("grid-resumo");
+const itensResumo = [
+    { label: "Motivação (Alma)", valor: res.motivacao },
+    { label: "Influência (Aparência)", valor: res.influencia },
+    { label: "Expressão (Personalidade)", valor: res.Personalidade },
+    { label: "Caminho de Vida (Destino)", valor: res.CaminhodeVida },
+    { label: "Propósito de Vida", valor: res.Propósito },
+    { label: "Dia de Nascimento", valor: res.dia },
+    { label: "Ano Pessoal Atual", valor: res.anoPessoal },
+    { label: "Maturidade", valor: res.Maturidade }
+];
 
+gridResumo.innerHTML = itensResumo.map(item => `
+    <div style="border-bottom: 1px solid #f0f0f0; padding: 15px; display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 14px; color: #666; text-transform: uppercase; font-weight: bold;">${item.label}</span>
+        <span style="font-size: 24px; color: #827108; font-weight: bold;">${item.valor}</span>
+    </div>
+`).join('');
+
+// Coloca o Destino em destaque no final da folha
+document.getElementById("numero-mestre-resumo").innerText = res.CaminhodeVida;
 
 // Adicione a variável htmlPiramide na montagem final do seu 'html'
             
@@ -1951,6 +1972,20 @@ let html = `
     </div>
                 
 
+<div id="folha-resumo-premium" class="secao-card" style="page-break-after: always; border: 3px double #827108; padding: 30px; background: #fff; min-height: 900px;">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: #000; text-transform: uppercase; letter-spacing: 3px; font-weight: bold; margin-bottom: 5px;">Síntese do Mapa Quântico</h2>
+        <div style="width: 100px; height: 2px; background: #827108; margin: 0 auto;"></div>
+    </div>
+
+    <div id="grid-resumo" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        </div>
+
+    <div id="destaque-assinatura" style="margin-top: 50px; text-align: center; border-top: 1px solid #eee; padding-top: 30px;">
+        <h3 style="color: #827108; font-size: 14px; text-transform: uppercase;">Vibração Mestra de Destino</h3>
+        <div id="numero-mestre-resumo" style="font-size: 80px; font-weight: bold; color: #000; line-height: 1;">--</div>
+    </div>
+</div>
 
 <div class="secao-card quebra-pagina" style="padding: 40px; border: 2px solid var(--gold); background: #fff; position: relative;">
     <div style="position: absolute; top: 10px; left: 10px; width: 50px; height: 50px; border-top: 3px solid var(--gold); border-left: 3px solid var(--gold);"></div>
