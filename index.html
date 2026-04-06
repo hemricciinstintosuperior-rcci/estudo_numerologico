@@ -1979,12 +1979,15 @@ html += `
             { label: "Relacionamento", valor: res.Relacionamento },
             { label: "Talento Oculto", valor: res.talento },
             { label: "Equilíbrio", valor: res.equilibrio },
+            { label: "Inclinacões", valor:res.inclinacoes ? res.inclinacoes.length : "0"},
             { label: "Subconsciente", valor: res.subconsciente },
             { label: "Ano Pessoal", valor: res.anoPessoal },
             { label: "Trânsito", valor: vTransitoCalculado },
             { label: "Ciclos (Atual)", valor: res.ciclos ? res.ciclos[0] : "--" },
             { label: "Desafios", valor: res.desafios ? res.desafios[3] : "--" },
+            
             { label: "Inibições", valor: res.deficiencias ? res.deficiencias.length : "0" }
+            
         ].map(item => `
             <div style="border: 1px solid #eee; border-top: 3px solid #827108; background: #fff; padding: 10px; text-align: center; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
                 <div style="font-size: 9px; text-transform: uppercase; color: #666; font-weight: bold; margin-bottom: 5px; height: 25px; display: flex; align-items: center; justify-content: center; line-height: 1.1;">
