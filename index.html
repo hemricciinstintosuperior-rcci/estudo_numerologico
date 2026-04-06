@@ -1959,7 +1959,6 @@ const listaItensSintese = [
     { label: "Essência", valor: res.essencia },
     { label: "Motivação", valor: res.motivacao },
     { label: "Influência", valor: res.influencia },
-    { label: "Desejo Oculto", valor: (typeof dadosDesejo !== 'undefined' && dadosDesejo.numero) ? dadosDesejo.numero : "--" },
     { label: "Personalidade", valor: res.Personalidade },
     { label: "Comportamento", valor: res.comportamento },
     { label: "Caminho de Vida", valor: res.CaminhodeVida },
@@ -1968,16 +1967,19 @@ const listaItensSintese = [
     { label: "Relacionamento", valor: res.Relacionamento },
     { label: "Talento Oculto", valor: res.talento },
     { label: "Equilíbrio", valor: res.equilibrio },
-    { label: "Inclinações", valor: res.inclinacoes }, // Exibe múltiplos números
+    { label: "Inclinações", valor: res.inclinacoes },
     { label: "Subconsciente", valor: res.subconsciente },
-    { label: "Fraquezas / Inibições", valor: res.deficiencias || res.inibicoes },
-   { label: "Déficit Comportamental", valor: [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filter(x => x).join(" · ") || "--" },
-    { label: "Habilidades / Deficiências", valor: (typeof talentoNum !== 'undefined' && talentoNum !== null) ? talentoNum : "Equilibrado" },
     { label: "Ano Pessoal", valor: res.anoPessoal },
-    { label: "Trânsito", valor: (typeof vTransitoCalculado !== 'undefined') ? vTransitoCalculado : "--" },
-    { label: "Ciclos", valor: res.ciclos }, // Exibe a tríade
-    { label: "Desafios", valor: res.desafios }, // Exibe a sequência
-    { label: "Momentos Decisivos", valor: res.momentos } 
+    { label: "Trânsito", valor: vTrânsitoFinal },
+    { label: "Ciclos", valor: res.ciclos },
+    { label: "Desafios", valor: res.desafios },
+    { label: "Momentos Decisivos", valor: res.momentos },
+    
+    // CAMPOS QUE VOCÊ QUERIA:
+    { label: "Desejo Oculto", valor: vDesejoOculto },
+    { label: "Déficit Comportamental", valor: vDeficitFinal },
+    { label: "Habilidades / Deficiências", valor: vHabDef },
+    { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" }
 ];
 
 // 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
