@@ -1960,7 +1960,7 @@ const listaItensSintese = [
     { label: "Essência", valor: res.essencia },
     { label: "Motivação", valor: res.motivacao },
     { label: "Influência", valor: res.influencia },
-     { label: "Desejo Oculto", valor: res.DesejoOculto }, 
+     { label: "Desejo Oculto", valor: res.desejoOculto || res.DesejoOculto || "--" }, 
     { label: "Personalidade", valor: res.Personalidade },
     { label: "Comportamento", valor: res.comportamento },
     { label: "Caminho de Vida", valor: res.CaminhodeVida },
@@ -1972,10 +1972,10 @@ const listaItensSintese = [
     { label: "Inclinações", valor: res.inclinacoes }, // Exibe múltiplos números
     { label: "Subconsciente", valor: res.subconsciente },
     { label: "Fraquezas / Inibições", valor: res.deficiencias || res.inibicoes },
-    { label: "Déficit Comportamental", valor: res.deficitsOcultos || res.deficitRecorrente },
-     { label: "Habilidades / Deficiências", valor: res.TalentoEspecial},
+    {label: "Déficit Comportamental", valor: (res.deficitOculto || "") + (res.deficitOculto && res.deficitRecorrente ? " · " : "") + (res.deficitRecorrente || "")},
+     { label: "Talentos / Deficiências", valor: res.habilidadesDeficiencias || res.talentoDeficiencia || "--" },
     { label: "Ano Pessoal", valor: res.anoPessoal },
-    { label: "Trânsito", valor: typeof vTransitoCalculado !== 'undefined' ? vTransitoCalculado : "--" },
+    { label: "Trânsito", valor: typeof vTransito !== 'undefined' ? vTransito : "--" },
     { label: "Ciclos", valor: res.ciclos }, // Exibe a tríade
     { label: "Desafios", valor: res.desafios }, // Exibe a sequência
     { label: "Momentos Decisivos", valor: res.momentos } 
