@@ -3503,9 +3503,7 @@ const introducoes = {
 
 window.TextosTransito = {
 
-1:
-​`
-​<h3>Trânsito 1</h3>
+1:`<h3>Trânsito 1</h3>
 <p>Título: Início de um Novo Ciclo e Independência</p>
 <p>Uma fase inteiramente nova da vida começa agora e o limiar de um novo começo se apresenta. Não só novas ideias entrarão em cena, mas haverá aceitação e empenho em desenvolvê-las. É uma fase de mudanças e a hora de avançar em direção a novos objetivos, abandonando o passado. Deve-se eliminar da vida tudo o que esteja ultrapassado, que não tenha mais utilidade ou que não traga mais benefícios.</p>
 <p>Descarte hábitos, vícios e responsabilidades de apego anterior, assim como valores e relacionamentos que não tenham mais serventia para o futuro. Uma nova identidade está surgindo, mais eficiente, inovadora, altamente criativa e corajosa. As qualidades de liderança e controle estarão mais presentes e as situações que se apresentarão neste período exigirão enfrentamento de desafios e dificuldades.</p>
@@ -3516,9 +3514,7 @@ window.TextosTransito = {
 <p>1. Se este trânsito predominar por 3 anos ou mais, isso pode indicar um período tumultuado onde será necessário lidar com muitas mudanças e obstáculos. Pode indicar sofrimento com uma série de mudanças dramáticas (para melhor ou para pior). Independentemente disso, qualquer que seja o evento ocorrido, será benéfico.</p>
 <p>2. Os efeitos de um Trânsito 1 junto a um Ano Pessoal 1 são potencializados e podem trazer certa dificuldade em fazer escolhas acertadas entre as oportunidades que se apresentarão. É possível se deparar com situações frustrantes e deve haver preparação para fazer escolhas cuidadosas, sempre visando o futuro e não resultados imediatos.</p>
 `,
-​2:
-​`
-​<h3>Trânsito 2</h3>
+ 2:`<h3>Trânsito 2</h3>
 <p>Título: Cooperação, Diplomacia e Sensibilidade</p>
 <p>Durante este trânsito, o aprendizado é cooperar com as outras pessoas para realizar algum bem maior. É um momento para seguir e não para liderar, devendo-se procurar orientação e se guiar pelo ambiente e por quem tenha maior conhecimento e poder. Será necessário manter o foco em ideias e ideais, mas sem se deixar levar pela arrogância, teimosia e rigidez. Procure deixar que as coisas fluam naturalmente, pois quanto maior a insistência em prioridades próprias, mais resistência surgirá.</p>
 <p>Este é um período de parcerias, onde o sucesso dependerá da capacidade de trabalhar em conjunto e aceitar opiniões. A sensibilidade, o lado emotivo e o instinto estarão mais aflorados, permitindo maior compreensão dos acontecimentos e percepção de mudanças sutis em pessoas e situações. Haverá maior capacidade de adaptação às circunstâncias e às mudanças do período. Por outro lado, pode haver abalo ou ressentimento com coisas que normalmente não afetariam.</p>
@@ -3529,9 +3525,7 @@ window.TextosTransito = {
 <p>1. Se este trânsito predominar por 3 anos ou mais, é possível experimentar um período de ansiedade, nervosismo e pressão psicológica devido às frustrações e tensões que esse período pode trazer.</p>
 <p>2. Quando um Trânsito 2 ocorre junto a um Ano Pessoal 2, os conflitos emocionais podem aumentar a tensão e ansiedade, tornando a sensibilidade extrema e podendo afetar a saúde. Desenvolver o autocontrole e a disciplina ajudará a manter equilíbrio e tranquilidade.</p>
 `,
-​3:
-​`
-​<h3>Trânsito 3</h3>
+ 3:`<h3>Trânsito 3</h3>
 <p>Título: Criatividade, Expressão e Vida Social</p>
 <p>A capacidade em se expressar aumentará substancialmente neste período, assim como qualquer talento para se comunicar e interagir, especialmente na escrita. Este pode ser um período de muita inspiração e sucesso através da criatividade pessoal. Muitas oportunidades para progredir e se desenvolver surgirão, especialmente na carreira por meio da própria expressão pessoal, magnetismo e talento criativo.</p>
 <p>É um momento social, de muita diversão e amizades, com uma visão mais alegre diante da vida; a sensação será de maior leveza do que nos anos anteriores. Como se a vida aliviasse um fardo, permitindo que as coisas fluam naturalmente. As pessoas serão naturalmente atraídas por esse magnetismo, pois sentem a alegria de viver, o espírito jovial e a criatividade.</p>
@@ -3542,9 +3536,7 @@ window.TextosTransito = {
 <p>1. Se este trânsito predominar por 3 anos ou mais, pode indicar um momento de mudança positiva e representar uma grande virada na vida, podendo alcançar o reconhecimento, a recompensa e até mesmo a fama mediante um trabalho bem feito.</p>
 <p>2. Quando um Trânsito 3 ocorre junto a um Ano Pessoal 3, poderá haver dificuldade em manter a autodisciplina, com tendência a se preocupar apenas com o momento presente e pouco com o futuro, o que pode causar prejuízos nos próximos ciclos. Da mesma forma, pode levar à inquietação e a um certo exibicionismo por excesso de autoestima.</p>
 `,
-​4:
-​`
-​<h3>Trânsito 4</h3>
+ 4:`<h3>Trânsito 4</h3>
 <p>Título: Trabalho, Organização e Bases Sólidas</p>
 <p>Este é um período de muito trabalho, onde as recompensas serão diretamente proporcionais ao esforço. Muito será exigido, mas existe a oportunidade de estabelecer uma base sólida para os objetivos. Seja alguém organizado e disciplinado. Valorize cada pequena conquista e mantenha a atenção a cada detalhe em todas as áreas, especialmente em finanças e negócios.</p>
 <p>Aja com praticidade e disciplina. Saiba gerenciar recursos e tempo para empenhar energias corretamente e obter os resultados desejados. Seja alguém paciente para enxergar a realidade exatamente como ela é, facilitando o encontro do caminho correto para o sucesso. Evite sentimentos de restrição, mas mantenha a economia e certifique-se de que o lado financeiro está equilibrado.</p>
@@ -3554,9 +3546,7 @@ window.TextosTransito = {
 <p>1. Se este trânsito estiver predominante por 3 anos ou mais, tudo poderá parecer muito mais difícil e o enfrentamento de limitações pode fazer a vida parecer uma batalha sem fim. Mas se houver aprendizado em tirar proveito das restrições, ao final do ciclo geralmente ocorre um triunfo pessoal ou conquista profissional.</p>
 <p>2. Quando um Trânsito 4 ocorre junto com um Ano Pessoal 4, tudo pode parecer mais monótono e rotineiro, criando a ilusão de que as coisas são mais difíceis do que realmente são. Deve-se agir com muita praticidade, pois nem tudo será tão formidável quanto pode aparentar ser.</p>
 `,
-​5:
-​`
-​<h3>Trânsito 5</h3>
+ 5:`<h3>Trânsito 5</h3>
 <p>Título: Liberdade, Mudanças e Novas Experiências</p>
 <p>Este é um momento muito importante para o progresso e avanços, trazendo uma sensação de alívio e liberdade. A capacidade para se relacionar e interagir estará muito favorecida. Ao mesmo tempo, os negócios fluem rapidamente e novas oportunidades de expansão surgem inesperadamente. O magnetismo pessoal ajudará muito a promover ideias e interesses, abrindo muitas portas.</p>
 <p>Este é um período movimentado e de aprendizado. Poderão surgir oportunidades jamais imaginadas. É o momento de conhecer novas pessoas, lugares e ideias, acelerando o crescimento pessoal. Muitos velhos hábitos e valores ultrapassados poderão desaparecer sem que se perceba, marcando a transição para uma nova fase de desenvolvimento pessoal.</p>
@@ -3566,9 +3556,8 @@ window.TextosTransito = {
 <p>1. Se este trânsito durar 3 ou mais anos, pode refletir um período de instabilidade financeira e desgaste mental, com tendência a fugir da responsabilidade por falta de controle sobre as mudanças.</p>
 <p>2. Quando um Trânsito 5 ocorre junto a um Ano Pessoal 5, pode surgir uma falsa sensação de liberdade e falta de limites. É preciso cuidado para que o senso ético não seja inibido por impulsividade, cometendo abusos dos quais haverá arrependimento. Tente manter uma abordagem equilibrada, controlando o egoísmo e a impulsividade.</p>
 `,
-​6:
-​`
-​<h3>Trânsito 6</h3>
+ 
+ 6:`<h3>Trânsito 6</h3>
 <p>Título: Responsabilidades Familiares e Harmonia</p>
 <p>Este é um período para assumir responsabilidades e deveres, principalmente ligados a assuntos familiares. Haverá o impulso de apoiar as pessoas ao redor, mantendo o foco nas próprias necessidades sem se anular pelos problemas alheios. A percepção alheia será de alguém que inspira e orienta, sendo necessário, às vezes, abrir mão de interesses próprios em favor de outros. O altruísmo é a chave.</p>
 <p>Avanços na carreira e questões financeiras são prováveis. O progresso pessoal pode vir com facilidade através de novas oportunidades, mas acompanhadas de mais responsabilidades. Será um período emotivo e de cobranças mútuas. O instinto protetor estará forte e deve haver cuidado para não sufocar as pessoas com excesso de zelo ou interferência.</p>
@@ -3578,9 +3567,8 @@ window.TextosTransito = {
 <p>1. Quando um Trânsito 6 se estender por 3 anos ou mais, pode indicar a necessidade de lidar com muitos problemas familiares ou renunciar a ambições pessoais em benefício de outras pessoas do convívio próximo.</p>
 <p>2. Se um Trânsito 6 ocorrer junto a um Ano Pessoal 6, as responsabilidades podem parecer maiores do que se pretende aceitar. Mas, se cumpridas, as recompensas serão compensadoras. Deve haver cuidado para não se intrometer na vida alheia ou assumir fardos que não são próprios.</p>
 `,
-​7:
-​`
-​<h3>Trânsito 7</h3>
+ 
+ 7:`<h3>Trânsito 7</h3>
 <p>Título: Autoconhecimento, Estudo e Reflexão</p>
 <p>Este é um período para autorreflexão, análise e crescimento interior. A introspecção estará mais presente, trazendo a necessidade de passar tempo a sós para apreciar a vida. Questões existenciais ocuparão os pensamentos. A sensibilidade e intuição aumentadas podem dar a ilusão de que as coisas estão mais agressivas, mas é apenas o reflexo da descoberta de questões importantes que direcionaram a vida até aqui.</p>
 <p>Para lidar com as pessoas ao redor, será necessário refinar a expressão em todos os aspectos. Não force as pessoas para não criar conflitos e comprometer amizades. Este não é o momento para agressividade, mas para o desenvolvimento pessoal através do autoconhecimento. Pense cuidadosamente antes de decisões importantes e seja alguém cauteloso com grandes mudanças.</p>
@@ -3590,9 +3578,8 @@ window.TextosTransito = {
 <p>1. Quando o Trânsito 7 estiver em vigor por 3 anos ou mais, pode indicar a ocorrência de eventos que levem ao isolamento social ou a uma fuga da realidade, tornando a pessoa excessivamente detalhista ou apegada a conceitos sem benefício prático.</p>
 <p>2. Se o Trânsito 7 ocorre junto com um Ano Pessoal de mesma vibração, pode haver insatisfação e mau humor, com tendência ao retraimento e intolerância. Há o risco de se fechar excessivamente, levando à depressão ou deixando de desfrutar os bons momentos da vida.</p>
 `,
-​8:
-​`
-​<h3>Trânsito 8</h3>
+ 
+ 8:`<h3>Trânsito 8</h3>
 <p>Título: Eficiência, Poder e Conquistas Materiais</p>
 <p>Este é um período bem material, de progresso e muito poder pessoal. O foco será o desenvolvimento da carreira e o lado financeiro. É um excelente momento para colocar as finanças em ordem e buscar crescimento, o que exigirá muito planejamento, dedicação e organização. Negociações devem ser tratadas com inteligência e cuidado para evitar erros futuros.</p>
 <p>É época de ser alguém justo e cauteloso com o poder, usando sabedoria em todas as ações. Manter o equilíbrio em todas as áreas será a chave para o sucesso. Este período refletirá a maneira como a vida vem sendo conduzida; questões antigas podem reaparecer trazendo atrasos até que sejam resolvidas. A ironia é que, apesar de possuir recursos, as coisas podem não se desenvolver tão rápido quanto o esperado.</p>
@@ -3601,9 +3588,8 @@ window.TextosTransito = {
 <p>1. Quando o Trânsito 8 estiver em vigor por 3 anos ou mais, pode indicar um desenvolvimento significativo no lado material, favorecendo o reconhecimento, a fama, o poder e o status social em grau elevado.</p>
 <p>2. Se o Trânsito 8 ocorre junto com um Ano Pessoal de mesma vibração, o período pode ser estressante pelo excesso de dedicação à profissão. Embora importante para o poder e status, pode ser prejudicial para outros aspectos da vida se não houver equilíbrio.</p>
 `,
-​9:
-​`
-​<h3>Trânsito 9</h3>
+ 
+ 9:`<h3>Trânsito 9</h3>
 <p>Título: Humanitarismo, Conclusões e Transformação</p>
 <p>Este é um período em que os ideais serão testados e forjados. Haverá uma expansão psicológica e espiritual dramática. Relacionamentos antigos que não tenham mais lugar na vida serão abandonados. Até velhos hábitos ou características de identidade podem se mostrar sem importância agora. Há necessidade de se desapegar de mágoas passadas para permitir que a vida siga.</p>
 <p>Manter apego a sentimentos negativos trará apenas atrasos. Existe agora a capacidade de entender melhor as necessidades alheias, exigindo talvez algum autossacrifício e serviço aos outros. A sensibilidade à dor alheia aumentará, gerando o desejo de melhorar o ambiente. Aproveite para retribuir, ensinar e orientar, promovendo a harmonia.</p>
