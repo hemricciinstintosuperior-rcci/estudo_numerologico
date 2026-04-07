@@ -1945,10 +1945,7 @@ let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filt
 let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
 let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
 // Executa o cálculo dos planos para obter o Perfil Nativo
-// 1. Pega os dados do plano (Certifique-se de que a variável 'nome' seja o texto do nome)
-const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome); 
-const perfilTraduzido = { criativo: "Criativa", indecisivo: "Indecisa", neutro: "Neutra" };
-const valorPerfilNativo = perfilTraduzido[dadosPlanosResumo.dominantePerfil] || "Não Definido";
+
 
 // 1. Cálculos do Plano e Perfil
 const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome);
