@@ -264,7 +264,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
     // Nova chave para a Vibração de Trânsito
  
 
-       Conclusao: `    <p style="font-size: 16px; color: var(--dark); line-height: 1.6;"> Você, agradeço profundamente pela confiança depositada em meu trabalho ao permitir que a Numerologia guie seus próximos passos. 
+       Conclusao: `    <p style="font-size: 16px; color: var(--dark); line-height: 1.6;"> fulane, agradeço profundamente pela confiança depositada em meu trabalho ao permitir que a Numerologia guie seus próximos passos. 
        É uma honra fazer parte da sua jornada de autodescoberta. 
        Que o Universo ilumine seus caminhos, abençoe suas escolhas e que cada vibração numérica aqui revelada se transforme em força, prosperidade e luz em sua vida. Siga com coragem e sabedoria!
     </p>`,
