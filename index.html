@@ -2219,11 +2219,33 @@ const listaItensSintese = [
     
     { label: "Ano Pessoal", valor: res.anoPessoal },
     
-    { label: "Trânsito", valor: vTrânsitoFinal }, // <--- AGORA VAI APARECER!
-     { label: "É uma pessoa Naturalmente", valor: valorPerfilNativo }
+    { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
+    
 
 ];
 
+
+// 1. Cálculos do Plano e Perfil
+const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome);
+const perfilChave = dadosPlanosResumo.dominantePerfil; // Ex: "criativo"
+
+// 2. Configuração Visual do Perfil (Cores e Textos)
+const vTextosPerfil = {
+    criativo: ` <p>"Sua mente possui mais Criatividade"</p> <p>Naturalmente você apresenta ideias originais...</p>`,
+    indeciso: ` <p>"A indecisão toma conta da sua expressão"</p> <p>Com grande sensibilidade...</p>`,
+    neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p> <p>Sendo alguém observador...</p>`
+};
+
+const vCoresPerfil = {
+    criativo: "#b8860b", // Dourado
+    indeciso: "#e74c3c", // Vermelho
+    neutro: "#7f8c8d"   // Cinza
+};
+
+const valorPerfilNativoTexto = vPerfilNativoTraduzido[perfilChave] || "Não Definido";
+const vCorDoPerfilAtivo = vCoresPerfil[perfilChave] || "#d97a1e";
+const vTextoDescritivoAtivo = vTextosPerfil[perfilChave] || "";
+    
 // 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
 html += `
 <div id="folha-resumo-premium" style="
@@ -2297,29 +2319,82 @@ html += `
     </div>
 
 <div style="
-        margin-top: 15px; 
-        border: 2px solid ${vCorPlanoDominante}; 
-        background: ${vCorPlanoDominante}15; /* O '15' no final deixa a cor bem clarinha no fundo */
-        padding: 10px; 
-        text-align: center; 
-        border-radius: 8px;
-        flex-shrink: 0;
+    display: flex; 
+    align-items: stretch; 
+    gap: 15px; 
+    margin-top: 15px; 
+    flex-shrink: 0;
+">
+    
+    <div style="
+        flex: 1; 
+        background: #fff; 
+        padding: 15px; 
+        border-radius: 8px; 
+        border: 1px solid #eee;
+        display: flex;
+        align-items: center;
+        gap: 15px;
     ">
-        <span style="text-transform: uppercase; font-weight: bold; font-size: 11px; color: ${vCorPlanoDominante}; letter-spacing: 2px;">
+        <div style="
+            background: ${vCorDoPerfilAtivo}; 
+            color: #fff; 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 22px; 
+            font-weight: bold; 
+            text-transform: uppercase; 
+            flex-shrink: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        ">
+            ${valorPerfilNativoTexto[0]}
+        </div>
+        
+        <div style="flex-grow: 1;">
+            <span style="font-size: 11px; text-transform: uppercase; color: #666; font-weight: bold; letter-spacing: 1px;">
+                É uma pessoa naturalmente
+            </span>
+            <div style="font-size: 20px; font-weight: bold; color: ${vCorDoPerfilAtivo}; margin-top: 2px;">
+                ${valorPerfilNativoTexto}
+            </div>
+            <div class="texto-perfil-resumo" style="font-size: 11px; color: #777; margin-top: 5px; line-height: 1.3;">
+                ${aplicarFiltroTexto(vTextoDescritivoAtivo)}
+            </div>
+        </div>
+    </div>
+
+    <div style="
+        width: 40%; 
+        background: #fff; 
+        padding: 15px; 
+        border-radius: 8px; 
+        border: 2px solid #3498db; /* Azul Mental */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    ">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 11px; color: #3498db; letter-spacing: 2px;">
             Plano de Expressão Dominante
         </span>
         <div style="
-            font-size: 38px; 
+            font-size: 32px; 
             font-weight: bold; 
-            color: ${vCorPlanoDominante}; /* O nome do plano agora assume a cor dele */
+            color: #3498db; 
             line-height: 1.2; 
             text-transform: uppercase;
-            text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+            margin-top: 5px;
         ">
             ${vPlanoDominanteNome}
         </div>
     </div>
-</div>`;
+
+</div>
+</div>`; // Fecha a div folha-resumo-premium
     
     
 html += `
