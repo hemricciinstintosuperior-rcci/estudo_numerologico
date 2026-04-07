@@ -273,7 +273,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
    ,
         
     conclusaoEvolutiva: `   
-     <h2> Universo e Numerologia </h2>
+     <h2 style="color: #333; font-size: 1.2rem; margin: 0;text-align: center;"> HERMETISMO & NUMEROLOGIA </h2>
     
     <h3>1. Lei do Mentalismo</h3>
     <p>A Lei do Mentalismo afirma que o Universo é uma construção da mente, e na numerologia, isso se reflete no poder do seu "Número de Motivação". Seus pensamentos e intenções mais profundos são as frequências que moldam sua realidade visível. Ao entender a vibração numérica que rege sua psique, você aprende a disciplinar sua mente para parar de criar padrões de escassez e começar a projetar o sucesso. A numerologia serve como o manual de instruções para sua mente, revelando quais pensamentos estão em sintonia com sua essência e quais são ruídos externos. Trabalhar a mente através dos números significa alinhar sua vontade mental com a inteligência universal, garantindo que o que você mentaliza tenha a base matemática correta para se manifestar no plano físico com total clareza e autoridade.</p>
