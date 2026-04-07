@@ -1947,24 +1947,32 @@ let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== n
 // Executa o cálculo dos planos para obter o Perfil Nativo
 
 
-// 1. Cálculos do Plano e Perfil
+// 1. Cálculos do Plano e Perfil (Corrigido para não dar erro de 'not defined')
 const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome);
 const perfilChave = dadosPlanosResumo.dominantePerfil; // Ex: "criativo"
 
-// 2. Configuração Visual do Perfil (Cores e Textos)
+// Objeto com os nomes traduzidos para exibição
+const vPerfilNomes = {
+    criativo: "Criativa",
+    indeciso: "Indecisa",
+    neutro: "Neutra"
+};
+
+// Configuração Visual do Perfil (Cores e Textos)
 const vTextosPerfil = {
-    criativo: ` <p>"Sua mente possui mais Criatividade"</p> <p>Naturalmente você apresenta ideias originais...</p>`,
-    indeciso: ` <p>"A indecisão toma conta da sua expressão"</p> <p>Com grande sensibilidade...</p>`,
-    neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p> <p>Sendo alguém observador...</p>`
+    criativo: ` <p>"Sua mente possui mais Criatividade"</p>`,
+    indeciso: ` <p>"A indecisão toma conta da sua expressão"</p>`,
+    neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p>`
 };
 
 const vCoresPerfil = {
-    criativo: "#b8860b", // Dourado
+    criativo: "#d97a1e", // Laranja/Dourado conforme sua foto
     indeciso: "#e74c3c", // Vermelho
-    neutro: "#7f8c8d"   // Cinza
+    neutro: "#7f8c8d"    // Cinza
 };
 
-const valorPerfilNativoTexto = vPerfilNativoTraduzido[perfilChave] || "Não Definido";
+// AQUI ESTAVA O ERRO: Mudei para usar 'vPerfilNomes' que acabamos de criar acima
+const valorPerfilNativoTexto = vPerfilNomes[perfilChave] || "Não Definido";
 const vCorDoPerfilAtivo = vCoresPerfil[perfilChave] || "#d97a1e";
 const vTextoDescritivoAtivo = vTextosPerfil[perfilChave] || "";
     
