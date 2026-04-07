@@ -375,7 +375,7 @@ RegenteVida: {
 
 SeqNegVida: {
 
-{
+
   1: `<p><strong>SEQUENCIA 111</strong></p>
 <p>Nesta fase, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você poderá sentir que sua chama interna de motivação está sendo abafada por obstáculos inesperados. A influência desta sequência tende a minar a sua capacidade de iniciativa, tornando o ato de começar algo novo um verdadeiro desafio para você. É comum surgir um sentimento de impotência, onde a coragem que você sempre teve para arriscar parece dar lugar à inatividade.</p>
 <p>Você pode enfrentar períodos de estagnação profissional ou um desânimo profundo, sentindo-se uma pessoa limitada em suas realizações. Esse estado de baixa energia pode perdurar enquanto o Arcano regente estiver dominando o seu ciclo atual, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Psicologicamente, isso gera em você uma sensação de paralisia diante das oportunidades da vida.</p>
