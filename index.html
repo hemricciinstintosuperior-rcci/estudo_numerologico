@@ -1945,15 +1945,10 @@ let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filt
 let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
 let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
 // Executa o cálculo dos planos para obter o Perfil Nativo
-const dadosPlanos = calcularDadosPlanos(nome); 
-const vPerfilNativo = dadosPlanos.dominantePerfil; // Ex: "criativo", "indeciso" ou "neutro"
-
-// Mapeamento para exibição bonita no label
-const nomesPerfil = { 
-    criativo: "Criativo", 
-    indeciso: "Indeciso", 
-    neutro: "Neutro" 
-};
+// 1. Pega os dados do plano (Certifique-se de que a variável 'nome' seja o texto do nome)
+const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome); 
+const perfilTraduzido = { criativo: "Criativo", indecisivo: "Indeciso", neutro: "Neutro" };
+const valorPerfilNativo = perfilTraduzido[dadosPlanosResumo.dominantePerfil] || "Não Definido";
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
 const anoNasc = ano; // Variável 'ano' que vem do split da data
