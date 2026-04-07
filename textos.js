@@ -792,7 +792,7 @@ influencia: {
 },
 
 // --- PERSONALIDADE (A EXPRESSÃO EXTERNA / COMO O MUNDO VÊ) ---
-personalidade: {
+Personalidade: {
     1: `<h3>Personalidade 1 - O Líder Pioneiro e Independente</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma presença poderosa, dinâmica e dotada de uma competência que se manifesta assim que você pisa em qualquer ambiente. As pessoas percebem imediatamente a sua autoridade natural, vendo em você alguém que possui clareza absoluta sobre o que quer e a força de vontade para chegar lá sem hesitar.</p>
     <p>Você se expressa de maneira direta e assertiva, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Por isso, é comum que as pessoas te procurem para tomar decisões rápidas ou liderar frentes que exigem coragem. O mundo enxerga em você uma figura resolutiva, que encara os problemas de frente e não se deixa abalar por críticas superficiais, mantendo o foco inabalável no topo.</p>
@@ -855,7 +855,7 @@ personalidade: {
 },
 
 // --- CAMINHO DE VIDA (DESTINO / ESTRADA DA VIDA) ---
-caminhodeVida: {
+CaminhodeVida: {
     1: `<h3>Caminho de Vida 1 - A Estrada do Pioneirismo e da Independência</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de superação, pioneirismo e a conquista definitiva da sua independência pessoal. O seu destino foi desenhado para que você aprenda a confiar plenamente em suas próprias capacidades e a assumir riscos que a maioria das pessoas teria receio de enfrentar, agindo como desbravador(a) de novas realidades.</p>
     <p>Ao longo da trajetória, a vida trará constantemente situações que forçarão o foco em si mesmo(a) e a tomada de decisões sem depender do apoio alheio. O sucesso para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, está diretamente ligado à coragem de ser quem você realmente é. Você encontrará grandes oportunidades em cargos de comando ou no empreendedorismo, onde a inovação é a chave do progresso.</p>
@@ -918,7 +918,7 @@ caminhodeVida: {
 },
 
 // --- PROPÓSITO (MISSÃO DE VIDA) ---
-proposito: {
+Proposito: {
     1: `<h3>Propósito 1 - A Manifestação da Liderança e Autonomia</h3>
     <p>O seu propósito nesta existência, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o desenvolvimento de uma autoconfiança inabalável e a manifestação da liderança consciente. Você veio ao mundo para aprender a usar o seu imenso poder pessoal com a missão sagrada de nunca mais permitir que sua voz seja silenciada ou que sua vontade seja subjugada por terceiros.</p>
     <p>Sua missão envolve ser um exemplo vivo de coragem e originalidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você deve aprender a equilibrar o forte impulso de independência com a sabedoria de que a liderança se torna magnífica quando beneficia o coletivo. Realizar este propósito significa chegar ao final da jornada com a certeza de que você foi protagonista de cada capítulo escrito.</p>
@@ -1043,7 +1043,7 @@ maturidade: {
     <p>Seu legado será um hino de esperança e redenção, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao final, você será reconhecido(a) como a personificação do amor divino na terra. Você encerrará este ciclo com a alma em paz, deixando uma história de pura doação que continuará a curar o mundo muito além do seu tempo.</p>`
 },
 // --- RELACIONAMENTO (COMO VOCÊ É E SE COMPORTA NO AMOR) ---
-relacionamento: {
+Relacionamento: {
     1: `<h3>Relacionamento 1 - Autonomia e Conquista no Amor</h3>
     <p>Esta energia traz para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a necessidade constante de preservar a individualidade dentro de qualquer união afetiva. Essa força de liderança garante que você não se anule em nome de um par, mantendo seu brilho original em todas as circunstâncias da convivência.</p>
     <p>O grande desafio é exercer o amor com independência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um impulso natural para tomar decisões solitárias, o que exige um diálogo claro para que a parceria não se sinta excluída. A lição fundamental para você é entender que um relacionamento sólido é composto por dois seres inteiros.</p>
