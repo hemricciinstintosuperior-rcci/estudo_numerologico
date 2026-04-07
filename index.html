@@ -1949,6 +1949,28 @@ let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== n
 const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome); 
 const perfilTraduzido = { criativo: "Criativa", indecisivo: "Indecisa", neutro: "Neutra" };
 const valorPerfilNativo = perfilTraduzido[dadosPlanosResumo.dominantePerfil] || "Não Definido";
+
+// 1. Cálculos do Plano e Perfil
+const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome);
+const perfilChave = dadosPlanosResumo.dominantePerfil; // Ex: "criativo"
+
+// 2. Configuração Visual do Perfil (Cores e Textos)
+const vTextosPerfil = {
+    criativo: ` <p>"Sua mente possui mais Criatividade"</p> <p>Naturalmente você apresenta ideias originais...</p>`,
+    indeciso: ` <p>"A indecisão toma conta da sua expressão"</p> <p>Com grande sensibilidade...</p>`,
+    neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p> <p>Sendo alguém observador...</p>`
+};
+
+const vCoresPerfil = {
+    criativo: "#b8860b", // Dourado
+    indeciso: "#e74c3c", // Vermelho
+    neutro: "#7f8c8d"   // Cinza
+};
+
+const valorPerfilNativoTexto = vPerfilNativoTraduzido[perfilChave] || "Não Definido";
+const vCorDoPerfilAtivo = vCoresPerfil[perfilChave] || "#d97a1e";
+const vTextoDescritivoAtivo = vTextosPerfil[perfilChave] || "";
+    
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
 const anoNasc = ano; // Variável 'ano' que vem do split da data
@@ -2225,26 +2247,7 @@ const listaItensSintese = [
 ];
 
 
-// 1. Cálculos do Plano e Perfil
-const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome);
-const perfilChave = dadosPlanosResumo.dominantePerfil; // Ex: "criativo"
 
-// 2. Configuração Visual do Perfil (Cores e Textos)
-const vTextosPerfil = {
-    criativo: ` <p>"Sua mente possui mais Criatividade"</p> <p>Naturalmente você apresenta ideias originais...</p>`,
-    indeciso: ` <p>"A indecisão toma conta da sua expressão"</p> <p>Com grande sensibilidade...</p>`,
-    neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p> <p>Sendo alguém observador...</p>`
-};
-
-const vCoresPerfil = {
-    criativo: "#b8860b", // Dourado
-    indeciso: "#e74c3c", // Vermelho
-    neutro: "#7f8c8d"   // Cinza
-};
-
-const valorPerfilNativoTexto = vPerfilNativoTraduzido[perfilChave] || "Não Definido";
-const vCorDoPerfilAtivo = vCoresPerfil[perfilChave] || "#d97a1e";
-const vTextoDescritivoAtivo = vTextosPerfil[perfilChave] || "";
     
 // 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
 html += `
