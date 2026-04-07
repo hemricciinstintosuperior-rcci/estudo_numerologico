@@ -1996,129 +1996,7 @@ let html = `
 
 
 
-const listaItensSintese = [
-    { label: "Dia Natalicio", valor: res.dia },
-    { label: "Essência", valor: res.essencia },
-    { label: "Motivação", valor: res.motivacao },
-    { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
-    { label: "Influência", valor: res.influencia },
-    { label: "Personalidade", valor: res.Personalidade },
-    { label: "Comportamento", valor: res.comportamento },
-    { label: "Relacionamento", valor: res.Relacionamento },
-    { label: "Talento Oculto", valor: res.talento },
-    { label: "Equilíbrio", valor: res.equilibrio },
-    { label: "Inclinações Ocultas", valor: res.inclinacoes },
-    { label: "Subconsciente", valor: res.subconsciente },
-    { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
-    { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
-    { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
-    { label: "Caminho de Vida", valor: res.CaminhodeVida },
-    { label: "Propósito", valor: res.Propósito },
-    { label: "Maturidade", valor: res.Maturidade },
-    { label: "Ano Pessoal", valor: res.anoPessoal },
-    { label: "Ciclos da Vida", valor: res.ciclos },
-    { label: "Desafios", valor: res.desafios },
-    { label: "Momentos de Decisão", valor: res.momentos },
-    { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
 
-];
-
-// 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
-html += `
-<div id="folha-resumo-premium" style="
-    width: 210mm; 
-    height: 297mm; 
-    page-break-after: always; 
-    page-break-before: always; 
-    page-break-inside: avoid; 
-    background: #0f2a36; 
-    padding: 15mm; 
-    box-sizing: border-box; 
-    border: 4px double #d97a1e; 
-    margin: 0 auto; 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: hidden;
-">
-    
-    <div style="text-align: center; margin-bottom: 10px; flex-shrink: 0;">
-        <h2 style="text-transform: uppercase; letter-spacing: 2px; color: #d97a1e; margin: 0; border-bottom: 2px solid #d97a1e; display: inline-block; padding-bottom: 5px; font-size: 22px;">
-            Resultado do estudo Numerológico
-        </h2>
-    </div>
-
-    <div id="grid-resumo" style="
-        display: grid; 
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 8px; 
-        margin-top: 10px;
-        flex-grow: 1;
-    ">
-        ${listaItensSintese.map(item => {
-            let exibicaoValor = "--";
-            if (item.valor && typeof item.valor === 'object' && !Array.isArray(item.valor)) {
-                exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
-            } else if (Array.isArray(item.valor)) {
-                exibicaoValor = item.valor.join(" · ");
-            } else {
-                exibicaoValor = item.valor || "--";
-            }
-
-            // Ajuste dinâmico de fonte para valores longos não quebrarem o layout
-            let fontSize = "20px";
-            if (exibicaoValor.toString().length > 5) fontSize = "18px";
-            if (exibicaoValor.toString().length > 10) fontSize = "15px";
-
-            return `
-                <div style="
-                    border: 1px solid #eee; 
-                    border-top: 3px solid #d97a1e; 
-                    background: #0f2a36; 
-                    padding: 8px 4px; 
-                    text-align: center; 
-                    border-radius: 4px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    min-height: 65px;
-                ">
-                    <div style="font-size: 12px; text-transform: uppercase; color: #d97a1e; font-weight: bold; margin-bottom: 4px; line-height: 1.1;">
-                        ${item.label}
-                    </div>
-                    <div style="font-size: ${fontSize}; font-weight: bold; color: #d97a1e; word-break: break-word;">
-                        ${exibicaoValor}
-                    </div>
-                </div>
-            `;
-        }).join('')}
-    </div>
-
-<div style="
-        margin-top: 15px; 
-        border: 2px solid ${vCorPlanoDominante}; 
-        background: ${vCorPlanoDominante}15; /* O '15' no final deixa a cor bem clarinha no fundo */
-        padding: 10px; 
-        text-align: center; 
-        border-radius: 8px;
-        flex-shrink: 0;
-    ">
-        <span style="text-transform: uppercase; font-weight: bold; font-size: 11px; color: ${vCorPlanoDominante}; letter-spacing: 2px;">
-            Plano de Expressão Dominante
-        </span>
-        <div style="
-            font-size: 38px; 
-            font-weight: bold; 
-            color: ${vCorPlanoDominante}; /* O nome do plano agora assume a cor dele */
-            line-height: 1.2; 
-            text-transform: uppercase;
-            text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
-        ">
-            ${vPlanoDominanteNome}
-        </div>
-    </div>
-</div>`;
     
 html += `
 <div class="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px;">
@@ -2274,6 +2152,132 @@ html += `
     </div>
 </div>
 `;   
+
+
+const listaItensSintese = [
+    { label: "Dia Natalicio", valor: res.dia },
+    { label: "Essência", valor: res.essencia },
+    { label: "Motivação", valor: res.motivacao },
+    { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
+    { label: "Influência", valor: res.influencia },
+    { label: "Personalidade", valor: res.Personalidade },
+    { label: "Comportamento", valor: res.comportamento },
+    { label: "Relacionamento", valor: res.Relacionamento },
+    { label: "Talento Oculto", valor: res.talento },
+    { label: "Equilíbrio", valor: res.equilibrio },
+    { label: "Inclinações Ocultas", valor: res.inclinacoes },
+    { label: "Subconsciente", valor: res.subconsciente },
+    { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
+    { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
+    { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
+    { label: "Caminho de Vida", valor: res.CaminhodeVida },
+    { label: "Propósito", valor: res.Propósito },
+    { label: "Maturidade", valor: res.Maturidade },
+    { label: "Ano Pessoal", valor: res.anoPessoal },
+    { label: "Ciclos da Vida", valor: res.ciclos },
+    { label: "Desafios", valor: res.desafios },
+    { label: "Momentos de Decisão", valor: res.momentos },
+    { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
+
+];
+
+// 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
+html += `
+<div id="folha-resumo-premium" style="
+    width: 210mm; 
+    height: 297mm; 
+    page-break-after: always; 
+    page-break-before: always; 
+    page-break-inside: avoid; 
+    background: #D9D9D9; 
+    padding: 15mm; 
+    box-sizing: border-box; 
+    border: 4px double #d97a1e; 
+    margin: 0 auto; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+">
+    
+    <div style="text-align: center; margin-bottom: 10px; flex-shrink: 0;">
+        <h2 style="text-transform: uppercase; letter-spacing: 2px; color: #d97a1e; margin: 0; border-bottom: 2px solid #d97a1e; display: inline-block; padding-bottom: 5px; font-size: 22px;">
+            Resultado do estudo Numerológico
+        </h2>
+    </div>
+
+    <div id="grid-resumo" style="
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 8px; 
+        margin-top: 10px;
+        flex-grow: 1;
+    ">
+        ${listaItensSintese.map(item => {
+            let exibicaoValor = "--";
+            if (item.valor && typeof item.valor === 'object' && !Array.isArray(item.valor)) {
+                exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
+            } else if (Array.isArray(item.valor)) {
+                exibicaoValor = item.valor.join(" · ");
+            } else {
+                exibicaoValor = item.valor || "--";
+            }
+
+            // Ajuste dinâmico de fonte para valores longos não quebrarem o layout
+            let fontSize = "20px";
+            if (exibicaoValor.toString().length > 5) fontSize = "18px";
+            if (exibicaoValor.toString().length > 10) fontSize = "15px";
+
+            return `
+                <div style="
+                    border: 1px solid #eee; 
+                    border-top: 3px solid #d97a1e; 
+                    background: #D9D9D9; 
+                    padding: 8px 4px; 
+                    text-align: center; 
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 65px;
+                ">
+                    <div style="font-size: 12px; text-transform: uppercase; color: #d97a1e; font-weight: bold; margin-bottom: 4px; line-height: 1.1;">
+                        ${item.label}
+                    </div>
+                    <div style="font-size: ${fontSize}; font-weight: bold; color: #d97a1e; word-break: break-word;">
+                        ${exibicaoValor}
+                    </div>
+                </div>
+            `;
+        }).join('')}
+    </div>
+
+<div style="
+        margin-top: 15px; 
+        border: 2px solid ${vCorPlanoDominante}; 
+        background: ${vCorPlanoDominante}15; /* O '15' no final deixa a cor bem clarinha no fundo */
+        padding: 10px; 
+        text-align: center; 
+        border-radius: 8px;
+        flex-shrink: 0;
+    ">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 11px; color: ${vCorPlanoDominante}; letter-spacing: 2px;">
+            Plano de Expressão Dominante
+        </span>
+        <div style="
+            font-size: 38px; 
+            font-weight: bold; 
+            color: ${vCorPlanoDominante}; /* O nome do plano agora assume a cor dele */
+            line-height: 1.2; 
+            text-transform: uppercase;
+            text-shadow: 1px 1px 0px rgba(255,255,255,0.5);
+        ">
+            ${vPlanoDominanteNome}
+        </div>
+    </div>
+</div>`;
+    
     
 html += `
     <div class="capa-transicao">
