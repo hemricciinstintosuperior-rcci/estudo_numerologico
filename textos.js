@@ -1475,7 +1475,7 @@ momentos: {
 }
  }, 
 
-Desafios: {
+desafios: {
   // --- 1º DESAFIO (FASE INICIAL / JUVENTUDE) ---
   1: {
     0: `<h3>O Desafio da Escolha na Juventude - 0</h3>
@@ -2026,7 +2026,7 @@ talentosEspeciais: {
     <p>A deficiência, contudo, pode levá-lo(a) a um papel de sacrifício excessivo e perigoso, onde você acaba esquecendo das suas próprias necessidades básicas para carregar a dor do mundo nas costas. Existe uma tendência a se envolver em dramas alheios de forma desproporcional, o que gera um desgaste emocional e físico que acaba impedindo a manifestação do seu potencial de forma saudável. <strong>MASCULINO-FEMININO-NEUTRO</strong>, lembre-se de que para ajudar o mundo, você precisa estar inteiro(a). Aprenda a ser generoso(a) consigo mesmo(a) na mesma medida em que é com os outros, transformando seu altruísmo em uma força sustentável e equilibrada.</p>`
 },
 
-DesejoOculto: {
+desejoOculto: {
  
     1: `<h3>Impulso de Liderança e Desafio do Egocentrismo - 1</h3>
     <p>No âmago do seu ser, você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, carrega uma vibração que impulsiona fortemente para a liderança absoluta e para o pioneirismo radical. Esse acúmulo numérico gera em sua alma um desejo ardente de ser a primeira pessoa em tudo e de alcançar o topo por mérito próprio, buscando incessantemente o reconhecimento pela sua individualidade única e por sua capacidade inquestionável de comando.</p>
@@ -2066,7 +2066,7 @@ DesejoOculto: {
 
 },
  
-Deficits: {
+deficits: {
     1: `<h3>Egoísmo - Déficit de Comportamento 1</h3>
         <p>Este déficit, <strong>MASCULINO-FEMININO-NEUTRO</strong>, está profundamente ligado ao princípio universal de causa e efeito: tudo o que se manifesta hoje em sua jornada é o eco de escolhas passadas. Em algum ponto da sua trajetória de alma, você pode ter agido com intolerância, tentando impor sua vontade a qualquer custo para benefício próprio. É vital compreender que a vida é um espelho reativo; se houve injustiça no passado, o presente exigirá que você confronte essas sombras e assuma sua responsabilidade.</p>
         <p><strong>Influência:</strong> Você poderá ser exposto(a) a situações de grande desgaste emocional, onde sua autoconfiança será testada ao limite. <strong>MASCULINO-FEMININO-NEUTRO</strong>, prepare-se para lidar com pessoas falsas ou injustas, pois elas são o reflexo da energia que você precisa transmutar. Para evitar sofrimentos inúteis, seja o(a) primeiro(a) a praticar a justiça e a tolerância absoluta. O segredo da sua cura é a construção de uma imagem verdadeira e transparente, banindo qualquer artifício de falsidade do seu caminho profissional ou pessoal. Ao dominar seus impulsos e agir com retidão, você limpa esse registro e abre as portas para uma prosperidade legítima e duradoura.</p>`,
@@ -2103,7 +2103,7 @@ Deficits: {
         <p>Em algum momento, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a arrogância de se sentir superior aos demais levou você a ofender ou humilhar aqueles que considerava "inferiores". Esse idealismo distorcido e a dureza de coração podem ter gerado um comportamento vingativo contra quem ousasse desafiar sua vontade. Este déficit é uma convocação direta para a prática da humildade e do altruísmo universal.</p>
         <p><strong>Influência:</strong> Prepare-se para enfrentar perdas afetivas ou materiais que parecerão injustas, mas que servem para esvaziar seu ego e preencher sua alma com humanidade. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o sentimento de vazio interior só será curado quando você começar a compartilhar suas conquistas e a beneficiar genuinamente quem cruza seu caminho. Seja solidário(a), compreensivo(a) e aja com uma justiça que acolhe. Ao transformar a vaidade em serviço humanitário, você transmuta sua dívida em luz e se torna um canal de sabedoria e paz para o mundo inteiro.</p>`
 },
-Inclinacoes: {
+inclinacoes: {
     1: `<h3>Controlador e Individualista - Inclinação Oculta 1</h3>
         <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, manifesta uma autoconfiança inabalável e uma busca incessante pela perfeição, alimentada por um espírito competitivo que o(a) impele a liderar em todas as esferas. Essa força motriz, contudo, é uma faca de dois gumes: se não for vigiada, pode transparecer como uma tendência à manipulação sutil para atingir objetivos específicos, colocando seus interesses acima do bem-estar coletivo.</p>
         <p>Há um risco latente de você se inclinar ao individualismo radical e ao egocentrismo, permitindo que atitudes prepotentes ou autoritárias dominem suas relações profissionais e pessoais. Quando essa energia entra em desequilíbrio, você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pode parecer arrogante e pouco permeável a novas ideias, dificultando a colaboração e a empatia necessárias para grandes feitos. Seu desafio é entender que a verdadeira liderança não precisa sufocar os outros para brilhar; aprenda a delegar e a valorizar o gênio alheio tanto quanto o seu.</p>`,
@@ -2141,7 +2141,7 @@ Inclinacoes: {
         <p>Essa inclinação revela uma carência afetiva latente, que se manifesta na busca incessante por aprovação e reconhecimento através da utilidade. O desafio para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é equilibrar a doação ao mundo com o autorespeito radical. Não se torne um(a) mártir das necessidades alheias apenas para se sentir amado(a). A verdadeira compaixão começa em casa: aprenda a nutrir a si mesmo(a) com a mesma intensidade que dedica aos outros.</p>`
     },
         
-Subconsciente: {
+subconsciente: {
        1: `<h3>Reação Fraca e Dispersa - Subconsciente 1</h3>
         <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, possui certa dificuldade em antecipar crises inesperadas, e sua percepção instintiva pode falhar ao identificar a real gravidade de eventos imprevistos. Isso resulta em uma reação inicial dispersa e em uma nítida falta de iniciativa, deixando-o(a) momentaneamente impotente, confuso(a) e sem uma direção clara para onde seguir.</p>
         <p>Embora possua uma resistência vital impressionante, você tem um limite crítico de tolerância. Quando este ponto é atingido, sua postura muda drasticamente para um estado combativo e autoritário. Nesse estágio, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você se torna defensivo(a) e excessivamente crítico(a), passando a enxergar ameaças em todos os lugares, o que dificulta o recebimento de ajuda externa e retarda severamente sua recuperação emocional. Sua lição é aprender a agir com prontidão sem entrar em modo de guerra.</p>`,
@@ -2178,7 +2178,7 @@ Subconsciente: {
         <p>Embora você seja um(a) grande estrategista na teoria, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você enfrenta dificuldades monumentais em administrar crises emocionais imediatas. Sua primeira reação automática tende a ser a apatia ou o afastamento egoísta, agindo com uma indiferença que pode ser dolorosa para quem espera seu apoio em momentos críticos.</p>
         <p>Ao se sentir ameaçado(a) ou injustiçado(a) em meio ao caos, seu lado mais sombrio emerge: você pode se tornar implacável e malicioso(a). Dificilmente perdoa ofensas reais ou imaginárias e pode dedicar uma energia preciosa a planos de retaliação em vez de focar na resolução do problema. <strong>MASCULINO-FEMININO-NEUTRO</strong>, sua tendência a se fechar em seu próprio mundo interno o(a) torna uma figura pouco confiável para o grupo em emergências. Sua meta é transformar essa apatia em compaixão ativa, agindo pelo bem comum mesmo quando sua alma quer fugir.</p>`
 },
-Talento: {     
+talento: {     
     
      1: `<h3>Liderança Pioneira e Iniciativa Independente - Talento 1</h3>
     <p>O talento oculto de você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, reside na capacidade inata de abrir caminhos onde outros veem apenas obstáculos intransponíveis. Existe uma facilidade natural para tomar decisões rápidas sob pressão e assumir o comando de situações complexas sem qualquer hesitação. Você possui a habilidade rara de criar soluções originais e agir com um pioneirismo que inspira confiança imediata, transformando ideias abstratas em ações concretas com uma coragem que muitas vezes ocorre de forma silenciosa e instintiva em seu cotidiano.</p>
@@ -2220,7 +2220,7 @@ Talento: {
     },
 
 
-Essencia: {
+essencia: {
     1: `<h3>Reação de Liderança e Controle - Essência 1</h3>
     <p>A reação interna primária de você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é marcada por um impulso avassalador de autonomia, coragem e autoconfiança. Diante do inesperado, o desejo de assumir as rédeas do destino surge de forma quase instantânea em seu íntimo, impulsionando ações rápidas, decididas e originais para solucionar qualquer impasse com total independência e vigor.</p>
     <p>O grande desafio para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, está em não permitir que essa força bruta se transforme em uma postura autoritária ou impaciente no calor do momento. A verdadeira maestria da sua alma acontece quando você equilibra o entusiasmo do começo com uma escuta atenta aos detalhes. Ao fazer isso, você transforma a impulsividade inicial em uma autoridade natural, respeitada e estrategicamente eficiente, capaz de fundar novos impérios.</p>`,
@@ -2268,7 +2268,7 @@ Essencia: {
 },
 
 
-Equilibrio: {
+equilibrio: {
 
     1: `<h3>Autonomia e Persistência na Conclusão - Equilíbrio 1</h3>
     <p>A força de você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, reside na autonomia radical e no pioneirismo. Sua vibração inicial impele você a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades que surgem em sua jornada.</p>
