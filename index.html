@@ -1948,8 +1948,8 @@ let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== n
 
 
 // 1. Cálculos do Plano e Perfil (Corrigido para não dar erro de 'not defined')
-const dadosPlanosResumo = calcularDadosPlanos(nome.value || nome);
-const perfilChave = dadosPlanosResumo.dominantePerfil; // Ex: "criativo"
+const dadosPlanos = calcularDadosPlanos(nome.value || nome); // Mudei para 'dadosPlanos'
+const perfilChave = dadosPlanos.dominantePerfil; 
 
 // Objeto com os nomes traduzidos para exibição
 const vPerfilNomes = {
@@ -2329,27 +2329,18 @@ html += `
 <div style="display: flex; align-items: stretch; gap: 15px; margin-top: 15px; flex-shrink: 0;">
     
     <div style="flex: 1.2; background: #F2F2F2; padding: 15px; border-radius: 8px; border: 1px solid #ddd; display: flex; align-items: center; gap: 15px;">
+        <div style="background: ${vCorDoPerfilAtivo}; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; flex-shrink: 0;">
+            ${valorPerfilNativoTexto.charAt(0)}
+        </div>
         
-        ${(() => {
-            const p = (dadosPlanos.dominantePerfil || "").toLowerCase();
-            const cor = (p === 'criativo') ? "#d97a1e" : (p === 'indeciso') ? "#e74c3c" : "#7f8c8d";
-            const letra = p.charAt(0).toUpperCase() || "?";
-            const nomeExibicao = (p === 'criativo') ? "Criativa" : (p === 'indeciso') ? "Indecisa" : "Neutra";
-
-            return `
-                <div style="background: ${cor}; color: #fff; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                    ${letra}
-                </div>
-                <div style="text-align: left;">
-                    <span style="font-size: 11px; text-transform: uppercase; color: #000; font-weight: bold; letter-spacing: 1px;">
-                        É uma pessoa naturalmente
-                    </span>
-                    <div style="font-size: 22px; font-weight: bold; color: ${cor}; margin-top: 2px;">
-                        ${nomeExibicao}
-                    </div>
-                </div>
-            `;
-        })()}
+        <div style="text-align: left;">
+            <span style="font-size: 11px; text-transform: uppercase; color: #000; font-weight: bold; letter-spacing: 1px;">
+                É uma pessoa naturalmente
+            </span>
+            <div style="font-size: 22px; font-weight: bold; color: ${vCorDoPerfilAtivo}; margin-top: 2px;">
+                ${valorPerfilNativoTexto}
+            </div>
+        </div>
     </div>
 
     <div style="flex: 1; background: #F2F2F2; padding: 15px; border-radius: 8px; border: 2px solid #3498db; text-align: center; display: flex; flex-direction: column; justify-content: center;">
