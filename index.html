@@ -1944,7 +1944,16 @@ const vTrânsitoFinal = reduzirPuro(somaTransitoFisico); // Simplificado para o 
 let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filter(x => x).join(" · ") || "--";
 let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
 let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
+// Executa o cálculo dos planos para obter o Perfil Nativo
+const dadosPlanos = calcularDadosPlanos(nome); 
+const vPerfilNativo = dadosPlanos.dominantePerfil; // Ex: "criativo", "indeciso" ou "neutro"
 
+// Mapeamento para exibição bonita no label
+const nomesPerfil = { 
+    criativo: "Criativo", 
+    indeciso: "Indeciso", 
+    neutro: "Neutro" 
+};
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
 const anoNasc = ano; // Variável 'ano' que vem do split da data
@@ -2171,27 +2180,50 @@ html += `
 
 const listaItensSintese = [
     { label: "Dia Natalicio", valor: res.dia },
+    
     { label: "Essência", valor: res.essencia },
+    
     { label: "Motivação", valor: res.motivacao },
+    
     { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
+    
     { label: "Influência", valor: res.influencia },
+    
     { label: "Personalidade", valor: res.Personalidade },
+    
     { label: "Comportamento", valor: res.comportamento },
+    
     { label: "Relacionamento", valor: res.Relacionamento },
+    
     { label: "Talento Oculto", valor: res.talento },
+    
     { label: "Equilíbrio", valor: res.equilibrio },
+    
     { label: "Inclinações Ocultas", valor: res.inclinacoes },
+    
     { label: "Subconsciente", valor: res.subconsciente },
+    
     { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
+    
     { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
+    
     { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
+    
     { label: "Caminho de Vida", valor: res.CaminhodeVida },
+    
     { label: "Propósito", valor: res.Propósito },
+    
     { label: "Maturidade", valor: res.Maturidade },
-    { label: "Ano Pessoal", valor: res.anoPessoal },
+    
     { label: "Ciclos da Vida", valor: res.ciclos },
+    
     { label: "Desafios", valor: res.desafios },
+    
     { label: "Momentos de Decisão", valor: res.momentos },
+     { label: "Perfil Nativo", valor: nomesPerfil[vPerfilNativo] || "Não definido" },
+    
+    { label: "Ano Pessoal", valor: res.anoPessoal },
+    
     { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
 
 ];
@@ -2204,7 +2236,7 @@ html += `
     page-break-after: always; 
     page-break-before: always; 
     page-break-inside: avoid; 
-    background: #D9D9D9; 
+    background: #EDEDED; 
     padding: 15mm; 
     box-sizing: border-box; 
     border: 4px double #d97a1e; 
@@ -2248,7 +2280,7 @@ html += `
                 <div style="
                     border: 1px solid #eee; 
                     border-top: 3px solid #d97a1e; 
-                    background: #D9D9D9; 
+                    background: #EDEDED; 
                     padding: 8px 4px; 
                     text-align: center; 
                     border-radius: 4px;
