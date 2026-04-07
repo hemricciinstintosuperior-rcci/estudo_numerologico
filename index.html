@@ -788,8 +788,8 @@ function aplicarFiltroTexto(texto) {
     if (!texto || typeof texto !== 'string') {
         return ""; 
     }
-    let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "fulane";
-    return texto.replace(/fulane/gi, `<strong>${pNome}</strong>`).replace(/fulane/gi, `<strong>${pNome}</strong>`);
+    let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "MASCULINO-FEMININO-NEUTRO";
+    return texto.replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`).replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`);
 }
 
 
