@@ -788,8 +788,8 @@ function aplicarFiltroTexto(texto) {
     if (!texto || typeof texto !== 'string') {
         return ""; 
     }
-    let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "você";
-    return texto.replace(/você/gi, `<strong>${pNome}</strong>`).replace(/voce/gi, `<strong>${pNome}</strong>`);
+    let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "fulane";
+    return texto.replace(/fulane/gi, `<strong>${pNome}</strong>`).replace(/fulane/gi, `<strong>${pNome}</strong>`);
 }
 
 
