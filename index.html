@@ -8,11 +8,19 @@
         :root { --gold: #d97a1e; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
         
 @media print {
-
     @page {
-        size: A4;
-        margin: 0 ; /* equilíbrio perfeito PDF + impressão */
+        /* Mantém suas laterais de 2mm e protege Topo/Base com 25mm */
+        margin: 25mm 2mm 25mm 2mm !important;
     }
+
+    /* Esta classe impede que qualquer bloco dentro dela seja cortado ao meio */
+    .evitar-corte {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        display: block;
+        width: 100%;
+    }
+}
 
     body {
         background: white !important;
@@ -1519,6 +1527,10 @@ margin-top: 10px;">
 let vFinalNatural = reduzirPuro(dados.soma[p]);
 const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][int][vFinalNatural] : "";
         if(textoIndiv) {
+
+
+           // Localize o início da montagem do HTML na função e adicione esta linha:
+html += `<div class="evitar-corte">`; 
             html += `
                 <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
                     <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:18px;">${nomesAmigaveis[p]} <small>(${int})</small></h4>
@@ -1527,6 +1539,7 @@ const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][i
             `;
         }
     }
+    html += `</div>`; 
 
     // Síntese e Diretriz (Caixa Preta)
     html += `
