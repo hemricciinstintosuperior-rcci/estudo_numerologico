@@ -302,7 +302,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
 RegenteVida: {
  1:` <h3>🔱  Regente  N° 1</h3> 
 <h3>Iniciativa, Autonomia e Caminho Individual.</h3> 
-<p>Para você, o Regente 1 da Vida representa a força que impulsiona a construção da própria identidade e o desenvolvimento da independência. Essa vibração indica uma trajetória marcada pela iniciativa, pela coragem de tomar decisões e pela capacidade de abrir caminhos novos ao longo da existência.</p> 
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 1 da Vida representa a força que impulsiona a construção da própria identidade e o desenvolvimento da independência. Essa vibração indica uma trajetória marcada pela iniciativa, pela coragem de tomar decisões e pela capacidade de abrir caminhos novos ao longo da existência.</p> 
 <p>A presença do Regente 1 revela natureza ativa, espírito de liderança e desejo profundo de conquistar espaço próprio no mundo. Ao longo da vida você tende a desenvolver autonomia, aprendendo através das experiências a confiar na própria capacidade de agir, decidir e conduzir o próprio destino.</p> 
 <p>No aspecto positivo manifesta liderança, coragem, criatividade, iniciativa e capacidade de abrir novos caminhos.</p> 
 <p>No aspecto negativo pode gerar arrogância, impulsividade, individualismo excessivo ou conflitos provocados pelo desejo de dominar situações.</p> 
@@ -311,7 +311,7 @@ RegenteVida: {
 
 2:`<h3>🔱  Regente  N° 2</h3> 
 <h3>Sensibilidade, Dualidade e Consciência das Relações</h3> 
-<p>Para você, o Regente 2 da Vida representa a vibração da sensibilidade, da percepção intuitiva e da busca constante por equilíbrio nas relações humanas. Essa regência indica uma trajetória marcada pelo desenvolvimento da empatia, da cooperação e da compreensão emocional.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 2 da Vida representa a vibração da sensibilidade, da percepção intuitiva e da busca constante por equilíbrio nas relações humanas. Essa regência indica uma trajetória marcada pelo desenvolvimento da empatia, da cooperação e da compreensão emocional.</p>
 <p>A presença do Regente 2 revela natureza sensível e observadora. Ao longo da vida você tende a perceber com facilidade os sentimentos das pessoas e os movimentos sutis das situações. Muitas experiências surgem para ensinar equilíbrio entre razão e emoção.</p>
 <p>No aspecto positivo manifesta empatia, diplomacia, cooperação e grande percepção emocional.</p>
 <p>No aspecto negativo pode gerar insegurança, dependência emocional ou tendência a viver preso às expectativas dos outros.</p>
@@ -319,15 +319,15 @@ RegenteVida: {
 
 3:`<h3>🔱  Regente  N° 3</h3> 
 <h3> Criatividade, Expressão e Expansão da Consciência </h3> 
-<p>Para você, o Regente 3 da Vida representa a vibração da criatividade, da comunicação e da expressão dos talentos naturais. Essa regência indica uma trajetória marcada pela busca de experiências que estimulem o pensamento, a imaginação e o contato com diferentes ambientes.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 3 da Vida representa a vibração da criatividade, da comunicação e da expressão dos talentos naturais. Essa regência indica uma trajetória marcada pela busca de experiências que estimulem o pensamento, a imaginação e o contato com diferentes ambientes.</p>
 <p>A presença do Regente 3 revela mente ativa, espírito curioso e grande capacidade de expressão. Ao longo da vida você tende a desenvolver habilidades relacionadas à comunicação, às artes ou à transmissão de ideias.</p>
 <p>No aspecto positivo manifesta criatividade, entusiasmo, sociabilidade e talento para comunicação.</p>
 <p>No aspecto negativo pode gerar dispersão, instabilidade emocional ou tendência a prometer mais do que consegue realizar.</p>
 <p>O aprendizado do Regente 3 da Vida consiste em transformar criatividade em realização concreta.</p>`,
 
-4:`<h3>🔱  Regente da Piramide N° 4</h3> 
+4:`<h3>🔱  Regente  N° 4</h3> 
 <h3> Estrutura, Disciplina e Construção da Vida </h3> 
-<p>Para você, o Regente 4 da Vida representa a vibração da estabilidade, da organização e do esforço constante para construir bases sólidas. Essa regência indica uma trajetória marcada pelo trabalho persistente e pela necessidade de criar segurança material e emocional.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 4 da Vida representa a vibração da estabilidade, da organização e do esforço constante para construir bases sólidas. Essa regência indica uma trajetória marcada pelo trabalho persistente e pela necessidade de criar segurança material e emocional.</p>
 <p>A presença do Regente 4 revela natureza responsável, disciplinada e prática. Ao longo da vida você tende a desenvolver habilidades relacionadas à organização, à estrutura e ao planejamento.</p>
 <p>No aspecto positivo manifesta disciplina, responsabilidade e capacidade de construir estabilidade duradoura.</p>
 <p>No aspecto negativo pode gerar rigidez, teimosia ou excesso de preocupação material.</p>
@@ -335,7 +335,7 @@ RegenteVida: {
 
 5:`<h3>🔱  Regente  N° 5</h3> 
 <h3> Movimento, Experiência e Liberdade </h3> 
-<p>Para você, o Regente 5 da Vida representa a vibração da mudança, da curiosidade e da busca por experiências variadas. Essa regência indica uma trajetória marcada pelo aprendizado através do movimento e da adaptação às circunstâncias.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 5 da Vida representa a vibração da mudança, da curiosidade e da busca por experiências variadas. Essa regência indica uma trajetória marcada pelo aprendizado através do movimento e da adaptação às circunstâncias.</p>
 <p>A presença do Regente 5 revela natureza inquieta e mente aberta para novas possibilidades. Ao longo da vida você tende a buscar conhecimento através da experiência direta.</p>
 <p>No aspecto positivo manifesta versatilidade, inteligência e grande capacidade de adaptação.</p>
 <p>No aspecto negativo pode gerar instabilidade, impulsividade ou dificuldade em manter constância.</p>
@@ -343,7 +343,7 @@ RegenteVida: {
 
 6:`<h3>🔱  Regente  N° 6</h3> 
 <h3>Amor, Harmonia e Responsabilidade Afetiva </h3>
-<p>Para você, o Regente 6 da Vida representa a vibração do amor, da família e da responsabilidade emocional. Essa regência indica uma trajetória marcada por experiências relacionadas ao cuidado, à proteção e ao desenvolvimento das relações afetivas.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 6 da Vida representa a vibração do amor, da família e da responsabilidade emocional. Essa regência indica uma trajetória marcada por experiências relacionadas ao cuidado, à proteção e ao desenvolvimento das relações afetivas.</p>
 <p>A presença do Regente 6 revela natureza sensível e desejo de construir harmonia nas relações.</p>
 <p>No aspecto positivo manifesta amor, generosidade e capacidade de harmonizar ambientes.</p>
 <p>No aspecto negativo pode gerar ciúme, dependência emocional ou excesso de preocupação com os outros.</p>
@@ -351,7 +351,7 @@ RegenteVida: {
 
 7:`<h3>🔱  Regente  N° 7</h3> 
 <h3>Busca de Conhecimento e Evolução Interior </h3>
-<p>Para você, o Regente 7 da Vida representa a vibração da introspecção, da investigação e da busca por sabedoria. Essa regência indica uma trajetória marcada pelo desenvolvimento intelectual e espiritual.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 7 da Vida representa a vibração da introspecção, da investigação e da busca por sabedoria. Essa regência indica uma trajetória marcada pelo desenvolvimento intelectual e espiritual.</p>
 <p>A presença do Regente 7 revela mente analítica e necessidade de compreender profundamente os mistérios da vida.</p>
 <p>No aspecto positivo manifesta sabedoria, intuição e grande capacidade de análise.</p>
 <p>No aspecto negativo pode gerar isolamento, excesso de introspecção ou dificuldade de convivência social.</p>
@@ -359,14 +359,14 @@ RegenteVida: {
 
 8:`<h3>🔱  Regente  N° 8</h3> 
 <h3>Poder, Justiça e Responsabilidade Material</h3> 
-<p>Para você, o Regente 8 da Vida representa a vibração do poder, da organização e da lei de causa e efeito. Essa regência indica uma trajetória marcada por experiências relacionadas à liderança, à administração e ao equilíbrio entre conquistas materiais e valores morais.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 8 da Vida representa a vibração do poder, da organização e da lei de causa e efeito. Essa regência indica uma trajetória marcada por experiências relacionadas à liderança, à administração e ao equilíbrio entre conquistas materiais e valores morais.</p>
 <p>No aspecto positivo manifesta liderança equilibrada, disciplina e senso de justiça.</p>
 <p>No aspecto negativo pode gerar autoritarismo, materialismo excessivo ou abuso de poder.</p>
 <p>O aprendizado do Regente 8 da Vida consiste em utilizar o poder com responsabilidade.</p>`,
 
 9:`<h3>🔱  Regente  N° 9</h3> 
 <h3> Sabedoria, Conclusões e Consciência Universal</h3>  
-<p>Para você, o Regente 9 da Vida representa a vibração da experiência acumulada, da maturidade espiritual e da compreensão profunda da existência.</p>
+<p>Para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o Regente 9 da Vida representa a vibração da experiência acumulada, da maturidade espiritual e da compreensão profunda da existência.</p>
 <p>Essa regência indica uma trajetória marcada por aprendizados intensos e momentos de reflexão que conduzem ao desenvolvimento da sabedoria.</p>
 <p>No aspecto positivo manifesta sabedoria, generosidade e compaixão.</p>
 <p>No aspecto negativo pode gerar isolamento, pessimismo ou dificuldade em desapegar do passado.</p>
