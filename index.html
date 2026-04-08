@@ -1922,7 +1922,7 @@ const talentoNumEspecial = calcularTalentoEspecial(nomeParaTalento);
 // --- CÁLCULO DO PLANO DOMINANTE PARA O PAINEL ---
 // --- SEU BLOCO DE CÁLCULO ATUALIZADO COM CORES ---
 const dadosPlanosParaPainel = calcularDadosPlanos(nomeRaw);
-const nomesAmigaveisPlanos = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
+const nomesAmigaveisPlanos = { fisico: "Físico-Concreto", mental: "Mental-Racional", emocional: "Emocional", intuitivo: "Intuitivo-Percepção" };
 
 // Mapa de cores seguindo o padrão do seu relatório
 const coresPlanosDinamicas = {
@@ -1969,8 +1969,8 @@ const perfilChave = dadosPlanos.dominantePerfil;
 // Objeto com os nomes traduzidos para exibição
 const vPerfilNomes = {
     criativo: "Criativa",
-    indeciso: "Indecisa",
-    neutro: "Neutra"
+    indeciso: "Indecisa-Confusa",
+    neutro: "Neutra-Equilibrada"
 };
 
 // Configuração Visual do Perfil (Cores e Textos)
