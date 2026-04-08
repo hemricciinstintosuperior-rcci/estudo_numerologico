@@ -1681,7 +1681,8 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             </div>
 
             <div style="margin: 25px 0; background: #fff; padding: 20px; border-radius: 8px;">`;
-html += `<div class="evitar-corte">`; 
+        
+h += `<div class="evitar-corte">`; 
    // Gráficos (ESTILO LUXO DEGRADÊ - MOMENTO)
 // Gráficos (TEXTO FIXO NO CENTRO - MOMENTO)
         for(let p in somaMomento) {
@@ -1711,7 +1712,7 @@ margin-top: 10px;">
                 </div>`;
         }
         h += `</div>`;
-html += `</div>`; 
+h += `</div>`; 
         for(let p in somaMomento) {
             let r = somaMomento[p] / ref;
             let int = (r > 0.75) ? "forte" : (r >= 0.50) ? "medio" : "fraco";
