@@ -7,27 +7,19 @@
 <style>
         :root { --gold: #d97a1e; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
 
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0 ; /* equilíbrio perfeito PDF + impressão */
+    }
+
     body {
         background: white !important;
         color: #1a1a1a !important;
         margin: 0;
         padding: 0;
     }
-    
-@media print {
-    @page {
-        size: A4;
-        margin: 0 ; /* equilíbrio perfeito PDF + impressão */
-    }
-
-    /* Esta classe impede que qualquer bloco dentro dela seja cortado ao meio */
-    .evitar-corte {
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
-        display: block;
-        width: 100%;
-    }
-}
 
 
 
@@ -84,7 +76,7 @@
         print-color-adjust: exact !important;
     }
 
-
+ }
 
     
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #A38A2A; margin: 0; padding: 0; display: block;}
