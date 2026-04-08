@@ -284,7 +284,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
 
 <p>No âmbito da Numerologia Cabalística, o resgate técnico para o alfabeto latino deve-se muito ao trabalho de Walter Gorn Old, conhecido como Sepharial. No final do século XIX, ele foi o responsável por adaptar a Gematria (o sistema numérico hebraico) para as necessidades do homem ocidental. Esse esforço foi ampliado por ordens herméticas como a Golden Dawn, que integraram a Árvore da Vida e os 22 Arcanos ao sistema de letras, criando a base estrutural que utilizamos hoje nos relatórios cabalísticos.</p>
 
-<p>Atualmente, o fundamento da numerologia reside na compreensão de que o universo é regido por leis matemáticas. Ao contrário de uma abordagem puramente esotérica, a numerologia técnica do século XXI funciona como uma neuroanálise dos ciclos de vida. Ela oferece ao cliente uma base factual sobre suas tendências comportamentais e períodos de realização, servindo como uma ferramenta estratégica para o autoconhecimento e a tomada de decisões no mundo moderno.</p>`,
+<p>Atualmente, o fundamento da numerologia reside na compreensão de que o universo é regido por leis matemáticas. Ao contrário de uma abordagem puramente esotérica, a numerologia técnica do século XXI funciona como uma neuroanálise dos ciclos de vida. Ela oferece a você uma base factual sobre suas tendências comportamentais e períodos de realização, servindo como uma ferramenta estratégica para o autoconhecimento e a tomada de decisões no mundo moderno.</p>`,
         
     conclusaoEvolutiva: `   
     
