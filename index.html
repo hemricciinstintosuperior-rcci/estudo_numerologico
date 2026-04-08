@@ -1500,7 +1500,7 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
 
             <div style="margin: 25px 0; background: #fff; padding: 20px; border-radius: 8px;">
     `;
-
+html += `<div class="evitar-corte">`; 
     // Gráficos
 // Gráficos (TEXTO FIXO NO CENTRO - NATURAL)
     for(let p in dados.soma) {
@@ -1513,7 +1513,7 @@ let valorReduzido = reduzirPuro(dados.soma[p]);
             emocional: 'linear-gradient(to right, #2ecc71, #0a3d1d)',
             intuitivo: 'linear-gradient(to right, #f1c40f, #b8860b)'
         };
-html += `<div class="evitar-corte">`; 
+
         const fundoBarra = degradês[p] || 'linear-gradient(to right, #ccc, #666)';
            // Localize o início da montagem do HTML na função e adicione esta linha:
 
