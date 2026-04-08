@@ -792,7 +792,22 @@ function aplicarFiltroTexto(texto) {
     return texto.replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`).replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`);
 }
 
+function aplicarFiltroNomeComposto(texto) {
+    // Se o texto não existir, for nulo ou não for uma string, retorna vazio
+    if (!texto || typeof texto !== 'string') {
+        return ""; 
+    }
 
+    // Pega o valor do input, remove espaços inúteis e divide por espaços
+    let partesNome = document.getElementById("nome").value.trim().split(/\s+/);
+    
+    // Pega os dois primeiros elementos e junta com um espaço
+    // Se só houver um nome, o join lidará com isso graciosamente
+    let pNome = partesNome.slice(0, 2).join(' ') || "MASCULINO-FEMININO-NEUTRO";
+
+    // Retorna o texto substituindo a tag pelo nome em negrito
+    return texto.replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`);
+}
         
 // Função para calcular o Desejo Oculto usando a SUA 'tabela' Cabalística
 function calcularDesejoOculto(nome) {
@@ -3184,7 +3199,7 @@ html += `
         <h2 class="titulo-topico mostrar-titulo" style="letter-spacing: 5px; color: #827108; margin-bottom: 30px;"> Agradecimento </h2>
         
         <div class="texto-res" style="font-size: 20px; line-height: 2; color: #333; max-width: 90%; margin: 0 auto;">
-            ${aplicarFiltroTexto(textos.introducoes.Conclusao)}
+            ${aplicarFiltroNomeComposto(textos.introducoes.Conclusao)}
         </div>
 
         <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
