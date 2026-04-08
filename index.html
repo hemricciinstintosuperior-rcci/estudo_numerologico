@@ -1515,7 +1515,8 @@ let valorReduzido = reduzirPuro(dados.soma[p]);
         };
 
         const fundoBarra = degradês[p] || 'linear-gradient(to right, #ccc, #666)';
-
+           // Localize o início da montagem do HTML na função e adicione esta linha:
+html += `<div class="evitar-corte">`; 
         html += `
            
             <div style="margin: 0 auto 20px auto; width: 85%;  background: #eee; border-radius: 8px; height: 42px; position: relative; overflow: hidden; box-shadow: inset 0 2px 4px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center;break-inside: avoid; 
@@ -1536,6 +1537,9 @@ margin-top: 10px;">
 
     html += `</div>`;
 
+    
+ html += `</div>`; 
+    
     // Textos Interpretativos
     for(let p in dados.soma) {
         let r = dados.soma[p] / ref;
@@ -1546,8 +1550,7 @@ const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][i
         if(textoIndiv) {
 
 
-           // Localize o início da montagem do HTML na função e adicione esta linha:
-html += `<div class="evitar-corte">`; 
+
             html += `
                 <div style="margin-bottom: 20px; border-left: 4px solid ${coresPlanos[p]}; padding-left: 15px;">
                     <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:18px;">${nomesAmigaveis[p]} <small>(${int})</small></h4>
@@ -1556,7 +1559,7 @@ html += `<div class="evitar-corte">`;
             `;
         }
     }
-    html += `</div>`; 
+   
 
     // Síntese e Diretriz (Caixa Preta)
     html += `
