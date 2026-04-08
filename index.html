@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instinto Superior - Numerologia Premium</title>
 <style>
+* {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+    
         :root { --gold: #d97a1e; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
 
 @media print {
@@ -22,6 +28,13 @@
         width: 100%;
     }
 
+       /* Impede que o navegador tente "ajustar à página" e acabe diminuindo o zoom */
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+} 
+
     body {
         background: white !important;
         color: #1a1a1a !important;
@@ -35,13 +48,13 @@
         display: none !important;
     }
 
-    .relatorio-premium {
-        width: 130% !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-        background: white !important;
-    }
+.relatorio-premium {
+    width: 210mm !important;
+    max-width: 210mm !important;
+    margin: 0 auto !important;
+    overflow: visible !important; /* Fundamental para não criar barras de rolagem internas */
+    background: #fff;
+}
 
     /* 🔥 CORREÇÃO PRINCIPAL */
     .page {
@@ -155,7 +168,14 @@
     padding-top: 5px !important;
 }
     
-        .secao-card { background: var(--card-bg); color: var(--text); padding: 25px; border-radius: 4px; margin-bottom: 30px;  border: 1px solid transparent !important;  box-shadow: 0 5px 20px rgba(0,0,0,0.3); }
+.secao-card {
+    width: 100% !important; /* Força a ocupar toda a largura da folha */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    /* Use padding para o texto não colar na borda, em vez de margin lateral */
+    padding: 20px 15px !important; 
+    position: relative;
+}
         .titulo-topico {   text-align: center; font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
         .intro-texto { font-style: arial; color: #333; font-size: 24px; margin-bottom: 5px; white-space: pre-line; border-bottom: 1px solid #BDBDBD; padding-bottom: 15px; }
         .texto-res { line-height: 1.6; font-size: 20px; white-space: pre-line; }
