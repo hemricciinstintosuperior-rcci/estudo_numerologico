@@ -271,6 +271,20 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
 
  Transito: "A Vibração de Trânsito é o 'clima numérico' que rege o seu ano pessoal. Ela define a tônica das oportunidades e os aprendizados específicos que cruzarão o seu caminho nos próximos 12 meses, permitindo um planejamento mais assertivo."
    ,
+
+
+
+ historiaModerna: `   
+
+<p>Embora a conexão entre números e o universo remonte a civilizações antigas, como a Caldeia e o Egito, a numerologia que praticamos no século XXI é fruto de uma sistematização técnica ocorrida nos últimos 150 anos. O fundamento factual dessa estrutura reside na transição do misticismo abstrato para um método de análise de dados de personalidade, onde nomes e datas são convertidos em frequências matemáticas precisas.</p>
+
+<p>A grande virada para a modernidade aconteceu no início do século XX com a americana L. Dow Balliett. Ela é considerada a fundadora da numerologia moderna por ter sido a primeira a organizar o conceito de que cada número possui uma vibração específica que influencia o comportamento humano. Balliett publicou obras fundamentais que estabeleceram a base para o que hoje chamamos de sistema pitagórico ocidental, transformando a filosofia de Pitágoras em um sistema aplicável ao cotidiano.</p>
+
+<p>Posteriormente, a Dra. Juno Jordan, discípula de Balliett, deu o rigor metodológico que a área exigia. Ao fundar o California Institute of Numerical Research, Jordan dedicou décadas ao estudo estatístico e à validação dos perfis numerológicos. Seu trabalho foi essencial para que a numerologia deixasse de ser vista apenas como uma superstição e passasse a ser compreendida como uma ciência de padrões, permitindo a criação de diagnósticos precisos sobre o destino e a personalidade.</p>
+
+<p>No âmbito da Numerologia Cabalística, o resgate técnico para o alfabeto latino deve-se muito ao trabalho de Walter Gorn Old, conhecido como Sepharial. No final do século XIX, ele foi o responsável por adaptar a Gematria (o sistema numérico hebraico) para as necessidades do homem ocidental. Esse esforço foi ampliado por ordens herméticas como a Golden Dawn, que integraram a Árvore da Vida e os 22 Arcanos ao sistema de letras, criando a base estrutural que utilizamos hoje nos relatórios cabalísticos.</p>
+
+<p>Atualmente, o fundamento da numerologia reside na compreensão de que o universo é regido por leis matemáticas. Ao contrário de uma abordagem puramente esotérica, a numerologia técnica do século XXI funciona como uma neuroanálise dos ciclos de vida. Ela oferece ao cliente uma base factual sobre suas tendências comportamentais e períodos de realização, servindo como uma ferramenta estratégica para o autoconhecimento e a tomada de decisões no mundo moderno.</p>`,
         
     conclusaoEvolutiva: `   
     
