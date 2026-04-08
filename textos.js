@@ -273,7 +273,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
    ,
         
     conclusaoEvolutiva: `   
-     <h1 style="color: #111; font-size: 1.2rem; margin: 0;text-align: center;"> CIÊNCIA HERMÉTICA & NUMEROLOGIA </h1>
+     <h1 style="color: #111; font-size: 1.2rem; margin: 0;text-align: center; font-weight: 800;"> CIÊNCIA HERMÉTICA & NUMEROLOGIA </h1>
     
     <h3>1. Lei do Mentalismo (O Efeito do Observador)</h3>
     <p>A ciência moderna, através da Física Quântica, confirma que o observador afeta a realidade observada. Na Numerologia, seu "Número de Motivação" é o centro da sua consciência que colapsa as infinitas possibilidades em resultados reais. Trabalhar a mente significa entender que seus pensamentos não são apenas abstrações, mas frequências que moldam a matéria subatômica. Ao alinhar sua intenção mental com as vibrações do seu mapa, você deixa de ser um espectador passivo e passa a ser o arquiteto da sua própria rede neural. Educar a mente sob esta lei é reconhecer que a realidade é um reflexo do campo eletromagnético gerado pelo seu cérebro, onde os números servem como o código de programação que organiza o caos em ordem e propósito.</p>
