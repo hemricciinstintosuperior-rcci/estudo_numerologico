@@ -6,11 +6,18 @@
     <title>Instinto Superior - Numerologia Premium</title>
 <style>
         :root { --gold: #d97a1e; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
-        
+
+    body {
+        background: white !important;
+        color: #1a1a1a !important;
+        margin: 0;
+        padding: 0;
+    }
+    
 @media print {
     @page {
-        /* Mantém suas laterais de 2mm e protege Topo/Base com 25mm */
-        margin: 25mm 2mm 25mm 2mm !important;
+        size: A4;
+        margin: 0 ; /* equilíbrio perfeito PDF + impressão */
     }
 
     /* Esta classe impede que qualquer bloco dentro dela seja cortado ao meio */
@@ -22,12 +29,7 @@
     }
 }
 
-    body {
-        background: white !important;
-        color: #1a1a1a !important;
-        margin: 0;
-        padding: 0;
-    }
+
 
     .no-print, .container, .btn-pdf, .btn-gerar, input {
         display: none !important;
