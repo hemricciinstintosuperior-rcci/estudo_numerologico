@@ -2110,7 +2110,20 @@ const dadosNegativas = detectarNegativas(piramideVida);
 let html = `
     <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
 
-
+    <div id="capa-numerologica" style="
+        width: 210mm; 
+        height: 297mm; 
+        background-color: #7D491F; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+        page-break-after: always; /* Garante que a pág 2 comece limpa */
+        box-sizing: border-box;
+        position: relative;
+        margin: 0 auto;
+        -webkit-print-color-adjust: exact;
+    ">
 <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png" 
      class="logo-capa" 
      alt="Logo" 
