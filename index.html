@@ -39,13 +39,26 @@
 
 
 
-    .capa {
-        height: 297mm !important; /* Força a altura exata do papel */
-        width: 210mm !important;
-        border: 10px double #0f2a36 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-    }
+.capa {
+    height: 297mm;
+    width: 210mm;
+    background-color: #7D491F !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Garante que a camada base existe */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+}
+
+.logo-capa, .capa-cliente {
+    position: relative;
+    z-index: 10; /* Força o logo e o texto para a frente de tudo */
+    visibility: visible !important;
+    display: block !important;
+}
 
 
     .no-print, .container, .btn-pdf, .btn-gerar, input {
