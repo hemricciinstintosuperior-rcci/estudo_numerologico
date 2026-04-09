@@ -131,9 +131,48 @@
     background: #ffffff;
 }
         
-        .capa { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double #0f2a36; background: #7D491F; text-align: center; margin-bottom: 5px; }
-        .capa h1 { font-size: 45px; margin: 10px 0; }
-        .capa-cliente { font-size: 24px; color: #ffffff; text-transform: uppercase; border-top: 1px solid #0f2a36; padding-top: 15px; width: 60%; }
+.capa {
+    /* Ocupa a altura e largura total da página visível */
+    height: 100vh;
+    width: 100%;
+    
+    /* Centralização do conteúdo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Estilização */
+    border: 10px double #0f2a36;
+    background: #7D491F;
+    text-align: center;
+    
+    /* Garante que nada de fora entre nesta página e nada desta página saia */
+    page-break-after: always;
+    box-sizing: border-box; /* Garante que o border de 10px não aumente o tamanho da página */
+}
+
+.capa-cliente {
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-top: 1px solid #0f2a36;
+    padding-top: 15px;
+    width: 60%;
+}
+
+/* Regras específicas para a impressão (PDF) */
+@media print {
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+    .capa {
+        height: 100vh;
+        border: 10px double #0f2a36 !important;
+        -webkit-print-color-adjust: exact; /* Força o navegador a imprimir a cor de fundo */
+    }
+}
 
         .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 .secao-card, .card { 
