@@ -528,7 +528,7 @@
         text-align: justify !important;
         margin-bottom: 30px !important;
        border-bottom: 1px solid #ffffff!important;
-     
+     border: 1px solid #ffffff!important;
     }
 
     /* FORÇAR PARÁGRAFOS DENTRO DOS RESULTADOS */
@@ -1251,7 +1251,7 @@ function gerarTodosOsGraficos(res, faltantes, nomeRaw, d3, regenteMatriz, negati
 
             // 2. Abertura do Card com 'break-inside: avoid' para não separar o título do conteúdo
             htmlFinal += `
-                <div style="margin-top: 20px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff;">
+                <div style="margin-top: 20px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #ffffff; padding: 25px; border-radius: 12px; background: #fff;">
             `;
 
             // 3. INJEÇÃO DO TÍTULO: Apenas no primeiro item do ranking (index 0)
@@ -1337,7 +1337,7 @@ function gerarTodosOsGraficosMomento(res, faltantes, nomeRaw, d3, regenteMatriz,
             
             // Início do Card Individual (com regra para não quebrar página)
             html += `
-                <div style="margin-top: 20px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #e0e0e0; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
+                <div style="margin-top: 20px; margin-bottom: 30px; break-inside: avoid; border: 1px solid #ffffff; padding: 25px; border-radius: 12px; background: #fff; border-top: 5px solid ${cor};">
             `;
 
             // SE FOR O PRIMEIRO ITEM (FÍSICO), INJETA O TÍTULO E INTRODUÇÃO AQUI DENTRO
