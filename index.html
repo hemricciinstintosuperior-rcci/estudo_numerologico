@@ -361,17 +361,30 @@
 .tab-content.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* --- AJUSTE ESPECÍFICO PARA A CAPA DE TRANSIÇÃO --- */
 .capa-transicao {
-    height: 297mm !important; /* Força a página inteira no A4 */
-    width: 210mm !important;
-    background-color: #0f2a36 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    page-break-after: always !important;
-    margin: 0 auto !important;
+    height: 297mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin:  0;
+    page-break-before: always;
+    page-break-after: always;
+    border: 4px solid #c57a1a;
+    color: #fff;
+
+    /* 🔥 FUNDO LEVE (SEM CAMADAS PESADAS) */
+    background-color: #0f2a36;
+    background-image: url('https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px; /* controla peso */
+
+    position: relative;
+    /* Garante que o preenchimento seja total no PDF */
+    box-sizing: border-box;
 }
 
 
