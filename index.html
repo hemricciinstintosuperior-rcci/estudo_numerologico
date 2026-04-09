@@ -81,14 +81,15 @@
     padding: 60px 2mm 40px 2mm; 
           }
 
-    /* 🔥 REMOVE ALTURAS PROBLEMÁTICAS */
-    .capa, .capa-transicao {
-        height: 85vh !important;
-        min-height: 260mm; /* simula página cheia sem quebrar */
-        margin: 0;
-        border: 4px solid #c57a1a;
-        page-break-before: always;
-    }
+/* Localize este bloco dentro do seu @media print e substitua */
+.capa, .capa-transicao {
+    height: 297mm !important; /* Força a altura total do papel A4 */
+    min-height: 297mm !important; 
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-before: always;
+    page-break-after: always;
+}
 
     /* 🔥 EVITA QUEBRAS FEIAS */
     .secao-card,
