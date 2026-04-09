@@ -2101,29 +2101,38 @@ const dadosNegativas = detectarNegativas(piramideVida);
 let html = `
     <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
 
-
-<div id="capa-numerologica" style="
-    width: 210mm; 
-    height: 297mm; 
-    background-color: #7D491F; /* COLOQUE A COR DE FUNDO AQUI */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza o conteúdo verticalmente */
-    align-items: center;     /* Centraliza o conteúdo horizontalmente */
-    page-break-after: always;
-    box-sizing: border-box;
-    position: relative;
-    -webkit-print-color-adjust: exact; /* Força a cor no PDF */
-">
-    <div class="capa">
-        <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png" class="logo-capa" alt="Logo">
-        
-              <div class="capa-cliente">
-            <strong>${nomeRaw}</strong><br>
-            <span style="font-size: 16px; opacity: 1.9;">${dataRaw.split('-').reverse().join('/')}</span> </div>
-            <div style="font-size: 16px; color: #ffffff; letter-spacing: 8px;"> 
+    <div id="capa-numerologica" style="
+        width: 210mm; 
+        height: 297mm; 
+        background-color: #7D491F; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;     
+        page-break-after: always; /* Garante que a pág 2 comece limpa */
+        box-sizing: border-box;
+        position: relative;
+        margin: 0 auto;
+        -webkit-print-color-adjust: exact;
+    ">
+        <div class="capa" style="text-align: center;">
+            <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png" 
+                 class="logo-capa" 
+                 alt="Logo" 
+                 style="width: 200px; margin-bottom: 20px;">
+            
+            <div class="capa-cliente" style="color: #ffffff;">
+                <strong style="font-size: 28px; text-transform: uppercase;">${nomeRaw}</strong><br>
+                <span style="font-size: 18px; letter-spacing: 2px;">
+                    ${dataRaw.split('-').reverse().join('/')}
+                </span> 
+            </div>
+            
+            <div style="font-size: 16px; color: #ffffff; letter-spacing: 8px; margin-top: 30px;">
+                </div>
         </div>
-    </div>`;
+    </div> <div id="conteudo-relatorio" style="background: #ffffff; width: 210mm; margin: 0 auto;">
+`;
                 
 
 const listaItensSintese = [
