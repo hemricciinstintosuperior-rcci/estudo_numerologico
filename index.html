@@ -362,29 +362,32 @@
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .capa-transicao {
-    height: 95vh;
+    /* Tamanho exato da folha A4 */
+    width: 210mm;
+    height: 297mm;
+    
+    /* Centralização total do conteúdo */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    margin: 40px 0;
+    /* Garante que comece em uma nova folha e termine nela */
     page-break-before: always;
+    page-break-after: always;
 
-    border: 4px solid #c57a1a;
+    /* Estilização Premium */
+    background-color: #0f2a36; /* Cor de fundo */
+    border: 10px double #c57a1a;
     color: #fff;
-
-    /* 🔥 FUNDO LEVE (SEM CAMADAS PESADAS) */
-    background-color: #0f2a36;
-    background-image: url('https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 400px; /* controla peso */
-
+    box-sizing: border-box;
     position: relative;
-}
+    margin: 0 auto;
 
+    /* Força a cor no PDF */
+    -webkit-print-color-adjust: exact !important;
+}
 
 
 /* TEXTO "PARTE 01" */
