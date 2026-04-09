@@ -120,9 +120,17 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #A38A2A; margin: 0; padding: 0; display: block;}
         /* Estilo para os Logos */
 .logo-capa {
-    width: 800px; /* Ajuste o tamanho conforme seu logo */
-    height: 500px;
-    margin-bottom: 0px;
+    width: 600px !important; /* Tamanho ideal para uma folha A4 */
+    max-width: 90%;          /* Garante que não ultrapasse a margem da folha */
+    height: auto !important;  /* Mantém a proporção sem esticar */
+    margin: 0 auto 40px auto; /* Centraliza horizontalmente e dá espaço para o nome */
+    display: block !important;
+}
+
+.capa-cliente {
+    width: 100%;
+    text-align: center; /* Centraliza o nome e a data */
+    margin-top: 20px;
 }
 
 .logo-conclusao {
@@ -172,14 +180,6 @@
     border: 10px double #0f2a36;
 }
 
-.capa-cliente {
-    font-size: 24px;
-    color: #ffffff;
-    text-transform: uppercase;
-    border-top: 1px solid #0f2a36;
-    padding-top: 15px;
-    width: 60%;
-}
 
 
 
