@@ -361,32 +361,17 @@
 .tab-content.active { display: block; }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+/* --- AJUSTE ESPECÍFICO PARA A CAPA DE TRANSIÇÃO --- */
 .capa-transicao {
-    /* Tamanho exato da folha A4 */
-    width: 210mm;
-    height: 297mm;
-    
-    /* Centralização total do conteúdo */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-
-    /* Garante que comece em uma nova folha e termine nela */
-    page-break-before: always;
-    page-break-after: always;
-
-    /* Estilização Premium */
-    background-color: #0f2a36; /* Cor de fundo */
-    border: 10px double #c57a1a;
-    color: #fff;
-    box-sizing: border-box;
-    position: relative;
-    margin: 0 auto;
-
-    /* Força a cor no PDF */
-    -webkit-print-color-adjust: exact !important;
+    height: 297mm !important; /* Força a página inteira no A4 */
+    width: 210mm !important;
+    background-color: #0f2a36 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    page-break-after: always !important;
+    margin: 0 auto !important;
 }
 
 
