@@ -131,9 +131,9 @@
     background: #ffffff;
 }
         
-        .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double #A65F00; background: #000; text-align: center; margin-bottom: 20px; }
+        .capa { height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 10px double #A65F00; background: #ffffff; text-align: center; margin-bottom: 20px; }
         .capa h1 { font-size: 45px; margin: 10px 0; }
-        .capa-cliente { font-size: 24px; color: #fff; text-transform: uppercase; border-top: 1px solid #A65F00; padding-top: 15px; width: 60%; }
+        .capa-cliente { font-size: 24px; color: #d97a1e; text-transform: uppercase; border-top: 1px solid #A65F00; padding-top: 15px; width: 60%; }
 
         .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 .secao-card, .card { 
@@ -2073,7 +2073,170 @@ let html = `
     </div>`;
                 
 
+const listaItensSintese = [
+    { label: "Dia Natalicio", valor: res.dia },
+    
+    { label: "Essência", valor: res.essencia },
+    
+    { label: "Motivação", valor: res.motivacao },
+    
+    { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
+    
+    { label: "Influência", valor: res.influencia },
+    
+    { label: "Personalidade", valor: res.Personalidade },
+    
+    { label: "Comportamento", valor: res.comportamento },
+    
+    { label: "Relacionamento", valor: res.Relacionamento },
+    
+    { label: "Talento Oculto", valor: res.talento },
+    
+    { label: "Equilíbrio", valor: res.equilibrio },
+    
+    { label: "Inclinações Ocultas", valor: res.inclinacoes },
+    
+    { label: "Subconsciente", valor: res.subconsciente },
+    
+    { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
+    
+    { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
+    
+    { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
+    
+    { label: "Caminho de Vida", valor: res.CaminhodeVida },
+    
+    { label: "Propósito", valor: res.Propósito },
+    
+    { label: "Maturidade", valor: res.Maturidade },
+    
+    { label: "Ciclos da Vida", valor: res.ciclos },
+    
+    { label: "Desafios", valor: res.desafios },
+    
+    { label: "Momentos de Decisão", valor: res.momentos },
+    
+    
+    { label: "Ano Pessoal", valor: res.anoPessoal },
+    
+    { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
+    
 
+];
+
+
+
+    
+// 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
+html += `
+<div id="folha-resumo-premium" style="
+    width: 210mm; 
+    height: 297mm; 
+    page-break-after: always; 
+    page-break-before: always; 
+    page-break-inside: avoid; 
+    background: #ffffff; 
+    padding: 15mm; 
+    box-sizing: border-box; 
+    border: 4px double #fff; 
+    margin: 0 auto; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+">
+    
+    <div style="text-align: center; margin-bottom: 10px; flex-shrink: 0;">
+        <h2 style="text-transform: uppercase; letter-spacing: 2px; color: #000000; margin: 0; border-bottom: 2px solid #d97a1e; display: inline-block; padding-bottom: 5px; font-size: 22px;">
+            Resultado  Numerológico
+        </h2>
+    </div>
+
+    <div id="grid-resumo" style="
+        display: grid; 
+        grid-template-columns: repeat(4, 1fr); 
+        gap: 8px; 
+        margin-top: 10px;
+        flex-grow: 1;
+    ">
+        ${listaItensSintese.map(item => {
+            let exibicaoValor = "--";
+            if (item.valor && typeof item.valor === 'object' && !Array.isArray(item.valor)) {
+                exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
+            } else if (Array.isArray(item.valor)) {
+                exibicaoValor = item.valor.join(" · ");
+            } else {
+                exibicaoValor = item.valor || "--";
+            }
+
+            // Ajuste dinâmico de fonte para valores longos não quebrarem o layout
+            let fontSize = "20px";
+            if (exibicaoValor.toString().length > 5) fontSize = "18px";
+            if (exibicaoValor.toString().length > 10) fontSize = "15px";
+
+            return `
+                <div style="
+                    border: 1px solid #eee; 
+                    border-top: 3px solid #d97a1e; 
+                    background: #ffffff; 
+                    padding: 8px 4px; 
+                    text-align: center; 
+                    border-radius: 4px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    min-height: 65px;
+                ">
+                    <div style="font-size: 12px; text-transform: uppercase; color: #000000; font-weight: bold; margin-bottom: 4px; line-height: 1.1;">
+                        ${item.label}
+                    </div>
+                    <div style="font-size: ${fontSize}; font-weight: bold; color: #d97a1e; word-break: break-word;">
+                        ${exibicaoValor}
+                    </div>
+                </div>
+            `;
+        }).join('')}
+    </div>
+
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; margin-top: 20px; flex-shrink: 0; width: 100%;">
+    
+    <div style="display: flex; align-items: center; gap: 12px; flex: 1; padding: 10px; background: #f9f9f9; border-radius: 8px;">
+        <div style="background: ${vCorDoPerfilAtivo}; color: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">
+            ${valorPerfilNativoTexto.charAt(0)}
+        </div>
+        <div style="text-align: left;">
+            <span style="font-size: 12px; text-transform: uppercase; color: #666; font-weight: bold; display: block; line-height: 1.1;">
+                É uma pessoa naturalmente
+            </span>
+            <div style="font-size: 24px; font-weight: bold; color: ${vCorDoPerfilAtivo}; line-height: 1.2;">
+                ${valorPerfilNativoTexto}
+            </div>
+            <p style="font-size: 10px; color: #fff; margin: 4px 0 0 0; line-height: 1.3; max-width: 200px;">
+                
+            </p>
+        </div>
+    </div>
+
+    <div style="flex: 0.8; border: 2px solid #3498db; padding: 12px; border-radius: 8px; text-align: center; background: #fff;">
+        <span style="text-transform: uppercase; font-weight: bold; font-size: 10px; color: ${vCorPlanoDominante}; letter-spacing: 1px; display: block; margin-bottom: 5px;">
+            Plano de Expressão Dominante
+        </span>
+        <div style="font-size: 24px; font-weight: bold; color: ${vCorPlanoDominante}; text-transform: uppercase; line-height: 1;">
+            ${vPlanoDominanteNome}
+        </div>
+    </div>
+
+</div>
+
+<div style="margin-top: 30px; background: #4a3728; padding: 15px; border-radius: 4px; text-align: center;">
+    <h3 style="color: #d97a1e; margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 18px;">
+        Instinto Superior
+    </h3>
+</div>
+
+</div>`; // Fecha a div folha-resumo-premium
+    
 
 
 
@@ -2261,170 +2424,7 @@ html += `
 `;   
 
 
-const listaItensSintese = [
-    { label: "Dia Natalicio", valor: res.dia },
-    
-    { label: "Essência", valor: res.essencia },
-    
-    { label: "Motivação", valor: res.motivacao },
-    
-    { label: "Desejo Oculto", valor: vDesejoFinal }, // <--- CONECTADO!
-    
-    { label: "Influência", valor: res.influencia },
-    
-    { label: "Personalidade", valor: res.Personalidade },
-    
-    { label: "Comportamento", valor: res.comportamento },
-    
-    { label: "Relacionamento", valor: res.Relacionamento },
-    
-    { label: "Talento Oculto", valor: res.talento },
-    
-    { label: "Equilíbrio", valor: res.equilibrio },
-    
-    { label: "Inclinações Ocultas", valor: res.inclinacoes },
-    
-    { label: "Subconsciente", valor: res.subconsciente },
-    
-    { label: "Déficit Comportamental", valor: vDeficitFinal }, // <--- CONECTADO!
-    
-    { label: "Habilidades / Deficiências", valor: vHabDefFinal }, // <--- CONECTADO!
-    
-    { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
-    
-    { label: "Caminho de Vida", valor: res.CaminhodeVida },
-    
-    { label: "Propósito", valor: res.Propósito },
-    
-    { label: "Maturidade", valor: res.Maturidade },
-    
-    { label: "Ciclos da Vida", valor: res.ciclos },
-    
-    { label: "Desafios", valor: res.desafios },
-    
-    { label: "Momentos de Decisão", valor: res.momentos },
-    
-    
-    { label: "Ano Pessoal", valor: res.anoPessoal },
-    
-    { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
-    
 
-];
-
-
-
-    
-// 2. Agora montamos o HTML do Painel (Esta parte substitui a sua partir da linha html +=)
-html += `
-<div id="folha-resumo-premium" style="
-    width: 210mm; 
-    height: 297mm; 
-    page-break-after: always; 
-    page-break-before: always; 
-    page-break-inside: avoid; 
-    background: #ffffff; 
-    padding: 15mm; 
-    box-sizing: border-box; 
-    border: 4px double #fff; 
-    margin: 0 auto; 
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    overflow: hidden;
-">
-    
-    <div style="text-align: center; margin-bottom: 10px; flex-shrink: 0;">
-        <h2 style="text-transform: uppercase; letter-spacing: 2px; color: #000000; margin: 0; border-bottom: 2px solid #d97a1e; display: inline-block; padding-bottom: 5px; font-size: 22px;">
-            Resultado  Numerológico
-        </h2>
-    </div>
-
-    <div id="grid-resumo" style="
-        display: grid; 
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 8px; 
-        margin-top: 10px;
-        flex-grow: 1;
-    ">
-        ${listaItensSintese.map(item => {
-            let exibicaoValor = "--";
-            if (item.valor && typeof item.valor === 'object' && !Array.isArray(item.valor)) {
-                exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
-            } else if (Array.isArray(item.valor)) {
-                exibicaoValor = item.valor.join(" · ");
-            } else {
-                exibicaoValor = item.valor || "--";
-            }
-
-            // Ajuste dinâmico de fonte para valores longos não quebrarem o layout
-            let fontSize = "20px";
-            if (exibicaoValor.toString().length > 5) fontSize = "18px";
-            if (exibicaoValor.toString().length > 10) fontSize = "15px";
-
-            return `
-                <div style="
-                    border: 1px solid #eee; 
-                    border-top: 3px solid #d97a1e; 
-                    background: #ffffff; 
-                    padding: 8px 4px; 
-                    text-align: center; 
-                    border-radius: 4px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    min-height: 65px;
-                ">
-                    <div style="font-size: 12px; text-transform: uppercase; color: #000000; font-weight: bold; margin-bottom: 4px; line-height: 1.1;">
-                        ${item.label}
-                    </div>
-                    <div style="font-size: ${fontSize}; font-weight: bold; color: #d97a1e; word-break: break-word;">
-                        ${exibicaoValor}
-                    </div>
-                </div>
-            `;
-        }).join('')}
-    </div>
-
-<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; margin-top: 20px; flex-shrink: 0; width: 100%;">
-    
-    <div style="display: flex; align-items: center; gap: 12px; flex: 1; padding: 10px; background: #f9f9f9; border-radius: 8px;">
-        <div style="background: ${vCorDoPerfilAtivo}; color: #fff; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold; flex-shrink: 0;">
-            ${valorPerfilNativoTexto.charAt(0)}
-        </div>
-        <div style="text-align: left;">
-            <span style="font-size: 12px; text-transform: uppercase; color: #666; font-weight: bold; display: block; line-height: 1.1;">
-                É uma pessoa naturalmente
-            </span>
-            <div style="font-size: 24px; font-weight: bold; color: ${vCorDoPerfilAtivo}; line-height: 1.2;">
-                ${valorPerfilNativoTexto}
-            </div>
-            <p style="font-size: 10px; color: #fff; margin: 4px 0 0 0; line-height: 1.3; max-width: 200px;">
-                
-            </p>
-        </div>
-    </div>
-
-    <div style="flex: 0.8; border: 2px solid #3498db; padding: 12px; border-radius: 8px; text-align: center; background: #fff;">
-        <span style="text-transform: uppercase; font-weight: bold; font-size: 10px; color: ${vCorPlanoDominante}; letter-spacing: 1px; display: block; margin-bottom: 5px;">
-            Plano de Expressão Dominante
-        </span>
-        <div style="font-size: 24px; font-weight: bold; color: ${vCorPlanoDominante}; text-transform: uppercase; line-height: 1;">
-            ${vPlanoDominanteNome}
-        </div>
-    </div>
-
-</div>
-
-<div style="margin-top: 30px; background: #4a3728; padding: 15px; border-radius: 4px; text-align: center;">
-    <h3 style="color: #d97a1e; margin: 0; text-transform: uppercase; letter-spacing: 2px; font-size: 18px;">
-        Instinto Superior
-    </h3>
-</div>
-
-</div>`; // Fecha a div folha-resumo-premium
-    
     
 html += `
     <div class="capa-transicao">
