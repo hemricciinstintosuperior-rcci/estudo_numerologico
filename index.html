@@ -1847,7 +1847,10 @@ vibracoes: {
         // Esta linha chama as barrinhas e gruda elas no HTML do ano
        h += gerarTodosOsGraficosMomento(res, faltantes, nomeCompleto, d3, regenteMatriz, negativasMatriz, statusParaGrafico, indiceAno, periodoVigente);
         // --- FIM DO QUE VOCÊ COLOU ---
-
+h += `</div>`; // Fecha a div secao-card
+        h += `</div>`; // Fecha o container de transição se houver
+        return h;
+    };
         return h;
     };
 
@@ -2984,10 +2987,12 @@ html += `
  tituloBonito = "A Matriz da Vida"; 
  // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
+<div style="width: 100%; max-width: 100%; overflow: hidden; clear: both; page-break-inside: avoid;">
 <div class="separador-luxo">
     <div class="caixa-interna">
         <h2>${tituloBonito}</h2>
     </div>
+</div>
 </div>
 `;
    
