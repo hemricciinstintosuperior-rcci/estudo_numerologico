@@ -224,7 +224,7 @@ Se o número do Momento Decisivo coincide com o número de uma de suas Fraquezas
 Esses desafios não devem ser vistos como limitações permanentes, mas como oportunidades de crescimento e desenvolvimento pessoal. Ao reconhecer essas tendências, torna-se possível agir com mais consciência, fortalecer qualidades internas e transformar dificuldades em maturidade e experiência.
 Cada desafio mostra uma etapa específica do processo de evolução e revela quais atitudes favorecem o equilíbrio e a superação.  
  
- Sempre que o número de um Desafio coincidir com o número de um Ciclo de Vida, Momento Decisivo ou Propósito de Vida, pode sugerir alguma predisposição a questões de saúde, que podem se apresentar no período conforme descrito abaixo:
+ Sempre que o número de um Desafio coincidir com o número de um Ciclo de Vida, Momento Decisivo ou Caminho de Vida, pode sugerir alguma predisposição a questões de saúde, que podem se apresentar no período conforme descrito abaixo:
   Possíveis Problemas
   
 1️⃣
