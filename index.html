@@ -43,6 +43,7 @@
     height: 297mm;
     width: 210mm;
     background-color: #0f2a36 !important;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,6 +53,8 @@
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
 }
+
+  .capa h1 { font-size: 45px; margin: 10px 0; }
 
 .logo-capa, .capa-cliente {
     position: relative;
@@ -2134,9 +2137,9 @@ let html = `
      style="width: 250px; height: auto; display: block; margin: 0 auto 30px auto;">
  
             
-            <div class="capa-cliente" style="color: #ffffff;">
+            <div class="capa-cliente" style="color: #FF8800;">
                 <strong style="font-size: 28px; text-transform: uppercase;">${nomeRaw}</strong><br>
-                <span style="font-size: 18px; letter-spacing: 2px;">
+                <span style="font-size: 20px; letter-spacing: 2px;">
                     ${dataRaw.split('-').reverse().join('/')}
                 </span> 
             </div>
