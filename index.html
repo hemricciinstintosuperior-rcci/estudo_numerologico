@@ -1894,17 +1894,16 @@ const bancoProfissoes = {
         
 
 function calcularAptidaoProfissional(res) {
-    // 1. Pilares para análise (Dia, Destino, Propósito, Personalidade)
     const pilares = [
         reduzirPuro(res.dia), 
         res.CaminhodeVida, 
         res.Propósito, 
         res.Personalidade
     ];
-
+    
     let contagem = {};
 
-    // 2. Contabiliza a frequência de cada área
+    // 1. Mapeia a frequência de cada área
     pilares.forEach(num => {
         const areas = bancoAreasAtuacao[num] || [];
         areas.forEach(area => {
@@ -1912,29 +1911,48 @@ function calcularAptidaoProfissional(res) {
         });
     });
 
-    // 3. Filtra os resultados (Vocação Master = 3+ repetições, Afinidade = 2 repetições)
-    let vocacaoMaster = Object.keys(contagem).filter(a => contagem[a] >= 3);
-    let afinidade = Object.keys(contagem).filter(a => contagem[a] === 2);
+    // 2. Transforma o objeto em um array para podermos ordenar pelo mais forte
+    let areasOrdenadas = Object.keys(contagem).map(area => {
+        return { nome: area, pontos: contagem[area] };
+    });
 
-    // 4. Monta o HTML do resultado
-    let htmlResultado = `
-        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Direcionamento de Carreira</h2>
-        <p>A numerologia quântica identifica a <strong>frequência de atuação</strong> onde seus talentos são maximizados. Cruzamos seus pilares de Destino e Personalidade para encontrar sua convergência vibracional.</p>
+    // Ordena: os que têm mais pontos aparecem primeiro
+    areasOrdenadas.sort((a, b) => b.pontos - a.pontos);
 
-        <div style="margin-top: 20px; padding: 15px; background: #fffcf0; border-left: 5px solid #d97a1e;">
-            <h4 style="color: #d97a1e; margin-bottom: 5px;">🚩 Zonas de Sucesso Absoluto</h4>
-            <p>Áreas onde sua energia é Master. O sucesso aqui é natural:</p>
-            <p style="font-size: 1.1rem; font-weight: bold; color: #333;">${vocacaoMaster.length > 0 ? vocacaoMaster.join(" • ") : "Múltiplas áreas de apoio detectadas."}</p>
+    // 3. SEPARAÇÃO HIERÁRQUICA
+    // Zona de Sucesso Absoluto (As 3 áreas mais fortes com no mínimo 3 pontos)
+    let vocacaoMaster = areasOrdenadas
+        .filter(item => item.pontos >= 3)
+        .slice(0, 3) // Pega as 3 principais
+        .map(item => item.nome);
+
+    // Campo de Afinidade (Todas as outras que tiveram pelo menos 2 pontos e não estão no Master)
+    let afinidade = areasOrdenadas
+        .filter(item => item.pontos >= 2 && !vocacaoMaster.includes(item.nome))
+        .map(item => item.nome);
+
+    // 4. MONTAGEM DO HTML DINÂMICO
+    return `
+        <div style="margin-top: 10px; padding: 20px; background: #fffcf0; border: 1px solid #d97a1e; border-left: 8px solid #d97a1e; border-radius: 8px;">
+            <h4 style="color: #d97a1e; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🚩 Zona de Sucesso Absoluto (Foco Principal)</h4>
+            <p style="font-size: 1.2rem; font-weight: bold; color: #1a1a1a; line-height: 1.4;">
+                ${vocacaoMaster.length > 0 ? vocacaoMaster.join(" • ") : "Sua energia indica uma atuação multidisciplinar de alta performance."}
+            </p>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 8px; font-style: italic;">
+                *Estes são os seus três pilares de maior retorno financeiro e satisfação pessoal.
+            </p>
         </div>
 
-        <div style="margin-top: 20px; padding: 15px; background: #f4f7f9; border-left: 5px solid #3498db;">
-            <h4 style="color: #3498db; margin-bottom: 5px;">🔍 Campos de Afinidade</h4>
-            <p>Segmentos onde você possui facilidade de adaptação e bons rendimentos:</p>
-            <p style="font-weight: bold; color: #333;">${afinidade.join(" • ")}</p>
+        <div style="margin-top: 20px; padding: 20px; background: #f4f7f9; border: 1px solid #3498db; border-left: 8px solid #3498db; border-radius: 8px;">
+            <h4 style="color: #3498db; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🔍 Campo de Afinidade (Caminhos Favoráveis)</h4>
+            <p style="font-size: 1rem; font-weight: 500; color: #444; line-height: 1.6;">
+                ${afinidade.length > 0 ? afinidade.join(" • ") : "Analise as tendências complementares do seu mapa."}
+            </p>
+            <p style="font-size: 0.85rem; color: #666; margin-top: 8px; font-style: italic;">
+                *Áreas onde você possui talentos naturais que facilitam o crescimento e a adaptação.
+            </p>
         </div>
     `;
-
-    return htmlResultado;
 }
 
 function analisarAptidaoPremium(res) {
