@@ -2109,26 +2109,7 @@ const introProfissionalTexto = `
 // --- LOGICA DAS PROFISSÕES (ADICIONE ISSO LOGO APÓS O OBJETO 'res') ---
 const aptidao = calcularAptidaoProfissional(res); // Aqui calculamos os números repetidos
 
-const aptidao_texto_final = `
-    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Aptidão Profissional</h2>
-    <p>Nesta análise, cruzamos seu <strong>Dia de Nascimento</strong>, <strong>Caminho de Vida</strong>, <strong>Propósito</strong> e <strong>Personalidade</strong> para identificar as carreiras onde você terá maior sucesso.</p>
 
-    ${aptidao.altaAptidao.length > 0 ? `
-    <div style="margin-bottom: 20px; padding: 15px; background: #fffcf0; border-left: 5px solid #d97a1e;">
-        <p><strong>Forte Vocação (Alta Compatibilidade):</strong><br>
-        Sua energia é extremamente compatível com: <strong style="color: #d97a1e;">${aptidao.altaAptidao.join(", ")}</strong>.</p>
-    </div>` : ''}
-
-    ${aptidao.boaAptidao.length > 0 ? `
-    <div style="padding: 15px; background: #f4f7f9; border-left: 5px solid #3498db;">
-        <p><strong>Caminhos Favoráveis:</strong><br>
-        Você também possui excelente aptidão para: <strong>${aptidao.boaAptidao.join(", ")}</strong>.</p>
-    </div>` : ''}
-
-    <p style="margin-top: 20px; font-style: italic; font-size: 0.9rem;">
-        Nota: Quanto mais um pilar numérico reforça uma profissão, maior é a sua facilidade natural para prosperar nela.
-    </p>
-`;
 
 // --- 1. CÁLCULOS DE APOIO (RODANDO ANTES DO PAINEL) ---
 const dadosDesejoObj = calcularDesejoOculto(nomeRaw);
@@ -2724,7 +2705,8 @@ html += `
 
 <div class="page">
     <div class="texto-res">
-        ${blocoProfissional}
+        ${introProfissionalTexto}
+        ${blocoProfissionalHTML}
     </div>
 </div>
 `;
