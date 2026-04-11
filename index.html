@@ -1877,42 +1877,90 @@ const bancoProfissoes = {
     22: ["Arquiteto", "Engenheiro de Grandes Obras", "Embaixador", "Gestor Público", "Líder Internacional", "Idealizador de Projetos"],
     33: ["Mestre", "Líder Humanitário", "Conselheiro de Alto Nível", "Diretor de Instituições de Caridade", "Terapeuta de Cura"]
 };
+
+ const bancoAreasAtuacao = {
+    1: ["Academias", "Automobilismo", "Construção Civil", "Comércio em Geral", "Chefia em Geral", "Esportes", "Finanças", "Gráficas", "Indústrias (Mecânica/Metalúrgica/Química)", "Limpeza", "Mercados", "Política", "Recursos Humanos"],
+    2: ["Contabilidade", "Decoração", "Ecologia", "Enfermagem", "Escolas", "Hotelaria", "Meio Ambiente", "Polícia/Segurança", "Serviços Domésticos", "Serviços Sociais", "Terapias Alternativas", "Turismo", "Shoppings e Lojas"],
+    3: ["Academias", "Arte em Geral", "Aeronáutica", "Comércio em Geral", "Comunicação", "Decoração", "Diversão", "Esportes", "Estética e Beleza", "Forças Armadas (Aeronáutica)", "Literatura", "Marketing", "Mercados", "Telemarketing"],
+    4: ["Construção Civil", "Contabilidade", "Eletricidade", "Finanças", "Forças Armadas (Exército)", "Gráficas", "Indústrias", "Limpeza", "Mercado de Capitais", "Odontologia", "Polícia/Segurança", "Shoppings e Lojas", "Transporte"],
+    5: ["Arte em Geral", "Automobilismo", "Aeronáutica", "Comércio em Geral", "Diversão", "Esportes", "Forças Armadas (Marinha)", "Marketing", "Mercados", "Política", "Telemarketing", "Transporte", "Turismo"],
+    6: ["Agricultura", "Arte em Geral", "Alimentação", "Animais", "Crianças", "Decoração", "Ecologia", "Enfermagem", "Escolas", "Estética e Beleza", "Hotelaria", "Idosos", "Jardinagem", "Literatura", "Medicina e Nutrição", "Odontologia", "Recursos Humanos", "Serviços Sociais", "Terapias Alternativas"],
+    7: ["Animais", "Crianças", "Direito", "Erotismo", "Escolas", "Esoterismo", "Eletrônica", "Gráficas", "Idosos", "Indústrias", "Informática", "Literatura", "Medicina", "Odontologia", "Política", "Processamento de Dados", "Serviços Sociais", "Transporte"],
+    8: ["Comércio em Geral", "Chefia em Geral", "Direito", "Erotismo", "Esportes", "Finanças", "Mercado de Capitais", "Mercados/Lojas", "Polícia/Segurança", "Política"],
+    9: ["Crianças", "Direito", "Ecologia", "Enfermagem", "Erotismo", "Escolas", "Esoterismo", "Forças Armadas (Marinha)", "Literatura", "Medicina", "Meio Ambiente", "Política", "Recursos Humanos", "Serviços Sociais", "Terapias Alternativas"],
+    11: ["Couro", "Ecologia", "Esoterismo", "Forças Armadas (Aeronáutica)", "Medicina", "Política"],
+    22: ["Ecologia", "Forças Armadas (Aeronáutica)", "Política"]
+};       
         
 
 function calcularAptidaoProfissional(res) {
-    // Pegamos os 4 pilares solicitados
+    // 1. Pilares para análise (Dia, Destino, Propósito, Personalidade)
     const pilares = [
-        reduzirPuro(res.dia), // Profissão pelo dia
+        reduzirPuro(res.dia), 
         res.CaminhodeVida, 
         res.Propósito, 
         res.Personalidade
     ];
 
-    let contagemProfissoes = {};
+    let contagem = {};
 
-    // Percorre cada pilar e soma as ocorrências das profissões
+    // 2. Contabiliza a frequência de cada área
     pilares.forEach(num => {
-        const lista = bancoProfissoes[num] || [];
-        lista.forEach(profissao => {
-            contagemProfissoes[profissao] = (contagemProfissoes[profissao] || 0) + 1;
+        const areas = bancoAreasAtuacao[num] || [];
+        areas.forEach(area => {
+            contagem[area] = (contagem[area] || 0) + 1;
         });
     });
 
-    // Filtra as profissões que apareceram em pelo menos 2 pilares (Destaques)
-    // E as que apareceram em 3 ou mais (Alta Aptidão)
-    let altaAptidao = [];
-    let boaAptidao = [];
+    // 3. Filtra os resultados (Vocação Master = 3+ repetições, Afinidade = 2 repetições)
+    let vocacaoMaster = Object.keys(contagem).filter(a => contagem[a] >= 3);
+    let afinidade = Object.keys(contagem).filter(a => contagem[a] === 2);
 
-    for (let prof in contagemProfissoes) {
-        if (contagemProfissoes[prof] >= 3) {
-            altaAptidao.push(prof);
-        } else if (contagemProfissoes[prof] === 2) {
-            boaAptidao.push(prof);
-        }
-    }
+    // 4. Monta o HTML do resultado
+    let htmlResultado = `
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Direcionamento de Carreira</h2>
+        <p>A numerologia quântica identifica a <strong>frequência de atuação</strong> onde seus talentos são maximizados. Cruzamos seus pilares de Destino e Personalidade para encontrar sua convergência vibracional.</p>
 
-    return { altaAptidao, boaAptidao };
+        <div style="margin-top: 20px; padding: 15px; background: #fffcf0; border-left: 5px solid #d97a1e;">
+            <h4 style="color: #d97a1e; margin-bottom: 5px;">🚩 Zonas de Sucesso Absoluto</h4>
+            <p>Áreas onde sua energia é Master. O sucesso aqui é natural:</p>
+            <p style="font-size: 1.1rem; font-weight: bold; color: #333;">${vocacaoMaster.length > 0 ? vocacaoMaster.join(" • ") : "Múltiplas áreas de apoio detectadas."}</p>
+        </div>
+
+        <div style="margin-top: 20px; padding: 15px; background: #f4f7f9; border-left: 5px solid #3498db;">
+            <h4 style="color: #3498db; margin-bottom: 5px;">🔍 Campos de Afinidade</h4>
+            <p>Segmentos onde você possui facilidade de adaptação e bons rendimentos:</p>
+            <p style="font-weight: bold; color: #333;">${afinidade.join(" • ")}</p>
+        </div>
+    `;
+
+    return htmlResultado;
 }
+
+function analisarAptidaoPremium(res) {
+    const pilares = [
+        reduzirPuro(res.dia), 
+        res.CaminhodeVida, 
+        res.Propósito, 
+        res.Personalidade
+    ];
+
+    let contagemAreas = {};
+
+    pilares.forEach(num => {
+        const areas = bancoAreasAtuacao[num] || [];
+        areas.forEach(area => {
+            contagemAreas[area] = (contagemAreas[area] || 0) + 1;
+        });
+    });
+
+    // Filtramos áreas com 3+ (Vocação Master) e 2 (Afinidade)
+    let vocacaoMaster = Object.keys(contagemAreas).filter(a => contagemAreas[a] >= 3);
+    let afinidade = Object.keys(contagemAreas).filter(a => contagemAreas[a] === 2);
+
+    return { vocacaoMaster, afinidade };
+}
+        
 
 
         
@@ -2658,18 +2706,16 @@ html += `
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
-// Localize onde termina o loop da listaPremium e adicione isso:
-tituloBonito = "Aptidão Profissional";
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
+        <h2>Direcionamento Profissional</h2>
     </div>
 </div>
 
 <div class="page">
     <div class="texto-res">
-        ${aptidao_texto_final}
+        ${blocoProfissional}
     </div>
 </div>
 `;
