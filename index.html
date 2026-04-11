@@ -2107,8 +2107,7 @@ const bancoMesPessoal = {
         
 function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
     if (!valorAnoPessoal || !mesNascimento) {
-        console.error("DADOS FALTANDO:", { valorAnoPessoal, mesNascimento });
-        return "<p style='color:#666; text-align:center;'>Dados cronológicos não disponíveis.</p>";
+        return "<p style='color:#666; text-align:center;'>Dados não localizados.</p>";
     }
 
     const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
@@ -2122,7 +2121,6 @@ function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
         let nomeMes = nomesMeses[indexMes];
         let numeroMesCivil = indexMes + 1;
 
-        // Cálculo da vibração mensal
         let numMP = anoBase + numeroMesCivil;
         while (numMP > 9 && numMP !== 11 && numMP !== 22) {
             numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
@@ -2132,32 +2130,23 @@ function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
 
         if (dados) {
             htmlGerado += `
-            <div style="margin-bottom: 25px; border: 1px solid #d4af37; background: #fff; page-break-inside: avoid; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div style="margin-bottom: 25px; border: 1px solid #d4af37; background: #fff; page-break-inside: avoid; border-radius: 8px; overflow: hidden;">
                 <div style="background: #1a1a1a; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center;">
-                    <strong style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px;">${nomeMes}</strong>
-                    <span style="background: #d4af37; color: #1a1a1a; padding: 2px 12px; border-radius: 20px; font-weight: 800; font-size: 0.8rem;">MÊS PESSOAL ${numMP}</span>
+                    <strong style="color: #d4af37; text-transform: uppercase;">${nomeMes}</strong>
+                    <span style="background: #d4af37; color: #1a1a1a; padding: 2px 10px; border-radius: 20px; font-weight: bold; font-size: 0.8rem;">MÊS PESSOAL ${numMP}</span>
                 </div>
                 
-                <div style="padding: 15px; font-size: 0.9rem; line-height: 1.6; color: #333;">
-                    <p style="color: #b8860b; font-weight: bold; font-size: 1.05rem; margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px;">
-                        ${dados.titulo}
-                    </p>
+                <div style="padding: 15px; font-size: 0.9rem; line-height: 1.5; color: #333;">
+                    <p style="color: #b8860b; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">${dados.titulo}</p>
                     
-                    <div style="margin-bottom: 8px;">
-                        <strong>👤 Lado Pessoal:</strong> ${dados.pessoal}
-                    </div>
+                    <p style="margin-bottom: 8px;"><strong>👤 Pessoal:</strong> ${dados.pessoal}</p>
                     
-                    <div style="margin-bottom: 8px;">
-                        <strong>❤️ Lado Afetivo:</strong> ${dados.afetivo}
-                    </div>
+                    <p style="margin-bottom: 8px;"><strong>❤️ Afetivo:</strong> ${dados.afetivo}</p>
                     
-                    <div style="margin-bottom: 8px;">
-                        <strong>💼 Profissional:</strong> ${dados.profissional}
-                    </div>
+                    <p style="margin-bottom: 8px;"><strong>💼 Profissional:</strong> ${dados.profissional}</p>
                     
-                    <div style="margin-top: 10px; padding: 10px; background: #fdf8e6; border-radius: 4px; border-left: 3px solid #a94442;">
-                        <strong style="color: #a94442;">⚠️ ORIENTAÇÕES:</strong> 
-                        <span style="color: #444;">${dados.orientacoes}</span>
+                    <div style="margin-top: 10px; padding: 10px; background: #fdf8e6; border-left: 4px solid #a94442;">
+                        <strong style="color: #a94442;">⚠️ Atenção:</strong> ${dados.orientacoes}
                     </div>
                 </div>
             </div>`;
