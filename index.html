@@ -2266,6 +2266,7 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
  let vTransitoCalculado = "--";   
 const res = {
     dia: dia,
+     mesNascimento: mes, 
     motivacao: mot, // Já calculado com Mestre
     influencia: calcularNumerologia(sC, true), // Personalidade/Influência aceita Mestre
     Personalidade: exp, // Já calculado com Mestre
@@ -2310,6 +2311,7 @@ desafios: {
     3: Math.abs(Math.abs(reduzirPuro(dia) - reduzirPuro(mes)) - Math.abs(reduzirPuro(dia) - reduzirPuro(ano)))
 },
  anoPessoal: resultadoAnoPessoal
+ proximoAnoPessoal: reduzir(resultadoAnoPessoal + 1) 
 };
     
 const introProfissionalTexto = `
@@ -3312,56 +3314,43 @@ html += `
 </div>
 `;
 
-// --- TRATAMENTO DE SEGURANÇA ---
+// --- BLOCO DO MÊS PESSOAL (CÁLCULO DOS 12 MESES) ---
 
-// 1. Tenta pegar o mês de nascimento de 3 formas diferentes
-let mesNasc = res.mesNascimento || res.mes_nascimento;
+// Usamos as variáveis 'mes' e 'res.anoPessoal' que já existem no seu código
+const mesParaCronograma = res.mesNascimento; 
+const anoAtualParaCronograma = res.anoPessoal;
+const proximoAnoParaCronograma = res.proximoAnoPessoal;
 
-if (!mesNasc && res.dataNascimento) {
-    // Se res.mesNascimento for null, pegamos o mês da string "DD/MM/AAAA"
-    mesNasc = res.dataNascimento.split('/')[1]; 
-}
-
-// 2. Garante o Ano Pessoal Atual
-const anoAtualVal = res.AnoPessoal || res.ano_pessoal || 0;
-
-// 3. Garante o Próximo Ano Pessoal (se estiver undefined, soma 1 ao atual)
-let proximoAnoVal = res.ProximoAnoPessoal || res.proximo_ano_pessoal;
-if (!proximoAnoVal && anoAtualVal > 0) {
-    proximoAnoVal = anoAtualVal + 1;
-    if (proximoAnoVal > 9 && proximoAnoVal !== 11 && proximoAnoVal !== 22) {
-        proximoAnoVal = String(proximoAnoVal).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
-    }
-}
-
-// --- AGORA CHAMA AS FUNÇÕES ---
-const cronogramaAtual = gerarCronogramaMensal(anoAtualVal, mesNasc);
-const cronogramaProximo = gerarCronogramaMensal(proximoAnoVal, mesNasc);
+// CICLO 1: Ano Atual
+const cronogramaAtualHTML = gerarCronogramaMensal(anoAtualParaCronograma, mesParaCronograma);
 
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>Ciclo de 12 Meses: Ano Pessoal ${anoAtualVal || ''}</h2>
+        <h2>Planejamento Mensal: Ano Pessoal ${anoAtualParaCronograma}</h2>
     </div>
 </div>
 <div class="page">
     <div class="texto-res">
-        ${cronogramaAtual}
+        <p style="text-align:center; margin-bottom:20px;">Este ciclo inicia no mês do seu aniversário (${mesParaCronograma}) e mostra as vibrações até o fechamento do seu ano pessoal atual.</p>
+        ${cronogramaAtualHTML}
     </div>
 </div>
 `;
 
-
+// CICLO 2: Próximo Ano
+const cronogramaProximoHTML = gerarCronogramaMensal(proximoAnoParaCronograma, mesParaCronograma);
 
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>Ciclo de 12 Meses: Ano Pessoal ${proximoAnoVal || ''}</h2>
+        <h2>Planejamento Mensal: Ano Pessoal ${proximoAnoParaCronograma}</h2>
     </div>
 </div>
 <div class="page">
     <div class="texto-res">
-        ${cronogramaProximo}
+        <p style="text-align:center; margin-bottom:20px;">Projeção para o ciclo seguinte, iniciando no seu próximo aniversário.</p>
+        ${cronogramaProximoHTML}
     </div>
 </div>
 `;
