@@ -2142,36 +2142,49 @@ function calcularCalendarioMensal(valorAnoPessoal) {
 function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
     const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     let htmlGerado = "";
+    
+    // Garante que o mês de nascimento seja um número
     let mesPartida = parseInt(mesNascimento) - 1; 
 
     for (let i = 0; i < 12; i++) {
         let indexMes = (mesPartida + i) % 12;
         let nomeMes = nomesMeses[indexMes];
         let numeroMesCivil = indexMes + 1;
-        let soma = valorAnoPessoal + numeroMesCivil;
+
+        // CÁLCULO: Ano Pessoal + Mês Civil
+        let soma = parseInt(valorAnoPessoal) + numeroMesCivil;
         
+        // REDUÇÃO CORRIGIDA:
         let numMP = soma;
+        // Enquanto for maior que 9 e NÃO for 11 nem 22, reduz.
         while (numMP > 9 && numMP !== 11 && numMP !== 22) {
             numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
         }
 
+        // VERIFICAÇÃO DE SEGURANÇA: Se o número não existir no banco, ele não trava
         const dados = bancoMesPessoal[numMP];
+        
+        if (!dados) {
+            console.error("Erro: Mês Pessoal " + numMP + " não encontrado no banco de textos.");
+            continue; // Pula para o próximo mês se der erro em um
+        }
 
         htmlGerado += `
-        <div style="margin-bottom: 15px; border-left: 4px solid #d4af37; background: #fff; border: 1px solid #eee; border-left: 4px solid #d4af37;">
+        <div style="margin-bottom: 15px; border-left: 4px solid #d4af37; background: #fff; border: 1px solid #eee;">
             <div style="background: #f9f9f9; padding: 8px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: bold;">
                 <span style="color: #333;">${nomeMes}</span>
                 <span style="color: #d4af37;">Mês Pessoal ${numMP}</span>
             </div>
             <div style="padding: 12px; font-size: 0.85rem;">
-                <p><strong>${dados.titulo}</strong></p>
-                <p style="margin-top: 5px;">${dados.pessoal}</p>
+                <p style="color: #d4af37; font-weight: bold; margin-bottom: 5px;">${dados.titulo}</p>
+                <p style="color: #444; margin-bottom: 5px;"><strong>Pessoal:</strong> ${dados.pessoal}</p>
+                <p style="color: #444;"><strong>Profissional:</strong> ${dados.profissional}</p>
             </div>
         </div>`;
     }
-    return htmlGerado;
-}        
 
+    return htmlGerado;
+}
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
