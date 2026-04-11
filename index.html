@@ -2140,38 +2140,35 @@ function calcularCalendarioMensal(valorAnoPessoal) {
 }
 
 function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
-    // Verificação de segurança: se os dados não chegarem, avisa no console
     if (!valorAnoPessoal || !mesNascimento) {
-        console.error("ERRO: Dados insuficientes para gerar o cronograma. Ano:", valorAnoPessoal, "Mês:", mesNascimento);
-        return "<p style='color:red;'>Erro ao carregar os dados deste ciclo. Verifique as informações de entrada.</p>";
+        console.error("DADOS FALTANDO:", { valorAnoPessoal, mesNascimento });
+        return "<p style='color:red; text-align:center;'>Dados de data ou ano pessoal não localizados para este ciclo.</p>";
     }
 
     const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     let htmlGerado = "";
     
-    // Converte para número para evitar erros de texto (string)
     let anoBase = parseInt(valorAnoPessoal);
     let mesPartida = parseInt(mesNascimento) - 1; 
 
     for (let i = 0; i < 12; i++) {
         let indexMes = (mesPartida + i) % 12;
         let nomeMes = nomesMeses[indexMes];
-        let numeroMesCivil = indexMes + 1;
+        
+        // IMPORTANTE: O mês civil para o cálculo é sempre a posição real do mês no ano
+        let numeroMesCivil = indexMes + 1; 
 
-        // Cálculo da vibração
         let numMP = anoBase + numeroMesCivil;
         
-        // Redução Numerológica (mantendo 11 e 22)
         while (numMP > 9 && numMP !== 11 && numMP !== 22) {
             numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
         }
 
-        // Busca no banco de textos
         const dados = bancoMesPessoal[numMP];
         
         if (dados) {
             htmlGerado += `
-            <div style="margin-bottom: 15px; border: 1px solid #eee; border-left: 5px solid #d4af37; background: #fff;">
+            <div style="margin-bottom: 15px; border: 1px solid #eee; border-left: 5px solid #d4af37; background: #fff; page-break-inside: avoid;">
                 <div style="background: #f9f9f9; padding: 10px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
                     <strong style="color: #333;">${nomeMes}</strong>
                     <span style="color: #d4af37; font-weight: bold;">Mês Pessoal ${numMP}</span>
@@ -2180,11 +2177,13 @@ function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
                     <p style="color: #d4af37; font-weight: bold; margin-bottom: 5px; font-size: 1rem;">${dados.titulo}</p>
                     <p><strong>Pessoal:</strong> ${dados.pessoal}</p>
                     <p><strong>Profissional:</strong> ${dados.profissional}</p>
+                    <p style="margin-top:5px; color:#666; font-size:0.8rem; border-top: 1px dotted #ccc; padding-top:5px;">
+                        <strong>Dica:</strong> ${dados.orientacoes}
+                    </p>
                 </div>
             </div>`;
         }
     }
-
     return htmlGerado;
 }
         
@@ -3319,16 +3318,22 @@ html += `
 </div>
 `;
 
-// Pega o mês de nascimento do cliente (ex: "05" para Maio)
-const mesNasc = res.mesNascimento; 
+// --- TRATAMENTO DE SEGURANÇA DAS VARIÁVEIS ---
+// Tenta pegar o mês de nascimento de várias formas possíveis
+const mesNasc = res.mesNascimento || res.mes_nascimento || (res.dataNascimento ? res.dataNascimento.split('/')[1] : null);
+
+// Tenta pegar os anos pessoais (garantindo que se o nome mudar, ele ache)
+const anoAtualVal = res.AnoPessoal || res.ano_pessoal || res.anoPessoal;
+const proximoAnoVal = res.ProximoAnoPessoal || res.proximo_ano_pessoal || res.proximoAnoPessoal;
 
 // --- CICLO 1: ANO PESSOAL ATUAL ---
-const cronogramaAtual = gerarCronogramaMensal(res.AnoPessoal, mesNasc);
+// Passamos os valores já tratados para a função
+const cronogramaAtual = gerarCronogramaMensal(anoAtualVal, mesNasc);
 
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>Ciclo de 12 Meses: Ano Pessoal ${res.AnoPessoal}</h2>
+        <h2>Ciclo de 12 Meses: Ano Pessoal ${anoAtualVal || ''}</h2>
     </div>
 </div>
 <div class="page">
@@ -3339,12 +3344,12 @@ html += `
 `;
 
 // --- CICLO 2: PRÓXIMO ANO PESSOAL ---
-const cronogramaProximo = gerarCronogramaMensal(res.ProximoAnoPessoal, mesNasc);
+const cronogramaProximo = gerarCronogramaMensal(proximoAnoVal, mesNasc);
 
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>Ciclo de 12 Meses: Ano Pessoal ${res.ProximoAnoPessoal}</h2>
+        <h2>Ciclo de 12 Meses: Ano Pessoal ${proximoAnoVal || ''}</h2>
     </div>
 </div>
 <div class="page">
@@ -3353,7 +3358,6 @@ html += `
     </div>
 </div>
 `;
-
 
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
