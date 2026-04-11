@@ -2140,10 +2140,17 @@ function calcularCalendarioMensal(valorAnoPessoal) {
 }
 
 function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
+    // Verificação de segurança: se os dados não chegarem, avisa no console
+    if (!valorAnoPessoal || !mesNascimento) {
+        console.error("ERRO: Dados insuficientes para gerar o cronograma. Ano:", valorAnoPessoal, "Mês:", mesNascimento);
+        return "<p style='color:red;'>Erro ao carregar os dados deste ciclo. Verifique as informações de entrada.</p>";
+    }
+
     const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     let htmlGerado = "";
     
-    // Garante que o mês de nascimento seja um número
+    // Converte para número para evitar erros de texto (string)
+    let anoBase = parseInt(valorAnoPessoal);
     let mesPartida = parseInt(mesNascimento) - 1; 
 
     for (let i = 0; i < 12; i++) {
@@ -2151,36 +2158,31 @@ function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
         let nomeMes = nomesMeses[indexMes];
         let numeroMesCivil = indexMes + 1;
 
-        // CÁLCULO: Ano Pessoal + Mês Civil
-        let soma = parseInt(valorAnoPessoal) + numeroMesCivil;
+        // Cálculo da vibração
+        let numMP = anoBase + numeroMesCivil;
         
-        // REDUÇÃO CORRIGIDA:
-        let numMP = soma;
-        // Enquanto for maior que 9 e NÃO for 11 nem 22, reduz.
+        // Redução Numerológica (mantendo 11 e 22)
         while (numMP > 9 && numMP !== 11 && numMP !== 22) {
             numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
         }
 
-        // VERIFICAÇÃO DE SEGURANÇA: Se o número não existir no banco, ele não trava
+        // Busca no banco de textos
         const dados = bancoMesPessoal[numMP];
         
-        if (!dados) {
-            console.error("Erro: Mês Pessoal " + numMP + " não encontrado no banco de textos.");
-            continue; // Pula para o próximo mês se der erro em um
+        if (dados) {
+            htmlGerado += `
+            <div style="margin-bottom: 15px; border: 1px solid #eee; border-left: 5px solid #d4af37; background: #fff;">
+                <div style="background: #f9f9f9; padding: 10px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
+                    <strong style="color: #333;">${nomeMes}</strong>
+                    <span style="color: #d4af37; font-weight: bold;">Mês Pessoal ${numMP}</span>
+                </div>
+                <div style="padding: 15px; font-size: 0.9rem; line-height: 1.5;">
+                    <p style="color: #d4af37; font-weight: bold; margin-bottom: 5px; font-size: 1rem;">${dados.titulo}</p>
+                    <p><strong>Pessoal:</strong> ${dados.pessoal}</p>
+                    <p><strong>Profissional:</strong> ${dados.profissional}</p>
+                </div>
+            </div>`;
         }
-
-        htmlGerado += `
-        <div style="margin-bottom: 15px; border-left: 4px solid #d4af37; background: #fff; border: 1px solid #eee;">
-            <div style="background: #f9f9f9; padding: 8px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: bold;">
-                <span style="color: #333;">${nomeMes}</span>
-                <span style="color: #d4af37;">Mês Pessoal ${numMP}</span>
-            </div>
-            <div style="padding: 12px; font-size: 0.85rem;">
-                <p style="color: #d4af37; font-weight: bold; margin-bottom: 5px;">${dados.titulo}</p>
-                <p style="color: #444; margin-bottom: 5px;"><strong>Pessoal:</strong> ${dados.pessoal}</p>
-                <p style="color: #444;"><strong>Profissional:</strong> ${dados.profissional}</p>
-            </div>
-        </div>`;
     }
 
     return htmlGerado;
