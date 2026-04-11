@@ -2161,47 +2161,7 @@ const dados = bancoMesPessoal[numMP];
             </div>`;
         }
 
-function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
-    // Se ainda assim for null, não deixa quebrar
-    if (!valorAnoPessoal || !mesNascimento) {
-        return "<p style='color:#666; padding:20px;'>Dados cronológicos não disponíveis para este perfil.</p>";
-    }
 
-    const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-    let htmlGerado = "";
-    
-    // Força a conversão para número inteiro
-    let anoBase = parseInt(valorAnoPessoal);
-    let mesPartida = parseInt(mesNascimento) - 1; 
-
-    for (let i = 0; i < 12; i++) {
-        let indexMes = (mesPartida + i) % 12;
-        let nomeMes = nomesMeses[indexMes];
-        let numeroMesCivil = indexMes + 1;
-
-        let numMP = anoBase + numeroMesCivil;
-        while (numMP > 9 && numMP !== 11 && numMP !== 22) {
-            numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
-        }
-
-        const dados = bancoMesPessoal[numMP];
-        if (dados) {
-            htmlGerado += `
-            <div style="margin-bottom: 12px; border: 1px solid #eee; border-left: 5px solid #d4af37; background: #fff;">
-                <div style="background: #f9f9f9; padding: 8px 12px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
-                    <strong style="color: #333; font-size: 0.9rem;">${nomeMes}</strong>
-                    <span style="color: #d4af37; font-weight: bold; font-size: 0.8rem;">MÊS PESSOAL ${numMP}</span>
-                </div>
-                <div style="padding: 10px 12px; font-size: 0.85rem; line-height: 1.4;">
-                    <p style="color: #d4af37; font-weight: bold; margin-bottom: 4px;">${dados.titulo}</p>
-                    <p style="margin-bottom: 3px;"><strong>Pessoal:</strong> ${dados.pessoal}</p>
-                    <p><strong>Profissional:</strong> ${dados.profissional}</p>
-                </div>
-            </div>`;
-        }
-    }
-    return htmlGerado;
-}
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
