@@ -2140,46 +2140,40 @@ function calcularCalendarioMensal(valorAnoPessoal) {
 }
 
 function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
+    // Se ainda assim for null, não deixa quebrar
     if (!valorAnoPessoal || !mesNascimento) {
-        console.error("DADOS FALTANDO:", { valorAnoPessoal, mesNascimento });
-        return "<p style='color:red; text-align:center;'>Dados de data ou ano pessoal não localizados para este ciclo.</p>";
+        return "<p style='color:#666; padding:20px;'>Dados cronológicos não disponíveis para este perfil.</p>";
     }
 
     const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     let htmlGerado = "";
     
+    // Força a conversão para número inteiro
     let anoBase = parseInt(valorAnoPessoal);
     let mesPartida = parseInt(mesNascimento) - 1; 
 
     for (let i = 0; i < 12; i++) {
         let indexMes = (mesPartida + i) % 12;
         let nomeMes = nomesMeses[indexMes];
-        
-        // IMPORTANTE: O mês civil para o cálculo é sempre a posição real do mês no ano
-        let numeroMesCivil = indexMes + 1; 
+        let numeroMesCivil = indexMes + 1;
 
         let numMP = anoBase + numeroMesCivil;
-        
         while (numMP > 9 && numMP !== 11 && numMP !== 22) {
             numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
         }
 
         const dados = bancoMesPessoal[numMP];
-        
         if (dados) {
             htmlGerado += `
-            <div style="margin-bottom: 15px; border: 1px solid #eee; border-left: 5px solid #d4af37; background: #fff; page-break-inside: avoid;">
-                <div style="background: #f9f9f9; padding: 10px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;">
-                    <strong style="color: #333;">${nomeMes}</strong>
-                    <span style="color: #d4af37; font-weight: bold;">Mês Pessoal ${numMP}</span>
+            <div style="margin-bottom: 12px; border: 1px solid #eee; border-left: 5px solid #d4af37; background: #fff;">
+                <div style="background: #f9f9f9; padding: 8px 12px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #333; font-size: 0.9rem;">${nomeMes}</strong>
+                    <span style="color: #d4af37; font-weight: bold; font-size: 0.8rem;">MÊS PESSOAL ${numMP}</span>
                 </div>
-                <div style="padding: 15px; font-size: 0.9rem; line-height: 1.5;">
-                    <p style="color: #d4af37; font-weight: bold; margin-bottom: 5px; font-size: 1rem;">${dados.titulo}</p>
-                    <p><strong>Pessoal:</strong> ${dados.pessoal}</p>
+                <div style="padding: 10px 12px; font-size: 0.85rem; line-height: 1.4;">
+                    <p style="color: #d4af37; font-weight: bold; margin-bottom: 4px;">${dados.titulo}</p>
+                    <p style="margin-bottom: 3px;"><strong>Pessoal:</strong> ${dados.pessoal}</p>
                     <p><strong>Profissional:</strong> ${dados.profissional}</p>
-                    <p style="margin-top:5px; color:#666; font-size:0.8rem; border-top: 1px dotted #ccc; padding-top:5px;">
-                        <strong>Dica:</strong> ${dados.orientacoes}
-                    </p>
                 </div>
             </div>`;
         }
@@ -3318,17 +3312,31 @@ html += `
 </div>
 `;
 
-// --- TRATAMENTO DE SEGURANÇA DAS VARIÁVEIS ---
-// Tenta pegar o mês de nascimento de várias formas possíveis
-const mesNasc = res.mesNascimento || res.mes_nascimento || (res.dataNascimento ? res.dataNascimento.split('/')[1] : null);
+// --- TRATAMENTO DE SEGURANÇA ---
 
-// Tenta pegar os anos pessoais (garantindo que se o nome mudar, ele ache)
-const anoAtualVal = res.AnoPessoal || res.ano_pessoal || res.anoPessoal;
-const proximoAnoVal = res.ProximoAnoPessoal || res.proximo_ano_pessoal || res.proximoAnoPessoal;
+// 1. Tenta pegar o mês de nascimento de 3 formas diferentes
+let mesNasc = res.mesNascimento || res.mes_nascimento;
 
-// --- CICLO 1: ANO PESSOAL ATUAL ---
-// Passamos os valores já tratados para a função
+if (!mesNasc && res.dataNascimento) {
+    // Se res.mesNascimento for null, pegamos o mês da string "DD/MM/AAAA"
+    mesNasc = res.dataNascimento.split('/')[1]; 
+}
+
+// 2. Garante o Ano Pessoal Atual
+const anoAtualVal = res.AnoPessoal || res.ano_pessoal || 0;
+
+// 3. Garante o Próximo Ano Pessoal (se estiver undefined, soma 1 ao atual)
+let proximoAnoVal = res.ProximoAnoPessoal || res.proximo_ano_pessoal;
+if (!proximoAnoVal && anoAtualVal > 0) {
+    proximoAnoVal = anoAtualVal + 1;
+    if (proximoAnoVal > 9 && proximoAnoVal !== 11 && proximoAnoVal !== 22) {
+        proximoAnoVal = String(proximoAnoVal).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+    }
+}
+
+// --- AGORA CHAMA AS FUNÇÕES ---
 const cronogramaAtual = gerarCronogramaMensal(anoAtualVal, mesNasc);
+const cronogramaProximo = gerarCronogramaMensal(proximoAnoVal, mesNasc);
 
 html += `
 <div class="separador-luxo">
@@ -3343,8 +3351,7 @@ html += `
 </div>
 `;
 
-// --- CICLO 2: PRÓXIMO ANO PESSOAL ---
-const cronogramaProximo = gerarCronogramaMensal(proximoAnoVal, mesNasc);
+
 
 html += `
 <div class="separador-luxo">
