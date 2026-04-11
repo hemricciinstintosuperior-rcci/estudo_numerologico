@@ -2023,8 +2023,121 @@ function analisarAptidaoPremium(res) {
 
     return { vocacaoMaster, afinidade };
 }
-        
 
+
+const bancoMesPessoal = {
+    1: {
+        titulo: "Iniciativa e Liderança",
+        pessoal: "É o momento de tomar a iniciativa, mostrando coragem, criatividade e determinação. Desenvolva autoconfiança e pioneirismo.",
+        afetivo: "Cuidado com dominação e autoritarismo. Pratique a paciência para não desgastar a relação.",
+        profissional: "Favorável para novos negócios e assumir comandos. Invista em empreendedorismo, mas evite deslizes por excesso de confiança.",
+        orientacoes: "Evite a preguiça, procrastinação e a falta de iniciativa."
+    },
+    2: {
+        titulo: "Diplomacia e Cooperação",
+        pessoal: "Momento de paciência e receptividade. Favorece novas amizades e a harmonia com os outros.",
+        afetivo: "Bom para romance e eventos a dois. Se está só, é um ótimo período para conhecer alguém especial.",
+        profissional: "Mês lento. Evite grandes inícios. Prefira cooperar e aprender com a experiência alheia.",
+        orientacoes: "Evite discórdias, confusões ou questionar demais as opiniões alheias."
+    },
+    3: {
+        titulo: "Comunicação e Expansão",
+        pessoal: "Forte comunicação e vida social ativa. Desejo de se expressar através da fala, artes ou música.",
+        afetivo: "Mês de diversão e viagens. Cuidado com paqueras extras que podem gerar fofocas no relacionamento.",
+        profissional: "Use a criatividade para crescer. Trace metas claras para não desperdiçar energia em mil coisas.",
+        orientacoes: "Cuidado com o que fala e evite gastos desnecessários ou extravagâncias."
+    },
+    4: {
+        titulo: "Trabalho e Organização",
+        pessoal: "Momento de restrições, economia e autodisciplina. Exige equilíbrio e organização pessoal.",
+        afetivo: "Mantenha o equilíbrio através do diálogo. Fuja de discussões ou brigas desnecessárias.",
+        profissional: "Trabalho duro e muitas responsabilidades. Construa bases sólidas para o futuro sendo metódico.",
+        orientacoes: "Não negligencie a saúde nem caia na preguiça."
+    },
+    5: {
+        titulo: "Mudanças e Liberdade",
+        pessoal: "Fase versátil e adaptável. Movimento, viagens, aventuras e forte desejo de liberdade.",
+        afetivo: "Cuidado com mal-entendidos e mudanças bruscas de humor que podem afastar o parceiro.",
+        profissional: "Mudanças inesperadas podem surgir. Seja adaptável para colher bons frutos dessas viradas.",
+        orientacoes: "Cuidado com o excesso de atividades que sugam sua energia. Evite a impaciência."
+    },
+    6: {
+        titulo: "Harmonia e Família",
+        pessoal: "Grande afetividade e foco na vida doméstica. Desejo de estar perto de quem ama.",
+        afetivo: "Cuidado com ciúmes excessivos. Aproveite o período para comemorar bons momentos a dois.",
+        profissional: "Assuma suas obrigações, mas não deixe o trabalho interferir no convívio familiar.",
+        orientacoes: "Não seja idealista demais nem espere tanto dos outros. Mantenha a serenidade."
+    },
+    7: {
+        titulo: "Autoconhecimento e Estudo",
+        pessoal: "Ótimo para estudos, cursos e busca espiritual. Momento de olhar para dentro.",
+        afetivo: "Cuidado com o isolamento excessivo. O parceiro pode se sentir rejeitado; dê atenção à pessoa amada.",
+        profissional: "Mês calmo e rotineiro. Evite grandes investimentos, mas aproveite para fazer acordos e alianças.",
+        orientacoes: "Evite criticar os outros ou impor suas decisões. Cuide da saúde."
+    },
+    8: {
+        titulo: "Realização e Poder",
+        pessoal: "Momento de agir com praticidade e eficiência. Desenvolva sua liderança e autoconfiança.",
+        afetivo: "Não deixe o trabalho apagar o afeto. Equilibre o racional com o carinho que deseja receber.",
+        profissional: "Mês de ganhos e novos projetos. Período de colheita para quem agiu com prudência anteriormente.",
+        orientacoes: "Seja prudente com as finanças e evite gastos desnecessários."
+    },
+    9: {
+        titulo: "Conclusão e Altruísmo",
+        pessoal: "Momento de ajudar o próximo e desenvolver compaixão. Foco no lado espiritual e humanitário.",
+        afetivo: "Bom para o romantismo, mas controle o ciúme e o sentimento de posse.",
+        profissional: "Favorável para ensinar e cooperar. Coloque seus conhecimentos a serviço dos outros.",
+        orientacoes: "Evite o isolamento. Contribua com atividades para o bem coletivo."
+    },
+    11: {
+        titulo: "Intuição e Inspiração",
+        pessoal: "Forte intuição e espiritualidade. Muitas ideias novas surgindo no campo mental.",
+        afetivo: "Período excelente para evoluir espiritualmente com o parceiro e planejar o futuro.",
+        profissional: "Muita imaginação e criatividade. Ótimo para aprimorar processos e formas de trabalho.",
+        orientacoes: "Evite o egoísmo e a insensibilidade materialista."
+    },
+    22: {
+        titulo: "Construção e Mestria",
+        pessoal: "Você se sente prático e inspirado. Excelente época para tirar grandes projetos do papel.",
+        afetivo: "Busque o diálogo e o equilíbrio. Evite discussões que podem abalar grandes planos.",
+        profissional: "Trabalho duro com poder de realização gigante. Bases sólidas para o sucesso material e espiritual.",
+        orientacoes: "Não desperdice oportunidades por preguiça. Cuide da sua saúde física."
+    }
+};        
+        
+function calcularCalendarioMensal(valorAnoPessoal) {
+    const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    let htmlGerado = "";
+
+    nomesMeses.forEach((nome, index) => {
+        let mesCivil = index + 1;
+        let soma = valorAnoPessoal + mesCivil;
+        
+        // Redução Numerológica inteligente (mantém 11 e 22)
+        let numMP = soma;
+        while (numMP > 9 && numMP !== 11 && numMP !== 22) {
+            numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+        }
+
+        const dados = bancoMesPessoal[numMP];
+
+        htmlGerado += `
+        <div style="margin-bottom: 15px; border: 1px solid #d4af37; border-radius: 5px;">
+            <div style="background: #fdf8e6; padding: 8px 15px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; font-weight: bold;">
+                <span style="color: #8a6d3b;">${nome}</span>
+                <span style="color: #d4af37;">Mês Pessoal ${numMP}</span>
+            </div>
+            <div style="padding: 12px; font-size: 0.85rem; line-height: 1.5; background: #fff;">
+                <p><strong>Foco:</strong> ${dados.titulo}</p>
+                <p><strong>Lado Pessoal/Afetivo:</strong> ${dados.pessoal} ${dados.afetivo}</p>
+                <p><strong>Profissional:</strong> ${dados.profissional}</p>
+                <p style="color: #a94442; margin-top: 5px;"><strong>Atenção:</strong> ${dados.orientacoes}</p>
+            </div>
+        </div>`;
+    });
+
+    return htmlGerado;
+}
 
         
 
@@ -3160,7 +3273,37 @@ html += `
 </div>
 `;
 
-    
+// --- CICLO DO ANO PESSOAL ATUAL ---
+const mesesCicloAtual = calcularCalendarioMensal(res.AnoPessoal);
+
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>Calendário Mensal - Ciclo Atual</h2>
+    </div>
+</div>
+<div class="page">
+    <div class="texto-res">
+        ${mesesCicloAtual}
+    </div>
+</div>
+`;
+
+// --- CICLO DO PRÓXIMO ANO PESSOAL ---
+const mesesProximoCiclo = calcularCalendarioMensal(res.ProximoAnoPessoal);
+
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>Calendário Mensal - Próximo Ciclo</h2>
+    </div>
+</div>
+<div class="page">
+    <div class="texto-res">
+        ${mesesProximoCiclo}
+    </div>
+</div>
+`;
 
 
 // 1. CAPA PARA O BLOCO DE TEMPO
