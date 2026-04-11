@@ -1863,6 +1863,22 @@ h += `</div>`; // Fecha a div secao-card
     return { html: htmlFinal, dados: {} }; 
 }
 
+const bancoProfissoes = {
+    1: ["Líder", "Empresário", "Gerente", "Arquiteto", "Engenheiro", "Designer", "Consultor", "Vendedor", "Político"],
+    2: ["Diplomata", "Mediador", "Secretário", "Psicólogo", "Enfermeiro", "Escritor", "Historiador", "Músico", "Analista"],
+    3: ["Comunicador", "Artista", "Escritor", "Publicitário", "Ator", "Vendedor", "Professor", "Gastronomia", "Moda"],
+    4: ["Administrador", "Contador", "Engenheiro", "Construtor", "Técnico", "Militar", "Analista de Sistemas", "Estatístico"],
+    5: ["Vendedor", "Guia Turístico", "Jornalista", "Piloto", "Publicitário", "Promotor de Eventos", "Explorador", "Marketing"],
+    6: ["Médico", "Professor", "Assistente Social", "Decorador", "Cozinheiro", "Veterinário", "Conselheiro", "Designer de Interiores"],
+    7: ["Pesquisador", "Cientista", "Filósofo", "Especialista de TI", "Analista", "Escritor", "Professor Universitário", "Psicólogo"],
+    8: ["Executivo", "Banqueiro", "Juiz", "Advogado", "Empresário", "Corretor de Imóveis", "Diretor", "Engenheiro Civil"],
+    9: ["Médico", "Filantropo", "Artista", "Professor", "Guia Espiritual", "Recursos Humanos", "Comunicador Social", "Ecologista"],
+    11: ["Diplomata", "Escritor", "Líder Inspirador", "Psicólogo", "Filósofo", "Artista plástico", "Cientista"],
+    22: ["Arquiteto", "Engenheiro de Grandes Obras", "Embaixador", "Gestor Público", "Líder Internacional", "Idealizador de Projetos"],
+    33: ["Mestre", "Líder Humanitário", "Conselheiro de Alto Nível", "Diretor de Instituições de Caridade", "Terapeuta de Cura"]
+};
+        
+
 function calcularAptidaoProfissional(res) {
     // Pegamos os 4 pilares solicitados
     const pilares = [
@@ -1897,6 +1913,9 @@ function calcularAptidaoProfissional(res) {
 
     return { altaAptidao, boaAptidao };
 }
+
+
+        
 
         
 function gerarMapaCompleto() {
