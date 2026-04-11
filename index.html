@@ -2139,7 +2139,38 @@ function calcularCalendarioMensal(valorAnoPessoal) {
     return htmlGerado;
 }
 
+function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
+    const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    let htmlGerado = "";
+    let mesPartida = parseInt(mesNascimento) - 1; 
+
+    for (let i = 0; i < 12; i++) {
+        let indexMes = (mesPartida + i) % 12;
+        let nomeMes = nomesMeses[indexMes];
+        let numeroMesCivil = indexMes + 1;
+        let soma = valorAnoPessoal + numeroMesCivil;
         
+        let numMP = soma;
+        while (numMP > 9 && numMP !== 11 && numMP !== 22) {
+            numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+        }
+
+        const dados = bancoMesPessoal[numMP];
+
+        htmlGerado += `
+        <div style="margin-bottom: 15px; border-left: 4px solid #d4af37; background: #fff; border: 1px solid #eee; border-left: 4px solid #d4af37;">
+            <div style="background: #f9f9f9; padding: 8px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-weight: bold;">
+                <span style="color: #333;">${nomeMes}</span>
+                <span style="color: #d4af37;">Mês Pessoal ${numMP}</span>
+            </div>
+            <div style="padding: 12px; font-size: 0.85rem;">
+                <p><strong>${dados.titulo}</strong></p>
+                <p style="margin-top: 5px;">${dados.pessoal}</p>
+            </div>
+        </div>`;
+    }
+    return htmlGerado;
+}        
 
         
 function gerarMapaCompleto() {
@@ -3273,34 +3304,37 @@ html += `
 </div>
 `;
 
-// --- CICLO DO ANO PESSOAL ATUAL ---
-const mesesCicloAtual = calcularCalendarioMensal(res.AnoPessoal);
+// Pega o mês de nascimento do cliente (ex: "05" para Maio)
+const mesNasc = res.mesNascimento; 
+
+// --- CICLO 1: ANO PESSOAL ATUAL ---
+const cronogramaAtual = gerarCronogramaMensal(res.AnoPessoal, mesNasc);
 
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>Calendário Mensal - Ciclo Atual</h2>
+        <h2>Ciclo de 12 Meses: Ano Pessoal ${res.AnoPessoal}</h2>
     </div>
 </div>
 <div class="page">
     <div class="texto-res">
-        ${mesesCicloAtual}
+        ${cronogramaAtual}
     </div>
 </div>
 `;
 
-// --- CICLO DO PRÓXIMO ANO PESSOAL ---
-const mesesProximoCiclo = calcularCalendarioMensal(res.ProximoAnoPessoal);
+// --- CICLO 2: PRÓXIMO ANO PESSOAL ---
+const cronogramaProximo = gerarCronogramaMensal(res.ProximoAnoPessoal, mesNasc);
 
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>Calendário Mensal - Próximo Ciclo</h2>
+        <h2>Ciclo de 12 Meses: Ano Pessoal ${res.ProximoAnoPessoal}</h2>
     </div>
 </div>
 <div class="page">
     <div class="texto-res">
-        ${mesesProximoCiclo}
+        ${cronogramaProximo}
     </div>
 </div>
 `;
