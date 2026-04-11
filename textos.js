@@ -380,20 +380,7 @@ inadequado ou de receber prescrições médicas inadequadas, problemas de fígad
     <p>Tudo na criação exige a união dos princípios ativo (masculino) e receptivo (feminino), uma dinâmica observada na física como a interação entre carga e potencial. Na Numerologia, isso se reflete no equilíbrio entre números ímpares (ação) e pares (acolhimento). A criação de qualquer resultado real na sua vida depende da harmonia entre a sua vontade de realizar e a sua sabedoria em gestar. Esta lei ensina que o excesso de um princípio sem o outro gera esterilidade nos projetos. Através do seu mapa, você aprende a equilibrar essas forças internas, integrando a lógica analítica com a intuição profunda. É a união sagrada da semente numérica com o solo da consciência que permite a manifestação plena de todos os seus objetivos e sonhos.</p>`
 },
  
- constbancoProfissoes : {
-    1: ["Líder", "Empresário", "Gerente", "Arquiteto", "Engenheiro", "Designer", "Consultor", "Vendedor", "Político"],
-    2: ["Diplomata", "Mediador", "Secretário", "Psicólogo", "Enfermeiro", "Escritor", "Historiador", "Músico", "Analista"],
-    3: ["Comunicador", "Artista", "Escritor", "Publicitário", "Ator", "Vendedor", "Professor", "Gastronomia", "Moda"],
-    4: ["Administrador", "Contador", "Engenheiro", "Construtor", "Técnico", "Militar", "Analista de Sistemas", "Estatístico"],
-    5: ["Vendedor", "Guia Turístico", "Jornalista", "Piloto", "Publicitário", "Promotor de Eventos", "Explorador", "Marketing"],
-    6: ["Médico", "Professor", "Assistente Social", "Decorador", "Cozinheiro", "Veterinário", "Conselheiro", "Designer de Interiores"],
-    7: ["Pesquisador", "Cientista", "Filósofo", "Especialista de TI", "Analista", "Escritor", "Professor Universitário", "Psicólogo"],
-    8: ["Executivo", "Banqueiro", "Juiz", "Advogado", "Empresário", "Corretor de Imóveis", "Diretor", "Engenheiro Civil"],
-    9: ["Médico", "Filantropo", "Artista", "Professor", "Guia Espiritual", "Recursos Humanos", "Comunicador Social", "Ecologista"],
-    11: ["Diplomata", "Escritor", "Líder Inspirador", "Psicólogo", "Filósofo", "Artista plástico", "Cientista"],
-    22: ["Arquiteto", "Engenheiro de Grandes Obras", "Embaixador", "Gestor Público", "Líder Internacional", "Idealizador de Projetos"],
-    33: ["Mestre", "Líder Humanitário", "Conselheiro de Alto Nível", "Diretor de Instituições de Caridade", "Terapeuta de Cura"]
-},
+
     
 RegenteVida: {
  1:` <h3>🔱  Regente  N° 1</h3> 
