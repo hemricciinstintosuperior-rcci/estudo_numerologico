@@ -123,31 +123,47 @@ A motivação é um elemento essencial para o desenvolvimento do ser humano. Sem
 <h4>Como descobrir a compatibilidade de outras pessoas</h4>
 <p>Para saber se você harmoniza com alguém, você precisa descobrir o <strong>Número de Harmonia (Propósito)</strong> dessa pessoa. O cálculo é simples e utiliza o nome completo e a data de nascimento.</p>
 
+<h4>Como descobrir a compatibilidade de outras pessoas</h4>
+<p>Para saber se você harmoniza com alguém, você precisa descobrir o <strong>Número de Harmonia (Propósito)</strong> dessa pessoa. O cálculo é simples e utiliza o nome completo e a data de nascimento.</p>
+
 <p><strong>Passo 1: Converta o Nome Completo</strong><br>
 Utilize a tabela abaixo para transformar cada letra do nome da pessoa em números. Some todos e reduza a um único algarismo (de 1 a 9).</p>
 
-<table style="width:100%; border-collapse: collapse; text-align: center; margin: 15px 0; font-family: sans-serif;">
+<p>Para obter o resultado correto, é fundamental usar o <strong>nome completo com todos os acentos</strong>, pois cada sinal gráfico altera o valor vibracional da letra.</p>
+
+<p><strong>1. Tabela de Letras Base</strong></p>
+<table style="width:100%; border-collapse: collapse; text-align: center; margin: 10px 0;">
   <tr style="background-color: #f2f2f2;">
-    <th style="border: 1px solid #ddd; padding: 8px;">1</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">2</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">3</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">4</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">5</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">6</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">7</th>
-    <th style="border: 1px solid #ddd; padding: 8px;">8</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">1</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">2</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">3</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">4</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">5</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">6</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">7</th>
+    <th style="border: 1px solid #ddd; padding: 5px;">8</th>
   </tr>
   <tr>
-    <td style="border: 1px solid #ddd; padding: 8px;">A, I, Q, J, Y<br>Á, Â, Ã, Í</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">B, K, R</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">C, G, L, S<br>Ç</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">D, M, T</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">E, H, N, X<br>É, Ê</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">U, V, W<br>Ú</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">O, Z<br>Ó, Ô, Õ</td>
-    <td style="border: 1px solid #ddd; padding: 8px;">F, P</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">A, I, Q, J, Y</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">B, K, R</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">C, G, L, S</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">D, M, T</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">E, H, N, X</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">U, V, W</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">O, Z</td>
+    <td style="border: 1px solid #ddd; padding: 5px;">F, P</td>
   </tr>
 </table>
+
+<p><strong>2. Tabela de Acentos (Soma e Multiplicação)</strong></p>
+<p>Se a letra tiver acento, você deve somar o valor abaixo ao valor da letra base ANTES de reduzir:</p>
+<ul style="list-style: none; padding-left: 0;">
+  <li><strong>´ (Agudo):</strong> Some <strong>+2</strong> (Ex: Á = 1+2 = 3)</li>
+  <li><strong>~ (Til):</strong> Some <strong>+3</strong> (Ex: Ã = 1+3 = 4)</li>
+  <li><strong>¸ (Cedilha):</strong> Some <strong>+6</strong> (Ex: Ç = 3+6 = 9)</li>
+  <li><strong>^ (Circunflexo):</strong> Some <strong>+7</strong> (Ex: Â = 1+7 = 8)</li>
+  <li><strong>&#96;(Grave) ou ¨ (Trema):</strong> <strong>Dobre (x2)</strong> o valor final da letra.</li>
+</ul>
 
 <p><strong>Passo 2: Converta a Data de Nascimento</strong><br>
 Some todos os números da data de nascimento (dia + mês + ano) e reduza também a um único algarismo de 1 a 9.</p>
