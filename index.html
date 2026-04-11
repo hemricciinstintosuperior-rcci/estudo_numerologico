@@ -3524,39 +3524,50 @@ html += `     <div class= "secao-card quebra-pagina" style=" width: 130%; text-a
 
 
 // Crie esta linha logo ACIMA do código da ondinha:
- tituloBonito = "Agradecimento"; 
- // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+tituloBonito = "Agradecimento"; 
+
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO (EXPANDIDO) ---
 html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
+<div class="separador-luxo" style="width: 100%; margin: 40px 0;">
+    <div class="caixa-interna" style="text-align: center;">
+        <h2 style="margin: 0; padding: 20px 0;">${tituloBonito}</h2>
     </div>
 </div>
 `;    
 
-    
-// 6. CONCLUSÃO E RODAPÉ FINAL DE GALA
+// 6. CONCLUSÃO E RODAPÉ FINAL DE GALA (CENTRALIZADO E COMPLETO)
 html += `
-     <div class= "text-align: center; margin-bottom: 30px;">
-        <h2 class="titulo-topico" style="letter-spacing: 5px; color: #827108; margin-bottom: 30px; font-weight: 800;">Agradecimento</h2>
-        <div style="width: 50px; height: 3px; background: var(--gold); margin: 0 auto;"></div>
-    </div>      
+    <div style="width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 20px;">
         
-        <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify;">
+        <div style="margin-bottom: 40px;">
+            <h2 class="titulo-topico" style="letter-spacing: 5px; color: #827108; margin-bottom: 20px; font-weight: 800; text-transform: uppercase;">Agradecimento</h2>
+            <div style="width: 60px; height: 3px; background: #827108; margin: 0 auto;"></div>
+        </div>      
+        
+        <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify; margin-bottom: 50px;">
             ${aplicarFiltroNomeComposto(textos.introducoes.Conclusao)}
         </div>
 
-        <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 20px;">
-            <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/logosite.png" class="logo-conclusao" style="width: 600px; filter: grayscale(1) contrast(1.2);">
+        <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 40px;">
             
-           <p style="font-family: serif; font-size: 20px; margin-top: 10px;">
-    "INSTINTO SUPERIOR"<br>
-    אינסטינקט מעולה
-</p>
+            <p style="font-family: 'Times New Roman', serif; font-size: 22px; font-style: italic; font-weight: bold; margin-bottom: 5px; color: #000;">
+                "INSTINTO SUPERIOR"
+            </p>
+            <p style="font-size: 24px; margin-bottom: 20px; letter-spacing: 2px;">
+                אינסטינקט מעולה
+            </p>
+
+            <div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin: 30px 0; filter: grayscale(1);">
+                <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/logosite.png" style="width: 500px; max-width: 90%; height: auto; opacity: 0.8;">
+            </div>
             
-            <div style="font-size: 14px; color: #999; margin-top: 4px; text-transform: uppercase; letter-spacing: 2px;">
-                Estudo Numerológico Cabalístico• Edição Premium
-                www.instintosuperior.com 
+            <div style="font-size: 14px; color: #827108; font-weight: bold; letter-spacing: 4px; text-transform: uppercase; margin-top: 20px;">
+                INSTINTO SUPERIOR
+            </div>
+            
+            <div style="font-size: 12px; color: #999; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px;">
+                Estudo Numerológico Cabalístico • Edição Premium<br>
+                <span style="color: #666;">www.instintosuperior.com</span>
             </div>
         </div>
     </div>
