@@ -102,7 +102,60 @@ A motivação é um elemento essencial para o desenvolvimento do ser humano. Sem
 
 <p>Diferente de abordagens tradicionais, a Numerologia Moderna acolhe a diversidade de todos os arranjos afetivos. Para conexões entre pessoas do mesmo sexo, recomenda-se uma análise ainda mais detalhada para garantir que as nuances da dinâmica sejam captadas com precisão e coerência, respeitando a identidade de cada um.</p>
 
-<p>Esta análise transcende o estado civil ou rótulos sociais. O foco reside exclusivamente na qualidade da harmonia amorosa e na sinergia do casal, oferecendo um panorama profundo sobre como a energia de duas pessoas se entrelaça na construção de uma realidade compartilhada.</p>`,
+<p>Esta análise transcende o estado civil ou rótulos sociais. O foco reside exclusivamente na qualidade da harmonia amorosa e na sinergia do casal, oferecendo um panorama profundo sobre como a energia de duas pessoas se entrelaça na construção de uma realidade compartilhada.</p>
+
+<h4>Vibração - A Sintonia Natural</h4>
+<p>O número de Vibração representa a essência e a frequência "espelho" do relacionamento.</p>
+<p>Indica uma ressonância imediata de objetivos e entendimento mútuo, onde o casal sente que fala a mesma língua emocional.</p>
+
+<h4>Atração - O Magnetismo Amoroso</h4>
+<p>O número de Atração indica uma força magnética e um interesse inicial muito forte entre o casal.</p>
+<p>Representa qualidades que um admira no outro, funcionando como o combustível que mantém o entusiasmo e a química viva.</p>
+
+<h4>Oposto - O Desafio do Crescimento</h4>
+<p>O número Oposto representa o aprendizado através do contraste e das polaridades diferentes.</p>
+<p>Embora possa gerar atritos, oferece a oportunidade de equilíbrio, onde um parceiro traz exatamente o que falta no outro.</p>
+
+<h4>Passivo - A Harmonia Estável</h4>
+<p>O número Passivo indica uma relação de neutralidade, aceitação e baixa reatividade.</p>
+<p>É uma combinação confortável e estável, baseada na amizade e na tranquilidade, permitindo que o convívio flua sem grandes sobressaltos.</p>
+
+<h4>Como descobrir a compatibilidade de outras pessoas</h4>
+<p>Para saber se você harmoniza com alguém, você precisa descobrir o <strong>Número de Harmonia (Propósito)</strong> dessa pessoa. O cálculo é simples e utiliza o nome completo e a data de nascimento.</p>
+
+<p><strong>Passo 1: Converta o Nome Completo</strong><br>
+Utilize a tabela abaixo para transformar cada letra do nome da pessoa em números. Some todos e reduza a um único algarismo (de 1 a 9).</p>
+
+<table style="width:100%; border-collapse: collapse; text-align: center; margin: 15px 0; font-family: sans-serif;">
+  <tr style="background-color: #f2f2f2;">
+    <th style="border: 1px solid #ddd; padding: 8px;">1</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">2</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">3</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">4</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">5</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">6</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">7</th>
+    <th style="border: 1px solid #ddd; padding: 8px;">8</th>
+  </tr>
+  <tr>
+    <td style="border: 1px solid #ddd; padding: 8px;">A, I, Q, J, Y<br>Á, Â, Ã, Í</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">B, K, R</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">C, G, L, S<br>Ç</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">D, M, T</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">E, H, N, X<br>É, Ê</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">U, V, W<br>Ú</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">O, Z<br>Ó, Ô, Õ</td>
+    <td style="border: 1px solid #ddd; padding: 8px;">F, P</td>
+  </tr>
+</table>
+
+<p><strong>Passo 2: Converta a Data de Nascimento</strong><br>
+Some todos os números da data de nascimento (dia + mês + ano) e reduza também a um único algarismo de 1 a 9.</p>
+
+<p><strong>Passo 3: O Resultado Final</strong><br>
+Agora, some o <strong>resultado do Nome</strong> com o <strong>resultado da Data</strong>. Reduza novamente para chegar a um número de 1 a 9. Este é o número que você deve buscar na nossa tabela de harmonia para saber como será sua conexão com essa pessoa!</p>
+<p><em>Exemplo: Se a soma final deu 7, essa pessoa possui a energia do Número 7 em relacionamentos.</em></p>
+`,
         
         CaminhodeVida: `<p>Viver de forma plena é um caminho contínuo que nos ensina a persistir diante dos desafios e das distrações para conquistar aquilo que escolhemos para nós. O destino não é um lugar fixo, mas uma forma de enxergar e compreender a vida.</p>
   Independentemente das circunstâncias ou dos erros cometidos, nossa trajetória é construída a cada instante pelas decisões que tomamos.
@@ -1061,47 +1114,102 @@ Relacionamento: {
     1: `<h3>Relacionamento 1 - Autonomia e Conquista no Amor</h3>
     <p>Esta energia traz para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a necessidade constante de preservar a individualidade dentro de qualquer união afetiva. Essa força de liderança garante que você não se anule em nome de um par, mantendo seu brilho original em todas as circunstâncias da convivência.</p>
     <p>O grande desafio é exercer o amor com independência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um impulso natural para tomar decisões solitárias, o que exige um diálogo claro para que a parceria não se sinta excluída. A lição fundamental para você é entender que um relacionamento sólido é composto por dois seres inteiros.</p>
-    <p>Ao cultivar a própria força, você atrai conexões que respeitam sua liberdade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A construção de um vínculo duradouro depende da admiração mútua e da coragem de sempre renovar a rotina, mantendo o frescor da conquista vivo em cada gesto de carinho e presença real.</p>`,
+    <p>Ao cultivar a própria força, você atrai conexões que respeitam sua liberdade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A construção de um vínculo duradouro depende da admiração mútua e da coragem de sempre renovar a rotina, mantendo o frescor da conquista vivo em cada gesto de carinho e presença real.</p>
+     <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 1</h4>
+<p>Como um perfil de vibração 1, você naturalmente <strong>vibra</strong> com o número <strong>9</strong>, mas também possui forte afinidade com outro <strong>número 1</strong>; embora essa união espelho tenda a dar certo pela identidade de propósitos, pode tornar-se monótona se não buscarem desafios novos juntos.</p>
+<p>Sua energia <strong>atrai</strong> com facilidade os números <strong>4 e 8</strong>, que buscam sua liderança e segurança.</p>
+<p>Você encontra o seu <strong>oposto</strong> nos números <strong>6 e 7</strong>, onde sua independência pode colidir com o excesso de zelo ou o isolamento do outro.</p>
+<p>Sua convivência é <strong>passiva</strong> com os números <strong>2, 3 e 5</strong>, permitindo que as relações fluam sem grandes desgastes ou cobranças.</p> 
+    `,
 
     2: `<h3>Relacionamento 2 - Harmonia e Sensibilidade na União</h3>
     <p>A marca da sua energia, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a diplomacia e a busca por uma harmonia profunda nas relações. Sua sensibilidade permite perceber as necessidades da outra pessoa antes mesmo da verbalização, criando um elo de compreensão mútua e apoio constante no dia a dia.</p>
     <p>É preciso atenção com a hipersensibilidade para não absorver tensões alheias, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O aprendizado essencial para você é que a verdadeira paz nasce da verdade dita com doçura. Sua natureza é de entrega e valorização dos detalhes que fortalecem o convívio e a segurança do par.</p>
-    <p>Existe uma grande oportunidade de promover curas internas através de uma convivência baseada na paciência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao desenvolver o equilíbrio entre o dar e o receber, você consolida uma união estável, onde o afeto flui sem barreiras e o respeito se torna o alicerce da felicidade.</p>`,
+    <p>Existe uma grande oportunidade de promover curas internas através de uma convivência baseada na paciência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao desenvolver o equilíbrio entre o dar e o receber, você consolida uma união estável, onde o afeto flui sem barreiras e o respeito se torna o alicerce da felicidade.</p>
+   <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 2</h4>
+<p>Sendo um número 2, você  <strong>vibra</strong> em sintonia com o número <strong>8</strong>. Ao se relacionar com outro <strong>número 2</strong>, a harmonia é profunda por ambos buscarem o acolhimento, mas cuidado para a relação não ficar estagnada no excesso de passividade.</p>
+<p>Sua essência <strong>atrai</strong> os números <strong>7 e 9</strong>, que valorizam sua sensibilidade e capacidade de ouvir.</p>
+<p>O seu <strong>oposto</strong> é o número <strong>5</strong>, já que sua necessidade de união constante pode sofrer com a impulsividade e sede de liberdade deste número.</p>
+<p>Você mantém uma relação <strong>passiva</strong> com os números <strong>1, 3, 4 e 6</strong>, o que gera parcerias estáveis e baseadas no respeito mútuo.</p>
+    `,
 
     3: `<h3>Relacionamento 3 - Alegria e Expressão Afetiva</h3>
     <p>Sua vibração favorece a alegria e a expressão dos sentimentos de forma aberta e vibrante, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Essa energia de expansão torna você uma presença magnética e encantadora, capaz de atrair parcerias através do entusiasmo, do bom humor e de uma comunicação impecável.</p>
     <p>O risco reside na dispersão, <strong>MASCULINO-FEMININO-NEUTRO</strong>, que pode dificultar o aprofundamento dos laços ao preferir o brilho das novidades. A lição de vida para você é usar sua criatividade para manter o relacionamento dinâmico, impedindo que o tédio ou a monotonia se instalem na vida a dois.</p>
-    <p>Você brilha ao lado de quem ama, celebrando cada conquista com leveza, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar a inconstância, você descobre que a felicidade reside na capacidade de ser quem você é, sem máscaras, dentro de uma relação que estimula o seu crescimento intelectual e social.</p>`,
+    <p>Você brilha ao lado de quem ama, celebrando cada conquista com leveza, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar a inconstância, você descobre que a felicidade reside na capacidade de ser quem você é, sem máscaras, dentro de uma relação que estimula o seu crescimento intelectual e social.</p>
+    <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 3</h4>
+<p>Como um número 3, sua energia <strong>vibra</strong> com o número <strong>7</strong>. Com outro <strong>número 3</strong>, a alegria e a festa são garantidas, tendendo a ser uma união muito feliz, mas que exige atenção para não se perder na falta de foco ou monotonia criativa.</p>
+<p>Você <strong>atrai</strong> magneticamente os números <strong>5, 6 e 9</strong>, que se encantam com sua expressividade e otimismo.</p>
+<p>Seus <strong>opostos</strong> são os números <strong>4 e 8</strong>, pois sua leveza e improviso muitas vezes chocam-se com o pragmatismo e o rigor desses perfis.</p>
+<p>Sua dinâmica é <strong>passiva</strong> com os números <strong>1 e 2</strong>, permitindo trocas sociais e afetivas tranquilas e sem conflitos diretos.</p>
+    `,
 
     4: `<h3>Relacionamento 4 - Estabilidade e Construção Segura</h3>
     <p>Sua natureza foca na construção de bases sólidas, onde o amor se manifesta através da presença constante e do apoio prático, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua segurança emocional está ligada à fidelidade, exigindo o cultivo da paciência e do respeito às regras da convivência harmônica.</p>
     <p>É necessário evitar a rigidez ou o excesso de cobranças, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O desafio para você é encontrar beleza na construção diária e entender que o trabalho em equipe é o que garante a durabilidade do vínculo. O amor, para você, ganha forma através de atitudes concretas e leais.</p>
-    <p>Existe um desejo natural de planejar o futuro com detalhes, investindo em um lar seguro, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar a necessidade de controle, você constrói um relacionamento que é uma verdadeira rocha, servindo de exemplo de integridade e união inabalável para todos ao seu redor.</p>`,
+    <p>Existe um desejo natural de planejar o futuro com detalhes, investindo em um lar seguro, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar a necessidade de controle, você constrói um relacionamento que é uma verdadeira rocha, servindo de exemplo de integridade e união inabalável para todos ao seu redor.</p>
+    <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 4</h4>
+<p>Você, como número 4, <strong>vibra</strong> com o número <strong>6</strong>. Ao encontrar outro <strong>número 4</strong>, a construção de vida é sólida e segura; no entanto, a relação pode cair na rotina excessiva se não houver esforço para trazer novidades ao casal.</p>
+<p>Sua estabilidade <strong>atrai</strong> os números <strong>1 e 8</strong>, que enxergam em você o alicerce perfeito para grandes projetos.</p>
+<p>Você encontra o <strong>oposto</strong> nos números <strong>3 e 5</strong>, pois sua necessidade de ordem e regras contrasta com a natureza mutável desses números.</p>
+<p>Sua convivência é <strong>passiva</strong> com os números <strong>2, 7 e 9</strong>, resultando em laços duradouros, discretos e de muita confiança.</p>
+    
+    `,
 
     5: `<h3>Relacionamento 5 - Liberdade e Aventura Compartilhada</h3>
     <p>Sua energia é voltada para a aventura e a necessidade de renovação constante dentro da vida amorosa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe uma inquietude que busca parcerias cúmplices em mudanças e novas experiências sensoriais, fugindo sempre do tédio e do convencionalismo.</p>
     <p>É preciso atenção para que a instabilidade não leve ao rompimento de laços valiosos, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O aprendizado para você é entender que a autonomia pode ser vivida dentro de uma relação, desde que haja espaço para a individualidade e para a novidade constante que sua alma exige.</p>
-    <p>Seu magnetismo atrai situações que testam sua capacidade de adaptação, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O segredo é manter o canal da comunicação sempre aberto, sendo uma companhia estimulante e corajosa que encara cada transformação da vida com um espírito de exploração mútua e paixão.</p>`,
+    <p>Seu magnetismo atrai situações que testam sua capacidade de adaptação, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O segredo é manter o canal da comunicação sempre aberto, sendo uma companhia estimulante e corajosa que encara cada transformação da vida com um espírito de exploração mútua e paixão.</p>
+    <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 5</h4>
+<p>Como um perfil número 5, você <strong>vibra</strong> com o número <strong>5</strong>. Relacionar-se com outro <strong>número 5</strong> gera uma explosão de liberdade e aventuras; a afinidade é total, mas pode faltar "chão" ou estabilidade, tornando a relação cansativa a longo prazo.</p>
+<p>Sua energia vibrante <strong>atrai</strong> os números <strong>3 e 9</strong>, que compartilham do seu entusiasmo e visão de mundo.</p>
+<p>Seus <strong>opostos</strong> são os números <strong>2, 4 e 6</strong>, onde sua sede de mudanças pode ferir a necessidade de segurança e rotina desses perfis.</p>
+<p>Você é <strong>passivo</strong> com os números <strong>1, 7 e 8</strong>, permitindo que cada um viva sua liberdade sem grandes interferências mútuas.</p>
+    `,
 
     6: `<h3>Relacionamento 6 - Cuidado e Harmonia Familiar</h3>
     <p>Sua vibração é voltada para o amor familiar e o serviço dedicado ao bem-estar das pessoas queridas, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Essa energia pede que as responsabilidades afetivas sejam assumidas com maturidade, agindo como a figura que traz harmonia e justiça para o convívio íntimo.</p>
     <p>O risco para você é o perfeccionismo ou a tendência a cobrar um ideal inatingível da parceria, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A lição de vida é o acolhimento incondicional, entendendo que o amor real aceita as imperfeições. Sua natureza pede um ambiente doméstico confortável e repleto de afeto.</p>
-    <p>Existe uma necessidade profunda de fortalecer os laços com quem ama, pois seu instinto protetor é nato, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao equilibrar o desejo de cuidar com o respeito à autonomia alheia, você se torna um porto seguro inabalável e uma referência de sabedoria e acolhimento afetuoso.</p>`,
+    <p>Existe uma necessidade profunda de fortalecer os laços com quem ama, pois seu instinto protetor é nato, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao equilibrar o desejo de cuidar com o respeito à autonomia alheia, você se torna um porto seguro inabalável e uma referência de sabedoria e acolhimento afetuoso.</p>
+    <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 6</h4>
+<p>Sendo você um número 6, você <strong>vibra</strong> com o número <strong>4</strong>. Em uma união com outro <strong>número 6</strong>, o foco será total na família e no lar, o que traz muita paz, embora possa gerar um isolamento do mundo exterior por puro conforto.</p>
+<p>Seu instinto protetor <strong>atrai</strong> os números <strong>3, 7 e 9</strong>, que buscam o seu acolhimento e senso estético.</p>
+<p>Seus <strong>opostos</strong> são os números <strong>1, 8 e 5</strong>, pois seu desejo de cuidar e estar perto pode ser interpretado como controle por esses perfis mais independentes.</p>
+<p>Sua relação é <strong>passiva</strong> com o número <strong>2</strong>, criando um ambiente de mútua aceitação e cooperação afetiva profunda.</p>
+    `,
 
     7: `<h3>Relacionamento 7 - Profundidade e Sintonia de Almas</h3>
     <p>A vida afetiva sob esta influência exige profundidade e respeito ao silêncio, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você busca uma união de almas, onde a sintonia intelectual e espiritual são os pilares principais, valorizando imensamente a qualidade do tempo compartilhado em vez da quantidade.</p>
     <p>É preciso evitar o isolamento excessivo, que pode fazer com que o outro se sinta excluído, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O desafio para você é aprender a compartilhar seus sentimentos mais profundos, permitindo que o par conheça sua essência real e sem as defesas que você costuma erguer.</p>
-    <p>Sua intuição aguçada permite perceber as verdades ocultas na relação, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar o medo da vulnerabilidade, você desenvolve um vínculo de integridade absoluta, onde a cumplicidade nasce do entendimento silencioso e de uma admiração mútua que transcende o físico.</p>`,
+    <p>Sua intuição aguçada permite perceber as verdades ocultas na relação, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar o medo da vulnerabilidade, você desenvolve um vínculo de integridade absoluta, onde a cumplicidade nasce do entendimento silencioso e de uma admiração mútua que transcende o físico.</p>
+        <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 7</h4>
+<p>Como número 7, sua alma <strong>vibra</strong> com o número <strong>3</strong>. Ao se unir a outro <strong>número 7</strong>, a conexão intelectual e espiritual é raríssima e profunda, porém corre-se o risco de um silêncio excessivo ou distanciamento da vida prática.</p>
+<p>Sua profundidade <strong>atrai</strong> os números <strong>2 e 6</strong>, que se sentem fascinados pelos seus mistérios e sabedoria.</p>
+<p>Seus <strong>opostos</strong> são os números <strong>1 e 9</strong>, onde sua necessidade de isolamento e estudo pode parecer frieza para quem busca ação ou doação total.</p>
+<p>Você mantém uma dinâmica <strong>passiva</strong> com os números <strong>4, 5 e 8</strong>, garantindo o respeito mútuo ao espaço e à individualidade.</p>
+    `,
 
     8: `<h3>Relacionamento 8 - Poder e Realização em Conjunto</h3>
     <p>Sua energia traz o desafio de equilibrar o sucesso material com a entrega afetiva sincera, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você valoriza parcerias ambiciosas que respeitem sua autoridade e colaborem ativamente na construção de um patrimônio sólido e de um futuro próspero em comum.</p>
     <p>É fundamental evitar o autoritarismo no amor, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A lição para você é que a verdadeira liderança na relação nasce do respeito mútuo, e não do domínio. Existe um desejo genuíno de proteger e prover segurança para quem ama, fruto das grandes conquistas que você alcança.</p>
-    <p>Ao superar a obsessão por controle, você consolida uma relação de grande influência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A força da sua união impulsiona ambos ao topo. O sucesso afetivo aqui é medido pela lealdade e pela capacidade de transformar a paixão em um império de estabilidade e honra.</p>`,
+    <p>Ao superar a obsessão por controle, você consolida uma relação de grande influência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A força da sua união impulsiona ambos ao topo. O sucesso afetivo aqui é medido pela lealdade e pela capacidade de transformar a paixão em um império de estabilidade e honra.</p>
+<h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 8</h4>
+<p>Você, como número 8, <strong>vibra</strong> com o número <strong>2</strong>. Em um relacionamento com outro <strong>número 8</strong>, o poder de realização é imenso e o casal pode conquistar o mundo, mas devem cuidar para que a relação não vire apenas um "negócio" ou disputa de poder.</p>
+<p>Sua força <strong>atrai</strong> os números <strong>1 e 4</strong>, criando parcerias indestrutíveis focadas em sucesso e estabilidade.</p>
+<p>Seus <strong>opostos</strong> são os números <strong>3 e 6</strong>, onde sua objetividade pode ser vista como dureza por quem busca mais leveza e emoção.</p>
+<p>Sua convivência é <strong>passiva</strong> com os números <strong>5, 7 e 9</strong>, permitindo que a vida siga sem grandes atritos de autoridade.</p>
+    `,
 
     9: `<h3>Relacionamento 9 - Amor Universal e Entrega Generosa</h3>
     <p>Sua natureza é marcada pelo amor universal e pela compreensão ampla dentro das relações, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Essa energia favorece a resolução de mágoas e a abertura do coração para uma aceitação generosa das falhas humanas, agindo sempre com desprendimento e sabedoria.</p>
     <p>É preciso evitar a dramatização emocional ou a dificuldade em encerrar ciclos que não trazem mais crescimento, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A lição de vida para você é a entrega: amar com liberdade e entender que o afeto deve circular sem os pesos sufocantes do sentimento de posse ou ciúme.</p>
-    <p>Sua sensibilidade busca auxiliar o par no crescimento espiritual, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar o apego ao ego, você se torna uma presença inspiradora, capaz de viver um amor que transcende as barreiras comuns, sentindo a plenitude de quem ama com a alma e para o bem maior.</p>`,
+    <p>Sua sensibilidade busca auxiliar o par no crescimento espiritual, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao superar o apego ao ego, você se torna uma presença inspiradora, capaz de viver um amor que transcende as barreiras comuns, sentindo a plenitude de quem ama com a alma e para o bem maior.</p>
+    <h4>Análise de Harmonia - <strong>MASCULINO-FEMININO-NEUTRO</strong> é o Número 9</h4>
+<p>Como um perfil número 9, você <strong>vibra</strong> com o número <strong>1</strong>. Ao se relacionar com outro <strong>número 9</strong>, a conexão baseada em ideais e compaixão é belíssima; a afinidade é alta, mas podem esquecer de cuidar das próprias necessidades em prol do mundo ou da rotina.</p>
+<p>Sua generosidade <strong>atrai</strong> os números <strong>2, 3, 5 e 6</strong>, que buscam em você inspiração e suporte emocional.</p>
+<p>Seu <strong>oposto</strong> é o número <strong>7</strong>, pois sua entrega total e expansiva pode assustar a natureza reservada e analítica deste número.</p>
+<p>Você mantém uma relação <strong>passiva</strong> com os números <strong>4 e 8</strong>, baseada no respeito ao tempo de cada um e na cooperação silenciosa.</p>
+    `,
 
     11: `<h3>Relacionamento 11 - Conexão Intuitiva e Inspiração Mútua</h3>
     <p>A vibração 11 no amor traz uma intensidade espiritual raríssima, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você busca uma parceria que seja fonte de inspiração, alguém que compartilhe ideais elevados. A união para você deve ter um propósito maior do que apenas a rotina e a conveniência cotidiana.</p>
