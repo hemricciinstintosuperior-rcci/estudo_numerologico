@@ -2105,37 +2105,64 @@ const bancoMesPessoal = {
     }
 };        
         
-function calcularCalendarioMensal(valorAnoPessoal) {
+function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
+    if (!valorAnoPessoal || !mesNascimento) {
+        console.error("DADOS FALTANDO:", { valorAnoPessoal, mesNascimento });
+        return "<p style='color:#666; text-align:center;'>Dados cronológicos não disponíveis.</p>";
+    }
+
     const nomesMeses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     let htmlGerado = "";
+    
+    let anoBase = parseInt(valorAnoPessoal);
+    let mesPartida = parseInt(mesNascimento) - 1; 
 
-    nomesMeses.forEach((nome, index) => {
-        let mesCivil = index + 1;
-        let soma = valorAnoPessoal + mesCivil;
-        
-        // Redução Numerológica inteligente (mantém 11 e 22)
-        let numMP = soma;
+    for (let i = 0; i < 12; i++) {
+        let indexMes = (mesPartida + i) % 12;
+        let nomeMes = nomesMeses[indexMes];
+        let numeroMesCivil = indexMes + 1;
+
+        // Cálculo da vibração mensal
+        let numMP = anoBase + numeroMesCivil;
         while (numMP > 9 && numMP !== 11 && numMP !== 22) {
             numMP = String(numMP).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
         }
 
         const dados = bancoMesPessoal[numMP];
 
-        htmlGerado += `
-        <div style="margin-bottom: 15px; border: 1px solid #d4af37; border-radius: 5px;">
-            <div style="background: #fdf8e6; padding: 8px 15px; border-bottom: 1px solid #d4af37; display: flex; justify-content: space-between; font-weight: bold;">
-                <span style="color: #8a6d3b;">${nome}</span>
-                <span style="color: #d4af37;">Mês Pessoal ${numMP}</span>
-            </div>
-            <div style="padding: 12px; font-size: 0.85rem; line-height: 1.5; background: #fff;">
-                <p><strong>Foco:</strong> ${dados.titulo}</p>
-                <p><strong>Lado Pessoal/Afetivo:</strong> ${dados.pessoal} ${dados.afetivo}</p>
-                <p><strong>Profissional:</strong> ${dados.profissional}</p>
-                <p style="color: #a94442; margin-top: 5px;"><strong>Atenção:</strong> ${dados.orientacoes}</p>
-            </div>
-        </div>`;
-    });
-
+        if (dados) {
+            htmlGerado += `
+            <div style="margin-bottom: 25px; border: 1px solid #d4af37; background: #fff; page-break-inside: avoid; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <div style="background: #1a1a1a; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center;">
+                    <strong style="color: #d4af37; text-transform: uppercase; letter-spacing: 1px;">${nomeMes}</strong>
+                    <span style="background: #d4af37; color: #1a1a1a; padding: 2px 12px; border-radius: 20px; font-weight: 800; font-size: 0.8rem;">MÊS PESSOAL ${numMP}</span>
+                </div>
+                
+                <div style="padding: 15px; font-size: 0.9rem; line-height: 1.6; color: #333;">
+                    <p style="color: #b8860b; font-weight: bold; font-size: 1.05rem; margin-bottom: 10px; border-bottom: 1px solid #f0f0f0; padding-bottom: 5px;">
+                        ${dados.titulo}
+                    </p>
+                    
+                    <div style="margin-bottom: 8px;">
+                        <strong>👤 Lado Pessoal:</strong> ${dados.pessoal}
+                    </div>
+                    
+                    <div style="margin-bottom: 8px;">
+                        <strong>❤️ Lado Afetivo:</strong> ${dados.afetivo}
+                    </div>
+                    
+                    <div style="margin-bottom: 8px;">
+                        <strong>💼 Profissional:</strong> ${dados.profissional}
+                    </div>
+                    
+                    <div style="margin-top: 10px; padding: 10px; background: #fdf8e6; border-radius: 4px; border-left: 3px solid #a94442;">
+                        <strong style="color: #a94442;">⚠️ ORIENTAÇÕES:</strong> 
+                        <span style="color: #444;">${dados.orientacoes}</span>
+                    </div>
+                </div>
+            </div>`;
+        }
+    }
     return htmlGerado;
 }
 
