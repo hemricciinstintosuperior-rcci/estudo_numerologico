@@ -1863,7 +1863,40 @@ h += `</div>`; // Fecha a div secao-card
     return { html: htmlFinal, dados: {} }; 
 }
 
+function calcularAptidaoProfissional(res) {
+    // Pegamos os 4 pilares solicitados
+    const pilares = [
+        reduzirPuro(res.dia), // Profissão pelo dia
+        res.CaminhodeVida, 
+        res.Propósito, 
+        res.Personalidade
+    ];
 
+    let contagemProfissoes = {};
+
+    // Percorre cada pilar e soma as ocorrências das profissões
+    pilares.forEach(num => {
+        const lista = bancoProfissoes[num] || [];
+        lista.forEach(profissao => {
+            contagemProfissoes[profissao] = (contagemProfissoes[profissao] || 0) + 1;
+        });
+    });
+
+    // Filtra as profissões que apareceram em pelo menos 2 pilares (Destaques)
+    // E as que apareceram em 3 ou mais (Alta Aptidão)
+    let altaAptidao = [];
+    let boaAptidao = [];
+
+    for (let prof in contagemProfissoes) {
+        if (contagemProfissoes[prof] >= 3) {
+            altaAptidao.push(prof);
+        } else if (contagemProfissoes[prof] === 2) {
+            boaAptidao.push(prof);
+        }
+    }
+
+    return { altaAptidao, boaAptidao };
+}
 
         
 function gerarMapaCompleto() {
@@ -1996,6 +2029,19 @@ desafios: {
 },
  anoPessoal: resultadoAnoPessoal
 };
+
+const aptidao_texto = `<h4>Sua Aptidão Profissional Premium</h4>
+<p>Nesta análise, cruzamos seu <strong>Dia de Nascimento</strong>, <strong>Caminho de Vida</strong>, <strong>Propósito</strong> e <strong>Personalidade</strong> para identificar as carreiras onde você terá maior sucesso e satisfação.</p>
+
+${aptidao.altaAptidao.length > 0 ? `
+<p><strong>Forte Vocação (Encontrada em 3 ou mais áreas do seu mapa):</strong><br>
+Sua energia é extremamente compatível com: <strong>${aptidao.altaAptidao.join(", ")}</strong>. Nestas áreas, o sucesso tende a vir de forma mais natural.</p>` : ''}
+
+${aptidao.boaAptidao.length > 0 ? `
+<p><strong>Caminhos Favoráveis (Encontrados em 2 áreas do seu mapa):</strong><br>
+Você também possui excelente aptidão para: <strong>${aptidao.boaAptidao.join(", ")}</strong>.</p>` : ''}
+
+<p><em>Lembre-se: O sucesso profissional ocorre quando você une seu talento natural à sua missão de vida.</em></p>`;    
 
 // --- 1. CÁLCULOS DE APOIO (RODANDO ANTES DO PAINEL) ---
 const dadosDesejoObj = calcularDesejoOculto(nomeRaw);
