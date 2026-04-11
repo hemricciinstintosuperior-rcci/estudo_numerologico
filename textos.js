@@ -879,62 +879,99 @@ Personalidade: {
     1: `<h3>Personalidade 1 - O Líder Pioneiro e Independente</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma presença poderosa, dinâmica e dotada de uma competência que se manifesta assim que você pisa em qualquer ambiente. As pessoas percebem imediatamente a sua autoridade natural, vendo em você alguém que possui clareza absoluta sobre o que quer e a força de vontade para chegar lá sem hesitar.</p>
     <p>Você se expressa de maneira direta e assertiva, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Por isso, é comum que as pessoas te procurem para tomar decisões rápidas ou liderar frentes que exigem coragem. O mundo enxerga em você uma figura resolutiva, que encara os problemas de frente e não se deixa abalar por críticas superficiais, mantendo o foco inabalável no topo.</p>
-    <p>Muitas vezes, essa sua fachada de força e autonomia pode fazer com que os outros te vejam como alguém um pouco distante, mas isso é apenas o reflexo do seu compromisso total com a excelência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua presença é sinônimo de progresso, consolidando a imagem de quem nasceu para o comando e possui a resiliência para sustentar grandes responsabilidades com elegância.</p>`,
+    <p>Muitas vezes, essa sua fachada de força e autonomia pode fazer com que os outros te vejam como alguém um pouco distante, mas isso é apenas o reflexo do seu compromisso total com a excelência, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua presença é sinônimo de progresso, consolidando a imagem de quem nasceu para o comando e possui a resiliência para sustentar grandes responsabilidades com elegância.</p>
+    
+       <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: tons de amarelo e laranja, marrom, dourado, verde, creme e branco. Estas tonalidades harmonizam perfeitamente com a sua vibração pessoal.</p>
+    `,
 
     2: `<h3>Personalidade 2 - O Diplomata Atencioso e Harmonioso</h3>
     <p>A imagem que você projeta para a sociedade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma presença extremamente gentil, diplomática e acolhedora. Você transmite uma sensação de paz imediata; as pessoas veem em você uma figura harmoniosa, dotada de uma capacidade de escuta rara e de um tato social que permite lidar com qualquer temperamento com elegância.</p>
     <p>Você é percebido(a) como a parceria ideal, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Alguém em quem se pode confiar segredos e buscar apoio seguro. Seus modos refletem bom gosto e discrição, preferindo brilhar pela sensibilidade do que pela ostentação. O mundo vê em você o "cimento" que mantém os grupos unidos, valorizando a sua habilidade de perceber nuances que outros ignoram.</p>
-    <p>Essa sua postura receptiva faz com que todos se sintam seguros ao seu lado, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você recebe admiração pela sua paciência e mediação, provando que a gentileza é uma ferramenta de influência poderosa. O seu legado social é construído sobre a base da confiança e do afeto que você distribui com maestria.</p>`,
+    <p>Essa sua postura receptiva faz com que todos se sintam seguros ao seu lado, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você recebe admiração pela sua paciência e mediação, provando que a gentileza é uma ferramenta de influência poderosa. O seu legado social é construído sobre a base da confiança e do afeto que você distribui com maestria.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: tons de verde, creme, branco e cinza. Elas ajudam a equilibrar sua energia, sendo recomendável evitar o preto, púrpura e o vermelho escuro.</p>
+    `,
 
     3: `<h3>Personalidade 3 - O Comunicador Criativo e Carismático</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é vibrante e repleta de um carisma que ilumina qualquer lugar. As pessoas te percebem como uma figura solar, com um magnetismo social irresistível que atrai amizades e oportunidades através de uma facilidade de comunicação simplesmente admirável.</p>
     <p>Sua expressão externa é a de uma presença entusiasmada, <strong>MASCULINO-FEMININO-NEUTRO</strong>, capaz de motivar os outros com uma naturalidade contagiante. Você é visto(a) como uma inteligência rápida e versátil, que transita entre diferentes assuntos com charme. O mundo admira a forma como você encara os desafios com otimismo, agindo como um catalisador de boas notícias.</p>
-    <p>Para a sociedade, você representa a alegria e a sociabilidade plena, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um brilho no seu olhar que comunica paixão pela vida, fazendo de você uma peça fundamental em qualquer projeto que precise de criatividade e brilho. Você prova, diariamente, que a expressão da alma é o caminho mais curto para o êxito social.</p>`,
+    <p>Para a sociedade, você representa a alegria e a sociabilidade plena, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um brilho no seu olhar que comunica paixão pela vida, fazendo de você uma peça fundamental em qualquer projeto que precise de criatividade e brilho. Você prova, diariamente, que a expressão da alma é o caminho mais curto para o êxito social.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: violeta, vinho, púrpura e vermelho. Tons de azul e rosa também funcionam muito bem se utilizados como cores secundárias.</p>
+    `,
 
     4: `<h3>Personalidade 4 - O Construtor Disciplinado e Estável</h3>
     <p>A imagem que você projeta para a sociedade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é de uma solidez absoluta e de um compromisso inabalável com a verdade. As pessoas veem em você alguém com os pés firmemente plantados no chão, que valoriza a ordem e as bases seguras, agindo com uma seriedade que impõe respeito imediato.</p>
     <p>Você é visto(a) como a figura que planeja com cuidado e executa com perfeição, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Alguém que nunca foge das responsabilidades e que prefere o que é prático e duradouro. O mundo confia em você porque a sua palavra é uma lei e a sua entrega é garantida. Você é a rocha que permanece firme em meio às tempestades.</p>
-    <p>As pessoas admiram a sua capacidade de construir resultados concretos através da dedicação honesta, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Essa sua imagem de seriedade faz de você a escolha prioritária para gerir grandes projetos. Você não busca o aplauso fácil, mas sim o reconhecimento da sua competência e do seu caráter inatacável.</p>`,
+    <p>As pessoas admiram a sua capacidade de construir resultados concretos através da dedicação honesta, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Essa sua imagem de seriedade faz de você a escolha prioritária para gerir grandes projetos. Você não busca o aplauso fácil, mas sim o reconhecimento da sua competência e do seu caráter inatacável.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: azul, cinza, púrpura e dourado. Essas cores trazem a estabilidade e a força necessárias para o seu perfil.</p>
+    `,
 
     5: `<h3>Personalidade 5 - O Aventureiro Versátil e Inovador</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma personalidade moderna e dotada de uma energia vital inesgotável. As pessoas percebem em você uma alma livre e progressista, que está sempre em movimento e pronta para se adaptar a qualquer mudança com uma agilidade mental impressionante.</p>
     <p>Sua expressão externa é magnética, <strong>MASCULINO-FEMININO-NEUTRO</strong>, atraindo a atenção pela sua coragem de experimentar o novo sem medo. Você é visto(a) como uma figura inteligente e desimpedida, capaz de romper barreiras com um charme pessoal único. Você desafia o "sempre foi assim", trazendo frescor para ambientes estagnados.</p>
-    <p>Para os outros, você representa a quebra de padrões e a busca pela autonomia plena, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A sociedade vê em você a prova de que a vida é um campo de possibilidades para quem tem a ousadia de seguir o próprio ritmo. Seu sucesso vem da sua habilidade em ser o elo entre o presente e o futuro.</p>`,
+    <p>Para os outros, você representa a quebra de padrões e a busca pela autonomia plena, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A sociedade vê em você a prova de que a vida é um campo de possibilidades para quem tem a ousadia de seguir o próprio ritmo. Seu sucesso vem da sua habilidade em ser o elo entre o presente e o futuro.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: todas as cores claras, principalmente o branco, cinza e prata. Elas potencializam sua clareza mental e movimento.</p>
+    `,
 
     6: `<h3>Personalidade 6 - O Guardião Responsável e Acolhedor</h3>
     <p>A imagem que você projeta para a sociedade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma presença calorosa e inteiramente voltada para o cuidado. As pessoas veem em você uma figura de proteção e consolo, alguém que valoriza os laços afetivos e a ética acima de qualquer interesse egoísta.</p>
     <p>Você é percebido(a) como a pessoa que torna os ambientes mais bonitos e harmoniosos, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A sociedade busca em você conselhos sábios, confiando na sua integridade moral para resolver conflitos. Sua dedicação ao bem-estar dos outros é admirada, fazendo de você o ponto de apoio seguro para todos em momentos de crise.</p>
-    <p>Para o mundo, você é o exemplo vivo da bondade ativa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas sentem amparo na sua vibração de amor e na sua capacidade de entender o coração alheio. Sua presença é considerada um presente para a sociedade, provando que o serviço ao próximo é o alicerce de uma vida bem-sucedida.</p>`,
+    <p>Para o mundo, você é o exemplo vivo da bondade ativa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas sentem amparo na sua vibração de amor e na sua capacidade de entender o coração alheio. Sua presença é considerada um presente para a sociedade, provando que o serviço ao próximo é o alicerce de uma vida bem-sucedida.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: rosa, azul e verde. Note que cores muito escuras são desfavoráveis e devem ser evitadas para manter sua energia em alta.</p>
+    `,
 
     7: `<h3>Personalidade 7 - O Observador Sábio e Analítico</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma personalidade culta, reservada e dotada de uma inteligência profunda. As pessoas veem em você uma aura de sabedoria e dignidade, percebendo alguém que prefere a observação atenta e o silêncio reflexivo ao barulho das massas.</p>
     <p>Você emana uma classe natural que impõe respeito profundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A sociedade te enxerga como um(a) especialista, alguém que segue o próprio caminho com uma integridade inquestionável. Você não segue modismos; mantém fidelidade aos seus princípios, o que te torna uma referência de solidez mental.</p>
-    <p>As pessoas buscam a sua opinião quando precisam de uma análise precisa e imparcial, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Essa sua projeção de seriedade protege você de influências indesejadas e atrai conexões que possuem substância real. Seu sucesso é baseado na autoridade que você constrói através do conhecimento puro.</p>`,
+    <p>As pessoas buscam a sua opinião quando precisam de uma análise precisa e imparcial, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Essa sua projeção de seriedade protege você de influências indesejadas e atrai conexões que possuem substância real. Seu sucesso é baseado na autoridade que você constrói através do conhecimento puro.</p>
+<h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: verde, amarelo, branco, cinza e azul claro. Procure evitar cores escuras para não sobrecarregar sua vibração natural.</p>
+    `,
 
     8: `<h3>Personalidade 8 - O Executivo Poderoso e Eficiente</h3>
     <p>A imagem que você projeta para a sociedade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma figura poderosa e nitidamente bem-sucedida. As pessoas veem em você alguém que nasceu para o comando, com uma capacidade natural para gerir grandes recursos e liderar projetos com um pragmatismo extraordinário.</p>
     <p>Sua expressão externa transmite autoconfiança e uma força que indica que você sabe exatamente como lidar com o poder, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você é percebido(a) como uma personalidade vencedora, que conquistou seu espaço com disciplina e coragem. Essa sua solidez faz de você a liderança natural em qualquer crise.</p>
-    <p>Para o mundo, você representa a realização material plena, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas confiam na sua liderança porque enxergam em você a força necessária para garantir a prosperidade de todos. Sua trajetória é respeitada não apenas pelo que você possui, mas pela forma magistral como você conduz a realidade.</p>`,
+    <p>Para o mundo, você representa a realização material plena, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas confiam na sua liderança porque enxergam em você a força necessária para garantir a prosperidade de todos. Sua trajetória é respeitada não apenas pelo que você possui, mas pela forma magistral como você conduz a realidade.</p>
+<h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: púrpura, azul, cinza, preto e marrom. Para o seu perfil, as cores escuras trazem elegância e autoridade.</p>
+    `,
 
     9: `<h3>Personalidade 9 - O Humanitário Sábio e Altruísta</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma personalidade generosa, sábia e dotada de uma visão que vai muito além do próprio ego. As pessoas te veem como uma alma carismática, que possui uma compreensão profunda da vida e age com uma compaixão que inspira confiança imediata.</p>
     <p>Sua presença é descrita como inspiradora, <strong>MASCULINO-FEMININO-NEUTRO</strong>, atraindo pessoas de todas as origens que buscam na sua experiência um pouco de luz e direção. A sociedade te percebe como alguém desapegado, capaz de grandes gestos por uma causa nobre. Você emana uma sabedoria que parece vir de muitas vidas.</p>
-    <p>Você é visto(a) como alguém que veio para curar e transformar a realidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas admiram a sua coragem de ser autêntico(a) e a forma como trata todos com a mesma dignidade. Sua trajetória é celebrada como um exemplo de que a verdadeira grandeza reside na generosidade absoluta.</p>`,
+    <p>Você é visto(a) como alguém que veio para curar e transformar a realidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas admiram a sua coragem de ser autêntico(a) e a forma como trata todos com a mesma dignidade. Sua trajetória é celebrada como um exemplo de que a verdadeira grandeza reside na generosidade absoluta.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: vermelho, rosa, coral e vinho. Essas cores intensas ressoam com a sua natureza generosa e ativa.</p>
+    `,
 
     11: `<h3>Personalidade 11 - O Visionário Inspirador e Intuitivo</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma presença magnética e dotada de uma intuição que parece captar o invisível. As pessoas percebem em você uma alma visionária, alguém com uma sensibilidade superior que se destaca naturalmente em qualquer grupo.</p>
     <p>Sua expressão é persuasiva e sábia, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A sociedade vê em você uma inteligência brilhante, capaz de propor soluções que tocam a essência dos problemas. Sua presença é associada ao despertar de consciências, tornando você a figura ideal para guiar projetos que exijam visão de vanguarda.</p>
-    <p>Essa sua aura de profundidade faz com que os outros te vejam como alguém especial, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você valoriza o equilíbrio acima de tudo, e o mundo respeita a sua atuação como uma personalidade que traz luz para a obscuridade através de uma criatividade que não conhece limites.</p>`,
+    <p>Essa sua aura de profundidade faz com que os outros te vejam como alguém especial, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você valoriza o equilíbrio acima de tudo, e o mundo respeita a sua atuação como uma personalidade que traz luz para a obscuridade através de uma criatividade que não conhece limites.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: branco, violeta e todas as tonalidades claras, que elevam sua percepção e intuição.</p>
+    `,
 
     22: `<h3>Personalidade 22 - O Grande Construtor e Estrategista Mundial</h3>
     <p>A imagem que você projeta para a sociedade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma força de vontade extraordinária e uma competência absoluta. As pessoas veem em você uma visão estratégica fora do comum, capaz de organizar estruturas gigantescas com uma lógica que impressiona a todos.</p>
     <p>Você é visto(a) como o(a) mestre da construção, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Alguém que planeja em escala global e executa com precisão impecável. Sua postura transmite eficiência, indicando uma mentalidade voltada para o progresso de todos. O mundo confia em você para liderar os projetos mais difíceis e importantes.</p>
-    <p>Para o mundo, você é o exemplo máximo do poder construtivo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas admiram a sua resiliência e a forma como você gera benefícios que alcançam comunidades inteiras. Você constrói uma reputação de prestígio baseada na magnitude dos resultados reais que você apresenta.</p>`,
+    <p>Para o mundo, você é o exemplo máximo do poder construtivo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas admiram a sua resiliência e a forma como você gera benefícios que alcançam comunidades inteiras. Você constrói uma reputação de prestígio baseada na magnitude dos resultados reais que você apresenta.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: vermelho, rosa, coral e vinho. Tons que reforçam sua capacidade de realização e magnetismo.</p>
+    `,
 
     33: `<h3>Personalidade 33 - O Mestre do Amor Altruísta e da Evolução</h3>
     <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de uma personalidade profundamente bondosa e acolhedora. As pessoas veem em você uma figura de proteção e amor incondicional, percebendo alguém que age movido por um dever sagrado de trazer harmonia para a humanidade.</p>
     <p>Você é percebido(a) como quem possui o dom da palavra que educa e cura, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A sociedade te vê como um mestre do amor em ação, com uma integridade moral que atrai o respeito de todas as gerações. Você traz conforto e esperança de forma natural e constante por onde passa.</p>
-    <p>Para o mundo, você representa a entrega aos ideais superiores, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas buscam a sua companhia porque se sentem amparadas pela paz que emana de cada gesto seu. Sua trajetória é celebrada como a prova de que o serviço ao próximo é o caminho mais elevado para a paz espiritual plena.</p>`
+    <p>Para o mundo, você representa a entrega aos ideais superiores, <strong>MASCULINO-FEMININO-NEUTRO</strong>. As pessoas buscam a sua companhia porque se sentem amparadas pela paz que emana de cada gesto seu. Sua trajetória é celebrada como a prova de que o serviço ao próximo é o caminho mais elevado para a paz espiritual plena.</p>
+    <h4>As cores favoráveis para sua personalidade</h4>
+<p><strong>MASCULINO-FEMININO-NEUTRO</strong>, as suas cores favoráveis são estas: roxo, violeta, azul claro, rosa, amarelo e verde. Essas tonalidades emanam a energia de cura e compaixão necessária para equilibrar a sua elevada vibração pessoal.</p>
+    `
 },
 
 // --- CAMINHO DE VIDA (DESTINO / ESTRADA DA VIDA) ---
