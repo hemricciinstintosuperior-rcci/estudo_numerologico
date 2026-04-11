@@ -1911,42 +1911,39 @@ function calcularAptidaoProfissional(res) {
         });
     });
 
-    // 2. Transforma o objeto em um array para podermos ordenar pelo mais forte
+    // 2. Transforma o objeto em um array e ordena do MAIS frequente para o MENOS frequente
     let areasOrdenadas = Object.keys(contagem).map(area => {
         return { nome: area, pontos: contagem[area] };
     });
 
-    // Ordena: os que têm mais pontos aparecem primeiro
+    // Ordenação Decrescente
     areasOrdenadas.sort((a, b) => b.pontos - a.pontos);
 
-    // 3. SEPARAÇÃO HIERÁRQUICA
-    // Zona de Sucesso Absoluto (As 3 áreas mais fortes com no mínimo 3 pontos)
-    let vocacaoMaster = areasOrdenadas
-        .filter(item => item.pontos >= 3)
-        .slice(0, 3) // Pega as 3 principais
-        .map(item => item.nome);
+    // 3. LOGICA DE PREENCHIMENTO GARANTIDO
+    
+    // Pegamos as 3 primeiras áreas do topo da lista (as mais fortes do mapa desse cliente)
+    // Independente de terem 1, 2 ou 3 pontos, elas são as "melhores" para ele.
+    let vocacaoMaster = areasOrdenadas.slice(0, 3).map(item => item.nome);
 
-    // Campo de Afinidade (Todas as outras que tiveram pelo menos 2 pontos e não estão no Master)
-    let afinidade = areasOrdenadas
-        .filter(item => item.pontos >= 2 && !vocacaoMaster.includes(item.nome))
-        .map(item => item.nome);
+    // Campo de Afinidade: Pega da 4ª posição até a 12ª (para encher bem o quadro azul)
+    let afinidade = areasOrdenadas.slice(3, 12).map(item => item.nome);
 
     // 4. MONTAGEM DO HTML DINÂMICO
     return `
         <div style="margin-top: 10px; padding: 20px; background: #fffcf0; border: 1px solid #d97a1e; border-left: 8px solid #d97a1e; border-radius: 8px;">
             <h4 style="color: #d97a1e; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🚩 Zona de Sucesso Absoluto (Foco Principal)</h4>
             <p style="font-size: 1.2rem; font-weight: bold; color: #1a1a1a; line-height: 1.4;">
-                ${vocacaoMaster.length > 0 ? vocacaoMaster.join(" • ") : "Sua energia indica uma atuação multidisciplinar de alta performance."}
+                ${vocacaoMaster.length > 0 ? vocacaoMaster.join(" • ") : "Consultoria Estratégica • Gestão de Negócios"}
             </p>
             <p style="font-size: 0.85rem; color: #666; margin-top: 8px; font-style: italic;">
-                *Estes são os seus três pilares de maior retorno financeiro e satisfação pessoal.
+                *Estes são os seus pilares de maior retorno financeiro e satisfação pessoal.
             </p>
         </div>
 
         <div style="margin-top: 20px; padding: 20px; background: #f4f7f9; border: 1px solid #3498db; border-left: 8px solid #3498db; border-radius: 8px;">
             <h4 style="color: #3498db; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🔍 Campo de Afinidade (Caminhos Favoráveis)</h4>
             <p style="font-size: 1rem; font-weight: 500; color: #444; line-height: 1.6;">
-                ${afinidade.length > 0 ? afinidade.join(" • ") : "Analise as tendências complementares do seu mapa."}
+                ${afinidade.length > 0 ? afinidade.join(" • ") : "Desenvolvimento Profissional • Planejamento • Liderança"}
             </p>
             <p style="font-size: 0.85rem; color: #666; margin-top: 8px; font-style: italic;">
                 *Áreas onde você possui talentos naturais que facilitam o crescimento e a adaptação.
