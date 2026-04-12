@@ -223,14 +223,44 @@
 .num.negativo { background-color: #fff !important; color: #FF0000 !important; }
 .bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ffffff; }
 /* Fundo sempre branco para todos os números da pirâmide */
+/* 1. ESTILO BASE DOS QUADRADOS (IGUAL À FOTO) */
 .num { 
-    background-color: #ffffff !important; 
-    border: 1px solid #eee; /* Bordinha leve para definir o quadrado */
+    background-color: #ffffff !important; /* Fundo sempre branco */
+    border: 1px solid #e0e0e0;           /* Bordinha muito sutil */
+    color: #000E52 !important;           /* Cor padrão dos números (azul marinho) */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px; 
+    height: 22px;
+    border-radius: 2px;
 }
 
-.num.negativo { color: #FF0000 !important; font-weight: 900 !important; background: #fff !important; }
-.num.especial { color: #d97a1e !important; font-weight: 900 !important; background: #fff !important; }
-.num.financeiro { color: #28a745 !important; font-weight: 900 !important; background: #fff !important; }
+/* 2. CORES APENAS NOS NÚMEROS (TEXTO) */
+
+/* Sequências de Vulnerabilidade / Bloqueios (Vermelho) */
+.num.negativo { 
+    color: #FF0000 !important; 
+    font-weight: 900 !important;
+    background-color: #ffffff !important; /* Garante fundo branco */
+}
+
+/* Sequências Especiais (Dourado/Laranja Luxo) */
+.num.especial { 
+    color: #d97a1e !important; 
+    font-weight: 900 !important;
+    background-color: #ffffff !important; /* Garante fundo branco */
+}
+
+/* Sequências Financeiras / Triângulo de 9 (Verde) */
+.num.financeiro { 
+    color: #28a745 !important; 
+    font-weight: 900 !important;
+    background-color: #ffffff !important; /* Garante fundo branco */
+}
+
+
 
 /* O Regente mantém o seu estilo especial de triângulo que já definimos */
     .container-piramide {
