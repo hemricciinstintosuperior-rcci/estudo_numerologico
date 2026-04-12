@@ -3542,7 +3542,7 @@ if(dadosNegativas.detalhes.length > 0){
     <h2 style="color:red; margin-top:30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;"> Sequências de Vulnerabilidade</h2>
     `;
     
-    const arcanosTopo = topo(piramideVida[0]);
+   
 
     dadosNegativas.detalhes.forEach(neg => {
         let idadeInicio = 0;
@@ -3575,8 +3575,7 @@ if(dadosNegativas.detalhes.length > 0){
 
 const arcanosTopo = topo(piramideVida[0]);
 
-// --- PROCESSAR SEQUÊNCIAS ESPECIAIS (INDIVIDUALMENTE) ---
-const listaEspeciais = detectarEspeciaisIndependentes(piramideVida);
+
 if (listaEspeciais.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⭐</h2></div></div>`;
     
@@ -3602,8 +3601,7 @@ if (listaEspeciais.length > 0) {
     });
 }
 
-// --- PROCESSAR SEQUÊNCIAS FINANCEIRAS (INDIVIDUALMENTE) ---
-const listaFin = detectarFinanceirasIndependentes(piramideVida);
+
 if (listaFin.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Fluxos Financeiros 💰</h2></div></div>`;
     
