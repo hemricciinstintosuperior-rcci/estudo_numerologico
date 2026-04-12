@@ -3736,25 +3736,21 @@ htmlPiramide += `</div>`;
 piramideVida.forEach((linha, i) => {
     htmlPiramide += `<div class="linha">`;
     linha.forEach((n, j) => {
-        let classes = ["num"];
+// --- DENTRO DO LOOP DA PIRÂMIDE ---
+let classes = ["num"];
 
-        // 1. PINTURA DAS NEGATIVAS (Bloqueios)
-        // Verifica se a posição atual (i, j) faz parte de qualquer sequência negativa de 3 números
-        if (dadosNegativas.pos.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
-            classes.push("negativo");
-        } 
-        
-        // 2. PINTURA DAS FINANCEIRAS (99/9 - Verde)
-        // Verifica se a posição atual faz parte do trio financeiro
-        else if (posFinanceiras.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
-            classes.push("financeiro");
-        } 
-        
-        // 3. PINTURA DAS ESPECIAIS (168, 518, etc. - Dourado)
-        // Verifica se a posição atual faz parte do trio especial detectado
-        else if (posEspeciais.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
-            classes.push("especial");
-        }
+// Pinta o trio completo das Negativas
+if (dadosNegativas.pos.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+    classes.push("negativo");
+} 
+// Pinta o trio completo do Financeiro (Verde)
+else if (posFinanceiras.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+    classes.push("financeiro");
+} 
+// Pinta o trio completo das Especiais (Dourado)
+else if (posEspeciais.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+    classes.push("especial");
+}
 
         // Destaque do Regente (Última linha)
         if (i === piramideVida.length - 1) classes.push("regente-destaque");
@@ -3860,17 +3856,10 @@ if (posFinanceiras.length > 0) {
     </div>`;
 }
 
-// --- BLOCO DE SEQUÊNCIAS ESPECIAIS (Corrigido) ---
 if (posEspeciais.length > 0) {
-    // Garante que os arcanos do topo existam para calcular a vigência
-    const arcanosTopoEspeciais = topo(piramideVida[0]); 
-
-    htmlPiramide += `
-    <div class="evitar-corte" style="margin-top: 40px;">
-        <div class="separador-luxo">
-            <div class="caixa-interna"><h2>Sequências Especiais e Potenciais ⚡</h2></div>
-        </div>
-        <div class="secao-card">`;
+    const topoParaEspeciais = topo(piramideVida[0]);
+    
+    htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⚡</h2></div></div>`;
 
     posEspeciais.forEach(esp => {
         let offset = Math.floor(esp.l / 2);
@@ -3878,33 +3867,26 @@ if (posEspeciais.length > 0) {
         let idadeIni = 0;
         let duracao = 0;
 
-        // Calcula a idade de início baseada no Topo
+        // Cálculo das idades baseado no topo
         for (let a = 0; a < colReal; a++) {
-            let p = arcanosTopoEspeciais[a] || arcanosTopoEspeciais[0];
-            idadeIni += parseInt(p.toString()[0]) || 1;
+            idadeIni += parseInt((topoParaEspeciais[a] || "1").toString()[0]);
+        }
+        for (let b = 0; b < 3; b++) { // r = 3 números
+            duracao += parseInt((topoParaEspeciais[colReal + b] || "1").toString()[0]);
         }
 
-        // Calcula a duração (sempre 3 colunas para as especiais)
-        for (let b = 0; b < esp.r; b++) {
-            let p = arcanosTopoEspeciais[colReal + b] || arcanosTopoEspeciais[0];
-            duracao += parseInt(p.toString()[0]) || 1;
-        }
-
-        // Gera as datas de Vigência (usando a função de data blindada)
-        const datasEsp = calcularCalendarioVigencia(dataRaw, idadeIni, duracao);
+        // AQUI ESTÁ A SOLUÇÃO: Definir a variável antes de usar no HTML
+        const datasEspeciais = calcularCalendarioVigencia(dataRaw, idadeIni, duracao);
 
         htmlPiramide += `
-            <div class="card-especial" style="margin-bottom: 30px; border-left: 6px solid #d4af37; padding: 20px; background: #fffcf0; border-radius: 0 10px 10px 0;">
-                <h3 style="color: #827108; font-size: 22px; margin: 0;">⚡ Sequência Especial: ${esp.valor}</h3>
-                <p style="font-weight: bold; color: #b8860b; margin: 10px 0; font-size: 18px;">
-                    📅 VIGÊNCIA: ${datas.ini} até ${datas.fim}
-                </p>
-                <p style="color: #444; font-size: 17px;">⏳ Ciclo: dos ${idadeIni} aos ${idadeIni + duracao} anos</p>
-                <div class="texto-res" style="text-align: justify; font-size: 18px; line-height: 1.6; color: #111;">
-                    ${aplicarFiltroTexto(textos.SeqEspeciais[esp.valor] || "Vibração especial em análise.")}
-                </div>
+            <div class="card-especial" style="margin-bottom: 30px; border-left: 6px solid #d4af37; padding: 20px; background: #fffcf0;">
+                <h3 style="color: #827108; font-size: 22px;">⚡ Sequência Especial: ${esp.valor}</h3>
+                <p style="font-weight: bold; color: #b8860b;">📅 VIGÊNCIA: ${datasEspeciais.ini} até ${datasEspeciais.fim}</p>
+                <p>⏳ Ciclo: dos ${idadeIni} aos ${idadeIni + duracao} anos</p>
+                <div class="texto-res">${aplicarFiltroTexto(textos.SeqEspeciais[esp.valor])}</div>
             </div>`;
     });
+}
 
     htmlPiramide += `</div></div>`;
 }
