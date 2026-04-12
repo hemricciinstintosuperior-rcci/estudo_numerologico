@@ -2618,13 +2618,44 @@ const datasFases = {
         3: { idade: ``, anos: `Acompanha toda a Vida` }
     }
 };
-// 1. PRIMEIRO: CALCULA TUDO DA PIRÂMIDE (PARA A LINHA 517 NÃO DAR ERRO)
+
+// ... (seu código anterior das datasFases termina aqui)
+ 
+// ==========================================
+// COLE ESTE BLOCO EXATAMENTE AQUI:
+// ==========================================
+
+// 1. PRIMEIRO: CALCULA A PIRÂMIDE E O TOPO
 const piramideVida = gerarPiramide(nomeRaw);
+const potenciasTopo = topo(piramideVida[0]); 
+
+// 2. SEGUNDO: CRIA O CRONOGRAMA (Isso resolve o erro 'not defined')
+const cronograma = potenciasTopo.map((arc, i) => {
+    let idadeIni = 0;
+    for(let k = 0; k < i; k++) {
+        idadeIni += parseInt(potenciasTopo[k].toString()[0]) || 0;
+    }
+    return {
+        indiceArcano: i,
+        idadeIni: idadeIni,
+        idadeFim: idadeIni + (parseInt(arc.toString()[0]) || 0),
+        ini: dataRaw 
+    };
+});
+
+// 3. TERCEIRO: DETECTA AS SEQUÊNCIAS USANDO O CRONOGRAMA ACIMA
 const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
- const posEspeciais = detectarEspeciaisNaMatriz(piramideVida); // Nova função abaixo
-const posFinanceiras = detectarFinanceiroNaMatriz(piramideVida); // Nova função abaixo   
-const potenciasTopo = topo(piramideVida[0]); 
+const posEspeciais = detectarEspeciaisNaMatriz(piramideVida); 
+const posFinanceiras = detectarFinanceiroNaMatriz(piramideVida); 
+
+// 4. QUARTO: GERA OS RESUMOS DE TEXTO
+let resumoFinanceiro = gerarRelatorioFinanceiroComVigencia(piramideVida, cronograma, textos.SeqFinanceira, potenciasTopo);
+let resumoEspeciais = gerarRelatorioEspeciaisComVigencia(piramideVida, cronograma, textos.SeqEspeciais, potenciasTopo);
+
+
+    
+
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
     <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
