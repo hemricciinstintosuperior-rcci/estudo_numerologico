@@ -95,17 +95,9 @@
     page-break-after: always;
 }
 
-    .num.financeiro {
-        background-color: #fff !important;
-        color: #34c759 !important;
-        -webkit-print-color-adjust: exact !important;
-    }
-    
-    .num.especial {
-        background-color: #fff !important;
-        color: #b8860b!important;
-        -webkit-print-color-adjust: exact !important;
-    }
+.num.negativo { background-color: #ff0000 !important; color: white !important; }
+.num.financeiro { background-color: #34c759 !important; color: white !important; }
+.num.especial { background-color: #d4af37 !important; color: white !important; font-weight: bold !important; }
     
 
     /* 🔥 EVITA QUEBRAS FEIAS */
@@ -3721,21 +3713,31 @@ htmlPiramide += `</div>`;
     
 // --- DENTRO DA FUNÇÃO gerarMapaCompleto ou onde você gera o HTML ---
 
+// --- DENTRO DO LOOP DE CONSTRUÇÃO DA PIRÂMIDE ---
 piramideVida.forEach((linha, i) => {
     htmlPiramide += `<div class="linha">`;
     linha.forEach((n, j) => {
         let classes = ["num"];
 
-        // Lógica de Pintura
-        if (dadosNegativas.pos.some(p => p.l === i && p.c === j)) {
+        // 1. PINTURA DAS NEGATIVAS (Bloqueios)
+        // Verifica se a posição atual (i, j) faz parte de qualquer sequência negativa de 3 números
+        if (dadosNegativas.pos.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
             classes.push("negativo");
-        } else if (posFinanceiras.some(p => p.l === i && p.c === j)) {
-            classes.push("financeiro"); // Aplica o Verde
-        } else if (posEspeciais.some(p => p.l === i && p.c === j)) {
-            classes.push("especial");   // Aplica o Dourado
+        } 
+        
+        // 2. PINTURA DAS FINANCEIRAS (99/9 - Verde)
+        // Verifica se a posição atual faz parte do trio financeiro
+        else if (posFinanceiras.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+            classes.push("financeiro");
+        } 
+        
+        // 3. PINTURA DAS ESPECIAIS (168, 518, etc. - Dourado)
+        // Verifica se a posição atual faz parte do trio especial detectado
+        else if (posEspeciais.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+            classes.push("especial");
         }
 
-        // Destaque do Regente
+        // Destaque do Regente (Última linha)
         if (i === piramideVida.length - 1) classes.push("regente-destaque");
 
         htmlPiramide += `<div class="${classes.join(' ')}">${n}</div>`;
