@@ -849,6 +849,25 @@ function gerarRelatorioEspeciaisComVigencia(especiaisEncontradas, arcanosTopo, d
     return html;
 }
 
+function calcularCalendarioVigencia(dataBaseRaw, idadeInicio, duracaoTotal) {
+    let dataNasc;
+    if (dataBaseRaw instanceof Date) {
+        dataNasc = new Date(dataBaseRaw.getTime());
+    } else {
+        const p = String(dataBaseRaw).split('-');
+        dataNasc = new Date(p[0], p[1] - 1, p[2]);
+    }
+
+    let dIni = new Date(dataNasc.getFullYear() + idadeInicio, dataNasc.getMonth(), dataNasc.getDate());
+    let dFim = new Date(dataNasc.getFullYear() + idadeInicio + duracaoTotal, dataNasc.getMonth(), dataNasc.getDate());
+
+    return {
+        ini: dIni.toLocaleDateString('pt-BR'),
+        fim: dFim.toLocaleDateString('pt-BR')
+    };
+}
+        
+
 
 function desenhar(linhas, compacta = false, bancoEsp = null) {
     let classe = compacta ? "piramide compacta" : "piramide";
@@ -3816,7 +3835,8 @@ if(dadosNegativas.detalhes.length > 0){
             duracaoTotal += parseInt(arcAtual.toString()[0]) || 1;
         }
 
-        const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
+        
+        const datasNeg = calcularCalendarioVigencia(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
             <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
@@ -3871,7 +3891,7 @@ if (posEspeciais.length > 0) {
         }
 
         // Gera as datas de Vigência (usando a função de data blindada)
-        const datas = calcularDatasVigenciaNegativa(dataRaw, idadeIni, duracao);
+        const datasEsp = calcularCalendarioVigencia(dataRaw, idadeIni, duracao);
 
         htmlPiramide += `
             <div class="card-especial" style="margin-bottom: 30px; border-left: 6px solid #d4af37; padding: 20px; background: #fffcf0; border-radius: 0 10px 10px 0;">
