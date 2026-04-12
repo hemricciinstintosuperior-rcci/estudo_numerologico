@@ -749,22 +749,28 @@ function calcularDatasVigenciaNegativa(dataNascStr, idadeInicio, duracaoTotal) {
  // Detecta cada triângulo de 9 individualmente (Financeiro)
 function detectarFinanceirasIndependentes(linhas) {
     let encontrados = [];
+    // Percorre até a penúltima linha (porque o triângulo precisa de uma linha abaixo)
     for (let i = 0; i < linhas.length - 1; i++) {
         for (let j = 0; j < linhas[i].length - 1; j++) {
-            if (linhas[i][j] === 9 && linhas[i][j + 1] === 9 && linhas[i + 1][j] === 9) {
-                let offset = Math.floor(i / 2);
-                encontrados.push({
-                    numero: 999, // Identificador para o texto
-                    colunaInicio: j + offset,
-                    repeticoes: 2, // O triângulo financeiro baseia-se em 2 colunas do topo
-                    linha: i
-                });
+            
+            // CONDIÇÃO REAL: Encontrou dois 99 lado a lado?
+            if (linhas[i][j] === 9 && linhas[i][j + 1] === 9) {
+                
+                // Agora verifica se EXATAMENTE abaixo do primeiro 9 existe outro 9
+                // Na pirâmide, o número abaixo de linhas[i][j] fica em linhas[i+1][j]
+                if (linhas[i + 1][j] === 9) {
+                    let offset = Math.floor(i / 2);
+                    encontrados.push({
+                        colunaInicio: j + offset,
+                        repeticoes: 2, 
+                        linha: i
+                    });
+                }
             }
         }
     }
     return encontrados;
 }
-
 // Detecta cada sequência especial de 3 dígitos individualmente
 function detectarEspeciaisIndependentes(linhas) {
     let encontrados = [];
