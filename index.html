@@ -735,22 +735,25 @@ function detectarNegativas(linhas) {
 }
 
 function calcularDatasVigenciaNegativa(dataNascStr, idadeInicio, duracaoTotal) {
-    let partes = dataNascStr.split("/");
-    // Assume formato DD/MM/AAAA do seu input atual
-    let dataBase = new Date(parseInt(partes[2]), parseInt(partes[1]) - 1, parseInt(partes[0]));
+    let dataBase;
 
-    let dataIni = new Date(dataBase);
-    dataIni.setFullYear(dataIni.getFullYear() + idadeInicio);
-    
-    let dataFim = new Date(dataIni);
-    dataFim.setFullYear(dataFim.getFullYear() + duracaoTotal);
+    // Se a data já for um objeto Date, não tenta dar split
+    if (dataNascStr instanceof Date) {
+        dataBase = new Date(dataNascStr.getTime());
+    } else {
+        // Se for string, garante a conversão
+        const partes = String(dataNascStr).split('-');
+        dataBase = new Date(partes[0], partes[1] - 1, partes[2]);
+    }
+
+    let dataIni = new Date(dataBase.getFullYear() + idadeInicio, dataBase.getMonth(), dataBase.getDate());
+    let dataFim = new Date(dataBase.getFullYear() + idadeInicio + duracaoTotal, dataBase.getMonth(), dataBase.getDate());
 
     return {
         ini: dataIni.toLocaleDateString('pt-BR'),
         fim: dataFim.toLocaleDateString('pt-BR')
     };
-}     
-
+}
 
  // --- FLUXO FINANCEIRO (Agora lê o topo) ---
 function gerarRelatorioFinanceiroComVigencia(linhas, crono, bancoTxt, topoVida) {
@@ -3835,24 +3838,41 @@ if (posFinanceiras.length > 0) {
     </div>`;
 }
 
-// --- NOVO BLOCO ESPECIAIS (Múltiplas ocorrências) ---
+// --- NOVO BLOCO ESPECIAIS (Corrigido para usar htmlPiramide) ---
 if (posEspeciais.length > 0) {
-    
-    
-// ... dentro do seu forEach de especiais ...
+    // Título da seção
+    let tituloEspecial = "Sequências Especiais e Potenciais ⚡";
+    htmlPiramide += `
+    <div class="separador-luxo"><div class="caixa-interna"><h2>${tituloEspecial}</h2></div></div>
+    <div class="secao-card">`;
 
-// Chamada corrigida: usando a função de Especiais e não a de Negativas
-const datas = calcularDatasVigenciaEspecial(dataNasc, idadeIni, duracao);
+    posEspeciais.forEach(esp => {
+        let offset = Math.floor(esp.l / 2);
+        let colReal = esp.c + offset;
+        let idadeIni = 0;
+        let duracao = 0;
 
-html += `
-    <div class="card-especial" style="margin-bottom: 30px; border-left: 6px solid #d4af37; padding: 20px; background: #fffcf0;">
-        <h3 style="color: #827108; font-size: 22px;">⚡ Potencial Especial: ${esp.valor}</h3>
-        <p style="font-weight: bold; color: #b8860b;">📅 VIGÊNCIA: ${datas.ini} até ${datas.fim}</p>
-        <p style="color: #444;">⏳ Período: dos ${idadeIni} aos ${idadeIni + duracao} anos</p>
-        <div class="texto-res">${aplicarFiltroTexto(bancoEspeciais[esp.valor])}</div>
-    </div>`;
-    
-    }
+        // Pega vigência do Topo
+        for (let a = 0; a < colReal; a++) {
+            idadeIni += parseInt((arcanosTopo[a] || "1").toString()[0]);
+        }
+        for (let b = 0; b < esp.r; b++) {
+            duracao += parseInt((arcanosTopo[colReal + b] || "1").toString()[0]);
+        }
+
+        const datas = calcularDatasVigenciaNegativa(dataRaw, idadeIni, duracao);
+
+        htmlPiramide += `
+            <div class="card-especial" style="margin-bottom: 30px; border-left: 6px solid #d4af37; padding: 20px; background: #fffcf0; border-radius: 0 10px 10px 0;">
+                <h3 style="color: #827108; font-size: 22px; margin: 0;">⚡ Sequência Especial: ${esp.valor}</h3>
+                <p style="font-weight: bold; color: #b8860b; margin: 10px 0;">📅 VIGÊNCIA: ${datas.ini} até ${datas.fim}</p>
+                <p style="color: #444;">⏳ Ciclo: dos ${idadeIni} aos ${idadeIni + duracao} anos</p>
+                <div class="texto-res" style="text-align: justify;">${aplicarFiltroTexto(textos.SeqEspeciais[esp.valor])}</div>
+            </div>`;
+    });
+
+    htmlPiramide += `</div>`;
+}
 htmlPiramide += `</div>`;
 
 // --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
