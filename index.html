@@ -703,23 +703,20 @@ function detectarNegativas(linhas) {
     return { pos, nums: [...numsSet], detalhes };
 }
 
-function calcularDatasVigenciaNegativa(dataNascStr, idadeInicio, duracaoTotal) {
-    let partes = dataNascStr.split("/");
-    // Assume formato DD/MM/AAAA do seu input atual
-    let dataBase = new Date(parseInt(partes[2]), parseInt(partes[1]) - 1, parseInt(partes[0]));
+function calcularDatasVigenciaNegativa(dataNasc, idadeInicio, duracao) {
+    // O "T00:00:00" garante que o JS não mude o dia por causa do fuso horário
+    let base = new Date(dataNasc + "T00:00:00"); 
+    if (isNaN(base.getTime())) return { ini: "Data Inválida", fim: "Data Inválida" };
 
-    let dataIni = new Date(dataBase);
-    dataIni.setFullYear(dataIni.getFullYear() + idadeInicio);
-    
-    let dataFim = new Date(dataIni);
-    dataFim.setFullYear(dataFim.getFullYear() + duracaoTotal);
+    // Soma exata dos anos sobre o dia/mês de nascimento
+    let dIni = new Date(base.getFullYear() + idadeInicio, base.getMonth(), base.getDate());
+    let dFim = new Date(dIni.getFullYear() + duracao, dIni.getMonth(), dIni.getDate());
 
     return {
-        ini: dataIni.toLocaleDateString('pt-BR'),
-        fim: dataFim.toLocaleDateString('pt-BR')
+        ini: dIni.toLocaleDateString('pt-BR'),
+        fim: dFim.toLocaleDateString('pt-BR')
     };
-}        
-
+}
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
@@ -3478,6 +3475,69 @@ if(dadosNegativas.detalhes.length > 0){
             </div>`;
     });
 }
+
+// --- SEÇÃO: SEQUÊNCIAS ESPECIAIS ---
+if (dadosNegativas.especiais && dadosNegativas.especiais.length > 0) {
+    tituloBonito = "Configurações Especiais de Destino ✨";
+    
+    html += `
+    <div class="separador-luxo">
+        <div class="caixa-interna">
+            <h2>${tituloBonito}</h2>
+        </div>
+    </div>
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Vibrações de Alta Frequência</h2>
+        <div class="intro-texto">
+            <p>Além das sequências comuns, seu mapa revela configurações raras que atuam como aceleradores de destino. Estas vibrações indicam potencias que, se ativadas conscientemente, trazem resultados acima da média em áreas específicas da vida.</p>
+        </div>
+    `;
+
+    dadosNegativas.especiais.forEach(esp => {
+        html += `
+            <div class="bloco-especial" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-left: 4px solid var(--gold); border-radius: 5px;">
+                <h3 style="color: #827108; margin-top: 0;">${esp.nome}</h3>
+                <div class="texto-res">${aplicarFiltroTexto(textos.SequenciasEspeciais[esp.chave])}</div>
+            </div>
+        `;
+    });
+    html += `</div>`;
+}
+
+    
+// --- SEÇÃO: SEQUÊNCIAS FINANCEIRAS ---
+if (dadosNegativas.financeiras && dadosNegativas.financeiras.length > 0) {
+    tituloBonito = "Arquétipos de Prosperidade e Fluxo 💰";
+    
+    html += `
+    <div class="separador-luxo">
+        <div class="caixa-interna">
+            <h2>${tituloBonito}</h2>
+        </div>
+    </div>
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid #27ae60;">Direcionamento Financeiro</h2>
+        <div class="intro-texto">
+            <p>A análise das sequências financeiras permite identificar como a sua energia pessoal interage com a frequência da abundância e do trabalho. Estas configurações mostram o caminho de menor resistência para a sua realização material.</p>
+        </div>
+    `;
+
+    dadosNegativas.financeiras.forEach(fin => {
+        html += `
+            <div class="bloco-financeiro" style="margin-bottom: 25px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fff;">
+                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <span style="font-size: 24px; margin-right: 10px;">📊</span>
+                    <h3 style="margin: 0; color: #2c3e50;">Padrão: ${fin.nome}</h3>
+                </div>
+                <div class="texto-res" style="color: #444; line-height: 1.6;">
+                    ${aplicarFiltroTexto(textos.SequenciasFinanceiras[fin.chave])}
+                </div>
+            </div>
+        `;
+    });
+    html += `</div>`;
+}
+    
 htmlPiramide += `</div>`;
 
 // --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
