@@ -3477,66 +3477,35 @@ if(dadosNegativas.detalhes.length > 0){
 }
 
 // --- SEÇÃO: SEQUÊNCIAS ESPECIAIS ---
-if (dadosNegativas.especiais && dadosNegativas.especiais.length > 0) {
-    tituloBonito = "Configurações Especiais de Destino ✨";
-    
-    html += `
-    <div class="separador-luxo">
-        <div class="caixa-interna">
-            <h2>${tituloBonito}</h2>
-        </div>
-    </div>
-    <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Vibrações de Alta Frequência</h2>
-        <div class="intro-texto">
-            <p>Além das sequências comuns, seu mapa revela configurações raras que atuam como aceleradores de destino. Estas vibrações indicam potencias que, se ativadas conscientemente, trazem resultados acima da média em áreas específicas da vida.</p>
-        </div>
-    `;
+// --- INÍCIO: SEQUÊNCIAS FINANCEIRAS E ESPECIAIS (PADRÃO MATRIZ) ---
+const arcanosTopo = topo(piramideVida[0]);
 
-    dadosNegativas.especiais.forEach(esp => {
-        html += `
-            <div class="bloco-especial" style="margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-left: 4px solid var(--gold); border-radius: 5px;">
-                <h3 style="color: #827108; margin-top: 0;">${esp.nome}</h3>
-                <div class="texto-res">${aplicarFiltroTexto(textos.SequenciasEspeciais[esp.chave])}</div>
-            </div>
-        `;
-    });
-    html += `</div>`;
-}
-
-    
-// --- SEÇÃO: SEQUÊNCIAS FINANCEIRAS ---
-if (dadosNegativas.financeiras && dadosNegativas.financeiras.length > 0) {
-    tituloBonito = "Arquétipos de Prosperidade e Fluxo 💰";
-    
-    html += `
-    <div class="separador-luxo">
-        <div class="caixa-interna">
-            <h2>${tituloBonito}</h2>
-        </div>
-    </div>
-    <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 2px solid #27ae60;">Direcionamento Financeiro</h2>
-        <div class="intro-texto">
-            <p>A análise das sequências financeiras permite identificar como a sua energia pessoal interage com a frequência da abundância e do trabalho. Estas configurações mostram o caminho de menor resistência para a sua realização material.</p>
-        </div>
-    `;
-
+// FINANCEIRAS
+if(dadosNegativas.financeiras && dadosNegativas.financeiras.length > 0) {
+    tituloBonito = "Arquétipos de Prosperidade 💰";
+    html += `<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>`;
     dadosNegativas.financeiras.forEach(fin => {
-        html += `
-            <div class="bloco-financeiro" style="margin-bottom: 25px; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px; background: #fff;">
-                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <span style="font-size: 24px; margin-right: 10px;">📊</span>
-                    <h3 style="margin: 0; color: #2c3e50;">Padrão: ${fin.nome}</h3>
-                </div>
-                <div class="texto-res" style="color: #444; line-height: 1.6;">
-                    ${aplicarFiltroTexto(textos.SequenciasFinanceiras[fin.chave])}
-                </div>
-            </div>
-        `;
+        let idadeIni = 0; let durTotal = 0;
+        for (let a = 0; a < fin.colunaInicio; a++) { idadeIni += parseInt(arcanosTopo[a].toString()[0]) || 1; }
+        for (let b = 0; b < fin.repeticoes; b++) { durTotal += parseInt(arcanosTopo[fin.colunaInicio + b].toString()[0]) || 1; }
+        const d = calcularDatasVigenciaNegativa(dataRaw, idadeIni, durTotal);
+        html += `<div class="page"><h2 class="titulo-topico" style="border-bottom: 2px solid #27ae60;">${fin.nome}</h2><p style="color:#27ae60; font-weight:bold; font-size:18px;">Vigência: de ${d.ini} até ${d.fim}</p><div class="texto-res">${aplicarFiltroTexto(textos.SequenciasFinanceiras[fin.chave])}</div></div>`;
     });
-    html += `</div>`;
 }
+
+// ESPECIAIS
+if(dadosNegativas.especiais && dadosNegativas.especiais.length > 0) {
+    tituloBonito = "Configurações Especiais de Destino ✨";
+    html += `<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>`;
+    dadosNegativas.especiais.forEach(esp => {
+        let idadeIni = 0; let durTotal = 0;
+        for (let a = 0; a < esp.colunaInicio; a++) { idadeIni += parseInt(arcanosTopo[a].toString()[0]) || 1; }
+        for (let b = 0; b < esp.repeticoes; b++) { durTotal += parseInt(arcanosTopo[esp.colunaInicio + b].toString()[0]) || 1; }
+        const d = calcularDatasVigenciaNegativa(dataRaw, idadeIni, durTotal);
+        html += `<div class="page"><h2 class="titulo-topico" style="border-bottom: 2px solid #d4af37;">${esp.nome}</h2><p style="color:#827108; font-weight:bold; font-size:18px;">Vigência: de ${d.ini} até ${d.fim}</p><div class="texto-res">${aplicarFiltroTexto(textos.SequenciasEspeciais[esp.chave])}</div></div>`;
+    });
+}
+// --- FIM: SEQUÊNCIAS ---
     
 htmlPiramide += `</div>`;
 
