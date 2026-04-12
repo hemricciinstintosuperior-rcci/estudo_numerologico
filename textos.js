@@ -503,7 +503,85 @@ SeqNegVida: {
 <p>Aqui, <strong>MASCULINO-FEMININO-NEUTRO</strong>, sua capacidade de entender as situações da vida fica seriamente comprometida. Você poderá enfrentar um ciclo de estagnação onde nada parece avançar, não importa o quanto você se esforce. Dificuldades financeiras e até a perda de bens construídos por anos são riscos reais para você agora.</p>
 <p>Fracassos podem surgir por uma visão distorcida da realidade. A sensação de estar "travado" no tempo gera em você uma frustração que pode evoluir para um desânimo profundo. É difícil para você entender por que tantas dificuldades acontecem ao mesmo tempo, gerando um peso mental imenso, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
 <p>O estresse pela falta de resultados pode tirar o seu ânimo de continuar lutando. No plano físico, isso é um fator de risco para o seu coração e sistema nervoso. Você pode sentir sintomas físicos que refletem essa mente sem saída. A lição fundamental para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o desapego e a busca por uma nova forma de enxergar o seu valor.</p>`},
-// --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 10) ---
+
+
+// --- BANCOS FINANCEIROS SEPARADOS ---
+SeqFinanceira :{ 999: `` },
+ 
+ // ⭐ TEXTOS SEQUÊNCIAS ESPECIAIS
+SeqEspeciais : {
+
+  "116": `Este é um estágio onde sua imagem pública e reputação podem ser postas à prova por interferências de terceiros.
+Existe o risco de enfrentar críticas infundadas ou situações que visam abalar sua credibilidade profissional e pessoal.
+É essencial agir com máxima integridade e discrição para blindar seu nome contra fofocas ou tentativas de difamação.`,
+
+    "119": `Este ciclo traz um alerta crítico sobre a distorção de valores e o perigo do autoengano. 
+    Você pode se deparar com situações de hipocrisia ou fanatismo, onde causas falsas são defendidas sob o manto de uma aparente virtude. 
+    Existe o risco do uso indevido de preceitos espirituais ou religiosos para justificar atitudes egoístas, exigindo de você um discernimento aguçado para não se deixar levar por aparências enganosas.`,
+ 
+  "123": `Uma fase brilhante se aproxima, trazendo o justo reconhecimento por todo o seu esforço, talento e dedicação criativa.
+Você poderá receber prêmios, honrarias ou elogios públicos que validam oficialmente sua trajetória e seus projetos de vida.
+Essa energia de êxito também se estende ao campo familiar, trazendo motivos de grande orgulho e celebração.`,
+
+  "168":`  Uma poderosa corrente de prosperidade se manifesta nesta fase, favorecendo diretamente seus ganhos materiais e o sucesso nos negócios. 
+  É um período propício para a obtenção de prêmios, bonificações ou resultados financeiros acima da média, fruto de um alinhamento favorável em suas atividades práticas. 
+  A energia de realização está em alta, facilitando a conclusão bem-sucedida de negociações importantes e a colheita de frutos de investimentos anteriores.`,
+  
+  "252": `O cenário vibracional indica uma fase de encerramento ou transformação profunda em vínculos afetivos e parcerias de longa data.
+Mudanças drásticas na estrutura conjugal, como separações ou processos de divórcio, podem exigir uma enorme resiliência emocional.
+É um momento de transição que pede acolhimento interno e maturidade para lidar com a ausência ou o afastamento definitivo do cônjuge.`,
+
+  "518": `Você entra em um estágio de prosperidade duradoura, onde as bases da sua segurança financeira tendem a se consolidar de forma mais permanente. 
+  Diferente de ganhos momentâneos, esta influência favorece a construção de um patrimônio sólido e a estabilidade a longo prazo. 
+  É um momento de colheita generosa, onde o fluxo de recursos permite planejar o futuro com maior tranquilidade e confiança na continuidade do seu sucesso material.`,
+  
+  "575": `Prepare-se para um período de reviravoltas súbitas que podem desestabilizar temporariamente sua segurança material e carreira.
+Modificações imprevistas no ambiente de trabalho podem trazer dificuldades financeiras que exigirão cautela extrema e economia.
+Esteja pronto para adaptar-se rapidamente a perdas momentâneas, focando em reconstruir suas bases com paciência e estratégia.`,
+
+"637":` Este período sinaliza um momento de encerramento de um ciclo evolutivo que pode trazer a sensação de retrocesso ao ponto inicial. 
+Projetos ou situações que pareciam estar em plena expansão podem sofrer uma interrupção, exigindo que você retorne à base para reavaliar a estratégia. 
+Não se trata de uma derrota, mas de uma necessidade vibracional de reconstruir fundamentos que talvez tenham sido ignorados na pressa do crescimento.`,
+
+  "665" : `O cenário é extremamente favorável para a ascensão social e profissional, indicando a possibilidade real de aprovação em concursos ou a obtenção de altos cargos de liderança. 
+  Sua competência e autoridade serão reconhecidas por instâncias superiores, abrindo caminho para postos de grande responsabilidade e prestígio. 
+  É o momento de focar em grandes ambições, pois o destino favorece o seu posicionamento em patamares mais elevados de poder.`, 
+ 
+  "667" : `Uma vibração de estabilidade e harmonia profunda abençoa este período, favorecendo a realização de um bom casamento ou a formação de uma sociedade comercial sólida e ética. 
+  Existe um senso de equilíbrio nas parcerias, onde os interesses mútuos convergem para a construção de algo duradouro. 
+  É uma fase de segurança nos acordos, trazendo paz de espírito tanto na vida íntima quanto nas colaborações profissionais.`,
+  
+  "757": `Você está entrando em um ciclo de transformações intensas que atuarão como molas propulsoras para sua evolução individual.
+Embora as mudanças impostas pelo destino possam parecer desafiadoras no início, elas são necessárias para expandir sua consciência.
+O universo está forçando sua saída da zona de conforto para que o seu verdadeiro potencial pessoal finalmente floresça e apareça.`,
+
+  "922": `A sorte e o mérito caminham juntos nesta fase, favorecendo vitórias expressivas em concursos, vestibulares ou cargos de relevância.
+Seus esforços em disputas políticas ou processos seletivos complexos encontrarão um terreno extremamente fértil para o sucesso absoluto.
+Aproveite este magnetismo de conquista para se posicionar com destaque em qualquer teste de capacidade ou avaliação de competência.`,
+
+  "923": `Um período de profunda paz e entendimento reina em seu ambiente doméstico, fortalecendo os laços com aqueles que você mais ama.
+Você se sentirá plenamente amparado por amizades verdadeiras, cujas palavras e gestos servirão de porto seguro para sua jornada atual.
+É o momento ideal para cultivar a gratidão e desfrutar da serenidade que as relações sinceras e leais proporcionam ao seu coração.`,
+
+  "924": `Suas conexões sociais ganham um novo nível de prestígio, abrindo portas valiosas para círculos de grande influência, autoridade e poder.
+A ascensão em sua posição social será facilitada pelo contato direto com pessoas que admiram profundamente sua conduta e sua visão.
+Novos horizontes se abrem através de convites e parcerias estratégicas com indivíduos que podem acelerar drasticamente o seu crescimento.`,
+
+  "925": `O momento exige olhos atentos e um discernimento redobrado em relação a quem você confia suas ideias, segredos e tarefas diárias.
+Existe uma predisposição para desapontamentos vindos de funcionários ou de amizades que você considerava sólidas e inabaláveis.
+Proteja seus planos mantendo a discrição total e evitando delegar responsabilidades críticas sem a devida e constante supervisão.`,
+
+  "926": `Seus laços familiares serão convocados para uma ação de cuidado, paciência e suporte mútuo diante de adversidades inesperadas na rotina.
+Pode haver a necessidade de dedicar mais tempo e energia pessoal para auxiliar parentes próximos em questões de saúde ou crises graves.
+A união e a presença física da família serão os seus maiores pilares para atravessar instabilidades que exijam sacrifício e dedicação.`,
+
+  "927": `Fique alerta para movimentações de bastidores, pois segredos antigos, informações ocultas ou escândalos do passado podem vir a público agora.
+O risco de envolvimento direto ou indireto em intrigas alheias é elevado, pedindo que você mantenha uma postura neutra e muito ética.
+Evite comentários desnecessários ou julgamentos para não alimentar fofocas que possam expor situações que deveriam permanecer privadas.`
+
+},
+ 
+ // --- DIA DE NASCIMENTO (TALENTOS NATURAIS 1 AO 10) ---
  dia: {
     1: ` <h3>Desbravador - Dia 1</h3>
     <p>O dia 1 traz para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, uma das vibrações mais potentes de liderança e originalidade de toda a numerologia. Você carrega consigo uma capacidade intrínseca de abrir caminhos onde outros enxergam apenas obstáculos, agindo com uma força que impulsiona a inovação em cada passo da sua jornada pessoal.</p>
