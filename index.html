@@ -340,6 +340,37 @@
     z-index: -2;
 }
 
+/* Estilo para Sequências Especiais (Dourado/Premium) */
+.bloco-especial {
+    border-left: 5px solid #d4af37 !important;
+    background: linear-gradient(to right, #fffdf7, #ffffff);
+    margin: 20px 0;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.bloco-especial h3 {
+    color: #827108;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Estilo para Sequências Financeiras (Verde/Prosperidade) */
+.bloco-financeiro {
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid #27ae60; /* Verde para dinheiro */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+/* Ajuste de impressão para não cortar as sequências no meio da página */
+.bloco-especial, .bloco-financeiro {
+    page-break-inside: avoid;
+}    
+
 /* Estilo das Abas de Planos */
 .tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
 .tab-btn { 
@@ -703,6 +734,9 @@ function detectarNegativas(linhas) {
     return { pos, nums: [...numsSet], detalhes };
 }
 
+
+        
+
 function calcularDatasVigenciaNegativa(dataNasc, idadeInicio, duracao) {
     // O "T00:00:00" garante que o JS não mude o dia por causa do fuso horário
     let base = new Date(dataNasc + "T00:00:00"); 
@@ -717,6 +751,134 @@ function calcularDatasVigenciaNegativa(dataNasc, idadeInicio, duracao) {
         fim: dFim.toLocaleDateString('pt-BR')
     };
 }
+
+function detectarEspeciaisNaMatriz(linhas) {
+    let especiaisEncontradas = [];
+    // Lista das chaves que você tem no seu banco SeqEspeciais
+    const chavesEspeciais = ["116", "119", "123", "168", "252", "518", "575", "637", "665", "667", "757", "922", "923", "924", "925", "926", "927"];
+
+    for (let i = 0; i < linhas.length; i++) {
+        for (let j = 0; j < linhas[i].length - 2; j++) {
+            // Pega três números seguidos e monta uma string (Ex: 1, 6, 8 vira "168")
+            let combinacao = `${linhas[i][j]}${linhas[i][j+1]}${linhas[i][j+2]}`;
+            
+            if (chavesEspeciais.includes(combinacao)) {
+                especiaisEncontradas.push({ 
+                    l: i, 
+                    c: j, 
+                    r: 3, 
+                    valor: combinacao 
+                });
+            }
+        }
+    }
+    return especiaisEncontradas;
+}
+
+
+ // --- FUNÇÃO DE APOIO: CÁLCULO LINEAR VERTICAL ---
+function calcularVigenciaLinearVertical(coluna, tamanhoSeq, cronograma, arcanosTopo) {
+    let detalhes = [];
+    // Cada número da sequência pega a potência da sua própria coluna no topo
+    for (let i = 0; i < tamanhoSeq; i++) {
+        let indiceColuna = coluna + i;
+        let arcRef = arcanosTopo[indiceColuna]; 
+        let periodo = cronograma.find(p => p.indiceArcano === indiceColuna);
+        
+        if (periodo) {
+            detalhes.push({
+                potencia: arcRef,
+                duracao: parseInt(arcRef.toString()[0]) || 1,
+                idadeIni: periodo.idadeIni,
+                idadeFim: periodo.idadeFim
+            });
+        }
+    }
+    return detalhes;
+}
+
+
+// --- SEQUÊNCIAS ESPECIAIS (Agora lê o topo) ---
+function gerarRelatorioEspeciaisComVigencia(linhas, crono, bancoTxt, topoVida) {
+    let h = `<div class="blocoRelatorio"><h2 style="color:#b8860b;"> Sequências Especiais  ⚡️</h2>`;
+    let encontrou = false;
+    
+    linhas.forEach((linha, i) => {
+        // REMOVIDO: if (i === 0) return; -> Agora processa o topo também
+        for (let j = 0; j < linha.length - 2; j++) {
+            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
+            if (bancoTxt && bancoTxt[seq]) {
+                encontrou = true;
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+                
+                for (let k = 0; k < 3; k++) {
+                    let colReal = j + offset + k;
+                    if (colReal < topoVida.length) {
+                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
+                    }
+                }
+                
+                let periodo = crono[j + offset] || crono[0];
+                let idadeIni = periodo.idadeIni;
+                let idadeFim = idadeIni + duracaoTotal;
+                  let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+let dataIni = datas.ini;
+let dataFim = datas.fim;
+             
+                h += `<div class="blocoRelatorio" style="border-left:5px solid #b8860b; padding-left:10px; margin-bottom:20px;">
+                        <b style="font-size:18px;">✨ Impacto ${seq}</b><br>
+                        <span style="color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
+                        <span style="font-weight:bold; color:#b8860b;">Periodo ativo: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
+                        <p>${personalizarTexto(bancoTxt[seq])}</p>
+                      </div>`;
+            }
+        }
+    });
+    return encontrou ? h + "</div>" : "";
+}
+
+// --- FLUXO FINANCEIRO (Agora lê o topo) ---
+function gerarRelatorioFinanceiroComVigencia(linhas, crono, bancoTxt, topoVida) {
+    let h = `<div class="blocoRelatorio"><h2 style="color:#2e7d32;"> Fluxo Financeiro  💰</h2>`;
+    let encontrou = false;
+    
+    linhas.forEach((linha, i) => {
+        // REMOVIDO: if (i === 0) return; -> O topo pode ter sequências 99
+        for (let j = 0; j < linha.length - 1; j++) {
+            if (linha[j] === 9 && linha[j + 1] === 9) {
+                encontrou = true;
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+                
+                for (let k = 0; k < 2; k++) {
+                    let colReal = j + offset + k;
+                    if (colReal < topoVida.length) {
+                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
+                    }
+                }
+                
+                let periodo = crono[j + offset] || crono[0];
+                let idadeIni = periodo.idadeIni;
+                let idadeFim = idadeIni + duracaoTotal;
+                 let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+let dataIni = datas.ini;
+let dataFim = datas.fim;
+             
+                h += `<div class="blocoRelatorio" style="border-left:5px solid #2e7d32; padding-center:10px; margin-bottom:20px;">
+                        <b style="text-align:center; font-size:18px;">✅ Sequência Financeira 99/9</b><br>
+                       <span style="text-align:center; color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
+                        <span style="font-weight:bold; text-align:center; color:#2e7d32;">Vigência: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
+                        <p>${personalizarTexto(bancoTxt[999])}</p>
+                      </div>`;
+            }
+        }
+    });
+    return encontrou ? h + "</div>" : "";
+}
+
+        
+        
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
