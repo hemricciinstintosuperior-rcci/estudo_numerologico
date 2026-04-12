@@ -3360,13 +3360,15 @@ html += `
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 
   
+// --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
-<div class="page" style="width: 100%;"> 
-    <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
+<div class="page evitar-corte" style="width: 100%; page-break-after: always;"> 
+    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
     
     <div class="intro-texto">${textos.introducoes.piramide}</div>
 
-    <div class="piramide">`;
+    <div class="container-piramide">
+        <div class="piramide">`;
 
     // --- NOVA PARTE: LINHA DO NOME NO TOPO ---
 const letrasNomeTopo = nomeRaw.toUpperCase().replace(/\s+/g, '').split('');
