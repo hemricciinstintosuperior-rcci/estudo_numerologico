@@ -751,27 +751,119 @@ function calcularDatasVigenciaNegativa(dataNasc, idadeInicio, duracao) {
     };
 }
 
-function detectarEspeciaisNaMatriz(linhas) {
-    let especiaisEncontradas = [];
-    // Lista das chaves que você tem no seu banco SeqEspeciais
-    const chavesEspeciais = ["116", "119", "123", "168", "252", "518", "575", "637", "665", "667", "757", "922", "923", "924", "925", "926", "927"];
+// --- 1. SEQUÊNCIAS FINANCEIRAS (Busca o padrão 99/9) ---
+function detectarFinanceiras(linhas, crono, topoMestre, bancoTxt) {
+    let encontrados = [];
+    linhas.forEach((linha, i) => {
+        for (let j = 0; j < linha.length - 1; j++) {
+            // Regra: Dois 9 seguidos
+            if (linha[j] === 9 && linha[j + 1] === 9) {
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
 
-    for (let i = 0; i < linhas.length; i++) {
-        for (let j = 0; j < linhas[i].length - 2; j++) {
-            // Pega três números seguidos e monta uma string (Ex: 1, 6, 8 vira "168")
-            let combinacao = `${linhas[i][j]}${linhas[i][j+1]}${linhas[i][j+2]}`;
-            
-            if (chavesEspeciais.includes(combinacao)) {
-                especiaisEncontradas.push({ 
-                    l: i, 
-                    c: j, 
-                    r: 3, 
-                    valor: combinacao 
+                for (let k = 0; k < 2; k++) {
+                    let colReal = j + offset + k;
+                    if (topoMestre[colReal]) {
+                        duracaoTotal += parseInt(topoMestre[colReal].toString()[0]) || 0;
+                    }
+                }
+
+                let periodo = crono[j + offset] || crono[0];
+                let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+
+                encontrados.push({
+                    titulo: "Fluxo Financeiro 99/9",
+                    chave: "999", // Chave usada no seu textos.js
+                    dataIni: datas.ini,
+                    dataFim: datas.fim,
+                    idadeIni: periodo.idadeIni,
+                    idadeFim: periodo.idadeIni + duracaoTotal,
+                    duracao: duracaoTotal,
+                    texto: bancoTxt["999"] || ""
                 });
             }
         }
-    }
-    return especiaisEncontradas;
+    });
+    return encontrados;
+}
+
+// --- 2. SEQUÊNCIAS ESPECIAIS (Busca códigos de 3 dígitos) ---
+function detectarEspeciais(linhas, crono, topoMestre, bancoTxt) {
+    let encontrados = [];
+    linhas.forEach((linha, i) => {
+        for (let j = 0; j < linha.length - 2; j++) {
+            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
+            
+            // Verifica se a combinação de 3 números existe no seu banco de Especiais
+            if (bancoTxt && bancoTxt[seq]) {
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+
+                for (let k = 0; k < 3; k++) {
+                    let colReal = j + offset + k;
+                    if (topoMestre[colReal]) {
+                        duracaoTotal += parseInt(topoMestre[colReal].toString()[0]) || 0;
+                    }
+                }
+
+                let periodo = crono[j + offset] || crono[0];
+                let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+
+                encontrados.push({
+                    titulo: `Impacto Especial ${seq}`,
+                    chave: seq,
+                    dataIni: datas.ini,
+                    dataFim: datas.fim,
+                    idadeIni: periodo.idadeIni,
+                    idadeFim: periodo.idadeIni + duracaoTotal,
+                    duracao: duracaoTotal,
+                    texto: bancoTxt[seq]
+                });
+            }
+        }
+    });
+    return encontrados;
+}
+
+// --- 3. SEQUÊNCIAS NEGATIVAS (Busca 3 ou mais números iguais) ---
+function detectarNegativas(linhas, crono, topoMestre, bancoTxt) {
+    let encontrados = [];
+    linhas.forEach((linha, i) => {
+        let j = 0;
+        while (j < linha.length) {
+            let num = linha[j];
+            let cont = 1;
+            while (j + cont < linha.length && linha[j + cont] === num) { cont++; }
+
+            if (cont >= 3) {
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+
+                for (let k = 0; k < cont; k++) {
+                    let colReal = j + offset + k;
+                    if (topoMestre[colReal]) {
+                        duracaoTotal += parseInt(topoMestre[colReal].toString()[0]) || 0;
+                    }
+                }
+
+                let periodo = crono[j + offset] || crono[0];
+                let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+
+                encontrados.push({
+                    titulo: `Bloqueio Sequência ${num}`,
+                    chave: num.toString(),
+                    dataIni: datas.ini,
+                    dataFim: datas.fim,
+                    idadeIni: periodo.idadeIni,
+                    idadeFim: periodo.idadeIni + duracaoTotal,
+                    duracao: duracaoTotal,
+                    texto: bancoTxt[num] || ""
+                });
+                j += cont;
+            } else { j++; }
+        }
+    });
+    return encontrados;
 }
 
 
@@ -877,24 +969,7 @@ let dataFim = datas.fim;
 }
 
         
- function detectarFinanceiroNaMatriz(linhas) {
-    let pos = [];
-    // Percorre até a penúltima linha para checar a linha de baixo
-    for (let i = 0; i < linhas.length - 1; i++) {
-        for (let j = 0; j < linhas[i].length - 1; j++) {
-            // Verifica se tem 99 em cima E um 9 logo abaixo (j) na próxima linha
-            if (linhas[i][j] === 9 && linhas[i][j+1] === 9 && linhas[i+1][j] === 9) {
-                pos.push(
-                    {l: i, c: j},     // 9 (esquerda cima)
-                    {l: i, c: j+1},   // 9 (direita cima)
-                    {l: i+1, c: j}    // 9 (baixo - o fechamento do triângulo)
-                );
-            }
-        }
-    }
-    return pos;
-}       
-        
+  
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
     const potencias = topo(baseNumerica); 
@@ -2585,7 +2660,20 @@ const datasFases = {
 // 1. PRIMEIRO: CALCULA TUDO DA PIRÂMIDE (PARA A LINHA 517 NÃO DAR ERRO)
 const piramideVida = gerarPiramide(nomeRaw);
 const regenteVida = piramideVida.at(-1)[0];
-const dadosNegativas = detectarNegativas(piramideVida);
+// Pega os dados brutos
+const financeiras = detectarFinanceiras(pVida, cronoMestre, topoVidaMestre, textosFinVida);
+const especiais = detectarEspeciais(pVida, cronoMestre, topoVidaMestre, textosSeqEspVida);
+const negativas = detectarNegativas(pVida, cronoMestre, topoVidaMestre, textosSeqNegVida);
+
+// Agora é só dar um .forEach em cada uma para imprimir no HTML
+financeiras.forEach(f => {
+    html += `
+    <div class="bloco-fin">
+        <h3>${f.titulo}</h3>
+        <p><b>Vigência:</b> ${f.dataIni} até ${f.dataFim} (${f.duracao} anos)</p>
+        <div>${personalizarTexto(f.texto)}</div>
+    </div>`;
+});
 
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
