@@ -2624,7 +2624,7 @@ const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
  const posEspeciais = detectarEspeciaisNaMatriz(piramideVida); // Nova função abaixo
 const posFinanceiras = detectarFinanceiroNaMatriz(piramideVida); // Nova função abaixo   
-
+const potenciasTopo = topo(piramideVida[0]); 
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
     <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
