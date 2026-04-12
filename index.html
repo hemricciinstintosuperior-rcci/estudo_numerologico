@@ -3476,33 +3476,61 @@ if(dadosNegativas.detalhes.length > 0){
     });
 }
 
-// --- SEÇÃO: SEQUÊNCIAS ESPECIAIS ---
-// --- INÍCIO: SEQUÊNCIAS FINANCEIRAS E ESPECIAIS (PADRÃO MATRIZ) ---
+// --- TRECHO CORRIGIDO: SEQUÊNCIAS FINANCEIRAS E ESPECIAIS (PADRÃO PREMIUM) ---
+
 const arcanosTopo = topo(piramideVida[0]);
 
-// FINANCEIRAS
+// 1. FINANCEIRAS - Aplicando o layout de página dedicada
 if(dadosNegativas.financeiras && dadosNegativas.financeiras.length > 0) {
     tituloBonito = "Arquétipos de Prosperidade 💰";
+    // Separador fora da div page para garantir o impacto visual
     html += `<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>`;
+    
     dadosNegativas.financeiras.forEach(fin => {
         let idadeIni = 0; let durTotal = 0;
-        for (let a = 0; a < fin.colunaInicio; a++) { idadeIni += parseInt(arcanosTopo[a].toString()[0]) || 1; }
-        for (let b = 0; b < fin.repeticoes; b++) { durTotal += parseInt(arcanosTopo[fin.colunaInicio + b].toString()[0]) || 1; }
+        for (let a = 0; a < fin.colunaInicio; a++) { 
+            idadeIni += parseInt(arcanosTopo[a].toString()[0]) || 1; 
+        }
+        for (let b = 0; b < fin.repeticoes; b++) { 
+            durTotal += parseInt(arcanosTopo[fin.colunaInicio + b].toString()[0]) || 1; 
+        }
         const d = calcularDatasVigenciaNegativa(dataRaw, idadeIni, durTotal);
-        html += `<div class="page"><h2 class="titulo-topico" style="border-bottom: 2px solid #27ae60;">${fin.nome}</h2><p style="color:#27ae60; font-weight:bold; font-size:18px;">Vigência: de ${d.ini} até ${d.fim}</p><div class="texto-res">${aplicarFiltroTexto(textos.SequenciasFinanceiras[fin.chave])}</div></div>`;
+        
+        // Aqui entra a página limpa com o texto da sequência
+        html += `
+        <div class="page">
+            <h2 class="titulo-topico" style="border-bottom: 2px solid #27ae60;">${fin.nome}</h2>
+            <p style="color:#27ae60; font-weight:bold; font-size:19px; margin-bottom:20px;">
+                Vigência: de ${d.ini} até ${d.fim} (${durTotal} anos)
+            </p>
+            <div class="texto-res">${aplicarFiltroTexto(textos.SequenciasFinanceiras[fin.chave])}</div>
+        </div>`;
     });
 }
 
-// ESPECIAIS
+// 2. ESPECIAIS - Mesma correção de estrutura
 if(dadosNegativas.especiais && dadosNegativas.especiais.length > 0) {
     tituloBonito = "Configurações Especiais de Destino ✨";
     html += `<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>`;
+    
     dadosNegativas.especiais.forEach(esp => {
         let idadeIni = 0; let durTotal = 0;
-        for (let a = 0; a < esp.colunaInicio; a++) { idadeIni += parseInt(arcanosTopo[a].toString()[0]) || 1; }
-        for (let b = 0; b < esp.repeticoes; b++) { durTotal += parseInt(arcanosTopo[esp.colunaInicio + b].toString()[0]) || 1; }
+        for (let a = 0; a < esp.colunaInicio; a++) { 
+            idadeIni += parseInt(arcanosTopo[a].toString()[0]) || 1; 
+        }
+        for (let b = 0; b < esp.repeticoes; b++) { 
+            durTotal += parseInt(arcanosTopo[esp.colunaInicio + b].toString()[0]) || 1; 
+        }
         const d = calcularDatasVigenciaNegativa(dataRaw, idadeIni, durTotal);
-        html += `<div class="page"><h2 class="titulo-topico" style="border-bottom: 2px solid #d4af37;">${esp.nome}</h2><p style="color:#827108; font-weight:bold; font-size:18px;">Vigência: de ${d.ini} até ${d.fim}</p><div class="texto-res">${aplicarFiltroTexto(textos.SequenciasEspeciais[esp.chave])}</div></div>`;
+        
+        html += `
+        <div class="page">
+            <h2 class="titulo-topico" style="border-bottom: 2px solid #d4af37;">${esp.nome}</h2>
+            <p style="color:#827108; font-weight:bold; font-size:19px; margin-bottom:20px;">
+                Vigência: de ${d.ini} até ${d.fim} (${durTotal} anos)
+            </p>
+            <div class="texto-res">${aplicarFiltroTexto(textos.SequenciasEspeciais[esp.chave])}</div>
+        </div>`;
     });
 }
 // --- FIM: SEQUÊNCIAS ---
