@@ -3591,12 +3591,15 @@ if(dadosNegativas.detalhes.length > 0){
 
 
 
+// --- SEQUÊNCIAS ESPECIAIS ⭐ ---
 if (listaEspeciais.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⭐</h2></div></div>`;
     
+    // Texto de introdução para Especiais
+    htmlPiramide += `<div class="intro-texto" style="margin-bottom: 20px;">As sequências especiais revelam momentos de alinhamento único em sua jornada, indicando períodos onde energias específicas influenciam seu propósito e reconhecimento pessoal.</div>`;
+    
     listaEspeciais.forEach(esp => {
         let idadeInicio = 0; let duracaoTotal = 0;
-        // Cálculo baseado no topo para ESTA sequência
         for (let a = 0; a < esp.colunaInicio; a++) {
             idadeInicio += parseInt((arcanosTopo[a] || arcanosTopo[0]).toString()[0]) || 1;
         }
@@ -3616,9 +3619,12 @@ if (listaEspeciais.length > 0) {
     });
 }
 
-
+// --- FLUXOS FINANCEIROS 💰 ---
 if (listaFin.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Fluxos Financeiros 💰</h2></div></div>`;
+    
+    // Texto de introdução para Financeiro
+    htmlPiramide += `<div class="intro-texto" style="margin-bottom: 20px;">O potencial de fluxo financeiro indica janelas de oportunidade para a expansão material e a consolidação de recursos, baseadas no seu magnetismo de prosperidade.</div>`;
     
     listaFin.forEach(fin => {
         let idadeInicio = 0; let duracaoTotal = 0;
