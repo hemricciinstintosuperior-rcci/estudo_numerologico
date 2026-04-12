@@ -838,56 +838,24 @@ function detectarFinanceiroNaMatriz(linhas) {
 // Garanta que a função de Especiais siga o mesmo padrão de retorno (l, c, r)
 function detectarEspeciaisNaMatriz(linhas) {
     let ocorrencias = [];
-    // Exemplo para sequências de 3 números iguais (111, 222, etc)
     for (let i = 0; i < linhas.length; i++) {
         for (let j = 0; j < linhas[i].length - 2; j++) {
             let n = linhas[i][j];
+            // Verifica se os 3 números seguidos são iguais e não são zero
             if (n !== 0 && n === linhas[i][j+1] && n === linhas[i][j+2]) {
-                ocorrencias.push({ l: i, c: j, r: 3, num: `${n}${n}${n}` });
+                ocorrencias.push({ 
+                    l: i, 
+                    c: j, 
+                    r: 3, 
+                    num: `${n}${n}${n}` // Isso aqui vira "111", "222", etc.
+                });
             }
         }
     }
     return ocorrencias;
 }
 
-function gerarRelatorioEspeciaisComVigencia(linhas, crono, bancoTxt, topoVida) {
-    let h = `<div class="blocoRelatorio"><h2 style="color:#b8860b;"> Sequências Especiais  ⚡️</h2>`;
-    let encontrou = false;
-    
-    linhas.forEach((linha, i) => {
-        // REMOVIDO: if (i === 0) return; -> Agora processa o topo também
-        for (let j = 0; j < linha.length - 2; j++) {
-            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
-            if (bancoTxt && bancoTxt[seq]) {
-                encontrou = true;
-                let duracaoTotal = 0;
-                let offset = Math.floor(i / 2);
-                
-                for (let k = 0; k < 3; k++) {
-                    let colReal = j + offset + k;
-                    if (colReal < topoVida.length) {
-                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
-                    }
-                }
-                
-                let periodo = crono[j + offset] || crono[0];
-                let idadeIni = periodo.idadeIni;
-                let idadeFim = idadeIni + duracaoTotal;
-                  let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
-let dataIni = datas.ini;
-let dataFim = datas.fim;
-             
-                h += `<div class="blocoRelatorio" style="border-left:5px solid #b8860b; padding-left:10px; margin-bottom:20px;">
-                        <b style="font-size:18px;">✨ Impacto ${seq}</b><br>
-                        <span style="color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
-                        <span style="font-weight:bold; color:#b8860b;">Periodo ativo: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
-                        <p>${personalizarTexto(bancoTxt[seq])}</p>
-                      </div>`;
-            }
-        }
-    });
-    return encontrou ? h + "</div>" : "";
-}
+
 
         
 function calcularPeriodoSequencia(periodoBase, duracaoTotal) {
@@ -926,41 +894,56 @@ function calcularVigenciaLinearVertical(coluna, tamanhoSeq, cronograma, arcanosT
     return detalhes;
 }     
 
-function gerarBlocoComVigencia(listaOcorrencias, arcanosTopo, dataNasc, bancoTextos, titulo) {
+function gerarBlocoComVigencia(listaOcorrencias, arcanosTopo, dataNasc, bancoTextos, tituloBase) {
     let html = "";
+    
     listaOcorrencias.forEach(item => {
-        // O "pulo do gato": calcular qual coluna do topo essa sequência representa
-        // Na pirâmide, a cada linha que desce, a coluna '0' avança meia posição
+        // Cálculo de posição idêntico às Negativas (Offset por linha)
         let offset = Math.floor(item.l / 2);
         let colReal = item.c + offset;
         
         let idadeInicio = 0;
         let duracaoTotal = 0;
 
-        // Soma as idades antes do início
+        // 1. Soma idades antes da sequência
         for (let a = 0; a < colReal; a++) {
             let arc = arcanosTopo[a] || arcanosTopo[0];
             idadeInicio += parseInt(arc.toString()[0]) || 1;
         }
 
-        // Soma a duração da sequência
+        // 2. Soma duração da sequência (r é a quantidade de repetições)
         for (let b = 0; b < item.r; b++) {
             let arc = arcanosTopo[colReal + b] || arcanosTopo[0];
             duracaoTotal += parseInt(arc.toString()[0]) || 1;
         }
 
         const datas = calcularDatasVigenciaNegativa(dataNasc, idadeInicio, duracaoTotal);
-        const numeroChave = item.num || 999; // 999 para financeiro ou o número da especial
+        
+        // Determina qual texto buscar no banco
+        // Se for financeiro, a chave é 999. Se for especial, usamos o número detectado (ex: 111)
+        const chaveTexto = item.num || 999; 
+        const textoFinal = bancoTextos[chaveTexto] || "Interpretação em fase de processamento vibracional.";
 
         html += `
-            <div style="margin-bottom: 20px; border-left: 5px solid #d4af37; padding-left: 15px;">
-                <h3 style="margin:0; color:#827108;">${titulo} ${numeroChave === 999 ? '💰' : '⚡'}</h3>
-                <p style="font-weight: bold; margin: 5px 0;">📅 De ${datas.ini} até ${datas.fim} (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos)</p>
-                <div class="texto-res">${aplicarFiltroTexto(bancoTextos[numeroChave])}</div>
+            <div style="margin-bottom: 30px; padding: 15px; border-radius: 8px; background: rgba(212, 175, 55, 0.05); border-left: 5px solid ${chaveTexto === 999 ? '#34c759' : '#d4af37'};">
+                <h3 style="margin: 0 0 10px 0; color: ${chaveTexto === 999 ? '#2e7d32' : '#827108'}; font-size: 22px;">
+                    ${chaveTexto === 999 ? 'Fluxo Financeiro 99/9 💰' : 'Sequência Especial ' + chaveTexto + ' ⚡'}
+                </h3>
+                
+                <div style="background: #fff; padding: 10px; border-radius: 5px; margin-bottom: 15px; display: inline-block; border: 1px inset #eee;">
+                    <span style="font-weight: bold; color: #444; font-size: 16px;">
+                        📅 PERÍODO: ${datas.ini} até ${datas.fim} 
+                        <br> ⏳ Ciclo: dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos
+                    </span>
+                </div>
+
+                <div class="texto-res" style="text-align: justify; color: #222; font-size: 18px; line-height: 1.6;">
+                    ${aplicarFiltroTexto(textoFinal)}
+                </div>
             </div>`;
     });
     return html;
-}        
+}    
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
