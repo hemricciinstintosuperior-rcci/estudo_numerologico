@@ -3477,25 +3477,22 @@ piramideVida.forEach((linha, i) => {
 
 // --- DENTRO DO LOOP DA PIRÂMIDE (onde cria cada quadradinho) ---
 
-listaFin.forEach(fin => {
-    // Calculamos a coluna exata onde o 99/9 começa na linha i
-    let colInicioNoHTML = fin.colunaInicio - Math.floor(i / 2);
+    // 3. NOVA REGRA FINANCEIRA "À PROVA DE FALHAS"
+    // Se o número atual for 9, ele checa se faz parte de um triângulo
+    if (n === 9) {
+        // Caso A: Ele é um dos 9 de cima
+        // Checa se tem um 9 ao lado e um 9 embaixo
+        let tem9LadoDir = (linha[j+1] === 9);
+        let tem9LadoEsq = (linha[j-1] === 9);
+        let tem9Baixo = (piramideVida[i+1] && piramideVida[i+1][j] === 9);
+        let tem9BaixoEsq = (piramideVida[i+1] && piramideVida[i+1][j-1] === 9);
+        let tem9Cima = (piramideVida[i-1] && piramideVida[i-1][j] === 9);
+        let tem9CimaDir = (piramideVida[i-1] && piramideVida[i-1][j+1] === 9);
 
-    // 1. Se estamos na linha de cima do triângulo (a linha onde estão os dois 99)
-    if (i === fin.linha) {
-        if (j === colInicioNoHTML || j === colInicioNoHTML + 1) {
-            // Só pinta se o número for realmente 9 (proteção extra contra o "3")
-            if (n === 9) classes.push("financeiro");
+        if ((tem9LadoDir && tem9Baixo) || (tem9LadoEsq && tem9BaixoEsq) || (tem9Cima) || (tem9CimaDir)) {
+            classes.push("financeiro");
         }
     }
-    
-    // 2. Se estamos na linha de baixo (onde deve estar o 9 solitário)
-    else if (i === fin.linha + 1) {
-        if (j === colInicioNoHTML) {
-            if (n === 9) classes.push("financeiro");
-        }
-    }
-});
 
         // 4. Verifica se é o REGENTE (Destaque Triângulo)
         if (i === piramideVida.length - 1) {
