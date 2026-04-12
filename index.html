@@ -3448,15 +3448,41 @@ htmlPiramide += `</div>`;
 piramideVida.forEach((linha, i) => {
     htmlPiramide += `<div class="linha">`;
     linha.forEach((n, j) => {
-        // 1. Verifica se é uma sequência negativa
-        let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
+        // Começamos com a classe base
+        let classes = ["num"];
 
-        // 2. NOVA LÓGICA: Se for a última linha (i) e o único número (j), é o REGENTE
+        // 1. Verifica se é NEGATIVA (Vermelho)
+        if (dadosNegativas.pos.some(p => p.l === i && p.c === j)) {
+            classes.push("negativo");
+        } 
+        
+        // 2. Verifica se é ESPECIAL (Dourado)
+        // O JavaScript percorre a lista de especiais encontradas e vê se o número atual (i, j) faz parte de uma
+        listaEspeciais.forEach(esp => {
+            // Ajuste fino da posição na pirâmide (coluna j + offset da linha)
+            let colReal = j + Math.floor(i / 2);
+            if (i === esp.linha && colReal >= esp.colunaInicio && colReal < esp.colunaInicio + 3) {
+                classes.push("especial");
+            }
+        });
+
+        // 3. Verifica se é FINANCEIRA (Verde - Triângulo de 99/9)
+        listaFin.forEach(fin => {
+            let colReal = j + Math.floor(i / 2);
+            // Pega os dois '9' de cima e o '9' de baixo
+            if ((i === fin.linha && (colReal === fin.colunaInicio || colReal === fin.colunaInicio + 1)) || 
+                (i === fin.linha + 1 && colReal === fin.colunaInicio)) {
+                classes.push("financeiro");
+            }
+        });
+
+        // 4. Verifica se é o REGENTE (Destaque Triângulo)
         if (i === piramideVida.length - 1) {
-            cl += " regente-destaque";
+            classes.push("regente-destaque");
         }
 
-        htmlPiramide += `<div class="${cl}">${n}</div>`;
+        // Monta a div final com todas as classes detectadas
+        htmlPiramide += `<div class="${classes.join(' ')}">${n}</div>`;
     });
     htmlPiramide += `</div>`;
 });
