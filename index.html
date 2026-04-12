@@ -791,17 +791,6 @@ let dataFim = datas.fim;
     return encontrou ? h + "</div>" : "";
 }
 
-function detectarSequenciaFinanceira(linhas){
-    let pos=[];
-    for(let i=0; i<linhas.length-1; i++){
-        for(let j=0; j<linhas[i].length-1; j++){
-            if(linhas[i][j]===9 && linhas[i][j+1]===9 && linhas[i+1][j]===9){
-                pos.push({linha:i, indice:j},{linha:i, indice:j+1},{linha:i+1, indice:j});
-            }
-        }
-    }
-    return pos;
-}    
 
 function desenhar(linhas, compacta = false, bancoEsp = null) {
     let classe = compacta ? "piramide compacta" : "piramide";
@@ -845,18 +834,23 @@ function detectarEspeciaisNaMatriz(linhas) {
     return pos;
 }
 
-// Detecta o Fluxo Financeiro (99)
 function detectarFinanceiroNaMatriz(linhas) {
     let pos = [];
-    linhas.forEach((linha, i) => {
-        for (let j = 0; j < linha.length - 1; j++) {
-            if (linha[j] === 9 && linha[j+1] === 9) {
-                pos.push({l: i, c: j}, {l: i, c: j+1});
+    // Percorre até a penúltima linha para checar a linha de baixo
+    for (let i = 0; i < linhas.length - 1; i++) {
+        for (let j = 0; j < linhas[i].length - 1; j++) {
+            // Verifica se tem 99 em cima E um 9 logo abaixo (j) na próxima linha
+            if (linhas[i][j] === 9 && linhas[i][j+1] === 9 && linhas[i+1][j] === 9) {
+                pos.push(
+                    {l: i, c: j},     // 9 (esquerda cima)
+                    {l: i, c: j+1},   // 9 (direita cima)
+                    {l: i+1, c: j}    // 9 (baixo - o fechamento do triângulo)
+                );
             }
         }
-    });
+    }
     return pos;
-}        
+}    
 
 function gerarRelatorioEspeciaisComVigencia(linhas, crono, bancoTxt, topoVida) {
     let h = `<div class="blocoRelatorio"><h2 style="color:#b8860b;"> Sequências Especiais  ⚡️</h2>`;
@@ -3600,18 +3594,21 @@ htmlPiramide += `</div>`;
     
 // --- DENTRO DA FUNÇÃO gerarMapaCompleto ou onde você gera o HTML ---
 
-
 piramideVida.forEach((linha, i) => {
     htmlPiramide += `<div class="linha">`;
     linha.forEach((n, j) => {
         let classes = ["num"];
 
-        // Prioridade de cores: Negativo > Financeiro > Especial > Regente
-        if (dadosNegativas.pos.some(p => p.l === i && p.c === j)) classes.push("negativo");
-        else if (posFinanceiras.some(p => p.l === i && p.c === j)) classes.push("financeiro");
-        else if (posEspeciais.some(p => p.l === i && p.c === j)) classes.push("especial");
+        // Lógica de Pintura
+        if (dadosNegativas.pos.some(p => p.l === i && p.c === j)) {
+            classes.push("negativo");
+        } else if (posFinanceiras.some(p => p.l === i && p.c === j)) {
+            classes.push("financeiro"); // Aplica o Verde
+        } else if (posEspeciais.some(p => p.l === i && p.c === j)) {
+            classes.push("especial");   // Aplica o Dourado
+        }
 
-        // Destaque do Regente (Última linha)
+        // Destaque do Regente
         if (i === piramideVida.length - 1) classes.push("regente-destaque");
 
         htmlPiramide += `<div class="${classes.join(' ')}">${n}</div>`;
@@ -3701,6 +3698,39 @@ if(dadosNegativas.detalhes.length > 0){
             </div>`;
     });
 }
+
+// Verifica se existem sequências 99/9 para exibir o texto explicativo
+if (posFinanceiras.length > 0) {
+    // Pegamos a primeira ocorrência para calcular a data
+    let f = posFinanceiras[0]; 
+    let offset = Math.floor(f.l / 2);
+    let colReal = f.c + offset;
+    
+    // Pega a potência do topo para saber a duração (Ex: se for Arcano 52, dura 5 anos)
+    let arcRef = potenciasTopo[colReal] || potenciasTopo[0];
+    let duracao = parseInt(arcRef.toString()[0]) || 1;
+    
+    // Cálculo de idade (estimado pela posição na pirâmide)
+    let idadeIni = 0;
+    for(let k=0; k < colReal; k++) {
+        idadeIni += parseInt((potenciasTopo[k] || "1").toString()[0]);
+    }
+
+    htmlPiramide += `
+    <div class="evitar-corte" style="margin-top: 40px;">
+        <div class="separador-luxo">
+            <div class="caixa-interna"><h2>Fluxo Financeiro 💰</h2></div>
+        </div>
+        <div class="secao-card">
+            <div style="border-left: 5px solid #34c759; padding-left: 15px; margin-bottom: 20px;">
+                <h3 style="color: #2e7d32 !important;">Potencial de Prosperidade 99/9</h3>
+                <p style="font-weight: bold; color: #2e7d32;">Período estimado: dos ${idadeIni} aos ${idadeIni + (duracao * 2)} anos.</p>
+                <div class="texto-res">${textos.SeqFinanceira[999] || "Vibração de fluxo material intenso e colheita financeira."}</div>
+            </div>
+        </div>
+    </div>`;
+}
+    
 htmlPiramide += `</div>`;
 
 // --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
