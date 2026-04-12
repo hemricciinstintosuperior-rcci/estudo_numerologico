@@ -95,6 +95,19 @@
     page-break-after: always;
 }
 
+    .num.financeiro {
+        background-color: #34c759 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+    
+    .num.especial {
+        background-color: #b8860b !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+    
+
     /* 🔥 EVITA QUEBRAS FEIAS */
     .secao-card,
     .resultado-bloco,
@@ -120,6 +133,9 @@
     }
 
  }
+
+
+    
 
     
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #A38A2A; margin: 0; padding: 0; display: block;}
@@ -814,6 +830,32 @@ function desenhar(linhas, compacta = false, bancoEsp = null) {
 
     html += `</div>`;
     return html; // Retorno corrigido para 'html' (sem o número 1)
+}     
+
+// Detecta sequências de 3 números iguais (Especiais: 111, 222...)
+function detectarEspeciaisNaMatriz(linhas) {
+    let pos = [];
+    linhas.forEach((linha, i) => {
+        for (let j = 0; j < linha.length - 2; j++) {
+            if (linha[j] === linha[j+1] && linha[j] === linha[j+2]) {
+                pos.push({l: i, c: j}, {l: i, c: j+1}, {l: i, c: j+2});
+            }
+        }
+    });
+    return pos;
+}
+
+// Detecta o Fluxo Financeiro (99)
+function detectarFinanceiroNaMatriz(linhas) {
+    let pos = [];
+    linhas.forEach((linha, i) => {
+        for (let j = 0; j < linha.length - 1; j++) {
+            if (linha[j] === 9 && linha[j+1] === 9) {
+                pos.push({l: i, c: j}, {l: i, c: j+1});
+            }
+        }
+    });
+    return pos;
 }        
 
 function gerarRelatorioEspeciaisComVigencia(linhas, crono, bancoTxt, topoVida) {
@@ -2586,6 +2628,8 @@ const datasFases = {
 const piramideVida = gerarPiramide(nomeRaw);
 const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
+ const posEspeciais = detectarEspeciaisNaMatriz(piramideVida); // Nova função abaixo
+const posFinanceiras = detectarFinanceiroNaMatriz(piramideVida); // Nova função abaixo   
 
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
@@ -3554,18 +3598,23 @@ htmlPiramide += `</div>`;
 
 // ... (continua o código que desenha as linhas da pirâmide)
     
+// --- DENTRO DA FUNÇÃO gerarMapaCompleto ou onde você gera o HTML ---
+
+
 piramideVida.forEach((linha, i) => {
     htmlPiramide += `<div class="linha">`;
     linha.forEach((n, j) => {
-        // 1. Verifica se é uma sequência negativa
-        let cl = dadosNegativas.pos.some(p => p.l === i && p.c === j) ? "num negativo" : "num";
+        let classes = ["num"];
 
-        // 2. NOVA LÓGICA: Se for a última linha (i) e o único número (j), é o REGENTE
-        if (i === piramideVida.length - 1) {
-            cl += " regente-destaque";
-        }
+        // Prioridade de cores: Negativo > Financeiro > Especial > Regente
+        if (dadosNegativas.pos.some(p => p.l === i && p.c === j)) classes.push("negativo");
+        else if (posFinanceiras.some(p => p.l === i && p.c === j)) classes.push("financeiro");
+        else if (posEspeciais.some(p => p.l === i && p.c === j)) classes.push("especial");
 
-        htmlPiramide += `<div class="${cl}">${n}</div>`;
+        // Destaque do Regente (Última linha)
+        if (i === piramideVida.length - 1) classes.push("regente-destaque");
+
+        htmlPiramide += `<div class="${classes.join(' ')}">${n}</div>`;
     });
     htmlPiramide += `</div>`;
 });
