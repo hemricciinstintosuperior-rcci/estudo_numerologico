@@ -821,36 +821,34 @@ function desenhar(linhas, compacta = false, bancoEsp = null) {
     return html; // Retorno corrigido para 'html' (sem o número 1)
 }     
 
-// Detecta sequências de 3 números iguais (Especiais: 111, 222...)
-function detectarEspeciaisNaMatriz(linhas) {
-    let pos = [];
-    linhas.forEach((linha, i) => {
-        for (let j = 0; j < linha.length - 2; j++) {
-            if (linha[j] === linha[j+1] && linha[j] === linha[j+2]) {
-                pos.push({l: i, c: j}, {l: i, c: j+1}, {l: i, c: j+2});
-            }
-        }
-    });
-    return pos;
-}
-
+// Detecta o triângulo 99/9 e retorna todas as ocorrências
 function detectarFinanceiroNaMatriz(linhas) {
-    let pos = [];
-    // Percorre até a penúltima linha para checar a linha de baixo
+    let ocorrencias = [];
     for (let i = 0; i < linhas.length - 1; i++) {
         for (let j = 0; j < linhas[i].length - 1; j++) {
-            // Verifica se tem 99 em cima E um 9 logo abaixo (j) na próxima linha
             if (linhas[i][j] === 9 && linhas[i][j+1] === 9 && linhas[i+1][j] === 9) {
-                pos.push(
-                    {l: i, c: j},     // 9 (esquerda cima)
-                    {l: i, c: j+1},   // 9 (direita cima)
-                    {l: i+1, c: j}    // 9 (baixo - o fechamento do triângulo)
-                );
+                // l = linha, c = coluna, r = quantas colunas ocupa no topo
+                ocorrencias.push({ l: i, c: j, r: 2 }); 
             }
         }
     }
-    return pos;
-}    
+    return ocorrencias;
+}
+
+// Garanta que a função de Especiais siga o mesmo padrão de retorno (l, c, r)
+function detectarEspeciaisNaMatriz(linhas) {
+    let ocorrencias = [];
+    // Exemplo para sequências de 3 números iguais (111, 222, etc)
+    for (let i = 0; i < linhas.length; i++) {
+        for (let j = 0; j < linhas[i].length - 2; j++) {
+            let n = linhas[i][j];
+            if (n !== 0 && n === linhas[i][j+1] && n === linhas[i][j+2]) {
+                ocorrencias.push({ l: i, c: j, r: 3, num: `${n}${n}${n}` });
+            }
+        }
+    }
+    return ocorrencias;
+}
 
 function gerarRelatorioEspeciaisComVigencia(linhas, crono, bancoTxt, topoVida) {
     let h = `<div class="blocoRelatorio"><h2 style="color:#b8860b;"> Sequências Especiais  ⚡️</h2>`;
