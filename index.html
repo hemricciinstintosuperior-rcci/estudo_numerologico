@@ -704,34 +704,33 @@ function topo(base) {
     return arcanos;
 }        
 
-function detectarNegativas(linhas) {
-    let detalhes = [];
-    let pos = [];
-    let numsSet = new Set();
+function desenhar(linhas, compacta = false, bancoEsp = null) {
+    let classe = compacta ? "piramide compacta" : "piramide";
+    
+    // Busca as posições de cada tipo de destaque
+    const neg = (typeof detectarSequencias === 'function') ? detectarSequencias(linhas).posNeg : [];
+    const esp = (typeof detectarPosicoesEspeciais === 'function') ? detectarPosicoesEspeciais(linhas, bancoEsp) : [];
+    const fin = (typeof detectarSequenciaFinanceira === 'function') ? detectarSequenciaFinanceira(linhas) : [];
+
+    let html = `<div class="${classe}">`; // Variável criada como 'html'
 
     linhas.forEach((linha, i) => {
-        let j = 0;
-        while (j < linha.length) {
-            let num = linha[j];
-            let cont = 1;
-            while (j + cont < linha.length && linha[j + cont] === num) { cont++; }
+        html += `<div class="linha">`;
+        linha.forEach((n, j) => {
+            let classes = ["num"];
 
-            if (cont >= 3) {
-                numsSet.add(num);
-                // Calcula o deslocamento (offset) para alinhar com as colunas do topo
-                let offset = Math.floor(i / 2); 
-                detalhes.push({
-                    numero: num,
-                    colunaInicio: j + offset,
-                    repeticoes: cont,
-                    linha: i
-                });
-                for (let k = j; k < j + cont; k++) pos.push({ l: i, c: k });
-                j += cont;
-            } else { j++; }
-        }
+            // Verifica se a posição deve ser colorida
+            if (neg.some(p => p.linha === i && p.indice === j)) classes.push("negativo");
+            if (fin.some(p => p.linha === i && p.indice === j)) classes.push("financeiro");
+            if (esp.some(p => p.linha === i && p.indice === j)) classes.push("especial");
+
+            html += `<div class="${classes.join(' ')}">${n}</div>`;
+        });
+        html += `</div>`;
     });
-    return { pos, nums: [...numsSet], detalhes };
+
+    html += `</div>`;
+    return html; // Retorno corrigido para 'html' (sem o número 1)
 }
 
 
@@ -878,7 +877,23 @@ let dataFim = datas.fim;
 }
 
         
-        
+ function detectarFinanceiroNaMatriz(linhas) {
+    let pos = [];
+    // Percorre até a penúltima linha para checar a linha de baixo
+    for (let i = 0; i < linhas.length - 1; i++) {
+        for (let j = 0; j < linhas[i].length - 1; j++) {
+            // Verifica se tem 99 em cima E um 9 logo abaixo (j) na próxima linha
+            if (linhas[i][j] === 9 && linhas[i][j+1] === 9 && linhas[i+1][j] === 9) {
+                pos.push(
+                    {l: i, c: j},     // 9 (esquerda cima)
+                    {l: i, c: j+1},   // 9 (direita cima)
+                    {l: i+1, c: j}    // 9 (baixo - o fechamento do triângulo)
+                );
+            }
+        }
+    }
+    return pos;
+}       
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
