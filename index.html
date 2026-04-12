@@ -791,6 +791,46 @@ let dataFim = datas.fim;
     return encontrou ? h + "</div>" : "";
 }
 
+// --- SEQUÊNCIAS ESPECIAIS (Agora lê o topo) ---
+function gerarRelatorioEspeciaisComVigencia(linhas, crono, bancoTxt, topoVida) {
+    let h = `<div class="blocoRelatorio"><h2 style="color:#b8860b;"> Sequências Especiais  ⚡️</h2>`;
+    let encontrou = false;
+    
+    linhas.forEach((linha, i) => {
+        // REMOVIDO: if (i === 0) return; -> Agora processa o topo também
+        for (let j = 0; j < linha.length - 2; j++) {
+            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
+            if (bancoTxt && bancoTxt[seq]) {
+                encontrou = true;
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+                
+                for (let k = 0; k < 3; k++) {
+                    let colReal = j + offset + k;
+                    if (colReal < topoVida.length) {
+                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
+                    }
+                }
+                
+                let periodo = crono[j + offset] || crono[0];
+                let idadeIni = periodo.idadeIni;
+                let idadeFim = idadeIni + duracaoTotal;
+                  let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+let dataIni = datas.ini;
+let dataFim = datas.fim;
+             
+                h += `<div class="blocoRelatorio" style="border-left:5px solid #b8860b; padding-left:10px; margin-bottom:20px;">
+                        <b style="font-size:18px;">✨ Impacto ${seq}</b><br>
+                        <span style="color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
+                        <span style="font-weight:bold; color:#b8860b;">Periodo ativo: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
+                        <p>${personalizarTexto(bancoTxt[seq])}</p>
+                      </div>`;
+            }
+        }
+    });
+    return encontrou ? h + "</div>" : "";
+}        
+
 
 function desenhar(linhas, compacta = false, bancoEsp = null) {
     let classe = compacta ? "piramide compacta" : "piramide";
