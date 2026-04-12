@@ -261,6 +261,13 @@
     opacity: 0.8;
 }
 
+    /* 🟨 SEQUÊNCIA ESPECIAL (Amarelo Brilhante) */
+.num.especial { 
+    background-color: #b8860b !important; /* Adicionado !important aqui */
+    color: #fff !important; 
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.9) !important;
+    border: 1px solid #b8860b !important;
+}
 
 /* 🟩 FLUXO FINANCEIRO (Verde) */
 .num.financeiro { 
@@ -726,8 +733,164 @@ function calcularDatasVigenciaNegativa(dataNascStr, idadeInicio, duracaoTotal) {
         ini: dataIni.toLocaleDateString('pt-BR'),
         fim: dataFim.toLocaleDateString('pt-BR')
     };
+}     
+
+
+ // --- FLUXO FINANCEIRO (Agora lê o topo) ---
+function gerarRelatorioFinanceiroComVigencia(linhas, crono, bancoTxt, topoVida) {
+    let h = `<div class="blocoRelatorio"><h2 style="color:#2e7d32;"> Fluxo Financeiro  💰</h2>`;
+    let encontrou = false;
+    
+    linhas.forEach((linha, i) => {
+        // REMOVIDO: if (i === 0) return; -> O topo pode ter sequências 99
+        for (let j = 0; j < linha.length - 1; j++) {
+            if (linha[j] === 9 && linha[j + 1] === 9) {
+                encontrou = true;
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+                
+                for (let k = 0; k < 2; k++) {
+                    let colReal = j + offset + k;
+                    if (colReal < topoVida.length) {
+                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
+                    }
+                }
+                
+                let periodo = crono[j + offset] || crono[0];
+                let idadeIni = periodo.idadeIni;
+                let idadeFim = idadeIni + duracaoTotal;
+                 let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+let dataIni = datas.ini;
+let dataFim = datas.fim;
+             
+                h += `<div class="blocoRelatorio" style="border-left:5px solid #2e7d32; padding-center:10px; margin-bottom:20px;">
+                        <b style="text-align:center; font-size:18px;">✅ Sequência Financeira 99/9</b><br>
+                       <span style="text-align:center; color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
+                        <span style="font-weight:bold; text-align:center; color:#2e7d32;">Vigência: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
+                        <p>${personalizarTexto(bancoTxt[999])}</p>
+                      </div>`;
+            }
+        }
+    });
+    return encontrou ? h + "</div>" : "";
+}
+
+function detectarSequenciaFinanceira(linhas){
+    let pos=[];
+    for(let i=0; i<linhas.length-1; i++){
+        for(let j=0; j<linhas[i].length-1; j++){
+            if(linhas[i][j]===9 && linhas[i][j+1]===9 && linhas[i+1][j]===9){
+                pos.push({linha:i, indice:j},{linha:i, indice:j+1},{linha:i+1, indice:j});
+            }
+        }
+    }
+    return pos;
+}    
+
+function desenhar(linhas, compacta = false, bancoEsp = null) {
+    let classe = compacta ? "piramide compacta" : "piramide";
+    
+    // Busca as posições de cada tipo de destaque
+    const neg = (typeof detectarSequencias === 'function') ? detectarSequencias(linhas).posNeg : [];
+    const esp = (typeof detectarPosicoesEspeciais === 'function') ? detectarPosicoesEspeciais(linhas, bancoEsp) : [];
+    const fin = (typeof detectarSequenciaFinanceira === 'function') ? detectarSequenciaFinanceira(linhas) : [];
+
+    let html = `<div class="${classe}">`; // Variável criada como 'html'
+
+    linhas.forEach((linha, i) => {
+        html += `<div class="linha">`;
+        linha.forEach((n, j) => {
+            let classes = ["num"];
+
+            // Verifica se a posição deve ser colorida
+            if (neg.some(p => p.linha === i && p.indice === j)) classes.push("negativo");
+            if (fin.some(p => p.linha === i && p.indice === j)) classes.push("financeiro");
+            if (esp.some(p => p.linha === i && p.indice === j)) classes.push("especial");
+
+            html += `<div class="${classes.join(' ')}">${n}</div>`;
+        });
+        html += `</div>`;
+    });
+
+    html += `</div>`;
+    return html; // Retorno corrigido para 'html' (sem o número 1)
 }        
 
+function gerarRelatorioEspeciaisComVigencia(linhas, crono, bancoTxt, topoVida) {
+    let h = `<div class="blocoRelatorio"><h2 style="color:#b8860b;"> Sequências Especiais  ⚡️</h2>`;
+    let encontrou = false;
+    
+    linhas.forEach((linha, i) => {
+        // REMOVIDO: if (i === 0) return; -> Agora processa o topo também
+        for (let j = 0; j < linha.length - 2; j++) {
+            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
+            if (bancoTxt && bancoTxt[seq]) {
+                encontrou = true;
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+                
+                for (let k = 0; k < 3; k++) {
+                    let colReal = j + offset + k;
+                    if (colReal < topoVida.length) {
+                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
+                    }
+                }
+                
+                let periodo = crono[j + offset] || crono[0];
+                let idadeIni = periodo.idadeIni;
+                let idadeFim = idadeIni + duracaoTotal;
+                  let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+let dataIni = datas.ini;
+let dataFim = datas.fim;
+             
+                h += `<div class="blocoRelatorio" style="border-left:5px solid #b8860b; padding-left:10px; margin-bottom:20px;">
+                        <b style="font-size:18px;">✨ Impacto ${seq}</b><br>
+                        <span style="color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
+                        <span style="font-weight:bold; color:#b8860b;">Periodo ativo: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
+                        <p>${personalizarTexto(bancoTxt[seq])}</p>
+                      </div>`;
+            }
+        }
+    });
+    return encontrou ? h + "</div>" : "";
+}
+
+        
+function calcularPeriodoSequencia(periodoBase, duracaoTotal) {
+
+    let [dia, mes, ano] = periodoBase.ini.split("/").map(Number);
+
+    let dataIni = new Date(ano, mes - 1, dia);
+    let dataFim = new Date(dataIni);
+
+    dataFim.setFullYear(dataFim.getFullYear() + duracaoTotal);
+
+    return {
+        ini: dataIni.toLocaleDateString('pt-BR'),
+        fim: dataFim.toLocaleDateString('pt-BR')
+    };
+}
+
+ // --- FUNÇÃO DE APOIO: CÁLCULO LINEAR VERTICAL ---
+function calcularVigenciaLinearVertical(coluna, tamanhoSeq, cronograma, arcanosTopo) {
+    let detalhes = [];
+    // Cada número da sequência pega a potência da sua própria coluna no topo
+    for (let i = 0; i < tamanhoSeq; i++) {
+        let indiceColuna = coluna + i;
+        let arcRef = arcanosTopo[indiceColuna]; 
+        let periodo = cronograma.find(p => p.indiceArcano === indiceColuna);
+        
+        if (periodo) {
+            detalhes.push({
+                potencia: arcRef,
+                duracao: parseInt(arcRef.toString()[0]) || 1,
+                idadeIni: periodo.idadeIni,
+                idadeFim: periodo.idadeFim
+            });
+        }
+    }
+    return detalhes;
+}       
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
@@ -1041,56 +1204,8 @@ function calcularIntensidadeMomento(configAtributo, res, faltantes, nomeRaw, d3,
     return Math.min(Math.max(nota, 1.7), 9.6);
 }
 
- // --- FLUXO FINANCEIRO (Agora lê o topo) ---
-function gerarRelatorioFinanceiroComVigencia(linhas, crono, bancoTxt, topoVida) {
-    let h = `<div class="blocoRelatorio"><h2 style="color:#2e7d32;"> Fluxo Financeiro  💰</h2>`;
-    let encontrou = false;
-    
-    linhas.forEach((linha, i) => {
-        // REMOVIDO: if (i === 0) return; -> O topo pode ter sequências 99
-        for (let j = 0; j < linha.length - 1; j++) {
-            if (linha[j] === 9 && linha[j + 1] === 9) {
-                encontrou = true;
-                let duracaoTotal = 0;
-                let offset = Math.floor(i / 2);
-                
-                for (let k = 0; k < 2; k++) {
-                    let colReal = j + offset + k;
-                    if (colReal < topoVida.length) {
-                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
-                    }
-                }
-                
-                let periodo = crono[j + offset] || crono[0];
-                let idadeIni = periodo.idadeIni;
-                let idadeFim = idadeIni + duracaoTotal;
-                 let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
-let dataIni = datas.ini;
-let dataFim = datas.fim;
-             
-                h += `<div class="blocoRelatorio" style="border-left:5px solid #2e7d32; padding-center:10px; margin-bottom:20px;">
-                        <b style="text-align:center; font-size:18px;">✅ Sequência Financeira 99/9</b><br>
-                       <span style="text-align:center; color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
-                        <span style="font-weight:bold; text-align:center; color:#2e7d32;">Vigência: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
-                        <p>${personalizarTexto(bancoTxt[999])}</p>
-                      </div>`;
-            }
-        }
-    });
-    return encontrou ? h + "</div>" : "";
-}
 
-function detectarSequenciaFinanceira(linhas){
-    let pos=[];
-    for(let i=0; i<linhas.length-1; i++){
-        for(let j=0; j<linhas[i].length-1; j++){
-            if(linhas[i][j]===9 && linhas[i][j+1]===9 && linhas[i+1][j]===9){
-                pos.push({linha:i, indice:j},{linha:i, indice:j+1},{linha:i+1, indice:j});
-            }
-        }
-    }
-    return pos;
-}        
+        
         
 const megaBancoAtributos = {
     // --- PLANO FÍSICO ---
