@@ -222,7 +222,25 @@
 .num { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #fff; color: #000; font-size: 18px; font-weight: bold; border-radius: 2px; }
 .num.negativo { background-color: #fff !important; color: #FF0000 !important; }
 .bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ffffff; }
+/* 🟩 SEQUÊNCIA FINANCEIRA (Triângulo de 9) */
+.num.financeiro { 
+    background-color: #ffffff !important; 
+    color: #28a745 !important; 
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
 
+/* 🟨 SEQUÊNCIA ESPECIAL (Dourado/Amarelo) */
+.num.especial { 
+    background-color: #ffffff !important; 
+    color: #d97a1e !important; 
+    box-shadow: 0 0 8px rgba(217, 122, 30, 0.6);
+}
+
+/* Ajuste para o texto de vulnerabilidade ficar visível no PDF */
+.num.negativo {
+    background-color: #ffffff !important;
+    color: #ff0000 !important;
+}
     .container-piramide {
         page-break-inside: avoid !important; /* Impede que quebre no meio */
         break-inside: avoid !important;      /* Reforço para navegadores modernos */
@@ -663,6 +681,40 @@ function gerarPiramide(nome){
     }
     return linhas;
 }
+
+// Detecta Sequências Especiais de 3 números (ex: 123, 168)
+function detectarEspeciais(linhas) {
+    let pos = [];
+    // Acessa exatamente o caminho do seu objeto no textos.js
+    const bancoEsp = textos.SeqEspeciais || {}; 
+    
+    linhas.forEach((linha, i) => {
+        for (let j = 0; j < linha.length - 2; j++) {
+            // Monta a sequência de 3 números da pirâmide
+            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
+            
+            // Se essa sequência existir no seu banco "SeqEspeciais"
+            if (bancoEsp[seq]) { 
+                pos.push({l: i, c: j}, {l: i, c: j + 1}, {l: i, c: j + 2}); 
+            }
+        }
+    });
+    return pos;
+}
+
+// Detecta o Triângulo de 9 (Sequência Financeira)
+function detectarFinanceiras(linhas) {
+    let pos = [];
+    for (let i = 0; i < linhas.length - 1; i++) {
+        for (let j = 0; j < linhas[i].length - 1; j++) {
+            // Padrão: Dois 9 lado a lado, e um 9 logo abaixo deles
+            if (linhas[i][j] === 9 && linhas[i][j + 1] === 9 && linhas[i + 1][j] === 9) {
+                pos.push({l: i, c: j}, {l: i, c: j + 1}, {l: i + 1, c: j});
+            }
+        }
+    }
+    return pos;
+}        
 
 // Adicione esta função para o código saber agrupar os números de 2 em 2
 function topo(base) {
@@ -3478,6 +3530,44 @@ if(dadosNegativas.detalhes.length > 0){
             </div>`;
     });
 }
+
+// --- 1. PROCESSAMENTO DE SEQUÊNCIAS ---
+let especiaisEncontradas = new Set(); // Set evita repetir o mesmo texto se a sequência aparecer 2x
+piramideVida.forEach((linha, i) => {
+    for (let j = 0; j < linha.length - 2; j++) {
+        let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
+        if (textos.SeqEspeciais[seq]) {
+            especiaisEncontradas.add(seq);
+        }
+    }
+});
+
+// --- 2. HTML DAS FINANCEIRAS ---
+const posFin = detectarFinanceiras(piramideVida);
+if (posFin.length > 0) {
+    tituloBonito = "Potencial de Fluxo Financeiro 💰";
+    htmlPiramide += `
+    <div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
+    <div class="texto-res">
+        ${aplicarFiltroTexto(textos.SeqFinanceira[999] || "Sua matriz indica um alinhamento favorável para a construção de bases sólidas e prosperidade financeira.")}
+    </div>`;
+}
+
+// --- 3. HTML DAS ESPECIAIS ---
+if (especiaisEncontradas.size > 0) {
+    tituloBonito = "Sinalizadores de Destino ⚡";
+    htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>`;
+    
+    especiaisEncontradas.forEach(seq => {
+        htmlPiramide += `
+        <div class="item-especial" style="margin-bottom: 30px; border-left: 4px solid #d97a1e; padding-left: 20px;">
+            <h3 style="margin-bottom: 10px;">Padrão Vibracional ${seq}</h3>
+            <div class="texto-res">${aplicarFiltroTexto(textos.SeqEspeciais[seq])}</div>
+        </div>`;
+    });
+}
+
+    
 htmlPiramide += `</div>`;
 
 // --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
