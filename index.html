@@ -260,6 +260,14 @@
     font-family: 'Segoe UI', sans-serif;
     opacity: 0.8;
 }
+
+
+/* 🟩 FLUXO FINANCEIRO (Verde) */
+.num.financeiro { 
+    background-color: #34c759 !important; 
+    color: #ffffff !important; 
+    box-shadow: 0 0 10px rgba(52, 199, 89, 0.9) !important;  
+}    
     
   /* Estilo Premium para a Seção de Potências */
 .secao-potencias {
@@ -1032,6 +1040,57 @@ function calcularIntensidadeMomento(configAtributo, res, faltantes, nomeRaw, d3,
     // Mantém a nota entre 1.0 e 9.6 para o gráfico não quebrar
     return Math.min(Math.max(nota, 1.7), 9.6);
 }
+
+ // --- FLUXO FINANCEIRO (Agora lê o topo) ---
+function gerarRelatorioFinanceiroComVigencia(linhas, crono, bancoTxt, topoVida) {
+    let h = `<div class="blocoRelatorio"><h2 style="color:#2e7d32;"> Fluxo Financeiro  💰</h2>`;
+    let encontrou = false;
+    
+    linhas.forEach((linha, i) => {
+        // REMOVIDO: if (i === 0) return; -> O topo pode ter sequências 99
+        for (let j = 0; j < linha.length - 1; j++) {
+            if (linha[j] === 9 && linha[j + 1] === 9) {
+                encontrou = true;
+                let duracaoTotal = 0;
+                let offset = Math.floor(i / 2);
+                
+                for (let k = 0; k < 2; k++) {
+                    let colReal = j + offset + k;
+                    if (colReal < topoVida.length) {
+                        duracaoTotal += parseInt(topoVida[colReal].toString()[0]) || 0;
+                    }
+                }
+                
+                let periodo = crono[j + offset] || crono[0];
+                let idadeIni = periodo.idadeIni;
+                let idadeFim = idadeIni + duracaoTotal;
+                 let datas = calcularPeriodoSequencia(periodo, duracaoTotal);
+let dataIni = datas.ini;
+let dataFim = datas.fim;
+             
+                h += `<div class="blocoRelatorio" style="border-left:5px solid #2e7d32; padding-center:10px; margin-bottom:20px;">
+                        <b style="text-align:center; font-size:18px;">✅ Sequência Financeira 99/9</b><br>
+                       <span style="text-align:center; color:#111827;">📅 Data: de ${dataIni} até ${dataFim}</span><br>
+                        <span style="font-weight:bold; text-align:center; color:#2e7d32;">Vigência: ${duracaoTotal} anos (dos ${idadeIni} aos ${idadeFim} anos)</span>
+                        <p>${personalizarTexto(bancoTxt[999])}</p>
+                      </div>`;
+            }
+        }
+    });
+    return encontrou ? h + "</div>" : "";
+}
+
+function detectarSequenciaFinanceira(linhas){
+    let pos=[];
+    for(let i=0; i<linhas.length-1; i++){
+        for(let j=0; j<linhas[i].length-1; j++){
+            if(linhas[i][j]===9 && linhas[i][j+1]===9 && linhas[i+1][j]===9){
+                pos.push({linha:i, indice:j},{linha:i, indice:j+1},{linha:i+1, indice:j});
+            }
+        }
+    }
+    return pos;
+}        
         
 const megaBancoAtributos = {
     // --- PLANO FÍSICO ---
