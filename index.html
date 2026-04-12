@@ -3730,6 +3730,17 @@ if (posFinanceiras.length > 0) {
         </div>
     </div>`;
 }
+
+// 2. Bloco Especiais
+let resumoEspeciais = gerarRelatorioEspeciaisComVigencia(piramideVida, cronograma, textos.SeqEspeciais, potenciasTopo);
+if (resumoEspeciais) {
+    htmlPiramide += `
+    <div class="evitar-corte">
+        <div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⚡</h2></div></div>
+        <div class="secao-card">${resumoEspeciais}</div>
+    </div>`;
+}
+    
     
 htmlPiramide += `</div>`;
 
