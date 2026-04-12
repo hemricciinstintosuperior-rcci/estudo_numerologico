@@ -3735,16 +3735,17 @@ piramideVida.forEach((linha, i) => {
     linha.forEach((n, j) => {
         let classes = ["num"];
 
-        // Checa se a posição atual (i, j) pertence a qualquer trio das Negativas
-        if (dadosNegativas.pos.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+        // Lógica para pintar o TRIO (3 números: o par e o resultado abaixo)
+        // Checa Negativas
+        if (dadosNegativas.pos.some(p => (i === p.l && j >= p.c && j < p.c + 3) || (i === p.l + 1 && j >= p.c && j < p.c + 2))) {
             classes.push("negativo");
         } 
-        // Checa se pertence ao trio Financeiro
-        else if (posFinanceiras.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+        // Checa Financeiras (O que faltava!)
+        else if (posFinanceiras.some(p => (i === p.l && j >= p.c && j < p.c + 3) || (i === p.l + 1 && j >= p.c && j < p.c + 2))) {
             classes.push("financeiro");
         } 
-        // Checa se pertence ao trio Especial
-        else if (posEspeciais.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+        // Checa Especiais
+        else if (posEspeciais.some(p => (i === p.l && j >= p.c && j < p.c + 3) || (i === p.l + 1 && j >= p.c && j < p.c + 2))) {
             classes.push("especial");
         }
 
@@ -3834,6 +3835,39 @@ dadosNegativas.detalhes.forEach(neg => {
             </div>`;
     });
 }
+
+if (posFinanceiras.length > 0) {
+    const topoFin = topo(piramideVida[0]);
+    htmlPiramide += `
+    <div class="evitar-corte" style="margin-top: 40px;">
+        <div class="separador-luxo"><div class="caixa-interna"><h2>Prosperidade e Fluxo 💰</h2></div></div>
+    </div>`;
+
+    posFinanceiras.forEach(fin => {
+        let offset = Math.floor(fin.l / 2);
+        let colReal = fin.c + offset;
+        let idadeIniFin = 0;
+        let duracaoFin = 0;
+
+        for (let a = 0; a < colReal; a++) {
+            idadeIniFin += parseInt((topoFin[a] || "1").toString()[0]);
+        }
+        for (let b = 0; b < 3; b++) { 
+            duracaoFin += parseInt((topoFin[colReal + b] || "1").toString()[0]);
+        }
+
+        const datasFin = calcularCalendarioVigencia(dataRaw, idadeIniFin, duracaoFin);
+
+        htmlPiramide += `
+            <div class="card-financeiro" style="margin-bottom: 30px; border-left: 6px solid #34c759; padding: 20px; background: #f0fff4; border-radius: 10px;">
+                <h3 style="color: #1b5e20; font-size: 22px;">💰 Fluxo Financeiro: ${fin.valor}</h3>
+                <p style="font-weight: bold; color: #2e7d32; font-size: 19px;">📅 VIGÊNCIA: ${datasFin.ini} até ${datasFin.fim}</p>
+                <p style="font-size: 17px;">⏳ Ciclo: dos ${idadeIniFin} aos ${idadeIniFin + duracaoFin} anos</p>
+                <div class="texto-res">${aplicarFiltroTexto(textos.SeqFinanceira[fin.valor] || "Vibração de prosperidade em análise.")}</div>
+            </div>`;
+    });
+}
+    
 
 if (posEspeciais.length > 0) {
     const topoParaEspeciais = topo(piramideVida[0]);
