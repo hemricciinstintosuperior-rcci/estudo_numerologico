@@ -3730,31 +3730,23 @@ htmlPiramide += `</div>`;
 
 // ... (continua o código que desenha as linhas da pirâmide)
     
-// --- DENTRO DA FUNÇÃO gerarMapaCompleto ou onde você gera o HTML ---
-
-// --- DENTRO DO LOOP DE CONSTRUÇÃO DA PIRÂMIDE ---
 piramideVida.forEach((linha, i) => {
     htmlPiramide += `<div class="linha">`;
     linha.forEach((n, j) => {
-// --- DENTRO DO LOOP DA PIRÂMIDE ---
-let classes = ["num"];
+        let classes = ["num"];
 
-// Pinta o trio completo das Negativas
-if (dadosNegativas.pos.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
-    classes.push("negativo");
-} 
-// Pinta o trio completo do Financeiro (Verde)
-else if (posFinanceiras.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
-    classes.push("financeiro");
-} 
-// Pinta o trio completo das Especiais (Dourado)
-else if (posEspeciais.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
-    classes.push("especial");
-}
+        // Lógica de Pintura dos 3 números (Trio)
+        if (dadosNegativas.pos.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+            classes.push("negativo");
+        } 
+        else if (posFinanceiras.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+            classes.push("financeiro");
+        } 
+        else if (posEspeciais.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
+            classes.push("especial");
+        }
 
-        // Destaque do Regente (Última linha)
         if (i === piramideVida.length - 1) classes.push("regente-destaque");
-
         htmlPiramide += `<div class="${classes.join(' ')}">${n}</div>`;
     });
     htmlPiramide += `</div>`;
@@ -3844,46 +3836,31 @@ if(dadosNegativas.detalhes.length > 0){
     });
 }
 
-// Verifica se existem sequências 99/9 para exibir o texto explicativo
-// --- NOVO BLOCO FINANCEIRO (Múltiplas ocorrências) ---
-if (posFinanceiras.length > 0) {
-    let conteudoFinanceiro = gerarBlocoComVigencia(posFinanceiras, potenciasTopo, dataRaw, textos.SeqFinanceira, "Fluxo Financeiro 99/9");
-    
-    htmlPiramide += `
-    <div class="evitar-corte" style="margin-top: 40px;">
-        <div class="separador-luxo"><div class="caixa-interna"><h2>Prosperidade e Fluxo 💰</h2></div></div>
-        <div class="secao-card">${conteudoFinanceiro}</div>
-    </div>`;
-}
-
 if (posEspeciais.length > 0) {
     const topoParaEspeciais = topo(piramideVida[0]);
-    
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⚡</h2></div></div>`;
 
     posEspeciais.forEach(esp => {
         let offset = Math.floor(esp.l / 2);
         let colReal = esp.c + offset;
-        let idadeIni = 0;
-        let duracao = 0;
+        let idadeIniEsp = 0;
+        let duracaoEsp = 0;
 
-        // Cálculo das idades baseado no topo
         for (let a = 0; a < colReal; a++) {
-            idadeIni += parseInt((topoParaEspeciais[a] || "1").toString()[0]);
+            idadeIniEsp += parseInt((topoParaEspeciais[a] || "1").toString()[0]);
         }
-        for (let b = 0; b < 3; b++) { // r = 3 números
-            duracao += parseInt((topoParaEspeciais[colReal + b] || "1").toString()[0]);
+        for (let b = 0; b < 3; b++) { 
+            duracaoEsp += parseInt((topoParaEspeciais[colReal + b] || "1").toString()[0]);
         }
 
-        // AQUI ESTÁ A SOLUÇÃO: Definir a variável antes de usar no HTML
-        const datasEspeciais = calcularCalendarioVigencia(dataRaw, idadeIni, duracao);
+        const datasEsp = calcularCalendarioVigencia(dataRaw, idadeIniEsp, duracaoEsp);
 
         htmlPiramide += `
-            <div class="card-especial" style="margin-bottom: 30px; border-left: 6px solid #d4af37; padding: 20px; background: #fffcf0;">
+            <div class="card-especial" style="margin-bottom: 30px; border-left: 6px solid #d4af37; padding: 20px; background: #fffcf0; border-radius: 10px;">
                 <h3 style="color: #827108; font-size: 22px;">⚡ Sequência Especial: ${esp.valor}</h3>
-                <p style="font-weight: bold; color: #b8860b;">📅 VIGÊNCIA: ${datasEspeciais.ini} até ${datasEspeciais.fim}</p>
-                <p>⏳ Ciclo: dos ${idadeIni} aos ${idadeIni + duracao} anos</p>
-                <div class="texto-res">${aplicarFiltroTexto(textos.SeqEspeciais[esp.valor])}</div>
+                <p style="font-weight: bold; color: #b8860b; font-size: 19px;">📅 VIGÊNCIA: ${datasEsp.ini} até ${datasEsp.fim}</p>
+                <p style="font-size: 17px;">⏳ Ciclo: dos ${idadeIniEsp} aos ${idadeIniEsp + duracaoEsp} anos</p>
+                <div class="texto-res">${aplicarFiltroTexto(textos.SeqEspeciais[esp.valor] || "Vibração em análise.")}</div>
             </div>`;
     });
 }
