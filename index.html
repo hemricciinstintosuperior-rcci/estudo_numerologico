@@ -791,6 +791,27 @@ let dataFim = datas.fim;
     return encontrou ? h + "</div>" : "";
 }
 
+function calcularDatasEspeciais(dataNascStr, idadeInicio, duracaoTotal) {
+    let dataBase;
+
+    // Converte a data de nascimento para objeto, seja ela string ou Date
+    if (dataNascStr instanceof Date) {
+        dataBase = dataNascStr;
+    } else {
+        const partes = String(dataNascStr).split('-');
+        dataBase = new Date(partes[0], partes[1] - 1, partes[2]);
+    }
+
+    // Cálculo da Vigência para o Ciclo de Poder/Oportunidade
+    let dataIni = new Date(dataBase.getFullYear() + idadeInicio, dataBase.getMonth(), dataBase.getDate());
+    let dataFim = new Date(dataBase.getFullYear() + idadeInicio + duracaoTotal, dataBase.getMonth(), dataBase.getDate());
+
+    return {
+        ini: dataIni.toLocaleDateString('pt-BR'),
+        fim: dataFim.toLocaleDateString('pt-BR')
+    };
+}        
+
 // --- FUNÇÃO PARA GERAR O CONTEÚDO COM VIGÊNCIA REAL ---
 function gerarRelatorioEspeciaisComVigencia(especiaisEncontradas, arcanosTopo, dataNasc, bancoEspeciais) {
     let html = "";
