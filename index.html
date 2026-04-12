@@ -926,7 +926,43 @@ function calcularVigenciaLinearVertical(coluna, tamanhoSeq, cronograma, arcanosT
         }
     }
     return detalhes;
-}       
+}     
+
+function gerarBlocoComVigencia(listaOcorrencias, arcanosTopo, dataNasc, bancoTextos, titulo) {
+    let html = "";
+    listaOcorrencias.forEach(item => {
+        // O "pulo do gato": calcular qual coluna do topo essa sequência representa
+        // Na pirâmide, a cada linha que desce, a coluna '0' avança meia posição
+        let offset = Math.floor(item.l / 2);
+        let colReal = item.c + offset;
+        
+        let idadeInicio = 0;
+        let duracaoTotal = 0;
+
+        // Soma as idades antes do início
+        for (let a = 0; a < colReal; a++) {
+            let arc = arcanosTopo[a] || arcanosTopo[0];
+            idadeInicio += parseInt(arc.toString()[0]) || 1;
+        }
+
+        // Soma a duração da sequência
+        for (let b = 0; b < item.r; b++) {
+            let arc = arcanosTopo[colReal + b] || arcanosTopo[0];
+            duracaoTotal += parseInt(arc.toString()[0]) || 1;
+        }
+
+        const datas = calcularDatasVigenciaNegativa(dataNasc, idadeInicio, duracaoTotal);
+        const numeroChave = item.num || 999; // 999 para financeiro ou o número da especial
+
+        html += `
+            <div style="margin-bottom: 20px; border-left: 5px solid #d4af37; padding-left: 15px;">
+                <h3 style="margin:0; color:#827108;">${titulo} ${numeroChave === 999 ? '💰' : '⚡'}</h3>
+                <p style="font-weight: bold; margin: 5px 0;">📅 De ${datas.ini} até ${datas.fim} (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos)</p>
+                <div class="texto-res">${aplicarFiltroTexto(bancoTextos[numeroChave])}</div>
+            </div>`;
+    });
+    return html;
+}        
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
@@ -3741,44 +3777,25 @@ if(dadosNegativas.detalhes.length > 0){
 }
 
 // Verifica se existem sequências 99/9 para exibir o texto explicativo
+// --- NOVO BLOCO FINANCEIRO (Múltiplas ocorrências) ---
 if (posFinanceiras.length > 0) {
-    // Pegamos a primeira ocorrência para calcular a data
-    let f = posFinanceiras[0]; 
-    let offset = Math.floor(f.l / 2);
-    let colReal = f.c + offset;
+    let conteudoFinanceiro = gerarBlocoComVigencia(posFinanceiras, potenciasTopo, dataRaw, textos.SeqFinanceira, "Fluxo Financeiro 99/9");
     
-    // Pega a potência do topo para saber a duração (Ex: se for Arcano 52, dura 5 anos)
-    let arcRef = potenciasTopo[colReal] || potenciasTopo[0];
-    let duracao = parseInt(arcRef.toString()[0]) || 1;
-    
-    // Cálculo de idade (estimado pela posição na pirâmide)
-    let idadeIni = 0;
-    for(let k=0; k < colReal; k++) {
-        idadeIni += parseInt((potenciasTopo[k] || "1").toString()[0]);
-    }
-
     htmlPiramide += `
     <div class="evitar-corte" style="margin-top: 40px;">
-        <div class="separador-luxo">
-            <div class="caixa-interna"><h2>Fluxo Financeiro 💰</h2></div>
-        </div>
-        <div class="secao-card">
-            <div style="border-left: 5px solid #34c759; padding-left: 15px; margin-bottom: 20px;">
-                <h3 style="color: #2e7d32 !important;">Potencial de Prosperidade 99/9</h3>
-                <p style="font-weight: bold; color: #2e7d32;">Período estimado: dos ${idadeIni} aos ${idadeIni + (duracao * 2)} anos.</p>
-                <div class="texto-res">${textos.SeqFinanceira[999] || "Vibração de fluxo material intenso e colheita financeira."}</div>
-            </div>
-        </div>
+        <div class="separador-luxo"><div class="caixa-interna"><h2>Prosperidade e Fluxo 💰</h2></div></div>
+        <div class="secao-card">${conteudoFinanceiro}</div>
     </div>`;
 }
 
-// 2. Bloco Especiais
-
-if (resumoEspeciais) {
+// --- NOVO BLOCO ESPECIAIS (Múltiplas ocorrências) ---
+if (posEspeciais.length > 0) {
+    let conteudoEspeciais = gerarBlocoComVigencia(posEspeciais, potenciasTopo, dataRaw, textos.SeqEspeciais, "Sequência Especial");
+    
     htmlPiramide += `
-    <div class="evitar-corte">
-        <div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⚡</h2></div></div>
-        <div class="secao-card">${resumoEspeciais}</div>
+    <div class="evitar-corte" style="margin-top: 40px;">
+        <div class="separador-luxo"><div class="caixa-interna"><h2>Poderes Extras ⚡</h2></div></div>
+        <div class="secao-card">${conteudoEspeciais}</div>
     </div>`;
 }
     
