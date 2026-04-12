@@ -3735,13 +3735,15 @@ piramideVida.forEach((linha, i) => {
     linha.forEach((n, j) => {
         let classes = ["num"];
 
-        // Lógica de Pintura dos 3 números (Trio)
+        // Checa se a posição atual (i, j) pertence a qualquer trio das Negativas
         if (dadosNegativas.pos.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
             classes.push("negativo");
         } 
+        // Checa se pertence ao trio Financeiro
         else if (posFinanceiras.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
             classes.push("financeiro");
         } 
+        // Checa se pertence ao trio Especial
         else if (posEspeciais.some(p => p.l === i && (j >= p.c && j < p.c + 3))) {
             classes.push("especial");
         }
@@ -3751,7 +3753,6 @@ piramideVida.forEach((linha, i) => {
     });
     htmlPiramide += `</div>`;
 });
-
 htmlPiramide += `</div>`;
 
 
@@ -3806,31 +3807,29 @@ if(dadosNegativas.detalhes.length > 0){
     
     const arcanosTopo = topo(piramideVida[0]);
 
-    dadosNegativas.detalhes.forEach(neg => {
+dadosNegativas.detalhes.forEach(neg => {
         let idadeInicio = 0;
         let duracaoTotal = 0;
 
-        // 1. Soma as durações de todas as colunas ANTES da sequência começar
         for (let a = 0; a < neg.colunaInicio; a++) {
             let arcRef = arcanosTopo[a] || arcanosTopo[arcanosTopo.length - 1];
             idadeInicio += parseInt(arcRef.toString()[0]) || 1;
         }
 
-        // 2. Soma a duração das colunas que a sequência OCUPA na pirâmide
         for (let b = 0; b < neg.repeticoes; b++) {
             let colReal = neg.colunaInicio + b;
             let arcAtual = arcanosTopo[colReal] || arcanosTopo[arcanosTopo.length - 1];
             duracaoTotal += parseInt(arcAtual.toString()[0]) || 1;
         }
-
         
+        // Criamos a variável com o nome 'datasNeg'
         const datasNeg = calcularCalendarioVigencia(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
             <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
-               <h2  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}  ⚠️</h2></b><br>
-                <span style="color:red; font-weight: bold;font-size: 21px;">📅 Período de maior influência: de ${datas.ini} até ${datas.fim}</span><br><br>
-                <span style="color:red; font-weight: bold;font-size: 21px;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
+               <h2 style="color:red; font-size: 22px;">Bloqueio n° ${neg.numero} ⚠️</h2><br>
+                <span style="color:red; font-weight: bold; font-size: 21px;">📅 Período: de ${datasNeg.ini} até ${datasNeg.fim}</span><br><br>
+                <span style="color:red; font-weight: bold; font-size: 21px;">Tempo: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos)</span><br><br>
                 <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
             </div>`;
     });
