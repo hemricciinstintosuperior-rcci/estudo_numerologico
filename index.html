@@ -1086,6 +1086,16 @@ function aplicarFiltroNomeComposto(texto) {
     // Retorna o texto substituindo a tag pelo nome em negrito
     return texto.replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`);
 }
+
+function personalizarTexto(texto) {
+    if (!texto) return "";
+    
+    // Se você já tem funções como 'personalizarNomeComposto' ou 'personalizarPrimeiroNome', 
+    // você pode chamá-las aqui dentro. Por enquanto, vamos garantir que o texto retorne:
+    return aplicarFiltroTexto(texto); 
+}
+
+     
         
 // Função para calcular o Desejo Oculto usando a SUA 'tabela' Cabalística
 function calcularDesejoOculto(nome) {
