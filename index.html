@@ -222,25 +222,17 @@
 .num { width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; background: #fff; color: #000; font-size: 18px; font-weight: bold; border-radius: 2px; }
 .num.negativo { background-color: #fff !important; color: #FF0000 !important; }
 .bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ffffff; }
-/* 🟩 SEQUÊNCIA FINANCEIRA (Triângulo de 9) */
-.num.financeiro { 
+/* Fundo sempre branco para todos os números da pirâmide */
+.num { 
     background-color: #ffffff !important; 
-    color: #28a745 !important; 
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    border: 1px solid #eee; /* Bordinha leve para definir o quadrado */
 }
 
-/* 🟨 SEQUÊNCIA ESPECIAL (Dourado/Amarelo) */
-.num.especial { 
-    background-color: #ffffff !important; 
-    color: #d97a1e !important; 
-    box-shadow: 0 0 8px rgba(217, 122, 30, 0.6);
-}
+.num.negativo { color: #FF0000 !important; font-weight: 900 !important; background: #fff !important; }
+.num.especial { color: #d97a1e !important; font-weight: 900 !important; background: #fff !important; }
+.num.financeiro { color: #28a745 !important; font-weight: 900 !important; background: #fff !important; }
 
-/* Ajuste para o texto de vulnerabilidade ficar visível no PDF */
-.num.negativo {
-    background-color: #ffffff !important;
-    color: #ff0000 !important;
-}
+/* O Regente mantém o seu estilo especial de triângulo que já definimos */
     .container-piramide {
         page-break-inside: avoid !important; /* Impede que quebre no meio */
         break-inside: avoid !important;      /* Reforço para navegadores modernos */
@@ -682,39 +674,7 @@ function gerarPiramide(nome){
     return linhas;
 }
 
-// Detecta Sequências Especiais de 3 números (ex: 123, 168)
-function detectarEspeciais(linhas) {
-    let pos = [];
-    // Acessa exatamente o caminho do seu objeto no textos.js
-    const bancoEsp = textos.SeqEspeciais || {}; 
-    
-    linhas.forEach((linha, i) => {
-        for (let j = 0; j < linha.length - 2; j++) {
-            // Monta a sequência de 3 números da pirâmide
-            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
-            
-            // Se essa sequência existir no seu banco "SeqEspeciais"
-            if (bancoEsp[seq]) { 
-                pos.push({l: i, c: j}, {l: i, c: j + 1}, {l: i, c: j + 2}); 
-            }
-        }
-    });
-    return pos;
-}
-
-// Detecta o Triângulo de 9 (Sequência Financeira)
-function detectarFinanceiras(linhas) {
-    let pos = [];
-    for (let i = 0; i < linhas.length - 1; i++) {
-        for (let j = 0; j < linhas[i].length - 1; j++) {
-            // Padrão: Dois 9 lado a lado, e um 9 logo abaixo deles
-            if (linhas[i][j] === 9 && linhas[i][j + 1] === 9 && linhas[i + 1][j] === 9) {
-                pos.push({l: i, c: j}, {l: i, c: j + 1}, {l: i + 1, c: j});
-            }
-        }
-    }
-    return pos;
-}        
+   
 
 // Adicione esta função para o código saber agrupar os números de 2 em 2
 function topo(base) {
@@ -772,6 +732,45 @@ function calcularDatasVigenciaNegativa(dataNascStr, idadeInicio, duracaoTotal) {
     };
 }        
 
+ // Detecta cada triângulo de 9 individualmente (Financeiro)
+function detectarFinanceirasIndependentes(linhas) {
+    let encontrados = [];
+    for (let i = 0; i < linhas.length - 1; i++) {
+        for (let j = 0; j < linhas[i].length - 1; j++) {
+            if (linhas[i][j] === 9 && linhas[i][j + 1] === 9 && linhas[i + 1][j] === 9) {
+                let offset = Math.floor(i / 2);
+                encontrados.push({
+                    numero: 999, // Identificador para o texto
+                    colunaInicio: j + offset,
+                    repeticoes: 2, // O triângulo financeiro baseia-se em 2 colunas do topo
+                    linha: i
+                });
+            }
+        }
+    }
+    return encontrados;
+}
+
+// Detecta cada sequência especial de 3 dígitos individualmente
+function detectarEspeciaisIndependentes(linhas) {
+    let encontrados = [];
+    const bancoEsp = textos.SeqEspeciais || {};
+    linhas.forEach((linha, i) => {
+        for (let j = 0; j < linha.length - 2; j++) {
+            let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
+            if (bancoEsp[seq]) {
+                let offset = Math.floor(i / 2);
+                encontrados.push({
+                    numero: seq,
+                    colunaInicio: j + offset,
+                    repeticoes: 3,
+                    linha: i
+                });
+            }
+        }
+    });
+    return encontrados;
+}       
         
  function gerarBlocoPotenciasNumericas(baseNumerica) {
     // A função topo() já existe no seu código e faz o parseInt(base[i] + base[i+1])
@@ -3531,42 +3530,60 @@ if(dadosNegativas.detalhes.length > 0){
     });
 }
 
-// --- 1. PROCESSAMENTO DE SEQUÊNCIAS ---
-let especiaisEncontradas = new Set(); // Set evita repetir o mesmo texto se a sequência aparecer 2x
-piramideVida.forEach((linha, i) => {
-    for (let j = 0; j < linha.length - 2; j++) {
-        let seq = "" + linha[j] + linha[j + 1] + linha[j + 2];
-        if (textos.SeqEspeciais[seq]) {
-            especiaisEncontradas.add(seq);
-        }
-    }
-});
+const arcanosTopo = topo(piramideVida[0]);
 
-// --- 2. HTML DAS FINANCEIRAS ---
-const posFin = detectarFinanceiras(piramideVida);
-if (posFin.length > 0) {
-    tituloBonito = "Potencial de Fluxo Financeiro 💰";
-    htmlPiramide += `
-    <div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
-    <div class="texto-res">
-        ${aplicarFiltroTexto(textos.SeqFinanceira[999] || "Sua matriz indica um alinhamento favorável para a construção de bases sólidas e prosperidade financeira.")}
-    </div>`;
-}
-
-// --- 3. HTML DAS ESPECIAIS ---
-if (especiaisEncontradas.size > 0) {
-    tituloBonito = "Sinalizadores de Destino ⚡";
-    htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>`;
+// --- PROCESSAR SEQUÊNCIAS ESPECIAIS (INDIVIDUALMENTE) ---
+const listaEspeciais = detectarEspeciaisIndependentes(piramideVida);
+if (listaEspeciais.length > 0) {
+    htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⭐</h2></div></div>`;
     
-    especiaisEncontradas.forEach(seq => {
+    listaEspeciais.forEach(esp => {
+        let idadeInicio = 0; let duracaoTotal = 0;
+        // Cálculo baseado no topo para ESTA sequência
+        for (let a = 0; a < esp.colunaInicio; a++) {
+            idadeInicio += parseInt((arcanosTopo[a] || arcanosTopo[0]).toString()[0]) || 1;
+        }
+        for (let b = 0; b < esp.repeticoes; b++) {
+            duracaoTotal += parseInt((arcanosTopo[esp.colunaInicio + b] || arcanosTopo[0]).toString()[0]) || 1;
+        }
+        const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
+
         htmlPiramide += `
-        <div class="item-especial" style="margin-bottom: 30px; border-left: 4px solid #d97a1e; padding-left: 20px;">
-            <h3 style="margin-bottom: 10px;">Padrão Vibracional ${seq}</h3>
-            <div class="texto-res">${aplicarFiltroTexto(textos.SeqEspeciais[seq])}</div>
-        </div>`;
+            <div style="margin-bottom: 35px; text-align: center;">
+                <h2 style="color:#d97a1e; font-size: 22px;">Alinhamento Especial ${esp.numero}</h2>
+                <span style="color:#d97a1e; font-weight: bold; font-size: 19px;">📅 Vigência: de ${datas.ini} até ${datas.fim} (${duracaoTotal} anos)</span><br>
+                <div class="texto-res" style="text-align: justify; margin-top:15px;">
+                    ${aplicarFiltroTexto(textos.SeqEspeciais[esp.numero])}
+                </div>
+            </div>`;
     });
 }
 
+// --- PROCESSAR SEQUÊNCIAS FINANCEIRAS (INDIVIDUALMENTE) ---
+const listaFin = detectarFinanceirasIndependentes(piramideVida);
+if (listaFin.length > 0) {
+    htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Fluxos Financeiros 💰</h2></div></div>`;
+    
+    listaFin.forEach(fin => {
+        let idadeInicio = 0; let duracaoTotal = 0;
+        for (let a = 0; a < fin.colunaInicio; a++) {
+            idadeInicio += parseInt((arcanosTopo[a] || arcanosTopo[0]).toString()[0]) || 1;
+        }
+        for (let b = 0; b < fin.repeticoes; b++) {
+            duracaoTotal += parseInt((arcanosTopo[fin.colunaInicio + b] || arcanosTopo[0]).toString()[0]) || 1;
+        }
+        const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
+
+        htmlPiramide += `
+            <div style="margin-bottom: 35px; text-align: center;">
+                <h2 style="color:#28a745; font-size: 22px;">Potencial de Prosperidade 99/9</h2>
+                <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período: de ${datas.ini} até ${datas.fim} (Duração: ${duracaoTotal} anos)</span><br>
+                <div class="texto-res" style="text-align: justify; margin-top:15px;">
+                    ${aplicarFiltroTexto(textos.SeqFinanceira[999])}
+                </div>
+            </div>`;
+    });
+}
     
 htmlPiramide += `</div>`;
 
