@@ -3407,7 +3407,10 @@ html += `
         <p>Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. </p>
     </div>
 `;
-    
+// --- 1. PRIMEIRO: DETECTA TUDO (Isso resolve o erro de 'before initialization') ---
+const arcanosTopo = topo(piramideVida[0]);
+const listaEspeciais = detectarEspeciaisIndependentes(piramideVida); // Função que criamos antes
+const listaFin = detectarFinanceirasIndependentes(piramideVida);      
 // Crie esta linha logo ACIMA do código da ondinha:
  tituloBonito = "A Matriz da Vida"; 
  // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
