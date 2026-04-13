@@ -12,7 +12,14 @@
 }
     
         :root { --gold: #d97a1e; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
-
+@media print {
+    .apenas-no-pdf {
+        display: block !important;
+    }
+    .conteudo-travado {
+        filter: none !important; /* Remove o desfoque no PDF */
+    }
+}
 @media print {
 
     @page {
@@ -121,7 +128,9 @@
 
  }
 
-    
+   .apenas-no-pdf {
+    display: none;
+} 
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #111; margin: 0; padding: 0; display: block;}
         /* Estilo para os Logos */
 .logo-capa {
