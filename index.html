@@ -176,47 +176,31 @@
 }
         
 
-/* Container principal - Removemos o borrão daqui */
+/* 1. CLASSE PRINCIPAL: Garante o desfoque total do texto */
 .conteudo-travado {
     position: relative;
-    user-select: none;
-    pointer-events: none;
+    filter: blur(10px);        /* Efeito de borrão intenso */
+    -webkit-filter: blur(10px);
+    opacity: 0.6;              /* Deixa o conteúdo meio transparente */
+    user-select: none;         /* Impede copiar o texto */
+    pointer-events: none;      /* Impede clicar em links */
     transition: 0.3s;
-    /* Daqui para baixo, não mude */
+    overflow: visible;         /* Garante que a mensagem apareça fora das bordas */
 }
 
-/* Fundo Falso que recebe o borrão - Isso vai cobrir o texto longo */
-/* O Fundo Jateado - Aplica o borrão apenas ao conteúdo */
-.conteudo-travado::before {
-    content: "";
-    position: absolute;
-    top: -5px; /* Ajuste leve para cobrir tudo */
-    left: -5px;
-    width: calc(100% + 10px); /* Garante cobertura total */
-    height: calc(100% + 10px);
-    
-    /* TROQUE #0a0e1a PELA COR DE FUNDO EXATA DO SEU RELATÓRIO */
-    background: #0a0e1a; /* Fundo escuro do tema Premium */
-    
-    /* BORRÃO VOLTA AQUI */
-    filter: blur(8px); 
-    -webkit-filter: blur(8px);
-    opacity: 0.9; /* Deixa quase opaco para esconder bem */
-    
-    z-index: 1; /* Fica acima do texto, mas abaixo da mensagem */
-    border-radius: 5px;
-}
-
-/* A Mensagem - Agora NÍTIDA e na FRENTE */
+/* 2. A MENSAGEM: Nítida, centralizada e na frente de tudo */
 .conteudo-travado::after {
     content: "🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA";
+    
+    /* Posicionamento fixo no centro */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     
-    background: rgba(10, 14, 26, 0.95); /* Fundo bem escuro */
-    color: #d4af37; /* Dourado Instinto Superior */
+    /* Estilo Visual Premium Instinto Superior */
+    background: rgba(10, 14, 26, 0.95); /* Fundo preto quase opaco */
+    color: #d4af37;                    /* Dourado do seu tema */
     padding: 12px 24px;
     border: 1px solid #d4af37;
     border-radius: 8px;
@@ -224,17 +208,25 @@
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
     
-    /* Z-INDEX ALTO PARA JOGAR PARA A FRENTE */
-    z-index: 2; 
+    /* A MÁGICA PARA FICAR NÍTIDO: */
+    filter: none !important;           /* Remove o borrão apenas da tarja */
+    -webkit-filter: none !important;
+    opacity: 1 !important;             /* Garante 100% de visibilidade */
+    z-index: 9999;                     /* Força a mensagem para a frente */
 }
 
-/* REMOVE TUDO NO PDF */
+/* 3. AJUSTE PARA O PDF: Tudo fica limpo na hora de gerar o arquivo */
 @media print {
-    .conteudo-travado::before,
+    .conteudo-travado {
+        filter: none !important;       /* Remove borrão no PDF */
+        -webkit-filter: none !important;
+        opacity: 1 !important;         /* Texto 100% preto/visível */
+    }
+    
     .conteudo-travado::after {
-        display: none !important;
+        display: none !important;      /* Some com a tarja de aviso no PDF */
     }
 }
 
