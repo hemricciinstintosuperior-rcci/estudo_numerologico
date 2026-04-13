@@ -176,60 +176,59 @@
 }
         
 
-/* 1. CLASSE PRINCIPAL: Garante o desfoque total do texto */
+/* 1. O CONTEÚDO (O que fica por baixo) */
 .conteudo-travado {
     position: relative;
-    filter: blur(10px);        /* Efeito de borrão intenso */
+    filter: blur(10px);        /* Mantém o efeito apagado que você gostou */
     -webkit-filter: blur(10px);
-    opacity: 0.6;              /* Deixa o conteúdo meio transparente */
-    user-select: none;         /* Impede copiar o texto */
-    pointer-events: none;      /* Impede clicar em links */
+    opacity: 0.5;              /* Deixa bem clarinho para esconder o texto */
+    user-select: none;
+    pointer-events: none;
     transition: 0.3s;
-    overflow: visible;         /* Garante que a mensagem apareça fora das bordas */
 }
 
-/* 2. A MENSAGEM: Nítida, centralizada e na frente de tudo */
+/* 2. A MENSAGEM (O que precisa aparecer nítido) */
 .conteudo-travado::after {
+    /* O texto que você quer que apareça */
     content: "🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA";
     
-    /* Posicionamento fixo no centro */
+    /* Força a visibilidade - Isso é o mais importante */
+    filter: none !important;           /* Cancela o borrão aqui */
+    -webkit-filter: none !important;
+    opacity: 1 !important;             /* Garante 100% de nitidez */
+    z-index: 9999;                     /* Joga para a frente de tudo */
+
+    /* Posicionamento */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     
-    /* Estilo Visual Premium Instinto Superior */
-    background: rgba(10, 14, 26, 0.95); /* Fundo preto quase opaco */
-    color: #d4af37;                    /* Dourado do seu tema */
+    /* Visual Premium Instinto Superior */
+    background: #0a0e1a;               /* Fundo sólido para não confundir com o texto de trás */
+    color: #d4af37;                    /* Seu dourado padrão */
     padding: 12px 24px;
-    border: 1px solid #d4af37;
+    border: 2px solid #d4af37;
     border-radius: 8px;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    
-    /* A MÁGICA PARA FICAR NÍTIDO: */
-    filter: none !important;           /* Remove o borrão apenas da tarja */
-    -webkit-filter: none !important;
-    opacity: 1 !important;             /* Garante 100% de visibilidade */
-    z-index: 9999;                     /* Força a mensagem para a frente */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
 }
 
-/* 3. AJUSTE PARA O PDF: Tudo fica limpo na hora de gerar o arquivo */
+/* 3. REGRAS PARA O PDF (Media Print) */
 @media print {
     .conteudo-travado {
-        filter: none !important;       /* Remove borrão no PDF */
+        filter: none !important;       /* Tira o borrão no PDF */
         -webkit-filter: none !important;
-        opacity: 1 !important;         /* Texto 100% preto/visível */
+        opacity: 1 !important;         /* Volta a cor normal no papel */
     }
     
     .conteudo-travado::after {
-        display: none !important;      /* Some com a tarja de aviso no PDF */
+        display: none !important;      /* Esconde a mensagem de trava no PDF */
     }
 }
-
         .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 .secao-card, .card { 
     border-left: none !important; 
