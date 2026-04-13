@@ -3274,7 +3274,12 @@ const resultadoMomentoCompleto = montarHtmlPlanosMomento(
 html += resultadoMomentoCompleto.html;
 
 // --- FIM DO BLOCO INTEGRADO ---
-
+.conteudo-travado {
+    filter: blur(8px); /* Deixa as letras borradas */
+    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
+    pointer-events: none; /* Impede cliques */
+    opacity: 0.6;
+}
     
 // 1. CAPTURA SEGURA DA DATA (Evita o erro de 'null')
 const campoDataElemento = document.getElementById('dataNascimento');
@@ -3430,7 +3435,7 @@ html += `
 </div>
 `;
    
-    
+
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 
   
@@ -3588,7 +3593,12 @@ if(dadosNegativas.detalhes.length > 0){
     });
 }
 
-
+   .conteudo-travado {
+    filter: blur(8px); /* Deixa as letras borradas */
+    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
+    pointer-events: none; /* Impede cliques */
+    opacity: 0.6;
+} 
 
 
 // --- SEQUÊNCIAS ESPECIAIS ⭐ ---
@@ -3618,7 +3628,12 @@ if (listaEspeciais.length > 0) {
             </div>`;
     });
 }
-
+   .conteudo-travado {
+    filter: blur(8px); /* Deixa as letras borradas */
+    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
+    pointer-events: none; /* Impede cliques */
+    opacity: 0.6;
+} 
 // --- FLUXOS FINANCEIROS 💰 ---
 if (listaFin.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Fluxos Financeiros 💰</h2></div></div>`;
@@ -3646,7 +3661,12 @@ if (listaFin.length > 0) {
             </div>`;
     });
 }
-    
+     .conteudo-travado {
+    filter: blur(8px); /* Deixa as letras borradas */
+    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
+    pointer-events: none; /* Impede cliques */
+    opacity: 0.6;
+}   
 htmlPiramide += `</div>`;
 
 // --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
