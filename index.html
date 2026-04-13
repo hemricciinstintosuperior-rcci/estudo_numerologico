@@ -3587,10 +3587,7 @@ if(dadosNegativas.detalhes.length > 0){
                <h2  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}  ⚠️</h2></b><br>
                 <span style="color:red; font-weight: bold;font-size: 21px;">📅 Período de maior influência: de ${datas.ini} até ${datas.fim}</span><br><br>
                 <span style="color:red; font-weight: bold;font-size: 21px;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
-                <div class="conteudo-travado">
-        Aqui vai o texto secreto que só sai legível no PDF...
-    </div>
-</div>
+        <div class="conteudo-travado">
                 <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
             </div>`;
     });
@@ -3620,10 +3617,7 @@ if (listaEspeciais.length > 0) {
                 <h2 style="color:#d97a1e; font-size: 22px;">Alinhamento Especial ${esp.numero}</h2>
                 <span style="color:#d97a1e; font-weight: bold; font-size: 19px;">📅 Vigência: de ${datas.ini} até ${datas.fim} (${duracaoTotal} anos)</span><br>
                 <div class="conteudo-travado">
-        Aqui vai o texto secreto que só sai legível no PDF...
-    </div>
-</div>
-                <div class="texto-res" style="text-align: justify; margin-top:15px;">
+                     <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqEspeciais[esp.numero])}
                 </div>
             </div>`;
@@ -3651,10 +3645,7 @@ if (listaFin.length > 0) {
             <div style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#28a745; font-size: 22px;">Potencial de Prosperidade 99/9</h2>
                 <div class="conteudo-travado">
-        Aqui vai o texto secreto que só sai legível no PDF...
-    </div>
-</div>
-                <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período: de ${datas.ini} até ${datas.fim} (Duração: ${duracaoTotal} anos)</span><br>
+                   <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período: de ${datas.ini} até ${datas.fim} (Duração: ${duracaoTotal} anos)</span><br>
                 <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqFinanceira[999])}
                 </div>
@@ -3703,7 +3694,7 @@ while (idadeAcumulada < 100) {
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
 
-                
+                 <div class="conteudo-travado">
                 <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#222;'}">
                     ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
                 </div>
