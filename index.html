@@ -186,21 +186,25 @@
 }
 
 /* Fundo Falso que recebe o borrão - Isso vai cobrir o texto longo */
+/* O Fundo Jateado - Aplica o borrão apenas ao conteúdo */
 .conteudo-travado::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit; /* Pega a cor de fundo do seu tema */
+    top: -5px; /* Ajuste leve para cobrir tudo */
+    left: -5px;
+    width: calc(100% + 10px); /* Garante cobertura total */
+    height: calc(100% + 10px);
     
-    /* É AQUI QUE FICA O BORRÃO AGORA */
-    filter: blur(10px); 
-    -webkit-filter: blur(10px);
-    opacity: 0.8; 
+    /* TROQUE #0a0e1a PELA COR DE FUNDO EXATA DO SEU RELATÓRIO */
+    background: #0a0e1a; /* Fundo escuro do tema Premium */
+    
+    /* BORRÃO VOLTA AQUI */
+    filter: blur(8px); 
+    -webkit-filter: blur(8px);
+    opacity: 0.9; /* Deixa quase opaco para esconder bem */
     
     z-index: 1; /* Fica acima do texto, mas abaixo da mensagem */
+    border-radius: 5px;
 }
 
 /* A Mensagem - Agora NÍTIDA e na FRENTE */
