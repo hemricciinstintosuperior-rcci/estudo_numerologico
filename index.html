@@ -177,57 +177,37 @@
         
 
 /* 1. O CONTEÚDO (O que fica por baixo) */
+/* O texto que fica atrás continua borrado como você gosta */
 .conteudo-travado {
-    position: relative;
-    filter: blur(10px);        /* Mantém o efeito apagado que você gostou */
+    filter: blur(10px);
     -webkit-filter: blur(10px);
-    opacity: 0.5;              /* Deixa bem clarinho para esconder o texto */
+    opacity: 0.5;
     user-select: none;
     pointer-events: none;
-    transition: 0.3s;
 }
 
-/* 2. A MENSAGEM (O que precisa aparecer nítido) */
-.conteudo-travado::after {
-    /* O texto que você quer que apareça */
-    content: "🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA";
-    
-    /* Força a visibilidade - Isso é o mais importante */
-    filter: none !important;           /* Cancela o borrão aqui */
-    -webkit-filter: none !important;
-    opacity: 1 !important;             /* Garante 100% de nitidez */
-    z-index: 9999;                     /* Joga para a frente de tudo */
-
-    /* Posicionamento */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    /* Visual Premium Instinto Superior */
-    background: #0a0e1a;               /* Fundo sólido para não confundir com o texto de trás */
-    color: #d4af37;                    /* Seu dourado padrão */
-    padding: 12px 24px;
+/* A nova caixa de aviso (totalmente independente e nítida) */
+.aviso-trava {
+    background: #0a0e1a; /* Cor do seu fundo */
+    color: #d4af37;    /* Dourado Instinto Superior */
     border: 2px solid #d4af37;
+    padding: 15px;
     border-radius: 8px;
-    font-size: 14px;
     font-weight: bold;
     text-align: center;
-    white-space: nowrap;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+    margin-top: -50px; /* Faz ela subir para cima do borrão */
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* 3. REGRAS PARA O PDF (Media Print) */
 @media print {
-    .conteudo-travado {
-        filter: none !important;       /* Tira o borrão no PDF */
-        -webkit-filter: none !important;
-        opacity: 1 !important;         /* Volta a cor normal no papel */
-    }
-    
-    .conteudo-travado::after {
-        display: none !important;      /* Esconde a mensagem de trava no PDF */
-    }
+    .conteudo-travado { filter: none !important; opacity: 1 !important; }
+    .aviso-trava { display: none !important; }
 }
         .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 .secao-card, .card { 
