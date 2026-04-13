@@ -176,48 +176,59 @@
 }
         
 
-.conteudo-travado {
-    filter: blur(8px); /* Borra o texto */
-    -webkit-filter: blur(8px);
-    opacity: 0.7; /* Deixa levemente transparente */
-    user-select: none; /* Impede que o usuário copie o texto */
-    pointer-events: none; /* Impede que ele clique em links lá dentro */
-    transition: 0.3s;
-    margin-bottom: 20px;
-    display: block; /* Garante que ela ocupe o espaço dela */
-}
-/* Container da trava para permitir posicionar a mensagem */
+/* Container principal - Removemos o borrão daqui */
 .conteudo-travado {
     position: relative;
-    filter: blur(8px);
-    -webkit-filter: blur(8px);
-    opacity: 0.7;
     user-select: none;
     pointer-events: none;
+    transition: 0.3s;
+    /* Daqui para baixo, não mude */
 }
 
-/* A mensagem que aparece por cima do borrão */
+/* Fundo Falso que recebe o borrão - Isso vai cobrir o texto longo */
+.conteudo-travado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; /* Pega a cor de fundo do seu tema */
+    
+    /* É AQUI QUE FICA O BORRÃO AGORA */
+    filter: blur(10px); 
+    -webkit-filter: blur(10px);
+    opacity: 0.8; 
+    
+    z-index: 1; /* Fica acima do texto, mas abaixo da mensagem */
+}
+
+/* A Mensagem - Agora NÍTIDA e na FRENTE */
 .conteudo-travado::after {
     content: "🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(10, 14, 26, 0.9); /* Fundo escuro igual ao seu tema */
+    
+    background: rgba(10, 14, 26, 0.95); /* Fundo bem escuro */
     color: #d4af37; /* Dourado Instinto Superior */
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: 1px solid #d4af37;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    z-index: 10;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    
+    /* Z-INDEX ALTO PARA JOGAR PARA A FRENTE */
+    z-index: 2; 
 }
 
-/* REMOVE A MENSAGEM NO PDF */
+/* REMOVE TUDO NO PDF */
 @media print {
+    .conteudo-travado::before,
     .conteudo-travado::after {
         display: none !important;
     }
