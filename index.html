@@ -167,7 +167,12 @@
 }
         
 
-
+   .conteudo-travado {
+    filter: blur(8px); /* Deixa as letras borradas */
+    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
+    pointer-events: none; /* Impede cliques */
+    opacity: 0.6;
+} 
 
 
 
@@ -3273,13 +3278,7 @@ const resultadoMomentoCompleto = montarHtmlPlanosMomento(
 // 2. Como o gráfico já está embutido no HTML da função, basta somar o resultado
 html += resultadoMomentoCompleto.html;
 
-// --- FIM DO BLOCO INTEGRADO ---
-.conteudo-travado {
-    filter: blur(8px); /* Deixa as letras borradas */
-    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
-    pointer-events: none; /* Impede cliques */
-    opacity: 0.6;
-}
+
     
 // 1. CAPTURA SEGURA DA DATA (Evita o erro de 'null')
 const campoDataElemento = document.getElementById('dataNascimento');
@@ -3583,7 +3582,10 @@ if(dadosNegativas.detalhes.length > 0){
 
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
-        htmlPiramide += `
+        htmlPiramide += `   <div class="conteudo-travado">
+        Aqui vai o texto secreto que só sai legível no PDF...
+    </div>
+</div>
             <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
                <h2  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}  ⚠️</h2></b><br>
                 <span style="color:red; font-weight: bold;font-size: 21px;">📅 Período de maior influência: de ${datas.ini} até ${datas.fim}</span><br><br>
@@ -3593,12 +3595,6 @@ if(dadosNegativas.detalhes.length > 0){
     });
 }
 
-   .conteudo-travado {
-    filter: blur(8px); /* Deixa as letras borradas */
-    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
-    pointer-events: none; /* Impede cliques */
-    opacity: 0.6;
-} 
 
 
 // --- SEQUÊNCIAS ESPECIAIS ⭐ ---
@@ -3628,12 +3624,7 @@ if (listaEspeciais.length > 0) {
             </div>`;
     });
 }
-   .conteudo-travado {
-    filter: blur(8px); /* Deixa as letras borradas */
-    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
-    pointer-events: none; /* Impede cliques */
-    opacity: 0.6;
-} 
+
 // --- FLUXOS FINANCEIROS 💰 ---
 if (listaFin.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Fluxos Financeiros 💰</h2></div></div>`;
@@ -3661,12 +3652,7 @@ if (listaFin.length > 0) {
             </div>`;
     });
 }
-     .conteudo-travado {
-    filter: blur(8px); /* Deixa as letras borradas */
-    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
-    pointer-events: none; /* Impede cliques */
-    opacity: 0.6;
-}   
+
 htmlPiramide += `</div>`;
 
 // --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
