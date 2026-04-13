@@ -167,13 +167,16 @@
 }
         
 
-   .conteudo-travado {
-    filter: blur(8px); /* Deixa as letras borradas */
-    user-select: none; /* Impede que ele consiga selecionar e copiar o texto */
-    pointer-events: none; /* Impede cliques */
-    opacity: 0.6;
-} 
-
+.conteudo-travado {
+    filter: blur(8px); /* Borra o texto */
+    -webkit-filter: blur(8px);
+    opacity: 0.7; /* Deixa levemente transparente */
+    user-select: none; /* Impede que o usuário copie o texto */
+    pointer-events: none; /* Impede que ele clique em links lá dentro */
+    transition: 0.3s;
+    margin-bottom: 20px;
+    display: block; /* Garante que ela ocupe o espaço dela */
+}
 
 
         .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
