@@ -3664,10 +3664,10 @@ if (listaEspeciais.length > 0) {
             <div style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#d97a1e; font-size: 22px;">Alinhamento Especial ${esp.numero}</h2>
                 <span style="color:#d97a1e; font-weight: bold; font-size: 19px;">📅 Vigência: de ${datas.ini} até ${datas.fim} (${duracaoTotal} anos)</span><br>
-                <div class="conteudo-travado">
+               
                      <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqEspeciais[esp.numero])}
-                </div>
+                
                 </div>
             </div>`;
     });
@@ -3693,11 +3693,11 @@ if (listaFin.length > 0) {
         htmlPiramide += `
             <div style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#28a745; font-size: 22px;">Potencial de Prosperidade 99/9</h2>
-                <div class="conteudo-travado">
+               
                    <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período: de ${datas.ini} até ${datas.fim} (Duração: ${duracaoTotal} anos)</span><br>
                 <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqFinanceira[999])}
-                </div>
+               
                 </div>
             </div>`;
     });
@@ -3744,10 +3744,10 @@ while (idadeAcumulada < 100) {
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
 
-                 <div class="conteudo-travado">
+               
                 <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#222;'}">
                     ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
-                </div>
+                
            </div>
             </div>`;
        
