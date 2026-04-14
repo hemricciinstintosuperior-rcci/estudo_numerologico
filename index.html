@@ -128,10 +128,41 @@
 
  }
 
-   .apenas-no-pdf {
-    display: none;
-} 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #111; margin: 0; padding: 0; display: block;}
+/* 1. O CONTEÚDO (O que fica por baixo) */
+/* O texto que fica atrás continua borrado como você gosta */
+.conteudo-travado {
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    opacity: 0.5;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* A nova caixa de aviso (totalmente independente e nítida) */
+.aviso-trava {
+    background: #0a0e1a; /* Cor do seu fundo */
+    color: #d4af37;    /* Dourado Instinto Superior */
+    border: 2px solid #d4af37;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -50px; /* Faz ela subir para cima do borrão */
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media print {
+    .conteudo-travado { filter: none !important; opacity: 1 !important; }
+    .aviso-trava { display: none !important; }
+}
+ 
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #1a1a1a; margin: 0; padding: 0; display: block;}
         /* Estilo para os Logos */
 .logo-capa {
     width: 700px !important; /* Tamanho ideal para uma folha A4 */
@@ -176,39 +207,10 @@
 }
         
 
-/* 1. O CONTEÚDO (O que fica por baixo) */
-/* O texto que fica atrás continua borrado como você gosta */
-.conteudo-travado {
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
-    opacity: 0.5;
-    user-select: none;
-    pointer-events: none;
-}
 
-/* A nova caixa de aviso (totalmente independente e nítida) */
-.aviso-trava {
-    background: #0a0e1a; /* Cor do seu fundo */
-    color: #d4af37;    /* Dourado Instinto Superior */
-    border: 2px solid #d4af37;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -50px; /* Faz ela subir para cima do borrão */
-    position: relative;
-    z-index: 9999;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
 
-@media print {
-    .conteudo-travado { filter: none !important; opacity: 1 !important; }
-    .aviso-trava { display: none !important; }
-}
+
+
         .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
 .secao-card, .card { 
     border-left: none !important; 
@@ -1042,15 +1044,15 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
     let nota = 5.5; 
 
     // MOTOR DE STATUS
-    if (statusPlano === "forte") nota += 2.1; 
-    else if (statusPlano === "medio") nota += 1.5;
-    else if (statusPlano === "fraco") nota -= 2.1;
+    if (statusPlano === "forte") nota += 2.18; 
+    else if (statusPlano === "medio") nota += 1.53;
+    else if (statusPlano === "fraco") nota -= 2.13;
 
     // MODULAÇÃO POR PERFIL
     const perfil = (dominantePerfil || "neutro").toLowerCase();
-    if (perfil === "criativo") nota += 1.2;
-    else if (perfil === "neutro") nota += 0.9;
-    else if (perfil === "indeciso") nota -= 1.2;
+    if (perfil === "criativo") nota += 1.33;
+    else if (perfil === "neutro") nota += 1.25;
+    else if (perfil === "indeciso") nota -= 1.23;
 
     // DNA E SOMBRAS
     let dnaPositivo = [
@@ -1090,7 +1092,7 @@ function calcularIntensidadeAtributo(nums, resultados, faltantes, nomeRaw, d3, r
         }
     });
 
-    return Math.min(Math.max(nota, 1.7), 9.6);
+    return Math.min(Math.max(nota, 1.78), 9.87);
 }
 // --- NOVO MOTOR DE GRÁFICOS DINÂMICOS (PLANOS DE EXPRESSÃO) ---
 
@@ -1125,21 +1127,21 @@ function calcularIntensidadeMomento(configAtributo, res, faltantes, nomeRaw, d3,
 
     configAtributo.nums.forEach(n => {
         // BÔNUS: Ativação pelo ANO PESSOAL
-        if (n === anoP) nota += 1.5;
+        if (n === anoP) nota += 0.35;
 
         // BÔNUS: Ciclo e Momento que o cliente vive HOJE (Automático)
-        if (n === cicloAtivo) nota += 1.3;
-        if (n === momentoAtivo) nota += 1.5;
+        if (n === cicloAtivo) nota += 0.25;
+        if (n === momentoAtivo) nota += 0.35;
 
         // ÔNUS: Desafio Principal (Aquele d3 que deu erro antes)
-        if (n === desafioPrincipal) nota -= 1.5;
+        if (n === desafioPrincipal) nota -= 0;
 
         // ÔNUS: Desafio Temporário da fase atual
-        if (n === desafioTemporarioAtivo) nota -= 1.5;
+        if (n === desafioTemporarioAtivo) nota -= 0.25;
     });
 
     // Mantém a nota entre 1.0 e 9.6 para o gráfico não quebrar
-    return Math.min(Math.max(nota, 1.7), 9.6);
+    return Math.min(Math.max(nota, 1.78), 9.87);
 }
         
 const megaBancoAtributos = {
@@ -2134,6 +2136,28 @@ function analisarAptidaoPremium(res) {
 }
 
 
+function formatarProfissoesSimples(res) {
+    // Chamamos a análise que você já tem
+    const dados = analisarAptidaoPremium(res);
+    
+    // Tentamos pegar a Vocação Master (3+ pontos), 
+    // se estiver vazia, pegamos a Afinidade (2 pontos)
+    let listaParaExibir = dados.vocacaoMaster.length > 0 
+        ? dados.vocacaoMaster 
+        : dados.afinidade;
+
+    // Se ainda assim não tiver nada, pegamos as primeiras áreas do banco
+    if (listaParaExibir.length === 0) {
+        listaParaExibir = ["Consultoria", "Gestão"]; 
+    }
+
+    // Pegamos apenas as 2 primeiras para não espremer o layout
+    const textoFinal = listaParaExibir.slice(0, 2).join(" • ");
+
+    // Retornamos com um span para diminuir o tamanho da letra
+    return `<span style="font-size: 0.75rem; line-height: 1.1; display: block;">${textoFinal}</span>`;
+}
+
 const bancoMesPessoal = {
     1: {
         titulo: "Iniciativa e Liderança",
@@ -2412,7 +2436,7 @@ const introProfissionalTexto = `
 const aptidao = calcularAptidaoProfissional(res); // Aqui calculamos os números repetidos
 
 const blocoProfissionalHTML = calcularAptidaoProfissional(res);
-
+const htmlProfissao = calcularAptidaoProfissional(res);
 // --- 1. CÁLCULOS DE APOIO (RODANDO ANTES DO PAINEL) ---
 const dadosDesejoObj = calcularDesejoOculto(nomeRaw);
 const nomeParaTalento = nomeRaw.split(' ')[0];
@@ -2522,6 +2546,7 @@ const piramideVida = gerarPiramide(nomeRaw);
 const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
 
+
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
     <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
@@ -2597,14 +2622,15 @@ const listaItensSintese = [
     { label: "Propósito", valor: res.Propósito },
     
     { label: "Maturidade", valor: res.Maturidade },
+
+    { label: "Profissão", valor: formatarProfissoesSimples(res) },
     
     { label: "Ciclos da Vida", valor: res.ciclos },
     
     { label: "Desafios", valor: res.desafios },
     
     { label: "Momentos de Decisão", valor: res.momentos },
-    
-    
+        
     { label: "Ano Pessoal", valor: res.anoPessoal },
     
     { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
@@ -3253,12 +3279,13 @@ html += `
                 <span style="color: #d97a1e; font-weight: bold; font-size: 20px; text-transform: uppercase;">
                    Idade ${info.idade} -  Data ${info.anos}
                 </span>
-                <p style="margin-top: 5px;">
+                 <div class="conteudo-travado"> <p style="margin-top: 5px;">
                     <strong> </strong><br>
                     ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
                 </p>
                 <hr style="border:0; border-top:1px solid #ffffff">
-            </div>`;
+           </div>
+           </div>`;
     }
     html += `</div>`;
 });
@@ -3306,108 +3333,71 @@ const resultadoMomentoCompleto = montarHtmlPlanosMomento(
     regenteVida, 
     dadosNegativas.nums
 );
-
+  
     
 // 2. Como o gráfico já está embutido no HTML da função, basta somar o resultado
 html += resultadoMomentoCompleto.html;
 
+// --- FIM DO BLOCO INTEGRADO ---
 
     
 // 1. CAPTURA SEGURA DA DATA (Evita o erro de 'null')
 const campoDataElemento = document.getElementById('dataNascimento');
 // --- CÁLCULO DA DATA BLINDADO ---
 // 1. CAPTURA E CÁLCULO DAS VIGÊNCIAS (ATUAL E PRÓXIMA)
+// 1. CÁLCULO E LOGICA (Mantenha isso no topo)
 const anoBase = new Date().getFullYear();
 let vigenciaCiclo1 = "Data não disponível";
 let vigenciaCiclo2 = "Data não disponível";
 
 if (dataRaw) {
-    let dia, mes;
+    let dia, mes_nasc;
     if (dataRaw.includes('-')) {
         const p = dataRaw.split('-');
-        dia = p[2]; mes = p[1];
+        dia = p[2]; mes_nasc = p[1];
     } else if (dataRaw.includes('/')) {
         const p = dataRaw.split('/');
-        dia = p[0]; mes = p[1];
+        dia = p[0]; mes_nasc = p[1];
     }
-
-    if (dia && mes) {
-        // Ciclo 1: Ano Atual até Ano Atual + 1
-        vigenciaCiclo1 = `${dia}/${mes}/${anoBase} a ${dia}/${mes}/${anoBase + 1}`;
-        // Ciclo 2: Ano Atual + 1 até Ano Atual + 2
-        vigenciaCiclo2 = `${dia}/${mes}/${anoBase + 1} a ${dia}/${mes}/${anoBase + 2}`;
+    if (dia && mes_nasc) {
+        vigenciaCiclo1 = `${dia}/${mes_nasc}/${anoBase} a ${dia}/${mes_nasc}/${anoBase + 1}`;
+        vigenciaCiclo2 = `${dia}/${mes_nasc}/${anoBase + 1} a ${dia}/${mes_nasc}/${anoBase + 2}`;
     }
 }
 
-// 2. CÁLCULO DO PRÓXIMO ANO PESSOAL
-// Se o atual é 9, o próximo é 1. Caso contrário, é apenas +1.
 let proximoAnoPessoal = parseInt(res.anoPessoal) + 1;
 if (proximoAnoPessoal > 9) proximoAnoPessoal = 1;
 
+const mesParaCronograma = res.mesNascimento; 
+const anoAtualParaCronograma = res.anoPessoal;
 
- tituloBonito = "Ano Pessoal - Ciclo Atual";  
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+// =========================================================
+// BLOCO 1: ANO PESSOAL ATUAL + SEUS MESES
+// =========================================================
+
+// Título Ano Atual
+tituloBonito = "Ano Pessoal - Ciclo Atual";  
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
         <h2>${tituloBonito}</h2>
     </div>
 </div>
-
-
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Ciclo Atual</h2>
-    
     <div class="resultado-bloco">
         <div class="intro-texto" style="margin-bottom:15px; font-style:italic; color:#555;">
             ${aplicarFiltroTexto(textos.introducoes.anoPessoal || "")}
         </div>
-               
         <h3 class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
             Vigência: ${vigenciaCiclo1}
         </h3>
-
         <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[res.anoPessoal])}</div>
     </div>
-</div> `,
+</div>`; // Removi a vírgula errada que estava aqui
 
-
- tituloBonito = "Ano Pessoal - Próximo Ciclo";  
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-
-
-
-<div class="page" style="width: 100%; margin-top: 40px; border-top: 1px dashed var(--gold);">
-    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Próximo Ciclo</h2>
-    
-    <div class="resultado-bloco">
-       
-        
-        <h3 class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
-            Vigência: ${vigenciaCiclo2}
-        </h3>
-
-        <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[proximoAnoPessoal])}</div>
-    </div>
-</div>
-`;
-
-// --- BLOCO DO MÊS PESSOAL (CÁLCULO DOS 12 MESES) ---
-
-// Usamos as variáveis 'mes' e 'res.anoPessoal' que já existem no seu código
-const mesParaCronograma = res.mesNascimento; 
-const anoAtualParaCronograma = res.anoPessoal;
-const proximoAnoParaCronograma = res.proximoAnoPessoal;
-
-// CICLO 1: Ano Atual
+// Título Meses do Ano Atual
 const cronogramaAtualHTML = gerarCronogramaMensal(anoAtualParaCronograma, mesParaCronograma);
-
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -3416,22 +3406,40 @@ html += `
 </div>
 <div class="page">
     <div class="texto-res">
-        <p style="text-align:center; margin-bottom:20px;">A vida de cada pessoa deve ser conduzida de acordo com as vibrações numéricas do momento. 
-        Devemos sempre aguardar o momento oportuno para tomarmos certas decisões e isso deverá ser feito nos momentos favoráveis da vibração numérica, pois elas apoiarão as decisões e, por certo, abrirão as portas, desimpedindo os caminhos. 
-        Entre as suas diversas vibrações, o mês pessoal é uma orientação especial que deve ser levada em consideração.
-        Este ciclo inicia no mês do seu aniversário (${mesParaCronograma}) e mostra as vibrações até o fechamento do seu ano pessoal atual.</p>
+        <p style="text-align:center; margin-bottom:20px;">Este ciclo inicia no mês do seu aniversário e mostra as vibrações até o fechamento do seu ano pessoal atual.</p>
         ${cronogramaAtualHTML}
     </div>
-</div>
-`;
+</div>`;
 
-// CICLO 2: Próximo Ano
-const cronogramaProximoHTML = gerarCronogramaMensal(proximoAnoParaCronograma, mesParaCronograma);
 
+// =========================================================
+// BLOCO 2: PRÓXIMO ANO PESSOAL + SEUS MESES
+// =========================================================
+
+// Título Próximo Ano
+tituloBonito = "Ano Pessoal - Próximo Ciclo";  
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>Planejamento Mensal: Ano Pessoal ${proximoAnoParaCronograma}</h2>
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+<div class="page">
+    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Próximo Ciclo</h2>
+    <div class="resultado-bloco">
+        <h3 class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
+            Vigência: ${vigenciaCiclo2}
+        </h3>
+        <div class="texto-res">${aplicarFiltroTexto(textos.anoPessoal[proximoAnoPessoal])}</div>
+    </div>
+</div>`;
+
+// Título Meses do Próximo Ano
+const cronogramaProximoHTML = gerarCronogramaMensal(proximoAnoPessoal, mesParaCronograma);
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>Planejamento Mensal: Ano Pessoal ${proximoAnoPessoal}</h2>
     </div>
 </div>
 <div class="page">
@@ -3439,8 +3447,7 @@ html += `
         <p style="text-align:center; margin-bottom:20px;">Projeção para o ciclo seguinte, iniciando no seu próximo aniversário.</p>
         ${cronogramaProximoHTML}
     </div>
-</div>
-`;
+</div>`;
 
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
@@ -3467,7 +3474,7 @@ html += `
 </div>
 `;
    
-
+    
             // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 
   
@@ -3615,18 +3622,16 @@ if(dadosNegativas.detalhes.length > 0){
 
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
-        htmlPiramide += `   
+        htmlPiramide += `
             <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
                <h2  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}  ⚠️</h2></b><br>
                 <span style="color:red; font-weight: bold;font-size: 21px;">📅 Período de maior influência: de ${datas.ini} até ${datas.fim}</span><br><br>
                 <span style="color:red; font-weight: bold;font-size: 21px;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
-        <div class="conteudo-travado">
                 <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
-                </div>     <div class="aviso-trava">
-            🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA</div>
             </div>`;
     });
 }
+
 
 
 
@@ -3635,7 +3640,10 @@ if (listaEspeciais.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Sequências Especiais ⭐</h2></div></div>`;
     
     // Texto de introdução para Especiais
-    htmlPiramide += `<div class="intro-texto" style="margin-bottom: 20px;">As sequências especiais revelam momentos de alinhamento único em sua jornada, indicando períodos onde energias específicas influenciam seu propósito e reconhecimento pessoal.</div>`;
+    htmlPiramide += `<div class="intro-texto" style="margin-bottom: 20px;"><p>As sequências especiais representam períodos específicos dentro da Pirâmide da Vida em que determinadas energias numéricas se intensificam, influenciando diretamente tendências, comportamentos e possíveis acontecimentos. Esses momentos não indicam fatos fixos ou garantidos, mas apontam para um campo de maior probabilidade onde certas experiências podem se manifestar.</p>
+    <p>Cada número presente nessas sequências carrega uma vibração própria, ativando cenários compatíveis com sua natureza. Isso pode se refletir em oportunidades, desafios, mudanças internas ou situações externas que dialogam com aquela energia predominante no período.</p>
+    <p>É importante compreender que essas influências atuam como direcionamentos, e não como determinações absolutas. Ou seja, elas indicam caminhos mais propensos a ocorrer, mas a forma como cada situação se concretiza depende das escolhas, do contexto e da consciência da pessoa.</p>
+    <p>Assim, as sequências especiais funcionam como marcadores de tempo energético, revelando fases em que certos temas ganham destaque e podem se desenvolver com mais intensidade, abrindo espaço para vivências alinhadas à vibração daquele número.</p></div>`;
     
     listaEspeciais.forEach(esp => {
         let idadeInicio = 0; let duracaoTotal = 0;
@@ -3650,11 +3658,9 @@ if (listaEspeciais.length > 0) {
         htmlPiramide += `
             <div style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#d97a1e; font-size: 22px;">Alinhamento Especial ${esp.numero}</h2>
-                <span style="color:#d97a1e; font-weight: bold; font-size: 19px;">📅 Vigência: de ${datas.ini} até ${datas.fim} (${duracaoTotal} anos)</span><br>
-               
-                     <div class="texto-res" style="text-align: justify; margin-top:15px;">
+                <span style="color:#d97a1e; font-weight: bold; font-size: 19px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
+                <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqEspeciais[esp.numero])}
-                
                 </div>
             </div>`;
     });
@@ -3665,7 +3671,12 @@ if (listaFin.length > 0) {
     htmlPiramide += `<div class="separador-luxo"><div class="caixa-interna"><h2>Fluxos Financeiros 💰</h2></div></div>`;
     
     // Texto de introdução para Financeiro
-    htmlPiramide += `<div class="intro-texto" style="margin-bottom: 20px;">O potencial de fluxo financeiro indica janelas de oportunidade para a expansão material e a consolidação de recursos, baseadas no seu magnetismo de prosperidade.</div>`;
+    htmlPiramide += `<div class="intro-texto" style="margin-bottom: 20px;">O potencial de fluxo financeiro indica janelas de oportunidade para a expansão material e a consolidação de recursos, baseadas no seu magnetismo de prosperidade do momento. 
+   <p>No contexto financeiro, esse período pode se manifestar como uma fase de recebimentos, retornos ou entradas de recursos que não dependem exclusivamente do esforço direto e imediato da pessoa, mas sim de circunstâncias já construídas ao longo do tempo. É como se houvesse uma “colheita” de situações passadas, que agora se concretizam em forma material.</p>
+   <p>Nesse momento, a pessoa pode, por exemplo, ser desligada de uma empresa e receber corretamente todos os seus direitos trabalhistas — como rescisão, multa do FGTS, férias proporcionais e outros valores acumulados. Também pode ocorrer o recebimento de valores que estavam pendentes, como dívidas antigas sendo quitadas, restituições, reembolsos ou até ajustes financeiros inesperados a seu favor.</p>
+   <p>Há ainda possibilidades relacionadas ao acaso ou à sorte, como ganhos em loterias, apostas esportivas, sorteios ou premiações diversas. Embora não sejam garantias, esse período tende a ampliar a probabilidade de ganhos vindos de fontes não convencionais ou não planejadas diretamente.</p><p>Outro cenário comum envolve heranças, partilhas ou divisão de bens familiares, onde a pessoa passa a ter acesso a valores ou patrimônios que antes não estavam sob sua posse. Isso também pode incluir doações, ajudas financeiras de terceiros ou apoio inesperado em momentos específicos.</p>
+   <p>Além disso, pode haver ganhos relacionados a investimentos antigos que começam a dar retorno, venda de bens (como imóveis, veículos ou objetos de valor), ou até oportunidades de negócio que surgem trazendo lucro de forma mais rápida do que o habitual.</p>
+   <p>Em alguns casos, esse movimento também pode se manifestar como economia indireta — por exemplo, deixar de ter um gasto significativo, resolver uma pendência que geraria prejuízo, ou encontrar soluções que aliviam a pressão financeira, o que, na prática, representa um ganho.</p><p>Portanto, esse tipo de vibração não se limita a um único formato de dinheiro direto, mas abrange qualquer forma de entrada, recuperação ou liberação financeira. O importante é observar que, nesse período, existe uma tendência de “retorno” — seja ele fruto de mérito passado, de circunstâncias externas ou de oportunidades que se apresentam de maneira inesperada.</p></div>`;
     
     listaFin.forEach(fin => {
         let idadeInicio = 0; let duracaoTotal = 0;
@@ -3680,16 +3691,14 @@ if (listaFin.length > 0) {
         htmlPiramide += `
             <div style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#28a745; font-size: 22px;">Potencial de Prosperidade 99/9</h2>
-               
-                   <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período: de ${datas.ini} até ${datas.fim} (Duração: ${duracaoTotal} anos)</span><br>
+                <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                 <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqFinanceira[999])}
-               
                 </div>
             </div>`;
     });
 }
-
+    
 htmlPiramide += `</div>`;
 
 // --- INSERÇÃO DAS POTÊNCIAS COM LOOP DE 100 ANOS ---
@@ -3731,13 +3740,12 @@ while (idadeAcumulada < 100) {
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
 
-               
+                
                 <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#222;'}">
                     ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
-                
-           </div>
+                </div>
             </div>`;
-       
+        
         idadeAcumulada = idadeFim;
         indiceLoop++;
     }     
@@ -3966,11 +3974,13 @@ html += `
     </div>
 </div>
 `;
-            document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
-        } // FIM DA FUNÇÃO
 
+     document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
+        } // FIM DA FUNÇÃO
         document.oncontextmenu=()=>false;
 document.onselectstart=()=>false;
+
+
     </script>
 </body>
 </html>
