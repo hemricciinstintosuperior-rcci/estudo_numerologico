@@ -3274,17 +3274,16 @@ html += `
 
         
 html += `
-      <div style="margin-bottom: 30px; padding: 15px; background: #fdfdfd; border-radius: 8px;">
-        <span style="color: #d97a1e; font-weight: bold; font-size: 18px; text-transform: uppercase; display: block; margin-bottom: 10px;">
-            📍 Idade ${info.idade} — Período: ${info.anos}
+    <div style="margin-bottom: 25px;"> <span style="color: #d97a1e; font-weight: bold; font-size: 20px; text-transform: uppercase; display: block; margin-bottom: 8px;">
+           Idade ${info.idade} -  Data ${info.anos}
         </span>
         
-        <div style="line-height: 1.6; color: #333; font-size: 15px;">
+        <div class="texto-res" style="margin-top: 10px; line-height: 1.6;">
             ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
         </div>
-
-        <hr style="border:0; border-top:1px solid #eee; margin-top: 15px;">
-    </div>`;
+        
+        <hr style="border:0; border-top:1px solid #eeeeee; margin-top: 15px;">
+   </div>`;
     }
     html += `</div>`;
 });
