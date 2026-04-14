@@ -3273,19 +3273,18 @@ html += `
         }
 
         
+html += `
+      <div style="margin-bottom: 30px; padding: 15px; background: #fdfdfd; border-radius: 8px;">
+        <span style="color: #d97a1e; font-weight: bold; font-size: 18px; text-transform: uppercase; display: block; margin-bottom: 10px;">
+            📍 Idade ${info.idade} — Período: ${info.anos}
+        </span>
+        
+        <div style="line-height: 1.6; color: #333; font-size: 15px;">
+            ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
+        </div>
 
-        html += `
-            <div style="margin-bottom: 18px;">
-                <span style="color: #d97a1e; font-weight: bold; font-size: 20px; text-transform: uppercase;">
-                   Idade ${info.idade} -  Data ${info.anos}
-                </span>
-                
-               <div style="margin-top: 10px; line-height: 1.6;">
-    ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
-</div>
-                <hr style="border:0; border-top:1px solid #ffffff">
-           
-           </div>`;
+        <hr style="border:0; border-top:1px solid #eee; margin-top: 15px;">
+    </div>`;
     }
     html += `</div>`;
 });
