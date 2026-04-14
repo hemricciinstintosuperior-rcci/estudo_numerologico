@@ -1713,9 +1713,10 @@ desafios: {
     1: `<h3>Desafio da Individualidade e Independência - 1</h3>
     <p>Logo cedo, a vida coloca você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, diante do desafio de conquistar sua própria pele. Este ciclo foca na superação das dependências e na coragem de ser quem você nasceu para ser. Prepare-se, pois você enfrentará situações onde sua vontade será testada por figuras de autoridade ou por ambientes que tentam ditar o seu passo. A sombra que tenta lhe perseguir é o medo de ser "o diferente" ou a tentação de se camuflar na multidão para não ter que carregar o peso de decidir por si só.</p>
     <p>É natural que você sinta uma hesitação inicial em dar o primeiro passo sozinho(a), temendo o julgamento alheio ou um tropeço solitário. No entanto, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o universo está provocando você a sair debaixo das asas de terceiros e construir uma autoconfiança que não precise de aplausos para existir. Superar este desafio significa converter sua insegurança em iniciativa pura, permitindo que você se posicione com autoridade diante do mundo e segure as rédeas da sua história com firmeza e brio.</p>
+    <hr>
     <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 1</h4>
     <p><strong>Regiões Sensíveis: Cabeça, Coração e Sistema Respiratório</strong></p>
     <p>Região da cabeça, coração, sistema circulatório e respiratório, alergias, ferimentos nos olhos, rosto, orelhas e maxilar, problemas circulatórios e cardíacos.</p>
@@ -1726,9 +1727,10 @@ desafios: {
     2: `<h3>Desafio da Sensibilidade e Autoafirmação - 2</h3>
     <p>Sua sensibilidade é um dom, <strong>MASCULINO-FEMININO-NEUTRO</strong>, mas neste primeiro ciclo de vida, ela se apresenta como um desafio que exige equilíbrio. Você poderá sentir uma timidez que beira o isolamento ou uma vulnerabilidade excessiva diante das opiniões externas, o que cria uma tendência perigosa de concordar com tudo apenas para manter uma paz que, no fundo, é falsa. O grande obstáculo aqui é a autoanulação em favor de uma harmonia que sufoca seus próprios desejos.</p>
     <p>A vida espera que você desenvolva o tato social sem se tornar um eco das ideias dos outros. <strong>MASCULINO-FEMININO-NEUTRO</strong>, entenda que ser cooperativo(a) é bem diferente de ser submisso(a). Você precisará olhar de frente para o medo da rejeição e fortalecer sua musculatura emocional. O seu aprendizado central é unir a diplomacia à autovalorização, permitindo que você crie laços profundos e estáveis com as pessoas, mas sempre mantendo sua posição e seu valor inegociáveis.</p>
+     <hr>
      <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 2</h4>
     <p><strong>Regiões Sensíveis: Sistema Renal e Nervoso</strong></p>
     <p>Região dos rins, estômago e sistema nervoso. Pode acarretar retenção de líquidos no corpo, afetar ainda o sistema linfático, estômago e intestino, manchas hepáticas, infecções urinárias, esclerose múltipla.</p>
@@ -1739,9 +1741,10 @@ desafios: {
     3: `<h3>Desafio da Expressão e Foco Criativo - 3</h3>
     <p>O desafio agora, <strong>MASCULINO-FEMININO-NEUTRO</strong>, mexe com a sua voz e com a sua capacidade de brilhar. Você tem muito a dizer, mas pode enfrentar uma dificuldade inicial em ser compreendido(a) ou, por outro lado, acabar gastando seu precioso talento em conversas vazias e atividades que não levam a lugar nenhum. A sombra que tenta travar o seu progresso é o medo da exposição pública ou o receio do que vão pensar da sua arte e das suas ideias.</p>
     <p>Pode ser que você sinta bloqueios criativos que escondem sua essência do mundo, mas não se deixe enganar. <strong>MASCULINO-FEMININO-NEUTRO</strong>, seu entusiasmo e sua alegria precisam de canais de expressão que produzam resultados reais, e não apenas barulho. Superar esse obstáculo exige que você organize sua mente e dê foco ao seu brilho. Ao vencer a dispersão típica da juventude, você se tornará uma pessoa capaz de comunicar verdades poderosas com uma clareza e uma influência que poucos possuem.</p>
+       <hr>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+  
     <h4>⚠️ Situação de Atenção: Número 3</h4>
     <p><strong>Regiões Sensíveis: Garganta, Fígado e Vesícula</strong></p>
     <p>Região da garganta, fígado, e vesícula são os mais críticos. Também podem ocorrer quadros de enxaquecas, problemas glandulares, em especial na tireóidea e na hipófise.</p>
@@ -1752,9 +1755,10 @@ desafios: {
     4: `<h3>Desafio da Disciplina e Estrutura Prática - 4</h3>
     <p>Este primeiro grande desafio exige que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, encare de frente a disciplina que a construção de um futuro exige. Durante sua juventude, obrigações e rotinas podem parecer correntes pesadas, levando você a buscar atalhos perigosos ou a fugir de tarefas que exigem esforço contínuo. A armadilha aqui é a instabilidade; sem bases sólidas, qualquer construção desmorona, e a vida quer que você aprenda isso antes de dar passos maiores.</p>
     <p>Desde cedo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você será testado(a) na sua persistência e na sua capacidade de lidar com o que é repetitivo e árduo. O aprendizado consiste em transformar a resistência ao trabalho em uma competência reconhecida. Você precisa dominar seu tempo e seus recursos com método. Ao superar essa tendência à procrastinação ou à desorganização, você emerge como uma pessoa de confiança inabalável, alguém que o mundo olha e sabe que pode contar para edificar projetos que duram para sempre.</p>
+      <hr>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 4</h4>
     <p><strong>Regiões Sensíveis: Estrutura Óssea e Psicossomática</strong></p>
     <p>O “4” pode indicar doenças incomuns e de difícil diagnóstico, acidentes inesperados e ferimentos inexplicáveis, além de problemas de circulação sanguínea, anemia, hipoglicemia.</p>
@@ -1765,9 +1769,10 @@ desafios: {
     5: `<h3>Desafio da Inquietude e Autocontrole - 5</h3>
     <p>Liberdade é o seu oxigênio, mas neste ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a busca desenfreada por ela pode se tornar sua maior inimiga. O desafio envolve lidar com uma inquietação que faz você querer mudar de direção toda vez que o entusiasmo inicial esfria. Seja em relacionamentos, estudos ou projetos, a sombra aqui é a superficialidade e a dificuldade de levar as coisas até o fim, criando uma trilha de começos sem conclusões.</p>
     <p>Você será colocado(a) em situações que exigem constância e profundidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A lição de ouro para você é compreender que a liberdade real não é fugir de compromissos, mas ter o autocontrole necessário para escolher suas prisões e transformá-las em palácios. Ao desenvolver essa disciplina interior, sua versatilidade natural deixará de ser dispersão e se tornará uma adaptabilidade genial, permitindo que você evolua constantemente sem nunca perder o chão.</p>
+       <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+   
     <h4>⚠️ Situação de Atenção: Número 5</h4>
     <p><strong>Regiões Sensíveis: Pulmões e Sistema Nervoso Central</strong></p>
     <p>Problemas nos pulmões, aparelho respiratório, olhos e sistema nervoso. Ansiedade e alterações repentinas de humor, tensão nervosa, apneia.</p>
@@ -1778,9 +1783,10 @@ desafios: {
     6: `<h3>Desafio do Equilíbrio e Responsabilidade Afetiva - 6</h3>
     <p>Cuidado com a armadilha do perfeccionismo e com o peso de carregar o mundo nas costas, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Neste desafio, você pode sentir uma pressão esmagadora para resolver a vida de todos ao seu redor, assumindo fardos familiares e encargos emocionais que não pertencem à sua fase de vida. A sombra aqui é a cobrança ácida, tanto consigo mesmo(a) quanto com aqueles que você ama, tentando moldar os outros à sua imagem e semelhança.</p>
     <p>A vida está tentando lhe ensinar, <strong>MASCULINO-FEMININO-NEUTRO</strong>, que o amor verdadeiro não controla, ele liberta. O seu desafio é aprender a oferecer suporte sem assumir a responsabilidade pelo destino alheio. Ao encontrar o equilíbrio entre o cuidado com o outro e o respeito à autonomia de cada um, você construirá relações sólidas e harmoniosas, baseadas em um carinho real que não sufoca, mas que nutre e fortalece todos os vínculos que você criar.</p>
+    <hr>
     <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 6</h4>
     <p><strong>Regiões Sensíveis: Coluna, Coração e Região Lombar</strong></p>
     <p>Doenças renais, distúrbios pulmonares; irregularidades na circulação do sangue, hemofilia, palpitações cardíacas.</p>
@@ -1791,9 +1797,10 @@ desafios: {
     7: `<h3>Desafio da Introspecção e Conexão Humana - 7</h3>
     <p>Seu desafio inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pode se manifestar como um muro de isolamento intelectual e uma dificuldade latente de deixar as pessoas entrarem no seu mundo emocional. Com uma tendência a analisar tudo friamente, você pode acabar se escondendo no silêncio, desconfiando das intenções alheias e evitando a vulnerabilidade das trocas sociais. A sombra aqui é o cinismo ou a distância emocional que o(a) afasta da riqueza das conexões humanas.</p>
     <p>Neste ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o convite é para equilibrar seu pensamento brilhante com a sua sensibilidade. O desafio é aprender a compartilhar suas descobertas e seus sentimentos sem o medo paralisante de parecer imperfeito(a). Ao derrubar esse muro de isolamento, sua sabedoria deixará de ser apenas teórica e se tornará humana e vibrante, permitindo que você se conecte com o mundo de uma forma profunda, técnica e, acima de tudo, real.</p>
+        <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 7</h4>
     <p><strong>Regiões Sensíveis: Sistema Imunológico e Mental</strong></p>
     <p>Problemas glandulares, sistema nervoso, nos pés e o sistema linfático. Poderá haver certa vulnerabilidade à infecções, problemas de pele, como alergias em geral, coceiras.</p>
@@ -1804,9 +1811,10 @@ desafios: {
     8: `<h3>Desafio da Autoridade e Valores Materiais - 8</h3>
     <p>Poder e dinheiro são os temas que vão testar você neste ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Podem surgir experiências que coloquem à prova sua relação com a ambição, o status e o reconhecimento social. A armadilha aqui é oscilar entre o medo do fracasso material e uma obsessão doentia por poder, onde o fim justifica os meios. É um período de aprendizado intenso sobre o peso e a medida das suas conquistas no mundo físico.</p>
     <p>A vida exige que você desenvolva um senso de justiça afiado e entenda que o sucesso sem ética é apenas uma ilusão passageira, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você aprenderá que a liderança que perdura é aquela que tem consciência do impacto social de cada decisão tomada. Ao superar este desafio de autoridade, você ganhará a maturidade necessária para administrar grandes recursos e altas responsabilidades com uma visão estratégica, equilibrada e, sobretudo, vitoriosa.</p>
+      <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+   
     <h4>⚠️ Situação de Atenção: Número 8</h4>
     <p><strong>Regiões Sensíveis: Estômago, Articulações e Ossos</strong></p>
     <p>Problemas de estômago e sistema nervoso, os pontos mais sensíveis, no entanto são: os joelhos, dentes, ossos e ligamentos.</p>
@@ -1831,9 +1839,10 @@ desafios: {
   1: `<h3>Desafio da Autoridade e Protagonismo Original - 1</h3>
   <p>Este seu segundo desafio, <strong>MASCULINO-FEMININO-NEUTRO</strong>, foca na consolidação definitiva da sua autoridade pessoal. Chegou a hora de cortar qualquer fio invisível de dependência que ainda reste. Na fase adulta, você será colocado(a) à prova: sua capacidade de se manter firme em suas convicções será testada justamente quando o seu círculo social ou profissional exigir conformidade e obediência. A sombra que tenta lhe travar é o receio profundo de assumir o leme total da própria vida, sem muletas ou botes de salvamento.</p>
   <p>Você precisará, mais do que nunca, exercitar a bravura de ser a voz dissidente e o(a) primeiro(a) a iniciar projetos disruptivos. <strong>MASCULINO-FEMININO-NEUTRO</strong>, entenda que seu sucesso agora depende da sua disposição em agir de forma soberana e solitária se for preciso. O seu grande salto de evolução será desvincular seu valor pessoal da aprovação de quem detém o poder. Ao vencer essa insegurança, você conquistará o respeito inquestionável de seus pares, não pelo que você tem, mas pela autenticidade do seu caráter e pela coragem de quem não teme desbravar o desconhecido.</p>
+     <hr>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 1</h4>
     <p><strong>Regiões Sensíveis: Cabeça, Coração e Sistema Respiratório</strong></p>
     <p>Região da cabeça, coração, sistema circulatório e respiratório, alergias, ferimentos nos olhos, rosto, orelhas e maxilar, problemas circulatórios e cardíacos.</p>
@@ -1844,9 +1853,10 @@ desafios: {
   2: `<h3>Desafio da Diplomacia e Inteligência Emocional - 2</h3>
   <p>A vida agora sobe o tom e exige que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, domine a diplomacia e a cooperação em um nível de inteligência emocional muito mais sofisticado. Durante esta fase de realização, a sombra da hipersensibilidade pode surgir como uma armadilha, fazendo você levar críticas profissionais para o lado pessoal ou recuar diante de tensões naturais do mercado. Você precisará aprender a arte suprema de negociar e ceder quando necessário, mas sem nunca, em hipótese alguma, anular a sua essência.</p>
   <p>O risco real aqui para você é o desenvolvimento de uma passividade defensiva — aquele silêncio de quem prefere não opinar só para não gerar desconforto. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o universo o(a) convoca para ser o ponto de equilíbrio, o(a) mestre(a) da harmonia, mas sem se tornar submisso(a) aos caprichos alheios. Ao superar essa fragilidade emocional, você se transforma na peça-chave de qualquer organização ou família, sendo admirado(a) pela capacidade quase mágica de unir forças opostas e criar paz onde antes só existia o caos.</p>
+    <hr>
     <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 2</h4>
     <p><strong>Regiões Sensíveis: Sistema Renal e Nervoso</strong></p>
     <p>Região dos rins, estômago e sistema nervoso. Pode acarretar retenção de líquidos no corpo, afetar ainda o sistema linfático, estômago e intestino, manchas hepáticas, infecções urinárias, esclerose múltipla.</p>
@@ -1857,9 +1867,10 @@ desafios: {
   3: `<h3>Desafio do Foco Comunicativo e Expressão Real - 3</h3>
   <p>Neste segundo ciclo de desafios, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a vida exige que você traga um foco cirúrgico e uma profundidade rara à sua comunicação. Não há mais espaço para amadorismo ou dispersão criativa. Você pode se sentir tentado(a) a manter uma vida social vibrante, porém superficial, o que neste momento pode ser o veneno que compromete sua reputação profissional. A sombra aqui é o uso da sua palavra apenas como uma ferramenta de vaidade, sem um propósito real que sustente suas falas.</p>
   <p>Chegou o momento de você se tornar a autoridade máxima naquilo que comunica, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Isso exige a disciplina de mergulhar fundo nos temas antes de abrir a boca para o mundo. O seu desafio é vencer aquela autocrítica paralisante que impede sua autenticidade e, ao mesmo tempo, controlar o impulso de falar apenas por falar. Ao canalizar seu entusiasmo de forma produtiva e técnica, você transformará seu carisma natural em um motor de realização formidável, capaz de inspirar multidões com uma clareza que só os grandes líderes possuem.</p>
+    <hr>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 3</h4>
     <p><strong>Regiões Sensíveis: Garganta, Fígado e Vesícula</strong></p>
     <p>Região da garganta, fígado, e vesícula são os mais críticos. Também podem ocorrer quadros de enxaquecas, problemas glandulares, em especial na tireóidea e na hipófise.</p>
@@ -1870,9 +1881,10 @@ desafios: {
   4: `<h3>Desafio da Constância e Estrutura Sólida - 4</h3>
   <p>Focar na construção da sua estabilidade definitiva: esse é o seu lema agora, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você precisa superar qualquer resistência que ainda sinta em relação à ordem, ao método e à rotina. Na fase adulta, o universo avisa que você não pode mais contar apenas com a sorte ou com o talento bruto; a vida exige que você seja a própria estrutura que sustenta seus sonhos. A sombra aqui é a teimosia cega ou aquele cansaço mental que o(a) leva a negligenciar detalhes técnicos que são cruciais para o seu império.</p>
   <p>Você terá que aprender a olhar para a rotina não como uma prisão, mas como a maior aliada do seu sucesso estrondoso. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o seu desafio é manter a mente flexível enquanto ergue paredes rígidas e seguras, evitando que o excesso de senso de dever afaste as pessoas que você ama. Ao superar essa tendência à desorganização ou ao desânimo diante do trabalho pesado, você se tornará uma rocha de confiança inabalável, erguendo sua vida sobre fundamentos tão sólidos que nada no mundo será capaz de derrubar.</p>
+    <hr>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 4</h4>
     <p><strong>Regiões Sensíveis: Estrutura Óssea e Psicossomática</strong></p>
     <p>O “4” pode indicar doenças incomuns e de difícil diagnóstico, acidentes inesperados e ferimentos inexplicáveis, além de problemas de circulação sanguínea, anemia, hipoglicemia.</p>
@@ -1883,9 +1895,10 @@ desafios: {
   5: `<h3>Desafio do Autodomínio e Liberdade Consciente - 5</h3>
   <p>O seu desafio na maturidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o controle absoluto daquela inquietude interna que sopra no seu ouvido pedindo mudanças drásticas sem motivo real. Você poderá sentir um desejo súbito de chutar o balde e abandonar caminhos que levou anos para consolidar, apenas pelo prazer da adrenalina do novo. A sombra aqui é a falta de raízes e a dificuldade perigosa em aprofundar os compromissos que realmente importam para o seu futuro.</p>
   <p>O teste para você é saber usar sua versatilidade genial para inovar dentro das estruturas que você já conquistou, em vez de destruí-las para começar do zero repetidamente. <strong>MASCULINO-FEMININO-NEUTRO</strong>, cultive o autodomínio sobre seus impulsos e evite excessos que possam manchar sua credibilidade duramente conquistada. O grande aprendizado para você agora é entender que a verdadeira liberdade não é a ausência de laços, mas sim o estado de consciência de quem escolhe onde quer estar e permanece lá por decisão própria e poder de vontade.</p>
+     <hr>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 5</h4>
     <p><strong>Regiões Sensíveis: Pulmões e Sistema Nervoso Central</strong></p>
     <p>Problemas nos pulmões, aparelho respiratório, olhos e sistema nervoso. Ansiedade e alterações repentinas de humor, tensão nervosa, apneia.</p>
@@ -1895,9 +1908,10 @@ desafios: {
   6: `<h3>Desafio do Desprendimento e Apoio Equilibrado - 6</h3>
   <p>Neste segundo ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a vida o(a) convoca para um nível superior de desprendimento: superar o perfeccionismo e o desejo quase obsessivo de controlar os passos de quem está sob sua proteção. Na fase adulta, o risco para você é se transformar em uma presença pesada e opressora, acreditando que só você detém a fórmula certa para a felicidade alheia. A sombra aqui é a cobrança ácida e a incapacidade de lidar com as falhas dos outros.</p>
   <p>Você precisará, com urgência, aprender a oferecer suporte real sem impor condições ou "pedágios" emocionais. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o seu desafio é encontrar o equilíbrio fino entre o seu idealismo elevado e a realidade imperfeita das pessoas, transformando sua crítica em um acolhimento que realmente cura. Ao superar essa tendência ao controle, você se tornará uma presença magnética e harmonizadora, alguém que todos buscam pela sensação de justiça, paz e equilíbrio que você emana de forma natural e poderosa.</p>
+    <hr>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 6</h4>
     <p><strong>Regiões Sensíveis: Coluna, Coração e Região Lombar</strong></p>
     <p>Doenças renais, distúrbios pulmonares; irregularidades na circulação do sangue, hemofilia, palpitações cardíacas.</p>
@@ -1908,9 +1922,10 @@ desafios: {
   7: `<h3>Desafio da Conexão e Integração da Sabedoria - 7</h3>
   <p>Este seu segundo desafio foca na superação do isolamento mental e daquele ceticismo frio que pode endurecer sua alma durante os anos de luta e realização, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você poderá sentir uma tendência perigosa de se fechar em um casulo de especialização técnica, tratando as emoções e os mistérios da vida como distrações inúteis ou "fraquezas". A sombra aqui é o orgulho intelectual e o distanciamento gélido das relações humanas reais.</p>
   <p>O universo o(a) desafia a permitir-se ser vulnerável e a compartilhar suas descobertas intelectuais com o mundo de forma generosa. <strong>MASCULINO-FEMININO-NEUTRO</strong>, você será chamado(a) a integrar sua mente analítica brilhante com uma espiritualidade prática e vivida, reconhecendo que a razão sozinha não explica a magia da existência. Ao derrubar esse muro de isolamento, você transformará seu conhecimento técnico em uma sabedoria profunda, conectada e extremamente influente, que servirá de guia para muitos outros buscadores.</p>
+   <hr>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+   
     <h4>⚠️ Situação de Atenção: Número 7</h4>
     <p><strong>Regiões Sensíveis: Sistema Imunológico e Mental</strong></p>
     <p>Problemas glandulares, sistema nervoso, nos pés e o sistema linfático. Poderá haver certa vulnerabilidade à infecções, problemas de pele, como alergias em geral, coceiras.</p>
@@ -1921,9 +1936,10 @@ desafios: {
   8: `<h3>Desafio da Liderança Ética e Poder Realizador - 8</h3>
   <p>Chegou a hora de provar sua maestria sobre o poder, a autoridade e as leis sagradas da prosperidade material, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Na maturidade, a vida exigirá que você lidere grandes frentes e administre recursos com uma eficiência executiva de alto nível. A sombra que o(a) espreita é a ganância cega ou o medo paralisante de falhar financeiramente, o que pode levar você a agir com uma dureza excessiva ou com uma cautela que beira a estagnação.</p>
   <p>Você precisará compreender, no fundo da alma, que o poder é apenas uma ferramenta de justiça e que seu sucesso material só será eterno se estiver alinhado com uma ética inabalável. <strong>MASCULINO-FEMININO-NEUTRO</strong>, ao superar essa tensão constante entre o "ter" e o "ser", você desenvolverá uma capacidade de realização extraordinária. Você será capaz de transmutar grandes visões em realidades físicas palpáveis, criando uma riqueza que transborda e gera prosperidade não só para você, mas para todos que tiverem a honra de estar sob sua liderança.</p>
+     <hr>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 8</h4>
     <p><strong>Regiões Sensíveis: Estômago, Articulações e Ossos</strong></p>
     <p>Problemas de estômago e sistema nervoso, os pontos mais sensíveis, no entanto são: os joelhos, dentes, ossos e ligamentos.</p>
@@ -1948,9 +1964,10 @@ desafios: {
   1: `<h3>O Desafio da Independência e Soberania Pessoal - 1</h3>
     <p>O seu desafio principal nesta jornada, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a conquista de uma independência absoluta e a superação daquela tendência silenciosa de se anular para caber nos moldes dos outros. Você nasceu para ser uma força única e pioneira, mas a sombra que tentará acompanhar seus passos é a dúvida persistente sobre o seu próprio valor e a tentação de buscar validação externa para cada decisão tomada.</p>
     <p>A grande lição de vida para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é construir um "eu" tão sólido que não tema a solidão que a liderança muitas vezes impõe. Você precisa integrar no seu íntimo que sua originalidade não é um defeito, mas seu maior trunfo estratégico. O seu embate principal é transformar a insegurança em uma coragem serena, agindo como o(a) arquiteto(a) do seu próprio destino e provando ao mundo que o mérito individual é o único alicerce de um sucesso que realmente permanece.</p>
+     <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 1</h4>
     <p><strong>Regiões Sensíveis: Cabeça, Coração e Sistema Respiratório</strong></p>
     <p>Região da cabeça, coração, sistema circulatório e respiratório, alergias, ferimentos nos olhos, rosto, orelhas e maxilar, problemas circulatórios e cardíacos.</p>
@@ -1961,9 +1978,10 @@ desafios: {
   2: `<h3>O Desafio do Equilíbrio Emocional e Autorespeito - 2</h3>
     <p>Este é o seu grande mestre, <strong>MASCULINO-FEMININO-NEUTRO</strong>: a maestria sobre a sua sensibilidade e a cura definitiva da necessidade compulsiva de ser aceito(a) por todos. Sua caminhada é desenhada por uma alma que capta as frequências do mundo com uma intensidade rara, e a sombra desse dom é a facilidade com que você se fere, tendendo a se fechar em silêncios defensivos e mágoas ocultas.</p>
     <p>O desafio que você deve vencer é o de estabelecer limites de aço, aprendendo a dizer "não" com uma firmeza que não permita abusos, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A lição final é entender que a união verdadeira só acontece entre dois seres inteiros, e nunca na dependência. Ao superar essa fragilidade, você emergirá como uma presença mediadora extraordinária, alguém que todos respeitam pela capacidade de acolher sem se perder e de unir sem jamais aprisionar a alma alheia.</p>
+      <hr>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+   
     <h4>⚠️ Situação de Atenção: Número 2</h4>
     <p><strong>Regiões Sensíveis: Sistema Renal e Nervoso</strong></p>
     <p>Região dos rins, estômago e sistema nervoso. Pode acarretar retenção de líquidos no corpo, afetar ainda o sistema linfático, estômago e intestino, manchas hepáticas, infecções urinárias, esclerose múltipla.</p>
@@ -1973,9 +1991,10 @@ desafios: {
   3: `<h3>O Desafio da Expressão Autêntica e Foco Vital - 3</h3>
     <p>O seu desafio principal, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a superação da dispersão mental e o uso sagrado da sua comunicação para edificar e transformar, em vez de apenas distrair. Você recebeu o dom da palavra e do carisma, mas a sombra que tenta sabotar você é a superficialidade e o medo secreto de que sua verdade nua e crua não seja interessante o suficiente, o que o(a) leva a usar máscaras sociais exaustivas.</p>
     <p>Entenda de uma vez por todas, <strong>MASCULINO-FEMININO-NEUTRO</strong>: sua autoexpressão é uma responsabilidade técnica e espiritual com o mundo. Você precisará aprender a rir das adversidades sem jamais perder de vista a seriedade dos seus objetivos, transformando seu brilho natural em um veículo de luz real para os outros. O seu desafio é encontrar sua voz autêntica no meio do barulho do ego, tornando-se uma fonte de alegria genuína e profunda para quem cruzar o seu caminho.</p>
+  <hr>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 3</h4>
     <p><strong>Regiões Sensíveis: Garganta, Fígado e Vesícula</strong></p>
     <p>Região da garganta, fígado, e vesícula são os mais críticos. Também podem ocorrer quadros de enxaquecas, problemas glandulares, em especial na tireóidea e na hipófise.</p>
@@ -1986,9 +2005,10 @@ desafios: {
   4: `<h3>O Desafio da Disciplina e Construção de Legado - 4</h3>
     <p>Esta é a lição definitiva da sua alma, <strong>MASCULINO-FEMININO-NEUTRO</strong>: transmutar qualquer resistência ao esforço em um prazer profundo pela construção de algo sólido. Ao longo da vida, você enfrentará a tentação da desorganização ou do desânimo diante do método, o que pode criar a ilusão amarga de que o mundo não reconhece seus talentos como deveria.</p>
     <p>A sombra que você precisa vencer é a impaciência e a dificuldade em aceitar que os resultados grandiosos exigem tempo, suor e uma atenção obsessiva aos detalhes, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A vida vai cobrar de você o desenvolvimento de uma disciplina de ferro para lidar com a matéria. O seu desafio não é se tornar uma pessoa rígida ou amargurada pelas obrigações, mas encontrar a verdadeira liberdade através da competência técnica, transformando seu trabalho diário em uma missão de honra que deixará marcas eternas.</p>
+      <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 4</h4>
     <p><strong>Regiões Sensíveis: Estrutura Óssea e Psicossomática</strong></p>
     <p>O “4” pode indicar doenças incomuns e de difícil diagnóstico, acidentes inesperados e ferimentos inexplicáveis, além de problemas de circulação sanguínea, anemia, hipoglicemia.</p>
@@ -1999,9 +2019,10 @@ desafios: {
   5: `<h3>O Desafio do Autodomínio e Profundidade Interior - 5</h3>
     <p>Seu desafio principal, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é conquistar o autodomínio sobre a inquietação de uma mente que busca a liberdade fora, sem perceber que ela só nasce do lado de dentro. Você sentirá impulsos frequentes de abandonar barcos sempre que a rotina bater à porta, o que pode transformar sua vida em uma colcha de retalhos de experiências inacabadas. A sombra aqui é a troca da profundidade por sensações passageiras.</p>
     <p>A vida espera que você desenvolva a perseverança de ficar e agir exatamente quando a vontade for de fugir, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O seu grande aprendizado é que o compromisso não é uma gaiola, mas a pista de decolagem para voos muito mais altos e seguros. Use sua versatilidade para inovar e gerar progresso real, transformando essa sua inquietação natural em um motor potente de evolução constante que entrega valor real ao mundo.</p>
+    <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 5</h4>
     <p><strong>Regiões Sensíveis: Pulmões e Sistema Nervoso Central</strong></p>
     <p>Problemas nos pulmões, aparelho respiratório, olhos e sistema nervoso. Ansiedade e alterações repentinas de humor, tensão nervosa, apneia.</p>
@@ -2012,9 +2033,10 @@ desafios: {
   6: `<h3>O Desafio do Desapego e Aceitação Amorosa - 6</h3>
     <p>Este é o seu desafio mestre: superar o idealismo crítico e conquistar um amor que acolhe a humanidade exatamente como ela é, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A sombra que tenta desviar você do caminho é o desejo inconsciente de controlar o destino e as escolhas das pessoas que você ama para evitar que elas sofram — o que acaba gerando interferências e pesos que não são seus.</p>
     <p>Você precisa, <strong>MASCULINO-FEMININO-NEUTRO</strong>, integrar a lição do desapego amoroso: aceitar que cada alma tem o direito sagrado às suas próprias falhas e aprendizados. O seu desafio é encontrar harmonia dentro do caos e beleza na imperfeição alheia, transmutando seu senso de dever em uma compaixão que não julga. Ao vencer essa tendência ao controle, você se tornará um pilar de equilíbrio e suporte tão puro que as pessoas mudarão ao seu lado apenas pelo exemplo da sua paz.</p>
+     <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 6</h4>
     <p><strong>Regiões Sensíveis: Coluna, Coração e Região Lombar</strong></p>
     <p>Doenças renais, distúrbios pulmonares; irregularidades na circulação do sangue, hemofilia, palpitações cardíacas.</p>
@@ -2025,9 +2047,10 @@ desafios: {
   7: `<h3>O Desafio da Entrega e Integração Humana - 7</h3>
     <p>O seu desafio principal, a grande barreira desta existência para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o isolamento provocado por uma mente analítica e brilhante que teme a entrega emocional e os mistérios que a lógica não explica. Você sentirá o impulso constante de se refugiar na sua própria inteligência como se fosse um castelo fortificado contra as dores do mundo. A sombra aqui é o orgulho intelectual e a sensação de ser um(a) eterno(a) estrangeiro(a) em qualquer lugar.</p>
     <p>O universo desafia você a derrubar essas pontes levadiças e permitir que as pessoas conheçam suas dúvidas e fragilidades, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Somente ao se mostrar humano(a) você encontrará o pertencimento que tanto busca. Ao superar essa barreira de vidro, você integrará seu intelecto poderoso com uma espiritualidade vívida, tornando-se alguém capaz de guiar multidões através de uma sabedoria que une, finalmente, a razão e o sentimento.</p>
+     <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 7</h4>
     <p><strong>Regiões Sensíveis: Sistema Imunológico e Mental</strong></p>
     <p>Problemas glandulares, sistema nervoso, nos pés e o sistema linfático. Poderá haver certa vulnerabilidade à infecções, problemas de pele, como alergias em geral, coceiras.</p>
@@ -2038,9 +2061,10 @@ desafios: {
   8: `<h3>O Desafio da Justiça e Poder Consciente - 8</h3>
     <p>Este é o seu desafio supremo, <strong>MASCULINO-FEMININO-NEUTRO</strong>: a maestria sobre o poder, a abundância e a justiça divina aplicada ao plano material. Ao longo da sua vida, você será colocado(a) em situações de alta pressão que envolvem autoridade e gestão de grandes recursos. A sombra que o(a) espreita é a disputa cega de ego ou o medo paralisante de perder o controle das situações, o que pode levar você a atitudes de dureza excessiva.</p>
     <p>Você precisa entender, no âmago do seu ser, que o poder verdadeiro só permanece quando nasce da integridade e do serviço ao coletivo. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o seu desafio é equilibrar sua ambição legítima com uma consciência espiritual aguçada, agindo sempre com uma honestidade brutal e um senso de justiça que não se dobra. Ao dominar essa frequência, você manifestará a prosperidade real em sua vida e se tornará o(a) administrador(a) exemplar da abundância no mundo, criando riqueza que dura por gerações.</p>
+     <hr>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
-    <hr>
+    
     <h4>⚠️ Situação de Atenção: Número 7</h4>
     <p><strong>Regiões Sensíveis: Sistema Imunológico e Mental</strong></p>
     <p>Problemas glandulares, sistema nervoso, nos pés e o sistema linfático. Poderá haver certa vulnerabilidade à infecções, problemas de pele, como alergias em geral, coceiras.</p>
