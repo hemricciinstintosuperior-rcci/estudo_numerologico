@@ -2555,7 +2555,7 @@ if (agora < new Date(agora.getFullYear(), dtNasci.getMonth(), dtNasci.getDate())
 // IMPLEMENTAÇÃO APENAS:
 const nomeParaCalculo = tratarNomeParaCalculo(nomeRaw);
     
-           const nomesArray = nomeParaCalculo.split(/\s+/); 
+           nomesArray = nomeParaCalculo.split(/\s+/); 
             // Essência: 1ª letra de cada nome
             nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
 
