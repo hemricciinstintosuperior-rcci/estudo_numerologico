@@ -163,7 +163,20 @@
     .conteudo-travado { filter: none !important; opacity: 1 !important; }
     .aviso-trava { display: none !important; }
 }
- 
+
+@media print {
+    .conteudo-travado { 
+        filter: none !important; 
+        opacity: 1 !important; 
+    }
+    .aviso-trava { 
+        display: none !important; 
+        visibility: hidden !important; /* Reforço extra */
+        height: 0 !important;       /* Garante que não ocupe espaço */
+        margin: 0 !important;
+    }
+}
+    
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #1a1a1a; margin: 0; padding: 0; display: block;}
         /* Estilo para os Logos */
 .logo-capa {
@@ -209,7 +222,34 @@
 }
         
 
+/* Estilo para o número da página no PDF */
+.page-footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: 10pt;
+    color: #827108;
+    display: none; /* Esconde na tela do sistema */
+}
 
+@media print {
+    .page-footer {
+        display: block; /* Mostra apenas no PDF/Impressão */
+        position: fixed;
+        bottom: 10mm;
+        right: 10mm;
+    }
+
+    /* Truque para o contador de páginas funcionar no corpo */
+    body {
+        counter-reset: page;
+    }
+    
+    .page-number::after {
+        counter-increment: page;
+        content: "Página " counter(page);
+    }
+}
 
 
 
@@ -429,7 +469,7 @@
     margin:  0;
     page-break-before: always;
     page-break-after: always;
-    border: 4px solid #fff;
+    border: 4px solid #0f2a36;
     color: #fff;
 
     /* 🔥 FUNDO LEVE (SEM CAMADAS PESADAS) */
@@ -573,10 +613,10 @@
         /* PADRÃO PARA TODAS AS INTRODUÇÕES */
     .intro-texto, .intro-secao {
         font-size: 18px !important; /* Tamanho fixo para todas */
-        line-height: 1.6 !important;
+        line-height: 1.1 !important;
         color: #111 !important;
         text-align: justify !important;
-        margin-bottom: 50px !important;
+        margin-bottom: 5px !important;
         border-bottom: 1px solid #ffffff!important;
         font-family: 'Arial', sans-serif; /* Ou a fonte de sua preferência */
         font-style: arial;
@@ -585,19 +625,25 @@
     /* PADRÃO PARA TODOS OS RESULTADOS (CONTEÚDO BRUTO) */
     .texto-res {
         font-size: 18px !important; /* Um pouquinho maior que a intro para dar peso */
-        line-height: 1.6 !important;
+        line-height: 1 !important;
         color: #000 !important;
         text-align: justify !important;
-        margin-bottom: 30px !important;
+        margin-bottom: 5px !important;
        border-bottom: 1px solid #ffffff!important;
      border: 1px solid #ffffff!important;
-    }
+ 
+        }
 
     /* FORÇAR PARÁGRAFOS DENTRO DOS RESULTADOS */
     .texto-res p, .intro-texto p {
         font-size: inherit !important; /* Herda o tamanho da classe pai */
-        margin-bottom: 0px !important;
+        margin-bottom: 5px !important;
     }
+
+.pula-pagina { 
+    page-break-before: always !important; 
+    break-before: page !important; 
+}
 
 h3 {
      
@@ -615,7 +661,7 @@ h3 {
 
     letter-spacing: 0.5px; /* mais compacto */
     margin-bottom: 0px; /* aproxima do texto */
-line-height: 1.5;
+line-height: 1.1;
     display: block;
 }
     
@@ -653,6 +699,21 @@ input:focus {
         counter-reset: page;
     }
 }
+
+@media print {
+    .grupo-respostas-bloco {
+        display: block;
+        width: 100%;
+        page-break-before: always !important; /* Força o pulo antes de começar o grupo */
+    }
+    
+    /* Remove o pulo individual das respostas para elas não separarem */
+    .grupo-respostas-bloco .texto-res {
+        page-break-before: auto !important; 
+        margin-bottom: 20px;
+    }
+}
+    
 
  @media print {
     /* Regra específica só para a PRIMEIRA página */
@@ -703,6 +764,19 @@ input:focus {
     }
 }
     
+  @media print {
+    /* Esconde o container do cronômetro e mensagens de trava pelo ID */
+    #status-acesso, 
+    #label-tempo, 
+    #timer, 
+    #msg-trava {
+        display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}  
 
     </style>
 </head>
@@ -719,7 +793,7 @@ input:focus {
 
     <script src="textos.js"></script>
 
-    <script>
+   <script>
         const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
         const vogais = ["A","E","I","O","U","Y"];
     // Títulos amigáveis para cada estrutura
@@ -760,22 +834,6 @@ function valorLetraMatriz(l){
     if(n.includes("\u0301")) s=2; else if(n.includes("\u0302")) s=7; else if(n.includes("\u0303")) s=3; else if(n.includes("\u0327")) s=6;
     return (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
 }
-
-         function calcularValorLetra(letra) {
-            const base = letra.normalize("NFD")[0].toUpperCase();
-            const valorBase = tabela[base] || 0;
-            if (!valorBase) return 0;
-            let soma = 0, mult = 1, norm = letra.normalize("NFD");
-            for (let i = 1; i < norm.length; i++) {
-                const c = norm[i];
-                if (c === "\u0301") soma += 2;      // Agudo
-                else if (c === "\u0302") soma += 7; // Circunflexo
-                else if (c === "\u0303") soma += 3; // Til
-                else if (c === "\u0327") soma += 6; // Cedilha
-                else if (c === "\u0300" || c === "\u0308") mult *= 2; // Grave/Trema
-            }
-            return (valorBase + soma) * mult;
-        }       
         
 function mascaraData(campo) {
     let v = campo.value.replace(/\D/g, ""); // Remove tudo que não é número
@@ -1077,7 +1135,21 @@ function reduzirRespeitandoMestres(num) {
     return null;
 }
 
-
+        function calcularValorLetra(letra) {
+            const base = letra.normalize("NFD")[0].toUpperCase();
+            const valorBase = tabela[base] || 0;
+            if (!valorBase) return 0;
+            let soma = 0, mult = 1, norm = letra.normalize("NFD");
+            for (let i = 1; i < norm.length; i++) {
+                const c = norm[i];
+                if (c === "\u0301") soma += 2;      // Agudo
+                else if (c === "\u0302") soma += 7; // Circunflexo
+                else if (c === "\u0303") soma += 3; // Til
+                else if (c === "\u0327") soma += 6; // Cedilha
+                else if (c === "\u0300" || c === "\u0308") mult *= 2; // Grave/Trema
+            }
+            return (valorBase + soma) * mult;
+        }
 
 function aplicarFiltroTexto(texto) {
     // Se o texto não existir, for nulo ou não for uma string, retorna vazio ou um aviso
@@ -1773,7 +1845,8 @@ let html = `
             <div style="text-align: center; margin: 30px 0;">
                 <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/planoestudo.png" alt="Logo Plano de Expressão" style="max-width: 350px; height: auto; display: inline-block;">
             </div>
-            <div style="margin-bottom: 25px; padding: 20px; border: 2px solid #827108; border-radius: 12px; background: #fff; display: flex; align-items: center; gap: 20px;">
+            
+            <div class="evitar-corte" style="margin-bottom: 25px; padding: 20px; border: 2px solid #827108; border-radius: 12px; background: #fff; display: flex; align-items: center; gap: 20px;">
                 <div style="background: #827108; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; flex-shrink: 0;">
                     ${dados.dominantePerfil[0]}
                 </div>
@@ -1838,7 +1911,7 @@ const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][i
 
 
             html += `
-                <div style="margin-bottom: 20px; border-left: 1px solid ${coresPlanos[p]}; padding-left: 15px;">
+                <div class="evitar-corte" style="margin-bottom: 20px; border-left: 1px solid ${coresPlanos[p]}; padding-left: 15px;">
                     <h4 style="margin:0; color:${coresPlanos[p]}; text-transform:uppercase; font-size:18px;">${nomesAmigaveis[p]} <small>(${int})</small></h4>
                     <div class="texto-res">${aplicarFiltroTexto(textoIndiv)}</div>
                 </div>
@@ -1849,7 +1922,7 @@ const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][i
 
     // Síntese e Diretriz (Caixa Preta)
     html += `
-        <div style="margin-top:40px; border:0px #ffffff; padding:25px; border-radius:12px; background:#fff;">
+        <div class="evitar-corte" style="margin-top:40px; border:0px #ffffff; padding:25px; border-radius:12px; background:#fff;">
             <div style="text-align:center; margin-bottom:20px;">
                 <span style="background:var(--gold); color:white; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:bold;">${titulosEstrutura[sigla] || "SÍNTESE"}</span>
                 <h3 style="margin-top:10px; text-transform:uppercase;">Síntese de Expressão Natural</h3>
@@ -1901,6 +1974,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
             }
             return t;
         });
+
 
         const indiceAno = inicioCiclo.getFullYear() - dtNasci.getFullYear();
         let somaMomento = { fisico: 0, mental: 0, emocional: 0, intuitivo: 0 };
@@ -1959,7 +2033,9 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
    <div style="text-align: center; margin: 30px 0;">
                 <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/planoestudo.png" alt="Logo Plano de Expressão" style="max-width: 350px; height: auto; display: inline-block;">
             </div>
-            <div style="margin-bottom: 25px; padding: 20px; border: 2px solid #827108; border-radius: 12px; background: #fff; display: flex; align-items: center; gap: 20px;">
+
+            
+           <div class="evitar-corte" style="margin-bottom: 25px; padding: 20px; border: 2px solid #827108; border-radius: 12px; background: #fff; display: flex; align-items: center; gap: 20px;">
                 <div style="background: #827108; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: bold; text-transform: uppercase; flex-shrink: 0;">
                     ${dominanteMomento[0]}
                 </div>
@@ -2016,7 +2092,7 @@ h += `</div>`;
             
             if(textoIndiv) {
                 h += `
-                    <div style="margin-bottom: 20px; border-left: 1px solid ${coresPlanos[p] || 'var(--gold)'}; padding-left: 15px;">
+                    <div class="evitar-corte" style="margin-bottom: 20px; border-left: 1px solid ${coresPlanos[p] || 'var(--gold)'}; padding-left: 15px;">
                         <h4 style="margin:0; color:${coresPlanos[p] || 'var(--dark)'}; text-transform:uppercase; font-size:18px;">${nomesAmigaveis[p]} <small>(${int})</small></h4>
                         
                         ${travado ? '<div class="conteudo-travado">' : '<div>'}
@@ -2031,7 +2107,7 @@ h += `</div>`;
         // 2. SEÇÃO DE SÍNTESE
         h += ` 
         <div class="secao-card quebra-pagina" style="width: 100%;"> 
-            <div style="margin-top:40px; border:2px solid #ffffff; padding:25px; border-radius:12px; background:#fff;">
+           <div class="evitar-corte" style="margin-top:40px; border:2px solid #ffffff; padding:25px; border-radius:12px; background:#fff;">
                 <div style="text-align:center; margin-bottom:20px;">
                     <span style="background:var(--gold); color:white; padding:4px 12px; border-radius:20px; font-size:11px; font-weight:bold;">
                         ${titulosEstrutura[siglaMomento] || "SÍNTESE"}
@@ -2051,7 +2127,9 @@ h += `</div>`;
         </div>`; // FECHA A SEÇÃO DE SÍNTESE
 
         // 3. SEÇÃO DE TRÂNSITO
-        const vTransitoCalculado = reduzirPuro(somaMomento.fisico + somaMomento.mental + somaMomento.emocional + somaMomento.intuitivo);
+        // 3. SEÇÃO DE TRÂNSITO (Alinhado com Letras de Passagem)
+let letrasAno = timelines.map(t => t[indiceAno % t.length]);
+let vTransitoCalculado = reduzirPuro(letrasAno.reduce((s, l) => s + calcularValorLetra(l), 0));
 
         h += `
         <div class="separador-luxo">
@@ -2064,8 +2142,8 @@ h += `</div>`;
                 <p>Os <b>Ciclos de Trânsito</b> representam a síntese das energias que regem o seu momento atual. Ele é o resultado direto da soma e redução dos quatro pilares do seu <b>Plano de Expressão</b>: o Físico, o Mental, o Emocional e o Intuitivo. Esta correlação profunda indica como a integração de todas as suas facetas está se manifestando agora.</p>
             <p>Ao unir essas quatro forças, o Trânsito revela a frequência vibracional dominante para este período específico, servindo como um mapa prático para orientar as ações e decisões enquanto essa influência estiver vigente em sua jornada.</p>
             </div>
-
-            <div style="text-align:left; margin-bottom:15px;">
+<div class="grupo-respostas-bloco pula-pagina">
+             <div style="text-align:left; margin-bottom:15px;">
                 <div class="resultado-bloco">
                     <h3>Seu Trânsito: <span style="color: var(--gold);">${vTransitoCalculado}</span></h3>
                     <h3> IDADE: <span style="color: var(--gold);">${indiceAno} ANOS | PERÍODO: ${periodoVigente}</span></h3>
@@ -2076,7 +2154,7 @@ h += `</div>`;
                         ${aplicarFiltroTexto(window.TextosTransito ? window.TextosTransito[vTransitoCalculado] : "")}
                     </div> 
                 </div> ${travado ? '<div class="aviso-trava">🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA</div>' : ''} 
-            </div>
+            </div></div>
         </div>`; // FECHA A SEÇÃO DE TRÂNSITO
 
         // 4. GRÁFICOS FINAIS
@@ -2334,14 +2412,14 @@ function calcularAptidaoProfissional(res) {
 
     // 4. MONTAGEM DO HTML (Com todos os quadros)
     return `
-        <div style="margin-top: 10px; padding: 20px; background: #fffcf0; border: 1px solid #d97a1e; border-left: 8px solid #d97a1e; border-radius: 8px;">
+         <div class="evitar-corte" style="margin-top: 10px; padding: 20px; background: #fffcf0; border: 1px solid #d97a1e; border-left: 8px solid #d97a1e; border-radius: 8px;">
             <h4 style="color: #d97a1e; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🚩 Zona de Sucesso Absoluto</h4>
             <p style="font-size: 1.1rem; font-weight: bold; color: #1a1a1a; line-height: 1.5; text-align: justify;">
                 ${vocacaoMaster.length > 0 ? vocacaoMaster.join(" • ") : "Liderança Estratégica • Gestão de Negócios"}
             </p>
         </div>
 
-        <div style="margin-top: 20px; padding: 20px; background: #fdf2f8; border: 1px solid #be185d; border-left: 8px solid #be185d; border-radius: 8px;">
+         <div class="evitar-corte" style="margin-top: 20px; padding: 20px; background: #fdf2f8; border: 1px solid #be185d; border-left: 8px solid #be185d; border-radius: 8px;">
             <h4 style="color: #be185d; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🎓 Guia de Formação Recomendada</h4>
             <p style="margin-bottom: 12px; font-size: 0.95rem; color: #1a1a1a;">
                 <strong>Ensino Superior (Graduações):</strong><br>
@@ -2353,14 +2431,14 @@ function calcularAptidaoProfissional(res) {
             </p>
         </div>
 
-        <div style="margin-top: 20px; padding: 20px; background: #f0fdf4; border: 1px solid #16a34a; border-left: 8px solid #16a34a; border-radius: 8px;">
+         <div class="evitar-corte" style="margin-top: 20px; padding: 20px; background: #f0fdf4; border: 1px solid #16a34a; border-left: 8px solid #16a34a; border-radius: 8px;">
             <h4 style="color: #16a34a; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🚀 Entrada Imediata (Mercado CLT)</h4>
             <p style="font-size: 1rem; font-weight: 600; color: #1a1a1a; line-height: 1.6;">
                 ${listaCLT}
             </p>
         </div>
 
-        <div style="margin-top: 20px; padding: 20px; background: #f4f7f9; border: 1px solid #3498db; border-left: 8px solid #3498db; border-radius: 8px;">
+         <div class="evitar-corte" style="margin-top: 20px; padding: 20px; background: #f4f7f9; border: 1px solid #3498db; border-left: 8px solid #3498db; border-radius: 8px;">
             <h4 style="color: #3498db; margin-bottom: 10px; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px;">🔍 Campo de Afinidade</h4>
             <p style="font-size: 0.95rem; font-weight: 500; color: #444; line-height: 1.6;">
                 ${afinidade.length > 0 ? afinidade.join(" • ") : "Desenvolvimento Profissional • Planejamento"}
@@ -2691,7 +2769,7 @@ desafios: {
 };
 
 
- 
+    
     
 const introProfissionalTexto = `
     <div style="margin-bottom: 25px; text-align: justify; line-height: 1.6;">
@@ -2827,7 +2905,7 @@ let html = `
         width: 210mm; 
         height: 297mm; 
         background-color: #ffffff; 
-        border: 4px solid #827108;
+        border: 6px solid #827108;
         display: flex;
         flex-direction: column;
         justify-content: center; 
@@ -3031,9 +3109,8 @@ html += `
     </h3>
 </div>
 
-</div> `;
-    
 
+</div>`;
 
     
 html += `
@@ -3300,7 +3377,7 @@ html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
             <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
-            <div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>
+            <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>
         </div>
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
@@ -3349,9 +3426,13 @@ html += `
         <div class="intro-texto">${textos.introducoes.deficiencias}</div>
 `;
 if (res.deficiencias.length > 0) {
+    html += `<div class="grupo-respostas-bloco pula-pagina">`;
     res.deficiencias.forEach(f => {
-        html += `<div class="texto-res"> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #ffffff"></div>`;
+        html += `
+        <div class="texto-res"> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #ffffff"></div>`;
     });
+html += `</div>`;
+    
 } else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
 html += `</div>`;
 
@@ -3371,7 +3452,7 @@ html += `
     <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Déficits de Comportamento</h2>
         <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
-        <div class="texto-res"> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</div>
+        <div class="texto-res pula-pagina"> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</div>
         <hr style="border:0; border-top:1px solid #ffffff">
 `;
 if (res.deficitsOcultos.length > 0) {
@@ -3405,7 +3486,7 @@ html += `
     <p>A Vibração do Desejo Oculto possui um poder próprio para moldar a trajetória humana, gerando um impulso profundo para o desenvolvimento e a expressão de habilidades muito específicas. Esta força exige que a própria natureza seja experimentada em sua essência, permitindo que esse potencial guie a personalidade de forma autêntica.</p>
     <p>No Estudo Numerológico Quântico, esta é uma das vibrações mais significativas, pois representa comportamentos recorrentes que se manifestam de forma cíclica. É necessário manter a vigilância sobre esses padrões, que podem se tornar vícios de atitude se não houver a quebra do ciclo existente. O reconhecimento dessa energia permite escolher direções que evitem círculos viciosos, transformando tendências latentes em ferramentas de evolução.</p>
 `}</div>
-        <div class="resultado-bloco" style="text-align: center; margin-bottom: 20px;">
+         <div class="evitar-corte resultado-bloco" style="text-align: center; margin-bottom: 20px;">
             <span style="font-size: 1.2rem; color: var(--gold);"> </span>
             <span class="numero-destaque" style="font-size: 2.5rem; font-weight: bold;"></span>
         </div>
@@ -3434,7 +3515,7 @@ html += `
 `}</div>
         ${talentoNum ? `
             <p><strong> </strong></p>
-            <div class="texto-res">${aplicarFiltroTexto(textos.talentosEspeciais[talentoNum])}</div>
+            <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.talentosEspeciais[talentoNum])}</div>
         ` : `
             <p style="font-style: italic; color: #666;">Não foi detectada uma predominância numérica (dobro de frequência) no primeiro nome para um talento especial específico.</p>
         `}
@@ -3452,13 +3533,13 @@ itensAlinhamento.forEach(chave => {
     if (chave === "inclinacoes") {
         if (res.inclinacoes && res.inclinacoes.length > 0) {
             res.inclinacoes.forEach(num => {
-                conteudoFinal += `<div class="texto-res">${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #ffffff"></div>`;
+                conteudoFinal += ` <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #ffffff"></div>`;
             });
         } else {
             conteudoFinal = "<p>Nenhuma inclinação específica detectada.</p>";
         }
     } else {
-        conteudoFinal = `<div class="texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
+        conteudoFinal = ` <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
     }
 
     
@@ -3500,12 +3581,12 @@ html += `
     <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">O Desafio Principal</h2>
         <div class="intro-texto"><p>O Desafio Principal é a vibração mestra que permeia toda a jornada de um indivíduo, do nascimento à maturidade. Diferente dos desafios temporários das fases iniciais ou adultas, esta é a lição central que a alma busca integrar. Ela representa a sombra mais persistente e, simultaneamente, a maior oportunidade de crescimento espiritual e autorrealização.</p>
-    <p>Superar o Desafio Principal exige uma vigilância constante sobre padrões repetitivos de comportamento. Ele funciona como um "norte" para o desenvolvimento do caráter: ao enfrentar e transmutar as dificuldades impostas por essa frequência, <strong>você</strong> desbloqueia o fluxo de todos os outros talentos do mapa. É o ponto onde a resistência se transforma em maestria, permitindo que a vida seja conduzida com integridade, consciência e propósito real.</p></div>
+    <p>Superar o Desafio Principal exige uma vigilância constante sobre padrões repetitivos de comportamento. Ele funciona como um "norte" para o desenvolvimento do caráter: ao enfrentar e transmutar as dificuldades impostas por essa frequência, <strong>você</strong> desbloqueia o fluxo de todos os outros talentos do mapa. É o ponto onde a resistência se transforma em maestria, permitindo que a vida seja conduzida com integridade, consciência e propósito real.</p>
+
+    </div>
         
-        <div class="texto-res">${aplicarFiltroTexto(textos.desafios[3][res.desafios[3]])}</div>
-        <div style="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">
-            Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.
-        </div>
+         <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.desafios[3][res.desafios[3]])}</div>
+      
     </div>
 `;    
     
@@ -3554,8 +3635,8 @@ html += `
         }
 
         
-
-        html += `
+html += `<div class="grupo-respostas-bloco pula-pagina">`;
+        html += ` 
             <div style="margin-bottom: 18px;">
                 <span style="color: #d97a1e; font-weight: bold; font-size: 20px; text-transform: uppercase;">
                    Idade ${info.idade} -  Data ${info.anos}
@@ -3564,21 +3645,22 @@ html += `
                     <div class="texto-res" style="margin-top: 10px; line-height: 1.6;">
                     ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
                 </div></div>
-                  <hr style="border:0; border-top:1px solid #eeeeee; margin-top: 15px;">
-                 
-          <div class="aviso-trava">
+                        <div class="aviso-trava">
             🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
 
          </div>
+                  <hr style="border:0; border-top:1px solid #eeeeee; margin-top: 15px;">
+                 
+  
            </div>`;
-    }
-    html += `</div>`;
+        
+    }       
 });
 
-
+ html += `</div>`;
 // ... (depois de terminar os Desafios)
 
-
+html += `</div>`;
 
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
@@ -3864,7 +3946,7 @@ htmlPiramide += `
 <p>Compreender o seu Regente é compreender o fundamento da sua identidade energética. Ele revela talentos naturais, tendências comportamentais e a forma como a sua presença influencia o ambiente ao redor, sendo a base sobre a qual todo o restante da análise da Pirâmide da Vida se apoia.</p>`}
 </div>
 
-<div class="bloco-regente" style="margin-top: 50px; padding-top: 20px; border-top: 1px inset #fff;">
+<div class="bloco-regente evitar-corte" style="margin-top: 50px; padding-top: 20px; border-top: 1px inset #fff;">
     <div class="texto-res" style="font-size: 20px; color: #111;">
         ${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}
     </div>
@@ -3914,7 +3996,7 @@ if(dadosNegativas.detalhes.length > 0){
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
-            <div style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
+             <div class="evitar-corte" style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
                <h2  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}  ⚠️</h2></b><br>
                 <span style="color:red; font-weight: bold;font-size: 21px;">📅 Período de maior influência: de ${datas.ini} até ${datas.fim}</span><br><br>
                 <span style="color:red; font-weight: bold;font-size: 21px;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
@@ -3951,7 +4033,7 @@ if (listaEspeciais.length > 0) {
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
-            <div style="margin-bottom: 35px; text-align: center;">
+             <div class="evitar-corte" style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#d97a1e; font-size: 22px;">Alinhamento Especial ${esp.numero}</h2>
                 <span style="color:#d97a1e; font-weight: bold; font-size: 19px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                <div class="conteudo-travado">
@@ -3990,7 +4072,7 @@ if (listaFin.length > 0) {
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
         htmlPiramide += `
-            <div style="margin-bottom: 35px; text-align: center;">
+             <div class="evitar-corte" style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#28a745; font-size: 22px;">Potencial de Prosperidade 99/9</h2>
                <div class="conteudo-travado">
                 <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
@@ -4190,11 +4272,11 @@ html += `
         ${aplicarFiltroTexto(textos.introducoes.conclusaoEvolutiva)}
     </div>
 
-    <div style="margin-top: 40px; padding: 25px; background: var(--dark); border-radius: 10px; text-align: center; border: 2px solid #ffffff;">
-        <h4 style="color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 1px;">Conhecer a realidade da vida é o principio do conhecimento</h4>
-        <p style="color: #fff; font-size: 14px; margin-top: 10px; opacity: 0.9;">
+    <div class="evitar-corte" style="margin-top: 40px; padding: 25px; background: var(--dark); border-radius: 10px; text-align: center; border: 2px solid #ffffff;">
+        <h3 style="color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 1px;">Conhecer a realidade da vida é o principio do conhecimento</h3>
+        <h4 style="color: #fff; font-size: 14px; margin-top: 10px; opacity: 0.9;">
             "Conhecer a si mesmo é o começo de toda a sabedoria." – Aristóteles
-        </p>
+        </h4>
     </div>
 </div>
 `;
@@ -4222,7 +4304,7 @@ html += `
         <div style="width: 50px; height: 3px; background: #827108; margin: 0 auto;"></div>
     </div>
 
-    <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify;">
+    <div class="evitar-corte texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify;">
         ${aplicarFiltroTexto(textos.introducoes.historiaModerna)}
     </div>
 </div>
@@ -4248,10 +4330,9 @@ html += `
         <div style="width: 60px; height: 3px; background: #827108; margin: 0 auto;"></div>
     </div>      
     
-    <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify; margin-bottom: 25px;">
+     <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify; margin-bottom: 25px;">
         ${aplicarFiltroNomeComposto(textos.introducoes.Conclusao)}
     </div>
-
         <div style="margin-top: 50px; border-top: 1px solid #eee; padding-top: 40px;">
         <p style="font-family: 'Times New Roman', serif; font-size: 2px; font-style: italic; font-weight: bold; margin-bottom: 5px; color: #000;">
           </p>
@@ -4261,11 +4342,7 @@ html += `
         <div style="display: flex; justify-content: center; margin: 30px 0; filter: grayscale(1);">
             <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/logosite.png" style="width: 500px; max-width: 90%; height: auto; opacity: 0.8;">
         </div>
-        
-        <div style="font-size: 14px; color: #827108; font-weight: bold; letter-spacing: 4px; text-transform: uppercase;">
-            INSTINTO SUPERIOR
-        </div>
-        
+                   
         <div style="font-size: 12px; color: #999; margin-top: 10px; text-transform: uppercase; letter-spacing: 2px;">
             Estudo Numerológico Cabalístico • Edição Premium<br>
             www.instintosuperior.com 
@@ -4289,12 +4366,13 @@ html += `
         ★ ★ ★ ★ ★
     </div>
 </div>
-`;
-
-    
+`;    
      document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
         } // FIM DA FUNÇÃO
 
+
+
+        
     </script>
     
 
