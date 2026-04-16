@@ -661,8 +661,47 @@ input:focus {
             content: ""; /* Deixa vazio o topo da primeira página */
         }
     }
-}   
+}  
+    
+@media print {
+    /* 1. Criamos um "reset" para as capas de transição */
+    .capa, .capa-transicao {
+        page-break-before: always !important;
+        page-break-after: always !important;
+        /* Força a capa a ignorar as margens padrão do PDF para ocupar a folha toda */
+        margin: 0 !important; 
+        padding: 0 !important;
+        height: 100vh !important;
+    }
 
+    /* 2. Removemos o cabeçalho/rodapé (incluindo numeração) nestas páginas específicas */
+    /* Nota: Como o CSS padrão não permite selecionar @page por classe de elemento, 
+       usamos o truque de esconder qualquer elemento que renderize a numeração 
+       ou forçamos uma margem que "jogue" o número para fora se ele estiver no corpo. */
+
+    .capa-transicao {
+        /* Se você estiver usando um elemento HTML para simular a numeração, 
+           garanta que ele tenha uma classe como '.numero-pagina' e use: */
+        counter-increment: none !important; 
+    }
+
+    /* 3. A regra de ouro para PDFs modernos (Chrome/Edge):
+       Isso remove os cabeçalhos e rodapés automáticos do navegador (Data, Título e URL) */
+    @page {
+        margin: 1.5cm; /* Margem padrão para páginas de conteúdo */
+    }
+
+    /* Definimos que a PRIMEIRA página e qualquer página com a classe capa/transição 
+       não deve exibir os seletores de margem que contêm o contador */
+    
+    .capa, .capa-transicao {
+        /* Isso garante que o conteúdo da capa cubra qualquer elemento de numeração 
+           que o navegador tente inserir por baixo */
+        position: relative;
+        z-index: 9999;
+        background-color: #0f2a36 !important;
+    }
+}
     
 
     </style>
