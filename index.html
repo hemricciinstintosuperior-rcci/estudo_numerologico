@@ -2553,7 +2553,7 @@ if (agora < new Date(agora.getFullYear(), dtNasci.getMonth(), dtNasci.getDate())
     
     // O resto do seu código segue igual...
 
-           
+            nomesArray = nomeParaCalculo.split(/\s+/);    
             // Essência: 1ª letra de cada nome
             nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
 
@@ -2651,7 +2651,7 @@ desafios: {
 // IMPLEMENTAÇÃO APENAS:
 const nomeParaCalculo = tratarNomeParaCalculo(nomeRaw);
  // A partir daqui o seu código continua igual...
-             const nomesArray = nomeParaCalculo.split(/\s+/);    
+ 
     
 const introProfissionalTexto = `
     <div style="margin-bottom: 25px; text-align: justify; line-height: 1.6;">
