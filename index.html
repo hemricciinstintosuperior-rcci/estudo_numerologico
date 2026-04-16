@@ -721,6 +721,22 @@ function valorLetraMatriz(l){
     if(n.includes("\u0301")) s=2; else if(n.includes("\u0302")) s=7; else if(n.includes("\u0303")) s=3; else if(n.includes("\u0327")) s=6;
     return (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
 }
+
+         function calcularValorLetra(letra) {
+            const base = letra.normalize("NFD")[0].toUpperCase();
+            const valorBase = tabela[base] || 0;
+            if (!valorBase) return 0;
+            let soma = 0, mult = 1, norm = letra.normalize("NFD");
+            for (let i = 1; i < norm.length; i++) {
+                const c = norm[i];
+                if (c === "\u0301") soma += 2;      // Agudo
+                else if (c === "\u0302") soma += 7; // Circunflexo
+                else if (c === "\u0303") soma += 3; // Til
+                else if (c === "\u0327") soma += 6; // Cedilha
+                else if (c === "\u0300" || c === "\u0308") mult *= 2; // Grave/Trema
+            }
+            return (valorBase + soma) * mult;
+        }       
         
 function mascaraData(campo) {
     let v = campo.value.replace(/\D/g, ""); // Remove tudo que não é número
@@ -736,19 +752,27 @@ function mascaraData(campo) {
 }
 
 function tratarNomeParaCalculo(nome) {
+    if (!nome) return "";
+
     const particulas = [
         'de', 'da', 'do', 'das', 'dos', 'del', 'de la', 'de los', 
         'di', 'degli', 'dei', 'd', 'lo', 'la', 'du', 'des', 'le', 
         'von', 'van', 'vander', 'vanden', 'zu', 'mac', 'mc', 'st', 'y', 'e'
     ];
 
-    let nomeProcessado = nome.toLowerCase().trim();
+    let nomeProcessado = nome.trim(); // Mantém as maiúsculas originais
 
     particulas.forEach(p => {
+        // O segredo está na flag 'gi' da RegExp:
+        // 'g' = global (todas as vezes que aparecer)
+        // 'i' = insensitive (ignora se é maiúsculo ou minúsculo)
         const regexEspaco = new RegExp('\\b' + p + '\\s+', 'gi');
-        const regexApostrofe = new RegExp('\\b' + p + "[''’]\\s*", 'gi');
-        nomeProcessado = nomeProcessado.replace(regexEspaco, p);
-        nomeProcessado = nomeProcessado.replace(regexApostrofe, p);
+        
+        // Usamos uma função no replace para manter a escrita original da partícula
+        // mas remover o espaço que vem depois dela
+        nomeProcessado = nomeProcessado.replace(regexEspaco, (match) => {
+            return match.trim(); // Remove o espaço, mantendo a partícula como foi digitada
+        });
     });
 
     return nomeProcessado;
@@ -1000,21 +1024,7 @@ function reduzirRespeitandoMestres(num) {
     return null;
 }
 
-        function calcularValorLetra(letra) {
-            const base = letra.normalize("NFD")[0].toUpperCase();
-            const valorBase = tabela[base] || 0;
-            if (!valorBase) return 0;
-            let soma = 0, mult = 1, norm = letra.normalize("NFD");
-            for (let i = 1; i < norm.length; i++) {
-                const c = norm[i];
-                if (c === "\u0301") soma += 2;      // Agudo
-                else if (c === "\u0302") soma += 7; // Circunflexo
-                else if (c === "\u0303") soma += 3; // Til
-                else if (c === "\u0327") soma += 6; // Cedilha
-                else if (c === "\u0300" || c === "\u0308") mult *= 2; // Grave/Trema
-            }
-            return (valorBase + soma) * mult;
-        }
+
 
 function aplicarFiltroTexto(texto) {
     // Se o texto não existir, for nulo ou não for uma string, retorna vazio ou um aviso
@@ -1811,6 +1821,7 @@ const textoIndiv = (textosPlanos[p] && textosPlanos[p][int]) ? textosPlanos[p][i
 // ============================================
 // FUNÇÃO: PLANO DE EXPRESSÃO DO MOMENTO (CICLO ATUAL E PRÓXIMO)
 function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d3, regenteMatriz, negativasMatriz) {
+    const nomeParaCalculo = tratarNomeParaCalculo(nomeCompleto);
     const agora = new Date();
     const anoBase = agora.getFullYear();
     const partesData = dataNascimento.split("/");
@@ -1828,7 +1839,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
         let fimCiclo = new Date(inicioCiclo.getFullYear() + 1, dtNasci.getMonth(), dtNasci.getDate());
         const periodoVigente = `${inicioCiclo.toLocaleDateString('pt-BR')} a ${fimCiclo.toLocaleDateString('pt-BR')}`;
 
-        const partes = nomeCompleto.toUpperCase().trim().split(/\s+/);
+        const partes = nomeParaCalculo.toUpperCase().trim().split(/\s+/);
         let timelines = partes.map(p => {
             let t = [];
             for(let l of p) { 
