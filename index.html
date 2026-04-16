@@ -754,11 +754,25 @@ function mascaraData(campo) {
 function tratarNomeParaCalculo(nome) {
     if (!nome) return "";
 
-    const particulas = [
-        'de', 'da', 'do', 'das', 'dos', 'del', 'de la', 'de los', 
-        'di', 'degli', 'dei', 'd', 'lo', 'la', 'du', 'des', 'le', 
-        'von', 'van', 'vander', 'vanden', 'zu', 'mac', 'mc', 'st', 'y', 'e'
-    ];
+const particulas = [
+    // Português e Espanhol
+    'de', 'da', 'do', 'das', 'dos', 'del', 'de la', 'de las', 'de lo', 'de los', 'y', 'e',
+    
+    // Italiano (Muitas variações com apóstrofo)
+    'di', 'da', 'degli', 'dei', 'de', 'dall', 'dalla', 'dallo', 'dai', 'dagli', 'delle', 'delli', 'lo', 'la',
+    
+    // Francês
+    'du', 'des', 'le', 'la', 'l', 'de la', 'de l', 'd',
+    
+    // Alemão e Holandês (Comuns em sobrenomes do sul do Brasil)
+    'von', 'van', 'vander', 'vanden', 'vane', 'vom', 'zu', 'zur', 'zum', 'auf', 'der',
+    
+    // Inglês/Escocês/Irlandês (Aglutinados ou prefixos)
+    'mac', 'mc', 'st', 'saint', 'o',
+    
+    // Árabe (Muito comum em nomes brasileiros de origem libanesa/síria)
+    'al', 'el', 'bin', 'ben', 'abd'
+];
 
     let nomeProcessado = nome.trim(); // Mantém as maiúsculas originais
 
