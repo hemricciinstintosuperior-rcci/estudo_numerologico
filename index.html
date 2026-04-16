@@ -735,31 +735,23 @@ function mascaraData(campo) {
     campo.value = v;
 }
 
-function normalizarNomeParaNumerologia(nomeCompleto) {
-    // Lista mestre de partículas de conexão (Ocidentais)
-    const conectivos = [
-        'de', 'da', 'do', 'das', 'dos', 'del', 'de la', 'de los', // PT/ES
-        'di', 'degli', 'dei', 'd', 'lo', 'la',                   // IT
-        'du', 'des', 'le', 'l',                                  // FR
-        'von', 'van', 'vander', 'vanden', 'zu',                  // GE/NL
-        'mac', 'mc', 'st', 'y', 'e'                              // EN/Outros
+function tratarNomeParaCalculo(nome) {
+    const particulas = [
+        'de', 'da', 'do', 'das', 'dos', 'del', 'de la', 'de los', 
+        'di', 'degli', 'dei', 'd', 'lo', 'la', 'du', 'des', 'le', 
+        'von', 'van', 'vander', 'vanden', 'zu', 'mac', 'mc', 'st', 'y', 'e'
     ];
 
-    let nomeTratado = nomeCompleto.toLowerCase().trim();
+    let nomeProcessado = nome.toLowerCase().trim();
 
-    conectivos.forEach(particula => {
-        // Esta regra procura a partícula isolada (com espaço antes/depois ou apóstrofe)
-        // e remove o espaço ou caractere especial que a separa do próximo nome.
-        const regexEspaco = new RegExp('\\b' + particula + '\\s+', 'gi');
-        const regexApostrofe = new RegExp('\\b' + particula + "[''’]\\s*", 'gi');
-
-        nomeTratado = nomeTratado.replace(regexEspaco, particula);
-        nomeTratado = nomeTratado.replace(regexApostrofe, particula);
+    particulas.forEach(p => {
+        const regexEspaco = new RegExp('\\b' + p + '\\s+', 'gi');
+        const regexApostrofe = new RegExp('\\b' + p + "[''’]\\s*", 'gi');
+        nomeProcessado = nomeProcessado.replace(regexEspaco, p);
+        nomeProcessado = nomeProcessado.replace(regexApostrofe, p);
     });
 
-    // Retorna o nome com a primeira letra de cada bloco em maiúsculo, 
-    // mas mantendo a junção (Ex: lucas desouza)
-    return nomeTratado;
+    return nomeProcessado;
 }
   // Função de Redução Pura (Para usar onde NÃO pode ter 11/22/33)
 function reduzirPuro(n) {
@@ -2632,8 +2624,8 @@ desafios: {
  proximoAnoPessoal: reduzir(resultadoAnoPessoal + 1) 
 };
 
-// Criamos o nome formatado para o layout
-const nomeFormatadoRelatorio = formatarNomeExibicao(nomeRaw);
+// IMPLEMENTAÇÃO APENAS:
+const nomeParaCalculo = tratarNomeParaCalculo(nomeRaw);
     
     
 const introProfissionalTexto = `
