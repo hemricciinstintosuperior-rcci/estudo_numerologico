@@ -3472,9 +3472,17 @@ html += `
 `;
 
 
+// RECONSTRUINDO AS VARIÁVEIS COM OS IDs CERTOS
+// Aqui você coloca o conteúdo real de cada parte dentro das crases (backticks)
+let p1 = `<div id="capa-performance-real" class="page">${conteudoDaParte1}</div>`;
+let p2 = `<div id="capa-essencia-real" class="page">${conteudoDaParte2}</div>`;
+let p3 = `<div id="capa-alinhamento-real" class="page">${conteudoDaParte3}</div>`;
+let p4 = `<div id="capa-trajetoria-real" class="page">${conteudoDaParte4}</div>`;
+let p5 = `<div id="capa-matriz-real" class="page">${conteudoDaParte5}</div>`;
+let p6 = `<div id="capa-despertar-real" class="page">${conteudoDaParte6}</div>`;
 
-// Logo abaixo, você junta tudo na variável htmlFinal:
- html = html + p1 + p2 + p3 + p4 + p5 + p6;
+// Agora essa linha volta a funcionar sem erro
+html = html + p1 + p2 + p3 + p4 + p5 + p6;
     
     
 html += `
