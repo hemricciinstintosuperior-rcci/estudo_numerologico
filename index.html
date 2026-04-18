@@ -679,6 +679,39 @@ input:focus {
     background-color: #fff;
 }    
 
+.lista-sumario li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Mudamos de baseline para flex-end */
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    width: 100%; /* Garante que ocupe a largura toda */
+}
+
+.lista-sumario li span:first-child {
+    order: 1; /* Texto da Parte */
+    white-space: nowrap;
+}
+
+.lista-sumario li::after {
+    content: " ...................................................................................................";
+    flex: 1;
+    order: 2; /* Pontinhos ficam no meio */
+    padding: 0 10px;
+    color: #ddd;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.lista-sumario li .page-num {
+    order: 3; /* Número da página OBRIGATORIAMENTE no final */
+    min-width: 30px;
+    text-align: right;
+}
+
+
+    
+
 @media print {
     /* Define as regras para a folha física */
     @page {
@@ -778,28 +811,21 @@ input:focus {
     }
 }  
 
-.lista-sumario {
-    list-style: none;
-    padding: 20px;
+
+@media print {
+    .page {
+        page-break-before: always !important;
+        break-before: page !important;
+        display: block !important;
+        height: 296mm !important; /* Altura exata do A4 */
+        position: relative !important;
+    }
 }
 
-.lista-sumario li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-
-.lista-sumario li::after {
-    content: " ...................................................................................................";
-    flex: 1;
-    order: 2;
-    padding: 0 10px;
-    color: #ddd;
-    overflow: hidden;
-    white-space: nowrap;
-}
+/* Força a altura no navegador também para o JS medir certo */
+.page {
+    min-height: 1120px; 
+}    
 
 .lista-sumario span:first-child { order: 1; }
 .page-num { order: 3; font-weight: bold; color: #C5A059; min-width: 30px; text-align: right; }
@@ -4534,34 +4560,35 @@ html += `
  document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
 
 // 5. MÁGICA DA NUMERAÇÃO AUTOMÁTICA
+// 5. MÁGICA PARA O PDF
 setTimeout(() => {
-    // 1122px é a altura padrão de uma página A4 no navegador
+    // No PDF, o DPI padrão geralmente faz o A4 ter 1122px ou 1056px
+    // Vamos usar 1122 como base, que é o padrão do Chrome
     const alturaA4 = 1122; 
-    
-    // Pega todos os números vazios do seu sumário
     const spans = document.querySelectorAll('.page-num');
 
     spans.forEach(span => {
-        // Pega o ID que você definiu (ex: capa-performance)
         const idAlvo = span.getAttribute('data-target');
         const elementoAlvo = document.getElementById(idAlvo);
         
         if (elementoAlvo) {
-            // Pega a posição real da capa no documento
-            const posicaoNoTopo = elementoAlvo.offsetTop;
+            // Pega a distância absoluta do topo
+            const topoRelativo = elementoAlvo.getBoundingClientRect().top;
+            const scrollAtual = window.scrollY;
+            const posicaoTotal = topoRelativo + scrollAtual;
             
-            // CÁLCULO DINÂMICO:
-            // Dividimos a posição pelo tamanho da página A4
-            // O Math.floor ajuda a definir em qual folha o elemento "nasceu"
-            const numeroDaPagina = Math.floor(posicaoNoTopo / alturaA4) + 1;
+            // Cálculo para PDF
+            const numPagina = Math.ceil((posicaoTotal + 50) / alturaA4);
             
-            // Coloca o número certo no sumário
-            span.innerText = numeroDaPagina;
+            span.innerHTML = "Pág. " + numPagina;
+            console.log(`PDF Check: ${idAlvo} está na página ${numPagina}`);
         }
     });
-    
-    console.log("Numeração dinâmica concluída!");
-}, 1500); // 1.5 segundos para garantir que o layout carregou tudo
+
+    // AQUI ESTÁ O SEGREDO:
+    // Se você tiver um botão de "Gerar PDF", avise que está pronto
+    console.log("Pronto para gerar o PDF com páginas corrigidas!");
+}, 3000);
 
 } // <--- FECHAMENTO FINAL DA FUNÇÃO gerarMapaCompleto
         
