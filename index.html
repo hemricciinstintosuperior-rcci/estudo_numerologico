@@ -780,41 +780,29 @@ input:focus {
 
 .lista-sumario {
     list-style: none;
-    padding: 0;
+    padding: 20px;
 }
 
 .lista-sumario li {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     font-size: 1.1rem;
 }
 
-.lista-sumario li a {
-    text-decoration: none;
-    color: #333;
-    flex-grow: 1;
-}
-
-/* Cria aqueles pontinhos entre o título e a página */
 .lista-sumario li::after {
-    content: "..................................................................................................";
+    content: " ...................................................................................................";
+    flex: 1;
     order: 2;
-    color: #ccc;
+    padding: 0 10px;
+    color: #ddd;
     overflow: hidden;
-    margin: 0 10px;
-    flex-grow: 1;
-    letter-spacing: 5px;
+    white-space: nowrap;
 }
 
-.page-num {
-    order: 3;
-    font-weight: bold;
-    color: var(--gold);
-    min-width: 20px;
-    text-align: right;
-}
+.lista-sumario span:first-child { order: 1; }
+.page-num { order: 3; font-weight: bold; color: #C5A059; min-width: 30px; text-align: right; }
     
     </style>
 </head>
@@ -2745,22 +2733,24 @@ function calcularNumerosSocial(nome) {
     };
 }
 
-function atualizarNumeracaoSumario() {
-    const itensSumario = document.querySelectorAll('.page-num');
-    const alturaPagina = 1122; // Altura aproximada de uma página A4 em pixels (ajuste conforme seu CSS)
+function calcularPaginasSumario() {
+    const alturaA4 = 1122; // Altura base para o cálculo de página
+    const itens = document.querySelectorAll('.page-num');
 
-    itensSumario.forEach(item => {
-        const targetId = item.getAttribute('data-target');
-        const elementoAlvo = document.getElementById(targetId);
+    itens.forEach(span => {
+        const idAlvo = span.getAttribute('data-target');
+        const elementoCapa = document.getElementById(idAlvo);
         
-        if (elementoAlvo) {
-            // Calcula em qual página o elemento está baseado na posição Top
-            const topPos = elementoAlvo.offsetTop;
-            const numeroPagina = Math.ceil(topPos / alturaPagina);
-            item.innerHTML = numeroPagina;
+        if (elementoCapa) {
+            // Pega a posição do topo da capa em relação ao documento
+            const posicaoTopo = elementoCapa.offsetTop;
+            // Divide pela altura da página para saber o número da página
+            const numeroPagina = Math.ceil((posicaoTopo + 50) / alturaA4);
+            span.innerHTML = numeroPagina;
         }
     });
 }
+
 
 
         
@@ -3324,26 +3314,22 @@ if (nomeSocialValor !== "") {
 
 
     
-htmlSumario = `
+let htmlSumario = `
 <div class="page sumario-container">
-    <h1 class="titulo-luxo">Sumário da sua Jornada</h1>
+    <h2 class="titulo-luxo">Sumário da Jornada</h2>
     <div class="divisor-ouro"></div>
     
     <ul class="lista-sumario">
-        <li><a href="#secao-direcionamento">Direcionamento da Jornada</a> <span class="page-num" data-target="secao-direcionamento"></span></li>
-        <li><a href="#secao-graficos">Gráficos de Expressão Natural</a> <span class="page-num" data-target="secao-graficos"></span></li>
-        <li><a href="#secao-essencia">Sua Essência e Identidade</a> <span class="page-num" data-target="secao-essencia"></span></li>
-        <li><a href="#secao-profissional">Direcionamento Profissional</a> <span class="page-num" data-target="secao-profissional"></span></li>
-        <li><a href="#secao-desafios">Alinhamento e Desafios</a> <span class="page-num" data-target="secao-desafios"></span></li>
-        <li><a href="#secao-matriz">A Matriz da Vida (Pirâmide)</a> <span class="page-num" data-target="secao-matriz"></span></li>
-        <li><a href="#secao-potencias">Ciclos de Potências</a> <span class="page-num" data-target="secao-potencias"></span></li>
+        <li><span>Parte 1: Performance Natural</span> <span class="page-num" data-target="capa-performance"></span></li>
+        <li><span>Parte 2: Essência e Identidade</span> <span class="page-num" data-target="capa-essencia"></span></li>
+        <li><span>Parte 3: Alinhamento e Desafios</span> <span class="page-num" data-target="capa-alinhamento"></span></li>
+        <li><span>Parte 4: Trajetória de Tendências</span> <span class="page-num" data-target="capa-trajetoria"></span></li>
+        <li><span>Parte 5: A Grande Matriz</span> <span class="page-num" data-target="capa-matriz"></span></li>
+        <li><span>Parte 6: O Despertar (Filosofia e Ciência)</span> <span class="page-num" data-target="capa-despertar"></span></li>
     </ul>
 </div>
 `;
-
-// Adicione o sumário no início do HTML global
-html = htmlSumario + html;
-
+    
  tituloBonito = " A Gênese dos Números";    
 html += `
 <div class="separador-luxo">
@@ -3393,7 +3379,7 @@ html += `
 
   tituloBonito = " Direcionamento da sua Jornada";    
 html += `
-<div class="separador-luxo"> id="secao-direcionamento">
+<div class="separador-luxo"> 
     <div class="caixa-interna">
         <h2>${tituloBonito}</h2>
     </div>
@@ -3434,7 +3420,7 @@ html += `
 
     
 html += `
-    <div class="capa-transicao" id="secao-graficos">
+    <div class="capa-transicao">
         <p>  </p>
         <h2>Seus Graficos de Expressão Natural</h2>
         <p>A decodificação das Energias e Potenciais nativas que definem sua personalidade.</p>
@@ -3509,7 +3495,7 @@ html += `
 
     
     html += `
-        <div class="page" id="page-${idSlug}">
+        <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
             <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
             <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>
@@ -3536,7 +3522,7 @@ html += `
 
 // --- INÍCIO DO PILAR 02 ORGANIZADO ---
 html += `
-    <div class="capa-transicao" id="secao-essencia">
+    <div class="capa-transicao">
         <p>  </p>
         <h2>Alinhamento e <br> Superação de Desafios</h2>
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
@@ -3556,7 +3542,7 @@ html += `
     
 // A. LIÇÕES CÁRMICAS
 html += `
-    <div class="page" id="page-${idSlug}">
+    <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">fraquezas e inibições </h2>
         <div class="intro-texto">${textos.introducoes.deficiencias}</div>
 `;
@@ -4505,9 +4491,7 @@ html += `
 
 // Chame a função logo após renderizar o HTML
 document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
-setTimeout(atualizarNumeracaoSumario, 500); // O timeout garante que imagens/gráficos carregaram        
-    
-   
+setTimeout(calcularPaginasSumario, 500);
         } // FIM DA FUNÇÃO
 
 
