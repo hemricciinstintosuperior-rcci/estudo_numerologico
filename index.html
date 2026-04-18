@@ -3435,7 +3435,7 @@ let p5 = `<div id="capa-matriz" class="page"><h2>Parte 5: A Grande Matriz</h2></
 let p6 = `<div id="capa-despertar" class="page"><h2>Parte 6: O Despertar</h2></div>`;
 
 // Logo abaixo, você junta tudo na variável htmlFinal:
-let htmlFinal = htmlSumario + p1 + p2 + p3 + p4 + p5 + p6;
+let html = html + p1 + p2 + p3 + p4 + p5 + p6;
     
     
 html += `
@@ -4511,7 +4511,7 @@ html += `
 console.log("Conteúdo HTML gerado:", html);
 
 // 4. EXIBIÇÃO NA TELA
- document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${htmlFinal}</div>`;
+ document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
 
 // 5. MÁGICA DA NUMERAÇÃO AUTOMÁTICA
 // Espera 1 segundo para o navegador calcular o tamanho das páginas
