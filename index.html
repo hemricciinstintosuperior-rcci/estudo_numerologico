@@ -3036,6 +3036,18 @@ const datasFases = {
 const piramideVida = gerarPiramide(nomeRaw);
 const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
+// --- CONTINUE COLANDO AQUI (LOGOTIPOS APÓS A LINHA DA PIRÂMIDE) ---
+
+// 1. GERAÇÃO DOS CONTEÚDOS (Aqui criamos as variáveis que o sumário vai usar)
+// Importante: Verifique se os nomes das funções de gerar cada parte são esses mesmos!
+let p1 = gerarParte1(res, nomeRaw); 
+let p2 = gerarParte2(res, nomeRaw);
+let p3 = gerarParte3(res, nomeRaw);
+let p4 = gerarParte4(res, nomeRaw);
+let p5 = gerarParte5(res, nomeRaw); // Essa é a da Matriz
+let p6 = gerarParte6(res, nomeRaw); // Essa é a do Despertar
+
+    
 
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
@@ -4488,34 +4500,33 @@ html += `
 </div>
 `;    
     
-// 1. Aqui você junta o Sumário com todas as partes
-// Certifique-se de que a variável 'htmlSumario' foi criada antes desta linha!
-let relatorioCompleto = htmlSumario + parte1 + parte2 + parte3 + parte4 + parte5 + parte6;
+// 3. MONTAGEM FINAL DO RELATÓRIO
+// Agora sim somamos tudo na ordem correta
+let relatorioFinal = htmlSumario + p1 + p2 + p3 + p4 + p5 + p6;
 
-// 2. CORREÇÃO AQUI: Use 'relatorioCompleto' em vez de 'html'
-document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${relatorioCompleto}</div>`;
+// 4. EXIBIÇÃO NA TELA
+document.getElementById("resultado").innerHTML = <div class="relatorio-premium">${relatorioFinal}</div>;
 
-// 3. O Script de numeração (correto como você mandou)
+// 5. MÁGICA DA NUMERAÇÃO AUTOMÁTICA
+// Espera 1 segundo para o navegador calcular o tamanho das páginas
 setTimeout(() => {
-    const alturaA4 = 1122; 
-    const marcadores = document.querySelectorAll('.page-num');
+    const alturaA4 = 1122; // Ajuste este número se o seu A4 for diferente
+    const spans = document.querySelectorAll('.page-num');
 
-    marcadores.forEach(span => {
+    spans.forEach(span => {
         const idAlvo = span.getAttribute('data-target');
         const elementoAlvo = document.getElementById(idAlvo);
         
         if (elementoAlvo) {
-            const topo = elementoAlvo.offsetTop;
-            const pagina = Math.ceil((topo + 50) / alturaA4);
-            span.innerText = pagina;
+            // Calcula em qual página o ID da capa está localizado
+            const posicaoNoTopo = elementoAlvo.offsetTop;
+            const numeroDaPagina = Math.ceil((posicaoNoTopo + 100) / alturaA4);
+            span.innerText = numeroDaPagina;
         }
     });
-}, 1000); 
+}, 1200);
 
-} // FIM DA FUNÇÃO
-
-
-
+} // <--- FECHAMENTO FINAL DA FUNÇÃO gerarMapaCompleto
         
     </script>
     
