@@ -2751,6 +2751,26 @@ function calcularPaginasSumario() {
     });
 }
 
+function atualizarSumario() {
+    const alturaA4 = 1122; // Altura aproximada de uma página A4 em px
+    const secoes = [
+        { id: 'parte1', linkId: 'link-sumario-1' },
+        { id: 'parte2', linkId: 'link-sumario-2' },
+        // ... adicione as outras
+    ];
+
+    secoes.forEach(secao => {
+        const elemento = document.getElementById(secao.id);
+        const link = document.getElementById(secao.linkId);
+        
+        if (elemento && link) {
+            const topo = elemento.offsetTop;
+            const pagina = Math.floor(topo / alturaA4) + 1; // +1 porque não existe página 0
+            link.innerText = pagina;
+        }
+    });
+}
+
 
 
         
@@ -4508,29 +4528,40 @@ html += `
 </div>
 `;    
     
-console.log("Conteúdo HTML gerado:", html);
+
 
 // 4. EXIBIÇÃO NA TELA
  document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
 
 // 5. MÁGICA DA NUMERAÇÃO AUTOMÁTICA
-// Espera 1 segundo para o navegador calcular o tamanho das páginas
 setTimeout(() => {
-    const alturaA4 = 1122; // Ajuste este número se o seu A4 for diferente
+    // 1122px é a altura padrão de uma página A4 no navegador
+    const alturaA4 = 1122; 
+    
+    // Pega todos os números vazios do seu sumário
     const spans = document.querySelectorAll('.page-num');
 
     spans.forEach(span => {
+        // Pega o ID que você definiu (ex: capa-performance)
         const idAlvo = span.getAttribute('data-target');
         const elementoAlvo = document.getElementById(idAlvo);
         
         if (elementoAlvo) {
-            // Calcula em qual página o ID da capa está localizado
+            // Pega a posição real da capa no documento
             const posicaoNoTopo = elementoAlvo.offsetTop;
-            const numeroDaPagina = Math.ceil((posicaoNoTopo + 100) / alturaA4);
+            
+            // CÁLCULO DINÂMICO:
+            // Dividimos a posição pelo tamanho da página A4
+            // O Math.floor ajuda a definir em qual folha o elemento "nasceu"
+            const numeroDaPagina = Math.floor(posicaoNoTopo / alturaA4) + 1;
+            
+            // Coloca o número certo no sumário
             span.innerText = numeroDaPagina;
         }
     });
-}, 1200);
+    
+    console.log("Numeração dinâmica concluída!");
+}, 1500); // 1.5 segundos para garantir que o layout carregou tudo
 
 } // <--- FECHAMENTO FINAL DA FUNÇÃO gerarMapaCompleto
         
