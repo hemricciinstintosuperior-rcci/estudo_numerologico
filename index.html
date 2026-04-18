@@ -785,15 +785,16 @@ input:focus {
     <div class="container">
         <h1>Estudo Numerológico</h1>
      <input type="text" id="nome" placeholder="NOME COMPLETO" >
+     <input type="text" id="nomeSocial" placeholder="COMO PREFERE SER CHAMADO? (OPCIONAL)">   
      <input type="text" id="data" placeholder="DD/MM/AAAA" maxlength="10" onInput="this.value = this.value.replace(/\D/g, '').replace(/^(\d{2})(\d)/, '$1/$2').replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');">
         <button class="btn-gerar" onclick="gerarMapaCompleto()">GERAR O MAPA</button>
     </div>
 
     <div id="resultado" style="width: 100%; max-width: 650px;"></div>
 
-    <script src="textos.js"></script>
+   <script src="textos.js"></script>
 
-   <script>
+    <script>
         const tabela = { A:1, J:1, I:1, Q:1, Y:1, B:2, K:2, R:2, C:3, G:3, L:3, S:3, D:4, M:4, T:4, E:5, H:5, N:5, U:6, V:6, W:6, X:6, Ç:6, O:7, Z:7, F:8, P:8 };
         const vogais = ["A","E","I","O","U","Y"];
     // Títulos amigáveis para cada estrutura
@@ -1152,12 +1153,27 @@ function reduzirRespeitandoMestres(num) {
         }
 
 function aplicarFiltroTexto(texto) {
-    // Se o texto não existir, for nulo ou não for uma string, retorna vazio ou um aviso
     if (!texto || typeof texto !== 'string') {
         return ""; 
     }
-    let pNome = document.getElementById("nome").value.trim().split(' ')[0] || "MASCULINO-FEMININO-NEUTRO";
-    return texto.replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`).replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`);
+
+    // 1. Captura os valores dos inputs
+    const nomeSocial = document.getElementById("nomeSocial").value.trim();
+    const nomeCompleto = document.getElementById("nome").value.trim();
+    
+    let pNome = "";
+
+    // 2. Lógica de Prioridade:
+    // Se o usuário preencheu o Nome Social, usamos ele.
+    // Se não preencheu, pegamos o primeiro nome do Nome Completo.
+    if (nomeSocial !== "") {
+        pNome = nomeSocial;
+    } else {
+        pNome = nomeCompleto.split(/\s+/)[0] || "MASCULINO-FEMININO-NEUTRO";
+    }
+
+    // 3. Aplica a substituição no texto
+    return texto.replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`);
 }
 
 function aplicarFiltroNomeComposto(texto) {
@@ -1843,7 +1859,7 @@ let html = `
 </div>
             
             <div style="text-align: center; margin: 30px 0;">
-                <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/planoestudo.png" alt="Logo Plano de Expressão" style="max-width: 350px; height: auto; display: inline-block;">
+                <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/planoestudo.png" alt="Logo Plano de Expressão" style="max-width: 500px; height: auto; display: inline-block;">
             </div>
             
             <div class="evitar-corte" style="margin-bottom: 25px; padding: 20px; border: 2px solid #827108; border-radius: 12px; background: #fff; display: flex; align-items: center; gap: 20px;">
@@ -2031,7 +2047,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
                 <p>O **Status de Expressão do Momento** revela como sua configuração de energia está operando *exatamente agora*. Diferente da sua natureza fixa, esta análise mostra quais planos (Físico, Mental, Emocional ou Intuitivo) estão recebendo mais carga vibracional neste ciclo de 12 meses e também classificando sua expressão em Criativa, Indecisa ou Neutra.. É o seu "clima interno" atual, indicando onde você tem mais facilidade de realizar e onde pode sentir sobrecarga ou lentidão.</p>
             </div>
    <div style="text-align: center; margin: 30px 0;">
-                <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/planoestudo.png" alt="Logo Plano de Expressão" style="max-width: 350px; height: auto; display: inline-block;">
+                <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/planoestudo.png" alt="Logo Plano de Expressão" style="max-width: 500px; height: auto; display: inline-block;">
             </div>
 
             
@@ -2120,7 +2136,7 @@ h += `</div>`;
                 <div style="margin-top:25px; background:var(--dark); color:var(--gold); padding:20px; border-radius:8px; text-align:center; border: 1px solid var(--gold);">
                     <strong style="text-transform: uppercase; letter-spacing: 1px;"> Diretriz de Equilíbrio do momento: </strong><br>
                     <span style="font-size: 15px; color: #fff; opacity: 0.9;">
-                        Utilize a Energia do plano <strong>${nomesAmigaveis[_p1.chave]}</strong> para sustentar <strong>${nomesAmigaveis[_p4.chave]}</strong>.
+                        Utilize a Energia do plano <strong>${nomesAmigaveis[_p1.chave]}</strong> para sustentar o plano <strong>${nomesAmigaveis[_p4.chave]}</strong>.
                     </span>
                 </div>
             </div>
@@ -2631,6 +2647,67 @@ function formatarNomeExibicao(nomeDigitado) {
     
     return nomeDigitado.replace(/([a-z])([A-Z])/g, '$1 $2');
 }
+
+function calcularNumerosSocial(nome) {
+    const tabelaBase = {
+        'A': 1, 'B': 2, 'C': 3, 'D': 4, 'E': 5, 'F': 8, 'G': 3, 'H': 5,
+        'I': 1, 'J': 1, 'K': 2, 'L': 3, 'M': 4, 'N': 5, 'O': 7, 'P': 8,
+        'Q': 1, 'R': 2, 'S': 3, 'T': 4, 'U': 6, 'V': 6, 'W': 6, 'X': 6,
+        'Y': 1, 'Z': 7
+    };
+
+    let totalMotivacao = 0; // Vogais
+    let totalInfluencia = 0; // Consoantes
+    
+    const vogais = "AEIOUYÁÉÍÓÚÂÊÎÔÛÃÕÀÈÌÒÙÄËÏÖÜ";
+    const nomeLimpo = nome.trim().toUpperCase();
+
+    // Divide o nome em palavras para tratar cada letra e seus acentos
+    for (let char of nomeLimpo) {
+        if (char === " ") continue;
+
+        let valorLetra = 0;
+        let base = char.normalize("NFD")[0]; // Pega a letra sem acento
+        
+        if (tabelaBase[base]) {
+            valorLetra = tabelaBase[base];
+
+            // --- LÓGICA DE MODIFICADORES CABALÍSTICOS ---
+            if (/[ÁÉÍÓÚ]/.test(char)) valorLetra += 2;
+            if (/[ÃÕ]/.test(char)) valorLetra += 3;
+            if (/[ÂÊÎÔÛ]/.test(char)) valorLetra += 7;
+            if (char === "Ç") valorLetra += 6;
+            if (/[ÀÈÌÒÙÄËÏÖÜ]/.test(char)) valorLetra *= 2; // Multiplicador (dobra)
+
+            // Separação para Motivação e Influência
+            if (vogais.includes(char)) {
+                totalMotivacao += valorLetra;
+            } else {
+                totalInfluencia += valorLetra;
+            }
+        }
+    }
+
+    // Função interna para redução cabalística (mantém 11 e 22 se você usar, ou reduz tudo)
+    const reduzir = (num) => {
+        while (num > 9 && num !== 11 && num !== 22) {
+            num = String(num).split('').reduce((a, b) => parseInt(a) + parseInt(b), 0);
+        }
+        return num;
+    };
+
+    const mot = reduzir(totalMotivacao);
+    const inf = reduzir(totalInfluencia);
+    const pers = reduzir(mot + inf);
+
+    return {
+        personalidade: pers,
+        motivacao: mot,
+        influencia: inf
+    };
+}
+
+        
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -2671,21 +2748,41 @@ if (agora < new Date(agora.getFullYear(), dtNasci.getMonth(), dtNasci.getDate())
     // O resto do seu código segue igual...
 // IMPLEMENTAÇÃO APENAS:
 const nomeParaCalculo = tratarNomeParaCalculo(nomeRaw);
-    
+        
           // Adicione o toUpperCase() aqui também para a tabela reconhecer as letras!
 nomesArray = nomeParaCalculo.toUpperCase().split(/\s+/);
             // Essência: 1ª letra de cada nome
             nomesArray.forEach(n => { sE += calcularValorLetra(n[0]); });
+// COLE ESTE NOVO BLOCO:
+const radicaisWConsoante = ["WAGN", "WALD", "WAND", "WALT", "WALP", "WERNER", "WOLN", "WALM", "WALY"];
+const nomeBaseParaW = nomeRaw.toUpperCase().trim();
 
-            // Motivação, Influência e Contagem (Frequência)
-            for (let l of nomeRaw.toUpperCase()) {
-                const v = calcularValorLetra(l);
-                if (v > 0) {
-                    const base = l.normalize("NFD")[0];
-                    if(tabela[base]) { contagem[tabela[base]]++; usados.add(tabela[base]); }
-                    vogais.includes(base) ? sV += v : sC += v;
-                }
-            }
+for (let l of nomeRaw.toUpperCase()) {
+    const v = calcularValorLetra(l);
+    if (v > 0) {
+        const base = l.normalize("NFD")[0];
+        
+        if(tabela[base]) { 
+            contagem[tabela[base]]++; 
+            usados.add(tabela[base]); 
+        }
+
+        let ehVogal = false;
+        if (vogais.includes(base)) {
+            ehVogal = true;
+        } 
+        else if (base === 'W') {
+            const temSomDeV = radicaisWConsoante.some(rad => nomeBaseParaW.startsWith(rad));
+            ehVogal = !temSomDeV; 
+        }
+
+        if (ehVogal) {
+            sV += v;
+        } else {
+            sC += v;
+        }
+    }
+}
 
            // Onde era: const exp = reduzir(sV + sC);
 const exp = calcularNumerologia(sV + sC, true); // Aceita Mestre
@@ -2767,6 +2864,7 @@ desafios: {
  anoPessoal: resultadoAnoPessoal,
  proximoAnoPessoal: reduzir(resultadoAnoPessoal + 1) 
 };
+
 
 
     
@@ -2896,7 +2994,6 @@ const dadosNegativas = detectarNegativas(piramideVida);
 
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
 let html = `
-
 
 
   <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
@@ -3109,104 +3206,109 @@ html += `
     </h3>
 </div>
 
+</div> `;
 
-</div>`;
+const nomeSocialValor = document.getElementById("nomeSocial").value.trim();
+// --- PÁGINA 2: NOME SOCIAL (COMPACTADA PARA NÃO PULAR) ---
+if (nomeSocialValor !== "") {
+    if (!res.social) { res.social = calcularNumerosSocial(nomeSocialValor); }
+    const tMot = textos.nomeSocial.motivacao[res.social.motivacao];
+    const tImp = textos.nomeSocial.impressao[res.social.influencia];
+    const tPer = textos.nomeSocial.personalidade[res.social.personalidade];
+
+    html += `
+    <div class="page" style="height: 100vh; max-height: 1120px; padding: 20px; box-sizing: border-box; overflow: hidden; page-break-before: always; display: flex; flex-direction: column;">
+        <div class="separador-luxo" style="margin-bottom: 10px;">
+            <div class="caixa-interna">
+                <h2 style="font-size: 1.5rem;">Seu nome social: ${nomeSocialValor}</h2>
+            </div>
+        </div>
+        
+        <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div style="text-align: center;">
+                <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 5px; font-size: 20px;">Análise da Frequência Social</h2>
+                      <p>O nome pelo qual escolhemos ser chamados atua como uma "assinatura vibracional". Enquanto o nome de registro contém o projeto original da sua alma, o nome <strong>${nomeSocialValor}</strong> funciona como a interface com a qual você se apresenta ao mundo.</p>
+                <p>Esta análise revela como esse apelido ou nome social ajusta sua personalidade, motivação e a impressão que você causa nos outros.</p>
+            </div>
+
+       <div style="display: flex; justify-content: center; gap: 15px; margin: 10px 0;">
+    <div style="text-align: center; background: #fdfaf0; padding: 5px 10px; border-radius: 6px; border: 1px solid #e0d5a8; min-width: 80px;">
+        <p style="font-size: 0.55rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Motivação</p>
+        <span style="font-size: 1.2rem; font-weight: bold; display: block; line-height: 1;">${res.social.motivacao}</span>
+    </div>
+    
+    <div style="text-align: center; background: #fffcf5; padding: 5px 10px; border-radius: 6px; border: 1.5px solid var(--gold); min-width: 90px;">
+        <p style="font-size: 0.55rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Personalidade</p>
+        <span style="font-size: 1.4rem; font-weight: bold; display: block; line-height: 1;">${res.social.personalidade}</span>
+    </div>
+
+    <div style="text-align: center; background: #fdfaf0; padding: 5px 10px; border-radius: 6px; border: 1px solid #e0d5a8; min-width: 80px;">
+        <p style="font-size: 0.55rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Impressão</p>
+        <span style="font-size: 1.2rem; font-weight: bold; display: block; line-height: 1;">${res.social.influencia}</span>
+    </div>
+</div>
+
+<div style="background: #f9f9f9; padding: 12px; border-radius: 8px; border-left: 4px solid var(--gold); font-size: 18px; margin-top: 5px;">
+    <p style="margin-bottom: 5px;"><strong>Vontade Interna:</strong> ${aplicarFiltroTexto(tMot)}</p>
+    <p style="margin: 0;"><strong>Imagem Externa:</strong> ${aplicarFiltroTexto(tImp)}</p>
+</div>
+            
+
+            <div style="margin-top: 15px;">
+                <h3 style="text-align: center; color: #827108; font-size: 1.1rem; margin-bottom: 10px;">A Síntese da sua Expressão: ${res.social.personalidade}</h3>
+                <div style="font-size: 18px; line-height: 1; text-align: justify;">
+                    ${aplicarFiltroTexto(tPer)}
+                
+              
+            </div>
+            </div>
+        </div>
+    </div>
+    `;
+}
+
 
     
+// --- PÁGINA 1: SUMÁRIO (AJUSTADA PARA CABER EM UMA FOLHA) ---
 html += `
-<div class="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100%; padding: 40px; font-family: 'serif'; background: transparent;">
+<div class="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; max-height: 1120px; padding: 30px; box-sizing: border-box; overflow: hidden; page-break-after: always; position: relative;">
     
-    <div style="text-align: center; margin-bottom: 60px;">
-        <h2 style="color: var(--gold); font-size: 2.8rem; letter-spacing: 8px; text-transform: uppercase; margin-bottom: 5px; font-weight: 300;">
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: var(--gold); font-size: 2.4rem; letter-spacing: 6px; text-transform: uppercase; margin: 0; font-weight: 300;">
             Sumário
         </h2>
-        <div style="width: 60px; height: 1px; background: var(--gold); margin: 15px auto;"></div>
-        <p style="font-size: 0.9rem; color: #d97a1e; letter-spacing: 5px; text-transform: uppercase; font-weight: bold; opacity: 0.8;">
+        <div style="width: 50px; height: 1px; background: var(--gold); margin: 10px auto;"></div>
+        <p style="font-size: 0.8rem; color: #d97a1e; letter-spacing: 4px; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin: 0;">
             Perspectiva Evolutiva
         </p>
     </div>
 
-    <div style="width: 100%; max-width: 900px; display: flex; flex-direction: column; gap: 45px;">
-                
-        <div style="text-align: center;">
-            <h3 style="color: var(--gold); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-                Introdução 
-            </h3>
-            <p style="color: #444; font-size: 1.1rem; margin: 0; font-style: italic;">
-              Cabala Ancestral e  Direcionamento de Jornada
-            </p>
-        </div>
-        
-        <div style="text-align: center;">
-            <h3 style="color: var(--gold); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-                Parte 1: Performance Natural
-            </h3>
-            <div style="color: #333; font-size: 1.1rem; line-height: 1.8;">
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> Gráficos dos Planos de Expressão Natural com interpretação <br>
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> Gráficos de Potenciais Naturais 
+    <div style="width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 25px;">
+        ${[
+            { t: "Introdução", c: "Cabala Ancestral e Direcionamento de Jornada" },
+            { t: "Parte 1: Performance Natural", c: "Planos de Expressão ✶ Gráficos de Potenciais" },
+            { t: "Parte 2: Essência e Identidade", c: "Vibração do Dia ✶ Motivação ✶ Personalidade ✶ Propósito" },
+            { t: "Parte 3: Alinhamento e Desafios", c: "Fraquezas ✶ Habilidades ✶ Desafio Principal" },
+            { t: "Parte 4: Trajetória e Tendências", c: "Ciclos de Vida ✶ Maturidade ✶ Ano Pessoal" },
+            { t: "Parte 5: A Grande Matriz", c: "Pirâmide Invertida ✶ Sequências Numéricas ✶ Potência até 100 anos" },
+            { t: "Parte 6: O Despertar do Legado", c: "Contexto Histórico e Conclusão Evolutiva" }
+        ].map(item => `
+            <div style="text-align: center;">
+                <h3 style="color: var(--gold); font-size: 1.6rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; font-weight: 600;">${item.t}</h3>
+                <p style="color: #333; font-size: 1.6rem; margin: 0; line-height: 1.4;">${item.c}</p>
             </div>
-        </div>
-
-        <div style="text-align: center;">
-            <h3 style="color: var(--gold); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-                Parte 2: Essência e Identidade
-            </h3>
-            <div style="color: #333; font-size: 1.1rem; line-height: 1.8;">
-                Vibração do Dia e Essência <span style="color: var(--gold); padding: 0 10px;">✶</span> Talento e Motivação <span style="color: var(--gold); padding: 0 10px;">✶</span> Influência e Personalidade <br>
-                Dinâmicas de Relacionamento <span style="color: var(--gold); padding: 0 10px;">✶</span> Caminho de Vida e Propósito <span style="color: var(--gold); padding: 0 10px;">✶</span> Direcionamento Profissional
-            </div>
-        </div>
-
-        <div style="text-align: center;">
-            <h3 style="color: var(--gold); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-                Parte 3: Alinhamento e Desafios
-            </h3>
-            <div style="color: #333; font-size: 1.1rem; line-height: 1.8;">
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> Fraquezas, Inclinações ocultas e Défitis no Comportamento <br>
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> Habilidades, Deficiências, Desejos Oculto e Equilíbrio Interno <br>
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> O Desafio Principal: Vibração Mestra
-            </div>
-        </div>
-
-        <div style="text-align: center;">
-            <h3 style="color: var(--gold); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-                Parte 4: Trajetória e Tendências
-            </h3>
-            <div style="color: #333; font-size: 1.1rem; line-height: 1.8;">
-                Ciclos de Vida e Maturidade <span style="color: var(--gold); padding: 0 10px;">✶</span> Performance de Momento <br>
-                Gráficos de Potenciais <span style="color: var(--gold); padding: 0 10px;">✶</span> Ciclos de Ano Pessoal e Mensal
-            </div>
-        </div>
-
-        <div style="text-align: center;">
-            <h3 style="color: var(--gold); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-                Parte 5: A Grande Matriz 
-            </h3>
-            <div style="color: #333; font-size: 1.1rem; line-height: 1.8;">
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> Matriz Vibracional: A Pirâmide Invertida <br>
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> O Regente da Matriz e Sequências Numéricas de impacto e Bloqueio <br>
-                <span style="color: var(--gold); margin-right: 5px;">✶</span> Ciclos de Potência Numérica para até 100 Anos de idade
-            </div>
-        </div>
-
-        <div style="text-align: center;">
-            <h3 style="color: var(--gold); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 12px; font-weight: 600;">
-                Parte 6: O Despertar do Legado
-            </h3>
-            <div style="color: #333; font-size: 1.1rem; line-height: 1.8;">
-                Raízes da Numerologia e Contexto Histórico <span style="color: var(--gold); padding: 0 10px;">✶</span> Direcionamento Evolutivo e Conclusão
-            </div>
-        </div>
-
+        `).join('')}
     </div>
     
-    <div style="margin-top: 80px; text-align: center; opacity: 0.6;">
-        <p style="font-weight: bold; color: #d97a1e; letter-spacing: 8px; font-size: 0.85rem; text-transform: uppercase;">
+    <div style="margin-top: 40px; text-align: center; opacity: 0.6;">
+        <p style="font-weight: bold; color: #d97a1e; letter-spacing: 6px; font-size: 0.75rem; text-transform: uppercase; margin: 0;">
             Instinto Superior
         </p>
     </div>
 </div>
 `;
+// --- PÁGINA 2: NOME SOCIAL (SE EXISTIR) ---
+
 
  tituloBonito = " A Gênese dos Números";    
 html += `
@@ -3294,7 +3396,6 @@ html += `
     </div>
 </div>
 `;   
-
 
 
     
