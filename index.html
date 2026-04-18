@@ -2762,9 +2762,7 @@ function atualizarNumeracaoSumario() {
     });
 }
 
-// Chame a função logo após renderizar o HTML
-document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
-setTimeout(atualizarNumeracaoSumario, 500); // O timeout garante que imagens/gráficos carregaram        
+
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -4504,7 +4502,12 @@ html += `
     </div>
 </div>
 `;    
-     document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
+
+// Chame a função logo após renderizar o HTML
+document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
+setTimeout(atualizarNumeracaoSumario, 500); // O timeout garante que imagens/gráficos carregaram        
+    
+   
         } // FIM DA FUNÇÃO
 
 
