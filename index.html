@@ -4488,14 +4488,16 @@ html += `
 </div>
 `;    
     
-// Aqui você junta todas as peças do quebra-cabeça na ordem certa
+// 1. Aqui você junta o Sumário com todas as partes
+// Certifique-se de que a variável 'htmlSumario' foi criada antes desta linha!
 let relatorioCompleto = htmlSumario + parte1 + parte2 + parte3 + parte4 + parte5 + parte6;
-// Chame a função logo após renderizar o HTML
-document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
 
-// COLOQUE ISSO LOGO ABAIXO DO innerHTML
+// 2. CORREÇÃO AQUI: Use 'relatorioCompleto' em vez de 'html'
+document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${relatorioCompleto}</div>`;
+
+// 3. O Script de numeração (correto como você mandou)
 setTimeout(() => {
-    const alturaA4 = 1122; // Tamanho de uma página no seu layout
+    const alturaA4 = 1122; 
     const marcadores = document.querySelectorAll('.page-num');
 
     marcadores.forEach(span => {
@@ -4503,17 +4505,14 @@ setTimeout(() => {
         const elementoAlvo = document.getElementById(idAlvo);
         
         if (elementoAlvo) {
-            // Calcula a posição e preenche o número
             const topo = elementoAlvo.offsetTop;
             const pagina = Math.ceil((topo + 50) / alturaA4);
             span.innerText = pagina;
         }
     });
-}, 1000); // 1 segundo de espera para garantir que tudo carregou
+}, 1000); 
 
-
-    
-        } // FIM DA FUNÇÃO
+} // FIM DA FUNÇÃO
 
 
 
