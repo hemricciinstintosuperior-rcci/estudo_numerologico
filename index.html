@@ -3313,22 +3313,7 @@ if (nomeSocialValor !== "") {
 }
 
 
-    
-let htmlSumario = `
-<div class="page sumario-container">
-    <h2 class="titulo-luxo">Sumário da Jornada</h2>
-    <div class="divisor-ouro"></div>
-    
-    <ul class="lista-sumario">
-        <li><span>Parte 1: Performance Natural</span> <span class="page-num" data-target="capa-performance"></span></li>
-        <li><span>Parte 2: Essência e Identidade</span> <span class="page-num" data-target="capa-essencia"></span></li>
-        <li><span>Parte 3: Alinhamento e Desafios</span> <span class="page-num" data-target="capa-alinhamento"></span></li>
-        <li><span>Parte 4: Trajetória de Tendências</span> <span class="page-num" data-target="capa-trajetoria"></span></li>
-        <li><span>Parte 5: A Grande Matriz</span> <span class="page-num" data-target="capa-matriz"></span></li>
-        <li><span>Parte 6: O Despertar (Filosofia e Ciência)</span> <span class="page-num" data-target="capa-despertar"></span></li>
-    </ul>
-</div>
-`;
+
     
  tituloBonito = " A Gênese dos Números";    
 html += `
@@ -3417,10 +3402,24 @@ html += `
 </div>
 `;   
 
-
+// COLOQUE ISSO ANTES DA PARTE 1
+let htmlSumario = `
+<div class="page sumario-container">
+    <h2 class="titulo-luxo">Sumário da Jornada</h2>
+    <div class="divisor-ouro"></div>
+    <ul class="lista-sumario">
+        <li><span>Parte 1: Performance Natural</span> <span class="page-num" data-target="capa-performance"></span></li>
+        <li><span>Parte 2: Essência e Identidade</span> <span class="page-num" data-target="capa-essencia"></span></li>
+        <li><span>Parte 3: Alinhamento e Desafios</span> <span class="page-num" data-target="capa-alinhamento"></span></li>
+        <li><span>Parte 4: Trajetória de Tendências</span> <span class="page-num" data-target="capa-trajetoria"></span></li>
+        <li><span>Parte 5: A Grande Matriz</span> <span class="page-num" data-target="capa-matriz"></span></li>
+        <li><span>Parte 6: O Despertar (Filosofia e Ciência)</span> <span class="page-num" data-target="capa-despertar"></span></li>
+    </ul>
+</div>
+`;
     
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="capa-performance"> 
         <p>  </p>
         <h2>Seus Graficos de Expressão Natural</h2>
         <p>A decodificação das Energias e Potenciais nativas que definem sua personalidade.</p>
@@ -3466,7 +3465,7 @@ html += `
 
 // INSERIR CAPA 1 AQUI
 html += `
-    <div class="capa-transicao" id="secao-essencia">
+    <div class="capa-transicao" id="capa-essencia">> 
         <p>  </p>
         <h2>Sua Essência e <br> Identidade Numerológica</h2>
         <p>A definição da sua personalidade e propósito original..</p>
@@ -3522,7 +3521,7 @@ html += `
 
 // --- INÍCIO DO PILAR 02 ORGANIZADO ---
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="capa-alinhamento">
         <p>  </p>
         <h2>Alinhamento e <br> Superação de Desafios</h2>
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
@@ -3714,7 +3713,7 @@ html += `
 
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="capa-trajetoria">
         <p>  </p>
         <h2>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
      
@@ -3945,7 +3944,7 @@ html += `
 
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="capa-matriz">
         <h4><h4>
         <h2>Matriz, Regente, Sequências de Vulnerabilidade e Potências Numéricas </h2>
         <p>Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. </p>
@@ -4320,7 +4319,7 @@ html += htmlPiramide;
            
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="capa-despertar">
         <h4><h4>
         <h2>FILOSOFIA, CIÊNCIA  & NUMEROLOGIA </h2>
         <p>Numerologia aplicada na filosofia Hermética e na ciência moderna</p>
@@ -4488,10 +4487,32 @@ html += `
     </div>
 </div>
 `;    
-
+    
+// Aqui você junta todas as peças do quebra-cabeça na ordem certa
+let relatorioCompleto = htmlSumario + parte1 + parte2 + parte3 + parte4 + parte5 + parte6;
 // Chame a função logo após renderizar o HTML
 document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
-setTimeout(calcularPaginasSumario, 500);
+
+// COLOQUE ISSO LOGO ABAIXO DO innerHTML
+setTimeout(() => {
+    const alturaA4 = 1122; // Tamanho de uma página no seu layout
+    const marcadores = document.querySelectorAll('.page-num');
+
+    marcadores.forEach(span => {
+        const idAlvo = span.getAttribute('data-target');
+        const elementoAlvo = document.getElementById(idAlvo);
+        
+        if (elementoAlvo) {
+            // Calcula a posição e preenche o número
+            const topo = elementoAlvo.offsetTop;
+            const pagina = Math.ceil((topo + 50) / alturaA4);
+            span.innerText = pagina;
+        }
+    });
+}, 1000); // 1 segundo de espera para garantir que tudo carregou
+
+
+    
         } // FIM DA FUNÇÃO
 
 
