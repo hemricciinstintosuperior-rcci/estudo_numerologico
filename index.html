@@ -778,6 +778,44 @@ input:focus {
     }
 }  
 
+.lista-sumario {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-sumario li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.lista-sumario li a {
+    text-decoration: none;
+    color: #333;
+    flex-grow: 1;
+}
+
+/* Cria aqueles pontinhos entre o título e a página */
+.lista-sumario li::after {
+    content: "..................................................................................................";
+    order: 2;
+    color: #ccc;
+    overflow: hidden;
+    margin: 0 10px;
+    flex-grow: 1;
+    letter-spacing: 5px;
+}
+
+.page-num {
+    order: 3;
+    font-weight: bold;
+    color: var(--gold);
+    min-width: 20px;
+    text-align: right;
+}
+    
     </style>
 </head>
 <body>
@@ -1850,7 +1888,7 @@ No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, ma
     
 
 let html = `
-        <div class="secao-card quebra-pagina">
+        <div class="secao-card quebra-pagina" id="page-${idSlug}">
             <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Plano de Expressão Natural</h2>
             
             <div class="intro-texto" style="margin-bottom: 25px; line-height: 1.6; color: #444;">
@@ -2038,7 +2076,7 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
 `;
 
         h += `
-        <div class="secao-card quebra-pagina" style="width: 100%;"> 
+        <div class="secao-card quebra-pagina" id="page-${idSlug}" style="width: 100%;"> 
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloSecao}</h2>
                         <h3 style="text-align:center; font-weight:bold; color:var(--gold); margin-top:-10px; margin-bottom:5px;">IDADE: ${indiceAno} ANOS</h3>
             <h3 style="text-align:center; font-weight:bold; color:var(--gold); margin-top:-10px; margin-bottom:25px;"> PERÍODO: ${periodoVigente}</h3>
@@ -2707,7 +2745,26 @@ function calcularNumerosSocial(nome) {
     };
 }
 
+function atualizarNumeracaoSumario() {
+    const itensSumario = document.querySelectorAll('.page-num');
+    const alturaPagina = 1122; // Altura aproximada de uma página A4 em pixels (ajuste conforme seu CSS)
+
+    itensSumario.forEach(item => {
+        const targetId = item.getAttribute('data-target');
+        const elementoAlvo = document.getElementById(targetId);
         
+        if (elementoAlvo) {
+            // Calcula em qual página o elemento está baseado na posição Top
+            const topPos = elementoAlvo.offsetTop;
+            const numeroPagina = Math.ceil(topPos / alturaPagina);
+            item.innerHTML = numeroPagina;
+        }
+    });
+}
+
+// Chame a função logo após renderizar o HTML
+document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
+setTimeout(atualizarNumeracaoSumario, 500); // O timeout garante que imagens/gráficos carregaram        
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -3269,46 +3326,25 @@ if (nomeSocialValor !== "") {
 
 
     
-// --- PÁGINA 1: SUMÁRIO (AJUSTADA PARA CABER EM UMA FOLHA) ---
-html += `
-<div class="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; max-height: 1120px; padding: 30px; box-sizing: border-box; overflow: hidden; page-break-after: always; position: relative;">
+htmlSumario = `
+<div class="page sumario-container">
+    <h1 class="titulo-luxo">Sumário da sua Jornada</h1>
+    <div class="divisor-ouro"></div>
     
-    <div style="text-align: center; margin-bottom: 30px;">
-        <h2 style="color: var(--gold); font-size: 2.4rem; letter-spacing: 6px; text-transform: uppercase; margin: 0; font-weight: 300;">
-            Sumário
-        </h2>
-        <div style="width: 50px; height: 1px; background: var(--gold); margin: 10px auto;"></div>
-        <p style="font-size: 0.8rem; color: #d97a1e; letter-spacing: 4px; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin: 0;">
-            Perspectiva Evolutiva
-        </p>
-    </div>
-
-    <div style="width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 25px;">
-        ${[
-            { t: "Introdução", c: "Cabala Ancestral e Direcionamento de Jornada" },
-            { t: "Parte 1: Performance Natural", c: "Planos de Expressão ✶ Gráficos de Potenciais" },
-            { t: "Parte 2: Essência e Identidade", c: "Vibração do Dia ✶ Motivação ✶ Personalidade ✶ Propósito" },
-            { t: "Parte 3: Alinhamento e Desafios", c: "Fraquezas ✶ Habilidades ✶ Desafio Principal" },
-            { t: "Parte 4: Trajetória e Tendências", c: "Ciclos de Vida ✶ Maturidade ✶ Ano Pessoal" },
-            { t: "Parte 5: A Grande Matriz", c: "Pirâmide Invertida ✶ Sequências Numéricas ✶ Potência até 100 anos" },
-            { t: "Parte 6: O Despertar do Legado", c: "Contexto Histórico e Conclusão Evolutiva" }
-        ].map(item => `
-            <div style="text-align: center;">
-                <h3 style="color: var(--gold); font-size: 1.6rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; font-weight: 600;">${item.t}</h3>
-                <p style="color: #333; font-size: 1.6rem; margin: 0; line-height: 1.4;">${item.c}</p>
-            </div>
-        `).join('')}
-    </div>
-    
-    <div style="margin-top: 40px; text-align: center; opacity: 0.6;">
-        <p style="font-weight: bold; color: #d97a1e; letter-spacing: 6px; font-size: 0.75rem; text-transform: uppercase; margin: 0;">
-            Instinto Superior
-        </p>
-    </div>
+    <ul class="lista-sumario">
+        <li><a href="#secao-direcionamento">Direcionamento da Jornada</a> <span class="page-num" data-target="secao-direcionamento"></span></li>
+        <li><a href="#secao-graficos">Gráficos de Expressão Natural</a> <span class="page-num" data-target="secao-graficos"></span></li>
+        <li><a href="#secao-essencia">Sua Essência e Identidade</a> <span class="page-num" data-target="secao-essencia"></span></li>
+        <li><a href="#secao-profissional">Direcionamento Profissional</a> <span class="page-num" data-target="secao-profissional"></span></li>
+        <li><a href="#secao-desafios">Alinhamento e Desafios</a> <span class="page-num" data-target="secao-desafios"></span></li>
+        <li><a href="#secao-matriz">A Matriz da Vida (Pirâmide)</a> <span class="page-num" data-target="secao-matriz"></span></li>
+        <li><a href="#secao-potencias">Ciclos de Potências</a> <span class="page-num" data-target="secao-potencias"></span></li>
+    </ul>
 </div>
 `;
-// --- PÁGINA 2: NOME SOCIAL (SE EXISTIR) ---
 
+// Adicione o sumário no início do HTML global
+html = htmlSumario + html;
 
  tituloBonito = " A Gênese dos Números";    
 html += `
@@ -3359,7 +3395,7 @@ html += `
 
   tituloBonito = " Direcionamento da sua Jornada";    
 html += `
-<div class="separador-luxo">
+<div class="separador-luxo"> id="secao-direcionamento">
     <div class="caixa-interna">
         <h2>${tituloBonito}</h2>
     </div>
@@ -3400,7 +3436,7 @@ html += `
 
     
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="secao-graficos">
         <p>  </p>
         <h2>Seus Graficos de Expressão Natural</h2>
         <p>A decodificação das Energias e Potenciais nativas que definem sua personalidade.</p>
@@ -3437,7 +3473,7 @@ html += `
 `;
     
 html += `
-    <div class="page">
+    <div class="page" id="page-${idSlug}">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Potenciais</h2>
         <div class="intro-texto">${textos.introducoes.graficos}</div>
         ${gerarTodosOsGraficos(res, res.deficiencias, nomeRaw, res.desafios[3], regenteVida, dadosNegativas.nums)}
@@ -3446,7 +3482,7 @@ html += `
 
 // INSERIR CAPA 1 AQUI
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="secao-essencia">
         <p>  </p>
         <h2>Sua Essência e <br> Identidade Numerológica</h2>
         <p>A definição da sua personalidade e propósito original..</p>
@@ -3475,7 +3511,7 @@ html += `
 
     
     html += `
-        <div class="page">
+        <div class="page" id="page-${idSlug}">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
             <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
             <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>
@@ -3502,7 +3538,7 @@ html += `
 
 // --- INÍCIO DO PILAR 02 ORGANIZADO ---
 html += `
-    <div class="capa-transicao">
+    <div class="capa-transicao" id="secao-essencia">
         <p>  </p>
         <h2>Alinhamento e <br> Superação de Desafios</h2>
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
@@ -3522,7 +3558,7 @@ html += `
     
 // A. LIÇÕES CÁRMICAS
 html += `
-    <div class="page">
+    <div class="page" id="page-${idSlug}">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">fraquezas e inibições </h2>
         <div class="intro-texto">${textos.introducoes.deficiencias}</div>
 `;
