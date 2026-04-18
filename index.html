@@ -679,35 +679,6 @@ input:focus {
     background-color: #fff;
 }    
 
-.lista-sumario li {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end; /* Mudamos de baseline para flex-end */
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    width: 100%; /* Garante que ocupe a largura toda */
-}
-
-.lista-sumario li span:first-child {
-    order: 1; /* Texto da Parte */
-    white-space: nowrap;
-}
-
-.lista-sumario li::after {
-    content: " ...................................................................................................";
-    flex: 1;
-    order: 2; /* Pontinhos ficam no meio */
-    padding: 0 10px;
-    color: #ddd;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.lista-sumario li .page-num {
-    order: 3; /* Número da página OBRIGATORIAMENTE no final */
-    min-width: 30px;
-    text-align: right;
-}
 
 
     
@@ -812,23 +783,7 @@ input:focus {
 }  
 
 
-@media print {
-    .page {
-        page-break-before: always !important;
-        break-before: page !important;
-        display: block !important;
-        height: 296mm !important; /* Altura exata do A4 */
-        position: relative !important;
-    }
-}
 
-/* Força a altura no navegador também para o JS medir certo */
-.page {
-    min-height: 1120px; 
-}    
-
-.lista-sumario span:first-child { order: 1; }
-.page-num { order: 3; font-weight: bold; color: #C5A059; min-width: 30px; text-align: right; }
     
     </style>
 </head>
@@ -2759,43 +2714,6 @@ function calcularNumerosSocial(nome) {
     };
 }
 
-function calcularPaginasSumario() {
-    const alturaA4 = 1122; // Altura base para o cálculo de página
-    const itens = document.querySelectorAll('.page-num');
-
-    itens.forEach(span => {
-        const idAlvo = span.getAttribute('data-target');
-        const elementoCapa = document.getElementById(idAlvo);
-        
-        if (elementoCapa) {
-            // Pega a posição do topo da capa em relação ao documento
-            const posicaoTopo = elementoCapa.offsetTop;
-            // Divide pela altura da página para saber o número da página
-            const numeroPagina = Math.ceil((posicaoTopo + 50) / alturaA4);
-            span.innerHTML = numeroPagina;
-        }
-    });
-}
-
-function atualizarSumario() {
-    const alturaA4 = 1122; // Altura aproximada de uma página A4 em px
-    const secoes = [
-        { id: 'parte1', linkId: 'link-sumario-1' },
-        { id: 'parte2', linkId: 'link-sumario-2' },
-        // ... adicione as outras
-    ];
-
-    secoes.forEach(secao => {
-        const elemento = document.getElementById(secao.id);
-        const link = document.getElementById(secao.linkId);
-        
-        if (elemento && link) {
-            const topo = elemento.offsetTop;
-            const pagina = Math.floor(topo / alturaA4) + 1; // +1 porque não existe página 0
-            link.innerText = pagina;
-        }
-    });
-}
 
 
 
@@ -3084,13 +3002,7 @@ const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
 // --- CONTINUE COLANDO AQUI (LOGOTIPOS APÓS A LINHA DA PIRÂMIDE) ---
 
-// No início do seu <script>, fora de todas as funções
-let conteudoDaParte1 = "";
-let conteudoDaParte2 = "";
-let conteudoDaParte3 = "";
-let conteudoDaParte4 = "";
-let conteudoDaParte5 = "";
-let conteudoDaParte6 = "";
+
 
 
 
@@ -3372,8 +3284,48 @@ if (nomeSocialValor !== "") {
 }
 
 
-
     
+// --- PÁGINA 1: SUMÁRIO (AJUSTADA PARA CABER EM UMA FOLHA) ---
+html += `
+<div class="page" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; max-height: 1120px; padding: 30px; box-sizing: border-box; overflow: hidden; page-break-after: always; position: relative;">
+    
+    <div style="text-align: center; margin-bottom: 30px;">
+        <h2 style="color: var(--gold); font-size: 2.4rem; letter-spacing: 6px; text-transform: uppercase; margin: 0; font-weight: 300;">
+            Sumário
+        </h2>
+        <div style="width: 50px; height: 1px; background: var(--gold); margin: 10px auto;"></div>
+        <p style="font-size: 0.8rem; color: #d97a1e; letter-spacing: 4px; text-transform: uppercase; font-weight: bold; opacity: 0.8; margin: 0;">
+            Perspectiva Evolutiva
+        </p>
+    </div>
+
+    <div style="width: 100%; max-width: 800px; display: flex; flex-direction: column; gap: 25px;">
+        ${[
+            { t: "Introdução", c: "Cabala Ancestral e Direcionamento de Jornada" },
+            { t: "Parte 1: Performance Natural", c: "Planos de Expressão ✶ Gráficos de Potenciais" },
+            { t: "Parte 2: Essência e Identidade", c: "Vibração do Dia ✶ Motivação ✶ Personalidade ✶ Propósito" },
+            { t: "Parte 3: Alinhamento e Desafios", c: "Fraquezas ✶ Habilidades ✶ Desafio Principal" },
+            { t: "Parte 4: Trajetória e Tendências", c: "Ciclos de Vida ✶ Maturidade ✶ Ano Pessoal" },
+            { t: "Parte 5: A Grande Matriz", c: "Pirâmide Invertida ✶ Sequências Numéricas ✶ Potência até 100 anos" },
+            { t: "Parte 6: O Despertar do Legado", c: "Contexto Histórico e Conclusão Evolutiva" }
+        ].map(item => `
+            <div style="text-align: center;">
+                <h3 style="color: var(--gold); font-size: 1.6rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 5px; font-weight: 600;">${item.t}</h3>
+                <p style="color: #333; font-size: 1.6rem; margin: 0; line-height: 1.4;">${item.c}</p>
+            </div>
+        `).join('')}
+    </div>
+    
+    <div style="margin-top: 40px; text-align: center; opacity: 0.6;">
+        <p style="font-weight: bold; color: #d97a1e; letter-spacing: 6px; font-size: 0.75rem; text-transform: uppercase; margin: 0;">
+            Instinto Superior
+        </p>
+    </div>
+</div>
+`;
+// --- PÁGINA 2: NOME SOCIAL (SE EXISTIR) ---
+
+
  tituloBonito = " A Gênese dos Números";    
 html += `
 <div class="separador-luxo">
@@ -3423,7 +3375,7 @@ html += `
 
   tituloBonito = " Direcionamento da sua Jornada";    
 html += `
-<div class="separador-luxo"> 
+<div class="separador-luxo">
     <div class="caixa-interna">
         <h2>${tituloBonito}</h2>
     </div>
@@ -3461,40 +3413,12 @@ html += `
 </div>
 `;   
 
-// COLOQUE ISSO ANTES DA PARTE 1
- html += `
-<div class="page sumario-container">
-    <h2 class="titulo-luxo">Sumário da Jornada</h2>
-    <div class="divisor-ouro"></div>
-    <ul class="lista-sumario">
-        <li><span>Parte 1: Performance Natural</span> <span class="page-num" data-target="capa-performance"></span></li>
-        <li><span>Parte 2: Essência e Identidade</span> <span class="page-num" data-target="capa-essencia"></span></li>
-        <li><span>Parte 3: Alinhamento e Desafios</span> <span class="page-num" data-target="capa-alinhamento"></span></li>
-        <li><span>Parte 4: Trajetória de Tendências</span> <span class="page-num" data-target="capa-trajetoria"></span></li>
-        <li><span>Parte 5: A Grande Matriz</span> <span class="page-num" data-target="capa-matriz"></span></li>
-        <li><span>Parte 6: O Despertar (Filosofia e Ciência)</span> <span class="page-num" data-target="capa-despertar"></span></li>
-    </ul>
-</div>
-`;
 
-
-// RECONSTRUINDO AS VARIÁVEIS COM OS IDs CERTOS
-// Aqui você coloca o conteúdo real de cada parte dentro das crases (backticks)
-let p1 = `<div id="capa-performance-real" class="page">${conteudoDaParte1}</div>`;
-let p2 = `<div id="capa-essencia-real" class="page">${conteudoDaParte2}</div>`;
-let p3 = `<div id="capa-alinhamento-real" class="page">${conteudoDaParte3}</div>`;
-let p4 = `<div id="capa-trajetoria-real" class="page">${conteudoDaParte4}</div>`;
-let p5 = `<div id="capa-matriz-real" class="page">${conteudoDaParte5}</div>`;
-let p6 = `<div id="capa-despertar-real" class="page">${conteudoDaParte6}</div>`;
-
-// Agora essa linha volta a funcionar sem erro
-html = html + p1 + p2 + p3 + p4 + p5 + p6;
-    
     
 html += `
-    <div id="capa-performance" class="capa-transicao" > 
+    <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 1: <br>Seus Graficos de Expressão Natural</h2>
+        <h2>Seus Graficos de Expressão Natural</h2>
         <p>A decodificação das Energias e Potenciais nativas que definem sua personalidade.</p>
     </div>
 `;
@@ -3538,9 +3462,9 @@ html += `
 
 // INSERIR CAPA 1 AQUI
 html += `
-    <div id="capa-essencia" class="capa-transicao"> 
+    <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 2:<br>Sua Essência e  Identidade Numerológica</h2>
+        <h2>Sua Essência e <br> Identidade Numerológica</h2>
         <p>A definição da sua personalidade e propósito original..</p>
     </div>
     `;
@@ -3594,9 +3518,9 @@ html += `
 
 // --- INÍCIO DO PILAR 02 ORGANIZADO ---
 html += `
-    <div id="capa-alinhamento" class="capa-transicao" >
+    <div class="capa-transicao">
         <p>  </p>
-        <h2> Parte 3:<br>Alinhamento e Superação de Desafios</h2>
+        <h2>Alinhamento e <br> Superação de Desafios</h2>
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
     </div>
 `;
@@ -3786,9 +3710,9 @@ html += `
 
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
-    <div  id="capa-trajetoria" class="capa-transicao">
+    <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 4: <br>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
+        <h2>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
      
         <p>A análise das janelas de oportunidade e as frequências que regem o seu agora.</p>
     </div>
@@ -4017,9 +3941,9 @@ html += `
 
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
-    <div  id="capa-matriz" class="capa-transicao">
+    <div class="capa-transicao">
         <h4><h4>
-        <h2>Parte 5:  <br>Matriz, Regente, Sequências Numéricas e Potências </h2>
+        <h2>Matriz, Regente, Sequências de Vulnerabilidade e Potências Numéricas </h2>
         <p>Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. </p>
     </div>
 `;
@@ -4392,9 +4316,9 @@ html += htmlPiramide;
            
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
-    <div  id="capa-despertar" class="capa-transicao">
+    <div class="capa-transicao">
         <h4><h4>
-        <h2>Parte 6: <br>FILOSOFIA, CIÊNCIA  & NUMEROLOGIA </h2>
+        <h2>FILOSOFIA, CIÊNCIA  & NUMEROLOGIA </h2>
         <p>Numerologia aplicada na filosofia Hermética e na ciência moderna</p>
     </div>
 `;
@@ -4560,45 +4484,10 @@ html += `
     </div>
 </div>
 `;    
-    
+     document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
+        } // FIM DA FUNÇÃO
 
 
-// 4. EXIBIÇÃO NA TELA
- document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
-
-// 5. MÁGICA DA NUMERAÇÃO AUTOMÁTICA
-// 5. MÁGICA PARA O PDF
-setTimeout(() => {
-    // No PDF, o DPI padrão geralmente faz o A4 ter 1122px ou 1056px
-    // Vamos usar 1122 como base, que é o padrão do Chrome
-    const alturaA4 = 1122; 
-    const spans = document.querySelectorAll('.page-num');
-
-    spans.forEach(span => {
-        const idAlvo = span.getAttribute('data-target');
-        const elementoAlvo = document.getElementById(idAlvo);
-        
-        if (elementoAlvo) {
-            // Pega a distância absoluta do topo
-            const topoRelativo = elementoAlvo.getBoundingClientRect().top;
-            const scrollAtual = window.scrollY;
-            const posicaoTotal = topoRelativo + scrollAtual;
-            
-            // Cálculo para PDF
-            const numPagina = Math.ceil((posicaoTotal + 50) / alturaA4);
-            
-            span.innerHTML = "Pág. " + numPagina;
-            console.log(`PDF Check: ${idAlvo} está na página ${numPagina}`);
-        }
-    });
-
-    // AQUI ESTÁ O SEGREDO:
-    // Se você tiver um botão de "Gerar PDF", avise que está pronto
-    console.log("Pronto para gerar o PDF com páginas corrigidas!");
-}, 3000);
-
-} // <--- FECHAMENTO FINAL DA FUNÇÃO gerarMapaCompleto
-        
     </script>
     
 
