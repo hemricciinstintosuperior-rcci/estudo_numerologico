@@ -3038,14 +3038,19 @@ const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
 // --- CONTINUE COLANDO AQUI (LOGOTIPOS APÓS A LINHA DA PIRÂMIDE) ---
 
-// 1. GERAÇÃO DOS CONTEÚDOS (Aqui criamos as variáveis que o sumário vai usar)
-// Ajuste os nomes abaixo para os nomes REAIS das suas funções:
-let p1 = montarParte1(res, nomeRaw); 
-let p2 = montarParte2(res, nomeRaw);
-let p3 = montarParte3(res, nomeRaw);
-let p4 = montarParte4(res, nomeRaw);
-let p5 = montarParte5(res, nomeRaw); 
-let p6 = montarParte6(res, nomeRaw);
+// APAGUE AS LINHAS QUE TINHAM "montarParte1, montarParte2..." E COLE ISSO:
+
+let p1 = `<div id="capa-performance" class="page"><h2>Parte 1: Performance Natural</h2></div>`;
+let p2 = `<div id="capa-essencia" class="page"><h2>Parte 2: Essência e Identidade</h2></div>`;
+let p3 = `<div id="capa-alinhamento" class="page"><h2>Parte 3: Alinhamento e Desafios</h2></div>`;
+let p4 = `<div id="capa-trajetoria" class="page"><h2>Parte 4: Trajetória de Tendências</h2></div>`;
+let p5 = `<div id="capa-matriz" class="page"><h2>Parte 5: A Grande Matriz</h2></div>`;
+let p6 = `<div id="capa-despertar" class="page"><h2>Parte 6: O Despertar</h2></div>`;
+
+// Logo abaixo, você junta tudo na variável htmlFinal:
+let htmlFinal = htmlSumario + p1 + p2 + p3 + p4 + p5 + p6;
+
+
 
     
 
@@ -4500,9 +4505,7 @@ html += `
 </div>
 `;    
     
-// 3. MONTAGEM FINAL DO RELATÓRIO
-// Agora sim somamos tudo na ordem correta
-let relatorioFinal = htmlSumario + p1 + p2 + p3 + p4 + p5 + p6;
+
 
 // 4. EXIBIÇÃO NA TELA
 document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${relatorioFinal}</div>`;
