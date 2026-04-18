@@ -347,7 +347,98 @@ Cada desafio mostra uma etapa específica do processo de evolução e revela qua
     <p>Tudo na criação exige a união dos princípios ativo (masculino) e receptivo (feminino), uma dinâmica observada na física como a interação entre carga e potencial. Na Numerologia, isso se reflete no equilíbrio entre números ímpares (ação) e pares (acolhimento). A criação de qualquer resultado real na sua vida depende da harmonia entre a sua vontade de realizar e a sua sabedoria em gestar. Esta lei ensina que o excesso de um princípio sem o outro gera esterilidade nos projetos. Através do seu mapa, você aprende a equilibrar essas forças internas, integrando a lógica analítica com a intuição profunda. É a união sagrada da semente numérica com o solo da consciência que permite a manifestação plena de todos os seus objetivos e sonhos.</p>`
 },
  
+nomeSocial : {
+    motivacao: {
+        1: "A sua motivação mais profunda com esta assinatura, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a busca incessante pela autonomia total e pelo reconhecimento da sua individualidade e liderança.",
+        2: "<strong>MASCULINO-FEMININO-NEUTRO</strong>, a sua motivação interna com este nome é a busca constante pela paz, harmonia e pela conexão profunda com as pessoas ao seu redor.",
+        3: "A motivação desta assinatura, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a necessidade vital de se expressar, brilhar e transmitir alegria através do seu carisma natural.",
+        4: "A sua motivação íntima aqui, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a busca pela segurança absoluta e pela construção de uma base sólida e estável para sua vida.",
+        5: "A motivação desta assinatura, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a liberdade absoluta e a sede por novas experiências que desafiem seus sentidos.",
+        6: "Sua motivação íntima, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o desejo sincero de amar, cuidar e ser o pilar de sustentação afetiva para aqueles que você estima.",
+        7: "A motivação desta assinatura, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a busca pelo conhecimento profundo, pela verdade e pela perfeição técnica em tudo o que faz.",
+        8: "Sua motivação íntima, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a conquista do sucesso em grande escala e o desejo de gerir recursos com autoridade e justiça.",
+        9: "A motivação mais profunda deste nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o desejo sincero de servir à humanidade e deixar um impacto positivo no mundo.",
+        11: "Sua motivação, <strong>MASCULINO-FEMININO-NEUTRO</strong>, indica uma alma que busca a iluminação e a transcendência, agindo como um farol intuitivo para os outros.",
+        22: "Sua assinatura anseia por construir algo grandioso que dure por gerações, unindo visão idealista com uma capacidade prática monumental.",
+     33: "A sua Motivação nesta assinatura, <strong>MASCULINO-FEMININO-NEUTRO</strong>, representa a maestria na compaixão e o chamado profundo para o amor incondicional e a proteção universal."
+    },
+    impressao: {
+        1: "O mundo vê em você uma aura de pioneirismo e vigor. As pessoas percebem, <strong>MASCULINO-FEMININO-NEUTRO</strong>, alguém que não espera ordens para agir e liderar.",
+        2: "A imagem que você projeta é de suavidade e equilíbrio. Você é visto(a) como uma presença pacífica, <strong>MASCULINO-FEMININO-NEUTRO</strong>, que sabe mediar conflitos.",
+        3: "Sua aparência para o mundo é vibrante e solar. As pessoas veem em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, um verdadeiro farol de alegria e entusiasmo contagiante.",
+        4: "A imagem que você transmite é de seriedade e disciplina. O mundo te vê como uma rocha firme, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pautada pela ética e confiança.",
+        5: "Sua primeira impressão é de alguém magnético e versátil. As pessoas veem em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, um espírito livre e moderno.",
+        6: "A imagem que você projeta é de harmonia e responsabilidade. O mundo vê em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, uma autoridade moral benevolente e acolhedora.",
+        7: "Sua aparência para o mundo é de alguém profundo e reservado. Percebem em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, uma aura de mistério e sabedoria técnica.",
+        8: "Sua primeira impressão é de força e comando. O mundo vê em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, uma liderança nata com grande capacidade de realização.",
+        9: "A imagem que você projeta é universal e generosa. As pessoas veem em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, alguém inspirado pelo amor incondicional.",
+        11: "Sua imagem transmite magnetismo intuitivo. O mundo te vê como alguém 'fora da curva', <strong>MASCULINO-FEMININO-NEUTRO</strong>, uma figura visionária e inspiradora.",
+        22: "A primeira impressão é de competência extrema. O mundo vê em você o 'mestre construtor', <strong>MASCULINO-FEMININO-NEUTRO</strong>, capaz de realizar o impossível.",
+     33: "Sua imagem irradia uma energia de paz e acolhimento absoluto. O mundo vê em você um guia amoroso, <strong>MASCULINO-FEMININO-NEUTRO</strong>, que exala sabedoria compassiva."
+    },
+     
+personalidade: {
+    1: `<h3>Personalidade 1 - O Impacto do Pioneirismo</h3>
+    <p>Ao adotar o nome <strong>MASCULINO-FEMININO-NEUTRO</strong>, você projeta uma assinatura de forte independência e liderança. Este nome funciona como um cartão de visitas que diz ao mundo que você é uma pessoa de iniciativa, que não teme abrir novos caminhos e que possui uma autoridade natural.</p>
+    <p>A vibração desta assinatura, <strong>MASCULINO-FEMININO-NEUTRO</strong>, faz com que as pessoas te vejam como alguém resolutivo. É um nome que inspira confiança em cargos de comando e projeta uma imagem de alguém que encara desafios de frente, sem hesitar.</p>
+    <p>O impacto social desta escolha é o progresso. Através deste nome, você é percebido(a) como uma força dinâmica, consolidando uma imagem de autonomia e resiliência em todas as suas interações sociais.</p>`,
 
+    2: `<h3>Personalidade 2 - A Diplomacia da Assinatura</h3>
+    <p>O nome <strong>MASCULINO-FEMININO-NEUTRO</strong> ajusta sua frequência social para a harmonia e a cooperação. Esta assinatura projeta uma imagem de alguém extremamente gentil, acessível e capaz de ouvir, tornando você o ponto de equilíbrio em qualquer grupo.</p>
+    <p>Através deste nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o mundo te enxerga como a parceria ideal. É uma vibração que facilita a mediação e atrai a confiança das pessoas pela sua discrição e tato social. Você brilha pela sensibilidade e pelo acolhimento.</p>
+    <p>O reflexo social desta escolha é a união. Este nome funciona como um convite à colaboração, construindo pontes e fortalecendo laços baseados na gentileza e no respeito mútuo.</p>`,
+
+    3: `<h3>Personalidade 3 - O Brilho da Expressão Social</h3>
+    <p>A escolha do nome <strong>MASCULINO-FEMININO-NEUTRO</strong> potencializa imensamente o seu magnetismo e carisma. Esta assinatura projeta uma imagem vibrante e solar, agindo como um farol que atrai as pessoas através de uma comunicação leve, fluida e contagiante.</p>
+    <p>A vibração deste nome social, <strong>MASCULINO-FEMININO-NEUTRO</strong>, faz com que você seja visto(a) como uma presença entusiasmada e criativa. É um nome que comunica otimismo e inteligência rápida, facilitando sua entrada em qualquer círculo social com charme e alegria.</p>
+    <p>O impacto desta assinatura é a expansão. Através deste nome, você transforma o ambiente ao seu redor, provando que a alegria é uma ferramenta poderosa de conexão e sucesso.</p>`,
+
+    4: `<h3>Personalidade 4 - A Segurança da Estrutura Social</h3>
+    <p>O nome <strong>MASCULINO-FEMININO-NEUTRO</strong> confere à sua imagem pública uma aura de solidez, seriedade e confiança absoluta. Esta assinatura projeta alguém que valoriza a ordem, a ética e o compromisso, passando a sensação de que "tudo está sob controle".</p>
+    <p>Ao usar este nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a sociedade te enxerga como uma rocha firme. É uma vibração que impõe respeito pela disciplina e pelo trabalho bem feito, fazendo de você a pessoa em quem todos confiam para gerir projetos que exigem pé no chão e fidelidade.</p>
+    <p>O reflexo social desta escolha é a estabilidade. Este nome consolida uma imagem de integridade inatacável, onde sua palavra é vista como lei e sua entrega é garantida.</p>`,
+
+    5: `<h3>Personalidade 5 - A Dinâmica da Liberdade Social</h3>
+    <p>Adotar o nome <strong>MASCULINO-FEMININO-NEUTRO</strong> projeta uma imagem de modernidade, versatilidade e movimento constante. Esta assinatura diz ao mundo que você é uma pessoa desimpedida, progressista e pronta para se adaptar a qualquer mudança com agilidade.</p>
+    <p>A vibração deste nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, atrai a atenção pela coragem de experimentar o novo. Você é visto(a) como alguém inteligente e magnético, que desafia o tédio e traz frescor para ambientes estagnados através de uma postura livre e inovadora.</p>
+    <p>O impacto social desta escolha é a evolução. Este nome funciona como um motor de mudanças, mostrando que você é o elo entre o presente e as infinitas possibilidades do futuro.</p>`,
+
+    6: `<h3>Personalidade 6 - O Acolhimento da Presença Social</h3>
+    <p>O nome <strong>MASCULINO-FEMININO-NEUTRO</strong> ajusta sua vibração social para o cuidado, a harmonia e a responsabilidade afetiva. Esta assinatura projeta a imagem de um porto seguro, alguém que se preocupa genuinamente com o bem-estar coletivo e com a ética.</p>
+    <p>Através deste nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, as pessoas sentem amparo e proteção na sua presença. É uma vibração que embeleza as relações e atrai quem busca conselhos sábios e equilíbrio, fazendo de você a figura que pacifica e harmoniza os ambientes.</p>
+    <p>O reflexo social desta escolha é o amor em ação. Este nome consolida uma reputação de bondade e lealdade, tornando sua presença um presente para a comunidade ao seu redor.</p>`,
+
+    7: `<h3>Personalidade 7 - A Distinção da Sabedoria Social</h3>
+    <p>A assinatura <strong>MASCULINO-FEMININO-NEUTRO</strong> confere à sua imagem pública uma aura de profundidade, mistério e classe silenciosa. Este nome projeta alguém culto e analítico, que prefere a observação atenta e a qualidade intelectual ao barulho das massas.</p>
+    <p>Ao usar este nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você emana uma dignidade que impõe respeito imediato. A sociedade te enxerga como um(a) especialista, alguém que detém conhecimentos profundos e que não se deixa levar por futilidades ou opiniões superficiais.</p>
+    <p>O impacto social desta escolha é a lucidez. Este nome protege sua privacidade e atrai conexões de substância, consolidando sua autoridade através do conhecimento e da busca pela verdade.</p>`,
+
+    8: `<h3>Personalidade 8 - A Autoridade da Realização Social</h3>
+    <p>O nome <strong>MASCULINO-FEMININO-NEUTRO</strong> projeta uma imagem poderosa de comando, sucesso e eficiência material. Esta assinatura atua como um símbolo de força, indicando ao mundo que você possui visão estratégica e pragmatismo para liderar grandes metas.</p>
+    <p>Através deste nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você é percebido(a) como uma personalidade vitoriosa e segura de si. É uma vibração que atrai responsabilidades de liderança e grandes negócios, pois transmite a confiança de quem nasceu para organizar a realidade e gerar prosperidade.</p>
+    <p>O reflexo social desta escolha é a vitória. Este nome consolida sua trajetória como uma força realizadora, capaz de transformar visões abstratas em resultados tangíveis e duradouros.</p>`,
+
+    9: `<h3>Personalidade 9 - O Humanitarismo da Visão Social</h3>
+    <p>A escolha do nome <strong>MASCULINO-FEMININO-NEUTRO</strong> projeta uma imagem universal, generosa e inspiradora. Esta assinatura indica alguém que possui uma compreensão profunda da vida e que age com uma compaixão que vai muito além de interesses pessoais.</p>
+    <p>A vibração deste nome social, <strong>MASCULINO-FEMININO-NEUTRO</strong>, atrai pessoas de todas as origens que buscam na sua experiência uma luz ou direção. Você é visto(a) como uma alma sábia e carismática, capaz de grandes gestos altruístas por um bem maior.</p>
+    <p>O impacto desta assinatura é a cura e a transformação. Através deste nome, você deixa um impacto positivo no coletivo, consolidando uma imagem de desprendimento e amor incondicional pela humanidade.</p>`,
+
+    11: `<h3>Personalidade 11 - A Inspiração da Visão Social</h3>
+    <p>O nome <strong>MASCULINO-FEMININO-NEUTRO</strong> confere à sua imagem uma aura de magnetismo intuitivo e misticismo sutil. Esta assinatura projeta uma alma visionária, alguém que parece captar ideias e verdades que escapam à maioria das pessoas.</p>
+    <p>Através deste nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você é percebido(a) como uma inteligência brilhante e inspiradora. É uma vibração que desperta a consciência alheia e atrai quem busca um propósito elevado, tornando sua presença sinônimo de progresso mental e espiritual.</p>
+    <p>O impacto social desta escolha é o despertar. Este nome consolida sua imagem como um canal de ideias inovadoras, agindo como uma referência de luz e percepção aguçada.</p>`,
+
+    22: `<h3>Personalidade 22 - A Maestria da Construção Social</h3>
+    <p>Adotar o nome <strong>MASCULINO-FEMININO-NEUTRO</strong> projeta uma imagem de competência extrema e potência realizadora gigante. Esta assinatura indica o "mestre construtor", alguém capaz de unir grandes sonhos à capacidade prática de executá-los para o bem comum.</p>
+    <p>Ao usar este nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a sociedade vê em você uma força de vontade extraordinária. É uma vibração que organiza recursos e lidera projetos monumentais, transmitindo a segurança absoluta de que sob sua guarda o impossível se materializa.</p>
+    <p>O reflexo social desta escolha é a magnitude. Este nome consolida sua reputação de prestígio baseada na magnitude dos benefícios reais que você constrói para a sociedade.</p>`,
+
+ 33: `<h3>Personalidade 33 - O Mestre do Amor e Evolução Social</h3>
+<p>O nome <strong>MASCULINO-FEMININO-NEUTRO</strong> confere à sua presença pública uma aura de profunda bondade e proteção. Esta assinatura projeta a imagem de um guia amoroso, alguém que age movido por um senso de dever sagrado em trazer harmonia para a humanidade.</p>
+<p>Ao adotar este nome, <strong>MASCULINO-FEMININO-NEUTRO</strong>, as pessoas buscam sua companhia porque se sentem amparadas pela paz que emana de cada gesto seu. É uma vibração que educa e cura, tornando você uma referência de integridade moral e altruísmo.</p>
+<p>O impacto social desta escolha é a elevação coletiva. Através deste nome, você é percebido(a) como uma personalidade dedicada ao bem-estar alheio, consolidando uma trajetória de serviço que transforma a dor em esperança por onde passa.</p>`
+}
+},
     
 RegenteVida: {
  1:` <h3>🔱  Regente  N° 1</h3> 
