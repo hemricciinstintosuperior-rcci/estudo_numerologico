@@ -1943,7 +1943,7 @@ desafios: {
    
      
    
-      <h4style="margin-top: 30px;">⚠️ Convergência de Desafios e Ciclos de Vida</h4>
+      <h4>style="margin-top: 30px;">⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
     <h4>⚠️ Situação de Atenção: Número 1</h4>
