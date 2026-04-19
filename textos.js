@@ -2109,7 +2109,7 @@ desafios: {
     <p>Entenda de uma vez por todas, <strong>MASCULINO-FEMININO-NEUTRO</strong>: sua autoexpressão é uma responsabilidade técnica e espiritual com o mundo. Você precisará aprender a rir das adversidades sem jamais perder de vista a seriedade dos seus objetivos, transformando seu brilho natural em um veículo de luz real para os outros. O seu desafio é encontrar sua voz autêntica no meio do barulho do ego, tornando-se uma fonte de alegria genuína e profunda para quem cruzar o seu caminho.</p>
   <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-  <hr>
+  <br>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
