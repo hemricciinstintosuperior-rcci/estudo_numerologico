@@ -1792,7 +1792,7 @@ desafios: {
     0: `<h3>O Desafio da Escolha na Juventude - 0</h3>
     <p>Nesta primeira fase da sua jornada, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o chamado "desafio zero" indica que não existe um obstáculo externo fixo bloqueando seu caminho, mas sim a tarefa sagrada de aprender a navegar por um oceano de infinitas direções. Durante sua juventude e a transição para a maioridade, a sua maior prova será descobrir quem você é de verdade antes que o mundo tente lhe dizer quem ser. O risco aqui não é o erro, mas a paralisia diante de tantas descobertas e primeiras grandes escolhas que batem à sua porta.</p>
     <p>O foco para você agora é o cultivo de uma força de vontade inabalável para moldar o próprio destino com as mãos. Para superar essa fase de indefinição, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o seu aprendizado exige que você domine as bases de todos os pilares da vida, preparando o terreno para o sucesso que virá a seguir:</p>
-   
+   <br>
     <p>1. Cultivar uma independência inegociável.</p>
     <p>2. Agir com diplomacia sem anular sua própria vontade.</p>
     <p>3. Aprender a expressar sua verdade com clareza.</p>
@@ -1927,7 +1927,7 @@ desafios: {
   0: `<h3>O Desafio da Escolha na Maturidade - 0</h3>
     <p>Ao atingir o auge da sua vida adulta, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o desafio zero se manifesta como uma convocação para que você mantenha o domínio absoluto sobre todas as engrenagens da sua existência. Nesta fase de maturidade plena, a escolha deixa de ser apenas sobre "o que ser" no futuro e passa a ser sobre como manter sua integridade e seu foco enquanto o mundo lá fora ruge. O seu grande teste agora, <strong>MASCULINO-FEMININO-NEUTRO</strong>, consiste em permanecer em sintonia com seus valores de alma enquanto faz a gestão profissional das complexas responsabilidades que o cotidiano impõe.</p>
     <p>Para atravessar este período com a vitória nas mãos, a vida exigirá que você demonstre uma maestria impecável em todas as frentes de ação, integrando com perfeição estes oito pilares fundamentais:</p>
-   
+   <br>
     <p>1. Sustentar uma independência inabalável frente às pressões externas.</p>
     <p>2. Agir com a diplomacia de um mestre e a força de um cooperador estratégico.</p>
     <p>3. Expressar sua verdade de forma que ela se torne uma autoridade no ambiente.</p>
@@ -2064,6 +2064,7 @@ desafios: {
     <p>O seu objetivo maior, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o desenvolvimento de um caráter inabalável. Você é o(a) único(a) responsável por vencer o desânimo e a indecisão através do domínio total sobre estes fundamentos da alma:</p>
      <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
+   <br>
     <p>1. Erigir uma independência que ninguém consiga dobrar.</p>
     <p>2. Refinar sua diplomacia para cooperar sem jamais se apagar.</p>
     <p>3. Dominar a arte de expressar sua essência com clareza.</p>
