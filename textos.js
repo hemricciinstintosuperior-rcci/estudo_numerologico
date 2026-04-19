@@ -1806,7 +1806,7 @@ desafios: {
     <p>Logo cedo, a vida coloca você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, diante do desafio de conquistar sua própria pele. Este ciclo foca na superação das dependências e na coragem de ser quem você nasceu para ser. Prepare-se, pois você enfrentará situações onde sua vontade será testada por figuras de autoridade ou por ambientes que tentam ditar o seu passo. A sombra que tenta lhe perseguir é o medo de ser "o diferente" ou a tentação de se camuflar na multidão para não ter que carregar o peso de decidir por si só.</p>
     <p>É natural que você sinta uma hesitação inicial em dar o primeiro passo sozinho(a), temendo o julgamento alheio ou um tropeço solitário. No entanto, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o universo está provocando você a sair debaixo das asas de terceiros e construir uma autoconfiança que não precise de aplausos para existir. Superar este desafio significa converter sua insegurança em iniciativa pura, permitindo que você se posicione com autoridade diante do mundo e segure as rédeas da sua história com firmeza e brio.</p>
         
-    <hr>
+   <br>
     <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -1821,7 +1821,7 @@ desafios: {
     <p>Sua sensibilidade é um dom, <strong>MASCULINO-FEMININO-NEUTRO</strong>, mas neste primeiro ciclo de vida, ela se apresenta como um desafio que exige equilíbrio. Você poderá sentir uma timidez que beira o isolamento ou uma vulnerabilidade excessiva diante das opiniões externas, o que cria uma tendência perigosa de concordar com tudo apenas para manter uma paz que, no fundo, é falsa. O grande obstáculo aqui é a autoanulação em favor de uma harmonia que sufoca seus próprios desejos.</p>
     <p>A vida espera que você desenvolva o tato social sem se tornar um eco das ideias dos outros. <strong>MASCULINO-FEMININO-NEUTRO</strong>, entenda que ser cooperativo(a) é bem diferente de ser submisso(a). Você precisará olhar de frente para o medo da rejeição e fortalecer sua musculatura emocional. O seu aprendizado central é unir a diplomacia à autovalorização, permitindo que você crie laços profundos e estáveis com as pessoas, mas sempre mantendo sua posição e seu valor inegociáveis.</p>
    
-     <hr>
+    <br>
      <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -1836,7 +1836,7 @@ desafios: {
     <p>O desafio agora, <strong>MASCULINO-FEMININO-NEUTRO</strong>, mexe com a sua voz e com a sua capacidade de brilhar. Você tem muito a dizer, mas pode enfrentar uma dificuldade inicial em ser compreendido(a) ou, por outro lado, acabar gastando seu precioso talento em conversas vazias e atividades que não levam a lugar nenhum. A sombra que tenta travar o seu progresso é o medo da exposição pública ou o receio do que vão pensar da sua arte e das suas ideias.</p>
     <p>Pode ser que você sinta bloqueios criativos que escondem sua essência do mundo, mas não se deixe enganar. <strong>MASCULINO-FEMININO-NEUTRO</strong>, seu entusiasmo e sua alegria precisam de canais de expressão que produzam resultados reais, e não apenas barulho. Superar esse obstáculo exige que você organize sua mente e dê foco ao seu brilho. Ao vencer a dispersão típica da juventude, você se tornará uma pessoa capaz de comunicar verdades poderosas com uma clareza e uma influência que poucos possuem.</p>
        
-       <hr>
+       <br>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
   
@@ -1851,7 +1851,7 @@ desafios: {
     <p>Este primeiro grande desafio exige que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, encare de frente a disciplina que a construção de um futuro exige. Durante sua juventude, obrigações e rotinas podem parecer correntes pesadas, levando você a buscar atalhos perigosos ou a fugir de tarefas que exigem esforço contínuo. A armadilha aqui é a instabilidade; sem bases sólidas, qualquer construção desmorona, e a vida quer que você aprenda isso antes de dar passos maiores.</p>
     <p>Desde cedo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você será testado(a) na sua persistência e na sua capacidade de lidar com o que é repetitivo e árduo. O aprendizado consiste em transformar a resistência ao trabalho em uma competência reconhecida. Você precisa dominar seu tempo e seus recursos com método. Ao superar essa tendência à procrastinação ou à desorganização, você emerge como uma pessoa de confiança inabalável, alguém que o mundo olha e sabe que pode contar para edificar projetos que duram para sempre.</p>
       
-      <hr>
+      <br>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -1866,7 +1866,7 @@ desafios: {
     <p>Liberdade é o seu oxigênio, mas neste ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a busca desenfreada por ela pode se tornar sua maior inimiga. O desafio envolve lidar com uma inquietação que faz você querer mudar de direção toda vez que o entusiasmo inicial esfria. Seja em relacionamentos, estudos ou projetos, a sombra aqui é a superficialidade e a dificuldade de levar as coisas até o fim, criando uma trilha de começos sem conclusões.</p>
     <p>Você será colocado(a) em situações que exigem constância e profundidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A lição de ouro para você é compreender que a liberdade real não é fugir de compromissos, mas ter o autocontrole necessário para escolher suas prisões e transformá-las em palácios. Ao desenvolver essa disciplina interior, sua versatilidade natural deixará de ser dispersão e se tornará uma adaptabilidade genial, permitindo que você evolua constantemente sem nunca perder o chão.</p>
       
-       <hr>
+       <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
    
@@ -1881,7 +1881,7 @@ desafios: {
     <p>Cuidado com a armadilha do perfeccionismo e com o peso de carregar o mundo nas costas, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Neste desafio, você pode sentir uma pressão esmagadora para resolver a vida de todos ao seu redor, assumindo fardos familiares e encargos emocionais que não pertencem à sua fase de vida. A sombra aqui é a cobrança ácida, tanto consigo mesmo(a) quanto com aqueles que você ama, tentando moldar os outros à sua imagem e semelhança.</p>
     <p>A vida está tentando lhe ensinar, <strong>MASCULINO-FEMININO-NEUTRO</strong>, que o amor verdadeiro não controla, ele liberta. O seu desafio é aprender a oferecer suporte sem assumir a responsabilidade pelo destino alheio. Ao encontrar o equilíbrio entre o cuidado com o outro e o respeito à autonomia de cada um, você construirá relações sólidas e harmoniosas, baseadas em um carinho real que não sufoca, mas que nutre e fortalece todos os vínculos que você criar.</p>
     
-        <hr>
+        <br>
     <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -1896,7 +1896,7 @@ desafios: {
     <p>Seu desafio inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pode se manifestar como um muro de isolamento intelectual e uma dificuldade latente de deixar as pessoas entrarem no seu mundo emocional. Com uma tendência a analisar tudo friamente, você pode acabar se escondendo no silêncio, desconfiando das intenções alheias e evitando a vulnerabilidade das trocas sociais. A sombra aqui é o cinismo ou a distância emocional que o(a) afasta da riqueza das conexões humanas.</p>
     <p>Neste ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, o convite é para equilibrar seu pensamento brilhante com a sua sensibilidade. O desafio é aprender a compartilhar suas descobertas e seus sentimentos sem o medo paralisante de parecer imperfeito(a). Ao derrubar esse muro de isolamento, sua sabedoria deixará de ser apenas teórica e se tornará humana e vibrante, permitindo que você se conecte com o mundo de uma forma profunda, técnica e, acima de tudo, real.</p>
          
-        <hr>
+        <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -1911,7 +1911,7 @@ desafios: {
     <p>Poder e dinheiro são os temas que vão testar você neste ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Podem surgir experiências que coloquem à prova sua relação com a ambição, o status e o reconhecimento social. A armadilha aqui é oscilar entre o medo do fracasso material e uma obsessão doentia por poder, onde o fim justifica os meios. É um período de aprendizado intenso sobre o peso e a medida das suas conquistas no mundo físico.</p>
     <p>A vida exige que você desenvolva um senso de justiça afiado e entenda que o sucesso sem ética é apenas uma ilusão passageira, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você aprenderá que a liderança que perdura é aquela que tem consciência do impacto social de cada decisão tomada. Ao superar este desafio de autoridade, você ganhará a maturidade necessária para administrar grandes recursos e altas responsabilidades com uma visão estratégica, equilibrada e, sobretudo, vitoriosa.</p>
       
-      <hr>
+      <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
    
@@ -1943,7 +1943,7 @@ desafios: {
    
      
    
-      <h4>style="margin-top: 30px;">⚠️ Convergência de Desafios e Ciclos de Vida</h4>
+      <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
     <h4>⚠️ Situação de Atenção: Número 1</h4>
@@ -1957,7 +1957,7 @@ desafios: {
   <p>A vida agora sobe o tom e exige que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, domine a diplomacia e a cooperação em um nível de inteligência emocional muito mais sofisticado. Durante esta fase de realização, a sombra da hipersensibilidade pode surgir como uma armadilha, fazendo você levar críticas profissionais para o lado pessoal ou recuar diante de tensões naturais do mercado. Você precisará aprender a arte suprema de negociar e ceder quando necessário, mas sem nunca, em hipótese alguma, anular a sua essência.</p>
   <p>O risco real aqui para você é o desenvolvimento de uma passividade defensiva — aquele silêncio de quem prefere não opinar só para não gerar desconforto. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o universo o(a) convoca para ser o ponto de equilíbrio, o(a) mestre(a) da harmonia, mas sem se tornar submisso(a) aos caprichos alheios. Ao superar essa fragilidade emocional, você se transforma na peça-chave de qualquer organização ou família, sendo admirado(a) pela capacidade quase mágica de unir forças opostas e criar paz onde antes só existia o caos.</p>
 
-    <hr>
+    <br>
     <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -1972,7 +1972,7 @@ desafios: {
   <p>Neste segundo ciclo de desafios, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a vida exige que você traga um foco cirúrgico e uma profundidade rara à sua comunicação. Não há mais espaço para amadorismo ou dispersão criativa. Você pode se sentir tentado(a) a manter uma vida social vibrante, porém superficial, o que neste momento pode ser o veneno que compromete sua reputação profissional. A sombra aqui é o uso da sua palavra apenas como uma ferramenta de vaidade, sem um propósito real que sustente suas falas.</p>
   <p>Chegou o momento de você se tornar a autoridade máxima naquilo que comunica, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Isso exige a disciplina de mergulhar fundo nos temas antes de abrir a boca para o mundo. O seu desafio é vencer aquela autocrítica paralisante que impede sua autenticidade e, ao mesmo tempo, controlar o impulso de falar apenas por falar. Ao canalizar seu entusiasmo de forma produtiva e técnica, você transformará seu carisma natural em um motor de realização formidável, capaz de inspirar multidões com uma clareza que só os grandes líderes possuem.</p>
  
-    <hr>
+    <br>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -1987,7 +1987,7 @@ desafios: {
   <p>Focar na construção da sua estabilidade definitiva: esse é o seu lema agora, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você precisa superar qualquer resistência que ainda sinta em relação à ordem, ao método e à rotina. Na fase adulta, o universo avisa que você não pode mais contar apenas com a sorte ou com o talento bruto; a vida exige que você seja a própria estrutura que sustenta seus sonhos. A sombra aqui é a teimosia cega ou aquele cansaço mental que o(a) leva a negligenciar detalhes técnicos que são cruciais para o seu império.</p>
   <p>Você terá que aprender a olhar para a rotina não como uma prisão, mas como a maior aliada do seu sucesso estrondoso. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o seu desafio é manter a mente flexível enquanto ergue paredes rígidas e seguras, evitando que o excesso de senso de dever afaste as pessoas que você ama. Ao superar essa tendência à desorganização ou ao desânimo diante do trabalho pesado, você se tornará uma rocha de confiança inabalável, erguendo sua vida sobre fundamentos tão sólidos que nada no mundo será capaz de derrubar.</p>
     
-    <hr>
+    <br>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2002,7 +2002,7 @@ desafios: {
   <p>O seu desafio na maturidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o controle absoluto daquela inquietude interna que sopra no seu ouvido pedindo mudanças drásticas sem motivo real. Você poderá sentir um desejo súbito de chutar o balde e abandonar caminhos que levou anos para consolidar, apenas pelo prazer da adrenalina do novo. A sombra aqui é a falta de raízes e a dificuldade perigosa em aprofundar os compromissos que realmente importam para o seu futuro.</p>
   <p>O teste para você é saber usar sua versatilidade genial para inovar dentro das estruturas que você já conquistou, em vez de destruí-las para começar do zero repetidamente. <strong>MASCULINO-FEMININO-NEUTRO</strong>, cultive o autodomínio sobre seus impulsos e evite excessos que possam manchar sua credibilidade duramente conquistada. O grande aprendizado para você agora é entender que a verdadeira liberdade não é a ausência de laços, mas sim o estado de consciência de quem escolhe onde quer estar e permanece lá por decisão própria e poder de vontade.</p>
    
-     <hr>
+     <br>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2016,7 +2016,7 @@ desafios: {
   <p>Neste segundo ciclo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a vida o(a) convoca para um nível superior de desprendimento: superar o perfeccionismo e o desejo quase obsessivo de controlar os passos de quem está sob sua proteção. Na fase adulta, o risco para você é se transformar em uma presença pesada e opressora, acreditando que só você detém a fórmula certa para a felicidade alheia. A sombra aqui é a cobrança ácida e a incapacidade de lidar com as falhas dos outros.</p>
   <p>Você precisará, com urgência, aprender a oferecer suporte real sem impor condições ou "pedágios" emocionais. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o seu desafio é encontrar o equilíbrio fino entre o seu idealismo elevado e a realidade imperfeita das pessoas, transformando sua crítica em um acolhimento que realmente cura. Ao superar essa tendência ao controle, você se tornará uma presença magnética e harmonizadora, alguém que todos buscam pela sensação de justiça, paz e equilíbrio que você emana de forma natural e poderosa.</p>
      
-    <hr>
+   <br>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2031,7 +2031,7 @@ desafios: {
   <p>Este seu segundo desafio foca na superação do isolamento mental e daquele ceticismo frio que pode endurecer sua alma durante os anos de luta e realização, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você poderá sentir uma tendência perigosa de se fechar em um casulo de especialização técnica, tratando as emoções e os mistérios da vida como distrações inúteis ou "fraquezas". A sombra aqui é o orgulho intelectual e o distanciamento gélido das relações humanas reais.</p>
   <p>O universo o(a) desafia a permitir-se ser vulnerável e a compartilhar suas descobertas intelectuais com o mundo de forma generosa. <strong>MASCULINO-FEMININO-NEUTRO</strong>, você será chamado(a) a integrar sua mente analítica brilhante com uma espiritualidade prática e vivida, reconhecendo que a razão sozinha não explica a magia da existência. Ao derrubar esse muro de isolamento, você transformará seu conhecimento técnico em uma sabedoria profunda, conectada e extremamente influente, que servirá de guia para muitos outros buscadores.</p>
   
-   <hr>
+   <br>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
    
@@ -2046,7 +2046,7 @@ desafios: {
   <p>Chegou a hora de provar sua maestria sobre o poder, a autoridade e as leis sagradas da prosperidade material, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Na maturidade, a vida exigirá que você lidere grandes frentes e administre recursos com uma eficiência executiva de alto nível. A sombra que o(a) espreita é a ganância cega ou o medo paralisante de falhar financeiramente, o que pode levar você a agir com uma dureza excessiva ou com uma cautela que beira a estagnação.</p>
   <p>Você precisará compreender, no fundo da alma, que o poder é apenas uma ferramenta de justiça e que seu sucesso material só será eterno se estiver alinhado com uma ética inabalável. <strong>MASCULINO-FEMININO-NEUTRO</strong>, ao superar essa tensão constante entre o "ter" e o "ser", você desenvolverá uma capacidade de realização extraordinária. Você será capaz de transmutar grandes visões em realidades físicas palpáveis, criando uma riqueza que transborda e gera prosperidade não só para você, mas para todos que tiverem a honra de estar sob sua liderança.</p>
       
-     <hr>
+     <br>
       <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2078,7 +2078,7 @@ desafios: {
     <p>A grande lição de vida para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é construir um "eu" tão sólido que não tema a solidão que a liderança muitas vezes impõe. Você precisa integrar no seu íntimo que sua originalidade não é um defeito, mas seu maior trunfo estratégico. O seu embate principal é transformar a insegurança em uma coragem serena, agindo como o(a) arquiteto(a) do seu próprio destino e provando ao mundo que o mérito individual é o único alicerce de um sucesso que realmente permanece.</p>
      <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-     <hr>
+     <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2094,7 +2094,7 @@ desafios: {
     <p>O desafio que você deve vencer é o de estabelecer limites de aço, aprendendo a dizer "não" com uma firmeza que não permita abusos, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A lição final é entender que a união verdadeira só acontece entre dois seres inteiros, e nunca na dependência. Ao superar essa fragilidade, você emergirá como uma presença mediadora extraordinária, alguém que todos respeitam pela capacidade de acolher sem se perder e de unir sem jamais aprisionar a alma alheia.</p>
        <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-      <hr>
+      <br>
        <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
    
@@ -2125,7 +2125,7 @@ desafios: {
     <p>A sombra que você precisa vencer é a impaciência e a dificuldade em aceitar que os resultados grandiosos exigem tempo, suor e uma atenção obsessiva aos detalhes, <strong>MASCULINO-FEMININO-NEUTRO</strong>. A vida vai cobrar de você o desenvolvimento de uma disciplina de ferro para lidar com a matéria. O seu desafio não é se tornar uma pessoa rígida ou amargurada pelas obrigações, mas encontrar a verdadeira liberdade através da competência técnica, transformando seu trabalho diário em uma missão de honra que deixará marcas eternas.</p>
       <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-      <hr>
+      <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2141,7 +2141,7 @@ desafios: {
     <p>A vida espera que você desenvolva a perseverança de ficar e agir exatamente quando a vontade for de fugir, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O seu grande aprendizado é que o compromisso não é uma gaiola, mas a pista de decolagem para voos muito mais altos e seguros. Use sua versatilidade para inovar e gerar progresso real, transformando essa sua inquietação natural em um motor potente de evolução constante que entrega valor real ao mundo.</p>
     <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-    <hr>
+   <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2157,7 +2157,7 @@ desafios: {
     <p>Você precisa, <strong>MASCULINO-FEMININO-NEUTRO</strong>, integrar a lição do desapego amoroso: aceitar que cada alma tem o direito sagrado às suas próprias falhas e aprendizados. O seu desafio é encontrar harmonia dentro do caos e beleza na imperfeição alheia, transmutando seu senso de dever em uma compaixão que não julga. Ao vencer essa tendência ao controle, você se tornará um pilar de equilíbrio e suporte tão puro que as pessoas mudarão ao seu lado apenas pelo exemplo da sua paz.</p>
       <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-     <hr>
+     <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2173,7 +2173,7 @@ desafios: {
     <p>O universo desafia você a derrubar essas pontes levadiças e permitir que as pessoas conheçam suas dúvidas e fragilidades, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Somente ao se mostrar humano(a) você encontrará o pertencimento que tanto busca. Ao superar essa barreira de vidro, você integrará seu intelecto poderoso com uma espiritualidade vívida, tornando-se alguém capaz de guiar multidões através de uma sabedoria que une, finalmente, a razão e o sentimento.</p>
       <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-     <hr>
+     <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
@@ -2189,7 +2189,7 @@ desafios: {
     <p>Você precisa entender, no âmago do seu ser, que o poder verdadeiro só permanece quando nasce da integridade e do serviço ao coletivo. <strong>MASCULINO-FEMININO-NEUTRO</strong>, o seu desafio é equilibrar sua ambição legítima com uma consciência espiritual aguçada, agindo sempre com uma honestidade brutal e um senso de justiça que não se dobra. Ao dominar essa frequência, você manifestará a prosperidade real em sua vida e se tornará o(a) administrador(a) exemplar da abundância no mundo, criando riqueza que dura por gerações.</p>
       <pstyle="margin-top:15px; background:#fff5f5; padding:15px; border-radius:8px; border:1px solid #ffebeb; font-style:italic; font-size:14px; color:#666;">    
          Nota: Diferente dos desafios temporários, esta vibração exige atenção constante para o seu pleno alinhamento.</p>
-     <hr>
+     <br>
         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
