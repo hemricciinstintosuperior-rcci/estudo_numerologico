@@ -1942,8 +1942,7 @@ desafios: {
   <p>Você precisará, mais do que nunca, exercitar a bravura de ser a voz dissidente e o(a) primeiro(a) a iniciar projetos disruptivos. <strong>MASCULINO-FEMININO-NEUTRO</strong>, entenda que seu sucesso agora depende da sua disposição em agir de forma soberana e solitária se for preciso. O seu grande salto de evolução será desvincular seu valor pessoal da aprovação de quem detém o poder. Ao vencer essa insegurança, você conquistará o respeito inquestionável de seus pares, não pelo que você tem, mas pela autenticidade do seu caráter e pela coragem de quem não teme desbravar o desconhecido.</p>
    
      <br>
-   
-      <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
+         <h4>⚠️ Convergência de Desafios e Ciclos de Vida</h4>
     <p><strong>Nota Importante:</strong> As análises abaixo tornam-se relevantes quando o número de um <strong>Desafio</strong> coincide com o número de um <strong>Ciclo de Vida</strong>, <strong>Momento Decisivo</strong> ou <strong>Caminho de Vida</strong>. Nestes períodos, o mapa indica situações que podem ocorrer e que exigem maior atenção.</p>
     
     <h4>⚠️ Situação de Atenção: Número 1</h4>
