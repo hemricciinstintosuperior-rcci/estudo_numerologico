@@ -3759,14 +3759,14 @@ html += `
         }
 
         
-html += `<div class="grupo-respostas-bloco pula-pagina">`;
+
         html += ` 
-            <div style="margin-bottom: 18px;">
+            <div class="evitar-corte" style="margin-bottom: 18px;">
                 <span style="color: #d97a1e; font-weight: bold; font-size: 20px; text-transform: uppercase;">
                    Idade ${info.idade} -  Data ${info.anos}
                 </span>
                 <div class="conteudo-travado">
-                    <div class="texto-res" style="margin-top: 10px; line-height: 1.6;">
+                    <div class="evitar-corte" class="texto-res" style="margin-top: 10px; line-height: 1.6;">
                     ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
                 </div></div>
                         <div class="aviso-trava">
@@ -3784,7 +3784,7 @@ html += `<div class="grupo-respostas-bloco pula-pagina">`;
  html += `</div>`;
 // ... (depois de terminar os Desafios)
 
-html += `</div>`;
+
 
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
