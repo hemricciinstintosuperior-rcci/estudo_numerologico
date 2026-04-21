@@ -613,10 +613,10 @@
         /* PADRÃO PARA TODAS AS INTRODUÇÕES */
     .intro-texto, .intro-secao {
         font-size: 18px !important; /* Tamanho fixo para todas */
-        line-height: 1.1 !important;
+        line-height: 1.2 !important;
         color: #111 !important;
         text-align: justify !important;
-        margin-bottom: 5px !important;
+        margin-bottom: 10px !important;
         border-bottom: 1px solid #ffffff!important;
         font-family: 'Arial', sans-serif; /* Ou a fonte de sua preferência */
         font-style: arial;
@@ -678,10 +678,6 @@ input:focus {
     border: 2px solid #d4af37;
     background-color: #fff;
 }    
-
-
-
-    
 
 @media print {
     /* Define as regras para a folha física */
@@ -782,9 +778,6 @@ input:focus {
     }
 }  
 
-
-
-    
     </style>
 </head>
 <body>
@@ -798,7 +791,6 @@ input:focus {
     </div>
 
     <div id="resultado" style="width: 100%; max-width: 650px;"></div>
-
    <script src="textos.js"></script>
 
     <script>
@@ -2161,10 +2153,16 @@ let vTransitoCalculado = reduzirPuro(letrasAno.reduce((s, l) => s + calcularValo
 
         <div class="secao-card" style="width: 100%; border-top: 1px solid #ffffff; margin-top: 30px;">
             <h2 class="titulo-topico" style="border-bottom: 2px solid #ffffff;">Ciclos de Trânsito</h2>
-            <div class="intro-secao" style="margin-bottom: 20px; font-size: 17px; line-height: 1.6; color: #333;">
-                <p>Os <b>Ciclos de Trânsito</b> representam a síntese das energias que regem o seu momento atual. Ele é o resultado direto da soma e redução dos quatro pilares do seu <b>Plano de Expressão</b>: o Físico, o Mental, o Emocional e o Intuitivo. Esta correlação profunda indica como a integração de todas as suas facetas está se manifestando agora.</p>
-            <p>Ao unir essas quatro forças, o Trânsito revela a frequência vibracional dominante para este período específico, servindo como um mapa prático para orientar as ações e decisões enquanto essa influência estiver vigente em sua jornada.</p>
+            <div class="intro-secao" style="margin-bottom: 20px; font-size: 18px; line-height: 1.6; color: #333;">
+            <p style="margin-bottom: 20px;">Os <b>Ciclos de Trânsito</b> representam a síntese das energias mais profundas que regem o seu momento atual, atuando como um barômetro da sua realidade imediata. Diferente do Ano Pessoal, que segue uma cronologia padrão, o Trânsito é uma força personalizada que emerge diretamente da estrutura da sua alma. Ele é o resultado matemático e vibracional da soma e redução dos quatro pilares fundamentais do seu <b>Plano de Expressão</b>: o Físico, o Mental, o Emocional e o Intuitivo. Esta correlação profunda indica como a integração de todas as suas facetas internas está se projetando e se manifestando no mundo externo agora.</p>
+
+    <p style="margin-bottom: 20px;">Ao unir essas quatro forças vitais, o Trânsito revela a frequência vibracional dominante para este período específico da sua vida, servindo como um mapa prático e altamente preciso para orientar suas ações e decisões. É através desta vibração que você compreende como seu corpo físico, sua lógica mental, suas reações emocionais e sua percepção intuitiva estão trabalhando em conjunto. Quando essas energias são sintetizadas em um único número de ciclo, você obtém uma visão clara de qual é o "clima" existencial que você deve navegar, permitindo um alinhamento muito mais assertivo com as oportunidades que surgem no seu caminho.</p>
+
+    <p style="margin-bottom: 20px;">Entender o Ciclo de Trânsito é compreender a engrenagem interna que move a sua expressão no mundo, pois ele não é uma influência externa passageira, mas sim o reflexo de como você está processando a vida em todos os níveis. Enquanto esta influência estiver vigente em sua jornada, ela ditará o tom das suas experiências e a melhor forma de aplicar seus talentos para obter resultados concretos. É um período de colheita e ajuste, onde a harmonia entre o sentir, o pensar e o agir se torna a chave para o sucesso. Ao respeitar essa frequência, você flui com as marés da vida em vez de lutar contra elas, utilizando cada pilar do seu ser para construir uma realidade mais sólida, consciente e alinhada com seu verdadeiro propósito.</p>
+
+   <p style="margin-bottom: 20px;">Este ciclo funciona como uma bússola de autoconhecimento aplicado, mostrando exatamente onde você deve focar sua energia para que o seu desenvolvimento não seja apenas teórico, mas manifestado na prática cotidiana. O domínio sobre esta vibração permite que você transforme potenciais abstratos em realizações tangíveis, aproveitando a força combinada dos seus planos de expressão. Portanto, encare este período como uma oportunidade única de observar como sua estrutura interna molda o seu destino, ajustando suas velas de acordo com a poderosa corrente energética que o Ciclo de Trânsito propicia para a sua evolução pessoal e material.</p>
             </div>
+            
 <div class="grupo-respostas-bloco pula-pagina">
              <div style="text-align:left; margin-bottom:15px;">
                 <div class="resultado-bloco">
@@ -2623,12 +2621,14 @@ function gerarCronogramaMensal(valorAnoPessoal, mesNascimento) {
         if (dados) {
             htmlGerado += `
             <div style="margin-bottom: 25px; border: 1px solid #d4af37; background: #fff; page-break-inside: avoid; border-radius: 8px; overflow: hidden;">
+            
                 <div style="background: #1a1a1a; padding: 10px 15px; display: flex; justify-content: space-between; align-items: center;">
+               
                     <strong style="color: #d4af37; text-transform: uppercase;">${nomeMes}</strong>
-                    <span style="background: #d4af37; color: #1a1a1a; padding: 2px 10px; border-radius: 20px; font-weight: bold; font-size: 0.8rem;">MÊS PESSOAL ${numMP}</span>
+                    <span style="background: #d4af37; color: #1a1a1a; padding: 2px 10px; border-radius: 20px; font-weight: bold; font-size: 0.9rem;">MÊS PESSOAL ${numMP}</span>
                 </div>
                 
-                <div style="padding: 15px; font-size: 0.9rem; line-height: 1.5; color: #333;">
+                <div style="padding: 15px; font-size: 1.2rem; line-height: 1.5; color: #333;">
                     <p style="color: #b8860b; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px;">${dados.titulo}</p>
                     
                     <p style="margin-bottom: 8px;"><strong>👤 Pessoal:</strong> ${dados.pessoal}</p>
@@ -2714,9 +2714,7 @@ function calcularNumerosSocial(nome) {
     };
 }
 
-
-
-
+        
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -3000,8 +2998,6 @@ const datasFases = {
 const piramideVida = gerarPiramide(nomeRaw);
 const regenteVida = piramideVida.at(-1)[0];
 const dadosNegativas = detectarNegativas(piramideVida);
-// --- CONTINUE COLANDO AQUI (LOGOTIPOS APÓS A LINHA DA PIRÂMIDE) ---
-
 
 
 
@@ -3041,14 +3037,14 @@ let html = `
     font-size: 28px; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
-    color: #827108; 
+    color: #ffffff; 
     font-weight: bold;">${nomeRaw}</strong><br>
                 <strong style="
     font-family: 'Cinzel', serif; 
     font-size: 28px; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
-    color: #827108; 
+    color: #ffffff; 
     font-weight: bold;"> ${dataRaw.split('-').reverse().join('/')}</strong>
             </div>
             
@@ -3057,7 +3053,6 @@ let html = `
         </div>
     </div> <div id="conteudo-relatorio" style="background: #ffffff; width: 210mm; margin: 0 auto;">
 `;
-                
 
 // --- PÁGINA 1: SUMÁRIO (AJUSTADA PARA CABER EM UMA FOLHA) ---
 html += `
@@ -3065,7 +3060,7 @@ html += `
     
     <div style="text-align: center; margin-bottom: 5px;">
         <h2 style="color: var(--gold); font-size: 0.4rem; letter-spacing: 6px; text-transform: uppercase; margin: 0; font-weight: 300;">
-            
+    
         </h2>
      
     </div>
@@ -3098,7 +3093,7 @@ html += `
   html += `
     <div class="capa-transicao">
         <p>  </p>
-        <h2>Introdução<br><br>Resultado, Nome Social e <br>  Direcionamento</h2>
+        <h2>Introdução<br><br>Resultado, Nome Social & <br>  Direcionamento</h2>
         <p>Resultado Numerológico ✶ Nome Social ✶ Cabala Ancestral ✶ Direcionamento de Jornada</p>
     </div>
 `;  
@@ -3309,7 +3304,7 @@ if (nomeSocialValor !== "") {
 </div>
 
 <div style="background: #f9f9f9; padding: 12px; border-radius: 8px; border-left: 4px solid var(--gold); font-size: 18px; margin-top: 5px;">
-    <p style="margin-bottom: 5px;"><strong>Vontade Interna:</strong> ${aplicarFiltroTexto(tMot)}</p>
+    <p style="margin-bottom: 5px;"><strong>Vontade Interna:</strong> ${aplicarFiltroTexto(tMot)}</p><br>
     <p style="margin: 0;"><strong>Imagem Externa:</strong> ${aplicarFiltroTexto(tImp)}</p>
 </div>
             
@@ -3471,7 +3466,7 @@ html += `
 html += `
     <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 2 <br><br>Sua Essência e <br> Identidade Numerológica</h2>
+        <h2>Parte 2 <br><br>Sua Essência & <br> Identidade Numerológica</h2>
         <p>A definição da sua personalidade e propósito original..</p>
     </div>
     `;
@@ -3527,7 +3522,7 @@ html += `
 html += `
     <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 3 <br><br>Alinhamento e <br> Superação de Desafios</h2>
+        <h2>Parte 3 <br><br>Alinhamento & <br> Superação de Desafios</h2>
         <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
     </div>
 `;
@@ -3704,9 +3699,15 @@ html += `
 html += `
     <div class="page">
         <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">O Desafio Principal</h2>
-        <div class="intro-texto"><p>O Desafio Principal é a vibração mestra que permeia toda a jornada de um indivíduo, do nascimento à maturidade. Diferente dos desafios temporários das fases iniciais ou adultas, esta é a lição central que a alma busca integrar. Ela representa a sombra mais persistente e, simultaneamente, a maior oportunidade de crescimento espiritual e autorrealização.</p>
-    <p>Superar o Desafio Principal exige uma vigilância constante sobre padrões repetitivos de comportamento. Ele funciona como um "norte" para o desenvolvimento do caráter: ao enfrentar e transmutar as dificuldades impostas por essa frequência, <strong>você</strong> desbloqueia o fluxo de todos os outros talentos do mapa. É o ponto onde a resistência se transforma em maestria, permitindo que a vida seja conduzida com integridade, consciência e propósito real.</p>
+        <div class="intro-texto"><p>O Desafio Principal representa a vibração mestra que permeia toda a jornada de um indivíduo, desde o momento do nascimento até a plena maturidade. Diferente dos desafios temporários que marcam fases específicas da vida, esta é a lição central e definitiva que a alma busca integrar nesta existência. Ele atua como a sombra mais persistente em seu caminho, mas simultaneamente revela-se como a maior oportunidade de crescimento espiritual e autorrealização profunda.</p>
 
+<p>Superar este desafio exige uma vigilância constante e consciente sobre os padrões repetitivos de comportamento que tendem a limitar seu progresso. Ele funciona como um "norte" magnético para o desenvolvimento do seu caráter e da sua força interior. Ao enfrentar e transmutar as dificuldades impostas por essa frequência específica, você desbloqueia o fluxo de todos os outros talentos e potencialidades presentes em seu mapa numerológico.</p>
+
+<p>É exatamente neste ponto de maior tensão que a resistência se transforma em maestria, permitindo que a vida seja conduzida com integridade, clareza e um propósito real. Este terceiro desafio, por ser o pilar principal, não se esgota com o tempo; ele demanda um compromisso vitalício com a evolução pessoal. Quando você aprende a navegar por essa energia, o que antes era um obstáculo intransponível passa a ser a base sólida de sua sabedoria.</p>
+
+<p>A jornada para vencer o Desafio Principal requer coragem para olhar para dentro e identificar as raízes de suas inibições mais profundas. Muitas vezes, ele se manifesta em situações recorrentes que testam sua paciência, ética ou capacidade de superação. No entanto, cada vitória sobre essa vibração fortalece sua essência e o aproxima da plenitude. Trata-se de uma lapidação contínua que refina sua expressão no mundo e traz um sentido maior às suas experiências diárias.</p>
+
+<p>Ao dominar esta lição central, você deixa de ser refém das circunstâncias para se tornar o arquiteto consciente do seu destino. A integração bem-sucedida desta energia é o que garante que sua caminhada seja leve e produtiva, transformando fraquezas em diferenciais de caráter. Este é o convite final da numerologia: converter o seu maior desafio na sua maior realização, vivendo em total harmonia com as leis que regem o seu universo pessoal.</p>
     </div>
         
          <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.desafios[3][res.desafios[3]])}</div>
@@ -3719,7 +3720,7 @@ html += `
 html += `
     <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 4 <br><br>Ciclos, Trajetórias e <br> Tendências do Momento</h2>
+        <h2>Parte 4 <br><br>Ciclos, Trajetórias & <br> Tendências do Momento</h2>
      
         <p>A análise das janelas de oportunidade e as frequências que regem o seu agora.</p>
     </div>
@@ -3764,16 +3765,16 @@ html += `
             <div class="evitar-corte" style="margin-bottom: 30px;">
                 <span style="color: #d97a1e; font-weight: bold; font-size: 20px; text-transform: uppercase;">
                    Idade ${info.idade} -  Data ${info.anos}
-                </span>
+                </span><br>
                 <div class="conteudo-travado">
-                    <div class="evitar-corte" class="texto-res" style="margin-top: 20px; line-height: 1.6;font-size: 18px;">
+                    <div class="evitar-corte" class="texto-res">
                     ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
                 </div></div>
                         <div class="aviso-trava">
             🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
 
          </div>
-                  <br style="border:0; border-top:1px solid #ffffff; margin-top: 30px;">
+                  <hr style="border:0; border-top:1px solid #ffffff; margin-top: 15px;">
                  
   
            </div>`;
@@ -3785,7 +3786,7 @@ html += `
 // ... (depois de terminar os Desafios)
 
 
-
+    
 // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
 const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
    // Crie esta linha logo ACIMA do código da ondinha:
@@ -3867,7 +3868,7 @@ const anoAtualParaCronograma = res.anoPessoal;
 // =========================================================
 
 // Título Ano Atual
-tituloBonito = "Ano Pessoal - Ciclo Atual";  
+tituloBonito = "Ano Pessoal";  
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -3876,10 +3877,21 @@ html += `
 </div>
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Ciclo Atual</h2>
-    <div class="resultado-bloco">
-        <div class="intro-texto" style="margin-bottom:15px; font-style:italic; color:#555;">
+   
+        <div class="intro-texto" style="margin-bottom: 1px; font-style:arial; color:#555;">
             ${aplicarFiltroTexto(textos.introducoes.anoPessoal || "")}
-        </div>
+        </div>`;
+
+        // Título Ano Atual
+
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2> ${nomesExibicao.anoPessoal} + Planejamento Mensal<br> Ciclo Atual</h2>
+    </div>
+</div>
+<div class="page">
+    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Ciclo Atual</h2>
         <h3 class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
             Vigência: ${vigenciaCiclo1}
         </h3>
@@ -3889,15 +3901,11 @@ html += `
 
 // Título Meses do Ano Atual
 const cronogramaAtualHTML = gerarCronogramaMensal(anoAtualParaCronograma, mesParaCronograma);
+    
 html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>Planejamento Mensal: Ano Pessoal ${anoAtualParaCronograma}</h2>
-    </div>
-</div>
-<div class="page">
+<div class="page"><h3 style="text-align:center; margin-bottom:20px;">Planejamento Mensal: Ano Pessoal ${anoAtualParaCronograma}</h3>
     <div class="texto-res">
-        <p style="text-align:center; margin-bottom:20px;">Este ciclo inicia no mês do seu aniversário e mostra as vibrações até o fechamento do seu ano pessoal atual.</p>
+        <p style="text-align:center; margin-bottom:0px;">Este ciclo inicia no mês do seu aniversário e mostra as vibrações até o fechamento do seu ano pessoal atual.</p>
         ${cronogramaAtualHTML}
     </div>
 </div>`;
@@ -3907,16 +3915,15 @@ html += `
 // BLOCO 2: PRÓXIMO ANO PESSOAL + SEUS MESES
 // =========================================================
 
-// Título Próximo Ano
-tituloBonito = "Ano Pessoal - Próximo Ciclo";  
+
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
+        <h2>${nomesExibicao.anoPessoal} + Planejamento Mensal<br> Próximo Ciclo</h2>
     </div>
 </div>
 <div class="page">
-    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${nomesExibicao.anoPessoal} - Próximo Ciclo</h2>
+    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Ano Pessoal: ${nomesExibicao.anoPessoal} + Planejamento Mensal<br> Próximo Ciclo"</h2>
     <div class="resultado-bloco">
         <h3 class="vigencia-texto" style="color: #666; font-weight: bold; margin-bottom: 15px;">
             Vigência: ${vigenciaCiclo2}
@@ -3928,21 +3935,22 @@ html += `
 // Título Meses do Próximo Ano
 const cronogramaProximoHTML = gerarCronogramaMensal(proximoAnoPessoal, mesParaCronograma);
 html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>Planejamento Mensal: Ano Pessoal ${proximoAnoPessoal}</h2>
-    </div>
-</div>
+
+       
+ 
 <div class="page">
-    <div class="texto-res">
-        <p style="text-align:center; margin-bottom:20px;">Projeção para o ciclo seguinte, iniciando no seu próximo aniversário.</p>
+ 
+   
+    <div class="texto-res"> 
+    <h3 style="text-align:center; margin-bottom:20px;">Planejamento Mensal: Ano Pessoal ${proximoAnoPessoal}</h3>
+        <p style="text-align:center; margin-bottom:0px;">Projeção para o ciclo seguinte, iniciando no seu próximo aniversário.</p>
         <div class="conteudo-travado">
         ${cronogramaProximoHTML}
         </div>
         <div class="aviso-trava">
             🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
-         </div> 
-         
+        
+         </div>
          </div>
 </div>`;
 
@@ -3950,7 +3958,7 @@ html += `
 html += `
     <div class="capa-transicao">
         <h4>   <h4>
-        <h2>Parte 5 <br><br>Matriz e Regente <br>Sequências Numéricas e Potências  </h2>
+        <h2>Parte 5 <br><br>Matriz, Regente <br>Sequências Numéricas & Potências  </h2>
         <p>Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. </p>
     </div>
 `;
@@ -4071,7 +4079,7 @@ htmlPiramide += `
 </div>
 
 <div class="bloco-regente evitar-corte" style="margin-top: 50px; padding-top: 20px; border-top: 1px inset #fff;">
-    <div class="texto-res" style="font-size: 20px; color: #111;">
+    <div class="texto-res" style="font-size: 20px; color: #222;">
         ${aplicarFiltroTexto(textos.RegenteVida[regenteVida])}
     </div>
 </div>`; 
@@ -4087,15 +4095,19 @@ if(dadosNegativas.detalhes.length > 0){
         </div>
     </div>
     
-    <div class="intro-secao" style="margin: 30px 0; width: 100%; font-size: 20px; line-height: 1.6; color: #333; text-align: justify;">
+    <div class="intro-secao" style="margin: 30px 0; width: 100%; font-size: 21px; line-height: 1.6; color: #333; text-align: justify;">
         ${textos.introducoes.vulnerabilidades || `
-           <p>As <b>Sequências de Bloqueios</b> identificam pontos de tensão latentes em sua estrutura vibracional, manifestando-se como tendências e desafios desde o nascimento até a maturidade. Elas não devem ser interpretadas como punições ou destinos imutáveis, mas sim como indicadores de padrões onde a energia pessoal encontra maior resistência ou repetição.</p>
-<p>Muitas dessas sequências estão vinculadas a experiências fundamentais que demandam aprendizado contínuo e amadurecimento consciente. Elas sinalizam aspectos da sua natureza que ainda buscam plena integração e compreensão, funcionando como um mapa das lições que a vida solicita com maior insistência.</p>
-<p>Ao reconhecer essas frequências, você desenvolve a lucidez necessária para transcender comportamentos automáticos. Esse processo de autodomínio transforma obstáculos aparentemente intransponíveis em degraus estratégicos para uma evolução autêntica e deliberada.</p>
-        `}
+ <p style="margin-bottom: 20px;">As <b>Sequências de Bloqueios</b> identificam pontos de tensão latentes em sua estrutura vibracional, manifestando-se como tendências e desafios que o acompanham desde o nascimento até a plena maturidade. Elas representam os números iguais que aparecem de forma repetitiva em sua Matriz, como as sequências 111, 222, 333 e assim por diante, sinalizando áreas onde a sua energia pessoal encontra maior resistência ou padrões de repetição exaustivos. Estas sequências não devem ser interpretadas como punições ou destinos imutáveis, mas sim como indicadores precisos de comportamentos automáticos e limitações internas que precisam ser trabalhados e integrados com consciência ao longo da sua jornada evolutiva.</p>
+
+    <p style="margin-bottom: 20px;">Muitas dessas sequências estão profundamente vinculadas a experiências fundamentais que demandam um aprendizado contínuo e um amadurecimento constante por parte do indivíduo. Elas sinalizam aspectos da sua natureza que ainda buscam plena expressão, funcionando como um mapa exato das lições que a vida solicita com maior insistência e rigor. Quando uma pessoa nasce com essas vibrações em sua matriz, ela carrega consigo ferramentas que, embora potentes, estão inicialmente "travadas" ou desequilibradas, gerando bloqueios que podem afetar desde a vida profissional até os relacionamentos mais íntimos e a saúde emocional, exigindo um esforço de autolapidação constante.</p>
+
+    <p style="margin-bottom: 20px;">Ao reconhecer a existência dessas frequências em seu mapa, você desenvolve a lucidez necessária para transcender as reações instintivas e os ciclos de autossabotagem que esses números iguais tendem a provocar. Esse processo de autodomínio transforma obstáculos aparentemente intransponíveis em degraus estratégicos para uma evolução autêntica e deliberada, permitindo que você tome as rédeas da sua própria energia. Trabalhar essas sequências negativas é, na verdade, um ato de libertação, onde você identifica a raiz do problema e aplica a cura através do autoconhecimento, garantindo que o seu potencial original não seja sufocado por medos ou padrões herdados que não servem mais ao seu crescimento.</p>
+
+    <p style="margin-bottom: 20px;">Portanto, encare este estudo das sequências de bloqueios como um manual de instruções para lidar com suas partes mais complexas e desafiadoras. À medida que você domina essas vibrações, a resistência diminui e a sua vida passa a fluir com uma leveza que antes parecia inalcançável. A transmutação dessas energias é o que diferencia o ser que é refém do acaso daquele que se torna o mestre de sua própria vibração. Com paciência e disciplina, cada sequência negativa é gradualmente convertida em uma fonte de sabedoria prática, tornando sua jornada muito mais assertiva, próspera e livre das amarras que impedem a sua máxima performance humana e espiritual.</p>
+`}
     </div>
 
-    <h2 style="color:red; margin-top:30px; border-bottom: 2px solid red; padding-bottom:10px; text-align: center;"> Sequências de Vulnerabilidade</h2>
+    <h2 style="color:red; margin-top:30px; border-bottom: 2px #ffffff; padding-bottom:10px; text-align: left;"> </h2>
     `;
     
    
@@ -4119,17 +4131,27 @@ if(dadosNegativas.detalhes.length > 0){
 
         const datas = calcularDatasVigenciaNegativa(dataRaw, idadeInicio, duracaoTotal);
 
-        htmlPiramide += `
-             <div class="evitar-corte" style="margin-bottom: 25px; border-left:none; padding-left: 15px; text-align: center;">
-               <h2  style="color:red; font-size: 22px;">Bloqueio n°  ${neg.numero}  ⚠️</h2></b><br>
-                <span style="color:red; font-weight: bold;font-size: 21px;">📅 Período de maior influência: de ${datas.ini} até ${datas.fim}</span><br><br>
-                <span style="color:red; font-weight: bold;font-size: 21px;">Tempo : ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
-                <div class="conteudo-travado">
-                <p style="margin-top: 8px; color: #222; text-align: left;">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</p>
-                 </div>
-                 <div class="aviso-trava">
+htmlPiramide += `
+    <div class="evitar-corte" style="margin-bottom: 35px; border-left:none; padding: 15px; text-align: center;">
+        
+        <h2 style="color:red; font-size: 24px; margin-bottom: 10px;">Bloqueio n° ${neg.numero} ⚠️</h2>
+        <span style="color:red; font-weight: bold; font-size: 21px; display: block; margin-bottom: 5px;">
+            📅 Período de maior influência: de ${datas.ini} até ${datas.fim}
+        </span>
+        <span style="color:red; font-weight: bold; font-size: 21px; display: block; margin-bottom: 20px;">
+            Tempo: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)
+        </span>
+
+        <div class="conteudo-travado" style="text-align: left; font-size: 18px; line-height: 1.7; color: #222;">
+            <p style="margin-top: 8px;">
+                ${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}
+            </p>
+        </div>
+
+        <div class="aviso-trava" style="margin-top: 20px; font-weight: bold; color: #666;">
             🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
-         </div></div>`;
+        </div>
+    </div>`;
     });
 }
 
@@ -4159,7 +4181,7 @@ if (listaEspeciais.length > 0) {
         htmlPiramide += `
              <div class="evitar-corte" style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#d97a1e; font-size: 22px;">Alinhamento Especial ${esp.numero}</h2>
-                <span style="color:#d97a1e; font-weight: bold; font-size: 19px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
+                <span style="color:#d97a1e; font-weight: bold; font-size: 20px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                <div class="conteudo-travado">
                 <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqEspeciais[esp.numero])}
@@ -4199,7 +4221,7 @@ if (listaFin.length > 0) {
              <div class="evitar-corte" style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#28a745; font-size: 22px;">Potencial de Prosperidade 99/9</h2>
                <div class="conteudo-travado">
-                <span style="color:#28a745; font-weight: bold; font-size: 19px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
+                <span style="color:#28a745; font-weight: bold; font-size: 20px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                 
                 <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqFinanceira[999])}
@@ -4350,25 +4372,25 @@ html += `
 
 <div class="secao-leis-universais">
     <h1 style="color: #111; font-size: 1.2rem; margin: 0;text-align: center;font-weight: 800;">   </h1>
-    <h3>1. Lei do Mentalismo</h3>
+    <h3>1. Lei do Mentalismo</h3><br>
     <p>A Lei do Mentalismo afirma que "O Todo é Mente; o Universo é Mental". Para aplicar isso como ferramenta, a pessoa deve entender que seus pensamentos são a matéria-prima de sua realidade. Trabalhar a mente exige vigilância constante sobre a qualidade do que se pensa, pois o pensamento atua como uma semente no jardim da existência. Ao compreender que o universo responde à sua frequência mental, você deixa de ser um espectador e se torna um arquiteto consciente. Educar a mente significa filtrar crenças limitantes e visualizar com clareza o que se deseja manifestar, sabendo que a estrutura da vida é construída primeiro no plano invisível da consciência antes de se materializar.</p>
-
-    <h3>2. Lei da Correspondência</h3>
+<br>
+    <h3>2. Lei da Correspondência</h3><br>
     <p>Esta lei estabelece que "o que está em cima é como o que está embaixo". Na prática, ela serve como um espelho: o seu mundo exterior é um reflexo direto do seu mundo interno. Se houver caos em suas finanças ou relacionamentos, é necessário olhar para dentro e organizar seus padrões internos. Para utilizar esta lei como ferramenta de crescimento, observe os sinais ao seu redor para diagnosticar seu estado de espírito. Ao mudar sua vibração interna e sua organização mental, a realidade externa é obrigada a se ajustar por correspondência. É a chave para entender que a microestrutura da sua vida pessoal segue os mesmos padrões da macroestrutura do universo.</p>
-
-    <h3>3. Lei da Vibração</h3>
+<br>
+    <h3>3. Lei da Vibração</h3><br>
     <p>A Lei da Vibração ensina que nada está parado; tudo se move e tudo vibra. Como ferramenta educativa, ela mostra que a depressão, o medo ou a escassez possuem vibrações baixas, enquanto o amor, a gratidão e a prosperidade vibram em frequências altas. Para trabalhar essa lei, a pessoa deve aprender a "mudar sua nota chave". Através da meditação, da alimentação consciente e de ambientes saudáveis, é possível elevar a própria frequência. Quando você muda sua vibração, você naturalmente atrai pessoas, oportunidades e situações que ressoam na mesma sintonia, transformando sua vida através da sintonia fina da energia que você emana.</p>
-
-    <h3>4. Lei da Polaridade</h3>
+<br>
+    <h3>4. Lei da Polaridade</h3><br>
     <p>A Polaridade revela que "tudo é duplo; tudo tem dois polos". Os opostos são, na verdade, a mesma coisa em graus diferentes, como o calor e o frio ou o medo e a coragem. Esta lei é uma ferramenta poderosa para a transmutação mental: se você está enfrentando o polo do medo, você pode deslizar na mesma escala para o polo da coragem, pois eles compartilham a mesma natureza. Educar-se nesta lei significa não lutar contra o polo negativo, mas focar na concentração do polo positivo. Ao entender que a solução já existe no mesmo espectro que o problema, você ganha o poder de mudar a direção da sua vontade para alcançar o equilíbrio desejado.</p>
-
-    <h3>5. Lei do Ritmo</h3>
+<br>
+    <h3>5. Lei do Ritmo</h3><br>
     <p>Tudo tem fluxo e refluxo; tudo sobe e desce. A Lei do Ritmo ajuda a pessoa a entender os ciclos da vida e a não se desesperar nos momentos de baixa. Como ferramenta, ela ensina a "Lei da Neutralização": quando você percebe que está em um ciclo de retração, você deve manter a mente firme e não se deixar levar pelo balanço do pêndulo para o sofrimento. Aprender a fluir com os ritmos naturais — seja no trabalho, na saúde ou nas emoções — permite que você use os momentos de alta para crescer e os momentos de baixa para introspecção e preparação, garantindo estabilidade emocional independente das circunstâncias externas.</p>
-
-    <h3>6. Lei de Causa e Efeito</h3>
+<br>
+    <h3>6. Lei de Causa e Efeito</h3><br>
     <p>Nesta lei, aprendemos que "toda causa tem seu efeito e todo efeito tem sua causa". Não existe o acaso; existem apenas leis que ainda não compreendemos. Para o indivíduo, esta é a ferramenta definitiva de autorresponsabilidade. Ao analisar os resultados atuais de sua vida (os efeitos), você pode rastrear as ações e pensamentos que os geraram (as causas). Para mudar o futuro, deve-se plantar novas causas no presente. Educar-se nesta lei é sair da posição de vítima das circunstâncias e assumir o papel de mestre, agindo com consciência e intenção em cada escolha, sabendo que cada ação é uma semente que invariavelmente dará frutos.</p>
-
-    <h3>7. Lei de Gênero</h3>
+<br>
+    <h3>7. Lei de Gênero</h3><br>
     <p>A Lei de Gênero afirma que "o gênero está em tudo; tudo tem seus princípios masculino e feminino". Esta lei não se refere apenas ao sexo biológico, mas às energias de geração e criação. O princípio masculino representa a vontade, a ação e a semente; o princípio feminino representa a intuição, a gestação e a sabedoria. Para usar isso como ferramenta, a pessoa deve equilibrar essas forças dentro de si: ter a iniciativa para começar (masculino) e a paciência para nutrir e deixar a ideia crescer (feminino). A criação equilibrada ocorre quando a mente lógica e a intuição trabalham juntas, permitindo que os projetos e sonhos se manifestem de forma completa e harmoniosa.</p>
 
 
@@ -4495,6 +4517,7 @@ html += `
         } // FIM DA FUNÇÃO
 
 
+        
     </script>
     
 
