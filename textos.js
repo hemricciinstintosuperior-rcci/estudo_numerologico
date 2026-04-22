@@ -2843,9 +2843,9 @@ essencia: {
     <p>A Essência 22 revela um núcleo de imenso poder realizador e um pragmatismo operando em larga escala dentro de você. A base da sua personalidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é voltada para a construção de algo sólido, grandioso e transformador; você possui a semente de um "mestre construtor" operando em cada resposta interna que dá ao mundo.</p>
     <p>Ao enfrentar desafios, sua mente organiza recursos, pessoas e projeta estruturas duradouras de forma quase automática e genial. O objetivo central da sua essência, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é materializar sonhos elevados em realidades concretas que beneficiem a humanidade, unindo uma visão de longo alcance à competência técnica absoluta. Você não nasceu para o pequeno; sua alma exige que você construa legados que permaneçam muito depois de você.</p>`
 
-},
+};
 
-bancoEquilibrio : {
+const bancoEquilibrio = {
     inicio: {
         1: `<h3>Autonomia e Pioneirismo - Início 1</h3>
             <p>A sua força, <strong>MASCULINO-FEMININO-NEUTRO</strong>, reside na autonomia radical e no pioneirismo. Sua vibração inicial impele você a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades.</p>`,
@@ -2883,7 +2883,7 @@ bancoEquilibrio : {
         11: `<p>A finalização ocorre através da paz interna. Ao manter a calma e agir como um canal de harmonia, você resolve impasses complexos e traz uma clareza visionária que pacifica o desfecho. Isso garante que o fechamento do seu ciclo seja evolutivo e impactante, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
         22: `<p>A finalização para você significa deixar o projeto tão robusto que ele funcione sozinho. Seu equilíbrio reside na união da competência técnica absoluta com a entrega, permitindo materializar soluções duradouras que beneficiam a coletividade de forma permanente, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`
     }
-},
+};
 
 // =================================================================
 // ESTRUTURA DE TEXTOS DO PLANO DE EXPRESSÃO (FORMATADO PARA FILTRO)
