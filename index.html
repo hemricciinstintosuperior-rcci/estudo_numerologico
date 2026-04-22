@@ -3529,35 +3529,28 @@ html += `
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
-// --- BLOCO DO EQUILÍBRIO (COM INTRODUÇÃO E CONCLUSÃO) ---
-const nInicio = res.equilibrio.inicio; // Ex: 3
-const nFim = res.equilibrio.fim;       // Ex: 3
+// --- BLOCO DO EQUILÍBRIO (PUXANDO TUDO DO JS) ---
+const nInicio = res.equilibrio.inicio;
+const nFim = res.equilibrio.fim;
 
-// 1. Buscamos a Introdução Geral do Equilíbrio (se houver no seu banco)
-// Se não houver um campo 'introducao' no banco, você pode escrever o texto direto aqui
-const txtIntro = bancoEquilibrio.introducao || "O Equilíbrio indica como você reage a pressões e desafios...";
+// 1. Puxa a Introdução direto da chave 'equilibrio' do seu banco de textos
+// Note que usamos bancoEquilibrio.equilibrio para seguir o que você explicou
+const txtIntro = bancoEquilibrio.equilibrio || "";
 
-// 2. Buscamos os textos específicos baseados nos números
+// 2. Buscamos os textos de Início e Conclusão (Fim)
 const txtParte1 = bancoEquilibrio.inicio[nInicio] || "";
 const txtParte2 = bancoEquilibrio.conclusao[nFim] || "";
 
-// 3. Montamos a estrutura completa
-// Verificamos se os textos existem para não aparecer "undefined"
-let textoFinalHTML = `
+// 3. Montamos o conteúdo completo
+// Juntamos a introdução, o texto do início e o texto do fim
+let conteudoEquilibrio = `
     <p>${txtIntro}</p>
-    <div class="resultado-parcial">
-        <h3>Resposta ao Início:</h3>
-        <p>${txtParte1}</p>
-    </div>
-    <div class="resultado-parcial">
-        <h3>Resposta à Conclusão:</h3>
-        <p>${txtParte2}</p>
-    </div>
+    <p>${txtParte1}</p>
+    <p>${txtParte2}</p>
 `;
 
-// 4. Passamos o filtro global que você já usa (aplicarFiltroTexto)
-// Isso vai garantir que o nome do cliente apareça onde estiver o placeholder
-const textoFiltrado = aplicarFiltroTexto(textoFinalHTML);
+// 4. Aplicamos a sua função global para filtrar nomes/placeholders
+const textoFinalFormatado = aplicarFiltroTexto(conteudoEquilibrio);
 
 html += `
     <div class="separador-luxo">
@@ -3565,7 +3558,7 @@ html += `
     </div>
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
-        <div class="texto-res">${textoFiltrado}</div>
+        <div class="texto-res">${textoFinalFormatado}</div>
     </div>
 `;
 
