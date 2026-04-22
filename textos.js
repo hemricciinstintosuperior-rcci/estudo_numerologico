@@ -2846,53 +2846,44 @@ essencia: {
 },
 
 
-equilibrio: {
-
-    1: `<h3>Autonomia e Persistência na Conclusão - Equilíbrio 1</h3>
-    <p>A sua força, <strong>MASCULINO-FEMININO-NEUTRO</strong>, reside na autonomia radical e no pioneirismo. Sua vibração inicial impele você a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades que surgem em sua jornada.</p>
-    <p>Para o sucesso pleno, seu desafio é manter essa chama acesa até a conclusão definitiva. Quando a iniciativa brilhante do começo se une à determinação inabalável do fim, você se torna uma força imparável da natureza. O equilíbrio aqui, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é não permitir que a impaciência interrompa o fluxo antes que seu objetivo seja plenamente alcançado e materializado.</p>`,
-
-    2: `<h3>Diplomacia e Confiança na Realização - Equilíbrio 2</h3>
-    <p>A sua abordagem inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é marcada pela diplomacia fina e por uma sensibilidade aguçada. Você prefere analisar o terreno e buscar parcerias estratégicas antes de agir, utilizando sua intuição poderosa como bússola. Essa postura cooperativa facilita sua entrada em novos ambientes e a resolução de conflitos precoces.</p>
-    <p>A conclusão dos seus projetos depende diretamente da confiança que você deposita em si mesmo(a). O equilíbrio consiste em não se deixar paralisar pela dúvida ou pela dependência do julgamento alheio no estágio final. Ao finalizar suas metas com suavidade e firmeza, você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, consolida sua capacidade de realização harmoniosa, estável e respeitada por todos.</p>`,
-
-    3: `<h3>Criatividade e Foco nos Detalhes - Equilíbrio 3</h3>
-    <p>Sua atitude inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é sempre vibrante, criativa e repleta de um otimismo contagiante. Sua facilidade de comunicação permite que novas ideias sejam lançadas com entusiasmo, atraindo a atenção e o apoio necessários para o início de qualquer jornada ou empreendimento que você se proponha a realizar.</p>
-    <p>O seu grande aprendizado está em evitar a dispersão de energia no meio do caminho. Manter o foco até o último detalhe é o que garante que seu brilho criativo se transforme em algo concreto e rentável. Ao equilibrar a alegria do começo com a disciplina da finalização, seus projetos ganham uma forma extraordinária e deixam de ser apenas "boas ideias" para se tornarem sucessos reais, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
-
-    4: `<h3>Pragmatismo e Flexibilidade Estrutural - Equilíbrio 4</h3>
-    <p>Sua entrada em qualquer situação ocorre de forma metódica, séria e pragmática, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um respeito profundo pelas bases e pela estrutura, o que garante que o seu primeiro passo seja dado com total segurança e planejamento, evitando riscos desnecessários logo na partida.</p>
-    <p>Sua capacidade de finalização é sólida, mas pode ser limitada por uma rigidez excessiva que gera estresse. O equilíbrio reside em permitir que o processo flua com um pouco mais de jogo de cintura diante de imprevistos. Ao unir sua organização impecável à persistência final, você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, constrói legados duradouros e inabaláveis que servirão de exemplo para as futuras gerações.</p>`,
-
-    5: `<h3>Agilidade e Estratégia de Chegada - Equilíbrio 5</h3>
-    <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, aborda as oportunidades com uma agilidade mental invejável e um desejo constante de renovação. O início dos seus ciclos é marcado pela versatilidade e pela coragem de arriscar, o que torna sua presença dinâmica e magnética desde o primeiro instante da ação.</p>
-    <p>Para concluir com êxito, é preciso domar a inquietude que surge quando a novidade passa e a rotina da execução se instala. O sucesso vem ao transformar sua impulsividade inicial em uma estratégia de finalização consistente e focada. O equilíbrio para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, está em aproveitar a liberdade do processo sem jamais perder de vista o porto de chegada pretendido.</p>`,
-
-    6: `<h3>Responsabilidade e Equilíbrio de Metas - Equilíbrio 6</h3>
-    <p>Sua motivação inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é sempre o senso de responsabilidade e o cuidado com o bem-estar das pessoas. Você inicia projetos com um olhar voltado para a harmonia e para o serviço ao próximo, estabelecendo um ambiente de confiança mútua logo no primeiro contato profissional ou social.</p>
-    <p>A conclusão dos seus objetivos é guiada por um perfeccionismo estético e afetivo. O desafio para você é não se sobrecarregar com as expectativas ou problemas alheios no estágio final da sua meta. Ao equilibrar seu desejo sincero de ajudar com a necessidade de finalizar seus próprios compromissos, você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, alcança uma realização plena, equilibrada e profundamente gratificante.</p>`,
-
-    7: `<h3>Análise Profunda e Entrega Prática - Equilíbrio 7</h3>
-    <p>Sua atitude inicial é introspectiva, analítica e observadora, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Antes de se comprometer, você realiza uma busca profunda por conhecimento e verdade, o que confere às suas ações uma base intelectual muito sólida e diferenciada perante os obstáculos do caminho.</p>
-    <p>O sucesso na sua finalização depende de superar a tendência ao isolamento defensivo ou à crítica excessiva que trava a entrega. Ao compartilhar os resultados da sua análise e concluir seus projetos com clareza, você transforma sabedoria pura em resultados práticos. O equilíbrio está em unir a profundidade do seu pensamento inicial com a entrega generosa do fim, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
-
-    8: `<h3>Autoridade e Ética nos Resultados - Equilíbrio 8</h3>
-    <p>Sua abordagem perante novas oportunidades é executada com autoridade, pragmatismo e visão de poder, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe uma capacidade executiva latente que permite a você visualizar o sucesso material antes mesmo do primeiro movimento, conferindo-lhe uma postura de comando natural.</p>
-    <p>Para que o seu ciclo se complete com honra, a ética e a justiça devem guiar a finalização tanto quanto a ambição guiou o começo. O equilíbrio entre o seu desejo legítimo de conquista e sua responsabilidade com o todo é o que garante que suas vitórias sejam sólidas e respeitadas por todos ao redor, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O poder real vem com o equilíbrio.</p>`,
-
-    9: `<h3>Humanitarismo e Realização Concreta - Equilíbrio 9</h3>
-    <p>Você inicia seus ciclos com uma vibração humanitária, compreensiva e generosa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um desprendimento inicial que permite a você enxergar o quadro geral das situações, abordando os problemas com uma sabedoria e tolerância que inspiram quem compartilha da sua jornada.</p>
-    <p>A conclusão é marcada pela necessidade de um encerramento emocional e espiritual significativo. O seu desafio é não se perder em idealismos utópicos, garantindo que o seu projeto tenha um fim prático e útil para o mundo real. O equilíbrio para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, está em transformar o sonho elevado do início em uma entrega concreta para o benefício do coletivo.</p>`,
-
-    11: `<h3>Inspiração Visionária e Paz Interna - Equilíbrio 11</h3>
-    <p>O Equilíbrio 11 revela que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, possui a capacidade extraordinária de superar crises através da diplomacia elevada e da escuta interna profunda. Diante do caos, sua saída mestra é elevar a situação para um nível espiritual ou intuitivo superior, encontrando soluções que transcendem completamente a lógica óbvia.</p>
-    <p>A finalização dos seus processos ocorre através da inspiração pura. Ao manter a calma absoluta e agir como um canal de harmonia, você resolve impasses complexos e traz uma clareza visionária que pacifica os ambientes. Isso garante que o fechamento do seu ciclo seja transformador, evolutivo e profundamente impactante para todos, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
-
-    22: `<h3>Maestria Organizacional e Construção de Sistemas - Equilíbrio 22</h3>
-    <p>O Equilíbrio 22 revela que, em momentos de instabilidade ou crise, sua saída de mestre é a organização pragmática em larga escala. Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, resolve problemas criando novos sistemas e estruturas sólidas que impedem o erro de se repetir no futuro, agindo com a competência de um grande construtor.</p>
-    <p>Para você, a finalização bem-sucedida de um projeto significa deixá-lo tão robusto que ele funcione sozinho como uma base para outros. Seu equilíbrio reside na união da sua visão idealista com sua competência técnica absoluta, permitindo que você materialize soluções duradouras que beneficiam a coletividade de forma prática, rica e permanente, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`
-}
-
+const bancoEquilibrio = {
+    inicio: {
+        1: `<h3>Autonomia e Pioneirismo - Início 1</h3>
+            <p>A sua força, <strong>MASCULINO-FEMININO-NEUTRO</strong>, reside na autonomia radical e no pioneirismo. Sua vibração inicial impele você a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades.</p>`,
+        2: `<h3>Diplomacia e Sensibilidade - Início 2</h3>
+            <p>A sua abordagem inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é marcada pela diplomacia fina e por uma sensibilidade aguçada. Você prefere analisar o terreno e buscar parcerias estratégicas antes de agir, utilizando sua intuição poderosa como bússola.</p>`,
+        3: `<h3>Criatividade e Entusiasmo - Início 3</h3>
+            <p>Sua atitude inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é sempre vibrante, criativa e repleta de um otimismo contagiante. Sua facilidade de comunicação permite que novas ideias sejam lançadas com entusiasmo, atraindo a atenção necessária para o começo.</p>`,
+        4: `<h3>Pragmatismo e Ordem - Início 4</h3>
+            <p>Sua entrada em qualquer situação ocorre de forma metódica, séria e pragmática, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um respeito profundo pelas bases e pela estrutura, o que garante que o seu primeiro passo seja dado com total segurança.</p>`,
+        5: `<h3>Agilidade e Versatilidade - Início 5</h3>
+            <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, aborda as oportunidades com uma agilidade mental invejável e um desejo constante de renovação. O início dos seus ciclos é marcado pela coragem de arriscar e pelo magnetismo imediato.</p>`,
+        6: `<h3>Responsabilidade e Harmonia - Início 6</h3>
+            <p>Sua motivação inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é sempre o senso de responsabilidade e o cuidado. Você inicia projetos com um olhar voltado para a harmonia e para o serviço ao próximo, estabelecendo confiança mútua logo de cara.</p>`,
+        7: `<h3>Análise e Observação - Início 7</h3>
+            <p>Sua atitude inicial é introspectiva, analítica e observadora, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Antes de se comprometer, você realiza uma busca profunda por conhecimento, conferindo às suas ações uma base intelectual muito sólida.</p>`,
+        8: `<h3>Autoridade e Visão - Início 8</h3>
+            <p>Sua abordagem perante novas oportunidades é executada com autoridade, pragmatismo e visão de poder, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe uma capacidade executiva que permite visualizar o sucesso antes mesmo do primeiro movimento.</p>`,
+        9: `<h3>Humanitarismo e Sabedoria - Início 9</h3>
+            <p>Você inicia seus ciclos com uma vibração humanitária, compreensiva e generosa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Existe um desprendimento que permite enxergar o quadro geral das situações com uma tolerância que inspira a todos.</p>`,
+        11: `<h3>Inspiração Visionária - Início 11</h3>
+            <p>Sua abordagem inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, transcende a lógica comum. Você inicia processos com uma intuição aguçada, agindo como um canal de ideias elevadas que podem transformar o ambiente ao seu redor logo no primeiro contato.</p>`,
+        22: `<h3>Construção Master - Início 22</h3>
+            <p>Você inicia seus projetos com uma visão de grande escala, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua postura inicial já é a de quem deseja construir algo duradouro para a humanidade, unindo técnica e idealismo desde o primeiro tijolo.</p>`
+    },
+    conclusao: {
+        1: `<p>Para o sucesso pleno, seu desafio é manter essa chama acesa até a conclusão definitiva. Quando a iniciativa do começo se une à determinação inabalável do fim, você se torna uma força imparável da natureza. O equilíbrio aqui é não permitir que a impaciência interrompa o fluxo antes do objetivo ser alcançado, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        2: `<p>A conclusão dos seus projetos depende diretamente da confiança que você deposita em si mesmo(a). O equilíbrio consiste em não se deixar paralisar pela dúvida no estágio final. Ao finalizar suas metas com firmeza, você consolida sua capacidade de realização estável e respeitada, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        3: `<p>O seu grande aprendizado está em evitar a dispersão no meio do caminho. Manter o foco até o último detalhe garante que seu brilho se transforme em algo rentável. Ao equilibrar a alegria do começo com a disciplina da finalização, seus projetos deixam de ser apenas ideias e viram sucessos reais, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        4: `<p>Sua capacidade de finalização é sólida, mas exige flexibilidade. O equilíbrio reside em permitir que o processo flua com jogo de cintura diante de imprevistos. Ao unir organização à persistência final, você constrói legados duradouros que servirão de exemplo, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        5: `<p>Para concluir com êxito, é preciso domar a inquietude que surge quando a rotina se instala. O sucesso vem ao transformar a impulsividade inicial em uma estratégia de finalização focada. O equilíbrio está em aproveitar a liberdade sem perder de vista o porto de chegada, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        6: `<p>A conclusão dos seus objetivos é guiada por um perfeccionismo afetivo. O desafio é não se sobrecarregar com as expectativas alheias no estágio final. Ao equilibrar o serviço ao próximo com a conclusão dos seus próprios compromissos, você alcança uma realização plena, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        7: `<p>O sucesso na sua finalização depende de superar a tendência ao isolamento ou à crítica excessiva. Ao compartilhar os resultados e concluir com clareza, você transforma sabedoria em resultados práticos. Una a profundidade do pensamento inicial com a entrega generosa do fim, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        8: `<p>Para que o seu ciclo se complete com honra, a ética e a justiça devem guiar a finalização tanto quanto a ambição guiou o começo. O equilíbrio entre o desejo de conquista e a responsabilidade com o todo garante vitórias sólidas e respeitadas. O poder real vem com o equilíbrio, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        9: `<p>A conclusão é marcada pela necessidade de um encerramento emocional significativo. O desafio é não se perder em idealismos, garantindo que o projeto tenha um fim prático para o mundo real. Transforme o sonho elevado do início em uma entrega concreta para o coletivo, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        11: `<p>A finalização ocorre através da paz interna. Ao manter a calma e agir como um canal de harmonia, você resolve impasses complexos e traz uma clareza visionária que pacifica o desfecho. Isso garante que o fechamento do seu ciclo seja evolutivo e impactante, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
+        22: `<p>A finalização para você significa deixar o projeto tão robusto que ele funcione sozinho. Seu equilíbrio reside na união da competência técnica absoluta com a entrega, permitindo materializar soluções duradouras que beneficiam a coletividade de forma permanente, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`
+    }
 };
 
 // =================================================================
