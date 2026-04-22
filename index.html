@@ -3529,7 +3529,7 @@ html += `
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
-// --- BLOCO DO EQUILÍBRIO CORRIGIDO ---
+// --- BLOCO DO EQUILÍBRIO (AJUSTADO PARA NÃO QUEBRAR O RESTO) ---
 const nInicio = res.equilibrio.inicio;
 const nFim = res.equilibrio.fim;
 
@@ -3537,9 +3537,14 @@ const nFim = res.equilibrio.fim;
 const txtParte1 = bancoEquilibrio.inicio[nInicio] || "";
 const txtParte2 = bancoEquilibrio.conclusao[nFim] || "";
 
-// Montamos o texto completo e passamos o filtro de Gênero/Nome
+// Montamos o texto completo
 let textoCompleto = txtParte1 + txtParte2;
-textoCompleto = substituirPlaceholders(textoCompleto, nomeUsuario, generoSelecionado);
+
+/** * AQUI ESTAVA O PROBLEMA: 
+ * Chamamos a função 'aplicarFiltroTexto' que você já tem pronta,
+ * em vez daquela 'substituirPlaceholders' que estava dando erro de "not defined".
+ */
+textoCompleto = aplicarFiltroTexto(textoCompleto);
 
 html += `
     <div class="separador-luxo">
