@@ -2883,7 +2883,7 @@ bancoEquilibrio : {
         11: `<p>A finalização ocorre através da paz interna. Ao manter a calma e agir como um canal de harmonia, você resolve impasses complexos e traz uma clareza visionária que pacifica o desfecho. Isso garante que o fechamento do seu ciclo seja evolutivo e impactante, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`,
         22: `<p>A finalização para você significa deixar o projeto tão robusto que ele funcione sozinho. Seu equilíbrio reside na união da competência técnica absoluta com a entrega, permitindo materializar soluções duradouras que beneficiam a coletividade de forma permanente, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>`
     }
-};
+},
 
 // =================================================================
 // ESTRUTURA DE TEXTOS DO PLANO DE EXPRESSÃO (FORMATADO PARA FILTRO)
