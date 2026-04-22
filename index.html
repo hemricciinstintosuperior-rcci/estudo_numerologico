@@ -3550,7 +3550,7 @@ html += `
     const txtP1 = bancoEquilibrio.inicio[nInicio] || "";
     const txtP2 = bancoEquilibrio.conclusao[nFim] || "";
 
-    let htmlEquil = `<p>${txtIntroEquil}</p><p>${txtP1}</p><p>${txtP2}</p>`;
+    let htmlEquil = ` ${txtIntroEquil}<br><br> <p>${txtP1}</p><p>${txtP2}</p>`;
     
     // Usando sua função sem alterá-la
     const textoFormatado = aplicarFiltroTexto(htmlEquil);
