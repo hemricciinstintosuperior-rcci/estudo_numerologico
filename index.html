@@ -2835,7 +2835,18 @@ const res = {
     Relacionamento: calcularNumerologia(propCalculado, false), // Relacionamento SEMPRE reduz (1-9)
     essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
     talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
-    equilibrio: calcularNumerologia(tabela[nomesArray[0][0]] + tabela[nomesArray[0].slice(-1)], false),
+   // 1. Calcula o número de INÍCIO (Primeira Letra)
+const letraInicial = nomesArray[0][0];
+const numInicio = calcularNumerologia(tabela[letraInicial], false);
+
+// 2. Calcula o número de CONCLUSÃO (Última Letra)
+const letraFinal = nomesArray[0].slice(-1);
+const numFim = calcularNumerologia(tabela[letraFinal], false);
+
+// 3. Monta o resultado unindo os dois textos do banco
+const resultadoEquilibrio = bancoEquilibrio.inicio[numInicio] + bancoEquilibrio.conclusao[numFim];
+
+// Agora você injeta o 'resultadoEquilibrio' na sua variável de saída do PDF/Relatório
     deficiencias: faltantes.map(d => reduzirPuro(d)), 
     deficitRecorrente: calcularNumerologia(dia, false), 
     deficitsOcultos: deficitsOcultos.map(d => reduzirPuro(d)), 
