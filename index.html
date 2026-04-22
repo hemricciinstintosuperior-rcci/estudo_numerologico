@@ -3138,7 +3138,7 @@ const listaItensSintese = [
     
     { label: "Talento Oculto", valor: res.talento },
     
-    { label: "Equilíbrio", valor: res.equilibrio },
+    { label: "Equilíbrio", valor:  },
     
     { label: "Inclinações Ocultas", valor: res.inclinacoes },
     
@@ -3522,6 +3522,28 @@ html += `
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
+// --- BLOCO EXCLUSIVO DO EQUILÍBRIO ---
+const numEquilibrio = res.equilibrio;
+const textoEquilibrio = (textos.equilibrio && textos.equilibrio[numEquilibrio]) 
+    ? aplicarFiltroTexto(textos.equilibrio[numEquilibrio]) 
+    : "Descrição do número de equilíbrio não encontrada.";
+
+html += `
+    <div class="separador-luxo">
+        <div class="caixa-interna">
+            <h2>Equilíbrio</h2>
+        </div>
+    </div>
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
+        <div class="intro-texto">${textos.introducoes.equilibrio || ""}</div>
+        <div class="evitar-corte texto-res">
+            ${textoEquilibrio}
+        </div>
+    </div>
+`;
+    
+
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -3663,8 +3685,8 @@ html += `
 `;
     
 
-// C. INCLINAÇÕES, SUBCONSCIENTE E EQUILÍBRIO (O FECHAMENTO DO ALINHAMENTO)
-const itensAlinhamento = ["inclinacoes", "subconsciente", "equilibrio"];
+// Removemos o "equilibrio" daqui para ele não causar erro nos outros
+const itensAlinhamento = ["inclinacoes", "subconsciente"];
 
 itensAlinhamento.forEach(chave => {
     const tituloBonito = nomesExibicao[chave] || chave;
@@ -3673,40 +3695,29 @@ itensAlinhamento.forEach(chave => {
     if (chave === "inclinacoes") {
         if (res.inclinacoes && res.inclinacoes.length > 0) {
             res.inclinacoes.forEach(num => {
-                conteudoFinal += ` <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #ffffff"></div>`;
+                conteudoFinal += `<div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #ffffff"></div>`;
             });
-// Substitua a linha do else por esta:
-} else {
-    // Se o erro for o nome da chave, ajuste aqui:
-    const chaveCorreta = (chave === "equilibrio") ? "NOME_QUE_ESTA_NO_SEU_BANCO" : chave;
-    
-    if (textos[chaveCorreta] && textos[chaveCorreta][res[chave]]) {
-        conteudoFinal = ` <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chaveCorreta][res[chave]])}</div>`;
+        } else {
+            conteudoFinal = "<p>Nenhuma inclinação específica detectada.</p>";
+        }
     } else {
-        conteudoFinal = `<p>Dado de ${chave} não localizado.</p>`;
+        // Trata apenas o Subconsciente aqui
+        const valSub = res[chave];
+        conteudoFinal = (textos[chave] && textos[chave][valSub]) 
+            ? `<div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chave][valSub])}</div>`
+            : `<p>Dados não localizados.</p>`;
     }
-}
 
-    
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
-
-
-    
+    // Montagem do HTML padrão para Inclinações e Subconsciente
     html += `
+        <div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
             <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
             ${conteudoFinal}
         </div>
     `;
-}});
+});
 
     
 // Crie esta linha logo ACIMA do código da ondinha:
