@@ -3531,39 +3531,40 @@ html += `
 
 // --- BLOCO DO EQUILÍBRIO (PUXANDO TUDO DO JS) ---
 // --- BLOCO DO EQUILÍBRIO (TEXTO DA INTRODUÇÃO MANUAL) ---
+// --- BLOCO DO EQUILÍBRIO (VERSÃO FINAL SEM ERROS) ---
 const nInicio = res.equilibrio.inicio;
 const nFim = res.equilibrio.fim;
 
-// 1. Cole aqui o seu texto de introdução entre as crases
-const txtIntro = `<p>Diante dos desafios da existência, cada indivíduo manifesta uma resposta interna singular. Existem pessoas que optam pelo distanciamento momentâneo das dificuldades para estruturar um plano de ação estratégico, enquanto outras buscam o recolhimento como uma forma de proteção contra emoções e sentimentos indesejados.</p>
+// 1. Sua Introdução (Certifique-se de não apagar as crases ` no início e fim)
+const txtIntroEquilibrio = `<p>Diante dos desafios da existência, cada indivíduo manifesta uma resposta interna singular. Existem pessoas que optam pelo distanciamento momentâneo das dificuldades para estruturar um plano de ação estratégico, enquanto outras buscam o recolhimento como uma forma de proteção contra emoções e sentimentos indesejados.</p>
 
 <p>Em contrapartida, há quem reaja de maneira intensa e imediata, deixando-se levar pelo ímpeto do momento, mas permitindo que essa energia se dissipe com rapidez. Outros, no entanto, prolongam esses estados emocionais, mantendo o sentimento ativo por longos períodos. Essas reações costumam ser respostas condicionadas que surgem de forma impensada e automática.</p>
 
 <p>O caminho da maturidade e do autodesenvolvimento oferece a oportunidade de adotar posturas mais práticas e conscientes perante o inesperado. Ao compreender a própria essência, torna-se possível lidar com situações críticas de forma mais eficaz, alcançando resultados satisfatórios e reduzindo drasticamente os conflitos internos e externos.</p>`,
-    
 
 
-// 2. Buscamos os textos de Início e Conclusão (Fim) do banco
+// 2. Busca os textos do banco
 const txtParte1 = bancoEquilibrio.inicio[nInicio] || "";
 const txtParte2 = bancoEquilibrio.conclusao[nFim] || "";
 
-// 3. Montamos a estrutura: Introdução PRIMEIRO, depois os resultados
-let conteudoEquilibrio = `
-    <p>${txtIntro}</p>
+// 3. Montagem do HTML (Introdução primeiro)
+let htmlEquilibrio = `
+    <p>${txtIntroEquilibrio}</p>
     <p>${txtParte1}</p>
     <p>${txtParte2}</p>
 `;
 
-// 4. Passamos pelo filtro que você já tem para aplicar o nome do cliente
-const textoFinalFormatado = aplicarFiltroTexto(conteudoEquilibrio);
+// 4. Aplica o seu filtro de texto (Nomes e Negritos)
+const textoFinalEquilibrio = aplicarFiltroTexto(htmlEquilibrio);
 
+// 5. Adiciona ao relatório
 html += `
     <div class="separador-luxo">
         <div class="caixa-interna"><h2>Equilíbrio</h2></div>
     </div>
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
-        <div class="texto-res">${textoFinalFormatado}</div>
+        <div class="texto-res">${textoFinalEquilibrio}</div>
     </div>
 `;
 
