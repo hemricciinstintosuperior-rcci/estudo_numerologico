@@ -2835,18 +2835,29 @@ const res = {
     Relacionamento: calcularNumerologia(propCalculado, false), // Relacionamento SEMPRE reduz (1-9)
     essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
     talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
-   // 1. Calcula o número de INÍCIO (Primeira Letra)
-const letraInicial = nomesArray[0][0];
-const numInicio = calcularNumerologia(tabela[letraInicial], false);
+// Dentro da sua função de processamento:
+if (nomesArray && nomesArray[0]) {
+    const nomePrincipal = nomesArray[0].toUpperCase(); // Garante que pegue a letra certa
+    
+    // 1. Calcula o número de INÍCIO (Primeira Letra)
+    const primLetra = nomePrincipal[0];
+    const numInicio = calcularNumerologia(tabela[primLetra], false);
 
-// 2. Calcula o número de CONCLUSÃO (Última Letra)
-const letraFinal = nomesArray[0].slice(-1);
-const numFim = calcularNumerologia(tabela[letraFinal], false);
+    // 2. Calcula o número de CONCLUSÃO (Última Letra)
+    const ultLetra = nomePrincipal.slice(-1);
+    const numFim = calcularNumerologia(tabela[ultLetra], false);
 
-// 3. Monta o resultado unindo os dois textos do banco
-const resultadoEquilibrio = bancoEquilibrio.inicio[numInicio] + bancoEquilibrio.conclusao[numFim];
-
-// Agora você injeta o 'resultadoEquilibrio' na sua variável de saída do PDF/Relatório
+    // 3. Monta o resultado final buscando no banco
+    // Usamos uma verificação simples para evitar erro caso o número não exista no banco
+    const txtInicio = bancoEquilibrio.inicio[numInicio] || "";
+    const txtFim = bancoEquilibrio.conclusao[numFim] || "";
+    
+    // Esta é a variável que o seu PDF vai usar
+    const resultadoEquilibrioFinal = txtInicio + txtFim;
+    
+    // Exemplo de como salvar no seu objeto de resposta:
+    // dadosDoRelatorio.equilibrio = resultadoEquilibrioFinal;
+}
     deficiencias: faltantes.map(d => reduzirPuro(d)), 
     deficitRecorrente: calcularNumerologia(dia, false), 
     deficitsOcultos: deficitsOcultos.map(d => reduzirPuro(d)), 
