@@ -3530,26 +3530,31 @@ html += `
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
 // --- BLOCO DO EQUILÍBRIO (PUXANDO TUDO DO JS) ---
+// --- BLOCO DO EQUILÍBRIO (TEXTO DA INTRODUÇÃO MANUAL) ---
 const nInicio = res.equilibrio.inicio;
 const nFim = res.equilibrio.fim;
 
-// 1. Puxa a Introdução direto da chave 'equilibrio' do seu banco de textos
-// Note que usamos bancoEquilibrio.equilibrio para seguir o que você explicou
-const txtIntro = bancoEquilibrio.equilibrio || "";
+// 1. Cole aqui o seu texto de introdução entre as crases
+const txtIntro = `<p>Diante dos desafios da existência, cada indivíduo manifesta uma resposta interna singular. Existem pessoas que optam pelo distanciamento momentâneo das dificuldades para estruturar um plano de ação estratégico, enquanto outras buscam o recolhimento como uma forma de proteção contra emoções e sentimentos indesejados.</p>
 
-// 2. Buscamos os textos de Início e Conclusão (Fim)
+<p>Em contrapartida, há quem reaja de maneira intensa e imediata, deixando-se levar pelo ímpeto do momento, mas permitindo que essa energia se dissipe com rapidez. Outros, no entanto, prolongam esses estados emocionais, mantendo o sentimento ativo por longos períodos. Essas reações costumam ser respostas condicionadas que surgem de forma impensada e automática.</p>
+
+<p>O caminho da maturidade e do autodesenvolvimento oferece a oportunidade de adotar posturas mais práticas e conscientes perante o inesperado. Ao compreender a própria essência, torna-se possível lidar com situações críticas de forma mais eficaz, alcançando resultados satisfatórios e reduzindo drasticamente os conflitos internos e externos.</p>`,
+    
+
+
+// 2. Buscamos os textos de Início e Conclusão (Fim) do banco
 const txtParte1 = bancoEquilibrio.inicio[nInicio] || "";
 const txtParte2 = bancoEquilibrio.conclusao[nFim] || "";
 
-// 3. Montamos o conteúdo completo
-// Juntamos a introdução, o texto do início e o texto do fim
+// 3. Montamos a estrutura: Introdução PRIMEIRO, depois os resultados
 let conteudoEquilibrio = `
     <p>${txtIntro}</p>
     <p>${txtParte1}</p>
     <p>${txtParte2}</p>
 `;
 
-// 4. Aplicamos a sua função global para filtrar nomes/placeholders
+// 4. Passamos pelo filtro que você já tem para aplicar o nome do cliente
 const textoFinalFormatado = aplicarFiltroTexto(conteudoEquilibrio);
 
 html += `
