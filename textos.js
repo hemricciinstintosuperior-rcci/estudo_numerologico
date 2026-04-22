@@ -2846,7 +2846,7 @@ essencia: {
 },
 
 
-const bancoEquilibrio = {
+const bancoEquilibrio : {
     inicio: {
         1: `<h3>Autonomia e Pioneirismo - Início 1</h3>
             <p>A sua força, <strong>MASCULINO-FEMININO-NEUTRO</strong>, reside na autonomia radical e no pioneirismo. Sua vibração inicial impele você a abrir caminhos com coragem, enfrentando obstáculos de peito aberto. Existe uma liderança natural que se manifesta logo no primeiro contato com novos projetos ou oportunidades.</p>`,
