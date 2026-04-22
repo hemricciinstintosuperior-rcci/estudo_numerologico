@@ -3675,12 +3675,17 @@ itensAlinhamento.forEach(chave => {
             res.inclinacoes.forEach(num => {
                 conteudoFinal += ` <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.inclinacoes[num])}</p><hr style="border:0; border-top:1px dotted #ffffff"></div>`;
             });
-        } else {
-            conteudoFinal = "<p>Nenhuma inclinação específica detectada.</p>";
-        }
+// Substitua a linha do else por esta:
+} else {
+    // Se o erro for o nome da chave, ajuste aqui:
+    const chaveCorreta = (chave === "equilibrio") ? "NOME_QUE_ESTA_NO_SEU_BANCO" : chave;
+    
+    if (textos[chaveCorreta] && textos[chaveCorreta][res[chave]]) {
+        conteudoFinal = ` <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chaveCorreta][res[chave]])}</div>`;
     } else {
-        conteudoFinal = ` <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>`;
+        conteudoFinal = `<p>Dado de ${chave} não localizado.</p>`;
     }
+}
 
     
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
