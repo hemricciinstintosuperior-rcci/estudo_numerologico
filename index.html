@@ -2824,23 +2824,26 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
  let vTransitoCalculado = "--";   
 
 
-    // --- CÁLCULO DO EQUILÍBRIO (ANTES DO OBJETO RES) ---
-    let resultadoEquilibrioFinal = "";
-    if (nomesArray && nomesArray[0]) {
-        const primeiroNome = nomesArray[0]; 
-        const primLetra = primeiroNome[0];
-        const ultLetra = primeiroNome.slice(-1);
+// --- CÁLCULO DO EQUILÍBRIO (CORRIGIDO) ---
+let resultadoEquilibrioFinal = "";
+// 1. Declare as variáveis fora para o 'const res' conseguir ler depois
+let numInicio = 0; 
+let numFim = 0;
 
-        const numInicio = calcularNumerologia(tabela[primLetra], false);
-        const numFim = calcularNumerologia(tabela[ultLetra], false);
+if (nomesArray && nomesArray[0]) {
+    const primeiroNome = nomesArray[0]; 
+    const primLetra = primeiroNome[0];
+    const ultLetra = primeiroNome.slice(-1);
 
-        const txtInicio = (bancoEquilibrio.inicio && bancoEquilibrio.inicio[numInicio]) ? bancoEquilibrio.inicio[numInicio] : "";
-        const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
-        
-        resultadoEquilibrioFinal = txtInicio + txtFim;
+    // 2. Atribua os valores (sem usar 'const' aqui dentro, use as que já declaramos)
+    numInicio = calcularNumerologia(tabela[primLetra], false);
+    numFim = calcularNumerologia(tabela[ultLetra], false);
 
-        
-    }
+    const txtInicio = (bancoEquilibrio.inicio && bancoEquilibrio.inicio[numInicio]) ? bancoEquilibrio.inicio[numInicio] : "";
+    const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
+    
+    resultadoEquilibrioFinal = txtInicio + txtFim;
+}
 
 
 const res = {
