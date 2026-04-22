@@ -2838,13 +2838,13 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
         const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
         
         resultadoEquilibrioFinal = txtInicio + txtFim;
-// ADICIONE ESTAS DUAS LINHAS ABAIXO:
-res.numEquilibrioInicio = numInicio; 
-res.numEquilibrioFim = numFim;
+
         
     }
 
-    
+    // ADICIONE ESTAS DUAS LINHAS ABAIXO:
+res.numEquilibrioInicio = numInicio; 
+res.numEquilibrioFim = numFim;
 const res = {
     dia: dia,
      mesNascimento: mes, 
