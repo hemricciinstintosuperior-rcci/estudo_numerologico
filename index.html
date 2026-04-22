@@ -2822,6 +2822,25 @@ let mesR = reduzir(mes);
 let anoReferencia = (agora < new Date(agora.getFullYear(), mes - 1, dia)) ? agora.getFullYear() - 1 : agora.getFullYear();
 let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
  let vTransitoCalculado = "--";   
+
+
+    // --- CÁLCULO DO EQUILÍBRIO (ANTES DO OBJETO RES) ---
+    let resultadoEquilibrioFinal = "";
+    if (nomesArray && nomesArray[0]) {
+        const primeiroNome = nomesArray[0]; 
+        const primLetra = primeiroNome[0];
+        const ultLetra = primeiroNome.slice(-1);
+
+        const numInicio = calcularNumerologia(tabela[primLetra], false);
+        const numFim = calcularNumerologia(tabela[ultLetra], false);
+
+        const txtInicio = (bancoEquilibrio.inicio && bancoEquilibrio.inicio[numInicio]) ? bancoEquilibrio.inicio[numInicio] : "";
+        const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
+        
+        resultadoEquilibrioFinal = txtInicio + txtFim;
+    }
+
+    
 const res = {
     dia: dia,
      mesNascimento: mes, 
@@ -2835,29 +2854,9 @@ const res = {
     Relacionamento: calcularNumerologia(propCalculado, false), // Relacionamento SEMPRE reduz (1-9)
     essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
     talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
-// Dentro da sua função de processamento:
-if (nomesArray && nomesArray[0]) {
-    const nomePrincipal = nomesArray[0].toUpperCase(); // Garante que pegue a letra certa
+  equilibrio: resultadoEquilibrioFinal, // Injetando o texto aqui!
     
-    // 1. Calcula o número de INÍCIO (Primeira Letra)
-    const primLetra = nomePrincipal[0];
-    const numInicio = calcularNumerologia(tabela[primLetra], false);
 
-    // 2. Calcula o número de CONCLUSÃO (Última Letra)
-    const ultLetra = nomePrincipal.slice(-1);
-    const numFim = calcularNumerologia(tabela[ultLetra], false);
-
-    // 3. Monta o resultado final buscando no banco
-    // Usamos uma verificação simples para evitar erro caso o número não exista no banco
-    const txtInicio = bancoEquilibrio.inicio[numInicio] || "";
-    const txtFim = bancoEquilibrio.conclusao[numFim] || "";
-    
-    // Esta é a variável que o seu PDF vai usar
-    const resultadoEquilibrioFinal = txtInicio + txtFim;
-    
-    // Exemplo de como salvar no seu objeto de resposta:
-    // dadosDoRelatorio.equilibrio = resultadoEquilibrioFinal;
-}
     deficiencias: faltantes.map(d => reduzirPuro(d)), 
     deficitRecorrente: calcularNumerologia(dia, false), 
     deficitsOcultos: deficitsOcultos.map(d => reduzirPuro(d)), 
