@@ -3524,6 +3524,8 @@ html += `
 
 // --- BLOCO EXCLUSIVO DO EQUILÍBRIO ---
 const numEquilibrio = res.equilibrio;
+ alert("O número do equilíbrio é: " + res.equilibrio);
+console.log("BANCO DE TEXTOS:", textos.equilibrio);   
 const textoEquilibrio = (textos.equilibrio && textos.equilibrio[numEquilibrio]) 
     ? aplicarFiltroTexto(textos.equilibrio[numEquilibrio]) 
     : "Descrição do número de equilíbrio não encontrada.";
