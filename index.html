@@ -2202,7 +2202,7 @@ let vTransitoCalculado = reduzirPuro(letrasAno.reduce((s, l) => s + calcularValo
    
 
     // Gera o Ciclo Atual
-    let htmlFinal = processarUmCiclo(anoBase, "Status do Momento: Ciclo Atual", false);
+    let htmlFinal = processarUmCiclo(anoBase, "Status do Momento: Ciclo Atual", true);
     
     // Gera o Próximo Ciclo (AnoBase + 1)
     htmlFinal += processarUmCiclo(anoBase + 1, "Status do Momento: Próximo Ciclo", true);
