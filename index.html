@@ -3529,22 +3529,35 @@ html += `
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
-// --- BLOCO DO EQUILÍBRIO (AJUSTADO PARA NÃO QUEBRAR O RESTO) ---
-const nInicio = res.equilibrio.inicio;
-const nFim = res.equilibrio.fim;
+// --- BLOCO DO EQUILÍBRIO (COM INTRODUÇÃO E CONCLUSÃO) ---
+const nInicio = res.equilibrio.inicio; // Ex: 3
+const nFim = res.equilibrio.fim;       // Ex: 3
 
-// Buscamos os textos no banco usando os números
+// 1. Buscamos a Introdução Geral do Equilíbrio (se houver no seu banco)
+// Se não houver um campo 'introducao' no banco, você pode escrever o texto direto aqui
+const txtIntro = bancoEquilibrio.introducao || "O Equilíbrio indica como você reage a pressões e desafios...";
+
+// 2. Buscamos os textos específicos baseados nos números
 const txtParte1 = bancoEquilibrio.inicio[nInicio] || "";
 const txtParte2 = bancoEquilibrio.conclusao[nFim] || "";
 
-// Montamos o texto completo
-let textoCompleto = txtParte1 + txtParte2;
+// 3. Montamos a estrutura completa
+// Verificamos se os textos existem para não aparecer "undefined"
+let textoFinalHTML = `
+    <p>${txtIntro}</p>
+    <div class="resultado-parcial">
+        <h3>Resposta ao Início:</h3>
+        <p>${txtParte1}</p>
+    </div>
+    <div class="resultado-parcial">
+        <h3>Resposta à Conclusão:</h3>
+        <p>${txtParte2}</p>
+    </div>
+`;
 
-/** * AQUI ESTAVA O PROBLEMA: 
- * Chamamos a função 'aplicarFiltroTexto' que você já tem pronta,
- * em vez daquela 'substituirPlaceholders' que estava dando erro de "not defined".
- */
-textoCompleto = aplicarFiltroTexto(textoCompleto);
+// 4. Passamos o filtro global que você já usa (aplicarFiltroTexto)
+// Isso vai garantir que o nome do cliente apareça onde estiver o placeholder
+const textoFiltrado = aplicarFiltroTexto(textoFinalHTML);
 
 html += `
     <div class="separador-luxo">
@@ -3552,10 +3565,9 @@ html += `
     </div>
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
-        <div class="texto-res">${textoCompleto}</div>
+        <div class="texto-res">${textoFiltrado}</div>
     </div>
 `;
-    
 
 html += `
 <div class="separador-luxo">
