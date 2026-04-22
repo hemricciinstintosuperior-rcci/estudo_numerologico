@@ -2838,6 +2838,10 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
         const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
         
         resultadoEquilibrioFinal = txtInicio + txtFim;
+// ADICIONE ESTAS DUAS LINHAS ABAIXO:
+res.numEquilibrioInicio = numInicio; 
+res.numEquilibrioFim = numFim;
+        
     }
 
     
@@ -2854,7 +2858,7 @@ const res = {
     Relacionamento: calcularNumerologia(propCalculado, false), // Relacionamento SEMPRE reduz (1-9)
     essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
     talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
-  equilibrio: resultadoEquilibrioFinal, // Injetando o texto aqui!
+ equilibrio: { inicio: numInicio, fim: numFim }, 
     
 
     deficiencias: faltantes.map(d => reduzirPuro(d)), 
@@ -3522,26 +3526,25 @@ html += `
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
-// --- BLOCO EXCLUSIVO DO EQUILÍBRIO ---
-const numEquilibrio = res.equilibrio;
- alert("O número do equilíbrio é: " + res.equilibrio);
-console.log("BANCO DE TEXTOS:", textos.equilibrio);   
-const textoEquilibrio = (textos.equilibrio && textos.equilibrio[numEquilibrio]) 
-    ? aplicarFiltroTexto(textos.equilibrio[numEquilibrio]) 
-    : "Descrição do número de equilíbrio não encontrada.";
+// --- BLOCO DO EQUILÍBRIO CORRIGIDO ---
+const nInicio = res.equilibrio.inicio;
+const nFim = res.equilibrio.fim;
+
+// Buscamos os textos no banco usando os números
+const txtParte1 = bancoEquilibrio.inicio[nInicio] || "";
+const txtParte2 = bancoEquilibrio.conclusao[nFim] || "";
+
+// Montamos o texto completo e passamos o filtro de Gênero/Nome
+let textoCompleto = txtParte1 + txtParte2;
+textoCompleto = substituirPlaceholders(textoCompleto, nomeUsuario, generoSelecionado);
 
 html += `
     <div class="separador-luxo">
-        <div class="caixa-interna">
-            <h2>Equilíbrio</h2>
-        </div>
+        <div class="caixa-interna"><h2>Equilíbrio</h2></div>
     </div>
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
-        <div class="intro-texto">${textos.introducoes.equilibrio || ""}</div>
-        <div class="evitar-corte texto-res">
-            ${textoEquilibrio}
-        </div>
+        <div class="texto-res">${textoCompleto}</div>
     </div>
 `;
     
