@@ -3534,57 +3534,7 @@ html += `
 // --- FIM DO BLOCO ANTERIOR (Garantindo que fechou) ---
  
 
-// --- INÍCIO DO BLOCO DO EQUILÍBRIO ---
 
-    const nInicio = res.equilibrio.inicio;
-    const nFim = res.equilibrio.fim;
-
-    // Introdução direta para não ter erro de busca no banco
-    const txtIntroEquil = `<p>O Universo rege-se pelo princípio da harmonia, e o mesmo se aplica aos seus números pessoais. Qualquer excesso identificado em sua estrutura numerológica merece uma análise criteriosa, pois essas intensidades podem revelar tanto talentos excepcionais quanto pontos que demandam superação e ajuste.</p>
-
-<p>Muitas vezes, as reações diante da vida são respostas condicionadas ou puramente emocionais, que surgem de forma automática. O processo de maturidade e autodesenvolvimento permite a adoção de métodos mais eficazes para interagir com o mundo. Nesse contexto, o seu Número de Equilíbrio atua como um guia estratégico, orientando sobre a melhor postura a ser adotada em situações desafiadoras ou de alta pressão.</p>
-
-<p>Cada letra do nome de nascimento carrega uma característica específica, mas certos pontos merecem atenção redobrada. A letra inicial do seu primeiro nome traduz suas inclinações primárias, revelando como você aborda oportunidades e obstáculos logo no primeiro contato. É a sua assinatura de atitude inicial perante o novo.</p>
-
-<p>Já a última letra do seu primeiro nome reflete a persistência e a capacidade de concluir projetos. Juntas, essas letras fornecem um panorama completo sobre o seu potencial para iniciar e finalizar ciclos com sucesso. O equilíbrio entre o impulso de começar e a disciplina de terminar é o que define a eficácia de suas realizações.</p>
-
-<p>Ao longo da existência, diversas vibrações influenciam a trajetória humana. Enquanto algumas promovem harmonia, outras trazem desafios necessários ao crescimento. Assim como as letras extremas do seu nome indicam tendências, a letra de maior recorrência em seu nome completo destaca habilidades específicas ou excessos que moldam sua personalidade de forma única.</p>`;
-
-
-    const txtP1 = bancoEquilibrio.inicio[nInicio] || "";
-    const txtP2 = bancoEquilibrio.conclusao[nFim] || "";
-
-// 3. Montagem com os títulos e o ESPAÇO (usando <br>)
-let htmlEquil = `
-    ${txtIntroEquil}
-    <br><br>
-    
-  <div class="grupo-respostas-bloco pula-pagina">
-    <div class="secao-resultado">
-        <h3 style="color: var(--gold);">SUA INCLINAÇÃO</h3>
-        ${txtP1}
-    </div>
-    
-   
-
-    <div class="secao-resultado">
-        <h3 style="color: var(--gold);">SUA CAPACIDADE DE REALIZAÇÃO</h3>
-        ${txtP2}
-    </div></div>
-`;
-
-// 4. Aplica seu filtro (que troca o MASCULINO-FEMININO-NEUTRO pelo nome)
-const textoFormatado = aplicarFiltroTexto(htmlEquil);
-
-html += `
-    <div class="separador-luxo">
-        <div class="caixa-interna"><h2>Equilíbrio</h2></div>
-    </div>
-    <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
-        <div class="texto-res">${textoFormatado}</div>
-    </div>
-`;
  
 // --- CONTINUAÇÃO DO CÓDIGO ---
 
@@ -3644,29 +3594,7 @@ html += `</div>`;
 
 
 
-   tituloBonito = "Déficits de Comportamento";   
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
-// B. DÉFICITS DE COMPORTAMENTO
-html += `
-    <div class="page">
-        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Déficits de Comportamento</h2>
-        <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
-        <div class="texto-res pula-pagina"> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</div>
-        <hr style="border:0; border-top:1px solid #ffffff">
-`;
-if (res.deficitsOcultos.length > 0) {
-    res.deficitsOcultos.forEach(d => {
-        html += `<div class="texto-res"> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #ffffff"></div>`;
-    });
-}
-html += `</div>`;
+
 
 
 // --- INCLUSÃO: DESEJO OCULTO E TALENTOS ESPECIAIS ---
@@ -3700,6 +3628,60 @@ html += `
     </div>`
 
 
+
+// --- INÍCIO DO BLOCO DO EQUILÍBRIO ---
+
+    const nInicio = res.equilibrio.inicio;
+    const nFim = res.equilibrio.fim;
+
+    // Introdução direta para não ter erro de busca no banco
+    const txtIntroEquil = `<p>O Universo rege-se pelo princípio da harmonia, e o mesmo se aplica aos seus números pessoais. Qualquer excesso identificado em sua estrutura numerológica merece uma análise criteriosa, pois essas intensidades podem revelar tanto talentos excepcionais quanto pontos que demandam superação e ajuste.</p>
+
+<p>Muitas vezes, as reações diante da vida são respostas condicionadas ou puramente emocionais, que surgem de forma automática. O processo de maturidade e autodesenvolvimento permite a adoção de métodos mais eficazes para interagir com o mundo. Nesse contexto, o seu Número de Equilíbrio atua como um guia estratégico, orientando sobre a melhor postura a ser adotada em situações desafiadoras ou de alta pressão.</p>
+
+<p>Cada letra do nome de nascimento carrega uma característica específica, mas certos pontos merecem atenção redobrada. A letra inicial do seu primeiro nome traduz suas inclinações primárias, revelando como você aborda oportunidades e obstáculos logo no primeiro contato. É a sua assinatura de atitude inicial perante o novo.</p>
+
+<p>Já a última letra do seu primeiro nome reflete a persistência e a capacidade de concluir projetos. Juntas, essas letras fornecem um panorama completo sobre o seu potencial para iniciar e finalizar ciclos com sucesso. O equilíbrio entre o impulso de começar e a disciplina de terminar é o que define a eficácia de suas realizações.</p>
+
+<p>Ao longo da existência, diversas vibrações influenciam a trajetória humana. Enquanto algumas promovem harmonia, outras trazem desafios necessários ao crescimento. Assim como as letras extremas do seu nome indicam tendências, a letra de maior recorrência em seu nome completo destaca habilidades específicas ou excessos que moldam sua personalidade de forma única.</p>`;
+
+
+    const txtP1 = bancoEquilibrio.inicio[nInicio] || "";
+    const txtP2 = bancoEquilibrio.conclusao[nFim] || "";
+
+// 3. Montagem com os títulos e o ESPAÇO (usando <br>)
+let htmlEquil = `
+    ${txtIntroEquil}
+    <br><br>
+    
+  <div class="grupo-respostas-bloco pula-pagina">
+    <div class="secao-resultado">
+        <h3 style="color: var(--gold);">SUA INCLINAÇÃO</h3>
+        ${txtP1}
+    </div>
+    
+   
+
+    <div class="secao-resultado">
+        <h3 style="color: var(--gold);">SUA CAPACIDADE DE REALIZAÇÃO</h3>
+        ${txtP2}
+    </div></div>
+`;
+
+// 4. Aplica seu filtro (que troca o MASCULINO-FEMININO-NEUTRO pelo nome)
+const textoFormatado = aplicarFiltroTexto(htmlEquil);
+
+html += `
+    <div class="separador-luxo">
+        <div class="caixa-interna"><h2>Equilíbrio</h2></div>
+    </div>
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
+        <div class="texto-res">${textoFormatado}</div>
+    </div>
+`;
+
+    
 
  tituloBonito = "Habilidades Especiais e Deficiências"; 
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
@@ -3763,6 +3745,31 @@ itensAlinhamento.forEach(chave => {
     `;
 });
 
+
+
+   tituloBonito = "Déficits de Comportamento";   
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;
+// B. DÉFICITS DE COMPORTAMENTO
+html += `
+    <div class="page">
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">Déficits de Comportamento</h2>
+        <div class="intro-texto">${textos.introducoes.deficits || ""}</div>
+        <div class="texto-res pula-pagina"> ${aplicarFiltroTexto(textos.deficits[res.deficitRecorrente])}</div>
+        <hr style="border:0; border-top:1px solid #ffffff">
+`;
+if (res.deficitsOcultos.length > 0) {
+    res.deficitsOcultos.forEach(d => {
+        html += `<div class="texto-res"> ${aplicarFiltroTexto(textos.deficits[d])}</p><hr style="border:0; border-top:1px solid #ffffff"></div>`;
+    });
+}
+html += `</div>`;
     
 // Crie esta linha logo ACIMA do código da ondinha:
  tituloBonito = "O seu DESAFIO PRINCIPAL"; 
