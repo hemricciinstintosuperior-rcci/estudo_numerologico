@@ -4057,9 +4057,9 @@ html += `
 `;
     
 
-// Cálculo dos dias e identificação do dia da semana
+// --- BLOCO: DIAS DE PODER E VIBRAÇÃO SEMANAL ---
 const diasPoder = obterDiasFavoraveisRessonancia(res.dia);
-const diaSemanaNome = obterDiaSemanaNascimento(res.dataNascimento); // Certifique-se de ter a data no res
+const diaSemanaVib = obterDiaSemanaVibracional(res.dia);
 tituloBonito = "Dias de Poder e Fluxo Vital";
 
 html += `
@@ -4067,13 +4067,11 @@ html += `
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
     <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
-        <p>Os <strong>Dias de Poder</strong> são janelas de oportunidade cronológica onde o universo "fala a mesma língua" que a sua alma. Baseado na Lei da Ressonância, esses dias não são apenas datas no calendário, mas sim momentos de alinhamento vibracional onde a resistência do mundo diminui para você. É altamente recomendável que compromissos de grande relevância — como assinaturas de contratos, lançamentos de projetos, reuniões decisivas ou pedidos importantes — sejam agendados preferencialmente nestas datas. Nestes dias, sua aura se expande e sua capacidade de influenciar a realidade ao seu redor atinge o ápice. Além da ressonância numérica, você possui uma conexão sagrada com o dia da sua chegada ao mundo: <strong>${diaSemanaNome}</strong>. Sempre que um dos seus dias de poder coincidir com uma <strong>${diaSemanaNome}</strong>, você estará diante de um "Dia de Ouro", um momento de sorte excepcional onde as forças do seu destino e as forças do tempo se fundem em total harmonia.</p>
-        <p>Utilize este conhecimento para planejar sua agenda estratégica. Marcar um compromisso em um dia que vibra na sua mesma frequência é como nadar a favor da correnteza: o esforço é menor e o alcance é muito maior. Seja para uma viagem, o início de um tratamento ou uma conversa difícil, busque a proteção desses números para garantir que o resultado final seja favorável à sua evolução.</p>
+        <p>Os <strong>Dias de Poder</strong> são janelas de oportunidade cronológica onde o universo "fala a mesma língua" que a sua alma. Baseado na Lei da Ressonância, esses dias não são apenas datas aleatórias, mas sim momentos de alinhamento vibracional onde a resistência do mundo diminui para você. É altamente recomendável que compromissos de grande relevância — como assinaturas de contratos, lançamentos de projetos, reuniões decisivas ou pedidos importantes — sejam agendados preferencialmente nestas datas. Nestes dias, sua aura se expande e sua capacidade de influenciar a realidade ao seu redor atinge o ápice.</p>
+        <p>Além da ressonância numérica mensal, sua energia pessoal está conectada à vibração sagrada da <strong>${diaSemanaVib}</strong>. De acordo com a Numerologia Cabalística, este é o dia da semana que governa sua vitalidade e sua força de ação. Sempre que um dos seus dias de poder coincidir com uma ${diaSemanaVib} no calendário, você estará diante de um "Dia de Ouro" — um momento de sorte excepcional onde as forças do seu destino e as frequências do tempo se fundem em total harmonia, garantindo que o resultado final de suas ações seja favorável à sua evolução e sucesso.</p>
     </div>
 
-    <div style="margin-top: 35px; background: rgba(218, 165, 32, 0.05); border: 2px solid var(--gold); border-radius: 15px; padding: 25px; position: relative; overflow: hidden;">
-        <div style="position: absolute; top: -10px; right: -10px; opacity: 0.1; font-size: 5em; color: var(--gold); font-weight: bold;">${reduzirPuro(res.dia)}</div>
-        
+    <div style="margin-top: 35px; background: rgba(218, 165, 32, 0.05); border: 2px solid var(--gold); border-radius: 15px; padding: 25px; position: relative;">
         <div style="text-align: center;">
             <span style="display: block; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: var(--gold); margin-bottom: 15px;">Seus Dias de Ressonância Mensal</span>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
@@ -4085,14 +4083,14 @@ html += `
             </div>
             
             <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(218, 165, 32, 0.3);">
-                <p style="margin: 0; color: #fff;">Seu Dia da Semana Vibracional:</p>
-                <strong style="font-size: 1.4em; color: var(--gold); text-transform: uppercase;">${diaSemanaNome}</strong>
+                <p style="margin: 0; color: #fff;">Sua Vibração Semanal Regente:</p>
+                <strong style="font-size: 1.6em; color: var(--gold); text-transform: uppercase; letter-spacing: 2px;">${diaSemanaVib}</strong>
             </div>
         </div>
     </div>
     
-    <p style="text-align: center; margin-top: 20px; font-size: 0.85em; color: #888;">
-        * Priorize estes dias para dar início a tudo o que você deseja que prospere e dure.
+    <p style="text-align: center; margin-top: 20px; font-size: 0.85em; color: #888; font-style: italic;">
+        * Planeje suas grandes decisões para estes dias e sinta a diferença no fluxo dos acontecimentos.
     </p>
 </div>
 `;
