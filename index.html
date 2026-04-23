@@ -2765,7 +2765,12 @@ function obterDiasFavoraveisRessonancia(diaNascimento) {
     return diasResultantes;
 }
 
-        
+function obterDiaSemanaNascimento(dataISO) {
+    // dataISO deve ser YYYY-MM-DD
+    const diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];
+    const data = new Date(dataISO + "T12:00:00"); // Força meio-dia para evitar erro de fuso
+    return diasSemana[data.getDay()];
+}        
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -4043,31 +4048,43 @@ html += `
 `;
     
 
-// --- BLOCO: DIAS DE PODER (AFINIDADE VIBRACIONAL) ---
-// Usando 'res.dia' que já está no seu objeto de resultados
+// Cálculo dos dias e identificação do dia da semana
 const diasPoder = obterDiasFavoraveisRessonancia(res.dia);
-tituloBonito = "Dias de Poder e Ressonância"; 
+const diaSemanaNome = obterDiaSemanaNascimento(res.dataNascimento); // Certifique-se de ter a data no res
+tituloBonito = "Dias de Poder e Fluxo Vital";
 
 html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
+<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
-    <div class="intro-texto">
-        <p>Na numerologia, a <strong>Lei da Ressonância</strong> indica que os dias que possuem a mesma vibração reduzida do seu nascimento funcionam como amplificadores da sua energia pessoal. Nestas datas, seu magnetismo está em harmonia com o fluxo do tempo.</p>
+    <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
+        <p>Os <strong>Dias de Poder</strong> são janelas de oportunidade cronológica onde o universo "fala a mesma língua" que a sua alma. Baseado na Lei da Ressonância, esses dias não são apenas datas no calendário, mas sim momentos de alinhamento vibracional onde a resistência do mundo diminui para você. É altamente recomendável que compromissos de grande relevância — como assinaturas de contratos, lançamentos de projetos, reuniões decisivas ou pedidos importantes — sejam agendados preferencialmente nestas datas. Nestes dias, sua aura se expande e sua capacidade de influenciar a realidade ao seu redor atinge o ápice. Além da ressonância numérica, você possui uma conexão sagrada com o dia da sua chegada ao mundo: <strong>${diaSemanaNome}</strong>. Sempre que um dos seus dias de poder coincidir com uma <strong>${diaSemanaNome}</strong>, você estará diante de um "Dia de Ouro", um momento de sorte excepcional onde as forças do seu destino e as forças do tempo se fundem em total harmonia.</p>
+        <p>Utilize este conhecimento para planejar sua agenda estratégica. Marcar um compromisso em um dia que vibra na sua mesma frequência é como nadar a favor da correnteza: o esforço é menor e o alcance é muito maior. Seja para uma viagem, o início de um tratamento ou uma conversa difícil, busque a proteção desses números para garantir que o resultado final seja favorável à sua evolução.</p>
     </div>
-    <div class="evitar-corte texto-res" style="text-align: center; border: 1px solid rgba(218, 165, 32, 0.3); padding: 20px; border-radius: 10px; background: rgba(0,0,0,0.2);">
-        <p style="margin-bottom: 10px; font-weight: bold; color: #fff;">Seus dias de maior afinidade em qualquer mês:</p>
-        <span style="color: var(--gold); font-size: 2em; font-family: 'Arial', sans-serif; letter-spacing: 5px;">
-            ${diasPoder.join(" · ")}
-        </span>
-        <p style="margin-top: 15px; font-size: 0.9em; font-style: italic; color: #bbb;">
-            (Baseado na raiz numérica ${reduzirPuro(res.dia)} do seu nascimento)
-        </p>
+
+    <div style="margin-top: 35px; background: rgba(218, 165, 32, 0.05); border: 2px solid var(--gold); border-radius: 15px; padding: 25px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -10px; right: -10px; opacity: 0.1; font-size: 5em; color: var(--gold); font-weight: bold;">${reduzirPuro(res.dia)}</div>
+        
+        <div style="text-align: center;">
+            <span style="display: block; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: var(--gold); margin-bottom: 15px;">Seus Dias de Ressonância Mensal</span>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                ${diasPoder.map(d => `
+                    <div style="background: var(--gold); color: #000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 1.8em; font-weight: bold; box-shadow: 4px 4px 15px rgba(0,0,0,0.4);">
+                        ${d}
+                    </div>
+                `).join('')}
+            </div>
+            
+            <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(218, 165, 32, 0.3);">
+                <p style="margin: 0; color: #fff;">Seu Dia da Semana Vibracional:</p>
+                <strong style="font-size: 1.4em; color: var(--gold); text-transform: uppercase;">${diaSemanaNome}</strong>
+            </div>
+        </div>
     </div>
+    
+    <p style="text-align: center; margin-top: 20px; font-size: 0.85em; color: #888;">
+        * Priorize estes dias para dar início a tudo o que você deseja que prospere e dure.
+    </p>
 </div>
 `;
 
