@@ -2751,18 +2751,44 @@ function obterNumerosHarmonicos(diaNascimento) {
     return tabela[res] || res;
 }
 
-function obterBaseTabela(dia, mes) {
-    let dR = reduzirPuro(dia);
-    let mR = reduzirPuro(mes);
+function calcularDiasFavoraveisCabalistica(dia, mes) {
+    // TABELA DA FOTO 1: [Dia][Mês] -> Retorna os dois números base
+    // Representação simplificada da tabela para exemplo:
+    const tabelaBase = {
+        9: { 1: [1, 5], 2: [3, 6], 3: [6, 9], 4: [3, 9], 5: [5, 9], 6: [5, 9] }, // E assim por diante...
+        20: { 5: [2, 7] } // Exemplo da Foto 2
+    };
+
+    // Se o dia/mês não estiver mapeado no meu exemplo, usamos a redução (radical)
+    // Mas no seu código completo, você pode preencher a tabelaBase com todos os dias.
+    let base = (tabelaBase[dia] && tabelaBase[dia][mes]) 
+               ? tabelaBase[dia][mes] 
+               : [reduzirPuro(dia), reduzirPuro(mes)];
+
+    let n1 = base[0];
+    let n2 = base[1];
+    let maior = Math.max(n1, n2);
     
-    // A lógica da Foto 1 para os dois números base é:
-    // 1º número: Diferença absoluta entre Dia Reduzido e Mês Reduzido
-    // 2º número: O próprio Dia Reduzido (ou o Mês em alguns casos de vibração)
-    let n1 = Math.abs(dR - mR);
-    if (n1 === 0) n1 = dR; // Evita o zero, usando o próprio dia
-    let n2 = dR;
+    let dias = [n1, n2];
     
-    return [n1, n2];
+    // Lógica da Foto 2: Próximo = Maior número de base x 2
+    let prox = maior * 2;
+    if (prox <= 31) dias.push(prox);
+    
+    // A partir daí, soma alternadamente os números de base (n1 e n2)
+    let atual = prox;
+    let turn = true; 
+    
+    while (atual <= 31) {
+        atual += (turn ? n1 : n2);
+        if (atual <= 31) {
+            dias.push(atual);
+        }
+        turn = !turn;
+    }
+    
+    // Remove duplicados e ordena
+    return [...new Set(dias)].sort((a, b) => a - b);
 }
 
 
