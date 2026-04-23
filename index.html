@@ -2751,39 +2751,18 @@ function obterNumerosHarmonicos(diaNascimento) {
     return tabela[res] || res;
 }
 
-// 3. DIAS FAVORÁVEIS DO MÊS (Baseado nas Fotos 1 e 2)
-// Lógica de alternância: Base = maior da tabela. Prox = Base * 2. Depois soma alternada.
-function calcularDiasFavoraveisCabalistica(dia, mes) {
-    // Simulação da consulta à Tabela (Foto 1)
-    // Para simplificar e automatizar, pegamos a lógica da Foto 2:
-    // Exemplo: Dia 20 de Maio -> Tabela mostra 2 e 7.
-    // Como você já tem os números da tabela na mão (ou lógica de cálculo),
-    // aqui aplicamos a progressão da Foto 2:
+function obterBaseTabela(dia, mes) {
+    let dR = reduzirPuro(dia);
+    let mR = reduzirPuro(mes);
     
-    let n1 = reduzirPuro(dia);
-    let n2 = reduzirPuro(mes);
+    // A lógica da Foto 1 para os dois números base é:
+    // 1º número: Diferença absoluta entre Dia Reduzido e Mês Reduzido
+    // 2º número: O próprio Dia Reduzido (ou o Mês em alguns casos de vibração)
+    let n1 = Math.abs(dR - mR);
+    if (n1 === 0) n1 = dR; // Evita o zero, usando o próprio dia
+    let n2 = dR;
     
-    // Identifica os dois primeiros (Base da Tabela - Foto 1)
-    let menor = Math.min(n1, n2);
-    let maior = Math.max(n1, n2);
-    
-    let dias = [menor, maior];
-    
-    // Próximo: Maior x 2
-    let prox = maior * 2;
-    if(prox <= 31) dias.push(prox);
-    
-    // Segue somando n1 e n2 alternadamente até chegar em 31
-    let atual = prox;
-    let turn = true; // alterna entre somar n1 e n2
-    
-    while (atual <= 31) {
-        atual += (turn ? n1 : n2);
-        if (atual <= 31) dias.push(atual);
-        turn = !turn;
-    }
-    
-    return [...new Set(dias)].sort((a, b) => a - b);
+    return [n1, n2];
 }
 
 
