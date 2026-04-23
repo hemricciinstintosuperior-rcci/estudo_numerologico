@@ -2751,46 +2751,19 @@ function obterNumerosHarmonicos(diaNascimento) {
     return tabela[res] || res;
 }
 
-function calcularDiasFavoraveisCabalistica(dia, mes) {
-    // TABELA DA FOTO 1: [Dia][Mês] -> Retorna os dois números base
-    // Representação simplificada da tabela para exemplo:
-    const tabelaBase = {
-        9: { 1: [1, 5], 2: [3, 6], 3: [6, 9], 4: [3, 9], 5: [5, 9], 6: [5, 9] }, // E assim por diante...
-        20: { 5: [2, 7] } // Exemplo da Foto 2
-    };
-
-    // Se o dia/mês não estiver mapeado no meu exemplo, usamos a redução (radical)
-    // Mas no seu código completo, você pode preencher a tabelaBase com todos os dias.
-    let base = (tabelaBase[dia] && tabelaBase[dia][mes]) 
-               ? tabelaBase[dia][mes] 
-               : [reduzirPuro(dia), reduzirPuro(mes)];
-
-    let n1 = base[0];
-    let n2 = base[1];
-    let maior = Math.max(n1, n2);
+// Retorna todos os dias do mês que possuem o mesmo radical do dia de nascimento
+function obterDiasFavoraveisRessonancia(diaNascimento) {
+    const radicalAlvo = reduzirPuro(diaNascimento);
+    let diasResultantes = [];
     
-    let dias = [n1, n2];
-    
-    // Lógica da Foto 2: Próximo = Maior número de base x 2
-    let prox = maior * 2;
-    if (prox <= 31) dias.push(prox);
-    
-    // A partir daí, soma alternadamente os números de base (n1 e n2)
-    let atual = prox;
-    let turn = true; 
-    
-    while (atual <= 31) {
-        atual += (turn ? n1 : n2);
-        if (atual <= 31) {
-            dias.push(atual);
+    for (let i = 1; i <= 31; i++) {
+        // Se o dia do calendário reduz para o mesmo número do nascimento
+        if (reduzirPuro(i) === radicalAlvo) {
+            diasResultantes.push(i);
         }
-        turn = !turn;
     }
-    
-    // Remove duplicados e ordena
-    return [...new Set(dias)].sort((a, b) => a - b);
+    return diasResultantes;
 }
-
 
         
         
@@ -4025,20 +3998,33 @@ html += `
 </div>
 `;
 
-// --- BLOCO DIAS FAVORÁVEIS ---
-const listaDias = calcularDiasFavoraveisCabalistica(res.dia, res.mesNascimento);
-tituloBonito = "Dias Favoráveis do Mês";
+// --- BLOCO: DIAS DE PODER (AFINIDADE VIBRACIONAL) ---
+// Usando 'res.dia' que já está no seu objeto de resultados
+const diasPoder = obterDiasFavoraveisRessonancia(res.dia);
+tituloBonito = "Dias de Poder e Ressonância"; 
+
 html += `
-<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
-    <div class="intro-texto"><p>Baseado na tabela de conversão e no cálculo de progressão alternada, estes são seus dias de poder mensal.</p></div>
-    <div class="evitar-corte texto-res" style="text-align: center; font-size: 1.3em;">
-        <strong style="color: var(--gold);">${listaDias.join(", ")}</strong>
+    <div class="intro-texto">
+        <p>Na numerologia, a <strong>Lei da Ressonância</strong> indica que os dias que possuem a mesma vibração reduzida do seu nascimento funcionam como amplificadores da sua energia pessoal. Nestas datas, seu magnetismo está em harmonia com o fluxo do tempo.</p>
+    </div>
+    <div class="evitar-corte texto-res" style="text-align: center; border: 1px solid rgba(218, 165, 32, 0.3); padding: 20px; border-radius: 10px; background: rgba(0,0,0,0.2);">
+        <p style="margin-bottom: 10px; font-weight: bold; color: #fff;">Seus dias de maior afinidade em qualquer mês:</p>
+        <span style="color: var(--gold); font-size: 2em; font-family: 'Arial', sans-serif; letter-spacing: 5px;">
+            ${diasPoder.join(" · ")}
+        </span>
+        <p style="margin-top: 15px; font-size: 0.9em; font-style: italic; color: #bbb;">
+            (Baseado na raiz numérica ${reduzirPuro(res.dia)} do seu nascimento)
+        </p>
     </div>
 </div>
 `;
-    
 
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
