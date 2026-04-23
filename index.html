@@ -3970,33 +3970,78 @@ html += `
 `;
 
 
-// --- BLOCO CORES ---
-const textoCores = obterCoresFavoraveis(res.Personalidade); // Expressão
-tituloBonito = "Cores Favoráveis";
-html += `
-<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
-<div class="page">
-    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
-    <div class="intro-texto"><p>Sintonize sua energia com as cores que harmonizam sua Expressão/Personalidade.</p></div>
-    <div class="evitar-corte texto-res" style="text-align: justify; border: 1px solid var(--gold); padding: 15px; border-radius: 8px;">
-        <strong style="color: var(--gold);">Recomendação:</strong> ${textoCores}
-    </div>
-</div>
-`;
+// Bloco dos Números Harmônicos
+const numHarmonicosRaw = obterNumerosHarmonicos(res.dia);
+const listaNums = numHarmonicosRaw.replace(' e ', ', ').split(',').map(n => n.trim());
 
-// --- BLOCO NÚMEROS HARMÔNICOS ---
-const numHarmonicos = obterNumerosHarmonicos(res.dia);
 tituloBonito = "Números Harmônicos";
 html += `
 <div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
-    <div class="intro-texto"><p>Estes números vibram em harmonia com o seu dia de nascimento, facilitando resultados positivos.</p></div>
-    <div class="evitar-corte texto-res" style="text-align: center; font-size: 1.5em;">
-        <strong style="color: var(--gold);">${numHarmonicos}</strong>
+    <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
+        <p>Os <strong>Números Harmônicos</strong> representam as chaves de acesso à sua sorte e fluidez no mundo material. Eles são calculados a partir da raiz do seu dia de nascimento e indicam quais frequências numéricas estão em "simbiose" com o seu destino. Você deve utilizar estes números como uma bússola para escolhas estratégicas: desde a numeração de uma casa ou apartamento, a escolha de placas de veículos, até datas para assinaturas de contratos importantes e gincanas de sorte. Ao alinhar seus documentos, senhas e até números de telefone com estas vibrações, você cria um escudo de proteção e um canal de menor resistência para a prosperidade. Estes números não são meras coincidências, mas sim o seu código de acesso pessoal para que o universo reconheça suas intenções e facilite a conquista de prêmios, reconhecimento e sucesso em suas empreitadas.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;">
+        ${listaNums.map(n => `
+            <div style="width: 70px; height: 70px; border: 3px solid var(--gold); border-radius: 50%; 
+                        display: flex; align-items: center; justify-content: center; 
+                        font-size: 2em; font-weight: bold; color: var(--gold); 
+                        background: rgba(218, 165, 32, 0.1); box-shadow: 0 0 15px rgba(218, 165, 32, 0.4);">
+                ${n}
+            </div>
+        `).join('')}
+    </div>
+    
+    <p style="text-align: center; margin-top: 30px; font-style: italic; color: #888;">
+        "A sorte é o encontro da preparação com a frequência numérica correta."
+    </p>
+</div>
+`;
+
+
+// Bloco das Cores Favoráveis
+const textoCoresRaw = obterCoresFavoraveis(res.Personalidade);
+const coresArray = textoCoresRaw.split(',').map(c => c.trim().replace('.', ''));
+
+// Função simples para mapear nomes de cores para cores CSS (Visual)
+const mapaCoresHex = {
+    "Vermelho": "#e74c3c", "Laranja": "#e67e22", "Amarelo": "#f1c40f", "Verde": "#27ae60", 
+    "Azul": "#3498db", "Rosa": "#fd79a8", "Branco": "#ffffff", "Preto": "#2d3436", 
+    "Cinza": "#95a5a6", "Dourado": "#d4af37", "Creme": "#f5f5dc", "Púrpura": "#8e44ad",
+    "Vinho": "#722f37", "Coral": "#ff7f50", "Turquesa": "#40e0d0", "Prata": "#c0c0c0",
+    "Marrom": "#8b4513", "Anil": "#4b0082", "Bege": "#f5f5dc", "Violeta": "#ee82ee"
+};
+
+tituloBonito = "Cores Favoráveis";
+html += `
+<div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
+<div class="page">
+    <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
+    <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
+        <p>As cores não são apenas elementos visuais; elas são frequências eletromagnéticas que interagem diretamente com o seu campo áurico e sua <strong>Expressão Pessoal</strong>. Na Numerologia Cabalística, o uso consciente das cores corretas atua como um catalisador vibracional, facilitando a manifestação dos seus talentos e protegendo sua energia de interferências externas. Quando você se veste ou se cerca das cores que harmonizam com sua Personalidade, você reduz o atrito com o ambiente e potencializa seu magnetismo social. Esta prática auxilia na clareza mental e na autoconfiança, permitindo que sua essência brilhe sem bloqueios. Cada tonalidade recomendada abaixo possui uma "assinatura" que se acopla ao seu código numérico, criando uma sinergia que favorece desde reuniões importantes até momentos de introspecção e cura.</p>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px;">
+        ${coresArray.map(corNome => {
+            // Tenta pegar a primeira palavra da cor (ex: "Azul claro" vira "Azul") para o fundo
+            const corBase = corNome.split(' ')[0].replace('Tons', '').trim();
+            const corHex = mapaCoresHex[corBase] || "#555";
+            const corTexto = (corHex === "#ffffff" || corHex === "#f5f5dc" || corHex === "#f1c40f") ? "#000" : "#fff";
+            
+            return `
+                <div style="background: ${corHex}; color: ${corTexto}; padding: 10px 25px; border-radius: 5px; 
+                            border: 2px solid var(--gold); font-weight: bold; text-transform: uppercase; 
+                            box-shadow: 3px 3px 10px rgba(0,0,0,0.3); min-width: 120px; text-align: center;">
+                    ${corNome}
+                </div>
+            `;
+        }).join('')}
     </div>
 </div>
 `;
+    
 
 // --- BLOCO: DIAS DE PODER (AFINIDADE VIBRACIONAL) ---
 // Usando 'res.dia' que já está no seu objeto de resultados
