@@ -3494,7 +3494,7 @@ html += `
 html += `
     <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 2 <br><br>Sua Essência & <br> Identidade Numerológica</h2>
+        <h2>Parte 2 <br>Sua Essência & <br> Identidade Numerológica</h2>
         <p>A definição da sua personalidade e propósito original..</p>
     </div>
     `;
@@ -3529,74 +3529,6 @@ html += `
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
 
-
-// --- BLOCO DO EQUILÍBRIO (VERSÃO FINAL SEM ERROS) ---
-// --- FIM DO BLOCO ANTERIOR (Garantindo que fechou) ---
- 
-
-
- 
-// --- CONTINUAÇÃO DO CÓDIGO ---
-
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>Direcionamento Profissional</h2>
-    </div>
-</div>
-
-<div class="page">
-    <div class="texto-res">
-        ${introProfissionalTexto}
-        ${blocoProfissionalHTML}
-    </div>
-</div>
-`;
-
-
-
-// --- INÍCIO DO PILAR 02 ORGANIZADO ---
-html += `
-    <div class="capa-transicao">
-        <p>  </p>
-        <h2>Parte 3 <br><br>Alinhamento & <br> Superação de Desafios</h2>
-        <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
-    </div>
-`;
-
- tituloBonito = "fraquezas e inibições";   
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
-
-    
-// A. LIÇÕES CÁRMICAS
-html += `
-    <div class="page">
-        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">fraquezas e inibições </h2>
-        <div class="intro-texto">${textos.introducoes.deficiencias}</div>
-`;
-if (res.deficiencias.length > 0) {
-    html += `<div class="grupo-respostas-bloco pula-pagina">`;
-    res.deficiencias.forEach(f => {
-        html += `
-        <div class="texto-res"> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #ffffff"></div>`;
-    });
-html += `</div>`;
-    
-} else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
-html += `</div>`;
-
-
-
-
-
-
 // --- INCLUSÃO: DESEJO OCULTO E TALENTOS ESPECIAIS ---
 const dadosDesejo = calcularDesejoOculto(nomeRaw);
 const primeiroNome = nomeRaw.split(' ')[0];
@@ -3625,91 +3557,7 @@ html += `
             <span class="numero-destaque" style="font-size: 2.5rem; font-weight: bold;"></span>
         </div>
         <div class="texto-res">${aplicarFiltroTexto(textos.desejoOculto[dadosDesejo.numero])}</div>
-    </div>`
-
-
-
-// --- INÍCIO DO BLOCO DO EQUILÍBRIO ---
-
-    const nInicio = res.equilibrio.inicio;
-    const nFim = res.equilibrio.fim;
-
-    // Introdução direta para não ter erro de busca no banco
-    const txtIntroEquil = `<p>O Universo rege-se pelo princípio da harmonia, e o mesmo se aplica aos seus números pessoais. Qualquer excesso identificado em sua estrutura numerológica merece uma análise criteriosa, pois essas intensidades podem revelar tanto talentos excepcionais quanto pontos que demandam superação e ajuste.</p>
-
-<p>Muitas vezes, as reações diante da vida são respostas condicionadas ou puramente emocionais, que surgem de forma automática. O processo de maturidade e autodesenvolvimento permite a adoção de métodos mais eficazes para interagir com o mundo. Nesse contexto, o seu Número de Equilíbrio atua como um guia estratégico, orientando sobre a melhor postura a ser adotada em situações desafiadoras ou de alta pressão.</p>
-
-<p>Cada letra do nome de nascimento carrega uma característica específica, mas certos pontos merecem atenção redobrada. A letra inicial do seu primeiro nome traduz suas inclinações primárias, revelando como você aborda oportunidades e obstáculos logo no primeiro contato. É a sua assinatura de atitude inicial perante o novo.</p>
-
-<p>Já a última letra do seu primeiro nome reflete a persistência e a capacidade de concluir projetos. Juntas, essas letras fornecem um panorama completo sobre o seu potencial para iniciar e finalizar ciclos com sucesso. O equilíbrio entre o impulso de começar e a disciplina de terminar é o que define a eficácia de suas realizações.</p>
-
-<p>Ao longo da existência, diversas vibrações influenciam a trajetória humana. Enquanto algumas promovem harmonia, outras trazem desafios necessários ao crescimento. Assim como as letras extremas do seu nome indicam tendências, a letra de maior recorrência em seu nome completo destaca habilidades específicas ou excessos que moldam sua personalidade de forma única.</p>`;
-
-
-    const txtP1 = bancoEquilibrio.inicio[nInicio] || "";
-    const txtP2 = bancoEquilibrio.conclusao[nFim] || "";
-
-// 3. Montagem com os títulos e o ESPAÇO (usando <br>)
-let htmlEquil = `
-    ${txtIntroEquil}
-    <br><br>
-    
-  <div class="grupo-respostas-bloco pula-pagina">
-    <div class="secao-resultado">
-        <h3 style="color: var(--gold);">SUA INCLINAÇÃO</h3>
-        ${txtP1}
-    </div>
-    
-   
-
-    <div class="secao-resultado">
-        <h3 style="color: var(--gold);">SUA CAPACIDADE DE REALIZAÇÃO</h3>
-        ${txtP2}
-    </div></div>
-`;
-
-// 4. Aplica seu filtro (que troca o MASCULINO-FEMININO-NEUTRO pelo nome)
-const textoFormatado = aplicarFiltroTexto(htmlEquil);
-
-html += `
-    <div class="separador-luxo">
-        <div class="caixa-interna"><h2>Equilíbrio</h2></div>
-    </div>
-    <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
-        <div class="texto-res">${textoFormatado}</div>
-    </div>
-`;
-
-    
-
- tituloBonito = "Habilidades Especiais e Deficiências"; 
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
-
-    
-html += `
-    <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Habilidades Especiais e Deficiências</h2>
-        <div class="intro-texto">${aplicarFiltroTexto(textos.introducoes.talentosEspeciais) ||  `
-    <p>Muitas vezes, o foco nas medidas tradicionais de sucesso impede a percepção de uma série de dons e talentos naturais que operam de forma silenciosa. É fundamental prestar atenção às habilidades mais sutis, pois elas são as ferramentas que garantem a sensação de competência e amparo em todas as áreas da vida.</p>
-    <p>Por outro lado, é necessário manter a atenção sobre as crenças e classificações internas, visto que o pensamento molda diretamente as ações. Nem todas as capacidades humanas se manifestam de forma equilibrada; algumas identificam aptidões características brilhantes, enquanto outras revelam qualidades conflitantes que podem se tornar deficiências se não forem devidamente trabalhadas e integradas.</p>
-`}</div>
-        ${talentoNum ? `
-            <p><strong> </strong></p>
-            <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.talentosEspeciais[talentoNum])}</div>
-        ` : `
-            <p style="font-style: italic; color: #666;">Não foi detectada uma predominância numérica (dobro de frequência) no primeiro nome para um talento especial específico.</p>
-        `}
-    </div>
-`;
-    
+    </div>`;
 
 // Removemos o "equilibrio" daqui para ele não causar erro nos outros
 const itensAlinhamento = ["inclinacoes", "subconsciente"];
@@ -3745,6 +3593,172 @@ itensAlinhamento.forEach(chave => {
     `;
 });
 
+// --- INÍCIO DO BLOCO DO EQUILÍBRIO ---
+
+    const nInicio = res.equilibrio.inicio;
+    const nFim = res.equilibrio.fim;
+
+    // Introdução direta para não ter erro de busca no banco
+    const txtIntroEquil = `<p>O Universo rege-se pelo princípio da harmonia, e o mesmo se aplica aos seus números pessoais. Qualquer excesso identificado em sua estrutura numerológica merece uma análise criteriosa, pois essas intensidades podem revelar tanto talentos excepcionais quanto pontos que demandam superação e ajuste.</p>
+
+<p>Muitas vezes, as reações diante da vida são respostas condicionadas ou puramente emocionais, que surgem de forma automática. O processo de maturidade e autodesenvolvimento permite a adoção de métodos mais eficazes para interagir com o mundo. Nesse contexto, o seu Número de Equilíbrio atua como um guia estratégico, orientando sobre a melhor postura a ser adotada em situações desafiadoras ou de alta pressão.</p>
+
+<p>Cada letra do nome de nascimento carrega uma característica específica, mas certos pontos merecem atenção redobrada. A letra inicial do seu primeiro nome traduz suas inclinações primárias, revelando como você aborda oportunidades e obstáculos logo no primeiro contato. É a sua assinatura de atitude inicial perante o novo.</p>
+
+<p>Já a última letra do seu primeiro nome reflete a persistência e a capacidade de concluir projetos. Juntas, essas letras fornecem um panorama completo sobre o seu potencial para iniciar e finalizar ciclos com sucesso. O equilíbrio entre o impulso de começar e a disciplina de terminar é o que define a eficácia de suas realizações.</p>
+
+<p>Ao longo da existência, diversas vibrações influenciam a trajetória humana. Enquanto algumas promovem harmonia, outras trazem desafios necessários ao crescimento. Assim como as letras extremas do seu nome indicam tendências, a letra de maior recorrência em seu nome completo destaca habilidades específicas ou excessos que moldam sua personalidade de forma única.</p>`;
+
+
+    const txtP1 = bancoEquilibrio.inicio[nInicio] || "";
+    const txtP2 = bancoEquilibrio.conclusao[nFim] || "";
+
+// 3. Montagem com os títulos e o ESPAÇO (usando <br>)
+let htmlEquil = `
+    ${txtIntroEquil}
+    <br><br>
+    
+  <div class="grupo-respostas-bloco pula-pagina">
+    <div class="secao-resultado">
+        <h3 style="color: #000; text-align: center;">SUA INCLINAÇÃO</h3>
+        ${txtP1}
+    </div>
+    
+   
+
+    <div class="secao-resultado">
+        <h3 style="color: #000; text-align: center;">SUA CAPACIDADE DE REALIZAÇÃO</h3>
+        ${txtP2}
+    </div></div>
+`;
+
+// 4. Aplica seu filtro (que troca o MASCULINO-FEMININO-NEUTRO pelo nome)
+const textoFormatado = aplicarFiltroTexto(htmlEquil);
+
+html += `
+    <div class="separador-luxo">
+        <div class="caixa-interna"><h2>Equilíbrio</h2></div>
+    </div>
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Equilíbrio</h2>
+        <div class="texto-res">${textoFormatado}</div>
+    </div>
+`;
+
+    
+
+    
+    
+
+ tituloBonito = "Habilidades Especiais e Deficiências"; 
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;
+
+    
+html += `
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Habilidades Especiais e Deficiências</h2>
+        <div class="intro-texto">${aplicarFiltroTexto(textos.introducoes.talentosEspeciais) ||  `
+    <p>Muitas vezes, o foco nas medidas tradicionais de sucesso impede a percepção de uma série de dons e talentos naturais que operam de forma silenciosa. É fundamental prestar atenção às habilidades mais sutis, pois elas são as ferramentas que garantem a sensação de competência e amparo em todas as áreas da vida.</p>
+    <p>Por outro lado, é necessário manter a atenção sobre as crenças e classificações internas, visto que o pensamento molda diretamente as ações. Nem todas as capacidades humanas se manifestam de forma equilibrada; algumas identificam aptidões características brilhantes, enquanto outras revelam qualidades conflitantes que podem se tornar deficiências se não forem devidamente trabalhadas e integradas.</p>
+`}</div>
+        ${talentoNum ? `
+            <p><strong> </strong></p>
+            <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.talentosEspeciais[talentoNum])}</div>
+        ` : `
+            <p style="font-style: italic; color: #666;">Não foi detectada uma predominância numérica (dobro de frequência) no primeiro nome para um talento especial específico.</p>
+        `}
+    </div>
+`;
+    
+    
+    
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>Direcionamento Profissional</h2>
+    </div>
+</div>
+
+<div class="page">
+    <div class="texto-res">
+        ${introProfissionalTexto}
+        ${blocoProfissionalHTML}
+    </div>
+</div>
+`;
+
+// 2. INSERIR A MATURIDADE AQUI (Como você pediu)
+const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
+   // Crie esta linha logo ACIMA do código da ondinha:
+ tituloBonito = "FASE DE MATURIDADE";  
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;
+
+
+    
+html += `
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 1px solid var(--gold);">${tituloMat}</h2>
+        <div class="intro-texto">${textos.introducoes.Maturidade || ""}</div>
+        <div class="texto-res">${aplicarFiltroTexto(textos.Maturidade[res.Maturidade])}</div>
+    </div>
+`;
+
+
+// --- INÍCIO DO PILAR 02 ORGANIZADO ---
+html += `
+    <div class="capa-transicao">
+        <p>  </p>
+        <h2>Parte 3 <br>Alinhamento & <br> Superação de Desafios</h2>
+        <p>Onde a luz encontra a sombra: lições de Vida e mecanismos do subconsciente para o seu equilíbrio.</p>
+    </div>
+`;
+
+ tituloBonito = "fraquezas e inibições";   
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;
+
+    
+// A. LIÇÕES CÁRMICAS
+html += `
+    <div class="page">
+        <h2 class="titulo-topico"style="border-bottom: 2px solid var(--gold);">fraquezas e inibições </h2>
+        <div class="intro-texto">${textos.introducoes.deficiencias}</div>
+`;
+if (res.deficiencias.length > 0) {
+    html += `<div class="grupo-respostas-bloco pula-pagina">`;
+    res.deficiencias.forEach(f => {
+        html += `
+        <div class="texto-res"> ${aplicarFiltroTexto(textos.deficiencias[f])}</p><hr style="border:0; border-top:1px solid #ffffff"></div>`;
+    });
+html += `</div>`;
+    
+} else { html += `<p>Nenhuma deficiência encontrada.</p>`; }
+html += `</div>`;
+
+
+
+   
+
 
 
    tituloBonito = "Déficits de Comportamento";   
@@ -3770,7 +3784,8 @@ if (res.deficitsOcultos.length > 0) {
     });
 }
 html += `</div>`;
-    
+
+        
 // Crie esta linha logo ACIMA do código da ondinha:
  tituloBonito = "O seu DESAFIO PRINCIPAL"; 
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
@@ -3804,11 +3819,12 @@ html += `
 `;    
     
 
+
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
     <div class="capa-transicao">
         <p>  </p>
-        <h2>Parte 4 <br><br>Ciclos, Trajetórias & <br> Tendências do Momento</h2>
+        <h2>Parte 4 <br>Ciclos, Trajetórias & <br> Tendências do Momento</h2>
      
         <p>A análise das janelas de oportunidade e as frequências que regem o seu agora.</p>
     </div>
@@ -3875,29 +3891,6 @@ html += `
 
 
     
-// 2. INSERIR A MATURIDADE AQUI (Como você pediu)
-const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
-   // Crie esta linha logo ACIMA do código da ondinha:
- tituloBonito = "FASE DE MATURIDADE";  
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
-
-
-    
-html += `
-    <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 1px solid var(--gold);">${tituloMat}</h2>
-        <div class="intro-texto">${textos.introducoes.Maturidade || ""}</div>
-        <div class="texto-res">${aplicarFiltroTexto(textos.Maturidade[res.Maturidade])}</div>
-    </div>
-`;
-
 
             
 
@@ -4042,11 +4035,12 @@ html += `
          </div>
 </div>`;
 
+
 // 1. CAPA PARA O BLOCO DE TEMPO
 html += `
     <div class="capa-transicao">
         <h4>   <h4>
-        <h2>Parte 5 <br><br>Matriz, Regente <br>Sequências Numéricas & Potências  </h2>
+        <h2>Parte 5 <br>Matriz, Regente <br>Sequências Numéricas & Potências  </h2>
         <p>Assim como as notas musicais determinam o ritmo da música as letras de seu nome de nascimento determinam o ritmo de sua vida. </p>
     </div>
 `;
