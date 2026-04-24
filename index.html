@@ -4852,45 +4852,46 @@ html += `
 `; // Fechamento correto da seção
 
 html += `
-<div class="page quebra-pagina" style="
-    width: 100vw; 
-    height: 100vh; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    background: #000; /* Fundo preto para preencher as bordas da folha */
-    overflow: hidden; 
-    position: relative;
-    page-break-after: always; /* Comando para o PDF entender que aqui acaba uma página */
+<div class="page" style="
+    page-break-before: always; /* Garante que ele comece em uma nova folha */
+    page-break-after: always;  /* Garante que o texto seguinte vá para outra folha */
+    height: 100vh;             /* Força a altura da página inteira */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;          /* Fundo preto para não sobrar bordas brancas na folha */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;          /* Impede que o conteúdo 'vaze' e crie uma página extra */
 ">
     
     <div style="
-        width: 90%; /* Deixa uma pequena margem de respiro nas laterais */
-        height: 95%; /* Ocupa quase toda a altura da página vertical */
+        width: 90%; 
+        height: 90%; 
+        background: #101015; 
+        border: 2px solid #ffffff; 
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #101015; 
-        border: 4px solid #ffffff; 
-        border-radius: 10px;
         text-align: center;
         padding: 40px;
-        box-sizing: border-box; /* Fundamental para não "vazar" a página */
+        box-sizing: border-box;
     ">
-        
         <h3 style="
             color: #d9b87f; 
             text-transform: uppercase; 
             letter-spacing: 4px; 
-            font-size: 2.5rem; 
+            font-size: 2.2rem; 
+            line-height: 1.3;
             margin-bottom: 30px;
-            line-height: 1.2;
         ">
             Conhecer a realidade da vida é o princípio do conhecimento
         </h3>
 
-        <div style="width: 80px; height: 2px; background: #d9b87f; margin: 30px 0;"></div>
+        <div style="width: 100px; height: 2px; background: #d9b87f; margin: 40px 0;"></div>
 
         <h4 style="
             color: #fff; 
@@ -4905,7 +4906,6 @@ html += `
         <p style="color: #d9b87f; font-size: 1.2rem; margin-top: 20px; letter-spacing: 2px;">
             – Aristóteles
         </p>
-
     </div>
 </div>
 `;
