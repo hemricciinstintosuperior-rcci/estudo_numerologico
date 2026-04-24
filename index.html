@@ -4852,50 +4852,82 @@ html += `
 `; // Fechamento correto da seção
 
 html += `
-<div class="page" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 40px; box-sizing: border-box;">
+<div class="page page-rotate" style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa 100% da altura da página vertical */
+    overflow: hidden; /* Evita que o conteúdo cortado gere barras de rolagem */
+    padding: 0;
+    margin: 0;
+    position: relative;
+">
     
-    <div class="evitar-corte" style="
-        width: 100%; 
-        height: 100%; 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-        align-items: center; 
-        padding: 60px 20px; 
-        background: var(--dark); 
-        border-radius: 15px; 
-        text-align: center; 
-        border: 4px solid #ffffff; 
-        box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    <div class="bloco-vertical" style="
+        /* Define o tamanho do bloco *antes* de girar, 
+           que vai virar a altura e largura depois de girado.
+           Ajuste estes valores para que o bloco preencha a página. */
+        width: 140vh; /* Largura grande para ocupar a altura da página */
+        height: 60vw; /* Altura do bloco para ocupar a largura da página */
+        
+        /* Gira o bloco em -90 graus */
+        transform: rotate(-90deg);
+        transform-origin: center center;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        background: #101015; /* Cor escura do fundo (aproximada da var(--dark)) */
+        border-radius: 15px;
+        border: 4px solid #ffffff; /* Borda branca grossa */
+        padding: 5vh; /* Padding usando vh para se ajustar ao giro */
+        box-shadow: inset 0 0 50px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.5);
+        text-align: center;
+        
+        /* Prepara para centralizar o bloco na página girada */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
     ">
+        
         <h3 style="
-            color: var(--gold); 
-            margin: 0; 
-            text-transform: uppercase; 
-            letter-spacing: 4px; 
-            font-size: 2.2rem; 
-            line-height: 1.4;
-            max-width: 80%
+            color: #d9b87f; /* Cor dourada (aproximada da var(--gold)) */
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 3rem; /* Tamanho grande para a página cheia */
+            line-height: 1.3;
+            width: 90%; /* Limita a largura para não colar nas bordas */
         ">
             Conhecer a realidade da vida é o princípio do conhecimento
         </h3>
         
-        <div style="width: 100px; height: 2px; background: var(--gold); margin: 40px 0;"></div>
+        <div style="width: 150px; height: 3px; background: #d9b87f; margin: 6vh 0;"></div>
 
         <h4 style="
-            color: #fff; 
-            font-size: 1.5rem; 
-            margin-top: 10px; 
-            opacity: 0.9; 
+            color: #ffffff;
+            font-size: 1.8rem; /* Tamanho médio-grande */
+            margin-top: 10px;
+            opacity: 0.9;
             font-style: italic;
             font-weight: 300;
+            line-height: 1.5;
         ">
             "Conhecer a si mesmo é o começo de toda a sabedoria."
         </h4>
         
-        <p style="color: var(--gold); font-size: 1.1rem; margin-top: 15px; letter-spacing: 2px;">
+        <p style="
+            color: #d9b87f;
+            font-size: 1.3rem;
+            margin-top: 25px;
+            letter-spacing: 3px;
+        ">
             – Aristóteles
         </p>
+        
     </div>
 </div>
 `;
