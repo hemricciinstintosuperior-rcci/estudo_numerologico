@@ -4952,34 +4952,36 @@ html += `
 `;
 
 html += `
-<div class="page" style="
-    page-break-before: always; /* Garante que comece em uma nova folha */
-    height: 100vh;             /* Ocupa a altura exata da página */
-    width: 100vw;              /* Ocupa a largura exata */
+<div class="page-final" style="
+    page-break-before: always; 
+    page-break-after: avoid;   /* Instrução para NÃO quebrar página depois desta */
+    height: 99.5vh;            /* Altura ligeiramente menor para evitar transbordo de pixels */
+    width: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #000;          /* Fundo preto total */
+    background: #000;
     margin: 0;
     padding: 0;
-    overflow: hidden;          /* Trava para não criar página vazia depois */
+    overflow: hidden;
     position: relative;
 ">
     
     <div style="
         width: 85%;
         height: 85%;
-        border: 3px solid var(--gold); /* Borda dourada para acabamento */
+        border: 3px solid #d9b87f; 
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
         background: #101015;
+        box-sizing: border-box;
     ">
         <h1 style="
-            color: var(--gold);
-            font-size: 5rem; /* "FIM" bem grande */
+            color: #d9b87f;
+            font-size: 5rem;
             text-transform: uppercase;
             letter-spacing: 15px;
             margin: 0;
@@ -4988,20 +4990,21 @@ html += `
             FIM
         </h1>
 
-        <div style="width: 150px; height: 2px; background: #fff; margin: 30px 0; opacity: 0.5;"></div>
+        <div style="width: 150px; height: 1px; background: rgba(255,255,255,0.3); margin: 30px 0;"></div>
 
         <p style="
             color: #fff;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             text-transform: uppercase;
             letter-spacing: 5px;
             opacity: 0.8;
+            margin: 0;
         ">
-            Conclusão do seu Estudo Numerológico
+            Conclusão do seu Estudo
         </p>
 
         <p style="
-            color: var(--gold);
+            color: #d9b87f;
             font-size: 1rem;
             margin-top: 40px;
             font-style: italic;
