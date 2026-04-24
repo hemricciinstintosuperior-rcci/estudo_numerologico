@@ -4819,13 +4819,6 @@ html += `
     <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify;">
         ${aplicarFiltroTexto(textos.introducoes.conclusaoEvolutiva)}
     </div>
-
-    <div class="evitar-corte" style="margin-top: 40px; padding: 25px; background: var(--dark); border-radius: 10px; text-align: center; border: 2px solid #ffffff;">
-        <h3 style="color: var(--gold); margin: 0; text-transform: uppercase; letter-spacing: 1px;">Conhecer a realidade da vida é o principio do conhecimento</h3>
-        <h4 style="color: #fff; font-size: 14px; margin-top: 10px; opacity: 0.9;">
-            "Conhecer a si mesmo é o começo de toda a sabedoria." – Aristóteles
-        </h4>
-    </div>
 </div>
 `;
 
@@ -4858,6 +4851,56 @@ html += `
 </div>
 `; // Fechamento correto da seção
 
+html += `
+<div class="page" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 40px; box-sizing: border-box;">
+    
+    <div class="evitar-corte" style="
+        width: 100%; 
+        height: 100%; 
+        display: flex; 
+        flex-direction: column; 
+        justify-content: center; 
+        align-items: center; 
+        padding: 60px 20px; 
+        background: var(--dark); 
+        border-radius: 15px; 
+        text-align: center; 
+        border: 4px solid #ffffff; 
+        box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+    ">
+        <h3 style="
+            color: var(--gold); 
+            margin: 0; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            font-size: 2.2rem; 
+            line-height: 1.4;
+            max-width: 80%
+        ">
+            Conhecer a realidade da vida é o princípio do conhecimento
+        </h3>
+        
+        <div style="width: 100px; height: 2px; background: var(--gold); margin: 40px 0;"></div>
+
+        <h4 style="
+            color: #fff; 
+            font-size: 1.5rem; 
+            margin-top: 10px; 
+            opacity: 0.9; 
+            font-style: italic;
+            font-weight: 300;
+        ">
+            "Conhecer a si mesmo é o começo de toda a sabedoria."
+        </h4>
+        
+        <p style="color: var(--gold); font-size: 1.1rem; margin-top: 15px; letter-spacing: 2px;">
+            – Aristóteles
+        </p>
+    </div>
+</div>
+`;
+
+    
 // --- SEÇÃO: AGRADECIMENTO ---
 tituloBonito = "Agradecimento"; 
 
