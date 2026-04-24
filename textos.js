@@ -218,15 +218,15 @@ Ele mostra quais qualidades devem ser desenvolvidas para alcançar realização 
  
         
         
-        subconsciente: `<p>Em nossa jornada cotidiana, somos constantemente bombardeados por estímulos que podem gerar irritação, frustração ou melancolia. Na maioria das vezes, operamos no "piloto automático", reagindo a esses eventos sem uma consciência real de nossas motivações internas.</p>
+        subconsciente: `<p style="margin-bottom: 8px;">Em nossa jornada cotidiana, somos constantemente bombardeados por estímulos que podem gerar irritação, frustração ou melancolia. Na maioria das vezes, operamos no "piloto automático", reagindo a esses eventos sem uma consciência real de nossas motivações internas.</p>
 
-<p>Todos possuímos uma predisposição intrínseca para executar sequências de ações e comportamentos padronizados. Essas reações costumam se manifestar de forma intensa e predefinida, movidas por um forte impulso instintivo que muitas vezes desconhecemos. Por serem automáticas, essas respostas tornam-se mais evidentes apenas em situações extremas, inesperadas ou sob forte pressão.</p>
+<p style="margin-bottom: 8px;">Todos possuímos uma predisposição intrínseca para executar sequências de ações e comportamentos padronizados. Essas reações costumam se manifestar de forma intensa e predefinida, movidas por um forte impulso instintivo que muitas vezes desconhecemos. Por serem automáticas, essas respostas tornam-se mais evidentes apenas em situações extremas, inesperadas ou sob forte pressão.</p>
 
-<p>O Número do Subconsciente é a chave para compreender o nível de autoconfiança que você possui. Ele revela sua capacidade de avaliar cenários críticos com clareza e de responder a eles de maneira equilibrada e apropriada, em vez de apenas ser levado pela correnteza emocional.</p>
+<p style="margin-bottom: 8px;">O Número do Subconsciente é a chave para compreender o nível de autoconfiança que você possui. Ele revela sua capacidade de avaliar cenários críticos com clareza e de responder a eles de maneira equilibrada e apropriada, em vez de apenas ser levado pela correnteza emocional.</p>
 
-<p>Este indicador revela qual é a sua primeira reação — instintiva e imediata — diante de imprevistos que exigem decisões instantâneas. Ele permite analisar como você processa suas emoções no exato momento em que elas emergem, oferecendo um mapa do seu comportamento sob estresse.</p>
+<p style="margin-bottom: 8px;">Este indicador revela qual é a sua primeira reação — instintiva e imediata — diante de imprevistos que exigem decisões instantâneas. Ele permite analisar como você processa suas emoções no exato momento em que elas emergem, oferecendo um mapa do seu comportamento sob estresse.</p>
 
-<p>Esses impulsos podem durar apenas uma fração de segundo, mas seu impacto pode ser profundo. Se não forem compreendidos, esses padrões podem gerar estados de estresse prolongado ou até mesmo levar a quadros de exaustão emocional. Conhecer seu subconsciente é o primeiro passo para transformar reações reativas em ações conscientes e seguras.</p>`,
+<p style="margin-bottom: 8px;">Esses impulsos podem durar apenas uma fração de segundo, mas seu impacto pode ser profundo. Se não forem compreendidos, esses padrões podem gerar estados de estresse prolongado ou até mesmo levar a quadros de exaustão emocional. Conhecer seu subconsciente é o primeiro passo para transformar reações reativas em ações conscientes e seguras.</p>`,
    
         
         anoPessoal: `
