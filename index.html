@@ -4054,8 +4054,8 @@ html += `
 
 // Bloco das Cores Favoráveis
 const textoCoresRaw = obterCoresFavoraveis(res.Personalidade);
-// Remove pontos finais e separa por vírgula
-const coresArray = textoCoresRaw.replace('.', '').split(',').map(c => c.trim());
+// Divide pelas vírgulas
+const itensCores = textoCoresRaw.replace('.', '').split(',').map(c => c.trim());
 
 const mapaCoresHex = {
     "Vermelho": "#e74c3c", "Laranja": "#e67e22", "Amarelo": "#f1c40f", "Verde": "#27ae60", 
@@ -4070,34 +4070,54 @@ html += `
 <div class="separador-luxo"><div class="caixa-interna"><h2>${tituloBonito}</h2></div></div>
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
-    <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
-                <p>As cores não são apenas elementos visuais; elas são frequências eletromagnéticas que interagem diretamente com o seu campo áurico e sua <strong>Expressão Pessoal</strong>. Na Numerologia Cabalística, o uso consciente das cores corretas atua como um catalisador vibracional, facilitando a manifestação dos seus talentos e protegendo sua energia de interferências externas. Quando você se veste ou se cerca das cores que harmonizam com sua Personalidade, você reduz o atrito com o ambiente e potencializa seu magnetismo social. Esta prática auxilia na clareza mental e na autoconfiança, permitindo que sua essência brilhe sem bloqueios. Cada tonalidade recomendada abaixo possui uma "assinatura" que se acopla ao seu código numérico, criando uma sinergia que favorece desde reuniões importantes até momentos de introspecção e cura.</p>
+        <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
+        <p>As cores não são apenas elementos visuais; elas são frequências eletromagnéticas que interagem diretamente com o seu campo áurico e sua <strong>Expressão Pessoal</strong>. Na Numerologia Cabalística, o uso consciente das cores corretas atua como um catalisador vibracional, facilitando a manifestação dos seus talentos e protegendo sua energia de interferências externas. Quando você se veste ou se cerca das cores que harmonizam com sua Personalidade, você reduz o atrito com o ambiente e potencializa seu magnetismo social. Esta prática auxilia na clareza mental e na autoconfiança, permitindo que sua essência brilhe sem bloqueios. Cada tonalidade recomendada abaixo possui uma "assinatura" que se acopla ao seu código numérico, criando uma sinergia que favorece desde reuniões importantes até momentos de introspecção e cura.</p>
     </div>
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; margin-top: 30px;">
+        ${itensCores.map(item => {
+            let corHex = "#555"; // Cinza padrão para avisos
+            let corEncontrada = false;
+            let nomeExibicao = item;
+            let explicacao = "";
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px;">
-        ${coresArray.map(corNome => {
-            // Lógica Inteligente: Procura se alguma chave do mapa está contida no nome da cor
-            let corHex = "#555"; // Padrão caso não encontre
-            
-            // Transformamos em minúsculo para comparar melhor
-            const nomeMinusculo = corNome.toLowerCase();
-            
-            for (const key in mapaCoresHex) {
-                if (nomeMinusculo.includes(key.toLowerCase())) {
-                    corHex = mapaCoresHex[key];
-                    break; 
+            // Verifica se o item contém uma das cores do nosso mapa
+            for (const corChave in mapaCoresHex) {
+                if (item.toLowerCase().includes(corChave.toLowerCase())) {
+                    corHex = mapaCoresHex[corChave];
+                    corEncontrada = true;
+                    
+                    // Se o item for longo (ex: "Evitar cores escuras como preto") 
+                    // e a cor for "Preto", vamos separar o que é a cor do resto
+                    if (item.toLowerCase().includes("evitar") || item.toLowerCase().includes("tons de")) {
+                         nomeExibicao = corChave;
+                         explicacao = item.replace(corChave, "").replace(corChave.toLowerCase(), "").trim();
+                    }
+                    break;
                 }
             }
 
-            // Define se o texto da caixa será preto ou branco baseado no brilho da cor
             const corTexto = (corHex === "#ffffff" || corHex === "#f5f5dc" || corHex === "#f1c40f" || corHex === "#c0c0c0") ? "#000" : "#fff";
-            
+
+            // Se for apenas uma instrução sem cor específica (ou se você quiser destacar o aviso)
+            if (!corEncontrada || item.toLowerCase().includes("evitar")) {
+                return `
+                <div style="display: flex; align-items: center; width: 80%; gap: 15px; background: rgba(0,0,0,0.05); padding: 10px; border-radius: 8px; border-left: 5px solid ${corEncontrada ? corHex : '#555'}">
+                    <div style="background: ${corHex}; color: ${corTexto}; padding: 8px 15px; border-radius: 4px; font-weight: bold; text-transform: uppercase; min-width: 100px; text-align: center;">
+                        ${corEncontrada ? nomeExibicao : 'AVISO'}
+                    </div>
+                    <div style="font-size: 0.9rem; color: #666; font-style: italic;">
+                        ${item}
+                    </div>
+                </div>
+                `;
+            }
+
+            // Se for uma cor normal
             return `
-                <div style="background: ${corHex}; color: ${corTexto}; padding: 12px 20px; border-radius: 8px; 
+                <div style="background: ${corHex}; color: ${corTexto}; padding: 12px 25px; border-radius: 5px; 
                             border: 2px solid #d4af37; font-weight: bold; text-transform: uppercase; 
-                            box-shadow: 2px 4px 8px rgba(0,0,0,0.2); min-width: 140px; text-align: center;
-                            font-size: 0.9rem; display: flex; align-items: center; justify-content: center;">
-                    ${corNome}
+                            box-shadow: 2px 4px 6px rgba(0,0,0,0.1); min-width: 150px; text-align: center;">
+                    ${item}
                 </div>
             `;
         }).join('')}
