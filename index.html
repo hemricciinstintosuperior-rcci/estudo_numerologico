@@ -1071,23 +1071,22 @@ const nomesExibicao = {
       "Conclusao": "Conclusão"   
 };
 
- // Função Universal de Redução Numerológica
 function calcularNumerologia(valor, aceitaMestre = true) {
     let num = parseInt(valor);
-    
-    // Se não for um número válido, retorna zero ou vazio
     if (isNaN(num)) return 0;
 
+    // Criamos um array com todos os potenciais que você deseja preservar
+    const mestresSoberanos = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+
     while (num > 9) {
-        // Se a regra permitir (aceitaMestre) e cair em 11, 22 ou 33, para aqui.
-        if (aceitaMestre && (num === 11 || num === 22 || num === 33)) {
+        // Se aceitaMestre for true e o número estiver na nossa lista de soberanos, ele para a redução
+        if (aceitaMestre && mestresSoberanos.includes(num)) {
             break;
         }
-        // Soma os dígitos
         num = String(num).split('').reduce((acc, curr) => acc + parseInt(curr), 0);
     }
     return num;
-}     
+}
         
  // 1. Função que soma a data dígito por dígito (Linear)
 function calcularCVLinear(dia, mes, ano) {
@@ -1100,9 +1099,11 @@ function calcularCVLinear(dia, mes, ano) {
     return reduzirRespeitandoMestres(somaTotal);
 }
 
-// 2. Função de redução que para no 11, 22 e 33
 function reduzirRespeitandoMestres(num) {
-    while (num > 9 && num !== 11 && num !== 22 && num !== 33) {
+    const mestresSoberanos = [11, 22, 33, 44, 55, 66, 77, 88, 99];
+    
+    // Enquanto for maior que 9 e não for um dos nossos números de intensidade
+    while (num > 9 && !mestresSoberanos.includes(num)) {
         num = num.toString().split('').reduce((acc, curr) => acc + parseInt(curr), 0);
     }
     return num;
