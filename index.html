@@ -4054,9 +4054,9 @@ html += `
 
 // Bloco das Cores Favoráveis
 const textoCoresRaw = obterCoresFavoraveis(res.Personalidade);
-const coresArray = textoCoresRaw.split(',').map(c => c.trim().replace('.', ''));
+// Remove pontos finais e separa por vírgula
+const coresArray = textoCoresRaw.replace('.', '').split(',').map(c => c.trim());
 
-// Função simples para mapear nomes de cores para cores CSS (Visual)
 const mapaCoresHex = {
     "Vermelho": "#e74c3c", "Laranja": "#e67e22", "Amarelo": "#f1c40f", "Verde": "#27ae60", 
     "Azul": "#3498db", "Rosa": "#fd79a8", "Branco": "#ffffff", "Preto": "#2d3436", 
@@ -4071,20 +4071,32 @@ html += `
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
     <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
-        <p>As cores não são apenas elementos visuais; elas são frequências eletromagnéticas que interagem diretamente com o seu campo áurico e sua <strong>Expressão Pessoal</strong>. Na Numerologia Cabalística, o uso consciente das cores corretas atua como um catalisador vibracional, facilitando a manifestação dos seus talentos e protegendo sua energia de interferências externas. Quando você se veste ou se cerca das cores que harmonizam com sua Personalidade, você reduz o atrito com o ambiente e potencializa seu magnetismo social. Esta prática auxilia na clareza mental e na autoconfiança, permitindo que sua essência brilhe sem bloqueios. Cada tonalidade recomendada abaixo possui uma "assinatura" que se acopla ao seu código numérico, criando uma sinergia que favorece desde reuniões importantes até momentos de introspecção e cura.</p>
+        <p>As cores não são apenas elementos visuais; elas são frequências eletromagnéticas que interagem diretamente com o seu campo áurico e sua <strong>Expressão Pessoal</strong>. Na Numerologia Cabalística, o uso consciente das cores corretas atua como um catalisador vibracional, facilitando a manifestação dos seus talentos e protegendo sua energia de interferências externas.</p>
     </div>
 
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px;">
         ${coresArray.map(corNome => {
-            // Tenta pegar a primeira palavra da cor (ex: "Azul claro" vira "Azul") para o fundo
-            const corBase = corNome.split(' ')[0].replace('Tons', '').trim();
-            const corHex = mapaCoresHex[corBase] || "#555";
-            const corTexto = (corHex === "#ffffff" || corHex === "#f5f5dc" || corHex === "#f1c40f") ? "#000" : "#fff";
+            // Lógica Inteligente: Procura se alguma chave do mapa está contida no nome da cor
+            let corHex = "#555"; // Padrão caso não encontre
+            
+            // Transformamos em minúsculo para comparar melhor
+            const nomeMinusculo = corNome.toLowerCase();
+            
+            for (const key in mapaCoresHex) {
+                if (nomeMinusculo.includes(key.toLowerCase())) {
+                    corHex = mapaCoresHex[key];
+                    break; 
+                }
+            }
+
+            // Define se o texto da caixa será preto ou branco baseado no brilho da cor
+            const corTexto = (corHex === "#ffffff" || corHex === "#f5f5dc" || corHex === "#f1c40f" || corHex === "#c0c0c0") ? "#000" : "#fff";
             
             return `
-                <div style="background: ${corHex}; color: ${corTexto}; padding: 10px 25px; border-radius: 5px; 
-                            border: 2px solid var(--gold); font-weight: bold; text-transform: uppercase; 
-                            box-shadow: 3px 3px 10px rgba(0,0,0,0.3); min-width: 120px; text-align: center;">
+                <div style="background: ${corHex}; color: ${corTexto}; padding: 12px 20px; border-radius: 8px; 
+                            border: 2px solid #d4af37; font-weight: bold; text-transform: uppercase; 
+                            box-shadow: 2px 4px 8px rgba(0,0,0,0.2); min-width: 140px; text-align: center;
+                            font-size: 0.9rem; display: flex; align-items: center; justify-content: center;">
                     ${corNome}
                 </div>
             `;
