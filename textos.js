@@ -936,7 +936,39 @@ motivacao: {
 
     33: `<h3>Amor incondicional e Guia Espiritual - Motivação 33</h3>
     <p>A sua Motivação, <strong>MASCULINO-FEMININO-NEUTRO</strong>, representa a maestria na compaixão. Sua alma deseja proteger, curar e ensinar em um nível universal. Existe um chamado profundo dentro de você para o amor incondicional, agindo como um verdadeiro guia para todos que cruzam o seu caminho.</p>
-    <p>O seu desejo íntimo é elevar o nível de paz no mundo através da sua entrega generosa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você sente realização ao nutrir a alma dos outros e ao atuar como um pilar espiritual, transformando a dor em cura e o desequilíbrio em harmonia suprema.</p>`
+    <p>O seu desejo íntimo é elevar o nível de paz no mundo através da sua entrega generosa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você sente realização ao nutrir a alma dos outros e ao atuar como um pilar espiritual, transformando a dor em cura e o desequilíbrio em harmonia suprema.</p>`,
+
+   44: `<h3>Arquitetar o Progresso da Humanidade - Motivação 44</h3>
+    <p>A sua motivação mais profunda, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a de um mestre construtor em escala global. O que realmente impulsiona sua alma é o desejo de manifestar estruturas tão sólidas e eficientes que elas se tornem o alicerce para o progresso de toda uma comunidade ou sociedade.</p>
+    <p>Você sente uma urgência interna por disciplina e ética absoluta, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O seu desejo secreto não é apenas o sucesso material, mas o controle total sobre grandes processos que tragam ordem e estabilidade ao mundo. A mediocridade e a desorganização são seus maiores inimigos internos.</p>
+    <p>Sua plenitude acontece quando você vê uma obra monumental concluída sob sua gestão, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Saber que sua capacidade de trabalho e visão prática criaram algo inabalável é o que traz a paz definitiva à sua alma de realizador(a) implacável.</p>`,
+
+    55: `<h3>Ser o Catalisador de Grandes Mudanças - Motivação 55</h3>
+    <p>A motivação íntima que guia você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a liberdade em sua potência máxima e transformadora. Sua alma anseia por quebrar velhos paradigmas e liderar transições que tragam um novo fôlego de vida e modernidade para o coletivo.</p>
+    <p>Você sente um impulso elétrico por novas experiências que desafiem o "impossível", <strong>MASCULINO-FEMININO-NEUTRO</strong>. O seu desejo secreto é ser a voz que anuncia o futuro, vivendo com uma intensidade que poucos conseguem acompanhar. Para você, a estagnação é como uma prisão espiritual.</p>
+    <p>Ao conseguir canalizar essa energia vibrante para motivar outras pessoas a também buscarem sua liberdade, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você atinge o seu ápice. Seu sucesso é medido pela coragem de ter sido o(a) primeiro(a) a saltar em direção ao novo.</p>
+    <p><em>Nota: Por ser uma vibração de altíssima intensidade, o desafio da sua alma é manter o foco em meio a tantas possibilidades de mudança.</em></p>`,
+
+    66: `<h3>O Sacrifício e o Amor em Escala Universal - Motivação 66</h3>
+    <p>A sua motivação, <strong>MASCULINO-FEMININO-NEUTRO</strong>, representa o desejo de ser o coração do mundo. Sua alma anseia por criar um ambiente de harmonia tão profundo que seja capaz de curar as feridas emocionais de grupos inteiros, indo muito além do círculo familiar.</p>
+    <p>Você sente uma responsabilidade imensa pelo bem-estar alheio, <strong>MASCULINO-FEMININO-NEUTRO</strong>, e seu desejo íntimo é ser o porto seguro absoluto. Existe um chamado para o serviço abnegado, onde sua satisfação vem de nutrir e proteger a vida em todas as suas formas, com uma entrega quase mística.</p>
+    <p>A realização da sua alma acontece quando o amor que você emana consegue pacificar conflitos antigos e restaurar a beleza onde havia caos, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ser o pilar de sustentação afetiva da humanidade é a sua grande e pesada missão de luz.</p>`,
+
+    77: `<h3>A Revelação da Verdade Suprema - Motivação 77</h3>
+    <p>A motivação mais profunda da sua alma, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o mergulho nos mistérios mais inacessíveis da criação. O que te impulsiona é a busca pela verdade nua e crua, unindo uma mente científica implacável a uma intuição espiritual de altíssima frequência.</p>
+    <p>Você deseja o isolamento sagrado para refletir e decodificar as leis do universo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O seu desejo íntimo é ser uma autoridade espiritual e intelectual cuja sabedoria não vem de livros, mas da experiência direta com o Divino e com a lógica pura da natureza.</p>
+    <p>Sua satisfação total ocorre quando você atinge um nível de clareza que dissipa todas as ilusões do mundo material, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao se tornar um(a) mestre da introspecção, você consolida uma jornada de integridade e sabedoria que poucos conseguem alcançar.</p>`,
+
+    88: `<h3>O Poder Executivo Alinhado à Justiça Divina - Motivação 88</h3>
+    <p>A sua motivação íntima, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a conquista do poder absoluto, mas sob o rigor da lei espiritual. O que realmente impulsiona o seu coração é o desejo de gerir grandes fortunas ou organizações de forma que a abundância flua com justiça e equilíbrio para todos.</p>
+    <p>Você sente um impulso por realizações que deixem um legado de prosperidade inquestionável, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O seu desejo secreto é o reconhecimento de sua força inabalável e de sua capacidade de transformar o mundo material através de uma visão estratégica e ética superior.</p>
+    <p>A plenitude da sua alma acontece quando você percebe que sua autoridade é usada para estruturar o progresso coletivo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Ao equilibrar o ganhar e o prover, você se torna uma figura de comando respeitada por sua sabedoria e eficiência monumental.</p>`,
+
+    99: `<h3>O Encerramento Crístico e a Entrega Total - Motivação 99</h3>
+    <p>A motivação mais profunda que move você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o ápice da jornada da alma. O que realmente impulsiona você é o desejo de conclusão de todos os carmas e a entrega total ao serviço desinteressado, amando a humanidade como a si mesmo(a).</p>
+    <p>Você deseja viver uma vida de desapego e compaixão absoluta, <strong>MASCULINO-FEMININO-NEUTRO</strong>. O seu desejo íntimo é ser uma fonte de inspiração final, sentindo que sua alma está pronta para transcender as necessidades do ego em favor da evolução de todos os seres.</p>
+    <p>Ao sentir que sua presença no mundo foi um ato de amor puro e que você auxiliou no despertar de milhares, <strong>MASCULINO-FEMININO-NEUTRO</strong>, sua alma atinge o êxtase. A sensação de missão totalmente cumprida perante o Criador é o que te traz a paz suprema e inabalável.</p>`
+ 
 },
 
 // --- INFLUÊNCIA (IMPRESSÃO / IMAGEM PESSOAL / APARÊNCIA) ---
@@ -999,7 +1031,37 @@ influencia: {
     33: `<h3>Influência 33 - Autoridade Moral e Amor Universal</h3>
     <p>A sua imagem, <strong>MASCULINO-FEMININO-NEUTRO</strong>, irradia uma energia de paz, acolhimento e proteção absoluta. O mundo vê em você um guia amoroso, alguém que exala sabedoria compassiva e uma bondade que parece não ter limites.</p>
     <p>Essa sua aparência de autoridade moral atrai quem busca amparo e direção, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pois você transmite a segurança de um porto seguro emocional. Você influencia através da sua dedicação integral ao bem-estar das pessoas.</p>
-    <p>Todos se sentem protegidos na sua presença, vendo em você uma âncora que estabiliza qualquer ambiente. Essa sua aura de amor altruísta, <strong>MASCULINO-FEMININO-NEUTRO</strong>, te torna uma personalidade profundamente amada e respeitada pela sua entrega ao próximo.</p>`
+    <p>Todos se sentem protegidos na sua presença, vendo em você uma âncora que estabiliza qualquer ambiente. Essa sua aura de amor altruísta, <strong>MASCULINO-FEMININO-NEUTRO</strong>, te torna uma personalidade profundamente amada e respeitada pela sua entrega ao próximo.</p>`,
+
+   44: `<h3>Influência 44 - Autoridade Monumental e Estrutura Inabalável</h3>
+    <p>A primeira impressão que você transmite ao mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é de uma solidez absoluta, como se você fosse uma rocha que sustenta todo o ambiente. As pessoas percebem em você uma eficiência tão acima da média que sua simples presença traz uma sensação imediata de ordem e segurança institucional.</p>
+    <p>Essa sua imagem de "Mestre das Estruturas" atrai responsabilidades de escala global, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pois você exala a competência de quem pode gerir impérios ou grandes corporações com um braço de ferro ético. O mundo enxerga em você a figura do arquiteto do progresso material.</p>
+    <p>Você influencia através de uma seriedade que impõe respeito instantâneo. Essa sua aura de estabilidade total, <strong>MASCULINO-FEMININO-NEUTRO</strong>, faz com que as pessoas confiem a você o controle de situações críticas, reconhecendo sua capacidade de materializar resultados que durarão por gerações.</p>`,
+
+    55: `<h3>Influência 55 - Magnetismo Revolucionário e Energia de Vanguarda</h3>
+    <p>A imagem que você projeta para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é de uma eletricidade constante e uma inteligência veloz que parece estar sempre dez anos à frente de todos. As pessoas veem em você o agente da mudança, uma figura magnética que desafia as tradições apenas com o olhar.</p>
+    <p>Essa sua aparência versátil e futurista atrai mentes inovadoras e curiosas, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pois você transmite a vibração de quem não teme o desconhecido. Você influencia através de um carisma que "quebra" padrões antigos, agindo como um catalisador que obriga o ambiente a evoluir.</p>
+    <p>O mundo enxerga em você a liberdade em sua forma mais pura e intensa. Essa sua aura de modernidade absoluta, <strong>MASCULINO-FEMININO-NEUTRO</strong>, faz com que você seja a referência para quem deseja romper barreiras e explorar novos horizontes de pensamento e tecnologia.</p>`,
+
+    66: `<h3>Influência 66 - Proteção Universal e Harmonização Magnética</h3>
+    <p>A sua aparência para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é de uma benevolência tão profunda que chega a ser mística. As pessoas veem em você a personificação do cuidado e da justiça, como se sua presença fosse capaz de curar e pacificar qualquer desequilíbrio social ou familiar imediatamente.</p>
+    <p>Esse seu magnetismo acolhedor atrai quem busca justiça e amparo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pois você projeta a imagem de um pilar moral inquestionável. Você influencia através de uma elegância afetiva que desarma conflitos; o mundo sente que está diante de um protetor das causas humanas.</p>
+    <p>As pessoas buscam em você a harmonia que falta na sociedade. Essa sua aura de responsabilidade e amor universal, <strong>MASCULINO-FEMININO-NEUTRO</strong>, faz com que você seja respeitado(a) como uma autoridade que une beleza, ética e dedicação absoluta ao próximo.</p>`,
+
+    77: `<h3>Influência 77 - Distinção Intelectual e Mistério Sagrado</h3>
+    <p>A primeira impressão que você causa, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é de uma profundidade intelectual e espiritual que intimida os superficiais. O mundo te vê como um "sábio silencioso", uma figura de classe impecável que parece ter acesso a segredos e verdades que ninguém mais consegue decifrar.</p>
+    <p>Essa sua imagem de seriedade absoluta e análise fria atrai oportunidades de alta consultoria e pesquisa, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pois você transmite a segurança de quem nunca erra no julgamento. Você influencia pelo peso da sua lógica e pelo mistério que envolve sua vida privada.</p>
+    <p>Sua postura é a de quem busca a perfeição em tudo. Essa sua aura de integridade e busca pela verdade suprema, <strong>MASCULINO-FEMININO-NEUTRO</strong>, faz de você uma figura admirada pela sua autonomia mental e por sua capacidade de enxergar o que está oculto para a maioria.</p>`,
+
+    88: `<h3>Influência 88 - Comando Supremo e Prosperidade Ética</h3>
+    <p>A imagem que você transmite, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é de um poder de realização monumental. Você projeta a figura do grande executivo da vida, alguém que lida com o sucesso material e a autoridade com uma naturalidade impressionante, nunca perdendo o senso de justiça.</p>
+    <p>Essa sua aparência imponente atrai o reconhecimento das altas esferas, <strong>MASCULINO-FEMININO-NEUTRO</strong>, porque você exala a vibração de quem sabe multiplicar recursos e organizar a realidade de forma estratégica. Você influencia pela eficácia; as pessoas confiam na sua visão para criar abundância.</p>
+    <p>Você é visto como o motor do sucesso tangível. Essa sua aura de liderança vitoriosa e equilibrada, <strong>MASCULINO-FEMININO-NEUTRO</strong>, faz com que você seja respeitado(a) como a autoridade máxima capaz de transformar sonhos abstratos em fortunas e estruturas sólidas.</p>`,
+
+    99: `<h3>Influência 99 - Aura Crística e Inspiração Universal</h3>
+    <p>A sua imagem para o mundo, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é de um desapego e de uma compaixão que transcendem o humano comum. As pessoas veem em você um exemplo de amor incondicional, alguém que parece estar no mundo, mas pertence a uma esfera de consciência muito mais elevada.</p>
+    <p>Essa sua aparência de sabedoria final e entrega total atrai todos os que buscam luz e direção, <strong>MASCULINO-FEMININO-NEUTRO</strong>, pois você transmite a paz de quem já concluiu todas as lições da vida. Você influencia através de um carisma que é puro serviço e inspiração humanitária.</p>
+    <p>Todos sentem uma elevação espiritual apenas por estarem perto de você. Essa sua aura de tolerância infinita e desprendimento, <strong>MASCULINO-FEMININO-NEUTRO</strong>, consolida sua imagem como um guia universal, pronto para auxiliar no despertar de todos ao seu redor.</p>`
 },
 
 // --- PERSONALIDADE (A EXPRESSÃO EXTERNA / COMO O MUNDO VÊ) ---
