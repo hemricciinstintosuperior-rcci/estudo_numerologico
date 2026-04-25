@@ -3240,7 +3240,12 @@ const listaItensSintese = [
         
     { label: "Ano Pessoal", valor: res.anoPessoal },
     
-    { label: "Trânsito", valor: vTrânsitoFinal } // <--- AGORA VAI APARECER!
+    { label: "Trânsito", valor: vTrânsitoFinal },
+    
+    { label: "Números Harmônicos", valor: obterNumerosHarmonicos(res.dia) },
+    { label: "Cores Favoráveis", valor: obterCoresFavoraveis(res.Personalidade) },
+    { label: "Dias de Poder", valor: obterDiasFavoraveisRessonancia(res.dia).join(', ') },
+    { label: "Vibração Semanal", valor: obterDiaSemanaVibracional(res.dia) }
     
 
 ];
