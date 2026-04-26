@@ -893,7 +893,16 @@ function valorLetraMatriz(l){
     let n = l.normalize("NFD");
     let v = mapaMatriz[n[0].toUpperCase()] ?? 0;
     let s = 0;
-    if(n.includes("\u0301")) s=2; else if(n.includes("\u0302")) s=7; else if(n.includes("\u0303")) s=3;  else if (n.includes("\u030a")) soma += 7;    
+
+    // Lógica de acentos (Soma)
+    if (n.includes("\u0301")) s = 2;          // Agudo
+    else if (n.includes("\u0302")) s = 7;     // Circunflexo
+    else if (n.includes("\u0303")) s = 3;     // Til
+    else if (n.includes("\u0327")) s = 6;     // Cedilha
+    else if (n.includes("\u030a")) s = 7;     // Grau (°)
+    else if (l.includes("'")) s = 2;          // Apóstrofo
+
+    // Lógica de multiplicadores (Grave ou Trema)
     return (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
 }
         
