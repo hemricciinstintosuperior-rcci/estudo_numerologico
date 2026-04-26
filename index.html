@@ -812,6 +812,29 @@ input:focus {
         text-transform: uppercase;
     }
 }
+
+
+    /* O SEGREDO PARA O CELULAR: */
+    /* Na tela, o relatório se ajusta. No PDF, ele mantém os 210mm */
+    .container-master {
+        width: 210mm;
+        margin: 0 auto;
+        background-color: #000;
+    }
+
+    @media screen and (max-width: 210mm) {
+        .container-master, #capa-numerologica, #conteudo-relatorio {
+            width: 100% !important;
+            height: auto !important;
+        }
+        #capa-numerologica {
+            min-height: 100vh !important;
+            padding: 20px !important;
+        }
+        .logo-capa {
+            width: 80% !important; /* Logo não estoura no celular */
+        }
+    }    
     
 
     </style>
@@ -3187,71 +3210,59 @@ let html = `
   <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
 
 
-<div id="capa-numerologica" style="
-        width: 210mm; 
-        height: 297mm; 
-        background: radial-gradient(circle, #1a1a1a 0%, #000000 100%); 
-        border: 2px solid #827108;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; 
-        align-items: center;     
-        page-break-after: always;
-        box-sizing: border-box;
-        position: relative;
-        padding: 60px;
-        margin: 0 auto;
-        -webkit-print-color-adjust: exact;
-    ">
-    
-    <div style="position: absolute; top: 20px; left: 20px; width: 100px; height: 100px; border-top: 4px solid #827108; border-left: 4px solid #827108;"></div>
-    <div style="position: absolute; top: 20px; right: 20px; width: 100px; height: 100px; border-top: 4px solid #827108; border-right: 4px solid #827108;"></div>
-    <div style="position: absolute; bottom: 20px; left: 20px; width: 100px; height: 100px; border-bottom: 4px solid #827108; border-left: 4px solid #827108;"></div>
-    <div style="position: absolute; bottom: 20px; right: 20px; width: 100px; height: 100px; border-bottom: 4px solid #827108; border-right: 4px solid #827108;"></div>
+<div class="container-master">
+    <div id="capa-numerologica" style="
+            width: 210mm; 
+            height: 297mm; 
+            background: radial-gradient(circle, #1a1a1a 0%, #000000 100%); 
+            border: 4px solid #827108;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            align-items: center;     
+            page-break-after: always;
+            box-sizing: border-box;
+            position: relative;
+            padding: 60px;
+            -webkit-print-color-adjust: exact;
+        ">
+        
+        <div style="position: absolute; top: 15px; left: 15px; width: 60px; height: 60px; border-top: 3px solid #827108; border-left: 3px solid #827108;"></div>
+        <div style="position: absolute; top: 15px; right: 15px; width: 60px; height: 60px; border-top: 3px solid #827108; border-right: 3px solid #827108;"></div>
+        <div style="position: absolute; bottom: 15px; left: 15px; width: 60px; height: 60px; border-bottom: 3px solid #827108; border-left: 3px solid #827108;"></div>
+        <div style="position: absolute; bottom: 15px; right: 15px; width: 60px; height: 60px; border-bottom: 3px solid #827108; border-right: 3px solid #827108;"></div>
 
-    <div style="text-align: center; margin-top: 40px;">
-        <span style="color: #827108; letter-spacing: 10px; font-size: 14px; text-transform: uppercase;">Portal Numerológico</span>
-        <div style="width: 50px; height: 1px; background: #827108; margin: 15px auto;"></div>
-    </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <span style="color: #827108; letter-spacing: 8px; font-size: 12px; text-transform: uppercase;">Portal Numerológico</span>
+            <div style="width: 40px; height: 1px; background: #827108; margin: 10px auto;"></div>
+        </div>
 
-    <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
         <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/estudo.png" 
              class="logo-capa" 
-             alt="Logo" 
-             style="width: 450px; height: auto; filter: drop-shadow(0px 0px 20px rgba(130, 113, 8, 0.4));">
-    </div>
+             style="width: 400px; height: auto; filter: drop-shadow(0px 0px 15px rgba(130,113,8,0.3));">
 
-    <div class="capa-cliente" style="text-align: center; margin-bottom: 60px; width: 100%;">
-        <div style="margin-bottom: 10px; color: #827108; font-family: 'Cinzel', serif; letter-spacing: 3px; font-size: 12px; text-transform: uppercase;">Análise Exclusiva de:</div>
-        <h1 style="
-            font-family: 'Cinzel', serif; 
-            font-size: 42px; 
-            text-transform: uppercase; 
-            letter-spacing: 4px; 
-            color: #ffffff; 
-            font-weight: 700;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        ">${nomeRaw}</h1>
-        
-        <div style="width: 200px; height: 2px; background: linear-gradient(to right, transparent, #827108, transparent); margin: 20px auto;"></div>
-        
-        <div style="
-            font-family: 'Cinzel', serif; 
-            font-size: 22px; 
-            color: #827108; 
-            font-weight: bold;
-            letter-spacing: 5px;
-        ">${dataRaw.split('-').reverse().join('/')}</div>
-    </div>
+        <div class="capa-cliente" style="text-align: center; margin-bottom: 40px; width: 100%;">
+            <div style="color: #827108; font-family: 'Cinzel', serif; letter-spacing: 2px; font-size: 11px; text-transform: uppercase;">Análise Exclusiva de:</div>
+            
+            <h1 style="font-family: 'Cinzel', serif; font-size: clamp(24px, 8vw, 38px); text-transform: uppercase; letter-spacing: 3px; color: #fff; margin: 10px 0;">
+                ${nomeRaw}
+            </h1>
+            
+            <div style="width: 150px; height: 1px; background: linear-gradient(to right, transparent, #827108, transparent); margin: 15px auto;"></div>
+            
+            <div style="font-family: 'Cinzel', serif; font-size: 18px; color: #827108; letter-spacing: 4px;">
+                ${dataRaw.split('-').reverse().join('/')}
+            </div>
+        </div>
 
-    <div style="margin-bottom: 20px;">
-        <p style="font-size: 10px; color: #ffffff; letter-spacing: 4px; text-transform: uppercase; opacity: 0.6;">
+        <p style="font-size: 9px; color: #ffffff; letter-spacing: 3px; text-transform: uppercase; opacity: 0.5; margin-bottom: 20px;">
             Instinto Superior • Engenharia da Alma
         </p>
     </div>
-</div>
+
+    <div id="conteudo-relatorio" style="background: #ffffff; width: 210mm; min-height: 297mm; box-sizing: border-box;">
 `;
+// --- FIM DO BLOCO DA CAPA ---
 
 // --- PÁGINA 1: SUMÁRIO (AJUSTADA PARA CABER EM UMA FOLHA) ---
 html += `
