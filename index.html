@@ -335,8 +335,10 @@
 .bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ffffff; }
 /* Fundo sempre branco para todos os números da pirâmide */
 
-
-/* 2. CORES APENAS NOS NÚMEROS (TEXTO) */
+.container-piramide, .piramide {
+    max-width: 100vw !important; /* Impede que ela tente ser maior que a folha */
+    overflow-x: hidden !important; /* Corta qualquer tentativa de vazar para os lados */
+}
 
 
 
