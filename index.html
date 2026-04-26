@@ -5023,35 +5023,6 @@ html += `
 </div>
 `;
 
-
-
-// --- SEÇÃO: ORIGEM E CODIFICAÇÃO ---
-tituloBonito = "Origem e a Codificação da Numerologia Moderna"; 
-
-// Separador Luxo
-html += `
-<div class="separador-luxo" style="width: 100%; margin: 40px 0;">
-    <div class="caixa-interna" style="text-align: center;">
-        <h2 style="margin: 0;">${tituloBonito}</h2>
-    </div>
-</div>
-`;    
-
-html += `
-<div class="secao-card quebra-pagina" style="width: 100%; max-width: 1000px; margin: 0 auto; text-align: center; padding: 20px;">
-    <div style="margin-bottom: 30px;">
-        <h2 class="titulo-topico mostrar-titulo" style="letter-spacing: 5px; color: #827108; margin-bottom: 30px; font-weight: 800;">
-            ${tituloBonito}
-        </h2>
-        <div style="width: 50px; height: 3px; background: #827108; margin: 0 auto;"></div>
-    </div>
-
-    <div class="evitar-corte texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify;">
-        ${aplicarFiltroTexto(textos.introducoes.historiaModerna)}
-    </div>
-</div>
-`; // Fechamento correto da seção
-
 html += `
 <div class="page" style="
     page-break-before: always; /* Garante que ele comece em uma nova folha */
@@ -5110,10 +5081,11 @@ html += `
     </div>
 </div>
 `;
-    
-// --- SEÇÃO: AGRADECIMENTO ---
-tituloBonito = "Agradecimento"; 
 
+// --- SEÇÃO: ORIGEM E CODIFICAÇÃO ---
+tituloBonito = "Origem e a Codificação da Numerologia Moderna"; 
+
+// Separador Luxo
 html += `
 <div class="separador-luxo" style="width: 100%; margin: 40px 0;">
     <div class="caixa-interna" style="text-align: center;">
@@ -5123,34 +5095,24 @@ html += `
 `;    
 
 html += `
-<div style="width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 20px;">
-    <div style="margin-bottom: 40px;">
-        <h2 class="titulo-topico" style="letter-spacing: 5px; color: #827108; margin-bottom: 20px; font-weight: 800; text-transform: uppercase;">
-            Agradecimento
+<div class="secao-card quebra-pagina" style="width: 100%; max-width: 1000px; margin: 0 auto; text-align: center; padding: 20px;">
+    <div style="margin-bottom: 30px;">
+        <h2 class="titulo-topico mostrar-titulo" style="letter-spacing: 5px; color: #827108; margin-bottom: 30px; font-weight: 800;">
+            ${tituloBonito}
         </h2>
-        <div style="width: 60px; height: 3px; background: #827108; margin: 0 auto;"></div>
-    </div>      
-    
-     <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify; margin-bottom: 15px;">
-        ${aplicarFiltroNomeComposto(textos.introducoes.Conclusao)}
+        <div style="width: 50px; height: 3px; background: #827108; margin: 0 auto;"></div>
     </div>
-        <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 40px;">
-        <p style="font-family: 'Times New Roman', serif; font-size: 2px; font-style: italic; font-weight: bold; margin-bottom: 5px; color: #000;">
-          </p>
-        <p style="font-size: 1px; margin-bottom: 10px; letter-spacing: 1px;">
-        </p>
 
-        <div style="display: flex; justify-content: center; margin: 20px 0; filter: grayscale(1);">
-            <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/INSTINTOFOTOO.png" style="width: 500px; max-width: 90%; height: auto; opacity: 0.8;">
-        </div>
-                   
-        <div style="font-size: 12px; color: #999; margin-top: 5px; text-transform: uppercase; letter-spacing: 2px;">
-            Estudo Numerológico Cabalístico • Edição Premium<br>
-            www.instintosuperior.com 
-        </div>
+    <div class="evitar-corte texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify;">
+        ${aplicarFiltroTexto(textos.introducoes.historiaModerna)}
     </div>
 </div>
-`;
+`; // Fechamento correto da seção
+
+
+    
+
+
 
 html += `
 <div class="page-final" style="
@@ -5214,7 +5176,51 @@ html += `
         </p>
     </div>
 </div>
+`;    
+
+
+// --- SEÇÃO: AGRADECIMENTO ---
+tituloBonito = "Agradecimento"; 
+
+html += `
+<div class="separador-luxo" style="width: 100%; margin: 40px 0;">
+    <div class="caixa-interna" style="text-align: center;">
+        <h2 style="margin: 0;">${tituloBonito}</h2>
+    </div>
+</div>
+`;      
+
+html += `
+<div style="width: 100%; max-width: 900px; margin: 0 auto; text-align: center; padding: 20px;">
+    <div style="margin-bottom: 40px;">
+        <h2 class="titulo-topico" style="letter-spacing: 5px; color: #827108; margin-bottom: 20px; font-weight: 800; text-transform: uppercase;">
+            Agradecimento
+        </h2>
+        <div style="width: 60px; height: 3px; background: #827108; margin: 0 auto;"></div>
+    </div>      
+    
+     <div class="texto-res" style="font-size: 20px; line-height: 1.8; color: #333; text-align: justify; margin-bottom: 15px;">
+        ${aplicarFiltroNomeComposto(textos.introducoes.Conclusao)}
+    </div>
+        <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 40px;">
+        <p style="font-family: 'Times New Roman', serif; font-size: 2px; font-style: italic; font-weight: bold; margin-bottom: 5px; color: #000;">
+          </p>
+        <p style="font-size: 1px; margin-bottom: 10px; letter-spacing: 1px;">
+        </p>
+
+        <div style="display: flex; justify-content: center; margin: 20px 0; filter: grayscale(1);">
+            <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/INSTINTOFOTOO.png" style="width: 500px; max-width: 90%; height: auto; opacity: 0.8;">
+        </div>
+                   
+        <div style="font-size: 12px; color: #999; margin-top: 5px; text-transform: uppercase; letter-spacing: 2px;">
+            Estudo Numerológico Cabalístico • Edição Premium<br>
+            www.instintosuperior.com 
+        </div>
+    </div>
+</div>
 `;
+
+
      document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
             } // FIM DA FUNÇÃO    
     </script>
