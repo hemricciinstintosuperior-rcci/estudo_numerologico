@@ -2845,6 +2845,25 @@ function obterDiaSemanaVibracional(diaNascimento) {
     };
     return tabelaVibracional[radical] || "Não identificado";
 }  
+
+
+function obterLegendaVibração(diaNascimento) {
+    const radical = reduzirPuro(diaNascimento);
+    const legendas = {
+        1: "<strong>Identidade e Comando Central:</strong> O ponto de brilho máximo do hardware. Ideal para liderança, clareza de propósito e decisões que exigem autoridade e visão central.",
+        2: "<strong>Processamento Intuitivo e Emocional:</strong> Fase de alta sensibilidade dos sensores. Ideal para ajustes internos, colaboração, diplomacia e ouvir os sinais do plano intuitivo.",
+        3: "<strong>Expansão de Hardware e Novos Horizontes:</strong> Momento de crescimento do sistema. Ideal para grandes planos, justiça, otimização de recursos e expansão da área de atuação.",
+        4: "<strong>Estrutura e Consolidação de Dados:</strong> O foco está na estabilidade física. Ideal para organização, rotinas técnicas, construção de bases sólidas e disciplina operacional.",
+        5: "<strong>Troca de Dados, Lógica e Conexões:</strong> O processador mental opera em alta velocidade. Ideal para vendas, acordos, comunicação escrita e agilidade no tráfego de informações.",
+        6: "<strong>Harmonia do Sistema e Ajustes Finos:</strong> Calibração estética e relacional. Ideal para diplomacia, artes, bem-estar do hardware (corpo) e estabilização de conflitos.",
+        7: "<strong>Análise Profunda e Diagnóstico:</strong> Sensores voltados para o interior. Ideal para pesquisa, introspecção técnica, estudos profundos e refinamento do software mental.",
+        8: "<strong>Gestão de Potência e Resultados:</strong> Foco em autoridade e retorno material. Ideal para finanças, gestão de grandes projetos e execução de tarefas que exigem resiliência.",
+        9: "<strong>Força Motora, Coragem e Execução:</strong> O driver de ação está no ápice. Ideal para finalização de ciclos, atividades físicas intensas, coragem e rompimento de barreiras."
+    };
+    return legendas[radical] || "";
+}
+
+        
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -4259,6 +4278,7 @@ html += `
 // --- BLOCO: DIAS DE PODER E VIBRAÇÃO SEMANAL ---
 const diasPoder = obterDiasFavoraveisRessonancia(res.dia);
 const diaSemanaVib = obterDiaSemanaVibracional(res.dia);
+const legendaVib = obterLegendaVibração(res.dia); // Chamada da nova função
 tituloBonito = "Dias de Poder e Fluxo Vital";
 
 html += `
@@ -4266,42 +4286,36 @@ html += `
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
     <div class="intro-texto" style="text-align: justify; line-height: 1.6;">
-        <p>Os <strong>Dias de Poder</strong> são janelas de oportunidade cronológica onde o universo "fala a mesma língua" que a sua alma. Baseado na Lei da Ressonância, esses dias não são apenas datas aleatórias, mas sim momentos de alinhamento vibracional onde a resistência do mundo diminui para você. É altamente recomendável que compromissos de grande relevância — como assinaturas de contratos, lançamentos de projetos, reuniões decisivas ou pedidos importantes — sejam agendados preferencialmente nestas datas. Nestes dias, sua aura se expande e sua capacidade de influenciar a realidade ao seu redor atinge o ápice.</p>
-        <p>Além da ressonância numérica mensal, sua energia pessoal está conectada à vibração sagrada de <strong>${diaSemanaVib}</strong>. De acordo com a Numerologia Cabalística, este é o dia da semana que governa sua vitalidade e sua força de ação. Sempre que um dos seus dias de poder coincidir com uma ${diaSemanaVib} no calendário, você estará diante de um "Dia de Ouro" — um momento de sorte excepcional onde as forças do seu destino e as frequências do tempo se fundem em total harmonia, garantindo que o resultado final de suas ações seja favorável à sua evolução e sucesso.</p>
+        <p>Os <strong>Dias de Poder</strong> são janelas de oportunidade cronológica onde o universo "fala a mesma língua" que a sua alma. Baseado na Lei da Ressonância, esses dias são momentos de alinhamento vibracional onde a resistência do mundo diminui para você.</p>
+        <p>Além da ressonância numérica mensal, sua energia pessoal está conectada à vibração sagrada de <strong>${diaSemanaVib}</strong>. De acordo com a Numerologia Cabalística, este é o dia da semana que governa sua vitalidade e sua força de ação.</p>
     </div>
 
-    <div style="margin-top: 35px; background: rgba(218, 165, 32, 0.05); border: 2px solid var(--gold); border-radius: 15px; padding: 25px; position: relative;">
+    <div style="margin-top: 30px; background: rgba(218, 165, 32, 0.05); border: 2px solid var(--gold); border-radius: 15px; padding: 25px; position: relative;">
         <div style="text-align: center;">
             <span style="display: block; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9em; color: var(--gold); margin-bottom: 15px;">Seus Dias de Ressonância Mensal</span>
-            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
                 ${diasPoder.map(d => `
-                    <div style="background: var(--gold); color: #000; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 1.8em; font-weight: bold; box-shadow: 4px 4px 15px rgba(0,0,0,0.4);">
+                    <div style="background: var(--gold); color: #000; width: 55px; height: 55px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-size: 1.6em; font-weight: bold; box-shadow: 4px 4px 12px rgba(0,0,0,0.3);">
                         ${d}
                     </div>
                 `).join('')}
             </div>
             
             <div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(218, 165, 32, 0.3);">
-                <p style="margin: 0; color: #fff;">Sua Vibração Semanal Regente:</p>
-                <strong style="font-size: 1.6em; color: var(--gold); text-transform: uppercase; letter-spacing: 2px;">${diaSemanaVib}</strong>
+                <p style="margin: 0; color: #333; font-weight: bold;">Sua Vibração Semanal Regente:</p>
+                <strong style="font-size: 1.8em; color: #d97a1e; text-transform: uppercase; letter-spacing: 2px;">${diaSemanaVib}</strong>
+                
+                <div style="margin-top: 15px; padding: 15px; background: #fff; border-radius: 8px; font-size: 0.95em; line-height: 1.5; color: #444; border: 1px solid #eee; text-align: left;">
+                    ${legendaVib}
+                </div>
             </div>
         </div>
     </div>
     
     <p style="text-align: center; margin-top: 20px; font-size: 0.85em; color: #888; font-style: italic;">
-        * Planeje suas grandes decisões para estes dias e sinta a diferença no fluxo dos acontecimentos.
+        * Sempre que um dia de poder cair em uma ${diaSemanaVib}, você terá um "Dia de Ouro".
     </p>
 </div>
-`;
-
-// 1. CAPA PARA O BLOCO DE TEMPO
-html += `
-    <div class="capa-transicao">
-        <p>  </p>
-        <h2>Parte 5 <br>Ciclos, Trajetórias & <br> Momentos</h2>
-     
-        <p>Os ciclos da vida, os momentos de decisão e desafios de jornada </p>
-    </div>
 `;
             // 5. CICLOS, MOMENTOS E DESAFIOS
 // 5. CICLOS, MOMENTOS E DESAFIOS
