@@ -893,7 +893,7 @@ function valorLetraMatriz(l){
     let n = l.normalize("NFD");
     let v = mapaMatriz[n[0].toUpperCase()] ?? 0;
     let s = 0;
-    if(n.includes("\u0301")) s=2; else if(n.includes("\u0302")) s=7; else if(n.includes("\u0303")) s=3; else if(n.includes("\u0327")) s=6;
+    if(n.includes("\u0301")) s=2; else if(n.includes("\u0302")) s=7; else if(n.includes("\u0303")) s=3; else if(n.includes("\u0327")) s=6; else if (c === "\u030a") soma += 7;    
     return (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
 }
         
