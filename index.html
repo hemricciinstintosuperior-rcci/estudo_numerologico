@@ -73,6 +73,9 @@
 }
 
 
+    
+
+
     .no-print, .container, .btn-pdf, .btn-gerar, input {
         display: none !important;
     }
@@ -129,6 +132,18 @@
     }
 
  }
+
+.nome-usuario {
+    width: 100%;             /* Garante que ele ocupe a largura total disponível */
+    max-width: 800px;        /* Ou a largura máxima da sua folha PDF */
+    margin: 0 auto;          /* Centraliza o bloco na folha */
+    text-align: center;      /* Centraliza o texto dentro do bloco */
+    word-wrap: break-word;   /* Força a quebra de palavras muito longas */
+    overflow-wrap: break-word; 
+    white-space: normal;     /* Permite que o texto pule para a linha de baixo */
+    display: block;          /* Garante que ele se comporte como um bloco inteiro */
+}
+    
 
 /* 1. O CONTEÚDO (O que fica por baixo) */
 /* O texto que fica atrás continua borrado como você gosta */
