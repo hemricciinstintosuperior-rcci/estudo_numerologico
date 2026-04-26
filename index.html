@@ -778,6 +778,25 @@ input:focus {
     }
 }  
 
+
+/* No seu arquivo de estilos para impressão (@media print) */
+@media print {
+    .capa-nome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Alinhamento horizontal no flex */
+        justify-content: center;
+        width: 100%;
+    }
+
+    h1.nome {
+        font-size: 2.5rem;   /* Tamanho base */
+        line-height: 1.2;    /* Espaçamento entre linhas se quebrar */
+        text-transform: uppercase;
+    }
+}
+    
+
     </style>
 </head>
 <body>
