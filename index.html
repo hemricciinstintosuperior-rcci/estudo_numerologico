@@ -796,45 +796,45 @@ input:focus {
 }  
 
 
-/* No seu arquivo de estilos para impressão (@media print) */
-@media print {
-    .capa-nome {
-        display: flex;
-        flex-direction: column;
-        align-items: center;  /* Alinhamento horizontal no flex */
-        justify-content: center;
-        width: 100%;
+    /* 1. RESET DE SEGURANÇA PARA O CELULAR */
+    @media screen and (max-width: 210mm) {
+        /* Anula os 130% que estão no seu CSS global */
+        html, body, .container, .relatorio-premium, .container-master {
+            width: 100% !important;
+            max-width: 100vw !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden !important;
+        }
+        
+        #capa-numerologica, #conteudo-relatorio {
+            width: 100% !important;
+            height: auto !important;
+            border: none !important; /* Remove bordas que "empurram" o layout */
+        }
+
+        #capa-numerologica {
+            min-height: 100vh !important;
+            padding: 40px 20px !important;
+        }
+
+        .logo-capa {
+            width: 90% !important;
+            max-width: 350px !important;
+        }
+
+        h1 {
+            font-size: clamp(20px, 7vw, 32px) !important;
+        }
     }
 
-    h1.nome {
-        font-size: 2.5rem;   /* Tamanho base */
-        line-height: 1.2;    /* Espaçamento entre linhas se quebrar */
-        text-transform: uppercase;
-    }
-}
-
-
-    /* O SEGREDO PARA O CELULAR: */
-    /* Na tela, o relatório se ajusta. No PDF, ele mantém os 210mm */
+    /* 2. ESTRUTURA PARA O PDF (MANTÉM OS 210MM) */
     .container-master {
         width: 210mm;
         margin: 0 auto;
         background-color: #000;
+        box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
-
-    @media screen and (max-width: 210mm) {
-        .container-master, #capa-numerologica, #conteudo-relatorio {
-            width: 100% !important;
-            height: auto !important;
-        }
-        #capa-numerologica {
-            min-height: 100vh !important;
-            padding: 20px !important;
-        }
-        .logo-capa {
-            width: 80% !important; /* Logo não estoura no celular */
-        }
-    }    
     
 
     </style>
