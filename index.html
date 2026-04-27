@@ -4024,27 +4024,6 @@ html += `
 </div>
 `;
 
- // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
-const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
-   // Crie esta linha logo ACIMA do código da ondinha:
- tituloBonito = "FASE DE MATURIDADE";  
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
-    </div>
-</div>
-`;
-
-  html += `
-    <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 1px solid var(--gold);">${tituloMat}</h2>
-        <div class="intro-texto">${textos.introducoes.Maturidade || ""}</div>
-        <div class="texto-res">${aplicarFiltroTexto(textos.Maturidade[res.Maturidade])}</div>
-    </div>
-`;  
-   
 
 
 
@@ -4359,6 +4338,30 @@ html += `
     // Esta linha garante que o "tituloBonito" mude em cada volta do loop
     tituloBonito = sec === "ciclos" ? "Ciclos da Vida" : 
                    sec === "momentos" ? "Momentos de decisão" : "Desafios de Jornada";    
+
+
+     // 2. INSERIR A MATURIDADE AQUI (Como você pediu)
+const tituloMat = nomesExibicao["Maturidade"] || "Fase de Maturidade";
+   // Crie esta linha logo ACIMA do código da ondinha:
+ tituloBonito = "FASE DE MATURIDADE";  
+// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+html += `
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
+    </div>
+</div>
+`;
+
+  html += `
+    <div class="page">
+        <h2 class="titulo-topico" style="border-bottom: 1px solid var(--gold);">${tituloMat}</h2>
+        <div class="intro-texto">${textos.introducoes.Maturidade || ""}</div>
+        <div class="texto-res">${aplicarFiltroTexto(textos.Maturidade[res.Maturidade])}</div>
+    </div>
+`;  
+   
+
 
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
