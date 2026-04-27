@@ -278,7 +278,22 @@
 .resultado-bloco {
     width: 100%;
 }
+/* Remove riscos fantasmas entre as seções */
+.relatorio-premium, 
+.secao-card, 
+.capa-transicao, 
+.page,
+.resultado-bloco {
+    border-bottom: 0px none transparent !important;
+    border-top: 0px none transparent !important;
+    text-decoration: none !important;
+}
 
+/* Garante que o separador-luxo não deixe rastro nas bordas */
+.separador-luxo .caixa-interna {
+    border-left: none !important;
+    border-right: none !important;
+}    
 
     /* ESCONDE O TÍTULO AMARELO ANTIGO EM TODO O RELATÓRIO */
 .titulo-topico {
@@ -409,14 +424,14 @@
     border-bottom: 1px solid #f0f0f0;
     padding-bottom: 15px;
     margin-bottom: 15px;
-    
+    border: 1px solid #ffffff!important;
 }
 
 .bloco-potencia b {
     display: block;
     font-size: 18px;
     margin-bottom: 5px;
-   
+    border: 1px solid #ffffff!important;
 }
 
 .item-potencia-tag {
@@ -488,24 +503,28 @@
 
 .capa-transicao {
     height: 297mm;
-    width: 210mm;
+   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0;
-    padding: 0; /* Garante que não soma altura */
+
+    margin:  0;
     page-break-before: always;
     page-break-after: always;
-    border: none !important; /* REMOVE O RISCO */
-    outline: none !important; /* REMOVE O RISCO FANTASMA */
+    border: none !important;
     color: #fff;
+
+    /* 🔥 FUNDO LEVE (SEM CAMADAS PESADAS) */
     background-color: #0f2a36;
+   
     background-repeat: no-repeat;
     background-position: center 40%;
-    background-size: 450px;
+    background-size: 450px; /* controla peso */
+
     position: relative;
+    /* Garante que o preenchimento seja total no PDF */
     box-sizing: border-box;
 }
 
@@ -642,7 +661,7 @@
         color: #111 !important;
         text-align: justify !important;
         margin-bottom: 10px !important;
-        
+        border-bottom: 1px solid #ffffff!important;
         font-family: 'Arial', sans-serif; /* Ou a fonte de sua preferência */
         font-style: arial;
     }
@@ -654,7 +673,8 @@
         color: #000 !important;
         text-align: justify !important;
         margin-bottom: 0px !important;
-  
+       border-bottom: 1px solid #ffffff!important;
+     border: 1px solid #ffffff!important;
  
         }
 
@@ -857,22 +877,7 @@ input:focus {
     .capa-transicao { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
     
-/* Remove riscos fantasmas entre as seções */
-.relatorio-premium, 
-.secao-card, 
-.capa-transicao, 
-.page,
-.resultado-bloco {
-    border-bottom: 0px none transparent !important;
-    border-top: 0px none transparent !important;
-    text-decoration: none !important;
-}
 
-/* Garante que o separador-luxo não deixe rastro nas bordas */
-.separador-luxo .caixa-interna {
-    border-left: none !important;
-    border-right: none !important;
-}    
 
     </style>
 </head>
