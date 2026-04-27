@@ -7,780 +7,189 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 <style>
+/* ============================================================
+   1. RESET E REGRAS GERAIS (NÃO ALTERAR)
+   ============================================================ */
 * {
     box-sizing: border-box !important;
     margin: 0;
     padding: 0;
-}
-    
-        :root { --gold: #d97a1e; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
-@media print {
-    .apenas-no-pdf {
-        display: block !important;
-    }
-    .conteudo-travado {
-        filter: none !important; /* Remove o desfoque no PDF */
-    }
-}
-@media print {
-
-    @page {
-        size: A4;
-        margin: 0 ; /* equilíbrio perfeito PDF + impressão */
-    }
-
-       /* Esta classe impede que qualquer bloco dentro dela seja cortado ao meio */
-    .evitar-corte {
-        page-break-inside: avoid !important;
-        break-inside: avoid !important;
-        display: block;
-        width: 100%;
-    }
-
-
-
-    body {
-        background: white !important;
-        color: #1a1a1a !important;
-        margin: 0;
-        padding: 0;
-    }
-
-
-
-.capa {
-    height: 297mm;
-    width: 210mm;
-    background-color: #ffffff !important;
-   
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 1; /* Garante que a camada base existe */
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
 }
 
-  .capa h1 { font-size: 45px; margin: 10px 0; }
-
-.logo-capa, .capa-cliente {
-    position: relative;
-    z-index: 10; /* Força o logo e o texto para a frente de tudo */
-    visibility: visible !important;
-    display: block !important;
+:root { 
+    --gold: #d97a1e; 
+    --dark: #000000; 
+    --card-bg: #ffffff; 
+    --text: #1a1a1a; 
+    --blue-premium: #0f2a36;
 }
 
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background: var(--dark); 
+    color: #1a1a1a; 
+    display: block;
+    counter-reset: page; 
+}
 
-    
+html, body { width: 100%; max-width: 100%; }
 
+/* ============================================================
+   2. CONFIGURAÇÕES DE IMPRESSÃO E PDF
+   ============================================================ */
+@media print {
+    @page {
+        size: A4;
+        margin: 1.5cm; /* Margem padrão para o corpo do texto */
+    }
 
-    .no-print, .container, .btn-pdf, .btn-gerar, input {
+    /* Remove numeração da primeira página */
+    @page :first { margin: 0; }
+
+    /* Elementos que NÃO saem no PDF */
+    .no-print, .container, .btn-pdf, .btn-gerar, input, .aviso-trava, 
+    #status-acesso, #label-tempo, #timer, #msg-trava {
         display: none !important;
     }
 
-.relatorio-premium {
-    width: 210mm !important;
-    max-width: 210mm !important;
-    margin: 0 auto !important;
-    overflow: visible !important; /* Fundamental para não criar barras de rolagem internas */
-    background: #fff;
-}
+    body { background: white !important; }
 
-    /* 🔥 CORREÇÃO PRINCIPAL */
-    .page {
-    width: calc(100% - 2mm);
-    margin: 0 auto;
-    /* TOPO (40px) | LATERAIS (2mm) | BASE (40px) */
-    padding: 40px 2mm 20px 2mm; 
-          }
-
-/* Localize este bloco dentro do seu @media print e substitua */
-.capa, .capa-transicao {
-    height: 297mm !important; /* Força a altura total do papel A4 */
-    min-height: 297mm !important; 
-   
-    margin: 0 !important;
-    padding: 0 !important;
-    page-break-before: always;
-    page-break-after: always;
-}
-
-    /* 🔥 EVITA QUEBRAS FEIAS */
-    .secao-card,
-    .resultado-bloco,
-    .container-barra,
-    .bloco-potencia {
-        page-break-inside: avoid;
-        break-inside: avoid;
-         max-width: 100%;
+    /* CAPAS (Ocupam a folha toda e escondem o risco do rodapé) */
+    .capa, .capa-transicao {
+        page-break-before: always !important;
+        page-break-after: always !important;
+        margin: -1.5cm 0 !important; /* Anula a margem do @page para colar na borda */
+        width: 210mm !important;
+        height: 297mm !important;
+        display: flex !important;
+        position: relative;
+        z-index: 9999;
+        background-color: var(--blue-premium) !important;
     }
 
-    h1, h2, h3 {
-        page-break-after: avoid;
+    /* Esconde a numeração automática nas capas */
+    .capa .page-footer, .capa-transicao .page-footer {
+        display: none !important;
+        visibility: hidden !important;
     }
 
-    p {
-        page-break-inside: avoid;
+    /* Evita quebras de elementos no meio da página */
+    .evitar-corte, .secao-card, .resultado-bloco, .container-barra, 
+    .bloco-potencia, .container-piramide, .grupo-respostas-bloco, p {
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
     }
 
-    /* 🔥 GARANTE CORES */
-    * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
- }
-
-.nome-usuario {
-    width: 100%;             /* Garante que ele ocupe a largura total disponível */
-    max-width: 800px;        /* Ou a largura máxima da sua folha PDF */
-    margin: 0 auto;          /* Centraliza o bloco na folha */
-    text-align: center;      /* Centraliza o texto dentro do bloco */
-    word-wrap: break-word;   /* Força a quebra de palavras muito longas */
-    overflow-wrap: break-word; 
-    white-space: normal;     /* Permite que o texto pule para a linha de baixo */
-    display: block;          /* Garante que ele se comporte como um bloco inteiro */
-}
-    
-
-/* 1. O CONTEÚDO (O que fica por baixo) */
-/* O texto que fica atrás continua borrado como você gosta */
-.conteudo-travado {
-    filter: blur(10px);
-    -webkit-filter: blur(10px);
-    opacity: 0.5;
-    user-select: none;
-    pointer-events: none;
-}
-
-/* A nova caixa de aviso (totalmente independente e nítida) */
-.aviso-trava {
-    background: #0a0e1a; /* Cor do seu fundo */
-    color: #d4af37;    /* Dourado Instinto Superior */
-    border: 2px solid #d4af37;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: -50px; /* Faz ela subir para cima do borrão */
-    position: relative;
-    z-index: 9999;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    display: block;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media print {
-    .conteudo-travado { filter: none !important; opacity: 1 !important; }
-    .aviso-trava { display: none !important; }
-}
-
-@media print {
-    .conteudo-travado { 
-        filter: none !important; 
-        opacity: 1 !important; 
-    }
-    .aviso-trava { 
-        display: none !important; 
-        visibility: hidden !important; /* Reforço extra */
-        height: 0 !important;       /* Garante que não ocupe espaço */
-        margin: 0 !important;
-    }
-}
-    
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #1a1a1a; margin: 0; padding: 0; display: block;}
-        /* Estilo para os Logos */
-.logo-capa {
-    width: 700px !important; /* Tamanho ideal para uma folha A4 */
-    max-width: 90%;          /* Garante que não ultrapasse a margem da folha */
-    height: auto !important;  /* Mantém a proporção sem esticar */
-    margin: 0 auto 40px auto; /* Centraliza horizontalmente e dá espaço para o nome */
-    display: block !important;
-}
-
-.capa-cliente {
-    width: 100%;
-    text-align: center; /* Centraliza o nome e a data */
-    margin-top: 20px;
-}
-
-.logo-conclusao {
-    width: 2000px;
-    height: auto;
-    margin-top: 0px;
-    opacity: 0.9;
-}
-
- html, body {
-    width: 100%;
-    max-width: 100%;
-}   
-* {
-    box-sizing: border-box;
-}    
-        /* Container de Entrada */
-        .container { width: 100%; max-width: 850px; background: #111; padding: 25px; border-radius: 20px; border: 1px solid #A65F00; margin-top: 30px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); }
-        h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
-        input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: #333; background: #fff; color: #000; font-size: 16px; box-sizing: border-box; }
-        .btn-gerar { width: 100%; padding: 20px; background: #A65F00; color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
-
-        /* Estrutura do Relatório */
-       .relatorio-premium { 
-    width: 100%;
-    max-width: none;        /* 🔥 remove limite */
-    margin: 25px 0;         /* 🔥 tira centralização */
-    background: #ffffff;
-}
-        
-/* Isso limpa bordas fantasmas de elementos comuns que geram riscos */
-.secao-card, .resultado-bloco, .page, img {
-    border: none !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
-/* Estilo para o número da página no PDF */
-.page-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    font-size: 10pt;
-    color: #827108;
-    display: none; /* Esconde na tela do sistema */
-}
-
-@media print {
+    /* Configuração do Rodapé com Numeração */
     .page-footer {
-        display: block; /* Mostra apenas no PDF/Impressão */
+        display: block !important;
         position: fixed;
-        bottom: 10mm;
+        bottom: 5mm;
         right: 10mm;
+        font-size: 10pt;
+        color: #827108;
     }
 
-    /* Truque para o contador de páginas funcionar no corpo */
-    body {
-        counter-reset: page;
-    }
-    
     .page-number::after {
         counter-increment: page;
         content: "Página " counter(page);
     }
-}
-
-
-
-        .btn-pdf { position: fixed; top: 20px; right: 20px; background: #cc0000; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; border: none; cursor: pointer; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-.secao-card, .card { 
-    border-left: none !important; 
-}
-
-.secao-card,
-.container-barra,
-.resultado-bloco {
-    width: 100%;
-}
-  
-
-    /* ESCONDE O TÍTULO AMARELO ANTIGO EM TODO O RELATÓRIO */
-.titulo-topico {
-    display: none !important;
-}
-
-    /* 2. EXCEÇÃO: Se a página tiver a classe 'mostrar-titulo', o título APARECE */
-    .page.mostrar-titulo .titulo-topico {
-        display: block !important;
-    }    
-
-/* AJUSTE OPCIONAL: DIMINUI O ESPAÇO NO TOPO DA PÁGINA PARA O TEXTO SUBIR */
-.page {
-    margin-top: 0 !important;
-    padding-top: 5px !important;
-}
     
-.secao-card {
-    width: 100% !important; /* Força a ocupar toda a largura da folha */
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    /* Use padding para o texto não colar na borda, em vez de margin lateral */
-    padding: 20px 15px !important; 
+    .conteudo-travado { filter: none !important; opacity: 1 !important; }
+}
+
+/* ============================================================
+   3. LAYOUT DO RELATÓRIO (ESTUDO NUMEROLÓGICO)
+   ============================================================ */
+.relatorio-premium { 
+    width: 210mm;
+    margin: 0 auto;
+    background: #fff;
+    overflow: visible !important;
+}
+
+.page {
+    width: 100%;
+    padding: 10px 2mm; 
+    margin-top: 0 !important;
     position: relative;
 }
-        .titulo-topico {   text-align: center; font-size: 24px; color: #000; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 10px; }
-        .intro-texto { font-style: arial; color: #333; font-size: 24px; margin-bottom: 5px; white-space: pre-line; border-bottom: 1px solid #BDBDBD; padding-bottom: 15px; }
-        .texto-res { line-height: 1.6; font-size: 20px; white-space: pre-line; }
-        
-        /* Gráficos dentro do card */
-        .barra-vermelha { height: 14px; background: #ddd; border-radius: 7px; overflow: hidden; margin-top: 5px; }
-        .progresso-vermelho { height: 100%; background: linear-gradient(90deg, #ff9999, #cc0000); }
-        .card-necessidades { background: #fdf5e6; padding: 20px; border-radius: 4px; border-left: 12px solid #ffffff; margin-top: 10px; }
-       /* ESSENCIAL: Faz as cores das barras aparecerem no PDF/PWA */
-        * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
-    .piramide { display: flex; flex-direction: column; align-items: center; margin: 20px auto; }
+
+/* Títulos e Tipografia */
+h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+h3 { font-size: 22px !important; color: var(--gold) !important; text-transform: uppercase; margin-bottom: 8px; }
+.titulo-topico { display: none !important; } /* Controlado via JS mostrar-titulo */
+.page.mostrar-titulo .titulo-topico { display: block !important; text-align: center; font-size: 24px; color: #000; }
+
+.intro-texto, .texto-res {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    text-align: justify;
+    color: #000;
+}
+
+/* ============================================================
+   4. COMPONENTES ESPECÍFICOS (PIRÂMIDE, REGENTE, POTÊNCIAS)
+   ============================================================ */
+.container-piramide { width: 100%; margin: 20px auto; text-align: center; }
+.piramide { display: flex; flex-direction: column; align-items: center; margin-top: 60px !important; }
 .linha { display: flex; justify-content: center; gap: 2px; margin: 1px 0; }
-.num { width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; background: #fff; color: #000; font-size: 18px; font-weight: bold; border-radius: 2px; }
-.num.negativo { background-color: #fff !important; color: #FF0000 !important; }
-    /* Sequências Especiais (Dourado/Laranja Luxo) */
-.num.especial { 
-    color: #d97a1e !important; 
-    font-weight: 900 !important;
-    background-color: #ffffff !important; /* Garante fundo branco */
-}
+.num { width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; background: #fff; color: #000; font-weight: bold; border-radius: 2px; }
+.num.negativo { color: #FF0000 !important; }
+.num.especial { color: var(--gold) !important; }
+.num.financeiro { color: #28a745 !important; }
 
-/* Sequências Financeiras / Triângulo de 9 (Verde) */
-.num.financeiro { 
-    color: #28a745 !important; 
-    font-weight: 900 !important;
-    background-color: #ffffff !important; /* Garante fundo branco */
-}
-
-.bloco-piramide { background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0; border: 1px solid #ffffff; }
-/* Fundo sempre branco para todos os números da pirâmide */
-
-.container-piramide, .piramide {
-    max-width: 100vw !important; /* Impede que ela tente ser maior que a folha */
-    overflow-x: hidden !important; /* Corta qualquer tentativa de vazar para os lados */
-}
-
-
-
-
-
-
-/* O Regente mantém o seu estilo especial de triângulo que já definimos */
-    .container-piramide {
-        page-break-inside: avoid !important; /* Impede que quebre no meio */
-        break-inside: avoid !important;      /* Reforço para navegadores modernos */
-        display: block;
-        width: 100%;
-        margin: 20px auto;
-        text-align: center;
-    }
-
-       .piramide {
-        /* Margem superior de 60px para descolar do texto de introdução */
-        margin-top: 60px !important; 
-        
-        /* Margem inferior de 40px para não colar no que vem depois */
-        margin-bottom: 40px !important; 
-        
-        /* Garante que ela fique centralizada e isolada */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        clear: both;
-    } 
-
-.linha-letras {
-    display: flex;
-    justify-content: center;
-    gap: 2px;
-}
-
-.num-letra {
-    /* Mesma largura e gap da classe .num para alinhar verticalmente */
-    width: 22px; 
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-    opacity: 0.8;
-}
-    
-  /* Estilo Premium para a Seção de Potências */
-.secao-potencias {
-    background: #ffffff;
-    color: #1a1a1a; /* Texto quase preto para leitura fácil */
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-.bloco-potencia {
-    border-bottom: 1px solid #f0f0f0;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ffffff!important;
-}
-
-.bloco-potencia b {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 5px;
-    border: 1px solid #ffffff!important;
-}
-
-.item-potencia-tag {
-    background: #827108;
-    color: #ffffff !important; /* Força o número a ser branco dentro da tag dourada */
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    display: inline-block;
-}  
-
-/* Cor Especial para o Regente da Vida - FORMATO TRIÂNGULO */
+/* Estilo do Regente (Triângulo Invertido) */
 .num.regente-destaque {
-    background: none !important;
     color: #827108 !important;
     font-weight: 900 !important;
-    border: none !important;
-    box-shadow: none !important;
+    width: 40px; height: 40px;
     position: relative;
     z-index: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;  /* Ajuste a largura se precisar */
-    height: 40px; /* Ajuste a altura se precisar */
+    background: none !important;
 }
-
 .num.regente-destaque::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    /* Aqui acontece a mágica do triângulo invertido */
-    border-left: 22px solid transparent;  /* Lado esquerdo */
-    border-right: 22px solid transparent; /* Lado direito */
-    border-top: 38px solid #ffffff;       /* Fundo Branco do triângulo */
-    filter: drop-shadow(0 0 5px rgba(184, 134, 11, 0.6)); /* Brilho dourado */
-    z-index: -1;
+    content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+    border-left: 22px solid transparent; border-right: 22px solid transparent;
+    border-top: 38px solid #ffffff; z-index: -1;
 }
 
-/* Opcional: Se quiser uma bordinha fina no triângulo */
-.num.regente-destaque::after {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 24px solid transparent;
-    border-right: 24px solid transparent;
-    border-top: 41px solid #827108; /* Cor da "borda" dourada */
-    z-index: -2;
-}
+/* Seção de Potências */
+.item-potencia-tag { background: #827108; color: #fff !important; padding: 5px 15px; border-radius: 20px; font-weight: bold; display: inline-block; }
 
-/* Estilo das Abas de Planos */
-.tabs-planos { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
-.tab-btn { 
-    padding: 10px 15px; border: 1px solid #827108; background: #fff; color: #827108; 
-    cursor: pointer; font-weight: bold; text-transform: uppercase; font-size: 12px; border-radius: 4px; transition: 0.3s;
-}
-.tab-btn.active { background: #827108; color: #fff; }
-.tab-content { display: none; animation: fadeIn 0.5s; }
-.tab-content.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-
-
-
-
-
-.separador-luxo {
-    /* Espaçamento e Quebra de Página */
-    margin: 80px auto 40px auto;
-    page-break-before: always;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
+/* Separador de Luxo */
 .separador-luxo .caixa-interna {
-    position: relative;
-    width: 110%;
-    height: 110px;
-
-    /* FUNDO COM PROFUNDIDADE (PRETO + AZUL PETRÓLEO) */
-    background: linear-gradient(180deg, #d97a1e 0%, #d97a1e 100%);
-
-    /* ESPIRAIS SUAVES (EFEITO LUXO) */
-    background-image:
-        radial-gradient(circle at 50% 100%, rgba(212,175,55,0.06) 10%, #d97a1e),
-        radial-gradient(circle at 50% 0%, rgba(212,175,55,0.04) 10%, #d97a1e);
-    background-size: 120px 60px;
-
-    /* BORDA MAIS NOBRE */
-    border-top: 3px solid #c57a1a;
-    border-bottom: 3px solid #c57a1a;
-
-    border-radius: 6px;
-
-    /* SOMBRA MAIS PROFUNDA */
-    box-shadow:
-        0 15px 30px rgba(0,0,0,0.5),
-        inset 0 0 80px rgba(0,0,0,0.7);
-
-    /* CENTRALIZAÇÃO */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    position: relative; width: 100%; height: 110px;
+    background: linear-gradient(180deg, var(--gold) 0%, var(--gold) 100%);
+    border-top: 3px solid #c57a1a; border-bottom: 3px solid #c57a1a;
+    display: flex; justify-content: center; align-items: center;
 }
 
-/* VINHETA INTERNA (EFEITO PREMIUM) */
-.separador-luxo .caixa-interna::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.3));
-    pointer-events: none;
-}
+/* ============================================================
+   5. INTERFACE DO USUÁRIO (INPUTS E BOTÕES)
+   ============================================================ */
+.container { width: 100%; max-width: 850px; background: #111; padding: 25px; border-radius: 20px; border: 1px solid #A65F00; margin: 30px auto; }
+input { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #A65F00; background: #fff; font-size: 16px; }
+.btn-gerar { width: 100%; padding: 20px; background: #A65F00; color: #000; border: none; font-weight: bold; font-size: 20px; cursor: pointer; }
 
-.separador-luxo h2 {
-    color: #ffffff !important;
-    font-size: 1.8rem !important;
-    text-transform: uppercase !important;
-    letter-spacing: 5px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: 'Times New Roman', serif !important;
-    font-weight: bold !important;
-
-    /* GLOW CONTROLADO */
-    text-shadow:
-        0 0 5px rgba(217,122,30,0.6),
-        0 0 15px rgba(217,122,30,0.3);
-
-    line-height: 1;
-}
-
-        /* PADRÃO PARA TODAS AS INTRODUÇÕES */
-    .intro-texto, .intro-secao {
-        font-size: 18px !important; /* Tamanho fixo para todas */
-        line-height: 1 !important;
-        color: #111 !important;
-        text-align: justify !important;
-        margin-bottom: 10px !important;
-        border-bottom: none !important;
-        font-family: 'Arial', sans-serif; /* Ou a fonte de sua preferência */
-        font-style: arial;
-    }
-
-    /* PADRÃO PARA TODOS OS RESULTADOS (CONTEÚDO BRUTO) */
-    .texto-res {
-        font-size: 18px !important; /* Um pouquinho maior que a intro para dar peso */
-        line-height: 1 !important;
-        color: #000 !important;
-        text-align: justify !important;
-        margin-bottom: 0px !important;
-       border-bottom: none !important;
-     border: none !important;
- 
-        }
-
-    /* FORÇAR PARÁGRAFOS DENTRO DOS RESULTADOS */
-    .texto-res p, .intro-texto p {
-        font-size: inherit !important; /* Herda o tamanho da classe pai */
-        margin-bottom: 5px !important;
-    }
-
-.pula-pagina { 
-    page-break-before: always !important; 
-    break-before: page !important; 
-}
-
-h3 {
-     
-    font-size: 22px !important; 
-    color: #d97a1e !important;
-
-    -webkit-text-stroke: 0.5px #d97a1e;
-
-    text-decoration: none !important;
-
-    font-family: 'Cormorant Garamond', serif !important;
-    font-weight: 600;
-
-    text-transform: uppercase;
-
-    letter-spacing: 0.5px; /* mais compacto */
-    margin-bottom: 8px; /* aproxima do texto */
-line-height: 1.1;
-    display: block;
-}
-    
-
-input {
-    outline: none !important; /* Tira o traço de seleção ao clicar */
-    box-shadow: none !important; /* Tira sombras que o celular cria */
-    border: 1px solid #A65F00; /* Mantém apenas a sua borda dourada */
-    -webkit-appearance: none; /* Remove estética padrão do iPhone/Android */
-}
-
-/* Isso remove aquele destaque azul/cinza que o celular coloca ao focar */
-input:focus {
-    border: none !important;
-    background-color: #fff;
-}    
-
-@media print {
-    /* Define as regras para a folha física */
-    @page {
-        margin: 1.5cm; /* Margem de segurança para não cortar o texto */
-        
-        /* Cria o contador de páginas no topo à direita */
-        @top-right {
-            content: "Página " counter(page);
-            font-family: 'Cinzel', serif;
-            font-size: 10pt;
-            color: #827108;
-            font-weight: bold;
-        }
-    }
-
-    /* Garante que o contador seja reiniciado na capa, se necessário */
-    body {
-        counter-reset: page;
-    }
-}
-
-@media print {
-    .grupo-respostas-bloco {
-        display: block;
-        width: 100%;
-        page-break-before: always !important; /* Força o pulo antes de começar o grupo */
-    }
-    
-    /* Remove o pulo individual das respostas para elas não separarem */
-    .grupo-respostas-bloco .texto-res {
-        page-break-before: auto !important; 
-        margin-bottom: 20px;
-    }
-}
-    
-
- @media print {
-    /* Regra específica só para a PRIMEIRA página */
-    @page :first {
-        @top-right {
-            content: ""; /* Deixa vazio o topo da primeira página */
-        }
-    }
-}  
-    
-@media print {
-    /* 1. Criamos um "reset" para as capas de transição */
-    .capa, .capa-transicao {
-        page-break-before: always !important;
-        page-break-after: always !important;
-        /* Força a capa a ignorar as margens padrão do PDF para ocupar a folha toda */
-        margin: 0 !important; 
-        padding: 0 !important;
-        height: 297mm !important;
-    }
-
-    /* 2. Removemos o cabeçalho/rodapé (incluindo numeração) nestas páginas específicas */
-    /* Nota: Como o CSS padrão não permite selecionar @page por classe de elemento, 
-       usamos o truque de esconder qualquer elemento que renderize a numeração 
-       ou forçamos uma margem que "jogue" o número para fora se ele estiver no corpo. */
-
-    .capa-transicao {
-        /* Se você estiver usando um elemento HTML para simular a numeração, 
-           garanta que ele tenha uma classe como '.numero-pagina' e use: */
-        counter-increment: none !important; 
-    }
-
-    /* 3. A regra de ouro para PDFs modernos (Chrome/Edge):
-       Isso remove os cabeçalhos e rodapés automáticos do navegador (Data, Título e URL) */
-    @page {
-        margin: 1.5cm; /* Margem padrão para páginas de conteúdo */
-    }
-
-    /* Definimos que a PRIMEIRA página e qualquer página com a classe capa/transição 
-       não deve exibir os seletores de margem que contêm o contador */
-    
-    .capa, .capa-transicao {
-        /* Isso garante que o conteúdo da capa cubra qualquer elemento de numeração 
-           que o navegador tente inserir por baixo */
-        position: relative;
-        z-index: 9999;
-        background-color: #0f2a36 !important;
-    }
-}
-    
-  @media print {
-    /* Esconde o container do cronômetro e mensagens de trava pelo ID */
-    #status-acesso, 
-    #label-tempo, 
-    #timer, 
-    #msg-trava {
-        display: none !important;
-        visibility: hidden !important;
-        height: 0 !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-}  
-
-
-    /* 1. RESET DE SEGURANÇA PARA O CELULAR */
-    @media screen and (max-width: 210mm) {
-        /* Anula os 130% que estão no seu CSS global */
-        html, body, .container, .relatorio-premium, .container-master {
-            width: 100% !important;
-            max-width: 100vw !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            overflow-x: hidden !important;
-        }
-        
-        #capa-numerologica, #conteudo-relatorio {
-            width: 100% !important;
-            height: auto !important;
-            border: none !important; /* Remove bordas que "empurram" o layout */
-        }
-
-        #capa-numerologica {
-            min-height: 100vh !important;
-            padding: 40px 20px !important;
-        }
-
-        .logo-capa {
-            width: 90% !important;
-            max-width: 350px !important;
-        }
-
-        h1 {
-            font-size: clamp(20px, 7vw, 32px) !important;
-        }
-    }
-
-    /* 2. ESTRUTURA PARA O PDF (MANTÉM OS 210MM) */
-    .container-master {
-        width: 210mm;
-        margin: 0 auto;
-        background-color: #000;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-
-
-/* Na tela (Relatório), mostramos o Player e escondemos o Botão de Link */
+/* Player de Áudio e Links */
 .botao-pdf-link { display: none !important; }
-.player-relatorio { display: flex !important; }
-
-/* No PDF (Impressão), invertemos tudo */
 @media print {
     .botao-pdf-link { display: flex !important; }
     .player-relatorio { display: none !important; }
-    
-    /* Garante que o fundo da capa não suma no PDF */
-    .capa-transicao { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
-    
-/* Mata qualquer borda azul de links ou elementos focados */
+
+/* MATA BORDAS E RISCOS FANTASMAS (LIMPEZA FINAL) */
 :focus { outline: none !important; }
-a, img, audio { border: none !important; outline: none !important; text-decoration: none !important; }
-
-    </style>
-
+.secao-card, .resultado-bloco, .page, img, audio, a {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+</style>
 
    
 </head>
