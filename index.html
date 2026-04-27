@@ -26,7 +26,7 @@
 
     @page {
         size: A4;
-        margin: 0 !inportant; /* equilíbrio perfeito PDF + impressão */
+        margin: 0 ; /* equilíbrio perfeito PDF + impressão */
     }
 
        /* Esta classe impede que qualquer bloco dentro dela seja cortado ao meio */
@@ -88,33 +88,23 @@
     background: #fff;
 }
 
-    .capa, .capa-transicao {
-        /* O truque do 'sangramento' para matar o risco no topo */
-        height: 297.5mm !important; /* Aumentamos meio milímetro */
-        width: 100% !important;
-        margin: -0.2mm 0 0 0 !important; /* Sobe um pentelhésimo para cobrir o topo */
-        padding: 0 !important;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #0f2a36 !important;
-        -webkit-print-color-adjust: exact !important;
-        
-        /* Remove qualquer borda que o navegador tente inventar */
-        border: none !important;
-        outline: none !important;
-        page-break-before: always !important;
-        page-break-after: always !important;
-    }
-
-    /* Ajuste para as páginas de texto não ficarem coladas no topo agora que zeramos a margem do @page */
+    /* 🔥 CORREÇÃO PRINCIPAL */
     .page {
-        width: 100% !important;
-        padding: 15mm 15mm 10mm 15mm !important; /* Damos a margem por dentro da página */
-        margin: 0 auto !important;
-        box-sizing: border-box !important;
-    }
+    width: calc(100% - 2mm);
+    margin: 0 auto;
+    /* TOPO (40px) | LATERAIS (2mm) | BASE (40px) */
+    padding: 40px 2mm 20px 2mm; 
+          }
+
+/* Localize este bloco dentro do seu @media print e substitua */
+.capa, .capa-transicao {
+    height: 297mm !important; /* Força a altura total do papel A4 */
+    min-height: 297mm !important; 
+   
+    margin: 0 !important;
+    padding: 0 !important;
+    page-break-before: always;
+    page-break-after: always;
 }
 
     /* 🔥 EVITA QUEBRAS FEIAS */
@@ -795,6 +785,11 @@ input:focus {
     .capa-transicao { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
     
+/* Mata qualquer borda azul de links ou elementos focados */
+:focus { outline: none !important; }
+a, img, audio { border: none !important; outline: none !important; text-decoration: none !important; }
+
+    </style>
 
 
     </style>
