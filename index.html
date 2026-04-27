@@ -3271,22 +3271,24 @@ html += `
 `;
 
 html += `
-       <div class="capa-transicao" style="
+    <div class="capa-transicao" style="
         height: 297mm; 
         width: 100%; 
+        background-color: #0f2a36; 
         display: flex; 
         flex-direction: column; 
         align-items: center; 
         text-align: center; 
-        background-color: #0f2a36; 
         position: relative; 
         overflow: hidden; 
         page-break-after: always;
+
+        /* OS DOIS COMANDOS MÁGICOS AQUI */
+        outline: 2px solid #0f2a36; 
+        outline-offset: -1px;       
         
-        /* A SOLUÇÃO PARA A LINHA NO TOPO */
-        border-top: 1px solid #0f2a36;
-        box-shadow: inset 0 2px 0 #0f2a36;
-        margin-top: -0.5px;">
+        -webkit-print-color-adjust: exact;
+    ">
         
         <div style="margin-top: 60px; z-index: 10; width: 100%;">
             <h2 style="font-family: 'Cinzel', serif; font-size: 28px; color: #fff; text-transform: uppercase; margin: 15px 20px;">
