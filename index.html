@@ -779,6 +779,26 @@ input:focus {
 :focus { outline: none !important; }
 a, img, audio { border: none !important; outline: none !important; text-decoration: none !important; }
 
+@media print {
+    /* 1. Força o fundo da "folha" a ser escuro para sumir com o risco branco */
+    html, body {
+        background-color: #0f2a36 !important; /* Cor da sua capa de transição */
+    }
+
+    /* 2. Força o conteúdo branco a ter fundo branco, para não ficar tudo escuro */
+    #conteudo-relatorio, .page {
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact;
+    }
+
+    /* 3. Mata a margem do navegador que cria o espaço do risco */
+    @page {
+        margin: 0 !important;
+        size: auto; /* Deixa o navegador decidir o corte, mas sem margem branca */
+    }
+}
+    
+
     </style>
 
    
