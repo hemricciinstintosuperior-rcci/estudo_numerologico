@@ -12,6 +12,28 @@
     margin: 0;
     padding: 0;
 }
+
+
+@media print {
+    /* Força o "fundo da mesa" a ser branco. 
+       Se houver fresta entre as páginas, ela fica invisível. */
+    html, body {
+        background: #ffffff !important;
+        background-color: #ffffff !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Remove qualquer sombra ou borda externa que possa estar 
+       sendo interpretada como um risco escuro no PDF */
+    .page, .relatorio-premium, .container-master {
+        box-shadow: none !important;
+        border: none !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+    
     
         :root { --gold: #d97a1e; --dark: #000000; --card-bg: #ffffff; --text: #1a1a1a; }
 @media print {
@@ -192,7 +214,7 @@
     }
 }
     
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--dark); color: #1a1a1a; margin: 0; padding: 0; display: block;}
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #1a1a1a; margin: 0; padding: 0; display: block;}
         /* Estilo para os Logos */
 .logo-capa {
     width: 700px !important; /* Tamanho ideal para uma folha A4 */
@@ -779,24 +801,7 @@ input:focus {
 :focus { outline: none !important; }
 a, img, audio { border: none !important; outline: none !important; text-decoration: none !important; }
 
-@media print {
-    /* 1. Força o fundo da "folha" a ser escuro para sumir com o risco branco */
-    html, body {
-        background-color: #0f2a36 !important; /* Cor da sua capa de transição */
-    }
 
-    /* 2. Força o conteúdo branco a ter fundo branco, para não ficar tudo escuro */
-    #conteudo-relatorio, .page {
-        background-color: #ffffff !important;
-        -webkit-print-color-adjust: exact;
-    }
-
-    /* 3. Mata a margem do navegador que cria o espaço do risco */
-    @page {
-        margin: 0 !important;
-        size: auto; /* Deixa o navegador decidir o corte, mas sem margem branca */
-    }
-}
     
 
     </style>
