@@ -488,28 +488,24 @@
 
 .capa-transicao {
     height: 297mm;
-   
+    width: 210mm;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    margin:  0;
+    margin: 0;
+    padding: 0; /* Garante que não soma altura */
     page-break-before: always;
     page-break-after: always;
-    border: none !important;
+    border: none !important; /* REMOVE O RISCO */
+    outline: none !important; /* REMOVE O RISCO FANTASMA */
     color: #fff;
-
-    /* 🔥 FUNDO LEVE (SEM CAMADAS PESADAS) */
     background-color: #0f2a36;
-   
     background-repeat: no-repeat;
     background-position: center 40%;
-    background-size: 450px; /* controla peso */
-
+    background-size: 450px;
     position: relative;
-    /* Garante que o preenchimento seja total no PDF */
     box-sizing: border-box;
 }
 
