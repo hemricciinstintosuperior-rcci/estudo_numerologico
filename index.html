@@ -2898,7 +2898,29 @@ function obterLegendaVibração(diaNascimento) {
     return legendas[radical] || "";
 }
 
-        
+ function renderAudioButton(url, tema) {
+    return `
+    <div style="margin-top: 30px; display: flex; justify-content: center; width: 100%;">
+        <a href="${url}" target="_blank" style="text-decoration: none;">
+            <div style="
+                background: rgba(217, 122, 30, 0.1); 
+                border: 1px solid #d97a1e; 
+                padding: 12px 25px; 
+                border-radius: 50px; 
+                display: flex; 
+                align-items: center; 
+                gap: 15px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            ">
+                <div style="width: 30px; height: 30px; background: #d97a1e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 14px;">▶</div>
+                <div style="text-align: left;">
+                    <span style="display: block; font-size: 9px; color: #d97a1e; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Experiência Sonora</span>
+                    <span style="display: block; font-size: 14px; color: #fff; font-family: 'Cinzel', serif;">Ouvir Frequência: ${tema}</span>
+                </div>
+            </div>
+        </a>
+    </div>`;
+}       
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -3315,13 +3337,17 @@ html += `
 </div>
 `;
 
-  html += `
-    <div class="capa-transicao">
-        <p>  </p>
-        <h2>Introdução<br><br>Resultado, Nome Social & <br>  Direcionamento</h2>
-        <p>Resultado Numerológico ✶ Nome Social ✶ Cabala Ancestral ✶ Direcionamento de Jornada</p>
+// Exemplo para a Introdução (Parte 0)
+html += `
+    <div class="capa-transicao" style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 297mm; text-align: center; background-color: #0f2a36; color: #fff; page-break-after: always; position: relative;">
+        <span style="letter-spacing: 5px; opacity: 0.6; font-size: 14px; margin-bottom: 20px;">INTRODUÇÃO</span>
+        <h2 style="font-family: 'Cinzel', serif; font-size: 32px; text-transform: uppercase;">Resultado, Nome Social & <br> Direcionamento</h2>
+        <div style="width: 50px; height: 2px; background: #d97a1e; margin: 20px auto;"></div>
+        <p style="font-size: 16px; max-width: 80%; opacity: 0.9;">Resultado Numerológico ✶ Nome Social ✶ Cabala Ancestral ✶ Direcionamento de Jornada</p>
+        
+        ${renderAudioButton("https://SEU-USUARIO.github.io/projeto/audio/introducao.mp3", "Abertura do Portal")}
     </div>
-`;  
+`;
 
 const listaItensSintese = [
     { label: "Dia Natalicio", valor: res.dia },
