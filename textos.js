@@ -4293,7 +4293,7 @@ const introducoes = {
 window.TextosTransito = {
 
 1:`
-<h3>Título: Início de um Novo Ciclo e Independência</h3>
+<h3> Início de um Novo Ciclo e Independência</h3>
 <p>Uma fase inteiramente nova da vida começa agora e o limiar de um novo começo se apresenta para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Não só novas ideias entrarão em cena, mas haverá aceitação e empenho em desenvolvê-las. É uma fase de mudanças e a hora de avançar em direção a novos objetivos, abandonando o passado. Deve-se eliminar da vida tudo o que esteja ultrapassado, que não tenha mais utilidade ou que não traga mais benefícios, abrindo espaço para a sua nova potência.</p>
 <p>Descarte hábitos, vícios e responsabilidades de apego anterior, assim como valores e relacionamentos que não tenham mais serventia para o futuro. Uma nova identidade está surgindo para você, mais eficiente, inovadora, altamente criativa e corajosa. Suas qualidades de liderança e controle estarão mais presentes e as situações que se apresentarão exigirão enfrentamento de desafios, moldando sua autoridade diante do mundo.</p>
 <p>É o momento de confrontar as situações que vinham se arrastando, de parar de fugir e tomar uma posição firme. Haverá nessa fase o poder para você promover todas as mudanças necessárias. Tudo o que se precisa agora é ter força de vontade e atitude para colocar os planos em prática. Este é um período de muita luta, mas também de grandes recompensas; sua independência será conquistada através da coragem de ser você mesmo, deixando para trás qualquer sombra de hesitação.</p>
