@@ -802,17 +802,51 @@ input:focus {
 a, img, audio { border: none !important; outline: none !important; text-decoration: none !important; }
 
 
-    
+.video-introducao {
+    width: 100%;
+    max-width: 800px; /* Mesma largura do seu container para alinhar */
+    margin: 0 auto 20px auto; /* Centraliza e dá espaço para o formulário */
+    border-radius: 20px;
+    overflow: hidden; /* Garante que o vídeo siga o arredondamento */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
+.video-introducao video {
+    display: block;
+    border: 2px solid #A65F00; /* Um detalhe em dourado/bronze como no seu botão */
+}
+    
+.video-wrapper {
+    width: 100%;
+    margin-bottom: 20px; /* Espaço entre o vídeo e o título/campos */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gold); /* Borda fina acompanhando sua cor principal */
+    background-color: #000;
+}
+
+.video-wrapper video {
+    display: block;
+    outline: none;
+}
     </style>
 
    
 </head>
 <body>
 
+
+    <div class="container">
+    <div class="video-wrapper">
+        <video id="videoExplicativo" width="100%" controls poster="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/INSTINTOFOTOO.png">
+            <source src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/introducao.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+    </div>
+
     <div class="container">
         <h1>Estudo Numerológico</h1>
-     <input type="text" id="nome" placeholder="NOME COMPLETO" >
+     <input type="text" id="nome" placeholder="NOME COMPLETO IGUAL CERTIDÃO" >
      <input type="text" id="nomeSocial" placeholder="COMO PREFERE SER CHAMADO? (OPCIONAL)">   
      <input type="text" id="data" placeholder="DD/MM/AAAA" maxlength="10" onInput="this.value = this.value.replace(/\D/g, '').replace(/^(\d{2})(\d)/, '$1/$2').replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');">
         <button class="btn-gerar" onclick="gerarMapaCompleto()">GERAR O MAPA</button>
