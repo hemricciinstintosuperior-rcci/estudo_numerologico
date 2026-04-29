@@ -829,6 +829,28 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
     display: block;
     outline: none;
 }
+
+
+
+@media print {
+    /* Esconde o vídeo e o container de entrada para não atrapalhar o PDF */
+    .video-wrapper, 
+    .container, 
+    #videoExplicativo {
+        display: none !important;
+    }
+
+    /* Garante que o relatório possa fluir por várias páginas */
+    .relatorio-premium {
+        display: block !important;
+        position: static !important;
+        overflow: visible !important;
+    }
+}
+
+
+
+    
     </style>
 
    
