@@ -2308,10 +2308,10 @@ let vTransitoCalculado = reduzirPuro(letrasAno.reduce((s, l) => s + calcularValo
    
 
     // Gera o Ciclo Atual
-    let htmlFinal = processarUmCiclo(anoBase, "Status do Momento: Ciclo Atual", true);
+    let htmlFinal = processarUmCiclo(anoBase, "Planos de Expressão do Momento", false);
     
     // Gera o Próximo Ciclo (AnoBase + 1)
-    htmlFinal += processarUmCiclo(anoBase + 1, "Status do Momento: Próximo Ciclo", true);
+    htmlFinal += processarUmCiclo(anoBase + 1, "Próximo Ciclo dos Planos", false);
 
     // Retorno para manter compatibilidade com o resto do seu script
     return { html: htmlFinal, dados: {} }; 
@@ -3753,7 +3753,7 @@ html += `
         </div>
 
             <div style="text-align: center; border-top: 1px dotted #ccc; padding-top: 30px; break-inside: avoid;">
-             <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/plano.png" alt="Logo Instinto Superior" style="width: 100%; max-width: 250px; height: auto; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.15); border: 1px solid #ddd;">
+             <img src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/plano.png" alt="Logo Instinto Superior" style="width: 100%; max-width: 500px; height: auto; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.15); border: 1px solid #ddd;">
         <p style="font-weight: bold; color: #e67e22; font-size: 1.2em;">Instinto Superior: Direção, Consistência e Autonomia.</p>
         
     </div>
@@ -4057,7 +4057,7 @@ html += `
     
 
 
- tituloBonito = "Performance do Plano de Expressão Natural";    
+ tituloBonito = "Seu Plano de Expressão Natural";    
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -4075,7 +4075,7 @@ ${montarHtmlPlanosNatural(nomeRaw)}
 
 
 
-tituloBonito = "Performance de Potenciais Naturais";  
+tituloBonito = "Seus Potenciais Naturais";  
 // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
 <div class="separador-luxo">
@@ -4865,14 +4865,11 @@ html += `
                 <span style="color: #d97a1e; font-weight: bold; font-size: 20px; text-transform: uppercase;">
                    Idade ${info.idade} -  Data ${info.anos}
                 </span><br>
-                <div class="conteudo-travado">
+               
                     <div class="evitar-corte" class="texto-res">
                     ${aplicarFiltroTexto(textos[sec][i][res[sec][i]])}
-                </div></div>
-                        <div class="aviso-trava">
-            🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
-
-         </div>
+                </div>
+       
                   <hr style="border:0; border-top:1px solid #ffffff; margin-top: 15px;">
                  
   
@@ -5075,13 +5072,9 @@ html += `
     <div class="texto-res"> 
     <h3 style="text-align:center; margin-bottom:20px;">Planejamento Mensal: Ano Pessoal ${proximoAnoPessoal}</h3>
         <p style="text-align:center; margin-bottom:0px;">Projeção para o ciclo seguinte, iniciando no seu próximo aniversário.</p>
-        <div class="conteudo-travado">
-        ${cronogramaProximoHTML}
-        </div>
-        <div class="aviso-trava">
-            🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
         
-         </div>
+        ${cronogramaProximoHTML}
+                         
          </div>
 </div>`;
 
@@ -5310,15 +5303,13 @@ htmlPiramide += `
             Tempo: ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)
         </span>
 
-        <div class="conteudo-travado" style="text-align: left; font-size: 18px; line-height: 1.7; color: #222;">
+        <div class="evitar-corte" style="text-align: left; font-size: 18px; line-height: 1.7; color: #222;">
             <p style="margin-top: 8px;">
                 ${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}
             </p>
         </div>
 
-        <div class="aviso-trava" style="margin-top: 20px; font-weight: bold; color: #666;">
-            🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
-        </div>
+   
     </div>`;
     });
 }
@@ -5350,15 +5341,12 @@ if (listaEspeciais.length > 0) {
              <div class="evitar-corte" style="margin-bottom: 35px; text-align: center;">
                 <h2 style="color:#d97a1e; font-size: 22px;">Alinhamento Especial ${esp.numero}</h2>
                 <span style="color:#d97a1e; font-weight: bold; font-size: 20px;">📅 Período de maior influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
-               <div class="conteudo-travado">
+               
                 <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqEspeciais[esp.numero])}
-                          </div>
+                         
          </div>
-                         <div class="aviso-trava">
-            🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
-        
-         </div>
+                      
             </div>`;
     });
 }
@@ -5391,19 +5379,14 @@ if (listaFin.length > 0) {
                 <h2 style="color:#28a745; font-size: 22px;">Potencial de Prosperidade 99/9</h2>
 
                 
-               <div class="conteudo-travado">
+               
                 <span style="color:#28a745; font-weight: bold; font-size: 20px;">📅 Período de influência ${datas.ini} até ${datas.fim} <br> ${duracaoTotal} anos (dos ${idadeInicio} aos ${idadeInicio + duracaoTotal} anos de idade)</span><br><br>
                 
                 <div class="texto-res" style="text-align: justify; margin-top:15px;">
                     ${aplicarFiltroTexto(textos.SeqFinanceira[999])}
+                  
                     </div>
-                    </div>
-                          <div class="aviso-trava">
-            🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
-         
-                           
-         
-         </div>
+                          
         
             </div>`;
     });
@@ -5450,13 +5433,11 @@ while (idadeAcumulada < 100) {
                     📅 VIGÊNCIA: ${dataIniPot.toLocaleDateString('pt-BR')} até ${dataFimPot.toLocaleDateString('pt-BR')}
                 </div>
 
-               <div class="conteudo-travado">
+              
                 <div class="texto-res" style="${potenciaAtivaAgora ? 'color:#000; font-weight:500;' : 'color:#222;'}">
                     ${aplicarFiltroTexto(textos.Potencias[p] || "Vibração em análise.")}
-                         </div>     </div> 
-                  <div class="aviso-trava">
-            🔒 CONTEÚDO LIBERADO APÓS O PERÍODO DE GARANTIA
-         </div>
+                          </div> 
+                 
       
         
             </div>`;
