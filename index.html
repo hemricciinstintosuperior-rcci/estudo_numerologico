@@ -1268,20 +1268,19 @@ function aplicarFiltroTexto(texto) {
     
     let pNome = "";
 
-    // 2. Lógica de Prioridade:
-    // Se o usuário preencheu o Nome Social, usamos ele.
-    // Se não preencheu, pegamos o primeiro nome do Nome Completo.
+    // 2. Lógica de Prioridade com extração do primeiro nome:
     if (nomeSocial !== "") {
-        pNome = nomeSocial;
+        // Pega apenas o primeiro nome do campo Nome Social
+        pNome = nomeSocial.split(/\s+/)[0];
+    } else if (nomeCompleto !== "") {
+        // Pega apenas o primeiro nome do campo Nome Completo
+        pNome = nomeCompleto.split(/\s+/)[0];
     } else {
-        pNome = nomeCompleto.split(/\s+/)[0] || "MASCULINO-FEMININO-NEUTRO";
+        // Valor padrão caso ambos estejam vazios
+        pNome = "MASCULINO-FEMININO-NEUTRO";
     }
 
-    else {
-        nomeSocial = nomeCompleto.split(/\s+/)[0] || "MASCULINO-FEMININO-NEUTRO";
-    }
-
-    // 3. Aplica a substituição no texto
+    // 3. Aplica a substituição no texto com a tag strong
     return texto.replace(/MASCULINO-FEMININO-NEUTRO/gi, `<strong>${pNome}</strong>`);
 }
 
