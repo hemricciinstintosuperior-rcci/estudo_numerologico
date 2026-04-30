@@ -3031,7 +3031,7 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
         negativasCasado.detalhes.forEach(neg => {
             html += `
             <div class="evitar-corte" style="margin-top: 20px; border-left: 4px solid red; padding-left: 15px;">
-                <h4 style="color: red; font-size: 18px;">Sequência ${neg.numero}${neg.numero}${neg.numero}</h4>
+                
                 <div class="texto-res">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero]) || "Descrição não disponível."}</div>
             </div>`;
         });
