@@ -4106,40 +4106,7 @@ if (nomeSocialValor !== "") {
 
 
 
-const nomeCasadoValor = document.getElementById("nomeCasado").value.trim();
 
-if (nomeCasadoValor !== "") {
-    const analiseCasado = analisarNomeCasamento(nomeCasadoValor);
-    
-    html += `
-    <div class="page" style="padding: 20px; box-sizing: border-box; page-break-before: always;">
-        <div class="separador-luxo">
-            <div class="caixa-interna">
-                <h2>Influência do Nome de Casado(a)</h2>
-            </div>
-        </div>
-
-        <div class="intro-texto" style="text-align: justify; margin-bottom: 20px;">
-            <p>Ao adotar um novo sobrenome, você não está apenas mudando um documento, mas alterando a <strong>frequência vibracional</strong> que sustenta seu dia a dia. Esta análise mostra como o nome <strong>${nomeCasadoValor}</strong> interage com sua essência.</p>
-        </div>
-
-        <div class="container-piramide" style="margin: 30px 0;">
-            <div class="piramide">
-                ${renderizarPiramideVisual(analiseCasado.piramide)} 
-            </div>
-        </div>
-
-        <div style="background: #fff5f5; border: 1px solid #ffcccc; padding: 15px; border-radius: 8px;">
-            <h3 style="color: #c00; margin-top: 0;">⚠️ Análise de Bloqueios e Sequências</h3>
-            ${analiseCasado.negativas.length > 0 
-                ? `<p>Atenção: Este nome trouxe <strong>${analiseCasado.negativas.length} sequências de bloqueio</strong> que podem gerar desafios em sua jornada atual.</p>`
-                : `<p>Excelente: Este nome apresenta uma estrutura harmônica, sem sequências negativas imediatas.</p>`
-            }
-        </div>
-    </div>
-    `;
-}
-    
 
 html += `
     <div class="capa-transicao" style="height: 297mm; width: 100%; max-width: 210mm; display: flex; flex-direction: column; align-items: center; text-align: center; background-color: #0f2a36; position: relative; overflow: hidden; page-break-after: always; box-sizing: border-box; margin: 0 auto;">
