@@ -3039,7 +3039,7 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
        // NOVO: Captura o nome de casado
-    const nomeCasadoRaw = document.getElementById("nomeCasado") ? document.getElementById("nomeCasado").value.trim() : "";
+   
     const dataRaw = document.getElementById("data").value; // Agora vem como DD/MM/AAAA
 // IMPLEMENTAÇÃO APENAS:
 
@@ -3228,14 +3228,18 @@ desafios: {
 res.numEquilibrioInicio = numInicio; 
 res.numEquilibrioFim = numFim;
 
-// ... dentro da gerarMapaCompleto ...
-const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
 
-// Chamamos a função passando o novo nome E a Expressão de solteiro (que você já calculou como 'exp')
-if (nomeCasadoInput !== "") {
-    html += gerarAbaNomeCasado(nomeCasadoInput, exp); 
-}    
-    
+    // 1. Criamos a variável que vai guardar todo o texto do relatório
+    let html = ""; 
+
+    // 2. Capturamos o nome de casado agora que já temos a 'exp' calculada
+    const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
+
+    // 3. Se o campo não estiver vazio, gera a aba especial
+    if (nomeCasadoInput !== "") {
+        // Aqui o sistema usa a 'exp' que ele calculou lá no meio da função
+        html += gerarAbaNomeCasado(nomeCasadoInput, exp); 
+    }
 const introProfissionalTexto = `
     <div style="margin-bottom: 15px; text-align: justify; line-height: 1.3;">
 ​<p>A verdadeira realização profissional não acontece por acaso, mas através do alinhamento preciso entre sua <strong>Engenharia de Personalidade</strong> e as demandas concretas do mundo material. Muitas vezes, a sensação de estagnação, o cansaço excessivo ou a invisibilidade no mercado são apenas os resultados diretos de atuar em frequências que não pertencem ao seu código original. Para que a prosperidade se manifeste, é indispensável que a sua ocupação seja o reflexo externo da sua estrutura numérica interna, permitindo que o trabalho deixe de ser um esforço de resistência e se torne um fluxo natural de expansão.</p>
