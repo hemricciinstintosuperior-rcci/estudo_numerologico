@@ -2969,9 +2969,6 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
     const chave = `de_${expOriginal}_para_${expCasado}`;
     const textoTransicao = textos.TransicoesCasamento[chave] || "Análise de transição em processamento.";
 
-    // Definimos a largura base para cada item (ajuste se ficar muito largo ou apertado)
-    const larguraItem = "22px"; 
-
     let html = `
     <div class="page" style="page-break-before: always; padding: 20px;">
         <div class="separador-luxo">
@@ -2985,28 +2982,28 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
             <p style="line-height: 1.6; color: #333;">${aplicarFiltroTexto(textoTransicao)}</p>
         </div>
 
-        <div class="container-piramide" style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; width: 100%; overflow: visible;">
-            <div class="piramide" style="display: inline-block;">`;
+        <div class="container-piramide" style="margin-top: 30px; width: 100%; display: flex; flex-direction: column; align-items: center;">
+            <div class="piramide" style="display: table; margin: 0 auto; border-collapse: collapse;">`;
 
-    // --- AJUSTE AQUI: LINHA DAS LETRAS COM GRID ---
+    // --- LINHA DAS LETRAS (Respeita o seu CSS de .num-letra) ---
     const letras = nomeCasado.toUpperCase().replace(/\s+/g, '').split('');
-    html += `<div class="linha linha-letras" style="display: grid; grid-template-columns: repeat(${letras.length}, ${larguraItem}); margin-bottom: 5px;">`;
+    html += `<div class="linha" style="display: flex; justify-content: center;">`;
     letras.forEach(l => { 
-        html += `<div class="num-letra" style="color: #000E52; font-weight: 900; font-size: 14px; text-align: center;">${l}</div>`; 
+        // Aqui ele usa a sua classe padrão. Se mudar no CSS, muda aqui!
+        html += `<div class="num-letra" style="color: #000E52; font-weight: 900; width: 16px; text-align: center; font-size: 16px;">${l}</div>`; 
     });
     html += `</div>`;
 
-    // --- AJUSTE AQUI: LINHAS DA PIRÂMIDE ---
+    // --- LINHAS DA PIRÂMIDE (Respeita o seu CSS de .num) ---
     piramideCasado.forEach((linha, i) => {
-        // Usamos flex para centralizar as linhas que vão diminuindo, mas mantemos a largura dos números fixa
         html += `<div class="linha" style="display: flex; justify-content: center;">`;
         linha.forEach((n, j) => {
             let classe = "num";
             if (negativasCasado.pos.some(p => p.l === i && p.c === j)) {
                 classe += " negativo"; 
             }
-            // A largura (width) aqui DEVE ser a mesma das letras acima
-            html += `<div class="${classe}" style="width: ${larguraItem}; text-align: center; display: inline-block;">${n}</div>`;
+            // Usei width 22px para manter o formato "oval" largo que você gosta
+            html += `<div class="${classe}" style="width: 16px; text-align: center; font-size: 16px; display: inline-block;">${n}</div>`;
         });
         html += `</div>`;
     });
@@ -3017,21 +3014,19 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
     if (negativasCasado.detalhes.length > 0) {
         html += `
         <div style="margin-top: 30px; padding: 15px; border: 1px solid #ffcccc; background: #fff5f5; border-radius: 8px;">
-            <h3 style="color: red; margin-bottom: 10px;">⚠️ Alerta de Bloqueios no Nome de Casado</h3>
+            <h3 style="color: red; margin-bottom: 10px;">⚠️ Alerta de Bloqueios no Nome de Casado(a)</h3>
+            ${negativasCasado.detalhes.map(neg => `
+                <div class="evitar-corte" style="margin-top: 20px; border-left: 4px solid red; padding-left: 15px;">
+                   
+                    <div class="texto-res">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</div>
+                </div>
+            `).join('')}
         </div>`;
-
-        negativasCasado.detalhes.forEach(neg => {
-            html += `
-            <div class="evitar-corte" style="margin-top: 20px; border-left: 4px solid red; padding-left: 15px;">
-                <h4 style="color: red; font-size: 18px;">Sequência ${neg.numero}${neg.numero}${neg.numero}</h4>
-                <div class="texto-res">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</div>
-            </div>`;
-        });
     }
 
     html += `</div>`; 
     return html;
-}    
+}
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
