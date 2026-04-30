@@ -3002,7 +3002,7 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
     // Linha das Letras no Topo (Sua lógica visual)
     const letras = nomeCasado.toUpperCase().replace(/\s+/g, '').split('');
     html += `<div class="linha linha-letras" style="margin-bottom: 5px;">`;
-    letras.forEach(l => { html += `<div class="num-letra" style="color: #000E52; font-weight: 900;">${l}</div>`; });
+    letras.forEach(l => { html += `<div class="num-letra" style="color: #000E52; font-weight: 900; font-size: 16px;">${l}</div>`; });
     html += `</div>`;
 
     // Construção das Linhas da Pirâmide (Sua lógica visual)
