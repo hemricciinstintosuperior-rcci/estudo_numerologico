@@ -2943,60 +2943,63 @@ function obterLegendaVibração(diaNascimento) {
 
 
 
-function gerarAbaNomeCasado(nomeCasado) {
+function gerarAbaNomeCasado(nomeCasado, expOriginal) {
     if (!nomeCasado) return "";
 
-    const resCasado = calcularNumerosSocial(nomeCasado);
+    // 1. CÁLCULOS CABALÍSTICOS (Usando suas funções oficiais)
+    const nomeCasadoProc = tratarNomeParaCalculo(nomeCasado);
+    
+    // Cálculo da Expressão de Casado (Personalidade no seu sistema)
+    let somaTotalCasado = 0;
+    for (let l of nomeCasadoProc.toUpperCase()) {
+        somaTotalCasado += calcularValorLetra(l);
+    }
+    const expCasado = calcularNumerologia(somaTotalCasado, true);
+
+    // Reaproveita sua lógica de pirâmide e bloqueios que já funciona
     const piramideCasado = gerarPiramide(nomeCasado);
     const negativasCasado = detectarNegativas(piramideCasado);
-    const arcanosTopoCasado = topo(piramideCasado[0]);
+
+    // 2. BUSCA DA TRANSIÇÃO NO textos.js
+    // Acessando o sub-objeto TransicoesCasamento que você mencionou
+    const chave = `de_${expOriginal}_para_${expCasado}`;
+    const textoTransicao = textos.TransicoesCasamento[chave] || "Análise de transição em processamento para esta frequência.";
 
     let html = `
     <div class="page" style="page-break-before: always; padding: 20px;">
         <div class="separador-luxo">
             <div class="caixa-interna">
-                <h2>O Nome de Casado(a): ${nomeCasado.toUpperCase()}</h2>
+                <h2>Análise do Nome de Casado(a)</h2>
             </div>
         </div>
 
-        <div class="intro-secao" style="margin-top: 20px;">
-            <p>Ao adotar o sobrenome do parceiro(a), você incorporou uma nova camada vibracional em sua vida. 
-            Diferente do nome de nascimento, que é o seu "projeto original", o nome de casado funciona como um <strong>filtro de realidade</strong>, 
-            alterando a forma como você atrai oportunidades e lida com desafios cotidianos.</p>
-            <p>Esta análise foca na Matriz Numérica gerada por essa nova assinatura e como ela pode ter alterado o fluxo da sua prosperidade e equilíbrio emocional.</p>
+        <div class="intro-secao" style="margin-top: 20px; text-align: justify;">
+            <p>Ao adotar o sobrenome do parceiro(a), você incorporou uma nova camada vibracional. 
+            O nome de casado funciona como um <strong>filtro de realidade</strong>, alterando sua frequência de 
+            expressão original de <strong>${expOriginal}</strong> para a nova frequência <strong>${expCasado}</strong>.</p>
         </div>
 
-        <div style="display: flex; justify-content: center; gap: 15px; margin: 25px 0;">
-            <div style="text-align: center; background: #fffcf5; padding: 10px; border-radius: 6px; border: 1.5px solid var(--gold); min-width: 100px;">
-                <p style="font-size: 0.6rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Motivação</p>
-                <span style="font-size: 1.5rem; font-weight: bold; display: block;">${resCasado.motivacao}</span>
-            </div>
-            <div style="text-align: center; background: #fffcf5; padding: 10px; border-radius: 6px; border: 2px solid var(--gold); min-width: 110px;">
-                <p style="font-size: 0.6rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Personalidade</p>
-                <span style="font-size: 1.8rem; font-weight: bold; display: block;">${resCasado.personalidade}</span>
-            </div>
-            <div style="text-align: center; background: #fffcf5; padding: 10px; border-radius: 6px; border: 1.5px solid var(--gold); min-width: 100px;">
-                <p style="font-size: 0.6rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Impressão</p>
-                <span style="font-size: 1.5rem; font-weight: bold; display: block;">${resCasado.influencia}</span>
-            </div>
+        <div style="background: #fdfaf0; border-left: 5px solid #b8860b; padding: 20px; margin: 20px 0; border-radius: 4px;">
+            <h3 style="color: #827108; margin-top: 0;">A Transmutação da sua Expressão</h3>
+            <p style="line-height: 1.6; color: #333;">${textoTransicao}</p>
         </div>
 
-        <div class="container-piramide">
+        <div class="container-piramide" style="margin-top: 30px;">
             <div class="piramide">`;
 
-    // Linha das Letras no Topo
+    // Linha das Letras no Topo (Sua lógica visual)
     const letras = nomeCasado.toUpperCase().replace(/\s+/g, '').split('');
     html += `<div class="linha linha-letras" style="margin-bottom: 5px;">`;
     letras.forEach(l => { html += `<div class="num-letra" style="color: #000E52; font-weight: 900;">${l}</div>`; });
     html += `</div>`;
 
-    // Construção das Linhas da Pirâmide
+    // Construção das Linhas da Pirâmide (Sua lógica visual)
     piramideCasado.forEach((linha, i) => {
         html += `<div class="linha">`;
         linha.forEach((n, j) => {
             let classe = "num";
             if (negativasCasado.pos.some(p => p.l === i && p.c === j)) {
-                classe += " negativo"; // Fica vermelho conforme seu CSS
+                classe += " negativo"; 
             }
             html += `<div class="${classe}">${n}</div>`;
         });
@@ -3005,38 +3008,38 @@ function gerarAbaNomeCasado(nomeCasado) {
 
     html += `</div></div>`;
 
-    // ANÁLISE DOS BLOQUEIOS (SEQUÊNCIAS NEGATIVAS)
+    // ANÁLISE DOS BLOQUEIOS (Sequências Negativas)
     if (negativasCasado.detalhes.length > 0) {
         html += `
         <div style="margin-top: 30px; padding: 15px; border: 1px solid #ffcccc; background: #fff5f5; border-radius: 8px;">
             <h3 style="color: red; margin-bottom: 10px;">⚠️ Alerta de Bloqueios no Nome de Casado</h3>
-            <p>A nova configuração do seu nome gerou <strong>${negativasCasado.detalhes.length} sequência(s) de bloqueio</strong>. 
-            Isso explica por que certas áreas da sua vida podem parecer mais "pesadas" ou repetitivas após a mudança do nome civil.</p>
+            <p>A nova configuração gerou <strong>${negativasCasado.detalhes.length} sequência(s) de bloqueio</strong>, o que pode trazer desafios específicos no cotidiano.</p>
         </div>`;
 
         negativasCasado.detalhes.forEach(neg => {
             html += `
             <div class="evitar-corte" style="margin-top: 20px; border-left: 4px solid red; padding-left: 15px;">
                 <h4 style="color: red; font-size: 18px;">Sequência ${neg.numero}${neg.numero}${neg.numero}</h4>
-                <div class="texto-res">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</div>
+                <div class="texto-res">${textos.SeqNegVida[neg.numero] || "Descrição não disponível."}</div>
             </div>`;
         });
     } else {
         html += `
         <div style="margin-top: 30px; padding: 15px; border: 1px solid #d4af37; background: #fffcf0; border-radius: 8px; text-align: center;">
             <h3 style="color: #827108;">Frequência Harmônica</h3>
-            <p>O seu nome de casado não gerou novos bloqueios técnicos (sequências repetitivas). Isso indica que a integração do sobrenome foi fluida e não sobrecarregou sua matriz energética.</p>
+            <p>O seu nome de casado não gerou novos bloqueios técnicos. A integração foi fluida!</p>
         </div>`;
     }
 
-    html += `</div>`; // Fecha a página
+    html += `</div>`; 
     return html;
 }
-
         
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
+       // NOVO: Captura o nome de casado
+    const nomeCasadoRaw = document.getElementById("nomeCasado") ? document.getElementById("nomeCasado").value.trim() : "";
     const dataRaw = document.getElementById("data").value; // Agora vem como DD/MM/AAAA
 // IMPLEMENTAÇÃO APENAS:
 
@@ -3070,6 +3073,10 @@ if (agora < new Date(agora.getFullYear(), dtNasci.getMonth(), dtNasci.getDate())
     let sV = 0, sC = 0, sE = 0;
     let contagem = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0};
     let usados = new Set();
+
+
+
+    
     
     // O resto do seu código segue igual...
 // IMPLEMENTAÇÃO APENAS:
@@ -3221,7 +3228,13 @@ desafios: {
 res.numEquilibrioInicio = numInicio; 
 res.numEquilibrioFim = numFim;
 
-    
+// ... dentro da gerarMapaCompleto ...
+const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
+
+// Chamamos a função passando o novo nome E a Expressão de solteiro (que você já calculou como 'exp')
+if (nomeCasadoInput !== "") {
+    html += gerarAbaNomeCasado(nomeCasadoInput, exp); 
+}    
     
 const introProfissionalTexto = `
     <div style="margin-bottom: 15px; text-align: justify; line-height: 1.3;">
