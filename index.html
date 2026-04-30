@@ -2967,7 +2967,9 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
     const piramideCasado = gerarPiramide(nomeCasado);
     const negativasCasado = detectarNegativas(piramideCasado);
     const chave = `de_${expOriginal}_para_${expCasado}`;
-    const textoTransicao = textos.TransicoesCasamento[chave] || "Análise de transição em processamento.";
+let textoTransicao = textos.TransicoesCasamento[chave] || "Análise de transição em processamento para esta frequência.";
+
+// 2. FORÇA A SUBSTITUIÇÃO DOS NÚMEROS (Caso o texto use ${expOriginal} e ${expCasado})
 // Isso garante que o "8" e o "22" apareçam no meio da frase
 textoTransicao = textoTransicao
     .replace(/\${expOriginal}/g, expOriginal)
