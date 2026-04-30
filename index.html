@@ -4099,7 +4099,13 @@ if (nomeSocialValor !== "") {
 }
 
 
-
+// --- ABA NOME DE CASADO (INSERÇÃO FINAL) ---
+const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
+if (nomeCasadoInput !== "") {
+    // Aqui usamos 'exp' que foi calculada lá no início da função
+    // E somamos ao conteúdo da div ANTES de fechar o mapa
+    html += gerarAbaNomeCasado(nomeCasadoInput, exp);
+}
 
 
 html += `
@@ -5878,13 +5884,7 @@ html += `
 `;
 // ... (Aqui em cima tem o monte de código que você falou)
 
-// --- ABA NOME DE CASADO (INSERÇÃO FINAL) ---
-const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
-if (nomeCasadoInput !== "") {
-    // Aqui usamos 'exp' que foi calculada lá no início da função
-    // E somamos ao conteúdo da div ANTES de fechar o mapa
-    html += gerarAbaNomeCasado(nomeCasadoInput, exp);
-}
+
 
      document.getElementById("resultado").innerHTML = `<div class="relatorio-premium">${html}</div>`;
             } // FIM DA FUNÇÃO    
