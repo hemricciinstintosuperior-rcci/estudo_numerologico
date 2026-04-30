@@ -2937,6 +2937,100 @@ function obterLegendaVibração(diaNascimento) {
         </a>
     </div>`;
 }       
+
+
+
+function gerarAbaNomeCasado(nomeCasado) {
+    if (!nomeCasado) return "";
+
+    const resCasado = calcularNumerosSocial(nomeCasado);
+    const piramideCasado = gerarPiramide(nomeCasado);
+    const negativasCasado = detectarNegativas(piramideCasado);
+    const arcanosTopoCasado = topo(piramideCasado[0]);
+
+    let html = `
+    <div class="page" style="page-break-before: always; padding: 20px;">
+        <div class="separador-luxo">
+            <div class="caixa-interna">
+                <h2>O Nome de Casado(a): ${nomeCasado.toUpperCase()}</h2>
+            </div>
+        </div>
+
+        <div class="intro-secao" style="margin-top: 20px;">
+            <p>Ao adotar o sobrenome do parceiro(a), você incorporou uma nova camada vibracional em sua vida. 
+            Diferente do nome de nascimento, que é o seu "projeto original", o nome de casado funciona como um <strong>filtro de realidade</strong>, 
+            alterando a forma como você atrai oportunidades e lida com desafios cotidianos.</p>
+            <p>Esta análise foca na Matriz Numérica gerada por essa nova assinatura e como ela pode ter alterado o fluxo da sua prosperidade e equilíbrio emocional.</p>
+        </div>
+
+        <div style="display: flex; justify-content: center; gap: 15px; margin: 25px 0;">
+            <div style="text-align: center; background: #fffcf5; padding: 10px; border-radius: 6px; border: 1.5px solid var(--gold); min-width: 100px;">
+                <p style="font-size: 0.6rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Motivação</p>
+                <span style="font-size: 1.5rem; font-weight: bold; display: block;">${resCasado.motivacao}</span>
+            </div>
+            <div style="text-align: center; background: #fffcf5; padding: 10px; border-radius: 6px; border: 2px solid var(--gold); min-width: 110px;">
+                <p style="font-size: 0.6rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Personalidade</p>
+                <span style="font-size: 1.8rem; font-weight: bold; display: block;">${resCasado.personalidade}</span>
+            </div>
+            <div style="text-align: center; background: #fffcf5; padding: 10px; border-radius: 6px; border: 1.5px solid var(--gold); min-width: 100px;">
+                <p style="font-size: 0.6rem; font-weight: bold; color: #827108; margin: 0; text-transform: uppercase;">Impressão</p>
+                <span style="font-size: 1.5rem; font-weight: bold; display: block;">${resCasado.influencia}</span>
+            </div>
+        </div>
+
+        <div class="container-piramide">
+            <div class="piramide">`;
+
+    // Linha das Letras no Topo
+    const letras = nomeCasado.toUpperCase().replace(/\s+/g, '').split('');
+    html += `<div class="linha linha-letras" style="margin-bottom: 5px;">`;
+    letras.forEach(l => { html += `<div class="num-letra" style="color: #000E52; font-weight: 900;">${l}</div>`; });
+    html += `</div>`;
+
+    // Construção das Linhas da Pirâmide
+    piramideCasado.forEach((linha, i) => {
+        html += `<div class="linha">`;
+        linha.forEach((n, j) => {
+            let classe = "num";
+            if (negativasCasado.pos.some(p => p.l === i && p.c === j)) {
+                classe += " negativo"; // Fica vermelho conforme seu CSS
+            }
+            html += `<div class="${classe}">${n}</div>`;
+        });
+        html += `</div>`;
+    });
+
+    html += `</div></div>`;
+
+    // ANÁLISE DOS BLOQUEIOS (SEQUÊNCIAS NEGATIVAS)
+    if (negativasCasado.detalhes.length > 0) {
+        html += `
+        <div style="margin-top: 30px; padding: 15px; border: 1px solid #ffcccc; background: #fff5f5; border-radius: 8px;">
+            <h3 style="color: red; margin-bottom: 10px;">⚠️ Alerta de Bloqueios no Nome de Casado</h3>
+            <p>A nova configuração do seu nome gerou <strong>${negativasCasado.detalhes.length} sequência(s) de bloqueio</strong>. 
+            Isso explica por que certas áreas da sua vida podem parecer mais "pesadas" ou repetitivas após a mudança do nome civil.</p>
+        </div>`;
+
+        negativasCasado.detalhes.forEach(neg => {
+            html += `
+            <div class="evitar-corte" style="margin-top: 20px; border-left: 4px solid red; padding-left: 15px;">
+                <h4 style="color: red; font-size: 18px;">Sequência ${neg.numero}${neg.numero}${neg.numero}</h4>
+                <div class="texto-res">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</div>
+            </div>`;
+        });
+    } else {
+        html += `
+        <div style="margin-top: 30px; padding: 15px; border: 1px solid #d4af37; background: #fffcf0; border-radius: 8px; text-align: center;">
+            <h3 style="color: #827108;">Frequência Harmônica</h3>
+            <p>O seu nome de casado não gerou novos bloqueios técnicos (sequências repetitivas). Isso indica que a integração do sobrenome foi fluida e não sobrecarregou sua matriz energética.</p>
+        </div>`;
+    }
+
+    html += `</div>`; // Fecha a página
+    return html;
+}
+
+        
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -3996,7 +4090,39 @@ if (nomeSocialValor !== "") {
 
 
 
+const nomeCasadoValor = document.getElementById("nomeCasado").value.trim();
 
+if (nomeCasadoValor !== "") {
+    const analiseCasado = analisarNomeCasamento(nomeCasadoValor);
+    
+    html += `
+    <div class="page" style="padding: 20px; box-sizing: border-box; page-break-before: always;">
+        <div class="separador-luxo">
+            <div class="caixa-interna">
+                <h2>Influência do Nome de Casado(a)</h2>
+            </div>
+        </div>
+
+        <div class="intro-texto" style="text-align: justify; margin-bottom: 20px;">
+            <p>Ao adotar um novo sobrenome, você não está apenas mudando um documento, mas alterando a <strong>frequência vibracional</strong> que sustenta seu dia a dia. Esta análise mostra como o nome <strong>${nomeCasadoValor}</strong> interage com sua essência.</p>
+        </div>
+
+        <div class="container-piramide" style="margin: 30px 0;">
+            <div class="piramide">
+                ${renderizarPiramideVisual(analiseCasado.piramide)} 
+            </div>
+        </div>
+
+        <div style="background: #fff5f5; border: 1px solid #ffcccc; padding: 15px; border-radius: 8px;">
+            <h3 style="color: #c00; margin-top: 0;">⚠️ Análise de Bloqueios e Sequências</h3>
+            ${analiseCasado.negativas.length > 0 
+                ? `<p>Atenção: Este nome trouxe <strong>${analiseCasado.negativas.length} sequências de bloqueio</strong> que podem gerar desafios em sua jornada atual.</p>`
+                : `<p>Excelente: Este nome apresenta uma estrutura harmônica, sem sequências negativas imediatas.</p>`
+            }
+        </div>
+    </div>
+    `;
+}
     
 
 html += `
