@@ -2968,7 +2968,11 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
     const negativasCasado = detectarNegativas(piramideCasado);
     const chave = `de_${expOriginal}_para_${expCasado}`;
     const textoTransicao = textos.TransicoesCasamento[chave] || "Análise de transição em processamento.";
-
+// Isso garante que o "8" e o "22" apareçam no meio da frase
+textoTransicao = textoTransicao
+    .replace(/\${expOriginal}/g, expOriginal)
+    .replace(/\${expCasado}/g, expCasado);
+    
     let html = `
     <div class="page" style="page-break-before: always; padding: 20px;">
         <div class="separador-luxo">
