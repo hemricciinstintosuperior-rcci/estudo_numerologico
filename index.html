@@ -4119,15 +4119,7 @@ if (nomeSocialValor !== "") {
 }
 
 
-// Procure por essa parte no final do seu script principal:
-const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
 
-if (nomeCasadoInput !== "") {
-    // 1. 'exp' é a variável que você calculou lá no início para a Expressão Original
-    // 2. 'DadosNegativas' é o objeto que você usou no código acima (DadosNegativas.detalhes)
-    
-    html += gerarAbaNomeCasado(nomeCasadoInput, exp, dadosNegativas); 
-}
 
 html += `
     <div class="capa-transicao" style="height: 297mm; width: 100%; max-width: 210mm; display: flex; flex-direction: column; align-items: center; text-align: center; background-color: #0f2a36; position: relative; overflow: hidden; page-break-after: always; box-sizing: border-box; margin: 0 auto;">
@@ -4264,7 +4256,7 @@ html += `
 `;
             
 // 1. A lista deve ter exatamente as chaves que você colocou no 'res'
-const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", "Personalidade", "comportamento"];
+const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", "comportamento", "Personalidade"];
 
 
 
@@ -4292,6 +4284,19 @@ html += `
         </div>
     `;
 }); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
+
+
+
+// Procure por essa parte no final do seu script principal:
+const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
+
+if (nomeCasadoInput !== "") {
+    // 1. 'exp' é a variável que você calculou lá no início para a Expressão Original
+    // 2. 'DadosNegativas' é o objeto que você usou no código acima (DadosNegativas.detalhes)
+    
+    html += gerarAbaNomeCasado(nomeCasadoInput, exp, dadosNegativas); 
+}
+    
 
 // --- INCLUSÃO: DESEJO OCULTO E TALENTOS ESPECIAIS ---
 const dadosDesejo = calcularDesejoOculto(nomeRaw);
