@@ -848,7 +848,43 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
     }
 }
 
+.btn-video-toggle {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #A65F00 0%, #FFD700 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(166, 95, 0, 0.3);
+    margin-bottom: 10px;
+}
 
+.btn-video-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(166, 95, 0, 0.4);
+}
+
+.btn-video-toggle .seta {
+    transition: transform 0.3s ease;
+}
+
+.btn-video-toggle.ativo .seta {
+    transform: rotate(180deg);
+}
+
+/* Garante que o botão também suma na impressão */
+@media print {
+    .btn-video-toggle {
+        display: none !important;
+    }
+}
 
     
     </style>
@@ -858,8 +894,13 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
 <body>
 
 
-    <div class="container">
-    <div class="video-wrapper">
+<div class="container">
+    <button type="button" id="btnVideo" class="btn-video-toggle">
+        <span>🎥 Assistir Vídeo Introdutório</span>
+        <i class="seta">▼</i>
+    </button>
+
+    <div id="wrapperVideo" class="video-wrapper" style="display: none; margin-top: 10px;">
         <video id="videoExplicativo" width="100%" controls poster="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/INSTINTOFOTOO.png">
             <source src="https://hemricciinstintosuperior-rcci.github.io/Trabalho_venda_Numerologia/introducao.mp4" type="video/mp4">
             Seu navegador não suporta vídeos.
@@ -872,7 +913,7 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
        <input type="text" id="data" placeholder="DD/MM/AAAA" maxlength="10" onInput="this.value = this.value.replace(/\D/g, '').replace(/^(\d{2})(\d)/, '$1/$2').replace(/^(\d{2})\/(\d{2})(\d)/, '$1/$2/$3');">  
      <input type="text" id="nomeSocial" placeholder="COMO PREFERE SER CHAMADO? (OPCIONAL)"> 
         
-        <input type="text" id="nomeCasado" placeholder="NOME COMPLETO DE CASADO (SE HOUVER)">       
+        <input type="text" id="nomeCasado" placeholder="NOME COMPLETO DE CASADO(A) (SE HOUVER)">       
     
         <button class="btn-gerar" onclick="gerarMapaCompleto()">GERAR O MAPA</button>
     </div>
@@ -5919,7 +5960,24 @@ html += `
 document.onselectstart=()=>false; 
     </script>
     
+<script>
+document.getElementById('btnVideo').addEventListener('click', function() {
+    const wrapper = document.getElementById('wrapperVideo');
+    const video = document.getElementById('videoExplicativo');
+    const btn = this;
 
+    if (wrapper.style.display === 'none') {
+        wrapper.style.display = 'block';
+        btn.classList.add('ativo');
+        btn.querySelector('span').innerText = '❌ Fechar Vídeo';
+    } else {
+        wrapper.style.display = 'none';
+        btn.classList.remove('ativo');
+        btn.querySelector('span').innerText = '🎥 Assistir Vídeo Introdutório';
+        video.pause(); // Pausa o vídeo automaticamente ao fechar para não ficar saindo som
+    }
+});
+</script>
   
 </body>
 </html>
