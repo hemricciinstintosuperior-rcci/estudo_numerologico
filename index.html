@@ -2956,7 +2956,8 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal, negativasOriginal) {
     const negativasCasado = detectarNegativas(piramideCasado);
     
     // --- LÓGICA DE COMPARAÇÃO DE HARMONIA ---
-    const qtdOriginal = negativasOriginal.detalhes.length;
+ // O importante é esta linha aqui abaixo bater com o seu objeto:
+    const qtdOriginal = negativasOriginal.detalhes ? negativasOriginal.detalhes.length : 0;
     const qtdCasado = negativasCasado.detalhes.length;
     
     let diagnosticoHarmonia = "";
@@ -4118,13 +4119,15 @@ if (nomeSocialValor !== "") {
 }
 
 
+// Procure por essa parte no final do seu script principal:
 const nomeCasadoInput = document.getElementById("nomeCasado").value.trim();
 
 if (nomeCasadoInput !== "") {
-    // Passamos o nome novo, a expressão antiga e as negativas antigas
-    html += gerarAbaNomeCasado(nomeCasadoInput, expOriginal, negativasOriginal);
+    // 1. 'exp' é a variável que você calculou lá no início para a Expressão Original
+    // 2. 'DadosNegativas' é o objeto que você usou no código acima (DadosNegativas.detalhes)
+    
+    html += gerarAbaNomeCasado(nomeCasadoInput, exp, DadosNegativas); 
 }
-
 
 html += `
     <div class="capa-transicao" style="height: 297mm; width: 100%; max-width: 210mm; display: flex; flex-direction: column; align-items: center; text-align: center; background-color: #0f2a36; position: relative; overflow: hidden; page-break-after: always; box-sizing: border-box; margin: 0 auto;">
