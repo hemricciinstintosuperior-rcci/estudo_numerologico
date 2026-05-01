@@ -2955,53 +2955,45 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal) {
     const piramideCasado = gerarPiramide(nomeCasado);
     const negativasCasado = detectarNegativas(piramideCasado);
     const chave = `de_${expOriginal}_para_${expCasado}`;
-let textoTransicao = textos.TransicoesCasamento[chave] || "Análise de transição em processamento para esta frequência.";
-
-// 2. FORÇA A SUBSTITUIÇÃO DOS NÚMEROS (Caso o texto use ${expOriginal} e ${expCasado})
-// Isso garante que o "8" e o "22" apareçam no meio da frase
-textoTransicao = textoTransicao
-    .replace(/\${expOriginal}/g, expOriginal)
-    .replace(/\${expCasado}/g, expCasado);
     
+    let textoTransicao = textos.TransicoesCasamento[chave] || "Análise de transição em processamento para esta frequência.";
+
+    textoTransicao = textoTransicao
+        .replace(/\${expOriginal}/g, expOriginal)
+        .replace(/\${expCasado}/g, expCasado);
+    
+    // ABRIR A PÁGINA
     let html = `
     <div class="page" style="page-break-before: always; padding: 20px;">
         <div class="separador-luxo">
             <div class="caixa-interna">
                 <h2>Análise do Nome de Casado(a)</h2>
             </div>
+        </div>
 
-           </div>
-   
-</div> <div class="intro-secao" style="margin-top: 20px; margin-bottom: 20px; text-align: justify; line-height: 1.4;">
-
-     <p style="margin-bottom: 20px;">A inclusão de um sobrenome após o casamento é muito mais do que uma mudança civil; é uma profunda alteração na dinâmica vibracional que rege sua vida. Ao adotar um novo nome, você permite a entrada de novas frequências que podem preencher lacunas importantes em seu mapa natal. Por exemplo, a ausência de um número 7, que vibra a busca pelo conhecimento e a análise profunda, pode ser suprida pelo sobrenome do parceiro, conferindo-lhe uma nova percepção intelectual e maior capacidade de aprendizado que antes não eram naturais à sua personalidade original.</p>
-
- <p style="margin-bottom: 20px;">Entretanto, essa expansão energética carrega consigo uma responsabilidade proporcional. O acréscimo de novas letras aumenta a carga numérica total, o que exige maior maturidade para lidar com as novas obrigações que surgem. É fundamental estar atento às sequências de bloqueios que podem ser formadas nessa nova configuração. Muitas vezes, um nome que antes era fluido pode passar a apresentar dificuldades de realização ou obstáculos repetitivos devido a conflitos entre as vibrações antigas e as novas, gerando desafios que antes não faziam parte da sua jornada.</p>
-
- <p style="margin-bottom: 20px;">Sob a ótica da Pirâmide Numerológica, nomes compostos ou mais curtos tendem a apresentar uma estrutura mais equilibrada e menos propensa a sequências negativas persistentes. Por isso, a análise cautelosa é um aviso necessário: nem sempre o acréscimo de nomes resulta em facilidades. Embora exista a possibilidade jurídica de reversão desse nome em caso de separação, o ideal é que a escolha seja consciente desde o início. Quando bem ajustado, o nome de casado torna-se um aliado poderoso, trazendo o combustível que faltava para sua evolução pessoal e harmonia conjugal.</p>
-</div>
-       
-
-        
+        <div class="intro-secao" style="margin-top: 20px; margin-bottom: 20px; text-align: justify; line-height: 1.4;">
+            <p style="margin-bottom: 20px;">A inclusão de um sobrenome após o casamento é muito mais do que uma mudança civil; é uma profunda alteração na dinâmica vibracional que rege sua vida. Ao adotar um novo nome, você permite a entrada de novas frequências que podem preencher lacunas importantes em seu mapa natal. Por exemplo, a ausência de um número 7, que vibra a busca pelo conhecimento e a análise profunda, pode ser suprida pelo sobrenome do parceiro, conferindo-lhe uma nova percepção intelectual e maior capacidade de aprendizado que antes não eram naturais à sua personalidade original.</p>
+            <p style="margin-bottom: 20px;">Entretanto, essa expansão energética carrega consigo uma responsabilidade proporcional. O acréscimo de novas letras aumenta a carga numérica total, o que exige maior maturidade para lidar com as novas obrigações que surgem. É fundamental estar atento às sequências de bloqueios que podem ser formadas nessa nova configuração. Muitas vezes, um nome que antes era fluido pode passar a apresentar dificuldades de realização ou obstáculos repetitivos devido a conflitos entre as vibrações antigas e as novas, gerando desafios que antes não faziam parte da sua jornada.</p>
+            <p style="margin-bottom: 20px;">Sob a ótica da Pirâmide Numerológica, nomes compostos ou mais curtos tendem a apresentar uma estrutura mais equilibrada e menos propensa a sequências negativas persistentes. Por isso, a análise cautelosa é um aviso necessário: nem sempre o acréscimo de nomes resulta em facilidades. Embora exista a possibilidade jurídica de reversão desse nome em caso de separação, o ideal é que a escolha seja consciente desde o início. Quando bem ajustado, o nome de casado torna-se um aliado poderoso, trazendo o combustível que faltava para sua evolução pessoal e harmonia conjugal.</p>
+        </div>
 
         <div style="background: #fdfaf0; border-left: 5px solid #b8860b; padding: 20px; margin: 20px 0; border-radius: 4px;">
             <h3 style="color: #827108; margin-top: 0;">A Transmutação da sua Expressão</h3>
-            <p style="line-height: 1.6; color: #333;font-size: 18px;">${aplicarFiltroTexto(textoTransicao)}</p>
+            <p style="line-height: 1.6; color: #333; font-size: 18px;">${aplicarFiltroTexto(textoTransicao)}</p>
         </div>
 
         <div class="container-piramide" style="margin-top: 30px; width: 100%; display: flex; flex-direction: column; align-items: center;">
             <div class="piramide" style="display: table; margin: 0 auto; border-collapse: collapse;">`;
 
-    // --- LINHA DAS LETRAS (Respeita o seu CSS de .num-letra) ---
+    // Letras
     const letras = nomeCasado.toUpperCase().replace(/\s+/g, '').split('');
     html += `<div class="linha" style="display: flex; justify-content: center;">`;
     letras.forEach(l => { 
-        // Aqui ele usa a sua classe padrão. Se mudar no CSS, muda aqui!
         html += `<div class="num-letra" style="color: #000E52; font-weight: 900; width: 16px; text-align: center; font-size: 16px;">${l}</div>`; 
     });
     html += `</div>`;
 
-    // --- LINHAS DA PIRÂMIDE (Respeita o seu CSS de .num) ---
+    // Linhas da Pirâmide
     piramideCasado.forEach((linha, i) => {
         html += `<div class="linha" style="display: flex; justify-content: center;">`;
         linha.forEach((n, j) => {
@@ -3009,29 +3001,27 @@ textoTransicao = textoTransicao
             if (negativasCasado.pos.some(p => p.l === i && p.c === j)) {
                 classe += " negativo"; 
             }
-            // Usei width 22px para manter o formato "oval" largo que você gosta
             html += `<div class="${classe}" style="width: 16px; text-align: center; font-size: 16px; display: inline-block;">${n}</div>`;
         });
         html += `</div>`;
     });
 
-    html += `</div></div>`;
+    html += `</div></div>`; // Fecha .piramide e .container-piramide
 
-    // ANÁLISE DOS BLOQUEIOS
+    // Alertas de Bloqueio
     if (negativasCasado.detalhes.length > 0) {
         html += `
         <div style="margin-top: 30px; padding: 15px; border: 1px solid #ffcccc; background: #fff5f5; border-radius: 8px;">
             <h3 style="color: red; margin-bottom: 10px;">⚠️ Alerta de Bloqueios no Nome de Casado(a)</h3>
             ${negativasCasado.detalhes.map(neg => `
                 <div class="evitar-corte" style="margin-top: 20px; border-left: 4px solid red; padding-left: 15px;">
-                   
                     <div class="texto-res">${aplicarFiltroTexto(textos.SeqNegVida[neg.numero])}</div>
                 </div>
             `).join('')}
         </div>`;
     }
 
-    html += `</div>`; 
+    html += `</div>`; // FECHA A PÁGINA (.page) CORRETAMENTE NO FINAL
     return html;
 }
         
