@@ -3101,24 +3101,40 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal, negativasOriginal) {
 
 
 
-// Função para remover acentos e reduzir para 1-9
-function prepararEReduzir(letra) {
-    if (!letra) return 0;
+function calcularValorCabalistico(letraOriginal) {
+    if (!letraOriginal) return 0;
     
-    // 1. Remove acentos (Ex: 'Á' vira 'A')
-    const letraLimpa = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+    let letra = letraOriginal.toUpperCase();
     
-    // 2. Pega o valor na sua tabela
-    let valor = tabela[letraLimpa] || 0;
+    // 1. Remove o acento para pegar a letra base (ex: É -> E)
+    let letraBase = letra.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
-    // 3. Redução Numerológica Estrita (Garante 1 a 9, mantém 11 e 22)
+    // 2. Descobre qual é o acento (ex: É -> ´)
+    // O regex abaixo pega apenas o sinal diacrítico (o acento)
+    let acentoMatch = letra.normalize("NFD").match(/[\u0300-\u036f]/);
+    let acento = acentoMatch ? acentoMatch[0] : null;
+
+    // 3. Pega os valores na sua tabela JS
+    let valorBase = tabela[letraBase] || 0;
+    let valorAcento = 0;
+
+    // Se houver acento, buscamos o valor dele na sua tabela
+    // Certifique-se que sua tabela tem entradas como: '´': 1, '˜': 3, etc.
+    if (acento) {
+        valorAcento = tabela[acento] || 0;
+    }
+
+    // 4. SOMA CABALÍSTICA: Letra + Acento
+    let somaTotal = valorBase + valorAcento;
+
+    // 5. REDUÇÃO (Garante 1 a 9, respeitando 11 e 22 se você usar)
     function reduzir(n) {
         if (n <= 9 || n === 11 || n === 22) return n;
-        let soma = n.toString().split('').reduce((acc, d) => acc + parseInt(d), 0);
-        return reduzir(soma); // Chama de novo até ser menor que 9 ou mestre
+        let s = n.toString().split('').reduce((acc, d) => acc + parseInt(d), 0);
+        return reduzir(s);
     }
-    
-    return reduzir(valor);
+
+    return reduzir(somaTotal);
 }
         
         
@@ -3237,25 +3253,21 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
 
 
 // --- CÁLCULO DO EQUILÍBRIO (CORRIGIDO) ---
-// --- CÁLCULO DO EQUILÍBRIO (VERSÃO FINAL SEM ERRO DE ACENTO) ---
+// --- CÁLCULO DO EQUILÍBRIO (LOGICA CABALÍSTICA COM SOMA DE ACENTOS) ---
 let resultadoEquilibrioFinal = "";
 let numInicio = 0; 
 let numFim = 0;
 
 
-
+// --- EXECUÇÃO ---
 if (nomesArray && nomesArray.length > 0) {
-    // Primeira letra do Primeiro Nome
-    const primLetra = nomesArray[0][0];
-    
-    // Última letra do ÚLTIMO Nome
+    const primLetra = nomesArray[0][0]; // Início do Primeiro Nome
     const ultimoNome = nomesArray[nomesArray.length - 1];
-    const ultLetra = ultimoNome.slice(-1);
+    const ultLetra = ultimoNome.slice(-1); // Fim do Último Nome
 
-    numInicio = prepararEReduzir(primLetra);
-    numFim = prepararEReduzir(ultLetra);
+    numInicio = calcularValorCabalistico(primLetra);
+    numFim = calcularValorCabalistico(ultLetra);
 
-    // Busca no banco de dados (Garantindo que nunca venha undefined)
     const txtInicio = (bancoEquilibrio.inicio && bancoEquilibrio.inicio[numInicio]) ? bancoEquilibrio.inicio[numInicio] : "";
     const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
     
