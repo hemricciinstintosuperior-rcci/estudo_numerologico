@@ -3563,7 +3563,7 @@ essencia: {
 }
 };
 
-const bancoEquilibrio = {
+const bancoEquilibrioUnificado = {
     inicio: {
         // --- NÚMERO 1 (Liderança, Início, Independência) ---
         
