@@ -4701,7 +4701,7 @@ html += `
                 </div>
             </div>
 
-            <div class="bloco-cientifico-plano" style="border-left: 4px solid ${coresPlanos[dadosHabilidade.plano] || '#ccc'}; padding-left: 20px; margin: 30px 0;">
+            <div class="evitar-corte bloco-cientifico-plano" style="border-left: 4px solid ${coresPlanos[dadosHabilidade.plano] || '#ccc'}; padding-left: 20px; margin: 30px 0;">
                 <h3 style="color: ${coresPlanos[dadosHabilidade.plano] || '#000'}; text-transform: uppercase; font-size: 1.2rem;">
                     Campo de Atuação: Plano ${dadosHabilidade.plano.toUpperCase()} (Letra ${dadosHabilidade.letraOriginal})
                 </h3>
@@ -4710,11 +4710,11 @@ html += `
                 </div>
             </div>
 
-            <div class="bloco-cientifico-modo" style="background: rgba(0,0,0,0.03); padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
+            <div class="evitar-corte bloco-cientifico-modo" style="background: rgba(0,0,0,0.03); padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
                 <h3 style="text-transform: uppercase; font-size: 1.1rem; margin-bottom: 10px;">
                     Modo de Expressão: ${dadosHabilidade.modo.toUpperCase()}
                 </h3>
-                <div class="texto-res">
+                <div class="evitar-corte texto-res">
                     ${dadosHabilidade.modo === 'indeciso' ? textos.modosAcao.oscilantes : textos.modosAcao[dadosHabilidade.modo]}
                 </div>
             </div>
