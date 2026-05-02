@@ -3447,10 +3447,11 @@ res.numEquilibrioFim = numFim;
 const dadosCientificos = calcularHabilidadeEspecialCientifica(nomeCompleto);
 
 // Criamos a variável vHabDefFinal que a lista está pedindo
-// Se houver dominância, mostra a Letra e o Número. Se não, mostra "Equilibrado"
 let vHabDefFinal = "Equilibrado"; 
+
 if (dadosCientificos) {
-    vHabDefFinal = ${dadosCientificos.letraOriginal} (${dadosCientificos.numero});
+    // IMPORTANTE: Use crases (backticks) para que o ${} funcione corretamente
+    vHabDefFinal = `${dadosCientificos.letraOriginal} (${dadosCientificos.numero})`;
 }
 const introProfissionalTexto = `
     <div style="margin-bottom: 15px; text-align: justify; line-height: 1.3;">
