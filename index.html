@@ -3443,7 +3443,15 @@ res.numEquilibrioInicio = numInicio;
 res.numEquilibrioFim = numFim;
 
 
+// --- 1. PRIMEIRO: Calcula a Habilidade/Deficiência Científica ---
+const dadosCientificos = calcularHabilidadeEspecialCientifica(nomeCompleto);
 
+// Criamos a variável vHabDefFinal que a lista está pedindo
+// Se houver dominância, mostra a Letra e o Número. Se não, mostra "Equilibrado"
+let vHabDefFinal = "Equilibrado"; 
+if (dadosCientificos) {
+    vHabDefFinal = ${dadosCientificos.letraOriginal} (${dadosCientificos.numero});
+}
 const introProfissionalTexto = `
     <div style="margin-bottom: 15px; text-align: justify; line-height: 1.3;">
 ​<p>A verdadeira realização profissional não acontece por acaso, mas através do alinhamento preciso entre sua <strong>Engenharia de Personalidade</strong> e as demandas concretas do mundo material. Muitas vezes, a sensação de estagnação, o cansaço excessivo ou a invisibilidade no mercado são apenas os resultados diretos de atuar em frequências que não pertencem ao seu código original. Para que a prosperidade se manifeste, é indispensável que a sua ocupação seja o reflexo externo da sua estrutura numérica interna, permitindo que o trabalho deixe de ser um esforço de resistência e se torne um fluxo natural de expansão.</p>
