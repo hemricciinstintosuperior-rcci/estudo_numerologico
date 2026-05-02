@@ -966,7 +966,7 @@ function calcularValorLetra(letra) {
         if (c === "\u0301") soma += 2;          // Agudo (´)
         else if (c === "\u0302") soma += 7;     // Circunflexo (^)
         else if (c === "\u0303") soma += 3;     // Til (~)
-        else if (c === "\u0327") soma += 6;     // Cedilha (¸)
+        else if (c === "\u0327") soma += 3;     // Cedilha (¸)
         else if (c === "\u030a") soma += 7;     // Círculo/Grau superior (°)
         else if (c === "\u0300" || c === "\u0308") mult *= 2; // Grave/Trema
     }
@@ -990,7 +990,7 @@ function valorLetraMatriz(l){
     if (n.includes("\u0301")) s = 2;          // Agudo
     else if (n.includes("\u0302")) s = 7;     // Circunflexo
     else if (n.includes("\u0303")) s = 3;     // Til
-    else if (n.includes("\u0327")) s = 6;     // Cedilha
+    else if (n.includes("\u0327")) s = 3;     // Cedilha
     else if (n.includes("\u030a")) s = 7;     // Grau (°)
     else if (l.includes("'")) s = 2;          // Apóstrofo
 
@@ -2814,7 +2814,7 @@ function calcularNumerosSocial(nome) {
             if (/[ÁÉÍÓÚ]/.test(char)) valorLetra += 2;
             if (/[ÃÕ]/.test(char)) valorLetra += 3;
             if (/[ÂÊÎÔÛ]/.test(char)) valorLetra += 7;
-            if (char === "Ç") valorLetra += 6;
+            if (char === "Ç") valorLetra += 3;
             if (/[ÀÈÌÒÙÄËÏÖÜ]/.test(char)) valorLetra *= 2; // Multiplicador (dobra)
 
             // Separação para Motivação e Influência
@@ -3095,7 +3095,7 @@ function calcularValorCabalisticoCompleto(letra) {
         if (c === "\u0301") soma += 2;          
         else if (c === "\u0302") soma += 7;     
         else if (c === "\u0303") soma += 3;     
-        else if (c === "\u0327") soma += 6;     
+        else if (c === "\u0327") soma += 3;     
         else if (c === "\u030a") soma += 7;     
         else if (c === "\u0300" || c === "\u0308") mult *= 2; 
     }
