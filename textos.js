@@ -3563,101 +3563,30 @@ essencia: {
 }
 };
 
-const bancoEquilibrio = {
- 
-inicio: {
-    1: `<h3 style="text-align: center;">Autonomia e Pioneirismo</h3>
-        <p>A sua primeira inclinação, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é marcada por uma autonomia radical. Diante de qualquer oportunidade, sua atitude inicial é a de quem assume as rédeas e não espera por ninguém. Você possui o instinto do desbravador, aquele que prefere abrir a trilha a seguir um caminho já batido.</p>
-        <p>Essa disposição pioneira é sua grande ferramenta para romper obstáculos; você enfrenta o novo com coragem direta. Sua inclinação natural é converter a dúvida em ação imediata, estabelecendo um ritmo de liderança que define como todo o projeto será conduzido daqui para frente.</p>`,
+const bancoEquilibrioUnificado = {
+    inicio: {
+        // --- Combinações para o Número 1 ---
+        "1_fisico_criativo": "<h3>Título</h3><p>Texto unindo o 1 com Letra Física Criativa (Ex: E)...</p>",
+        "1_fisico_indeciso": "<h3>Título</h3><p>Texto unindo o 1 com Letra Física Indecisa (Ex: W)...</p>",
+        "1_fisico_neutro": "<h3>Título</h3><p>Texto unindo o 1 com Letra Física Neutra (Ex: D, M)...</p>",
+        
+        "1_mental_criativo": "<h3>Título</h3><p>Texto unindo o 1 com Letra Mental Criativa (Ex: A)...</p>",
+        "1_mental_indeciso": "<h3>Título</h3><p>Texto unindo o 1 com Letra Mental Indecisa (Ex: H, J, N, P)...</p>",
+        "1_mental_neutro": "<h3>Título</h3><p>Texto unindo o 1 com Letra Mental Neutra (Ex: G, L)...</p>",
+        
+        "1_emocional_criativo": "<h3>Título</h3><p>Texto unindo o 1 com Letra Emocional Criativa (Ex: I, O, R, Z)...</p>",
+        "1_emocional_indeciso": "<h3>Título</h3><p>Texto unindo o 1 com Letra Emocional Indecisa (Ex: B, S, T, X)...</p>",
+        
+        "1_intuitivo_criativo": "<h3>Título</h3><p>Texto unindo o 1 com Letra Intuitiva Criativa (Ex: K)...</p>",
+        "1_intuitivo_indeciso": "<h3>Título</h3><p>Texto unindo o 1 com Letra Intuitiva Indecisa (Ex: F, Q, U, Y)...</p>",
+        "1_intuitivo_neutro": "<h3>Título</h3><p>Texto unindo o 1 com Letra Intuitiva Neutra (Ex: C, V)...</p>",
 
-    2: `<h3 style="text-align: center;">Diplomacia e Sensibilidade</h3>
-        <p>Sua inclinação inicial, <strong>MASCULINO-FEMININO-NEUTRO</strong>, revela um personagem detalhista e diplomático. Antes de dar o primeiro passo, você instintivamente busca compreender o ambiente e as pessoas ao redor. Sua atitude é a da colaboração, preferindo a estratégia da união à força bruta da imposição.</p>
-        <p>Você aborda os obstáculos com uma sensibilidade aguçada, funcionando como um mediador natural. Essa inclinação permite que você perceba nuances que outros ignoram, garantindo que o início de seus projetos seja pautado pela harmonia e pela inteligência emocional.</p>`,
-
-    3: `<h3 style="text-align: center;">Criatividade e Entusiasmo</h3>
-        <p>A maneira como você aborda as oportunidades, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é sempre vibrante e repleta de um otimismo contagiante. Sua atitude inicial é expandir as possibilidades através da comunicação e da criatividade, atraindo olhares e recursos para as suas ideias com extrema facilidade.</p>
-        <p>Sua inclinação é transformar qualquer começo em um evento motivador. Você lida com os primeiros desafios com jogo de cintura e entusiasmo, garantindo que a energia do projeto comece no topo, o que facilita muito a superação de qualquer resistência inicial.</p>`,
-
-    4: `<h3 style="text-align: center;">Pragmatismo e Ordem</h3>
-        <p>Sua entrada em qualquer situação ocorre de forma metódica e séria, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua inclinação natural é buscar a segurança das bases e o respeito pela estrutura. Você não dá um passo sem antes verificar se o terreno é sólido o suficiente para suportar o peso dos seus planos.</p>
-        <p>Essa atitude inicial pragmática garante que seus projetos não nasçam no improviso. Ao organizar os fundamentos logo de cara, você transmite uma imagem de profissionalismo e confiança, assegurando que o ponto de partida seja o mais estável possível.</p>`,
-
-    5: `<h3 style="text-align: center;">Agilidade e Versatilidade</h3>
-        <p>Você aborda as oportunidades com uma agilidade mental invejável e um desejo constante de renovação, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua inclinação inicial é o movimento; você se sente atraído pelo que é novo, desafiador e fora do comum, agindo com um magnetismo imediato.</p>
-        <p>Sua atitude perante obstáculos é a da adaptação veloz. Em vez de bater de frente, você usa sua inteligência para contornar problemas, trazendo soluções criativas que ninguém esperava. Esse dinamismo faz com que seu personagem seja visto como alguém audacioso e inovador.</p>`,
-
-    6: `<h3 style="text-align: center;">Responsabilidade e Harmonia</h3>
-        <p>Sua motivação inicial é sempre o senso de responsabilidade e o cuidado com o coletivo, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você inclina seu personagem para o serviço e para a harmonia, garantindo que todos ao redor estejam confortáveis antes de prosseguir com os planos.</p>
-        <p>Sua atitude inicial é acolhedora, estabelecendo laços de confiança mútua logo no primeiro contato. Você planta sementes de união no início de cada ciclo, o que confere aos seus projetos uma base humana muito forte e resiliente.</p>`,
-
-    7: `<h3 style="text-align: center;">Análise e Observação</h3>
-        <p>Sua atitude inicial é introspectiva e altamente observadora, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Antes de se comprometer com uma oportunidade, sua inclinação é realizar uma busca profunda por conhecimento, analisando cada detalhe técnico ou espiritual da situação.</p>
-        <p>Esse silêncio inicial é a sua maior estratégia; você não se deixa levar por impulsos superficiais. Ao agir, sua abordagem é fundamentada em uma base intelectual ou intuitiva inabalável, o que confere às suas ações uma precisão que poucos conseguem atingir.</p>`,
-
-    8: `<h3 style="text-align: center;">Autoridade e Visão de Poder</h3>
-        <p>Sua abordagem perante novas oportunidades é executada com uma autoridade natural e visão de longo alcance, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua inclinação é visualizar o sucesso material e a eficiência antes mesmo de realizar o primeiro movimento prático.</p>
-        <p>Sua atitude inicial é a de um executivo nato, focando na produtividade e na organização dos recursos. Você entra em cena para comandar e estruturar, garantindo que a energia do início já esteja direcionada para a conquista de resultados tangíveis e grandiosos.</p>`,
-
-    9: `<h3 style="text-align: center;">Humanitarismo e Sabedoria</h3>
-        <p>Você inicia seus ciclos com uma vibração humanitária e generosa, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua inclinação é enxergar o quadro geral, buscando um propósito que vá além do benefício pessoal. Existe uma sabedoria profunda na sua atitude inicial.</p>
-        <p>Ao abordar novos caminhos, você o faz com um desprendimento que inspira os outros. Sua atitude é a da tolerância e da compreensão, permitindo que você navegue por obstáculos com uma elegância emocional que pacifica o ambiente e atrai apoio espontâneo.</p>`,
-
-    11: `<h3 style="text-align: center;">Inspiração Visionária</h3>
-        <p>Sua abordagem inicial transcende a lógica comum, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você inicia processos com uma intuição aguçada, agindo como um canal de ideias elevadas que podem transformar o ambiente ao seu redor logo no primeiro contato.</p>
-        <p>Sua inclinação é para o extraordinário. Ao enfrentar um obstáculo, sua atitude não é apenas resolvê-lo, mas sim encontrar uma forma inovadora e inspiradora de evoluir através dele, servindo de exemplo para todos que acompanham sua jornada.</p>`,
-
-    22: `<h3 style="text-align: center;">Construção Master</h3>
-        <p>Você inicia seus projetos com uma visão de escala monumental, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Sua inclinação natural é planejar algo que não beneficie apenas você, mas que deixe uma marca duradoura na sociedade ou no mundo.</p>
-        <p>Sua atitude inicial une o idealismo mais alto com a técnica mais refinada. Você aborda as oportunidades com a seriedade de quem está lançando os alicerces de um edifício que atravessará gerações, garantindo que cada detalhe do começo seja robusto e significativo.</p>`
-},
-
-conclusao: {
-    1: `<h3 style="text-align: center;">Independência e Determinação</h3>
-        <p>Sua capacidade de conclusão, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é testada pela sua necessidade de independência. Você realiza seus projetos com mais êxito quando sente que possui o controle total sobre o desfecho. O sucesso aqui vem da sua determinação inabalável em colocar o ponto final com as próprias mãos.</p>
-        <p>O seu desafio na realização é manter a chama acesa sem se deixar abater pelo cansaço do trajeto. Quando você une a iniciativa do começo com essa força de fechamento, sua capacidade de materializar objetivos torna-se uma força imparável e admirada.</p>`,
-
-    2: `<h3 style="text-align: center;">Cooperação e Estabilidade</h3>
-        <p>Para concluir seus projetos com sucesso, você depende da segurança e da estabilidade que constrói ao longo do caminho. Sua capacidade de realização, <strong>MASCULINO-FEMININO-NEUTRO</strong>, floresce quando você se sente apoiado e em harmonia com o ambiente. Você finaliza as coisas com cuidado e tato.</p>
-        <p>Sua realização plena ocorre quando você percebe que a paciência no fechamento é tão importante quanto o desejo de terminar. Ao consolidar suas metas com firmeza e diplomacia, você garante resultados que são não apenas concluídos, mas solidamente respeitados.</p>`,
-
-    3: `<h3 style="text-align: center;">Foco e Expressão Realizada</h3>
-        <p>A conclusão dos seus objetivos depende da sua capacidade de manter o foco até o último detalhe, evitando a dispersão que sua mente criativa pode gerar. Sua realização plena acontece quando você transforma o entusiasmo inicial em um resultado rentável e visível, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>Ao equilibrar a alegria do começo com a disciplina da entrega final, você garante que sua obra receba o reconhecimento merecido. O sucesso real para você vem quando a ideia brilha tanto no papel quanto no produto final concluído.</p>`,
-
-    4: `<h3 style="text-align: center;">Segurança e Construção Sólida</h3>
-        <p>Sua capacidade de finalização é sólida, mas exige que você aprenda a lidar com imprevistos sem perder a calma. O equilíbrio na realização reside em permitir que o processo flua com resiliência, garantindo que o seu esforço resulte em algo duradouro, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>Ao concluir uma tarefa, você o faz com um rigor técnico que serve de exemplo. Sua estabilidade financeira e emocional está diretamente ligada à sua habilidade em terminar o que começou com a mesma seriedade com que planejou as bases iniciais.</p>`,
-
-    5: `<h3 style="text-align: center;">Estratégia e Liberdade Focada</h3>
-        <p>Para concluir com êxito, você precisa domar a inquietude que surge quando o projeto entra na fase de rotina. Sua capacidade de realização aumenta quando você usa sua versatilidade para contornar os obstáculos finais de forma estratégica e inteligente, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>O sucesso vem ao compreender que finalizar um ciclo é o que garante a sua liberdade para novos começos. Ao focar na entrega, você transmuta a impulsividade em uma vitória concreta, alcançando o porto de chegada com agilidade e mérito.</p>`,
-
-    6: `<h3 style="text-align: center;">Harmonia e Compromisso Pleno</h3>
-        <p>A conclusão dos seus objetivos é guiada por um desejo de perfeição que nasce do seu coração. Sua capacidade de realização é ampliada quando você equilibra o cuidado com os outros e o compromisso com os seus próprios resultados, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>Ao finalizar seus planos com amor e responsabilidade, você estabelece um padrão de excelência que nutre tanto a sua alma quanto o seu sucesso material. O desfecho dos seus ciclos sempre gera uma sensação de paz e dever cumprido para todos os envolvidos.</p>`,
-
-    7: `<h3 style="text-align: center;">Sabedoria e Entrega Concreta</h3>
-        <p>O sucesso na sua finalização depende de superar a tendência ao isolamento excessivo no estágio final. Ao compartilhar os resultados e concluir com clareza, você transforma sua sabedoria interna em conquistas práticas para o mundo real, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>A verdadeira realização vem quando você permite que sua busca por perfeição se materialize em algo útil. Una a profundidade do seu pensamento com uma entrega generosa e verá que seu impacto é muito maior do que você imaginava.</p>`,
-
-    8: `<h3 style="text-align: center;">Ética e Prosperidade Justa</h3>
-        <p>Para que o seu ciclo se complete com honra, a ética e a justiça devem guiar a finalização tanto quanto a ambição guiou o começo. Sua capacidade executiva atinge o ápice quando você finaliza projetos com foco na eficiência e na retidão, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>O equilíbrio entre o desejo de poder e a responsabilidade garante vitórias sólidas e respeitadas por todos. Ao materializar seus planos com autoridade equilibrada, você atrai a abundância que é reflexo direto da sua competência e caráter.</p>`,
-
-    9: `<h3 style="text-align: center;">Desprendimento e Impacto Coletivo</h3>
-        <p>A conclusão para você é marcada pela necessidade de um encerramento que tenha significado emocional e humanitário. O desafio na realização é não se perder em idealismos, garantindo que o projeto tenha um fim prático e benéfico, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>Sua vitória reside em finalizar ciclos com generosidade, transformando o sonho do início em uma entrega concreta para o coletivo. Ao agir assim, você encerra seus processos com uma sensação de plenitude e iluminação espiritual.</p>`,
-
-    11: `<h3 style="text-align: center;">Paz Visionária e Iluminação</h3>
-        <p>A finalização dos seus projetos ocorre através da manutenção da sua paz interna. Ao agir como um canal de harmonia no desfecho, você resolve impasses complexos com uma clareza que pacifica e resolve qualquer conflito, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>Isso garante que o fechamento do seu ciclo seja evolutivo e impactante para todos. Sua realização máxima é inspiracional; você conclui as coisas de forma que o resultado final eleve a consciência do ambiente ao seu redor.</p>`,
-
-    22: `<h3 style="text-align: center;">Maestria e Legado Permanente</h3>
-        <p>A finalização para você significa deixar o projeto tão robusto que ele continue funcionando e gerando frutos por conta própria. Sua capacidade de realização une competência técnica absoluta com uma entrega magistral, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
-        <p>Você não apenas termina uma tarefa; você funda um marco. Seu sucesso está em materializar soluções duradouras que beneficiam a coletividade, garantindo que seu esforço final resulte em um legado que permanecerá sólido através do tempo.</p>`
-}
+        // Repetir para 2, 3, 4, 5, 6, 7, 8, 9, 11 e 22...
+    },
+    conclusao: {
+        // Mesma estrutura de chaves acima, mas com textos focados em "Capacidade de Realização"
+    }
 };
-
 // =================================================================
 // ESTRUTURA DE TEXTOS DO PLANO DE EXPRESSÃO (FORMATADO PARA FILTRO)
 // =================================================================
