@@ -3267,46 +3267,33 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
 
 // --- LÓGICA DE EXECUÇÃO: EQUILÍBRIO (Início e Conclusão) ---
 
-let resultadoEquilibrioFinal = "";
+// --- DENTRO DA gerarMapaCompleto ---
 let numInicio = 0; 
 let numFim = 0;
+let txtFinalInic = "";
+let txtFinalConc = "";
 
 if (nomesArray && nomesArray.length > 0) {
-    // 1. Identifica a primeira letra do primeiro nome e a última letra do último nome
-    const primeiroNome = nomesArray[0];
-    const ultimoNome = nomesArray[nomesArray.length - 1];
-    
-    const letraInicio = primeiroNome[0]; 
-    const letraFim = ultimoNome.slice(-1); 
+    const letraInicio = nomesArray[0][0]; 
+    const letraFim = nomesArray[nomesArray.length - 1].slice(-1); 
 
-    // 2. Gera as chaves mestras (Ex: "1_mental_criativo")
+    // Pega as chaves completas: ex "3_intuitivo_neutro"
     const chaveInic = obterChaveMestra(letraInicio);
     const chaveConc = obterChaveMestra(letraFim);
 
-    // 3. Captura os números cabalísticos (para exibir nos círculos/metadados)
     numInicio = calcularValorCabalisticoCompleto(letraInicio);
     numFim = calcularValorCabalisticoCompleto(letraFim);
 
-    // 4. Busca os textos no banco unificado
-    // Usamos Templates Literals para estruturar o HTML que vai para o relatório
-    const txtInic = bancoEquilibrioUnificado.inicio[chaveInic] || `<p>Texto de início não encontrado para a chave ${chaveInic}</p>`;
-    const txtConc = bancoEquilibrioUnificado.conclusao[chaveConc] || `<p>Texto de conclusão não encontrado para a chave ${chaveConc}</p>`;
+    // BUSCA NO BANCO (Verifique se o nome é bancoEquilibrio ou bancoEquilibrioUnificado)
+    // Adicionei um console.log para você ver no F12 se a chave está certa
+    console.log("Buscando chaves:", chaveInic, chaveConc);
 
-    // 5. Monta o HTML final da seção de Equilíbrio
-    resultadoEquilibrioFinal = `
-        <div class="secao-equilibrio">
-            <div class="equilibrio-inicio">
-                <div class="selo-numero">Início: ${numInicio}</div>
-                ${txtInic}
-            </div>
-            <hr class="divisor-suave">
-            <div class="equilibrio-conclusao">
-                <div class="selo-numero">Conclusão: ${numFim}</div>
-                ${txtConc}
-            </div>
-        </div>
-    `;
+    if(typeof bancoEquilibrioUnificado !== 'undefined'){
+        txtFinalInic = bancoEquilibrioUnificado.inicio[chaveInic] || "Texto não encontrado para: " + chaveInic;
+        txtFinalConc = bancoEquilibrioUnificado.conclusao[chaveConc] || "Texto não encontrado para: " + chaveConc;
+    }
 }
+
 
 
 const res = {
@@ -3322,7 +3309,7 @@ const res = {
     Relacionamento: calcularNumerologia(propCalculado, false), // Relacionamento SEMPRE reduz (1-9)
     essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
     talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
-   equilibrio: { inicio: numInicio, fim: numFim, texto: resultadoEquilibrioFinal },
+     equilibrio: {  inicio: numInicio,  fim: numFim,   txtFinalInic: txtFinalInic,   txtFinalConc: txtFinalConc  },
     
 
     deficiencias: faltantes.map(d => reduzirPuro(d)), 
@@ -4523,10 +4510,14 @@ html += `
 
 // --- INÍCIO DO BLOCO DO EQUILÍBRIO ADAPTADO ---
 
-// 1. Pegamos os números e o texto que já foram gerados lá no objeto 'res'
-const nInicio = res.numEquilibrioInicio; 
+// --- NO BLOCO DO HTML DO RELATÓRIO ---
+const nInicio = res.numEquilibrioInicio;
 const nFim = res.numEquilibrioFim;
-const textoCorpoEquilibrio = res.equilibrio.texto; // Aqui já vem o txtP1 + txtP2 processado
+
+// Pega os textos que salvamos no passo anterior
+const txtP1 = res.equilibrio.txtFinalInic || "";
+const txtP2 = res.equilibrio.txtFinalConc || "";
+
 
 // 2. Introdução Corrigida (Ajustada para Primeira do Primeiro e Última do Último)
 const txtIntroEquil = `
@@ -4542,22 +4533,14 @@ const txtIntroEquil = `
 let htmlEquil = `
     ${txtIntroEquil}
     <br><br>
-    
     <div class="grupo-respostas-bloco pula-pagina">
         <div class="secao-resultado">
-            <h3 style="color: #000; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
-                SUA INCLINAÇÃO (Início: ${nInicio})
-            </h3>
-            ${res.equilibrio.txtFinalInic || ""} 
+            <h3 style="color: #000; text-align: center;">SUA INCLINAÇÃO (INÍCIO: ${nInicio})</h3>
+            ${txtP1}
         </div>
-        
-        <br>
-
         <div class="secao-resultado">
-            <h3 style="color: #000; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
-                SUA CAPACIDADE DE REALIZAÇÃO (Conclusão: ${nFim})
-            </h3>
-            ${res.equilibrio.txtFinalConc || ""}
+            <h3 style="color: #000; text-align: center;">SUA CAPACIDADE DE REALIZAÇÃO (CONCLUSÃO: ${nFim})</h3>
+            ${txtP2}
         </div>
     </div>
 `;
