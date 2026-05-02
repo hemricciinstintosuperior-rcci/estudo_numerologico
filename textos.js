@@ -4280,7 +4280,7 @@ const bancoEquilibrioUnificado = {
  }
 };
 
-};
+
 // =================================================================
 // ESTRUTURA DE TEXTOS DO PLANO DE EXPRESSÃO (FORMATADO PARA FILTRO)
 // =================================================================
