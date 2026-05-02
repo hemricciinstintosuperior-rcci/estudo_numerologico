@@ -4573,8 +4573,9 @@ html += `
     
     
 
- tituloBonito = "Habilidades Especiais e Deficiências"; 
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
+tituloBonito = "Habilidades Especiais e Deficiências"; 
+
+// --- SEPARADOR LUXO ---
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -4583,23 +4584,33 @@ html += `
 </div>
 `;
 
-    
+// --- CONTEÚDO PRINCIPAL ---
 html += `
     <div class="page">
-        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">Habilidades Especiais e Deficiências</h2>
-        <div class="intro-texto">${aplicarFiltroTexto(textos.introducoes.talentosEspeciais) ||  `
-    <p>Muitas vezes, o foco nas medidas tradicionais de sucesso impede a percepção de uma série de dons e talentos naturais que operam de forma silenciosa. É fundamental prestar atenção às habilidades mais sutis, pois elas são as ferramentas que garantem a sensação de competência e amparo em todas as áreas da vida.</p>
-    <p>Por outro lado, é necessário manter a atenção sobre as crenças e classificações internas, visto que o pensamento molda diretamente as ações. Nem todas as capacidades humanas se manifestam de forma equilibrada; algumas identificam aptidões características brilhantes, enquanto outras revelam qualidades conflitantes que podem se tornar deficiências se não forem devidamente trabalhadas e integradas.</p>
-`}</div>
-        ${talentoNum ? `
-            <p><strong> </strong></p>
-            <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.talentosEspeciais[talentoNum])}</div>
+        <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
+        
+        <div class="intro-texto">
+            ${aplicarFiltroTexto(textos.introducoes.talentosEspeciais) || `
+                <p>Muitas vezes, o foco nas medidas tradicionais de sucesso impede a percepção de uma série de dons e talentos naturais que operam de forma silenciosa. É fundamental prestar atenção às habilidades mais sutis, pois elas são as ferramentas que garantem a sensação de competência e amparo em todas as áreas da vida.</p>
+                <p>Por outro lado, é necessário manter a atenção sobre as crenças e classificações internas, visto que o pensamento molda diretamente as ações. Algumas frequências revelam aptidões brilhantes, enquanto outras revelam qualidades que podem se tornar deficiências se não forem integradas.</p>
+            `}
+        </div>
+
+        ${talentoNumEspecial ? `
+            <div class="resultado-talento" style="margin-top: 20px;">
+                <div class="evitar-corte texto-res">
+                    ${aplicarFiltroTexto(textos.talentosEspeciais[talentoNumEspecial])}
+                </div>
+            </div>
         ` : `
-            <p style="font-style: italic; color: #666;">Não foi detectada uma predominância numérica (dobro de frequência) no primeiro nome para um talento especial específico.</p>
+            <div class="alerta-suave" style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+                <p style="font-style: italic; color: #666; margin: 0;">
+                    Baseado na análise do seu <strong>nome completo</strong>, não foi detectada uma dominância numérica extrema (frequência de dobro ou triplo) que configure um Talento Especial específico. Isso indica uma distribuição de potenciais mais equilibrada e diversificada.
+                </p>
+            </div>
         `}
     </div>
 `;
-
 
 
 
