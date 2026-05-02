@@ -4517,46 +4517,48 @@ html += `
 // ==========================================
 
 
-// --- INÍCIO DO BLOCO DO EQUILÍBRIO ---
+// --- INÍCIO DO BLOCO DO EQUILÍBRIO ADAPTADO ---
 
-    const nInicio = res.equilibrio.inicio;
-    const nFim = res.equilibrio.fim;
+// 1. Pegamos os números e o texto que já foram gerados lá no objeto 'res'
+const nInicio = res.numEquilibrioInicio; 
+const nFim = res.numEquilibrioFim;
+const textoCorpoEquilibrio = res.equilibrio.texto; // Aqui já vem o txtP1 + txtP2 processado
 
-    // Introdução direta para não ter erro de busca no banco
-    const txtIntroEquil = `<p>O Universo rege-se pelo princípio da harmonia, e o mesmo se aplica aos seus números pessoais. Qualquer excesso identificado em sua estrutura numerológica merece uma análise criteriosa, pois essas intensidades podem revelar tanto talentos excepcionais quanto pontos que demandam superação e ajuste.</p>
+// 2. Introdução Corrigida (Ajustada para Primeira do Primeiro e Última do Último)
+const txtIntroEquil = `
+<p>O Universo rege-se pelo princípio da harmonia, e o mesmo se aplica aos seus números pessoais. O seu <strong>Número de Equilíbrio</strong> atua como um guia estratégico, orientando sobre a melhor postura a ser adotada em situações desafiadoras ou de alta pressão.</p>
 
-<p>Muitas vezes, as reações diante da vida são respostas condicionadas ou puramente emocionais, que surgem de forma automática. O processo de maturidade e autodesenvolvimento permite a adoção de métodos mais eficazes para interagir com o mundo. Nesse contexto, o seu Número de Equilíbrio atua como um guia estratégico, orientando sobre a melhor postura a ser adotada em situações desafiadoras ou de alta pressão.</p>
+<p>Nesta análise, decodificamos as "âncoras" do seu nome. A <strong>letra inicial do seu primeiro nome</strong> traduz suas inclinações primárias, revelando como você aborda oportunidades e obstáculos logo no primeiro contato. É a sua assinatura de atitude inicial perante o novo, o impulso que define como você entra em cena.</p>
 
-<p>Cada letra do nome de nascimento carrega uma característica específica, mas certos pontos merecem atenção redobrada. A letra inicial do seu primeiro nome traduz suas inclinações primárias, revelando como você aborda oportunidades e obstáculos logo no primeiro contato. É a sua assinatura de atitude inicial perante o novo.</p>
+<p>Por outro lado, a <strong>última letra do seu último nome</strong> reflete a sua capacidade de sustentação e conclusão. Ela indica como você lida com o encerramento de ciclos e qual a sua força real de entrega. O equilíbrio entre essa primeira centelha de início e a disciplina da finalização é o que define a eficácia de suas realizações e a solidez do seu sucesso.</p>
+`;
 
-<p>Já a última letra do seu primeiro nome reflete a persistência e a capacidade de concluir projetos. Juntas, essas letras fornecem um panorama completo sobre o seu potencial para iniciar e finalizar ciclos com sucesso. O equilíbrio entre o impulso de começar e a disciplina de terminar é o que define a eficácia de suas realizações.</p>
-
-<p>Ao longo da existência, diversas vibrações influenciam a trajetória humana. Enquanto algumas promovem harmonia, outras trazem desafios necessários ao crescimento. Assim como as letras extremas do seu nome indicam tendências, a letra de maior recorrência em seu nome completo destaca habilidades específicas ou excessos que moldam sua personalidade de forma única.</p>`;
-
-
-    const txtP1 = bancoEquilibrio.inicio[nInicio] || "";
-    const txtP2 = bancoEquilibrio.conclusao[nFim] || "";
-
-// 3. Montagem com os títulos e o ESPAÇO (usando <br>)
+// 3. Montagem do HTML (Usando os novos títulos e o conteúdo processado)
+// Nota: O 'res.equilibrio.texto' já contém o txtP1 e txtP2 que buscamos com a Chave Mestra
 let htmlEquil = `
     ${txtIntroEquil}
     <br><br>
     
-  <div class="grupo-respostas-bloco pula-pagina">
-    <div class="secao-resultado">
-        <h3 style="color: #000; text-align: center;">SUA INCLINAÇÃO</h3>
-        ${txtP1}
-    </div>
-    
-   
+    <div class="grupo-respostas-bloco pula-pagina">
+        <div class="secao-resultado">
+            <h3 style="color: #000; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                SUA INCLINAÇÃO (Início: ${nInicio})
+            </h3>
+            ${res.equilibrio.txtFinalInic || ""} 
+        </div>
+        
+        <br>
 
-    <div class="secao-resultado">
-        <h3 style="color: #000; text-align: center;">SUA CAPACIDADE DE REALIZAÇÃO</h3>
-        ${txtP2}
-    </div></div>
+        <div class="secao-resultado">
+            <h3 style="color: #000; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                SUA CAPACIDADE DE REALIZAÇÃO (Conclusão: ${nFim})
+            </h3>
+            ${res.equilibrio.txtFinalConc || ""}
+        </div>
+    </div>
 `;
 
-// 4. Aplica seu filtro (que troca o MASCULINO-FEMININO-NEUTRO pelo nome)
+// 4. Aplica seu filtro de gênero/nome
 const textoFormatado = aplicarFiltroTexto(htmlEquil);
 
 html += `
@@ -4568,7 +4570,6 @@ html += `
         <div class="texto-res">${textoFormatado}</div>
     </div>
 `;
-
     
 
     
