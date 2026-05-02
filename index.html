@@ -3132,45 +3132,113 @@ function obterChaveMestra(letraOriginal) {
 
 
 
-function calcularTalentoEspecial(nomeCompleto) {
+function calcularHabilidadeEspecialCientifica(nomeCompleto) {
     if (!nomeCompleto) return null;
 
-    const contagem = {};
-    // Limpa o nome: tira acentos, espaços e deixa em maiúsculo
-    const nomeLimpo = nomeCompleto.normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .replace(/\s+/g, "")
-        .toUpperCase();
-    
-    // 1. Conta quantas vezes cada VALOR NUMÉRICO da tabela aparece
-    for (let letra of nomeLimpo) {
-        if (tabela[letra]) {
-            const num = tabela[letra];
-            contagem[num] = (contagem[num] || 0) + 1;
+    const contagemLetras = {};
+    // Regex para identificar letras individuais, incluindo as que têm acentos/cedilha
+    const regexLetras = /[\w\u00C0-\u00FFçÇ]+/g;
+    const letrasEncontradas = nomeCompleto.toUpperCase().match(regexLetras);
+
+    if (!letrasEncontradas) return null;
+
+    // 1. Contagem de frequência absoluta (Letra por Letra)
+    for (let palavra of letrasEncontradas) {
+        for (let letra de palavra) {
+            contagemLetras[letra] = (contagemLetras[letra] || 0) + 1;
         }
     }
-    
-    // 2. Extrai as frequências (as quantidades de vezes que os números apareceram)
-    // Exemplo: se o número "3" apareceu 10 vezes e o "1" apareceu 5 vezes.
-    const frequencias = Object.values(contagem).sort((a, b) => b - a);
-    
-    if (frequencias.length === 0) return null;
 
-    const maiorQtd = frequencias[0]; // Quantidade de vezes que o número mais comum apareceu
-    const segundaMaiorQtd = frequencias[1] || 0; // Quantidade de vezes do segundo mais comum
+    // 2. Identificar a Letra Dominante (A que mais aparece)
+    const ordenado = Object.entries(contagemLetras).sort((a, b) => b[1] - a[1]);
+    const letraDominante = ordenado[0][0];
+    const frequencia = ordenado[0][1];
 
-    // 3. REGRA LITERAL: O primeiro colocado tem o dobro ou mais que o segundo?
-    if (maiorQtd >= (segundaMaiorQtd * 2) && maiorQtd > 0) {
-        // Encontra QUAL número (chave) é o dono dessa quantidade maior
-        const talentoVencedor = Object.keys(contagem).find(key => contagem[key] === maiorQtd);
-        return talentoVencedor;
+    // 3. Extrair Valores Científicos
+    // Usamos sua função calcularValorLetra para obter o número cabalístico exato
+    const valorCabalistico = calcularValorLetra(letraDominante);
+    
+    // Reduzimos o valor para a base 1-9 (padrão de textos), se necessário. 
+    // Ou usamos o valor direto conforme sua regra de textos.
+    const numeroFinal = (valorCabalistico > 9) ? (valorCabalistico % 9 || 9) : valorCabalistico;
+
+    // 4. Identificar Plano e Modo (Baseado na letra base sem acento)
+    const letraBase = letraDominante.normalize("NFD")[0].toUpperCase();
+    const modo = tabelaExpressao[letraBase] || 'neutro';
+    
+    let plano = "";
+    for (let p in gruposPlanos) {
+        if (gruposPlanos[p].includes(letraBase)) {
+            plano = p;
+            break;
+        }
     }
-    
-    return null; 
+
+    return {
+        letraOriginal: letraDominante,
+        numero: numeroFinal,
+        plano: plano,
+        modo: modo,
+        frequencia: frequencia
+    };
+}
+
+
+function gerarHTMLHabilidadeEspecial(nomeCompleto) {
+    const dados = calcularHabilidadeEspecialCientifica(nomeCompleto);
+    if (!dados) return "";
+
+    // Buscamos os textos nos seus objetos
+    const textoTalento = textos.talentosEspeciais[dados.numero];
+    const textoPlano = textos.planosExpressao[dados.plano].forte; // Usamos a influência forte por ser a letra dominante
+    const textoModo = (dados.modo === "indeciso") ? textos.modosAcao.oscilantes : textos.modosAcao[dados.modo];
+
+    let html = `
+    <div class="separador-luxo">
+        <div class="caixa-interna">
+            <h2>Habilidade Especiai e Deficiência</h2>
+        </div>
+    </div>
+
+    <div class="page">
+        <div class="intro-texto">
+            <p>A análise científica do seu nome completo revelou uma dominância vibracional na letra <strong>"${dados.letraOriginal}"</strong>. Esta letra não apenas carrega um valor cabalístico específico, mas dita como suas habilidades se manifestam nos níveis prático e emocional.</p>
+        </div>
+
+        <div class="secao-resultado-cientifico">
+            <div class="bloco-talento-base">
+                ${textoTalento}
+            </div>
+
+            <div class="bloco-plano-expressao" style="border-left: 4px solid ${coresPlanos[dados.plano]}; padding-left: 20px; margin: 30px 0;">
+                <h3 style="color: ${coresPlanos[dados.plano]}">Campo de Atuação: Plano ${dados.plano.toUpperCase()}</h3>
+                ${textoPlano}
+            </div>
+
+            <div class="bloco-modo-acao" style="background: #f9f9f9; padding: 25px; border-radius: 12px; border: 1px solid #eee;">
+                <h3>Modo de Expressão: ${dados.modo.toUpperCase()}</h3>
+                ${textoModo}
+            </div>
+        </div>
+    </div>
+    `;
+
+    return aplicarFiltroTexto(html);
 }
 
 
 
+// Apague as referências antigas e use apenas esta lógica:
+function montarSecaoHabilidadeEspecial() {
+    // 1. Pega o nome completo que o usuário digitou
+    const nomeInput = document.getElementById('nome').value;
+
+    // 2. Chama a função de gerar o HTML (aquela que fizemos no passo anterior)
+    const secaoHTML = gerarHTMLHabilidadeEspecial(nomeInput);
+
+    // 3. Insere no seu container principal do mapa
+    document.getElementById('resultado-mapa').innerHTML += secaoHTML;
+}
 
         
         
@@ -3436,8 +3504,7 @@ const vTrânsitoFinal = reduzirPuro(somaTransitoFisico); // Simplificado para o 
 // --- 3. PREPARAÇÃO DE TEXTOS PARA O PAINEL ---
 let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filter(x => x).join(" · ") || "--";
 let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
-const talentoNumEspecial = calcularTalentoEspecial(nomeRaw);
-const vHabDefFinal = (talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
+
 // Executa o cálculo dos planos para obter o Perfil Nativo
 
 
