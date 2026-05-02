@@ -3379,9 +3379,9 @@ const htmlProfissao = calcularAptidaoProfissional(res);
 // --- 1. CÁLCULOS DE APOIO (RODANDO ANTES DO PAINEL) ---
 const dadosDesejoObj = calcularDesejoOculto(nomeRaw);
 const nomeParaTalento = nomeRaw.split(' ')[0];
+    const talentoNumEspecial = calcularTalentoEspecial(nomeParaTalento);
 // Exemplo de uso:
-let talentoNumEspecial = calcularTalentoEspecialNomeCompleto("Fulano de Tal Silva");
-let vHabDefFinal = (talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
+
 // --- CÁLCULO DO PLANO DOMINANTE PARA O PAINEL ---
 // --- SEU BLOCO DE CÁLCULO ATUALIZADO COM CORES ---
 const dadosPlanosParaPainel = calcularDadosPlanos(nomeRaw);
@@ -3421,7 +3421,8 @@ const vTrânsitoFinal = reduzirPuro(somaTransitoFisico); // Simplificado para o 
 // --- 3. PREPARAÇÃO DE TEXTOS PARA O PAINEL ---
 let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filter(x => x).join(" · ") || "--";
 let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
-let vHabDefFinal = (talentoNumEspecial !== undefined && talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
+let talentoNumEspecial = calcularTalentoEspecialNomeCompleto("Fulano de Tal Silva");
+let vHabDefFinal = (talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
 // Executa o cálculo dos planos para obter o Perfil Nativo
 
 
