@@ -3141,13 +3141,15 @@ function obterChaveMestra(letraOriginal) {
     let plano = "";
     for (const p in gruposPlanos) {
         if (gruposPlanos[p].includes(letraBase)) {
-            plano = p;
+            plano = p.toLowerCase().trim(); // Garante minúsculo
             break;
         }
     }
-    const temperamento = tabelaExpressao[letraBase] || "neutro";
-    return ${numeroFinal}_${plano}_${temperamento};
-}   
+    const temperamento = (tabelaExpressao[letraBase] || "neutro").toLowerCase().trim(); // Garante minúsculo
+    
+    // Retorna a chave exatamente como está no banco: "1_mental_criativo"
+    return `${numeroFinal}_${plano}_${temperamento}`;
+} 
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -3263,28 +3265,49 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
  let vTransitoCalculado = "--";   
 
 
-/ --- LOGICA DE EXECUÇÃO (Logo acima do 'const res') ---
+// --- LÓGICA DE EXECUÇÃO: EQUILÍBRIO (Início e Conclusão) ---
 
 let resultadoEquilibrioFinal = "";
 let numInicio = 0; 
 let numFim = 0;
 
 if (nomesArray && nomesArray.length > 0) {
-    const letraInicio = nomesArray[0][0]; 
-    const letraFim = nomesArray[nomesArray.length - 1].slice(-1); 
+    // 1. Identifica a primeira letra do primeiro nome e a última letra do último nome
+    const primeiroNome = nomesArray[0];
+    const ultimoNome = nomesArray[nomesArray.length - 1];
+    
+    const letraInicio = primeiroNome[0]; 
+    const letraFim = ultimoNome.slice(-1); 
 
+    // 2. Gera as chaves mestras (Ex: "1_mental_criativo")
     const chaveInic = obterChaveMestra(letraInicio);
     const chaveConc = obterChaveMestra(letraFim);
 
-    // Guardamos os números para os metadados se precisar
+    // 3. Captura os números cabalísticos (para exibir nos círculos/metadados)
     numInicio = calcularValorCabalisticoCompleto(letraInicio);
     numFim = calcularValorCabalisticoCompleto(letraFim);
 
-    const txtFinalInic = bancoEquilibrioUnificado.inicio[chaveInic] || "";
-    const txtFinalConc = bancoEquilibrioUnificado.conclusao[chaveConc] || "";
+    // 4. Busca os textos no banco unificado
+    // Usamos Templates Literals para estruturar o HTML que vai para o relatório
+    const txtInic = bancoEquilibrioUnificado.inicio[chaveInic] || `<p>Texto de início não encontrado para a chave ${chaveInic}</p>`;
+    const txtConc = bancoEquilibrioUnificado.conclusao[chaveConc] || `<p>Texto de conclusão não encontrado para a chave ${chaveConc}</p>`;
 
-    resultadoEquilibrioFinal = txtFinalInic + txtFinalConc;
+    // 5. Monta o HTML final da seção de Equilíbrio
+    resultadoEquilibrioFinal = `
+        <div class="secao-equilibrio">
+            <div class="equilibrio-inicio">
+                <div class="selo-numero">Início: ${numInicio}</div>
+                ${txtInic}
+            </div>
+            <hr class="divisor-suave">
+            <div class="equilibrio-conclusao">
+                <div class="selo-numero">Conclusão: ${numFim}</div>
+                ${txtConc}
+            </div>
+        </div>
+    `;
 }
+
 
 const res = {
     dia: dia,
