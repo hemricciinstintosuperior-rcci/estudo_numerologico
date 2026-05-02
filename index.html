@@ -3136,33 +3136,31 @@ function calcularHabilidadeEspecialCientifica(nomeCompleto) {
     if (!nomeCompleto) return null;
 
     const contagemLetras = {};
-    // Regex para identificar letras individuais, incluindo as que têm acentos/cedilha
-    const regexLetras = /[\w\u00C0-\u00FFçÇ]+/g;
-    const letrasEncontradas = nomeCompleto.toUpperCase().match(regexLetras);
-
-    if (!letrasEncontradas) return null;
-
-    // 1. Contagem de frequência absoluta (Letra por Letra)
-    for (let palavra of letrasEncontradas) {
-        for (let letra de palavra) {
+    const nomeProcessado = nomeCompleto.toUpperCase();
+    
+    // 1. Contagem de frequência absoluta de cada letra/acento
+    for (let letra of nomeProcessado) {
+        if (letra.match(/[A-Z\u00C0-\u00FFÇ]/)) {
             contagemLetras[letra] = (contagemLetras[letra] || 0) + 1;
         }
     }
 
-    // 2. Identificar a Letra Dominante (A que mais aparece)
+    // 2. Ordenar para identificar qual letra aparece MAIS vezes
     const ordenado = Object.entries(contagemLetras).sort((a, b) => b[1] - a[1]);
-    const letraDominante = ordenado[0][0];
-    const frequencia = ordenado[0][1];
+    
+    if (ordenado.length === 0) return null;
 
-    // 3. Extrair Valores Científicos
-    // Usamos sua função calcularValorLetra para obter o número cabalístico exato
+    // A letra campeã é sempre a primeira da lista
+    const letraDominante = ordenado[0][0];
+    const maiorFreq = ordenado[0][1];
+
+    // 3. Extrair os valores científicos da letra campeã
     const valorCabalistico = calcularValorLetra(letraDominante);
     
-    // Reduzimos o valor para a base 1-9 (padrão de textos), se necessário. 
-    // Ou usamos o valor direto conforme sua regra de textos.
+    // Redução para o índice do banco de textos (1-9)
     const numeroFinal = (valorCabalistico > 9) ? (valorCabalistico % 9 || 9) : valorCabalistico;
 
-    // 4. Identificar Plano e Modo (Baseado na letra base sem acento)
+    // 4. Identificar Plano e Modo (Baseado na letra base)
     const letraBase = letraDominante.normalize("NFD")[0].toUpperCase();
     const modo = tabelaExpressao[letraBase] || 'neutro';
     
@@ -3179,7 +3177,7 @@ function calcularHabilidadeEspecialCientifica(nomeCompleto) {
         numero: numeroFinal,
         plano: plano,
         modo: modo,
-        frequencia: frequencia
+        frequencia: maiorFreq
     };
 }
 
