@@ -3214,25 +3214,43 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
 
 
 // --- CÁLCULO DO EQUILÍBRIO (CORRIGIDO) ---
+// --- CÁLCULO DO EQUILÍBRIO (AJUSTADO: INÍCIO E FIM DO NOME COMPLETO) ---
 let resultadoEquilibrioFinal = "";
-// 1. Declare as variáveis fora para o 'const res' conseguir ler depois
 let numInicio = 0; 
 let numFim = 0;
 
-if (nomesArray && nomesArray[0]) {
-    const primeiroNome = nomesArray[0]; 
-    const primLetra = primeiroNome[0];
-    const ultLetra = primeiroNome.slice(-1);
+// Função auxiliar para reduzir números (Garante 1 a 9)
+function reduzirParaBase(num) {
+    if (num === 11 || num === 22) return num; // Mantém mestres se você usar
+    while (num > 9) {
+        num = num.toString().split('').reduce((acc, d) => acc + parseInt(d), 0);
+    }
+    return num;
+}
 
-    // 2. Atribua os valores (sem usar 'const' aqui dentro, use as que já declaramos)
-    numInicio = calcularNumerologia(tabela[primLetra], false);
-    numFim = calcularNumerologia(tabela[ultLetra], false);
+if (nomesArray && nomesArray.length > 0) {
+    // 1. Pega a primeira letra do primeiro nome
+    const primeiroNome = nomesArray[0];
+    const primLetra = primeiroNome[0].toUpperCase();
 
+    // 2. Pega a última letra do ÚLTIMO nome
+    const ultimoNome = nomesArray[nomesArray.length - 1];
+    const ultLetra = ultimoNome.slice(-1).toUpperCase();
+
+    // 3. Calcula e aplica a REDUÇÃO (1 a 9)
+    let valInicio = calcularNumerologia(tabela[primLetra], false);
+    let valFim = calcularNumerologia(tabela[ultLetra], false);
+
+    numInicio = reduzirParaBase(valInicio);
+    numFim = reduzirParaBase(valFim);
+
+    // 4. Busca no banco de dados
     const txtInicio = (bancoEquilibrio.inicio && bancoEquilibrio.inicio[numInicio]) ? bancoEquilibrio.inicio[numInicio] : "";
     const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
     
     resultadoEquilibrioFinal = txtInicio + txtFim;
 }
+
 
 
 const res = {
