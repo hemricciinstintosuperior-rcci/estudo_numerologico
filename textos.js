@@ -3309,36 +3309,34 @@ talentosEspeciais: {
     <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, possui um potencial magnífico para a compaixão e para a compreensão profunda das leis universais que regem a vida. Sua visão é generosa, ampla e humanitária, capaz de entender as necessidades do coletivo com uma sabedoria que transcende o ego, atuando como um farol de esperança e auxílio para muitos.</p>
     <p>A deficiência, contudo, pode levá-lo(a) a um papel de sacrifício excessivo e perigoso, onde você acaba esquecendo das suas próprias necessidades básicas para carregar a dor do mundo nas costas. Existe uma tendência a se envolver em dramas alheios de forma desproporcional, o que gera um desgaste emocional e físico que acaba impedindo a manifestação do seu potencial de forma saudável. <strong>MASCULINO-FEMININO-NEUTRO</strong>, lembre-se de que para ajudar o mundo, você precisa estar inteiro(a). Aprenda a ser generoso(a) consigo mesmo(a) na mesma medida em que é com os outros, transformando seu altruísmo em uma força sustentável e equilibrada.</p>`
 },
-    // --- CAMADA 2: O PLANO (Onde a habilidade atua) ---
-    planosExpressao: {
-        fisico: {
-            forte: `<h4>Atuação no Plano Físico (Ação e Prática)</h4>
-                    <p>A forte influência do plano físico faz com que suas atitudes e comportamento sejam muito poderosos em sua personalidade. Você tende a ter objetivos definidos e fugir de improvisos...</p>`
-        },
-        mental: {
-            forte: `<h4>Atuação no Plano Mental (Racional e Lógico)</h4>
-                    <p>Com uma forte influência do plano mental, você é muito analítico(a) e a racionalidade exerce uma forte influência em suas decisões...</p>`
-        },
-        emocional: {
-            forte: `<h4>Atuação no Plano Emocional (Sentimento e Empatia)</h4>
-                    <p>A forte influência do plano emocional faz com que suas emoções tenham grande importância em suas decisões e com que você acabe sendo controlada por elas...</p>`
-        },
-        intuitivo: {
-            forte: `<h4>Atuação no Plano Intuitivo/Sensorial (Instinto e Espiritualidade)</h4>
-                    <p>O seu plano instintivo é equilibrado, porém mais predominante em suas atitudes e decisões. O desenvolvimento interior e o sentido espiritual da vida são muito importantes...</p>`
-        }
+ planosExpressao: {
+    fisico: {
+        texto: `<h4>Campo de Atuação: Físico (Execução e Realidade)</h4>
+                <p>Sua habilidade se manifesta primordialmente através da ação concreta e da praticidade. Você possui uma natureza voltada para o mundo material, onde o saber lidar com as situações cotidianas exige agilidade, esforço físico e a capacidade de transformar ideias em resultados visíveis e tangíveis.</p>`
     },
+    mental: {
+        texto: `<h4>Campo de Atuação: Mental (Lógica e Estratégia)</h4>
+                <p>Sua habilidade opera no campo do raciocínio, onde a clareza de pensamento e a análise são suas principais ferramentas. Você lida com a vida de forma lógica, buscando compreender a estrutura dos problemas para encontrar soluções inteligentes, priorizando a organização das ideias antes de qualquer tomada de decisão.</p>`
+    },
+    emocional: {
+        texto: `<h4>Campo de Atuação: Emocional (Sentimento e Interação)</h4>
+                <p>Sua atuação é guiada pela sensibilidade e pela capacidade de sentir o ambiente e as pessoas ao seu redor. Sua habilidade cotidiana reside na empatia e na inteligência emocional, permitindo que você navegue por situações da vida através dos vínculos, dos valores humanos e da harmonia nas relações.</p>`
+    },
+    intuitivo: {
+        texto: `<h4>Campo de Atuação: Intuitivo (Instinto e Percepção)</h4>
+                <p>Sua habilidade de lidar com a vida vem de uma percepção aguçada que vai além do óbvio. Você atua através do instinto e de uma sabedoria interior silenciosa, sendo capaz de captar intenções e direções que não são explicadas pela lógica, confiando na sua conexão interna para se guiar no dia a dia.</p>`
+    }
+},
 
-    // --- CAMADA 3: O MODO (Como a habilidade se comporta) ---
-    modosAcao: {
-        criativo: `<h4>Modo de Expressão: Criativo</h4>
-                   <p>A criatividade é uma habilidade muito importante no seu desenvolvimento. Indica uma pessoa que tem ideias originais e vê sua realidade de uma forma diferenciada...</p>`,
-        oscilantes: `<h4>Modo de Expressão: Oscilante/Indeciso</h4>
-                    <p>Você é uma pessoa mais sensível, e em determinadas situações pode ter uma necessidade constante de atenção e demonstrar um comportamento excessivamente dramático...</p>`,
-        neutro: `<h4>Modo de Expressão: Neutro/Equilibrado</h4>
-                 <p>Você é uma pessoa equilibrada e imparcial, procura não se envolver em disputas e dificilmente toma partido diante de um conflito...</p>`
-   
+modosAcao: {
+    criativo: `<h4>Modo de Expressão: Criativo (Inovação e Originalidade)</h4>
+               <p>Sua forma de lidar com a vida é marcada pela inventividade e pela busca por soluções fora do comum. Você possui a habilidade de enxergar a realidade por ângulos que a maioria ignora, agindo com espontaneidade e otimismo para transformar imprevistos em oportunidades. Sua mente não se prende ao tradicionalismo, preferindo sempre criar caminhos novos e originais para resolver qualquer desafio cotidiano.</p>`,
 
+    oscilantes: `<h4>Modo de Expressão: Oscilante (Sensibilidade e Adaptação)</h4>
+                <p>Seu comportamento é guiado por uma alta sensibilidade emocional, o que faz com que suas reações variem de acordo com o ambiente e as pessoas ao redor. Essa característica indica uma habilidade para captar nuances sutis, mas pode gerar indecisão em momentos de pressão. No dia a dia, você pode alternar entre grandes picos de energia e momentos de recolhimento, agindo muitas vezes movido pelo impulso ou pela necessidade de acolhimento.</p>`,
+
+    neutro: `<h4>Modo de Expressão: Neutro (Equilíbrio e Observação)</h4>
+             <p>Você opera através da imparcialidade e da prudência, preferindo observar todos os lados de uma situação antes de se posicionar. Sua grande habilidade é manter o controle em meio ao caos, evitando conflitos desnecessários e agindo com um alto nível de confiança interna. Como alguém fácil de conviver e adaptar-se, você prioriza a harmonia e a segurança, raramente perdendo o equilíbrio ou saindo de sua zona de estabilidade.</p>`
 },
 
 desejoOculto: {
