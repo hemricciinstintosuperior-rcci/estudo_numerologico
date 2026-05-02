@@ -4653,11 +4653,14 @@ html += `
     
     
 
-// 1. CHAMA A FUNÇÃO CIENTÍFICA (A que calcula letra dominante, plano e modo)
+// 1. PRIMEIRO: Calcule os dados científicos (use o nomeCompleto do seu formulário)
 const dadosHabilidade = calcularHabilidadeEspecialCientifica(nomeCompleto);
 
-// 2. TÍTULO E SEPARADOR
+// 2. SEGUNDO: Declare o título (isso resolve o erro de ReferenceError)
 const tituloBonito = "Habilidades Especiais e Deficiências"; 
+
+// 3. TERCEIRO: Inicie a montagem do HTML
+// --- SEPARADOR LUXO ---
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -4666,13 +4669,13 @@ html += `
 </div>
 `;
 
-// 3. CONTEÚDO DA PÁGINA
+// --- CONTEÚDO DA PÁGINA ---
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
         
         <div class="intro-texto">
-            ${aplicarFiltroTexto(textos.introducoes.talentosEspeciais) || `
+            ${(textos.introducoes && textos.introducoes.talentosEspeciais) ? aplicarFiltroTexto(textos.introducoes.talentosEspeciais) : `
                 <p>A análise científica do seu nome completo permite identificar a "Letra Dominante", uma frequência vibracional que revela sua habilidade mais latente e, simultaneamente, o seu maior desafio de equilíbrio.</p>
             `}
         </div>
@@ -4684,9 +4687,9 @@ html += `
                 </div>
             </div>
 
-            <div class="bloco-cientifico-plano" style="border-left: 4px solid ${coresPlanos[dadosHabilidade.plano]}; padding-left: 20px; margin: 30px 0;">
-                <h3 style="color: ${coresPlanos[dadosHabilidade.plano]}; text-transform: uppercase; font-size: 1.2rem;">
-                    Campo de Atuação: Plano ${dadosHabilidade.plano} (Letra ${dadosHabilidade.letraOriginal})
+            <div class="bloco-cientifico-plano" style="border-left: 4px solid ${coresPlanos[dadosHabilidade.plano] || '#ccc'}; padding-left: 20px; margin: 30px 0;">
+                <h3 style="color: ${coresPlanos[dadosHabilidade.plano] || '#000'}; text-transform: uppercase; font-size: 1.2rem;">
+                    Campo de Atuação: Plano ${dadosHabilidade.plano.toUpperCase()} (Letra ${dadosHabilidade.letraOriginal})
                 </h3>
                 <div class="texto-res">
                     ${textos.planosExpressao[dadosHabilidade.plano].forte}
@@ -4695,17 +4698,15 @@ html += `
 
             <div class="bloco-cientifico-modo" style="background: rgba(0,0,0,0.03); padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
                 <h3 style="text-transform: uppercase; font-size: 1.1rem; margin-bottom: 10px;">
-                    Modo de Expressão: ${dadosHabilidade.modo}
+                    Modo de Expressão: ${dadosHabilidade.modo.toUpperCase()}
                 </h3>
                 <div class="texto-res">
                     ${dadosHabilidade.modo === 'indeciso' ? textos.modosAcao.oscilantes : textos.modosAcao[dadosHabilidade.modo]}
                 </div>
             </div>
         ` : `
-            <div class="alerta-suave" style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border: 1px dashed #ccc;">
-                <p style="font-style: italic; color: #666; margin: 0;">
-                    Não foi detectada uma dominância absoluta de uma única letra no seu nome completo. Isso indica que suas habilidades estão distribuídas de forma equilibrada entre os diferentes planos de expressão.
-                </p>
+            <div class="alerta-suave" style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+                <p>Não foi possível detectar uma dominância clara para esta análise.</p>
             </div>
         `}
     </div>
