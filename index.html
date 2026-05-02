@@ -4655,9 +4655,11 @@ html += `
     
     
 
-tituloBonito = "Habilidades Especiais e Deficiências"; 
+// 1. CHAMA A FUNÇÃO CIENTÍFICA (A que calcula letra dominante, plano e modo)
+const dadosHabilidade = calcularHabilidadeEspecialCientifica(nomeCompleto);
 
-// --- SEPARADOR LUXO ---
+// 2. TÍTULO E SEPARADOR
+const tituloBonito = "Habilidades Especiais e Deficiências"; 
 html += `
 <div class="separador-luxo">
     <div class="caixa-interna">
@@ -4666,28 +4668,45 @@ html += `
 </div>
 `;
 
-// --- CONTEÚDO PRINCIPAL ---
+// 3. CONTEÚDO DA PÁGINA
 html += `
     <div class="page">
         <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
         
         <div class="intro-texto">
             ${aplicarFiltroTexto(textos.introducoes.talentosEspeciais) || `
-                <p>Muitas vezes, o foco nas medidas tradicionais de sucesso impede a percepção de uma série de dons e talentos naturais que operam de forma silenciosa. É fundamental prestar atenção às habilidades mais sutis, pois elas são as ferramentas que garantem a sensação de competência e amparo em todas as áreas da vida.</p>
-                <p>Por outro lado, é necessário manter a atenção sobre as crenças e classificações internas, visto que o pensamento molda diretamente as ações. Algumas frequências revelam aptidões brilhantes, enquanto outras revelam qualidades que podem se tornar deficiências se não forem integradas.</p>
+                <p>A análise científica do seu nome completo permite identificar a "Letra Dominante", uma frequência vibracional que revela sua habilidade mais latente e, simultaneamente, o seu maior desafio de equilíbrio.</p>
             `}
         </div>
 
-        ${talentoNumEspecial ? `
-            <div class="resultado-talento" style="margin-top: 20px;">
+        ${dadosHabilidade ? `
+            <div class="resultado-talento" style="margin-top: 25px;">
                 <div class="evitar-corte texto-res">
-                    ${aplicarFiltroTexto(textos.talentosEspeciais[talentoNumEspecial])}
+                    ${aplicarFiltroTexto(textos.talentosEspeciais[dadosHabilidade.numero])}
+                </div>
+            </div>
+
+            <div class="bloco-cientifico-plano" style="border-left: 4px solid ${coresPlanos[dadosHabilidade.plano]}; padding-left: 20px; margin: 30px 0;">
+                <h3 style="color: ${coresPlanos[dadosHabilidade.plano]}; text-transform: uppercase; font-size: 1.2rem;">
+                    Campo de Atuação: Plano ${dadosHabilidade.plano} (Letra ${dadosHabilidade.letraOriginal})
+                </h3>
+                <div class="texto-res">
+                    ${textos.planosExpressao[dadosHabilidade.plano].forte}
+                </div>
+            </div>
+
+            <div class="bloco-cientifico-modo" style="background: rgba(0,0,0,0.03); padding: 20px; border-radius: 10px; border: 1px solid #ddd;">
+                <h3 style="text-transform: uppercase; font-size: 1.1rem; margin-bottom: 10px;">
+                    Modo de Expressão: ${dadosHabilidade.modo}
+                </h3>
+                <div class="texto-res">
+                    ${dadosHabilidade.modo === 'indeciso' ? textos.modosAcao.oscilantes : textos.modosAcao[dadosHabilidade.modo]}
                 </div>
             </div>
         ` : `
-            <div class="alerta-suave" style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px;">
+            <div class="alerta-suave" style="margin-top: 20px; padding: 15px; background: #f9f9f9; border-radius: 8px; border: 1px dashed #ccc;">
                 <p style="font-style: italic; color: #666; margin: 0;">
-                    Baseado na análise do seu <strong>nome completo</strong>, não foi detectada uma dominância numérica extrema (frequência de dobro ou triplo) que configure um Talento Especial específico. Isso indica uma distribuição de potenciais mais equilibrada e diversificada.
+                    Não foi detectada uma dominância absoluta de uma única letra no seu nome completo. Isso indica que suas habilidades estão distribuídas de forma equilibrada entre os diferentes planos de expressão.
                 </p>
             </div>
         `}
