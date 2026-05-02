@@ -3309,6 +3309,37 @@ talentosEspeciais: {
     <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, possui um potencial magnífico para a compaixão e para a compreensão profunda das leis universais que regem a vida. Sua visão é generosa, ampla e humanitária, capaz de entender as necessidades do coletivo com uma sabedoria que transcende o ego, atuando como um farol de esperança e auxílio para muitos.</p>
     <p>A deficiência, contudo, pode levá-lo(a) a um papel de sacrifício excessivo e perigoso, onde você acaba esquecendo das suas próprias necessidades básicas para carregar a dor do mundo nas costas. Existe uma tendência a se envolver em dramas alheios de forma desproporcional, o que gera um desgaste emocional e físico que acaba impedindo a manifestação do seu potencial de forma saudável. <strong>MASCULINO-FEMININO-NEUTRO</strong>, lembre-se de que para ajudar o mundo, você precisa estar inteiro(a). Aprenda a ser generoso(a) consigo mesmo(a) na mesma medida em que é com os outros, transformando seu altruísmo em uma força sustentável e equilibrada.</p>`
 },
+    // --- CAMADA 2: O PLANO (Onde a habilidade atua) ---
+    planosExpressao: {
+        fisico: {
+            forte: `<h4>Atuação no Plano Físico (Ação e Prática)</h4>
+                    <p>A forte influência do plano físico faz com que suas atitudes e comportamento sejam muito poderosos em sua personalidade. Você tende a ter objetivos definidos e fugir de improvisos...</p>`
+        },
+        mental: {
+            forte: `<h4>Atuação no Plano Mental (Racional e Lógico)</h4>
+                    <p>Com uma forte influência do plano mental, você é muito analítico(a) e a racionalidade exerce uma forte influência em suas decisões...</p>`
+        },
+        emocional: {
+            forte: `<h4>Atuação no Plano Emocional (Sentimento e Empatia)</h4>
+                    <p>A forte influência do plano emocional faz com que suas emoções tenham grande importância em suas decisões e com que você acabe sendo controlada por elas...</p>`
+        },
+        intuitivo: {
+            forte: `<h4>Atuação no Plano Intuitivo/Sensorial (Instinto e Espiritualidade)</h4>
+                    <p>O seu plano instintivo é equilibrado, porém mais predominante em suas atitudes e decisões. O desenvolvimento interior e o sentido espiritual da vida são muito importantes...</p>`
+        }
+    },
+
+    // --- CAMADA 3: O MODO (Como a habilidade se comporta) ---
+    modosAcao: {
+        criativo: `<h4>Modo de Expressão: Criativo</h4>
+                   <p>A criatividade é uma habilidade muito importante no seu desenvolvimento. Indica uma pessoa que tem ideias originais e vê sua realidade de uma forma diferenciada...</p>`,
+        oscilantes: `<h4>Modo de Expressão: Oscilante/Indeciso</h4>
+                    <p>Você é uma pessoa mais sensível, e em determinadas situações pode ter uma necessidade constante de atenção e demonstrar um comportamento excessivamente dramático...</p>`,
+        neutro: `<h4>Modo de Expressão: Neutro/Equilibrado</h4>
+                 <p>Você é uma pessoa equilibrada e imparcial, procura não se envolver em disputas e dificilmente toma partido diante de um conflito...</p>`
+   
+
+},
 
 desejoOculto: {
  
