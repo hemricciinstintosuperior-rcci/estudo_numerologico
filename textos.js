@@ -345,25 +345,25 @@ Se o número do Momento Decisivo coincide com o número de uma de suas Fraquezas
     conclusaoEvolutiva: `   
     
     
-    <h3>1. Lei do Mentalismo (O Efeito do Observador)</h3>
+    <h3>1. Mentalismo (O Efeito do Observador)</h3>
     <p>A ciência moderna, através da Física Quântica, confirma que o observador afeta a realidade observada. Na Numerologia, seu "Número de Motivação" é o centro da sua consciência que colapsa as infinitas possibilidades em resultados reais. Trabalhar a mente significa entender que seus pensamentos não são apenas abstrações, mas frequências que moldam a matéria subatômica. Ao alinhar sua intenção mental com as vibrações do seu mapa, você deixa de ser um espectador passivo e passa a ser o arquiteto da sua própria rede neural. Educar a mente sob esta lei é reconhecer que a realidade é um reflexo do campo eletromagnético gerado pelo seu cérebro, onde os números servem como o código de programação que organiza o caos em ordem e propósito.</p>
 
-    <h3>2. Lei da Correspondência (Geometria Fractal)</h3>
+    <h3>2. Correspondência (Geometria Fractal)</h3>
     <p>O princípio de que "o que está em cima é como o que está embaixo" é validado hoje pela Geometria Fractal, que prova que padrões matemáticos se repetem do macro ao microcosmo. O seu Mapa Numerológico é o seu "Fractal Pessoal", uma representação reduzida da ordem universal manifestada na sua vida. Quando você compreende a matemática do seu nome e nascimento, você entende a estrutura do seu mundo interior. Esta lei ensina que ao ajustar os padrões numéricos internos — suas crenças e comportamentos — você altera automaticamente a projeção externa da sua vida. A Numerologia fornece o mapa dessa correspondência, permitindo que você identifique onde o padrão está quebrado e como restaurar a harmonia sistêmica em todas as áreas da sua existência.</p>
 
-    <h3>3. Lei da Vibração (Teoria das Cordas)</h3>
+    <h3>3. Vibração (Teoria das Cordas)</h3>
     <p>A física contemporânea propõe, através da Teoria das Cordas, que tudo no universo é composto por minúsculos filamentos de energia vibrando em frequências específicas. Na Numerologia Cabalística, cada número representa uma nota musical nessa sinfonia cósmica. Sua "Assinatura Vibracional" é o que determina o que você atrai ou repele. Aprender a trabalhar com seus números é aprender a sintonizar sua própria frequência para ressoar com a abundância e o sucesso, em vez da escassez. A educação vibracional consiste em elevar sua "oitava" pessoal através do autoconhecimento, utilizando os números como diapasões que ajustam sua energia vital para a frequência exata das conquistas que o seu destino tem a oferecer.</p>
 
-    <h3>4. Lei da Polaridade (Dualidade e Escalas de Frequência)</h3>
+    <h3>4. Polaridade (Dualidade e Escalas de Frequência)</h3>
     <p>Tudo no universo possui polos opostos, e a ciência explica isso através do eletromagnetismo e da dualidade onda-partícula. Na Numerologia, cada vibração numérica possui um espectro que vai da "sombra" à "luz". Esta lei é uma ferramenta de transmutação: se você vive o aspecto negativo de um número de desafio, você tem a capacidade intrínseca de deslizar para o seu polo positivo, pois ambos são a mesma energia em graus diferentes. O estudo numérico ensina você a não lutar contra a polaridade, mas a equilibrar as forças. Ao identificar onde a energia está polarizada negativamente em sua vida, você ganha a consciência técnica para inverter a polaridade e transformar obstáculos em potencial puro de crescimento.</p>
 
-    <h3>5. Lei do Ritmo (Ciclos Circadianos e Homeostase)</h3>
+    <h3>5. Ritmo (Ciclos Circadianos e Homeostase)</h3>
     <p>A vida é regida por ciclos de fluxo e refluxo, um conceito estudado pela Cronobiologia e pela Termodinâmica. A Numerologia mapeia esses ritmos através dos seus "Anos Pessoais" e "Ciclos de Vida", permitindo que você saiba quando a maré está subindo ou descendo. Em vez de gastar energia lutando contra um ciclo de retração, você aprende a "Lei da Neutralização", usando os períodos de baixa para planejamento e os de alta para expansão máxima. Educar-se no ritmo significa atingir a homeostase emocional — o equilíbrio dinâmico. Os números revelam o tempo de maturação de cada projeto, garantindo que você esteja sempre em sincronia com o relógio biológico e universal, evitando o desgaste desnecessário e o estresse.</p>
 
-    <h3>6. Lei de Causa e Efeito (Causalidade e Teoria do Caos)</h3>
+    <h3>6. Causa e Efeito (Causalidade e Teoria do Caos)</h3>
     <p>A ciência afirma que para cada ação existe uma reação proporcional; na Numerologia, isso é visto através das Lições e Déficits. Não há sorte ou azar, apenas causas (pensamentos e ações) que geraram efeitos (sua realidade atual). O "Efeito Borboleta" da Teoria do Caos mostra que pequenas mudanças hoje podem alterar drasticamente o seu futuro. Usar a Numerologia como ferramenta de causa e efeito permite que você identifique as "causas numéricas" que estão gerando resultados indesejados e as substitua por novas frequências. Ao agir com consciência sobre os números que regem suas escolhas, você assume o controle do leme da causalidade, plantando hoje as variáveis matemáticas que resultarão em um destino próspero e equilibrado.</p>
 
-    <h3>7. Lei de Gênero (Sintropia e Dinâmica de Sistemas)</h3>
+    <h3>7. Gênero (Sintropia e Dinâmica de Sistemas)</h3>
     <p>Tudo na criação exige a união dos princípios ativo (masculino) e receptivo (feminino), uma dinâmica observada na física como a interação entre carga e potencial. Na Numerologia, isso se reflete no equilíbrio entre números ímpares (ação) e pares (acolhimento). A criação de qualquer resultado real na sua vida depende da harmonia entre a sua vontade de realizar e a sua sabedoria em gestar. Esta lei ensina que o excesso de um princípio sem o outro gera esterilidade nos projetos. Através do seu mapa, você aprende a equilibrar essas forças internas, integrando a lógica analítica com a intuição profunda. É a união sagrada da semente numérica com o solo da consciência que permite a manifestação plena de todos os seus objetivos e sonhos.</p>`
 },
 
