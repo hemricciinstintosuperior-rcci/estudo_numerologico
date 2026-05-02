@@ -3541,11 +3541,35 @@ talento: {
 
     33: `<h3>Orientação Compassiva e Maestria do Amor Universal - Talento 33</h3>
     <p>O seu talento oculto, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a expressão máxima da entrega e do sacrifício em prol da evolução alheia. Existe em você um dom quase magnético para o aconselhamento e para a proteção dos mais fracos, agindo como um(a) "Mestre(a) da Cura" através da palavra e do exemplo. Você possui a habilidade rara de harmonizar conflitos de alta complexidade utilizando uma compaixão que não julga, mas transforma profundamente quem recebe seu cuidado.</p>
-    <p>Essa energia indica que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é um(a) guia para o coração da humanidade. Seu sucesso está intrinsecamente ligado ao serviço altruísta e à responsabilidade de cuidar do equilíbrio ético de sua comunidade ou área de atuação. Use essa habilidade para educar, curar ou liderar através do amor incondicional. O mundo encontra conforto e direção sob sua tutela, tornando você uma referência de integridade e proteção espiritual.</p>`
-  
+    <p>Essa energia indica que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é um(a) guia para o coração da humanidade. Seu sucesso está intrinsecamente ligado ao serviço altruísta e à responsabilidade de cuidar do equilíbrio ético de sua comunidade ou área de atuação. Use essa habilidade para educar, curar ou liderar através do amor incondicional. O mundo encontra conforto e direção sob sua tutela, tornando você uma referência de integridade e proteção espiritual.</p>`,
+
+ 44: `<h3>Estabilidade Absoluta e Eficiência em Larga Escala - Talento 44</h3>
+    <p>O seu talento oculto, <strong>MASCULINO-FEMININO-NEUTRO</strong>, reside na capacidade de manifestar estabilidade material em níveis extraordinários. Existe em você uma disciplina inabalável para construir impérios ou gerir infraestruturas complexas com uma resistência que poucos possuem. Você tem o dom de aterrar as visões mais elevadas, transformando-as em resultados práticos e tangíveis que oferecem segurança real e duradoura para centenas ou milhares de pessoas.</p>
+    <p>Este dom indica que você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o(a) construtor(a) do mundo físico por excelência. Seu sucesso flui na gestão de grandes recursos e na implementação de métodos rigorosos que garantem a ordem absoluta. Use essa força para consolidar projetos de escala global; sua capacidade de trabalho e sua autoridade prática são as bases sobre as quais grandes instituições são erguidas.</p>`,
+
+    55: `<h3>Liberdade Progressista e Liderança em Transformação - Talento 55</h3>
+    <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, possui o talento raro de canalizar mudanças revolucionárias com uma velocidade impressionante. Essa habilidade se manifesta na quebra de padrões obsoletos e na promoção de uma liberdade que impulsiona o progresso coletivo. Seu talento reside na comunicação direta e na coragem de explorar territórios desconhecidos, agindo como um farol de inovação que guia a sociedade para fora da estagnação.</p>
+    <p>Essa energia indica que você é um(a) catalisador(a) de expansão, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Enquanto outros temem a instabilidade, você a utiliza como combustível para o crescimento. O seu caminho para a prosperidade está em setores de tecnologia, viagens, comunicação ou qualquer área que exija uma mente sem fronteiras e uma capacidade de adaptação que beira o impossível.</p>`,
+
+    66: `<h3>Responsabilidade Universal e Harmonização Global - Talento 66</h3>
+    <p>O seu talento oculto, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a expressão máxima do cuidado e da justiça aplicados à coletividade. Existe em você um dom magnético para restaurar a harmonia em sistemas sociais desequilibrados, agindo com uma integridade ética que serve de exemplo para todos. Você possui a habilidade de nutrir ideais de beleza e ordem em larga escala, tornando-se o(a) guardião(ã) do bem-estar social.</p>
+    <p>Sua força reside no equilíbrio entre o dever e a compaixão, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Seu sucesso está ligado a projetos que visam a cura de comunidades, a educação em massa ou o design de soluções que tragam paz aos lares do mundo todo. Use seu senso estético e ético para elevar os padrões da humanidade; você nasceu para ser o pilar de uma nova consciência familiar e comunitária.</p>`,
+
+    77: `<h3>Introspecção Reveladora e Maestria da Verdade - Talento 77</h3>
+    <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, possui uma mente analítica de vibração superior, capaz de decifrar os mistérios mais profundos da existência e da tecnologia. Este talento se traduz em uma percepção aguçada que detecta padrões invisíveis e verdades universais com uma clareza absoluta. Sua habilidade para a especialização intelectual e espiritual faz de você uma autoridade em campos que exigem profunda introspecção e rigor científico.</p>
+    <p>Este dom revela uma conexão direta com a sabedoria ancestral e tecnológica, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Seu sucesso acontece no silêncio da pesquisa e na entrega de diagnósticos infalíveis. Use sua mente de elite para desvendar o que está oculto; o mundo recorre a você quando precisa de respostas que a lógica comum não consegue alcançar, tornando sua voz um sinônimo de verdade absoluta.</p>`,
+
+    88: `<h3>Autoridade Executiva e Maestria Material - Talento 88</h3>
+    <p>O seu talento oculto, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a capacidade colossal de gerir o poder e o capital para a criação de um legado imperecível. Existe em você uma visão estratégica de "olho de águia" que antecipa crises e identifica o potencial máximo de lucros e resultados em sistemas globais. Você possui a força necessária para liderar corporações ou movimentos financeiros com uma mão firme e uma justiça impecável.</p>
+    <p>Essa energia indica que você nasceu para o topo das estruturas de poder, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Seu sucesso está na capacidade de multiplicar recursos de forma ética e eficiente. Use sua disciplina executiva para transformar visões ambiciosas em realidades prósperas; sua habilidade em equilibrar o mundo espiritual com a abundância material é o seu maior diferencial competitivo.</p>`,
+
+    99: `<h3>Consciência Crística e Encerramento de Eras - Talento 99</h3>
+    <p>Você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, possui o talento extraordinário de servir como um canal de amor incondicional e sabedoria universal para toda a humanidade. Essa habilidade se manifesta na facilidade de concluir grandes ciclos cármicos e sociais, preparando o terreno para o novo. O seu talento reside no desapego total e na capacidade de inspirar multidões através do exemplo de dedicação altruísta e compreensão global.</p>
+    <p>Sua visão ultrapassa fronteiras e línguas, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você é o(a) guia que ensina o mundo a se curar através da generosidade e da visão holística. Seu sucesso está ligado a causas de impacto planetário, artes que elevam o espírito ou lideranças humanitárias. Onde houver necessidade de transformação profunda e redenção, sua presença será a luz que orienta o caminho final.</p>`
+ 
+
     
     },
-
 
 essencia: {
     1: `<h3>Reação de Liderança e Controle - Essência 1</h3>
