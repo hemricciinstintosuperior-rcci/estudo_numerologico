@@ -3101,41 +3101,53 @@ function gerarAbaNomeCasado(nomeCasado, expOriginal, negativasOriginal) {
 
 
 
-// Sua função de valor de letra, ajustada para garantir a redução 1-9 no final
+
+
+
 function calcularValorCabalisticoCompleto(letra) {
     if (!letra) return 0;
-    
     const norm = letra.normalize("NFD");
     const base = norm[0].toUpperCase();
     const valorBase = tabela[base] || 0;
     if (!valorBase) return 0;
 
     let soma = 0, mult = 1;
-
     for (let i = 1; i < norm.length; i++) {
         const c = norm[i];
-        if (c === "\u0301") soma += 2;          // Agudo (´)
-        else if (c === "\u0302") soma += 7;     // Circunflexo (^)
-        else if (c === "\u0303") soma += 3;     // Til (~)
-        else if (c === "\u0327") soma += 6;     // Cedilha (¸)
-        else if (c === "\u030a") soma += 7;     // Círculo (°)
-        else if (c === "\u0300" || c === "\u0308") mult *= 2; // Grave/Trema
+        if (c === "\u0301") soma += 2;          
+        else if (c === "\u0302") soma += 7;     
+        else if (c === "\u0303") soma += 3;     
+        else if (c === "\u0327") soma += 6;     
+        else if (c === "\u030a") soma += 7;     
+        else if (c === "\u0300" || c === "\u0308") mult *= 2; 
     }
-
-    if (letra.includes("'")) soma += 2; // Apóstrofo
+    if (letra.includes("'")) soma += 2;
 
     let resultadoBruto = (valorBase + soma) * mult;
 
-    // Redução Numerológica (Garante 1 a 9, mantendo 11 e 22 se necessário)
     function reduzir(n) {
         if (n <= 9 || n === 11 || n === 22) return n;
         let s = n.toString().split('').reduce((acc, d) => acc + parseInt(d), 0);
         return reduzir(s);
     }
-
     return reduzir(resultadoBruto);
 }
-        
+
+function obterChaveMestra(letraOriginal) {
+    if (!letraOriginal) return "";
+    const numeroFinal = calcularValorCabalisticoCompleto(letraOriginal);
+    const letraBase = letraOriginal.normalize("NFD")[0].toUpperCase();
+    
+    let plano = "";
+    for (const p in gruposPlanos) {
+        if (gruposPlanos[p].includes(letraBase)) {
+            plano = p;
+            break;
+        }
+    }
+    const temperamento = tabelaExpressao[letraBase] || "neutro";
+    return ${numeroFinal}_${plano}_${temperamento};
+}   
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -3251,31 +3263,28 @@ let resultadoAnoPessoal = reduzir(diaR + mesR + reduzir(anoReferencia));
  let vTransitoCalculado = "--";   
 
 
-// --- CÁLCULO DO EQUILÍBRIO (COM SUA TABELA DE ACENTOS) ---
+/ --- LOGICA DE EXECUÇÃO (Logo acima do 'const res') ---
+
 let resultadoEquilibrioFinal = "";
 let numInicio = 0; 
 let numFim = 0;
 
-    
 if (nomesArray && nomesArray.length > 0) {
-    // Início: Primeira letra do primeiro nome
-    const primLetra = nomesArray[0][0];
-    
-    // Conclusão: Última letra do último nome
-    const ultimoNome = nomesArray[nomesArray.length - 1];
-    const ultLetra = ultimoNome.slice(-1);
+    const letraInicio = nomesArray[0][0]; 
+    const letraFim = nomesArray[nomesArray.length - 1].slice(-1); 
 
-    numInicio = calcularValorCabalisticoCompleto(primLetra);
-    numFim = calcularValorCabalisticoCompleto(ultLetra);
+    const chaveInic = obterChaveMestra(letraInicio);
+    const chaveConc = obterChaveMestra(letraFim);
 
-    // Busca no banco (bancoEquilibrio.inicio e bancoEquilibrio.conclusao)
-    const txtInicio = (bancoEquilibrio.inicio && bancoEquilibrio.inicio[numInicio]) ? bancoEquilibrio.inicio[numInicio] : "";
-    const txtFim = (bancoEquilibrio.conclusao && bancoEquilibrio.conclusao[numFim]) ? bancoEquilibrio.conclusao[numFim] : "";
-    
-    resultadoEquilibrioFinal = txtInicio + txtFim;
+    // Guardamos os números para os metadados se precisar
+    numInicio = calcularValorCabalisticoCompleto(letraInicio);
+    numFim = calcularValorCabalisticoCompleto(letraFim);
+
+    const txtFinalInic = bancoEquilibrioUnificado.inicio[chaveInic] || "";
+    const txtFinalConc = bancoEquilibrioUnificado.conclusao[chaveConc] || "";
+
+    resultadoEquilibrioFinal = txtFinalInic + txtFinalConc;
 }
-
-
 
 const res = {
     dia: dia,
@@ -3290,7 +3299,7 @@ const res = {
     Relacionamento: calcularNumerologia(propCalculado, false), // Relacionamento SEMPRE reduz (1-9)
     essencia: calcularNumerologia(sE, true), // Essência aceita Mestre
     talento: calcularNumerologia(mot + exp, true), // Talento Oculto aceita Mestre
- equilibrio: { inicio: numInicio, fim: numFim }, 
+   equilibrio: { inicio: numInicio, fim: numFim, texto: resultadoEquilibrioFinal },
     
 
     deficiencias: faltantes.map(d => reduzirPuro(d)), 
