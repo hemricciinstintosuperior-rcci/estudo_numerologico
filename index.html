@@ -3429,7 +3429,7 @@ const vTrânsitoFinal = reduzirPuro(somaTransitoFisico); // Simplificado para o 
 // --- 3. PREPARAÇÃO DE TEXTOS PARA O PAINEL ---
 let vDeficitFinal = [res.deficitRecorrente, ...(res.deficitsOcultos || [])].filter(x => x).join(" · ") || "--";
 let vDesejoFinal = (dadosDesejoObj && dadosDesejoObj.numero) ? dadosDesejoObj.numero : "--";
-const talentoNumEspecial = calcularTalentoEspecial(campoNomeCompletoDoFormulario);
+const talentoNumEspecial = calcularTalentoEspecial(Nome);
 const vHabDefFinal = (talentoNumEspecial !== null) ? talentoNumEspecial : "Não existe";
 // Executa o cálculo dos planos para obter o Perfil Nativo
 
