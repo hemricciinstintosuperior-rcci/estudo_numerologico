@@ -885,6 +885,67 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
     }
 }
 
+
+
+
+
+
+
+
+
+
+/* AJUSTE PARA TELA (CELULAR) - Não afeta o PDF */
+@media screen and (max-width: 768px) {
+    .relatorio-premium {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    .page {
+        width: 100% !important;
+        padding: 15px !important;
+        margin: 0 !important;
+    }
+
+    /* Ajuste das Abas para não saírem da tela */
+    .tabs-planos {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Transforma em duas colunas */
+        gap: 8px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .tab-btn {
+        width: 100%;
+        font-size: 11px !important; /* Diminui a letra nas abas */
+        padding: 8px 5px;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .piramide {
+        transform: scale(0.85); /* Diminui a pirâmide levemente para caber */
+        transform-origin: center top;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    .num {
+        width: 14px; /* Diminui levemente o quadrado do número */
+        height: 14px;
+        font-size: 14px;
+    }
+}
+
+    
+
     
     </style>
 
