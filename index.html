@@ -245,7 +245,7 @@
     box-sizing: border-box;
 }    
         /* Container de Entrada */
-        .container { width: 100%; max-width: 800px; background: #111; padding: 25px; border-radius: 20px; border: 1px solid #A65F00; margin-top: 30px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); margin: 0 auto 30px auto;}
+        .container { width: 100%;  max-width: 800px; background: #111; padding: 25px; border-radius: 20px; border: 1px solid #A65F00; margin-top: 30px; box-shadow: 0 0 40px rgba(212, 175, 55, 0.3); margin: 0 auto 30px auto; }
         h1 { color: var(--gold); text-align: center; text-transform: uppercase; letter-spacing: 3px; }
         input { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: #333; background: #fff; color: #000; font-size: 15px; box-sizing: border-box; }
         .btn-gerar { width: 100%; padding: 20px; background: #A65F00; color: #000; border: none; border-radius: 10px; font-weight: bold; font-size: 20px; cursor: pointer; margin-top: 15px; text-transform: uppercase; }
@@ -576,8 +576,8 @@
 
         /* PADRÃO PARA TODAS AS INTRODUÇÕES */
     .intro-texto, .intro-secao {
-    font-size: clamp(16px, 4.5vw, 22px) !important;
-    line-height: 1.4 !important;
+        font-size: 18px !important; /* Tamanho fixo para todas */
+        line-height: 1 !important;
         color: #111 !important;
         text-align: justify !important;
         margin-bottom: 10px !important;
@@ -588,8 +588,8 @@
 
     /* PADRÃO PARA TODOS OS RESULTADOS (CONTEÚDO BRUTO) */
     .texto-res {
-    font-size: clamp(15px, 4vw, 18px) !important;
-    line-height: 1.5 !important;
+        font-size: 18px !important; /* Um pouquinho maior que a intro para dar peso */
+        line-height: 1 !important;
         color: #000 !important;
         text-align: justify !important;
         margin-bottom: 0px !important;
@@ -611,7 +611,7 @@
 
 h3 {
      
-     font-size: clamp(18px, 5vw, 24px) !important;
+    font-size: 22px !important; 
     color: #d97a1e !important;
 
     -webkit-text-stroke: 0.5px #d97a1e;
@@ -801,7 +801,6 @@ input:focus {
 :focus { outline: none !important; }
 a, img, audio { border: none !important; outline: none !important; text-decoration: none !important; }
 
-
 .video-introducao {
     width: 100%;
     max-width: 800px; /* Mesma largura do seu container para alinhar */
@@ -831,7 +830,6 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
 }
 
 
-
 @media print {
     /* Esconde o vídeo e o container de entrada para não atrapalhar o PDF */
     .video-wrapper, 
@@ -847,6 +845,7 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
         overflow: visible !important;
     }
 }
+
 
 .btn-video-toggle {
     width: 100%;
@@ -886,62 +885,9 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
     }
 }
 
-
-
-/* AJUSTE PARA TELA (CELULAR) - Não afeta o PDF */
-@media screen and (max-width: 768px) {
-    .relatorio-premium {
-        width: 100% !important;
-        max-width: 100vw !important;
-        padding: 10px !important;
-        margin: 0 !important;
-        overflow-x: hidden !important;
-    }
-
-    .page {
-        width: 100% !important;
-        padding: 15px !important;
-        margin: 0 !important;
-    }
-
-    /* Ajuste das Abas para não saírem da tela */
-    .tabs-planos {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Transforma em duas colunas */
-        gap: 8px;
-        width: 100%;
-        padding: 5px;
-    }
-
-    .tab-btn {
-        width: 100%;
-        font-size: 11px !important; /* Diminui a letra nas abas */
-        padding: 8px 5px;
-        text-align: center;
-    }
-}
-
-
-
-@media screen and (max-width: 480px) {
-    .piramide {
-        transform: scale(0.85); /* Diminui a pirâmide levemente para caber */
-        transform-origin: center top;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-    }
-    
-    .num {
-        width: 14px; /* Diminui levemente o quadrado do número */
-        height: 14px;
-        font-size: 14px;
-    }
-}
-    
-
     
     </style>
+
 
    
 </head>
