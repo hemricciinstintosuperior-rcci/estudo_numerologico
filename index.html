@@ -576,8 +576,8 @@
 
         /* PADRÃO PARA TODAS AS INTRODUÇÕES */
     .intro-texto, .intro-secao {
-        font-size: 18px !important; /* Tamanho fixo para todas */
-        line-height: 1 !important;
+    font-size: clamp(16px, 4.5vw, 22px) !important;
+    line-height: 1.4 !important;
         color: #111 !important;
         text-align: justify !important;
         margin-bottom: 10px !important;
@@ -588,8 +588,8 @@
 
     /* PADRÃO PARA TODOS OS RESULTADOS (CONTEÚDO BRUTO) */
     .texto-res {
-        font-size: 18px !important; /* Um pouquinho maior que a intro para dar peso */
-        line-height: 1 !important;
+    font-size: clamp(15px, 4vw, 18px) !important;
+    line-height: 1.5 !important;
         color: #000 !important;
         text-align: justify !important;
         margin-bottom: 0px !important;
@@ -611,7 +611,7 @@
 
 h3 {
      
-    font-size: 22px !important; 
+     font-size: clamp(18px, 5vw, 24px) !important;
     color: #d97a1e !important;
 
     -webkit-text-stroke: 0.5px #d97a1e;
@@ -885,6 +885,60 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
         display: none !important;
     }
 }
+
+
+
+/* AJUSTE PARA TELA (CELULAR) - Não afeta o PDF */
+@media screen and (max-width: 768px) {
+    .relatorio-premium {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+    }
+
+    .page {
+        width: 100% !important;
+        padding: 15px !important;
+        margin: 0 !important;
+    }
+
+    /* Ajuste das Abas para não saírem da tela */
+    .tabs-planos {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Transforma em duas colunas */
+        gap: 8px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    .tab-btn {
+        width: 100%;
+        font-size: 11px !important; /* Diminui a letra nas abas */
+        padding: 8px 5px;
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .piramide {
+        transform: scale(0.85); /* Diminui a pirâmide levemente para caber */
+        transform-origin: center top;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    .num {
+        width: 14px; /* Diminui levemente o quadrado do número */
+        height: 14px;
+        font-size: 14px;
+    }
+}
+    
 
     
     </style>
