@@ -948,7 +948,7 @@ function valorLetraMatriz(l){
     let v = mapaMatriz[n[0].toUpperCase()] ?? 0;
     let s = 0;
 
-    // Lógica de acentos (Soma)
+    // 1. Lógica de acentos (Soma)
     if (n.includes("\u0301")) s = 2;          // Agudo
     else if (n.includes("\u0302")) s = 7;     // Circunflexo
     else if (n.includes("\u0303")) s = 3;     // Til
@@ -956,13 +956,12 @@ function valorLetraMatriz(l){
     else if (n.includes("\u030a")) s = 7;     // Grau (°)
     else if (l.includes("'")) s = 2;          // Apóstrofo
 
-    // Lógica de multiplicadores (Grave ou Trema)
-    return (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
+    // 2. Cálculo do valor bruto com multiplicadores (Grave ou Trema)
+    let bruto = (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
 
-    // A CORREÇÃO ESTÁ AQUI: 
-    // Reduzimos o resultado final para um único dígito (1-9)
-    return reduzir(resultado); 
-    
+    // 3. A CORREÇÃO: Reduzir antes de retornar
+    // Isso garante que a base da pirâmide tenha apenas dígitos de 1 a 9
+    return reduzir(bruto);
 }
         
 function mascaraData(campo) {
