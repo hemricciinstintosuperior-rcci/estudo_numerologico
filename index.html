@@ -846,6 +846,28 @@ a, img, audio { border: none !important; outline: none !important; text-decorati
     }
 }
 
+
+
+.triangulo-container {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 0.8;
+    margin: 0 4px;
+    font-weight: bold;
+    color: #2d5a27; /* Verde da pirâmide */
+    font-size: 13px;
+}
+
+.topo-tri {
+    letter-spacing: 1px;
+}
+
+.base-tri {
+    margin-top: -1px;
+}
+    
     
     </style>
 
@@ -3204,7 +3226,15 @@ function montarSecaoHabilidadeEspecial() {
     document.getElementById('resultado-mapa').innerHTML += secaoHTML;
 }
 
-        
+ function formatarTrianguloNove(texto) {
+    // Procura por 99/9 no texto e substitui pelo HTML do triângulo
+    return texto.replace(/99\/9/g, `
+        <span class="triangulo-container">
+            <span class="topo-tri">9 9</span>
+            <span class="base-tri">9</span>
+        </span>
+    `);
+}       
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
@@ -3822,7 +3852,7 @@ html += `
         
         <p style="margin-top: 15px;"><b>As Sequências Negativas:</b> Diferente do que muitos pensam, as sequências repetitivas (como 111, 444, 777) não foram inventadas; elas foram identificadas por pesquisadores contemporâneos que notaram que a sobrecarga de uma mesma frequência em pontos críticos da pirâmide gera o que a física chama de "interferência destrutiva". São bloqueios no fluxo natural que, se não identificados, podem causar repetições de padrões de erro (autossabotagem).</p>
         
-        <p style="margin-top: 15px;">Já as <b>Sequências Especiais e Financeiras (como o 999)</b> representam o "ajuste de fase" positivo. O número 999 na base da pirâmide é o símbolo da colheita e da materialização total. Estudiosos da numerologia moderna mapearam que certas combinações numéricas agem como catalisadores de prosperidade, abrindo portais de fluxo onde antes havia estagnação. Este é o conhecimento técnico por trás de cada alerta de bloqueio e cada símbolo de luxo que você encontra em seu relatório.</p>
+        <p style="margin-top: 15px;">Já as <b>Sequências Especiais e Financeiras (como o 99/9)</b> representam o "ajuste de fase" positivo. O número 99/9 na  pirâmide é o símbolo da colheita e da materialização total. Estudiosos da numerologia moderna mapearam que certas combinações numéricas agem como catalisadores de prosperidade, abrindo portais de fluxo onde antes havia estagnação. Este é o conhecimento técnico por trás de cada alerta de bloqueio e cada símbolo de luxo que você encontra em seu relatório.</p>
     </div>
 
     <div style="margin-top: 50px; text-align: center; color: #827108; font-family: 'Cinzel', serif; font-size: 14px;">
