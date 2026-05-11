@@ -958,6 +958,11 @@ function valorLetraMatriz(l){
 
     // Lógica de multiplicadores (Grave ou Trema)
     return (v + s) * (n.includes("\u0300") || n.includes("\u0308") ? 2 : 1);
+
+    // A CORREÇÃO ESTÁ AQUI: 
+    // Reduzimos o resultado final para um único dígito (1-9)
+    return reduzir(resultado); 
+    
 }
         
 function mascaraData(campo) {
