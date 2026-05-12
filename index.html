@@ -2924,10 +2924,17 @@ function obterLegendaVibração(diaNascimento) {
     return legendas[radical] || "";
 }
 
- function renderAudioButton(url, tema) {
+function renderAudioButton(url, tema) {
     return `
-    <div style="margin-top: 30px; display: flex; justify-content: center; width: 100%;">
-        <a href="${url}" target="_blank" style="text-decoration: none;">
+    <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%;">
+        
+        <!-- Player de áudio com bloqueio de download nos 3 pontinhos e no botão direito -->
+        <audio controls controlsList="nodownload" oncontextmenu="return false;" style="height: 35px; filter: sepia(100%) saturate(200%) brightness(100%) hue-rotate(330deg);">
+            <source src="${url}" type="audio/mpeg">
+        </audio>
+
+        <!-- Botão visual sem link de download direto -->
+        <div style="text-decoration: none; cursor: default;">
             <div style="
                 background: rgba(217, 122, 30, 0.1); 
                 border: 1px solid #d97a1e; 
@@ -2941,12 +2948,12 @@ function obterLegendaVibração(diaNascimento) {
                 <div style="width: 30px; height: 30px; background: #d97a1e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 14px;">▶</div>
                 <div style="text-align: left;">
                     <span style="display: block; font-size: 9px; color: #d97a1e; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Experiência Sonora</span>
-                    <span style="display: block; font-size: 14px; color: #fff; font-family: 'Cinzel', serif;">Ouvir Frequência: ${tema}</span>
+                    <span style="display: block; font-size: 14px; color: #fff; font-family: 'Cinzel', serif;">Frequência: ${tema}</span>
                 </div>
             </div>
-        </a>
+        </div>
     </div>`;
-}       
+}
 
 
 
