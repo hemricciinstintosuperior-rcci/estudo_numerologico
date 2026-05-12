@@ -2948,40 +2948,24 @@ function obterLegendaVibração(diaNascimento) {
 }
 
 function renderAudioButton(url, tema) {
-    // Geramos um ID único para não dar conflito se tiver mais de um áudio
-    const audioId = "audio_" + Math.random().toString(36).substr(2, 9);
-
     return `
-    <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%;">
-        
-        <!-- O player real fica invisível (display:none) -->
-        <audio id="${audioId}" src="${url}" controlsList="nodownload" oncontextmenu="return false;" style="display: none;"></audio>
+    <style>
+        /* Esse código remove o botão de download em navegadores Chrome/Edge */
+        audio::-webkit-media-controls-enclosure {
+            overflow: hidden !important;
+        }
+        audio::-webkit-media-controls-panel {
+            width: calc(100% + 30px) !important; /* Joga os 3 pontinhos para fora da área visível */
+        }
+    </style>
 
-        <!-- Este é o seu botão personalizado que controla o áudio -->
-        <div onclick="const a = document.getElementById('${audioId}'); a.paused ? a.play() : a.pause();" 
-             style="cursor: pointer; transition: transform 0.2s;" 
-             onmouseover="this.style.transform='scale(1.05)'" 
-             onmouseout="this.style.transform='scale(1)'">
-            
-            <div style="
-                background: rgba(0, 0, 0, 0.7); 
-                border: 1px solid #d97a1e; 
-                padding: 12px 25px; 
-                border-radius: 50px; 
-                display: flex; 
-                align-items: center; 
-                gap: 15px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            ">
-                <div style="width: 35px; height: 35px; background: #d97a1e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 16px;">▶</div>
-                <div style="text-align: left;">
-                    <span style="display: block; font-size: 9px; color: #d97a1e; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Ouvir Frequência</span>
-                    <span style="display: block; font-size: 14px; color: #fff; font-family: 'Cinzel', serif;">${tema}</span>
-                </div>
-            </div>
-        </div>
+    <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%;">
+        <span style="font-size: 10px; color: #d97a1e; text-transform: uppercase; letter-spacing: 2px;">${tema}</span>
         
-        <span style="font-size: 10px; color: #666;">(Player seguro: download bloqueado)</span>
+        <audio controls controlsList="nodownload" oncontextmenu="return false;" 
+            style="height: 35px; width: 250px; filter: sepia(100%) saturate(200%) brightness(100%) hue-rotate(330deg);">
+            <source src="${url}" type="audio/mpeg">
+        </audio>
     </div>`;
 }
 
