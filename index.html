@@ -762,6 +762,29 @@ input:focus {
 :focus { outline: none !important; }
 a, img, audio { border: none !important; outline: none !important; text-decoration: none !important; }
 
+/* Adicione isso ao seu bloco de CSS atual */
+
+/* 1. Remove o botão de download no Chrome/Edge/Opera */
+audio::-webkit-media-controls-download-button {
+    display: none !important;
+}
+
+/* 2. Remove o menu de opções (os três pontinhos) */
+audio::-webkit-media-controls-enclosure {
+    overflow: hidden !important;
+}
+
+audio::-webkit-media-controls-panel {
+    width: calc(100% + 30px) !important; /* Empurra os três pontinhos para fora da tela */
+}
+
+/* 3. Garante que o usuário não consiga clicar com o botão direito para salvar */
+audio {
+    pointer-events: auto;
+    -webkit-touch-callout: none;
+}
+    
+
 .video-introducao {
     width: 100%;
     max-width: 800px; /* Mesma largura do seu container para alinhar */
