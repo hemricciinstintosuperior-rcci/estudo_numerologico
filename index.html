@@ -2925,33 +2925,40 @@ function obterLegendaVibração(diaNascimento) {
 }
 
 function renderAudioButton(url, tema) {
+    // Geramos um ID único para não dar conflito se tiver mais de um áudio
+    const audioId = "audio_" + Math.random().toString(36).substr(2, 9);
+
     return `
     <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 15px; width: 100%;">
         
-        <!-- Player de áudio com bloqueio de download nos 3 pontinhos e no botão direito -->
-        <audio controls controlsList="nodownload" oncontextmenu="return false;" style="height: 35px; filter: sepia(100%) saturate(200%) brightness(100%) hue-rotate(330deg);">
-            <source src="${url}" type="audio/mpeg">
-        </audio>
+        <!-- O player real fica invisível (display:none) -->
+        <audio id="${audioId}" src="${url}" controlsList="nodownload" oncontextmenu="return false;" style="display: none;"></audio>
 
-        <!-- Botão visual sem link de download direto -->
-        <div style="text-decoration: none; cursor: default;">
+        <!-- Este é o seu botão personalizado que controla o áudio -->
+        <div onclick="const a = document.getElementById('${audioId}'); a.paused ? a.play() : a.pause();" 
+             style="cursor: pointer; transition: transform 0.2s;" 
+             onmouseover="this.style.transform='scale(1.05)'" 
+             onmouseout="this.style.transform='scale(1)'">
+            
             <div style="
-                background: rgba(217, 122, 30, 0.1); 
+                background: rgba(0, 0, 0, 0.7); 
                 border: 1px solid #d97a1e; 
                 padding: 12px 25px; 
                 border-radius: 50px; 
                 display: flex; 
                 align-items: center; 
                 gap: 15px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+                box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             ">
-                <div style="width: 30px; height: 30px; background: #d97a1e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 14px;">▶</div>
+                <div style="width: 35px; height: 35px; background: #d97a1e; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #000; font-size: 16px;">▶</div>
                 <div style="text-align: left;">
-                    <span style="display: block; font-size: 9px; color: #d97a1e; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Experiência Sonora</span>
-                    <span style="display: block; font-size: 14px; color: #fff; font-family: 'Cinzel', serif;">Frequência: ${tema}</span>
+                    <span style="display: block; font-size: 9px; color: #d97a1e; text-transform: uppercase; letter-spacing: 2px; font-weight: bold;">Ouvir Frequência</span>
+                    <span style="display: block; font-size: 14px; color: #fff; font-family: 'Cinzel', serif;">${tema}</span>
                 </div>
             </div>
         </div>
+        
+        <span style="font-size: 10px; color: #666;">(Player seguro: download bloqueado)</span>
     </div>`;
 }
 
