@@ -890,6 +890,54 @@ audio {
 .base-tri {
     margin-top: -1px;
 }
+
+
+
+/* Tela de Bloqueio */
+#trava-senha {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0a0e1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    font-family: sans-serif;
+}
+
+.caixa-senha {
+    background: #161b22;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.caixa-senha input {
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 15px;
+    width: 200px;
+    text-align: center;
+}
+
+.caixa-senha button {
+    background: #d4af37;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+    
     
     
     </style>
@@ -900,7 +948,16 @@ audio {
 </head>
 <body>
 
-
+<div id="trava-senha">
+    <div class="caixa-senha">
+        <h2 style="color: white; margin-bottom: 20px;">Acesso Restrito</h2>
+        <input type="password" id="campo-senha" placeholder="Digite a senha...">
+        <br>
+        <button onclick="verificarSenha()">ENTRAR</button>
+        <p id="erro-senha" style="color: #ff4444; margin-top: 10px; display: none;">Senha incorreta!</p>
+    </div>
+</div>
+    
 <div class="container">
     <button type="button" id="btnVideo" class="btn-video-toggle">
         <span>🎥 Assistir Vídeo Introdutório</span>
@@ -3600,7 +3657,7 @@ const dadosNegativas = detectarNegativas(piramideVida);
     
 
 // 2. DEPOIS: COMEÇA A MONTAR O HTML DO RELATÓRIO
- html = `
+ html = ` 
 
 
   <button class="btn-pdf no-print" onclick="window.print()">📥 BAIXAR SEU PDF PREMIUM</button>
@@ -6273,6 +6330,31 @@ document.getElementById('btnVideo').addEventListener('click', function() {
     }
 });
 </script>
-  
+  <script>
+    function verificarSenha() {
+        // --- COLOQUE SUA SENHA ABAIXO ---
+        const senhaCorreta = "598298"; 
+        
+        const senhaDigitada = document.getElementById("campo-senha").value;
+        const telaTrava = document.getElementById("trava-senha");
+        const msgErro = document.getElementById("erro-senha");
+
+        if (senhaDigitada === senhaCorreta) {
+            // Se a senha estiver certa, remove a tela preta e mostra o app
+            telaTrava.style.display = "none";
+        } else {
+            // Se estiver errada, mostra mensagem de erro
+            msgErro.style.display = "block";
+            document.getElementById("campo-senha").value = "";
+        }
+    }
+
+    // Permite apertar "Enter" no teclado para entrar
+    document.getElementById("campo-senha").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            verificarSenha();
+        }
+    });
+</script>
 </body>
 </html>
