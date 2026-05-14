@@ -5662,7 +5662,7 @@ const listaFin = detectarFinanceirasIndependentes(piramideVida);
  tituloBonito = "A Matriz da Vida"; 
  // --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
 html += `
-<div style="width: 100%; max-width: 100%; overflow: hidden; clear: both; page-break-inside: avoid;">
+
 <div class="separador-luxo">
     <div class="caixa-interna">
         <h2>${tituloBonito}</h2>
@@ -5676,16 +5676,14 @@ html += `
 
   
 // --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
-// --- MONTAGEM DO HTML DA PIRÂMIDE COM INTRODUÇÃO ---
 let htmlPiramide = `
-<div class="page evitar-corte" style="width: 100%; box-sizing: border-box;"> 
+<div class="page evitar-corte" style="width: 100%; page-break-after: always;"> 
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);"> Pirâmide da Vida</h2>
     
-    <div class="intro-texto" style="width: 100%; box-sizing: border-box;">${textos.introducoes.piramide}</div>
+    <div class="intro-texto">${textos.introducoes.piramide}</div>
 
-    <!-- Ajuste aqui: adicionado overflow-x auto para o celular não quebrar -->
-    <div class="container-piramide" style="width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; display: flex; justify-content: center; padding: 20px 0;">
-        <div class="piramide" style="min-width: fit-content; margin: 0 auto;">`;
+    <div class="container-piramide">
+        <div class="piramide">`;
 
     // --- NOVA PARTE: LINHA DO NOME NO TOPO ---
 const letrasNomeTopo = nomeRaw.toUpperCase().replace(/\s+/g, '').split('');
@@ -5756,14 +5754,13 @@ tituloBonito = "O Regente da sua Matriz 🔱";
 
 // A crase ( ` ) ANTES do <div é o que impede o erro de 'Unexpected token class'
 htmlPiramide += `
-<div style="clear: both; width: 100%; box-sizing: border-box;">
-    <div class="separador-luxo">
-        <div class="caixa-interna">
-            <h2>${tituloBonito}</h2>
-        </div>
+<div class="separador-luxo">
+    <div class="caixa-interna">
+        <h2>${tituloBonito}</h2>
     </div>
+</div>
 
-    <div class="texto-introducao-regente" style="width: 100%; max-width: 100vw; margin: 25px 0; font-size: 19px; line-height: 1.8; color: #333; text-align: justify; box-sizing: border-box;">
+<div style="margin: 25px 0; width: 100%; font-size: 19px; line-height: 1.8; color: #333; text-align: justify;">
     ${textos.introducoes.regente || `<p>O Regente da Vida representa o núcleo vibracional da sua existência. Ele é a força central que sustenta toda a estrutura da sua Pirâmide da Vida, funcionando como o eixo principal em torno do qual todas as demais energias se organizam. Assim como o Sol mantém o equilíbrio do sistema solar, o Regente mantém o alinhamento das experiências que compõem a sua trajetória.</p>
 
 <p>Essa vibração revela a essência mais autêntica da sua natureza, indicando como você reage aos acontecimentos, quais padrões emocionais predominam e de que maneira sua energia se projeta no mundo. Diferente de eventos momentâneos, o Regente atua como uma base constante que acompanha você durante toda a vida.</p>
