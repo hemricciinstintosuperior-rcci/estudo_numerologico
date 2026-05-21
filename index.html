@@ -935,7 +935,19 @@ audio {
     cursor: pointer;
 }
     
-    
+  /* Exemplo de como costuma estar no seu código */
+input[type="text"], select {
+    width: 100%;
+    padding: 12px; /* ou a altura que você usa */
+    margin-bottom: 15px;
+    border: 1px solid #ccc; /* sua cor de borda */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    /* Adicione isso abaixo para o select ocupar o mesmo comportamento */
+    box-sizing: border-box; 
+}  
     
     </style>
 
@@ -3550,21 +3562,7 @@ const vPerfilNomes = {
 };
 
 
-// NOVO: Configuração Visual do Perfil que decide entre Masculino ou Feminino
-let vTextosPerfil;
 
-if (generoTexto === "feminino") {
-    // Se o usuário escolheu feminino, usa o seu objeto de descrições completo e adaptado
-    vTextosPerfil = descricoesPerfilFeminino;
-} else {
-    
-// Configuração Visual do Perfil (Cores e Textos)
-const vTextosPerfil = {
-    criativo: ` <p>"Sua mente possui mais Criatividade"</p>`,
-    indeciso: ` <p>"A indecisão toma conta da sua expressão"</p>`,
-    neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p>`
-};
-}
 const vCoresPerfil = {
     criativo: "#827108", // Dourado 
     indeciso: "#e74c3c", // Vermelho
