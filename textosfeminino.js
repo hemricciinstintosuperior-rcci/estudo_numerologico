@@ -1,4 +1,4 @@
-const textosfeminino = {
+const textos = {
  
 introducoes: {
 
@@ -3617,7 +3617,7 @@ essencia: {
 }
 };
 
-const bancoEquilibrioUnificadofeminino = {
+const bancoEquilibrioUnificado = {
     inicio: {
         // --- NÚMERO 1 (Liderança, Início, Independência) ---
         
@@ -4339,7 +4339,7 @@ const bancoEquilibrioUnificadofeminino = {
 // ESTRUTURA DE TEXTOS DO PLANO DE EXPRESSÃO (FORMATADO PARA FILTRO)
 // =================================================================
 
-const textosPlanosfeminino = {
+const textosPlanos = {
   fisico: {
     forte: {
       1: `<p>Existe em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, um impulso natural de ação, iniciativa e realização prática no mundo material, o que favorece a conquista de metas tangíveis de forma acelerada. Sua energia física manifesta-se com intensidade constante, definindo sua capacidade de tirar projetos audaciosos do papel e tomar decisões rápidas sob pressão. Há uma tendência inata à autonomia e à liderança na execução de tarefas, sendo uma necessidade vital da sua essência abrir caminhos próprios e construir uma independência sólida em cada etapa da sua jornada profissional. Esta força motriz é o que permite a você superar a estagnação e operar sempre em um nível superior de eficiência.</p>
@@ -5046,7 +5046,7 @@ fraco: {
 };
 
 
-const textosPlanosMomentofeminino = {
+const textosPlanosMomento = {
   fisico: {
     forte: {
       1: `<p>Este ciclo traz um lampejo de força e proatividade que impulsiona a sua execução material, <strong>MASCULINO-FEMININO-NEUTRO</strong>. É um momento de iniciativa acentuada, ideal para você tirar projetos do papel e liderar processos que exigem decisões rápidas. Se o seu plano natural for mais contido, aproveite esta vitalidade extra para desbravar caminhos que antes pareciam difíceis; se já for uma característica inata, sua potência realizadora agora atinge o ápice de eficiência técnica.</p>
@@ -5329,7 +5329,7 @@ intuitivo: {
 
 
 
-window.TextosTransitofeminino = {
+window.TextosTransito = {
 
 1:`
 <h3> Início de um Novo Ciclo e Independência</h3>
