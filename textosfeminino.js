@@ -5329,7 +5329,7 @@ intuitivo: {
 
 
 
-TextosTransito = {
+window.TextosTransito = {
 
 1:`
 <h3> Início de um Novo Ciclo e Independência</h3>
