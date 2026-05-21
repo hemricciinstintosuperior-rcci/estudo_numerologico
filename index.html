@@ -2018,16 +2018,12 @@ function calcularDadosPlanos(nome) {
 }
 
 function montarHtmlPlanosNatural(nome) {
-    // 1. O INTERRUPTOR: O código olha para o select do HTML para ver o que foi escolhido
     const campoGênero = document.getElementById("generoTexto");
     const formatoGênero = campoGênero ? campoGênero.value : "masculino";
 
-    // 2. A CORREÇÃO DE DIRETÓRIO (A mágica acontece aqui):
-    // Se o usuário escolheu 'feminino', a variável 'descricoesPerfil' passa a usar as descrições femininas.
-    // Se for masculino, usa as masculinas. Ambas já estão criadas aí embaixo no seu HTML!
-    const descricoesPerfil = (formatoGênero === "feminino") ? descricoesPerfilFeminino : descricoesPerfilMasculino;
+    // MUDAMOS O NOME AQUI para 'perfilEscolhido' para sumir com o erro de duplicação!
+    const perfilEscolhido = (formatoGênero === "feminino") ? descricoesPerfilFeminino : descricoesPerfilMasculino;
     
-    // 3. E para os textos que vêm lá do arquivo do GitHub:
     const ativosPlanos = textosPlanos; 
 
     const dados = calcularDadosPlanos(nome);
