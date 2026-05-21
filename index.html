@@ -995,7 +995,7 @@ input[type="text"], select {
     <!-- NOVO CAMPO DE SELEÇÃO DE TEXTO ADICIONADO AQUI -->
 
     
-        <button class="btn-gerar" onclick="gerarMapaCompleto()">GERAR O MAPA</button>
+        <button class="btn-gerar" onclick="carregarTextosEDepoisGerar()">GERAR O MAPA</button>
     </div>
 
    <div id="resultado" style="width: 110%; max-width: 800px; margin: 0 auto;">
@@ -2018,11 +2018,12 @@ function calcularDadosPlanos(nome) {
 }
 
 function montarHtmlPlanosNatural(nome) {
-    // === SEU INTERRUPTOR DE GÊNERO CORRIGIDO ===
-    // Agora ele busca o ID real do seu select ('generoTexto')
+    // === INTERRUPTOR DE GÊNERO CORRIGIDO ===
+    // Pega o valor do seu select ("masculino" ou "feminino")
     const formatoGênero = document.getElementById("generoTexto") ? document.getElementById("generoTexto").value : "masculino";
     
-    // Substitui a variável global textosPlanos se for Feminino ('feminino')
+    // Se for feminino, usa a tabela 'textosPlanosfeminino' (que veio do arquivo novo),
+    // se não, mantém a 'textosPlanos' de sempre (do seu textos.js antigo).
     const ativosPlanos = (formatoGênero === 'feminino') ? textosPlanosfeminino : textosPlanos;
 
     const dados = calcularDadosPlanos(nome);
@@ -2054,8 +2055,8 @@ const descricoesPerfilFeminino = {
     neutro: `<p>"Sua essência possui equilíbrio nas decisões"</p><p>Sendo alguém observadora, você prefere analisar todos os pontos de vista antes de tomar partido em qualquer tipo de conflito. Agindo por interesses próprios, você raramente sai da zona de conforto, mantendo-se excessivamente cautelosa para evitar riscos inúteis.</p><p>Relacionando-se bem com todos, você constrói barreiras emocionais intencionais para evitar sofrimento, raramente expondo o que realmente sente. Com facilidade de adaptação, você mantém o autocontrole em situações difíceis, preferindo rotinas pacíficas. No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, mantendo-se neutra e com baixa inclinação criativa.</p>`
 };
 
-    // Escolhe a tabela de perfis de acordo com o gênero selecionado
-    // Escolhe a tabela de perfis de acordo com o gênero selecionado
+// Escolhe a tabela de perfis de acordo com o gênero selecionado
+    // Se o seu arquivo textosfeminino.js já jogou a 'descricoesPerfilFeminino' na memória, o sistema usa ela!
     const descricoesPerfil = (formatoGênero === 'feminino') ? descricoesPerfilFeminino : descricoesPerfilMasculino;
 
     let html = `
@@ -3273,6 +3274,54 @@ function montarSecaoHabilidadeEspecial() {
         </span>
     `);
 }       
+
+
+
+
+function verificarGêneroEGerar() {
+    // 1. Pega o gênero que a pessoa selecionou no input
+    const formatoGênero = document.getElementById("generoTexto") ? document.getElementById("generoTexto").value : "masculino";
+
+    // 2. Se for feminino, precisamos carregar o arquivo extra do GitHub
+    if (formatoGênero === "feminino") {
+        
+        // Verifica se o script feminino já não foi carregado antes (para evitar duplicar na memória)
+        if (document.getElementById("script-feminino")) {
+            gerarMapaCompleto(); // Se já estiver carregado, roda direto
+            return;
+        }
+
+        console.log("Carregando textosfeminino.js do GitHub...");
+        
+        // Cria a chamada para o arquivo feminino dinamicamente
+        let scriptFeminino = document.createElement("script");
+        scriptFeminino.id = "script-feminino";
+        scriptFeminino.src = "textosfeminino.js"; // Nome exato do seu novo arquivo no GitHub
+        
+        // O navegador só vai rodar os cálculos DEPOIS que o arquivo feminino terminar de baixar
+        scriptFeminino.onload = function() {
+            console.log("Textos femininos carregados com sucesso! Gerando mapa...");
+            gerarMapaCompleto();
+        };
+
+        // Trata caso dê algum erro no carregamento do arquivo
+        scriptFeminino.onerror = function() {
+            alert("Erro ao carregar os textos femininos. O mapa será gerado no formato padrão.");
+            gerarMapaCompleto();
+        };
+        
+        document.head.appendChild(scriptFeminino);
+    } else {
+        // 3. Se for masculino, o textos.js padrão já está na página, então gera direto!
+        gerarMapaCompleto();
+    }
+}
+
+
+
+
+
+        
         
 function gerarMapaCompleto() {
     const nomeRaw = document.getElementById("nome").value.trim();
