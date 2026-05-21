@@ -1,4 +1,4 @@
-const textos = {
+let textos = {
  
 introducoes: {
 
@@ -3617,7 +3617,7 @@ essencia: {
 }
 };
 
-const bancoEquilibrioUnificado = {
+let bancoEquilibrioUnificado = {
     inicio: {
         // --- NÚMERO 1 (Liderança, Início, Independência) ---
         
@@ -4339,7 +4339,7 @@ const bancoEquilibrioUnificado = {
 // ESTRUTURA DE TEXTOS DO PLANO DE EXPRESSÃO (FORMATADO PARA FILTRO)
 // =================================================================
 
-const textosPlanos = {
+let textosPlanos = {
   fisico: {
     forte: {
       1: `<p>Existe em você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, um impulso natural de ação, iniciativa e realização prática no mundo material, o que favorece a conquista de metas tangíveis de forma acelerada. Sua energia física manifesta-se com intensidade constante, definindo sua capacidade de tirar projetos audaciosos do papel e tomar decisões rápidas sob pressão. Há uma tendência inata à autonomia e à liderança na execução de tarefas, sendo uma necessidade vital da sua essência abrir caminhos próprios e construir uma independência sólida em cada etapa da sua jornada profissional. Esta força motriz é o que permite a você superar a estagnação e operar sempre em um nível superior de eficiência.</p>
@@ -5047,7 +5047,7 @@ fraco: {
 };
 
 
-const textosPlanosMomento = {
+let textosPlanosMomento = {
   fisico: {
     forte: {
       1: `<p>Este ciclo traz um lampejo de força e proatividade que impulsiona a sua execução material, <strong>MASCULINO-FEMININO-NEUTRO</strong>. É um momento de iniciativa acentuada, ideal para você tirar projetos do papel e liderar processos que exigem decisões rápidas. Se o seu plano natural for mais contido, aproveite esta vitalidade extra para desbravar caminhos que antes pareciam difíceis; se já for uma característica inata, sua potência realizadora agora atinge o ápice de eficiência técnica.</p>
@@ -5328,39 +5328,7 @@ intuitivo: {
 
 
 
-const textosExpressao = {
-    criativo: ` <p>"Sua mente possui mais Criatividade"</p>
-    
-<p>Naturalmente você apresenta ideias originais, enxerga a realidade de forma diferenciada e encara imprevistos com otimismo e espontaneidade. 
-Ao analisar problemas complexos, você divide-os em partes menores, focando em soluções eficazes e na adaptação rápida a novas situações.</p>
 
-<p>Movido por estímulos internos, você demonstra grande motivação pessoal, ignorando rotinas estabelecidas para explorar diversas alternativas. 
-Pelo lado desafiador, você pode manifestar certa arrogância ou rebeldia contra regras, sofrendo com flutuações de humor e desconfiança. 
-Nessa busca constante pelo novo, você corre o risco de perder a noção de tempo ou se deixar envolver por ilusões temporárias.</p>`,
-
-    indeciso: ` <p>"A indecisão toma conta da sua expressão"</p>
-    
-<p>Com grande sensibilidade, você demonstra necessidade de atenção, podendo agir de forma dramática ou precipitada sob pressão emocional. 
-Sendo influenciável pelo ambiente, você muda de opinião com frequência e encontra certa dificuldade em agir de forma solitária.</p>
-
-<p>Revelando um lado sedutor, você pode ser interpretado com inconveniência devido ao excesso de dramatização em suas falas. 
-Ao fortalecer seu caráter, você descobre sua verdadeira identidade, trocando a busca por aprovação externa por seus desejos internos. 
-Em momentos de desequilíbrio, você torna-se inconstante ou impulsiva, especialmente quando é dominada por receios e emoções intensas.</p>`,
-
-    neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p> 
-    
-<p>Sendo alguém observador, você prefere analisar todos os pontos de vista antes de tomar partido em qualquer tipo de conflito. 
-Agindo por interesses próprios, você raramente sai da zona de conforto, mantendo-se excessivamente cauteloso para evitar riscos inúteis.</p>
-
-<p>Relacionando-se bem com todos, você constrói barreiras emocionais intencionais para evitar sofrimento, raramente expondo o que realmente sente. 
-Com facilidade de adaptação, **você** mantém o autocontrole em situações difíceis, preferindo rotinas pacíficas. 
-No aspecto negativo, você pode demonstrar certa omissão ou medo de decidir, mantendo-se neutro e com baixa inclinação criativa.</p>`
-};
-
-const introducoes = {
-  natural: "O seu Plano de Energia Natural representa a sua 'assinatura energética' fundamental. Ele descreve o conjunto de ferramentas que sua alma trouxe para esta existência, revelando como sua inteligência, emoção e instinto operam de forma estrutural e permanente em você.",
-  momento: "O Plano de Energia do Momento atua como uma lente temporal sobre a sua essência. Ele indica como as circunstâncias atuais estão moldando sua forma de agir e sentir, destacando quais habilidades estão sendo mais exigidas ou despertadas em você neste ciclo."
-};
 
 window.TextosTransito = {
 
