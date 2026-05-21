@@ -2018,11 +2018,12 @@ function calcularDadosPlanos(nome) {
 }
 
 function montarHtmlPlanosNatural(nome) {
-    // === INTERRUPTOR DE GÊNERO (SEU PLANO) ===
-    const formatoGênero = document.getElementById("formatoRelatorio") ? document.getElementById("formatoRelatorio").value : "M";
+    // === SEU INTERRUPTOR DE GÊNERO CORRIGIDO ===
+    // Agora ele busca o ID real do seu select ('generoTexto')
+    const formatoGênero = document.getElementById("generoTexto") ? document.getElementById("generoTexto").value : "masculino";
     
-    // Substitui a variável global textosPlanos se for Feminino
-    const ativosPlanos = (formatoGênero === 'F') ? textosPlanosfeminino : textosPlanos;
+    // Substitui a variável global textosPlanos se for Feminino ('feminino')
+    const ativosPlanos = (formatoGênero === 'feminino') ? textosPlanosfeminino : textosPlanos;
 
     const dados = calcularDadosPlanos(nome);
     const nomesAmigaveis = { fisico: "Físico", mental: "Mental", emocional: "Emocional", intuitivo: "Intuitivo" };
@@ -2054,7 +2055,8 @@ const descricoesPerfilFeminino = {
 };
 
     // Escolhe a tabela de perfis de acordo com o gênero selecionado
-    const descricoesPerfil = (formatoGênero === 'F') ? descricoesPerfilFeminino : descricoesPerfilMasculino;
+    // Escolhe a tabela de perfis de acordo com o gênero selecionado
+    const descricoesPerfil = (formatoGênero === 'feminino') ? descricoesPerfilFeminino : descricoesPerfilMasculino;
 
     let html = `
         <div class="secao-card quebra-pagina">
