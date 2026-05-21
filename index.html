@@ -995,7 +995,7 @@ input[type="text"], select {
     <!-- NOVO CAMPO DE SELEÇÃO DE TEXTO ADICIONADO AQUI -->
 
     
-        <button class="btn-gerar" onclick="carregarTextosEDepoisGerar()">GERAR O MAPA</button>
+       <button class="btn-gerar" onclick="verificarGêneroEGerar()">GERAR O MAPA</button>
     </div>
 
    <div id="resultado" style="width: 110%; max-width: 800px; margin: 0 auto;">
@@ -3279,44 +3279,35 @@ function montarSecaoHabilidadeEspecial() {
 
 
 function verificarGêneroEGerar() {
-    // 1. Pega o gênero que a pessoa selecionou no input
-    const formatoGênero = document.getElementById("generoTexto") ? document.getElementById("generoTexto").value : "masculino";
+    console.log("Botão clicado! Iniciando checagem de gênero...");
+    
+    const campoGênero = document.getElementById("generoTexto");
+    const formatoGênero = campoGênero ? campoGênero.value : "masculino";
 
-    // 2. Se for feminino, precisamos carregar o arquivo extra do GitHub
     if (formatoGênero === "feminino") {
-        
-        // Verifica se o script feminino já não foi carregado antes (para evitar duplicar na memória)
         if (document.getElementById("script-feminino")) {
-            gerarMapaCompleto(); // Se já estiver carregado, roda direto
+            gerarMapaCompleto();
             return;
         }
 
-        console.log("Carregando textosfeminino.js do GitHub...");
-        
-        // Cria a chamada para o arquivo feminino dinamicamente
         let scriptFeminino = document.createElement("script");
         scriptFeminino.id = "script-feminino";
-        scriptFeminino.src = "textosfeminino.js"; // Nome exato do seu novo arquivo no GitHub
+        scriptFeminino.src = "textosfeminino.js"; // <--- Nome exato do seu arquivo leve no GitHub
         
-        // O navegador só vai rodar os cálculos DEPOIS que o arquivo feminino terminar de baixar
         scriptFeminino.onload = function() {
-            console.log("Textos femininos carregados com sucesso! Gerando mapa...");
             gerarMapaCompleto();
         };
 
-        // Trata caso dê algum erro no carregamento do arquivo
         scriptFeminino.onerror = function() {
-            alert("Erro ao carregar os textos femininos. O mapa será gerado no formato padrão.");
+            alert("Erro ao carregar o arquivo feminino. Gerando no formato padrão.");
             gerarMapaCompleto();
         };
         
         document.head.appendChild(scriptFeminino);
     } else {
-        // 3. Se for masculino, o textos.js padrão já está na página, então gera direto!
         gerarMapaCompleto();
     }
 }
-
 
 
 
