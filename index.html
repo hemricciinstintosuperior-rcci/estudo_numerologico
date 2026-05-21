@@ -3558,15 +3558,29 @@ const vPerfilNomes = {
     criativo: "CRIATIVO-PRODUTIVO",
     indeciso: "INDECISO-CONFUSO",
     neutro: "NEUTRO-EQUILIBRADO"
-// NOVO: Configuração Visual do Perfil que decide entre Masculino ou Feminino
 };
 
+// Configuração Visual do Perfil que decide entre Masculino ou Feminino
+let vTextosPerfil;
 
+if (generoTexto === "feminino") {
+    // Se o usuário escolheu feminino, tenta pegar do seu banco global.
+    // O "window." garante que o código ache a variável onde quer que ela esteja declarada.
+    vTextosPerfil = window.descricoesPerfilFeminino || descricoesPerfilFeminino;
+} else {
+    // Se for masculino, mantém a lista compacta original que você já tinha aí
+    vTextosPerfil = {
+        criativo: ` <p>"Sua mente possui mais Criatividade"</p>`,
+        indeciso: ` <p>"A indecisão toma conta da sua expressão"</p>`,
+        neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p>`
+    };
+}
 
+// O resto do seu código abaixo continua igual...
 const vCoresPerfil = {
-    criativo: "#827108", // Dourado 
-    indeciso: "#e74c3c", // Vermelho
-    neutro: "#7f8c8d"    // Cinza
+    criativo: "#827108", 
+    indeciso: "#e74c3c", 
+    neutro: "#7f8c8d"    
 };
 
 // AQUI ESTAVA O ERRO: Mudei para usar 'vPerfilNomes' que acabamos de criar acima
