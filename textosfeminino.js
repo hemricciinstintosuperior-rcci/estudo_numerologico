@@ -2501,7 +2501,7 @@ momentos: {
 }
  }, 
 
-Desafios: {
+desafios: {
   // --- 1º DESAFIO (FASE INICIAL / JUVENTUDE) ---
   1: {
     0: `<h3>O Desafio da Escolha na Juventude - 0</h3><br>
@@ -2918,7 +2918,7 @@ anoPessoal: {
 },
 
  
-Deficiencias: {
+deficiencias: {
     // --- DEFICIÊNCIAS / (O QUE FALTA APRENDER) ---
     1: `<h3>Iniciativa e Independência - Lição 1</h3>
     <p>A ausência desta vibração no seu mapa, querida <strong>MASCULINO-FEMININO-NEUTRO</strong>, é um aviso claro de que você precisa, mais do que nunca, despertar sua iniciativa própria e aprender a caminhar com uma determinação inabalável, daquelas que não aceitam um "não" como resposta final. Sua força de vontade precisa ser lapidada no fogo das suas experiências diárias. Em momentos decisivos da sua jornada, a vida vai exigir que você sustente uma independência absoluta e tenha a coragem de defender suas verdades, mesmo que se veja sozinha contra a maré.</p>
