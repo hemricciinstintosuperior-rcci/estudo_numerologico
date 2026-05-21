@@ -1099,26 +1099,26 @@ Evite comentários desnecessários ou julgamentos para não alimentar fofocas qu
     <p>Você tem a habilidade única de transformar ideias abstratas em lucros e estruturas sólidas. Existe em você um desejo de prosperidade que vai além do ganho individual; você busca construir segurança para todos que estão sob sua proteção.</p>
     <p>O seu aprendizado, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é entender que o poder é uma ferramenta para o bem. Quando você une sua ambição com a ética e a generosidade, você constrói um império de abundância que beneficia a sua vida e a de todos ao seu redor.</p>`,
 
-    9: ` <h3>Universalista - Dia 9</h3>
+    9: ` <h3>A Universalista - Dia 9</h3>
     <p>O dia 9 confere a você uma alma humanitária e generosa, dotada de uma visão de mundo extremamente ampla, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você possui o talento de compreender as dores do próximo e sente um desejo profundo de deixar um legado positivo para a humanidade.</p>
     <p>Sua intuição é fortíssima e você carrega uma sabedoria que parece vir de muito tempo. Você é capaz de grandes gestos por causas nobres, <strong>MASCULINO-FEMININO-NEUTRO</strong>, e possui um carisma que atrai pessoas de todas as origens, pois todos sentem que podem confiar na sua integridade.</p>
     <p>Você vive em uma vibração de compreensão total. Sua mente não se prende a detalhes pequenos ou mesquinhos; você enxerga o quadro geral e busca a evolução espiritual e o auxílio ao próximo como metas principais da sua existência.</p>
     <p>O desafio para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é aprender a se desapegar do passado. Ao focar sua energia no serviço desinteressado e no agora, você atinge um estado de paz interior que é a verdadeira recompensa da sua história de vida.</p>`,
 
-    10: ` <h3>Ambicioso - Dia 10</h3>
+    10: ` <h3>A Ambiciosa - Dia 10</h3>
     <p>O dia 10 traz para você a energia vibrante do recomeço com uma potência redobrada, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você possui um talento nato para a liderança e uma capacidade única de se reinventar, não importa quantas vezes a vida exija que você comece algo do zero.</p>
     <p>Sua autoconfiança é o seu maior trunfo. Você possui uma coragem pioneira que te leva a explorar campos onde poucos se atreveriam a pisar. Você é uma figura realizadora por excelência, <strong>MASCULINO-FEMININO-NEUTRO</strong>, e sua presença transmite uma vibração de independência e sucesso imediato.</p>
     <p>Você possui a força do número 1 potencializada, o que indica um destino de brilho individual. Sua mente é rápida para identificar oportunidades e você não hesita em agir quando percebe que o caminho está livre para a sua ascensão pessoal.</p>
     <p>O cuidado que você deve ter, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é com a impulsividade. Ao aprender a ouvir sua intuição e planejar cada passo com sabedoria, você se torna uma força imparável, capaz de construir uma história de vida absolutamente brilhante e inspiradora.</p>`,
    
   
-11: ` <h3>Idealista - Dia 11</h3>
+11: ` <h3>A Idealista - Dia 11</h3>
    <p>O dia 11 traz para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, a vibração de um Número Mestre. Isso confere a você uma intuição extraordinária e uma sensibilidade que está muito acima da média. Você funciona como um verdadeiro canal de inspiração para o mundo, possuindo ideais elevados e uma capacidade única de enxergar além das aparências materiais.</p>
     <p>Sua presença é magnética, <strong>MASCULINO-FEMININO-NEUTRO</strong>, e você tem o dom de iluminar a vida das pessoas com palavras que tocam a alma. No entanto, por ser uma vibração de "alta voltagem", você pode sentir uma tensão interna constante ou uma cobrança própria muito forte para realizar algo grandioso, o que exige que você aprenda a ter momentos de pausa e recolhimento.</p>
     <p>Você possui uma mente visionária que capta verdades antes de todos os outros. Existe um compromisso no seu espírito com a evolução da consciência, <strong>MASCULINO-FEMININO-NEUTRO</strong>, tornando sua trajetória uma referência de sabedoria para quem busca orientação em tempos de incerteza.</p>
     <p>O seu desafio é manter os pés no chão e confiar na sua voz interior sem se deixar levar pela ansiedade. Quando você equilibra essa mente brilhante com a ação prática, <strong>MASCULINO-FEMININO-NEUTRO</strong>, você se torna uma liderança capaz de transformar profundamente a realidade de todos ao seu redor.</p>`,
 
-    12: ` <h3>Comunicador - Dia 12</h3>
+    12: ` <h3>A Comunicadora - Dia 12</h3>
    <p>O dia 12 confere a você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, uma personalidade rica em criatividade, com uma habilidade de comunicação que une a lógica à sensibilidade de forma magistral. Você possui um talento natural para expressar ideias de forma clara, equilibrada e altamente convincente para qualquer público que te escute.</p>
     <p>Sua mente é fértil e você tem a capacidade de analisar problemas sob diversos ângulos ao mesmo tempo, o que faz de você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, uma pessoa cujo conselho é sempre muito requisitado. Você valoriza as conexões sociais e possui um magnetismo que atrai pessoas interessadas na sua inteligência e no seu modo refinado de observar a vida.</p>
     <p>Existe em você um desejo profundo de ser útil e trazer harmonia para onde quer que vá. Sua natureza é diplomática e você sabe usar seu charme pessoal para abrir portas que outros considerariam trancadas. Sua versatilidade é sua maior ferramenta de sucesso, <strong>MASCULINO-FEMININO-NEUTRO</strong>.</p>
