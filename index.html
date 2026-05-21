@@ -3279,36 +3279,42 @@ function montarSecaoHabilidadeEspecial() {
 
 
 function verificarGêneroEGerar() {
-    console.log("Botão clicado! Iniciando checagem de gênero...");
+    console.log("Botão clicado! Verificando gênero...");
     
     const campoGênero = document.getElementById("generoTexto");
     const formatoGênero = campoGênero ? campoGênero.value : "masculino";
 
-    if (formatoGênero === "feminino") {
-        if (document.getElementById("script-feminino")) {
-            gerarMapaCompleto();
-            return;
-        }
+    // 1. Define qual arquivo vai ser chamado do GitHub
+    let arquivoAlvo = (formatoGênero === "feminino") ? "textosfeminino.js" : "textos.js";
 
-        let scriptFeminino = document.createElement("script");
-        scriptFeminino.id = "script-feminino";
-        scriptFeminino.src = "textosfeminino.js"; // <--- Nome exato do seu arquivo leve no GitHub
-        
-        scriptFeminino.onload = function() {
-            gerarMapaCompleto();
-        };
-
-        scriptFeminino.onerror = function() {
-            alert("Erro ao carregar o arquivo feminino. Gerando no formato padrão.");
-            gerarMapaCompleto();
-        };
-        
-        document.head.appendChild(scriptFeminino);
-    } else {
-        gerarMapaCompleto();
+    // 2. Remove QUALQUER script de texto que já tenha sido carregado antes para limpar a memória
+    const scriptAntigo = document.getElementById("script-textos-dinamico");
+    if (scriptAntigo) {
+        scriptAntigo.remove();
+        // Força o navegador a esquecer as variáveis antigas para não dar erro de "already been declared"
+        window.textosPlanos = undefined; 
+        window.descricoesPerfil = undefined;
     }
-}
 
+    console.log("Carregando o arquivo: " + arquivoAlvo);
+
+    // 3. Cria a chamada do arquivo correto
+    let scriptNovo = document.createElement("script");
+    scriptNovo.id = "script-textos-dinamico";
+    scriptNovo.src = arquivoAlvo; 
+    
+    // 4. Quando o arquivo (masculino ou feminino) terminar de baixar, roda a sua função original
+    scriptNovo.onload = function() {
+        console.log("Textos prontos na memória. Rodando o mapa!");
+        gerarMapaCompleto(); // <--- Suas funções originais rodam intocadas aqui!
+    };
+
+    scriptNovo.onerror = function() {
+        alert("Erro ao carregar os textos do servidor.");
+    };
+    
+    document.head.appendChild(scriptNovo);
+}
 
 
 
