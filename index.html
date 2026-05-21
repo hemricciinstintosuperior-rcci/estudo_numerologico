@@ -3554,21 +3554,25 @@ const dadosPlanos = calcularDadosPlanos(nome.value || nome); // Mudei para 'dado
 const perfilChave = dadosPlanos.dominantePerfil; 
 
 // Objeto com os nomes traduzidos para exibição
+// Objeto com os nomes traduzidos para exibição
 const vPerfilNomes = {
     criativo: "CRIATIVO-PRODUTIVO",
     indeciso: "INDECISO-CONFUSO",
     neutro: "NEUTRO-EQUILIBRADO"
 };
 
-// Configuração Visual do Perfil que decide entre Masculino ou Feminino
+// Configuração Visual do Perfil (Apenas as tags de título do painel)
 let vTextosPerfil;
 
 if (generoTexto === "feminino") {
-    // Se o usuário escolheu feminino, tenta pegar do seu banco global.
-    // O "window." garante que o código ache a variável onde quer que ela esteja declarada.
-    vTextosPerfil = window.descricoesPerfilFeminino || descricoesPerfilFeminino;
+    // Altera apenas a chamada curta do painel para o formato feminino
+    vTextosPerfil = {
+        criativo: ` <p>"Sua mente possui mais Criatividade"</p>`,
+        indeciso: ` <p>"A indecisão toma conta da sua expressão"</p>`,
+        neutro: ` <p>"Sua essência possui equilíbrio nas decisões"</p>`
+    };
 } else {
-    // Se for masculino, mantém a lista compacta original que você já tinha aí
+    // Mantém o teu padrão original para o masculino
     vTextosPerfil = {
         criativo: ` <p>"Sua mente possui mais Criatividade"</p>`,
         indeciso: ` <p>"A indecisão toma conta da sua expressão"</p>`,
@@ -3576,17 +3580,18 @@ if (generoTexto === "feminino") {
     };
 }
 
-// O resto do seu código abaixo continua igual...
 const vCoresPerfil = {
-    criativo: "#827108", 
-    indeciso: "#e74c3c", 
-    neutro: "#7f8c8d"    
+    criativo: "#827108", // Dourado 
+    indeciso: "#e74c3c", // Vermelho
+    neutro: "#7f8c8d"    // Cinza
 };
 
-// AQUI ESTAVA O ERRO: Mudei para usar 'vPerfilNomes' que acabamos de criar acima
+// Daqui para baixo o teu cálculo original segue intocado
 const valorPerfilNativoTexto = vPerfilNomes[perfilChave] || "Não Definido";
 const vCorDoPerfilAtivo = vCoresPerfil[perfilChave] || "#d97a1e";
 const vTextoDescritivoAtivo = vTextosPerfil[perfilChave] || "";
+
+
     
             
 // --- LÓGICA DE DATAS, IDADES E PERÍODOS (ESPELHADO NO ANTIGO) ---
