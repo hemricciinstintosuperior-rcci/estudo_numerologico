@@ -1700,7 +1700,7 @@ CaminhodeVida: {
 },
 
 // --- PROPÓSITO (MISSÃO DE VIDA) ---
-proposito: {
+Propósito: {
     1: `<h3>Propósito 1 - A Manifestação da Liderança e da Autonomia</h3>
     <p>O seu propósito nesta existência, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é o desenvolvimento de uma autoconfiança inabalável e a manifestação da liderança consciente. Você veio ao mundo para aprender a usar o seu imenso poder pessoal com a missão sagrada de nunca mais permitir que sua voz seja silenciada ou que sua vontade seja subjugada por terceiros.</p>
     <p>Sua missão envolve ser um exemplo vivo de coragem e originalidade, <strong>MASCULINO-FEMININO-NEUTRO</strong>. Você deve aprender a equilibrar o forte impulso de independência com a sabedoria de que a liderança se torna magnífica quando beneficia o coletivo. Realizar este propósito significa chegar ao final da jornada com a certeza de que você foi a protagonista de cada capítulo escrito.</p>
