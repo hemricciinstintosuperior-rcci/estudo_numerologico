@@ -5434,3 +5434,30 @@ window.TextosTransito = {
 <p>2. Junto com um Ano Pessoal 9, o período pode ser emocionalmente desgastante. Mantenha a clareza de pensamentos e não tome decisões impulsivas de encerramento; deixe que o que deve ir embora saia naturalmente, preparando o terreno para a sua renovação total.</p>
 `
 };
+
+
+let textosSinteseExpressao = {
+    // 1. DUAS POTÊNCIAS E DOIS EQUILÍBRIOS (Caso do Carlos)
+    "FFMM": "O perfil apresenta uma **Dualidade de Potência**. Existem dois motores principais que operam em alta frequência, garantindo força de realização e intensidade. Os outros dois planos atuam como estabilizadores, operando no nível médio (equilíbrio). O desafio é não deixar que as duas potências dominantes abafem a voz dos planos equilibrados, mantendo a fluidez entre a ação e a moderação.",
+
+    // 2. TODOS EM EQUILÍBRIO (O que seria o antigo Alinhamento)
+    "FMMM": "Este é o estado de **Platô de Estabilidade**. Não há um plano que tente atropelar os outros; todos operam na frequência do equilíbrio (Médio). É o melhor estado para quem busca uma vida ponderada, sem grandes picos de estresse ou quedas de energia. A conquista aqui vem da constância e da clareza, pois a mente, o corpo e a alma caminham em passos iguais.",
+
+    // 3. TRÊS POTÊNCIAS E UM EQUILÍBRIO
+    "FFFM": "O perfil de **Tripé de Sustentação Ampla**. Quase todos os seus canais de expressão operam em potência máxima. Isso indica uma personalidade multifacetada e com grande energia vital. O único plano em estado médio funciona como o seu 'porto seguro', o ponto onde você recarrega as energias quando o excesso de força dos outros três planos começa a exaurir seu sistema.",
+
+    // 4. UMA POTÊNCIA ISOLADA (O MONOLITO)
+    "Ffff": "Estamos diante de uma **POTÊNCIA ISOLADA **. Existe uma força avassaladora em apenas um plano, enquanto os outros três encontram-se em estado de retração (Fracos). Isso indica um especialista nato, alguém que foca toda sua existência em um único canal. O risco aqui é a negligência com as outras áreas da vida, exigindo um esforço consciente para 'resgatar' os planos que estão na sombra.",
+
+    // 5. DOIS FORTES E DOIS FRACOS (SEM MEIO TERMO)
+    "FFff": "Um perfil de **Perfil de Extremos opostos**. Você opera no sistema 'tudo ou nada'. Quando está engajado nos seus dois planos fortes, nada o detém. Porém, os planos fracos podem representar 'buracos negros' por onde sua energia escapa. É necessário usar a potência dos planos líderes para construir pontes de socorro para as áreas que estão desassistidas.",
+
+    // 6. EQUILÍBRIO COM UM PONTO CEGO
+    "FMMf": "Perfil de **Equilíbrio com Ponto de Resgate**. Você possui uma vida muito estável e equilibrada na maioria dos sentidos, porém existe um canal específico que está operando abaixo do mínimo necessário. Esse plano 'fraco' pode estar drenando sua paz silenciosamente. O foco deve ser estabilizar esse ponto de fuga para que o seu equilíbrio (médio) não seja comprometido.",
+
+    // 7. PICO DE TRANSIÇÃO (UM FORTE, UM MÉDIO, DOIS FRACOS)
+    "FMff": "Este é o **Pico de Transição Dinâmica**. Você tem um líder (Forte) e um braço direito (Médio), mas a sua base de sustentação ainda é frágil. É o perfil de quem está começando a expandir sua consciência ou suas capacidades, mas ainda sente o peso das limitações passadas nos planos que permanecem fracos.",
+
+    // TEXTO DE SEGURANÇA
+    "padrao": "Seu Plano de Expressão apresenta uma configuração única de intensidade dinâmica. A interação entre seus planos fortes, médios e fracos cria uma assinatura energética singular, exigindo que você utilize sempre o seu canal de maior pontuação como guia para equilibrar os demais."
+};
