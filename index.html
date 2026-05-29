@@ -2230,12 +2230,11 @@ function montarHtmlPlanosMomento(nomeCompleto, dataNascimento, res, faltantes, d
                     ${dominanteMomento[0]}
                 </div>
                 
-                ${travado ? '<div class="conteudo-travado">' : '<div>'}
+                
                     <h4 style="margin: 0; color: #827108; text-transform: uppercase;">Perfil de Ação Atual: ${dominanteMomento}</h4>
                     <div style="margin: 5px 0 0 0; font-size: 14px; color: #555;">${aplicarFiltroTexto(descricoesPerfilMomento[dominanteMomento])}</div>
                 </div>  
-                 ${travado ? '<div class="aviso-trava">🔒 CONTEÚDO LIBERADO NO PDF</div>' : ''} 
-            </div>
+             
 
             <div style="margin: 25px 0; background: #fff; padding: 20px; border-radius: 8px;">`;
         
@@ -2285,10 +2284,9 @@ h += `</div>`;
                     <div class="evitar-corte" style="margin-bottom: 20px; border-left: none; padding-left: 15px;">
                         <h4 style="margin:0; color:${coresPlanos[p] || 'var(--dark)'}; text-transform:uppercase; font-size:18px;">${nomesAmigaveis[p]} <small>(${int})</small></h4>
                         
-                        ${travado ? '<div class="conteudo-travado">' : '<div>'}
+                        
                             <div class="texto-res">${aplicarFiltroTexto(textoIndiv)}</div>
-                        </div> ${travado ? '<div class="aviso-trava">🔒 CONTEÚDO LIBERADO NO PDF</div>' : ''} 
-                    </div>`; // FECHA O BLOCO DO PLANO (margin-bottom: 20px)
+                      </div>`; // FECHA O BLOCO DO PLANO (margin-bottom: 20px)
             }
         }
 
@@ -2345,12 +2343,11 @@ let vTransitoCalculado = reduzirPuro(letrasAno.reduce((s, l) => s + calcularValo
                     <h3> IDADE: <span style="color: var(--gold);">${indiceAno} ANOS | PERÍODO: ${periodoVigente}</span></h3>
                 </div>
 
-                ${travado ? '<div class="conteudo-travado">' : '<div>'}
+              
                     <div class="texto-res">
                         ${aplicarFiltroTexto(window.TextosTransito ? window.TextosTransito[vTransitoCalculado] : "")}
                     </div> 
-                </div> ${travado ? '<div class="aviso-trava">🔒 CONTEÚDO LIBERADO NO PDF</div>' : ''} 
-            </div></div>
+                </div> </div>
         </div>`; // FECHA A SEÇÃO DE TRÂNSITO
 
         // 4. GRÁFICOS FINAIS
