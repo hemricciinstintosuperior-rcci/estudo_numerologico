@@ -4413,19 +4413,27 @@ html += `
         flex-grow: 1;
     ">
         ${listaItensSintese.map(item => {
-            let exibicaoValor = "--";
-            if (item.valor && typeof item.valor === 'object' && !Array.isArray(item.valor)) {
-                exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
-            } else if (Array.isArray(item.valor)) {
-                exibicaoValor = item.valor.join(" · ");
-            } else {
-                exibicaoValor = item.valor || "--";
-            }
+// ... dentro do seu .map(item => { ...
+let exibicaoValor = "--";
 
-            // Ajuste dinâmico de fonte para valores longos não quebrarem o layout
-            let fontSize = "20px";
-            if (exibicaoValor.toString().length > 5) fontSize = "18px";
-            if (exibicaoValor.toString().length > 10) fontSize = "15px";
+if (Array.isArray(item.valor)) {
+    // Se for um array (ex: [1, 3, 5]), junta com um espaço ou ponto
+    // Se forem muitos números, podemos usar um espaço simples para economizar espaço
+    exibicaoValor = item.valor.join(" · ");
+} else if (item.valor && typeof item.valor === 'object') {
+    exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
+} else {
+    exibicaoValor = item.valor || "--";
+}
+
+// Lógica de tamanho de fonte ajustada para arrays
+let fontSize = "20px";
+let valorStr = exibicaoValor.toString();
+
+if (valorStr.length > 15) fontSize = "12px"; // Se tiver muitos números, diminui bem a fonte
+else if (valorStr.length > 10) fontSize = "15px";
+else if (valorStr.length > 5) fontSize = "18px";
+// ... resto do seu return
 
 // ... dentro do seu .map() ...
 return `
@@ -4449,11 +4457,11 @@ return `
             ${exibicaoValor}
         </div>
 
-        ${item.videoID ? `
-            <a href="https://www.youtube.com/embed/k7X5uJ_t_y8?rel=0&modestbranding=17${item.videoID}" target="_blank" style="text-decoration: none; margin-top: 5px; display: block;">
-                <span style="font-size: 14px; color: #d97a1e;">▶️</span>
-            </a>
-        ` : ""}
+${item.videoID ? `
+    <a href="https://www.youtube.com/watch?v=${item.videoID}" target="_blank" style="text-decoration: none; margin-top: 5px; display: block;">
+        <span style="font-size: 14px; color: #d97a1e;">▶️</span>
+    </a>
+` : ""}
     </div>
 `;
         }).join('')}
