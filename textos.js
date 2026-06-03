@@ -1655,7 +1655,7 @@ CaminhodeVida: {
     <p>Você enfrentará desafios que testarão seu sistema nervoso e sua estabilidade emocional, pois opera em uma "voltagem" superior à média. O sucesso virá quando você aprender a aterrar suas visões, transformando seus insights em ações práticas que inspirem outros. Sua presença é um convite ao progresso mental e espiritual, agindo como um catalisador de transformações profundas por onde passa.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No seu melhor, você é uma fonte de inspiração pura, possuindo um magnetismo intuitivo, ética superior e a capacidade de revelar verdades que mudam vidas. É o guia que aponta o futuro.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A alta carga energética pode gerar ansiedade extrema, fanatismo ou desconexão com a realidade prática. Pode haver uma tendência a se sentir superior ou, ao contrário, a se retrair por medo do próprio poder.</p>`,
-      videoID: "https://www.youtube.com/embed/Ls5Ryzh6iRg"
+      videoID: "Ls5Ryzh6iRg"
     },
     22: {
      conteudo:`<h3>Caminho de Vida 22 - A Trilha da Maestria Realizadora e Construção Global</h3>
