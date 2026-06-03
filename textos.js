@@ -12,7 +12,8 @@ introducoes: {
     <p>Basicamente, quando este conhecimento é corretamente entendido e aplicado, ele se torna um sistema de suporte que trabalha a seu favor. Você só precisa absorver as informações e aplicar as orientações em sua rotina para observar a mudança imediata na fluidez dos seus caminhos. É importante ressaltar que nada acontece ao acaso: o sucesso exige atitude, empenho e dedicação. No entanto, ao caminhar alinhado com sua vibração numérica, o esforço deixa de ser um fardo e passa a ser o motor de resultados que irão, genuinamente, impressionar você.</p>`,
 
         
-        graficos: ` 
+        graficos: {
+     conteudo:` 
     <p style="margin-bottom: 20px;">A <b>Análise de Potenciais</b> é o coração estratégico do seu estudo, onde consolidamos as vibrações fundamentais do seu nascimento, como Influência, Dia de Nascimento, Comportamento, Essência, Personalidade, Motivação e Destino. Diferente dos ciclos temporais, estes gráficos revelam sua estrutura natural e permanente, mensurando sua real capacidade de entrega ao mundo através de ferramentas internas que definem como você processa a realidade para construir uma jornada de sucesso. Cada indicador reflete a união de suas forças nativas distribuídas nos quatro planos de ação, permitindo uma visão profunda de sua arquitetura humana.</p>
 
     <p style="margin-bottom: 20px;">No <b>Plano Mental</b>, os gráficos detalham sua <b>Estratégia e Visão de Futuro</b>, a <b>Lógica e Processamento</b> de dados, além de sua capacidade na <b>Tomada de Decisão</b>. Avaliamos aqui o seu potencial de <b>Aprendizado e Especialização</b>, bem como a agilidade na <b>Resolução de Problemas</b> complexos. Já no <b>Plano Emocional</b>, mergulhamos na sua <b>Conexão e Empatia</b>, na busca por <b>Alegria e Prazer</b>, e na manutenção do <b>Equilíbrio e Harmonia</b> interna. É neste campo que observamos a <b>Expressão da Essência</b> e a sua <b>Vitalidade Emocional</b>, que servem como combustível para todos os seus relacionamentos e bem-estar.</p>
@@ -20,7 +21,8 @@ introducoes: {
     <p style="margin-bottom: 20px;">O <b>Plano Físico</b> mensura o seu poder de realização prática, focando na <b>Execução e Força Bruta</b>, na sua capacidade de <b>Liderança e Território</b>, e no rigor da <b>Disciplina e Estrutura</b>. Analisamos também o seu <b>Dinamismo e Adaptação Física</b>, além da sua <b>Conexão com a Matéria</b>, fundamentais para manifestar seus projetos no mundo tangível. Complementando sua estrutura, o <b>Plano Intuitivo</b> revela sua <b>Sabedoria e Conhecimento Interno</b>, pautados por <b>Ética e Valores Morais</b> sólidos. Este plano rege a sua <b>Intuição e Condução</b> espiritual, permitindo a <b>Transcendência e Evolução</b> contínua através da <b>Resiliência da Alma</b> diante dos desafios.</p>
 
     <p style="margin-bottom: 20px;">Ao ler esses dados integrados, você compreende que não se trata apenas de números isolados, mas da harmonia total do seu propósito manifestado em cada detalhe de sua personalidade. Identificar onde sua energia flui com maestria e onde residem os pontos de superação é o que permite o ajuste fino de suas competências para alcançar a máxima performance. Este mapeamento serve como um guia definitivo para que você utilize cada uma dessas vinte facetas de forma consciente, transmutando resistências em habilidades latentes. Com esta clareza, você assume o comando total de seus potênciais, garantindo que sua trajetória seja marcada por uma presença autêntica, forte e plenamente alinhada com as leis vibracionais do seu ser.</p>`,
-
+     videoID: "Ls5Ryzh6iRg"
+    },
 
 
         
