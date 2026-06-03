@@ -1576,114 +1576,153 @@ Personalidade: {
 },
 // --- CAMINHO DE VIDA (DESTINO / ESTRADA DA VIDA / ROTA OPERACIONAL) ---
 CaminhodeVida: {
-    1: `<h3>Caminho de Vida 1 - A Estrada do Pioneirismo e da Autonomia</h3>
+    1:{
+     conteudo:`<h3>Caminho de Vida 1 - A Estrada do Pioneirismo e da Autonomia</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de vanguarda projetada para forjar uma individualidade inabalável. O destino o coloca em situações que exigem o "arranque" inicial, onde a dependência de terceiros é sistematicamente removida para que você descubra sua própria força motriz. É uma jornada de superação constante, onde o objetivo final é a conquista da liderança sobre si mesmo e sobre os projetos que você inicia.</p>
     <p>Ao longo da trajetória, você perceberá que a vida não lhe entrega caminhos prontos; ela lhe entrega o terreno virgem para que você construa a sua própria estrada. O sucesso para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, está na coragem de ser o primeiro a agir, mesmo sem garantias. Você encontrará realização ao ocupar cargos de comando ou ao empreender, pois sua mente funciona melhor quando tem a liberdade de ditar as regras do jogo e inovar processos estagnados.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Quando você opera no ápice desta vibração, manifesta uma autoconfiança magnética, originalidade criativa e uma resiliência que inspira outros a saírem da inércia. É o líder que desbrava e prospera pela própria competência.</p>
-    <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O excesso dessa energia pode gerar comportamentos egocêntricos, autoritarismo ou uma impaciência agressiva com quem não acompanha seu ritmo. O isolamento por orgulho é o principal obstáculo a ser monitorado nesta rota.</p>`,
+    <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O excesso dessa energia pode gerar comportamentos egocêntricos, autoritarismo ou uma impaciência agressiva com quem não acompanha seu ritmo. O isolamento por orgulho é o principal obstáculo a ser monitorado nesta rota.</p> `,  
+         videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
 
-    2: `<h3>Caminho de Vida 2 - A Trilha da Cooperação e do Equilíbrio Sistêmico</h3>
+    2:{
+     conteudo: `    <h3>Caminho de Vida 2 - A Trilha da Cooperação e do Equilíbrio Sistêmico</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de diplomacia e integração. Diferente da rota individualista, seu destino exige que você aprenda a operar dentro de sistemas e parcerias, desenvolvendo uma sensibilidade estratégica para unir partes divergentes. É a jornada de quem se torna indispensável não pelo barulho que faz, mas pela precisão com que harmoniza o ambiente e as relações ao seu redor.</p>
     <p>A vida trará situações onde a força bruta falhará, mas o tato social e a mediação vencerão. Você descobrirá que sua maior influência ocorre nos bastidores, como o conselheiro estratégico ou o parceiro ideal. O sucesso virá através da habilidade de perceber nuances e detalhes que escapam à maioria, permitindo que você ajuste as engrenagens da vida para que tudo flua sem atritos desnecessários.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No seu melhor, você é o mestre da diplomacia, possuindo uma intuição aguçada, paciência pedagógica e um senso de justiça que pacifica qualquer conflito. É a alma que traz coesão e segurança aos grupos.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco aqui é a anulação pessoal em favor do outro, a indecisão crônica ou a hipersensibilidade emocional. Pode haver uma tendência à dependência ou ao uso de manipulação emocional sutil para evitar confrontos diretos.</p>`,
-
-    3: `<h3>Caminho de Vida 3 - A Estrada da Comunicação e Expansão Criativa</h3>
+        videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    3: {
+     conteudo:`<h3>Caminho de Vida 3 - A Estrada da Comunicação e Expansão Criativa</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de autoexpressão e irradiação social. Seu destino foi desenhado para que você aprenda a canalizar a inteligência e a emoção em formas de comunicação que inspirem e conectem pessoas. É a estrada de quem veio para dar voz às ideias, transformando informações áridas em mensagens vibrantes e acessíveis.</p>
     <p>Durante a jornada, a rotina e o silêncio serão seus maiores desafios. A vida o empurrará para o palco — seja ele artístico, educacional ou comercial — exigindo que você use seu magnetismo pessoal para motivar o coletivo. O sucesso para você está na coragem de expressar sua verdade sem filtros excessivos, utilizando o bom humor e a criatividade como ferramentas de solução para problemas complexos.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta um brilho intelectual invejável, otimismo contagiante e uma versatilidade que permite transitar em qualquer esfera social. É a figura que traz leveza e soluções criativas onde havia tédio ou rigidez.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A dispersão de energia é o grande perigo. Pode haver uma tendência à superficialidade, à fofoca ou ao desperdício de talentos em prazeres imediatos. O medo da crítica pode gerar uma máscara social que esconde sua real profundidade.</p>`,
-
-    4: `<h3>Caminho de Vida 4 - A Trilha da Estrutura e Estabilidade Prática</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    4: {
+     conteudo:`<h3>Caminho de Vida 4 - A Trilha da Estrutura e Estabilidade Prática</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de construção lógica e manutenção da ordem. Seu destino exige um alto nível de disciplina, paciência e respeito aos processos fundamentais. É a rota de quem veio para materializar conceitos abstratos em resultados palpáveis, agindo como o arquiteto da segurança e da previsibilidade em um mundo caótico.</p>
     <p>Você entenderá que o progresso real não vem de saltos de sorte, mas de uma sequência técnica de esforços bem aplicados. O sucesso está ligado à sua capacidade de ser o porto seguro para si e para os outros, criando bases financeiras e familiares indestrutíveis. A vida testará sua resistência, mas recompensará sua lealdade e seu caráter inabalável com prestígio e autoridade sólida.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No ápice, você é o pilar da integridade, possuindo uma eficiência técnica absoluta, honestidade inquestionável e uma capacidade de trabalho que gera patrimônios duradouros. É a rocha que sustenta as estruturas sociais.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A rigidez mental e o medo da mudança podem torná-lo uma pessoa turrona ou limitada. Pode haver uma tendência ao excesso de trabalho (workaholic) ou a uma visão de mundo excessivamente pessimista e focada apenas nas dificuldades.</p>`,
-
-    5: `<h3>Caminho de Vida 5 - A Estrada da Adaptabilidade e Liberdade Dinâmica</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    5: {
+     conteudo:`<h3>Caminho de Vida 5 - A Estrada da Adaptabilidade e Liberdade Dinâmica</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de transição permanente e exploração de horizontes. Seu destino foi traçado para que você desenvolva a maestria sobre a mudança, aprendendo a navegar pela instabilidade com agilidade mental e coragem. É a estrada de quem veio para quebrar padrões obsoletos e promover a evolução através do movimento e do intercâmbio de experiências.</p>
     <p>Nesta trajetória, a estagnação é o sinal de que você saiu do seu trilho. A vida trará viagens, mudanças de carreira e novos campos de estudo para garantir que sua mente permaneça jovem e versátil. O sucesso virá da sua habilidade de ser um catalisador de novidades, agindo como o elo entre diferentes culturas e ideias, mantendo sempre sua autonomia como prioridade máxima.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta um magnetismo progressista, inteligência multifacetada e uma coragem invejável para se reinventar. É o agente de mudança que traz oxigênio e modernidade para ambientes conservadores.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A instabilidade irresponsável e a falta de foco são as armadilhas desta rota. Pode haver uma tendência a vícios (fuga da realidade), impaciência crônica ou o hábito de deixar projetos inacabados por tédio prematuro.</p>`,
-
-    6: `<h3>Caminho de Vida 6 - A Trilha da Responsabilidade e Harmonia Comunitária</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    6: {
+     conteudo:`<h3>Caminho de Vida 6 - A Trilha da Responsabilidade e Harmonia Comunitária</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de ajuste ético e serviço afetivo. Seu destino o coloca em posições onde você deve atuar como o centro de equilíbrio, seja na família ou na comunidade. É a jornada de quem veio para aprender a arte de cuidar sem sufocar, desenvolvendo uma liderança baseada no amor, na justiça e no bem-estar coletivo.</p>
     <p>A vida frequentemente lhe entregará fardos e responsabilidades alheias para testar sua capacidade de orientação. O sucesso para você está na criação de um ambiente onde a beleza e a ordem emocional prevaleçam. Você encontrará realização em áreas de aconselhamento, artes ou gestão humanitária, onde sua presença pacifica tensões e organiza o caos através do afeto estruturado.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No seu melhor, você é a personificação do idealismo prático, possuindo um senso estético refinado, uma bondade ativa e uma lealdade que o torna o porto seguro inquestionável de todos ao redor.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco é tornar-se excessivamente controlador ou intrometido na vida alheia sob o pretexto de "ajudar". Pode haver uma tendência ao perfeccionismo paralisante ou ao sacrifício excessivo que gera mágoa por falta de reconhecimento.</p>`,
-
-    7: `<h3>Caminho de Vida 7 - A Estrada da Sabedoria e Especialização Técnica</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    7: {
+     conteudo:`<h3>Caminho de Vida 7 - A Estrada da Sabedoria e Especialização Técnica</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de refinamento mental e introspecção estratégica. Seu destino foi desenhado para que você se torne uma autoridade no campo do conhecimento, mergulhando nas causas fundamentais da existência ou de uma ciência específica. É a estrada do sábio solitário que busca a perfeição e a verdade acima das aparências mundanas.</p>
     <p>A vida o convidará a períodos de silêncio e isolamento necessário para o estudo. O sucesso para você virá da sua especialização; quanto mais profundo for o seu saber, maior será sua influência. Você deve aprender a confiar na sua intuição lógica, agindo como um farol de lucidez em um mundo cheio de ilusões e informações superficiais.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta um discernimento aguçado, dignidade pessoal e uma mente científica/filosófica capaz de decifrar segredos complexos. É a referência de integridade intelectual e sabedoria silenciosa.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O isolamento excessivo pode levar à melancolia ou ao cinismo. Pode haver uma tendência ao orgulho intelectual, ao sarcasmo com os "menos dotados" ou a uma dificuldade extrema em expressar sentimentos simples.</p>`,
-
-    8: `<h3>Caminho de Vida 8 - A Trilha do Poder Executivo e Gestão de Resultados</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    8: {
+     conteudo:`<h3>Caminho de Vida 8 - A Trilha do Poder Executivo e Gestão de Resultados</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de autoridade material e justiça prática. Seu destino exige o domínio sobre as leis do sucesso, da economia e da organização de recursos em larga escala. É a rota de quem veio para exercer o comando e transformar grandes visões em prosperidade tangível e duradoura para si e para a sociedade.</p>
     <p>A trajetória testará sua ética e sua resistência sob pressão. Você lidará com grandes ambições e deverá aprender que o poder sem justiça é apenas opressão. O sucesso virá através da eficiência absoluta e da capacidade de gerir pessoas e capitais com firmeza. A vida o recompensará com prestígio, influência e abundância, desde que você mantenha o equilíbrio entre o ter e o ser.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No ápice, você é o gestor vitorioso, possuindo uma visão estratégica monumental, coragem executiva e uma capacidade de gerar riqueza que beneficia comunidades inteiras. É o líder que realiza o impossível.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A ambição desmedida pode gerar ganância ou falta de escrúpulos. Pode haver uma tendência ao materialismo excessivo, à arrogância de poder ou a negligenciar a vida emocional em prol da conta bancária.</p>`,
-
-    9: `<h3>Caminho de Vida 9 - A Estrada do Humanitarismo e Conclusão de Ciclos</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    9: {
+     conteudo:`<h3>Caminho de Vida 9 - A Estrada do Humanitarismo e Conclusão de Ciclos</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de amor universal e desprendimento. Seu destino é marcado pela necessidade de servir ao coletivo e de compreender a vida sob uma perspectiva espiritual e humanitária. É a estrada de quem veio para encerrar ciclos antigos, curar feridas sociais e inspirar através de uma generosidade que não conhece fronteiras.</p>
     <p>Nesta jornada, a vida lhe pedirá para abrir mão de interesses puramente egoístas em favor de causas maiores. O sucesso para você não será medido pelo que você acumula, mas pelo impacto transformador que você deixa na alma das pessoas. Você terá proteção espiritual e reconhecimento enquanto agir como o guia compassivo que oferece sabedoria e amparo aos que buscam direção.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma tolerância infinita, carisma altruísta e uma sabedoria que parece vir de eras passadas. É a alma que traz esperança e regeneração para a humanidade através do exemplo vivo.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco é cair no papel de "vítima" ou de mártir incompreendido. Pode haver uma tendência à dispersão emocional, a viver no passado ou a uma dificuldade em lidar com os limites práticos da realidade material.</p>`,
-
-    11: `<h3>Caminho de Vida 11 - A Estrada da Intuição Visionária e Despertar</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    11: {
+     conteudo:`<h3>Caminho de Vida 11 - A Estrada da Intuição Visionária e Despertar</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de altíssima frequência vibracional, focada no despertar da consciência coletiva. Seu destino exige que você atue como um canal de ideias inovadoras e espiritualizadas, trazendo luz para situações obscuras através de uma intuição que beira o profético. É a jornada do visionário que não se contenta com a realidade comum.</p>
     <p>Você enfrentará desafios que testarão seu sistema nervoso e sua estabilidade emocional, pois opera em uma "voltagem" superior à média. O sucesso virá quando você aprender a aterrar suas visões, transformando seus insights em ações práticas que inspirem outros. Sua presença é um convite ao progresso mental e espiritual, agindo como um catalisador de transformações profundas por onde passa.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No seu melhor, você é uma fonte de inspiração pura, possuindo um magnetismo intuitivo, ética superior e a capacidade de revelar verdades que mudam vidas. É o guia que aponta o futuro.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A alta carga energética pode gerar ansiedade extrema, fanatismo ou desconexão com a realidade prática. Pode haver uma tendência a se sentir superior ou, ao contrário, a se retrair por medo do próprio poder.</p>`,
-
-    22: `<h3>Caminho de Vida 22 - A Trilha da Maestria Realizadora e Construção Global</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    22: {
+     conteudo:`<h3>Caminho de Vida 22 - A Trilha da Maestria Realizadora e Construção Global</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é a rota do "Mestre Construtor". Seu destino é um dos mais potentes da numerologia, exigindo que você materialize sonhos monumentais em estruturas concretas e funcionais que beneficiem a humanidade em larga escala. É a jornada de quem veio para erguer impérios éticos, corporações humanitárias ou sistemas de progresso duradouro.</p>
     <p>A trajetória exigirá de você uma disciplina absoluta e uma visão estratégica fora do comum. Você não deve se contentar com o pequeno; sua missão é o macro. O sucesso virá da união entre o idealismo mais elevado e a execução técnica mais rigorosa. A vida lhe dará os recursos e a autoridade necessários, desde que você mantenha o foco no bem comum e na construção de um futuro melhor para todos.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma capacidade produtiva gigante, resiliência inabalável e a genialidade de organizar o caos em progresso material. É a figura que constrói o que parecia impossível.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco é o mau uso do imenso poder pessoal para fins puramente egoístas ou destrutivos. Pode haver uma tendência à depressão por não conseguir atingir as próprias expectativas monumentais ou ao materialismo cínico.</p>`,
-
-    33: `<h3>Caminho de Vida 33 - A Estrada da Cura Crística e Serviço Supremo</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    33: {
+     conteudo:`<h3>Caminho de Vida 33 - A Estrada da Cura Crística e Serviço Supremo</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, representa a maestria do amor em ação. Seu destino é uma rota de serviço abnegado e proteção universal, onde sua função é atuar como um pilar de sustentação espiritual e emocional para todos os seres. É a jornada de quem veio para ensinar, curar e harmonizar a vida através do sacrifício consciente e da bondade infinita.</p>
     <p>A vida o colocará em situações onde seu conforto pessoal será secundário em relação às necessidades do coletivo. O sucesso para você é a paz de espírito que vem da entrega total a uma causa nobre. Você será reconhecido como uma autoridade moral e um guia amoroso, cuja simples presença pacifica conflitos e restaura a esperança. É a estrada da evolução final através da compaixão absoluta.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No ápice, você é a personificação do amor incondicional, possuindo uma sabedoria que educa e cura sem julgamentos. É o mestre que transforma a dor em luz e o desespero em paz.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O peso da responsabilidade pode gerar exaustão crônica ou uma tendência ao martírio desnecessário. Pode haver dificuldade em colocar limites, resultando em ser explorado por pessoas que se aproveitam de sua generosidade.</p>`,
-
-    44: `<h3>Caminho de Vida 44 - A Rota da Estrutura Sistêmica e Governança Superior</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    44: {
+     conteudo:`<h3>Caminho de Vida 44 - A Rota da Estrutura Sistêmica e Governança Superior</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de autoridade monumental e gestão de alta complexidade. Seu destino exige que você se torne o guardião das estruturas fundamentais da sociedade, agindo com uma disciplina e uma ética que transcendem o padrão comum. É a rota de quem veio para estabelecer a ordem em níveis institucionais ou corporativos de escala global.</p>
     <p>A trajetória exigirá um domínio absoluto sobre a matéria e sobre os próprios instintos. Você será testado na sua capacidade de manter a justiça em meio ao grande poder. O sucesso virá através da construção de sistemas tão sólidos que sobrevivam ao tempo, garantindo a estabilidade e o progresso de gerações. Sua missão é ser o alicerce invisível mas indestrutível que permite que a civilização avance com segurança.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma eficiência técnica soberana, autoconfiança de aço e a capacidade de gerir impérios com justiça. É o arquiteto do progresso estável e da abundância ética.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A tendência ao autoritarismo implacável ou à obsessão pelo controle total são perigos reais. Pode haver um endurecimento do coração, focando apenas nos resultados frios e esquecendo-se da humanidade envolvida nos processos.</p>`,
-
-    55: `<h3>Caminho de Vida 55 - A Estrada da Revolução Mental e Liderança Futurista</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    55: {
+     conteudo:`<h3>Caminho de Vida 55 - A Estrada da Revolução Mental e Liderança Futurista</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de aceleração e transmutação. Seu destino o empurra para a vanguarda da evolução humana, exigindo que você atue como um catalisador de mudanças radicais na forma como as pessoas pensam e vivem. É a estrada do revolucionário magnético que utiliza a inteligência e a liberdade para romper as correntes da tradição obsoleta.</p>
     <p>A vida trará situações de alta voltagem que exigirão decisões rápidas e uma adaptabilidade quase sobre-humana. O sucesso virá quando você liderar movimentos de transição — seja na tecnologia, na ciência ou no comportamento social. Você deve aprender a domar sua própria eletricidade interna para não se queimar, agindo como o guia que abre o portal para uma nova era de consciência e liberdade.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você possui uma mente brilhante, carisma elétrico e a coragem de um pioneiro espacial. É o agente que transforma o impossível em rotina e motiva multidões a buscarem sua própria evolução.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A instabilidade extrema e o risco de surtos de ansiedade por excesso de estímulos. Pode haver uma tendência ao radicalismo fanático ou a uma imprudência que coloca em risco as próprias conquistas por um desejo impulsivo de mudança.</p>`,
-
-    66: `<h3>Caminho de Vida 66 - A Trilha da Harmonização Universal e Justiça Afetiva</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    66: {
+     conteudo:`<h3>Caminho de Vida 66 - A Trilha da Harmonização Universal e Justiça Afetiva</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de responsabilidade amorosa elevada à potência máxima. Seu destino exige que você atue como o "Coração do Mundo", curando feridas sociais e familiares através de um senso de justiça que nasce do afeto profundo. É a jornada de quem veio para estabelecer a paz e a beleza em escala comunitária e planetária.</p>
     <p>Você será chamado a assumir o papel de protetor de grupos inteiros. O sucesso virá da sua habilidade em harmonizar interesses divergentes através da sua autoridade moral benevolente. A vida testará sua capacidade de doação, mas lhe entregará uma influência magnética capaz de desarmar qualquer conflito. Sua missão é provar que a ética e o amor são os únicos alicerces capazes de sustentar uma sociedade justa e próspera.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma bondade mística, elegância de caráter e a força de um guardião planetário. É a alma que regenera ambientes e restaura a dignidade humana através do serviço devotado.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O perigo é o sacrifício cego que leva à anulação total do eu. Pode haver uma tendência a carregar o mundo nas costas e desenvolver um ressentimento oculto por ninguém conseguir retribuir sua imensa dedicação.</p>`,
-
-    77: `<h3>Caminho de Vida 77 - A Estrada da Revelação e Maestria Espiritual Técnica</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    77: {
+     conteudo:`<h3>Caminho de Vida 77 - A Estrada da Revelação e Maestria Espiritual Técnica</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma rota de profundidade absoluta e decodificação das leis universais. Seu destino exige que você una a mente científica mais rigorosa à intuição espiritual mais elevada. É a estrada do místico técnico, aquele que não apenas crê, mas compreende matematicamente a mecânica da vida e da alma.</p>
     <p>A trajetória o levará a patamares de sabedoria que podem gerar um sentimento de isolamento do mundo comum. O sucesso virá da sua coragem em ser um "pesquisador do invisível", revelando verdades que libertam a consciência humana das amarras do materialismo cego. Você deve agir como uma autoridade de luz, cujas análises precisas dissipam a ignorância e apontam a rota da perfeição interna.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você possui uma lucidez inatacável, dignidade soberana e a sabedoria de um mestre iluminado. É a referência de verdade pura e independência mental absoluta.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O isolamento pode se tornar um abismo de solidão e frieza emocional. O risco é o desenvolvimento de uma arrogância espiritual ou um ceticismo ácido que o impede de se conectar com a simplicidade da vida humana.</p>`,
-
-    88: `<h3>Caminho de Vida 88 - A Trilha da Prosperidade Ética e Poder Visionário</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    88: {
+     conteudo:`<h3>Caminho de Vida 88 - A Trilha da Prosperidade Ética e Poder Visionário</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, é uma estrada de comando supremo sobre o fluxo de energia e recursos. Seu destino exige que você atue como o "Executivo da Providência", organizando o sucesso material de forma que ele se torne um veículo para a evolução coletiva. É a rota de quem veio para gerir o poder e a abundância sob o rigor da lei espiritual de causa e efeito.</p>
     <p>Você lidará com grandes somas de recursos, poder e influência. O sucesso virá da sua capacidade de ser um canal de prosperidade que beneficia a todos, mantendo um senso de justiça inquebrantável. A vida o recompensará com um prestígio monumental e vitórias inatacáveis, desde que seu comando seja exercido com a consciência de que você é um administrador da abundância universal, e não apenas seu dono.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma eficácia vitoriosa, coragem para tomar decisões de impacto global e uma força de realização que transforma a realidade física. É o líder que traz o "céu à terra" através do trabalho justo.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco de cair no materialismo implacável ou na ganância que corrompe o espírito. Pode haver uma obsessão pelo sucesso a qualquer custo, resultando em uma vida de ouro, mas vazia de sentido emocional.</p>`,
-
-    99: `<h3>Caminho de Vida 99 - A Estrada da Transcendência e Amor Crístico Final</h3>
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    },
+    99: {
+     conteudo:`<h3>Caminho de Vida 99 - A Estrada da Transcendência e Amor Crístico Final</h3>
     <p>O seu caminho de vida, <strong>MASCULINO-FEMININO-NEUTRO</strong>, representa o ápice da experiência da alma nesta dimensão. Seu destino é uma rota de conclusão total de carmas e de entrega absoluta ao serviço da luz universal. É a estrada do guia crístico, aquele que veio para amar sem limites e auxiliar a humanidade em seu salto evolutivo final.</p>
     <p>Durante a jornada, você será testado no desapego total. Nada do que é pequeno ou egoísta permanecerá em seu caminho por muito tempo. O sucesso para você é o estado de iluminação que vem do serviço desinteressado. Você será uma fonte de inspiração final, agindo como o canal que verte compaixão e sabedoria sobre todas as dores do mundo. Sua recompensa é a paz suprema de quem cumpriu integralmente o propósito sagrado da existência.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você é a personificação da sabedoria eterna, possuindo um carisma que cura e uma tolerância que abraça o universo. É o farol de amor incondicional que brilha além do tempo.</p>
-    <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A dificuldade em aceitar as limitações do mundo material, podendo gerar um sentimento de inadequação ou desejo de "ir embora" cedo demais. O risco é a negligência com as necessidades básicas da vida em prol de um idealismo que flutua longe da realidade.</p>`
-},
+    <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A dificuldade em aceitar as limitações do mundo material, podendo gerar um sentimento de inadequação ou desejo de "ir embora" cedo demais. O risco é a negligência com as necessidades básicas da vida em prol de um idealismo que flutua longe da realidade.</p>`,
+     
+      videoID: "ID_DO_SEU_VIDEO_AQUI"
+    }
+    },
 
 // --- PROPÓSITO (MISSÃO DE VIDA) ---
 Propósito: {
