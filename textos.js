@@ -1582,7 +1582,7 @@ CaminhodeVida: {
     <p>Ao longo da trajetória, você perceberá que a vida não lhe entrega caminhos prontos; ela lhe entrega o terreno virgem para que você construa a sua própria estrada. O sucesso para você, <strong>MASCULINO-FEMININO-NEUTRO</strong>, está na coragem de ser o primeiro a agir, mesmo sem garantias. Você encontrará realização ao ocupar cargos de comando ou ao empreender, pois sua mente funciona melhor quando tem a liberdade de ditar as regras do jogo e inovar processos estagnados.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Quando você opera no ápice desta vibração, manifesta uma autoconfiança magnética, originalidade criativa e uma resiliência que inspira outros a saírem da inércia. É o líder que desbrava e prospera pela própria competência.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O excesso dessa energia pode gerar comportamentos egocêntricos, autoritarismo ou uma impaciência agressiva com quem não acompanha seu ritmo. O isolamento por orgulho é o principal obstáculo a ser monitorado nesta rota.</p> `,  
-         videoID: "ID_DO_SEU_VIDEO_AQUI"
+         videoID: "https://www.youtube.com/embed/"
     },
 
     2:{
@@ -1591,7 +1591,7 @@ CaminhodeVida: {
     <p>A vida trará situações onde a força bruta falhará, mas o tato social e a mediação vencerão. Você descobrirá que sua maior influência ocorre nos bastidores, como o conselheiro estratégico ou o parceiro ideal. O sucesso virá através da habilidade de perceber nuances e detalhes que escapam à maioria, permitindo que você ajuste as engrenagens da vida para que tudo flua sem atritos desnecessários.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No seu melhor, você é o mestre da diplomacia, possuindo uma intuição aguçada, paciência pedagógica e um senso de justiça que pacifica qualquer conflito. É a alma que traz coesão e segurança aos grupos.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco aqui é a anulação pessoal em favor do outro, a indecisão crônica ou a hipersensibilidade emocional. Pode haver uma tendência à dependência ou ao uso de manipulação emocional sutil para evitar confrontos diretos.</p>`,
-        videoID: "ID_DO_SEU_VIDEO_AQUI"
+        videoID: "https://www.youtube.com/embed/Ls5Ryzh6iRg"
     },
     3: {
      conteudo:`<h3>Caminho de Vida 3 - A Estrada da Comunicação e Expansão Criativa</h3>
@@ -1599,7 +1599,7 @@ CaminhodeVida: {
     <p>Durante a jornada, a rotina e o silêncio serão seus maiores desafios. A vida o empurrará para o palco — seja ele artístico, educacional ou comercial — exigindo que você use seu magnetismo pessoal para motivar o coletivo. O sucesso para você está na coragem de expressar sua verdade sem filtros excessivos, utilizando o bom humor e a criatividade como ferramentas de solução para problemas complexos.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta um brilho intelectual invejável, otimismo contagiante e uma versatilidade que permite transitar em qualquer esfera social. É a figura que traz leveza e soluções criativas onde havia tédio ou rigidez.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A dispersão de energia é o grande perigo. Pode haver uma tendência à superficialidade, à fofoca ou ao desperdício de talentos em prazeres imediatos. O medo da crítica pode gerar uma máscara social que esconde sua real profundidade.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     4: {
      conteudo:`<h3>Caminho de Vida 4 - A Trilha da Estrutura e Estabilidade Prática</h3>
@@ -1607,7 +1607,7 @@ CaminhodeVida: {
     <p>Você entenderá que o progresso real não vem de saltos de sorte, mas de uma sequência técnica de esforços bem aplicados. O sucesso está ligado à sua capacidade de ser o porto seguro para si e para os outros, criando bases financeiras e familiares indestrutíveis. A vida testará sua resistência, mas recompensará sua lealdade e seu caráter inabalável com prestígio e autoridade sólida.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No ápice, você é o pilar da integridade, possuindo uma eficiência técnica absoluta, honestidade inquestionável e uma capacidade de trabalho que gera patrimônios duradouros. É a rocha que sustenta as estruturas sociais.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A rigidez mental e o medo da mudança podem torná-lo uma pessoa turrona ou limitada. Pode haver uma tendência ao excesso de trabalho (workaholic) ou a uma visão de mundo excessivamente pessimista e focada apenas nas dificuldades.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     5: {
      conteudo:`<h3>Caminho de Vida 5 - A Estrada da Adaptabilidade e Liberdade Dinâmica</h3>
@@ -1615,7 +1615,7 @@ CaminhodeVida: {
     <p>Nesta trajetória, a estagnação é o sinal de que você saiu do seu trilho. A vida trará viagens, mudanças de carreira e novos campos de estudo para garantir que sua mente permaneça jovem e versátil. O sucesso virá da sua habilidade de ser um catalisador de novidades, agindo como o elo entre diferentes culturas e ideias, mantendo sempre sua autonomia como prioridade máxima.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta um magnetismo progressista, inteligência multifacetada e uma coragem invejável para se reinventar. É o agente de mudança que traz oxigênio e modernidade para ambientes conservadores.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A instabilidade irresponsável e a falta de foco são as armadilhas desta rota. Pode haver uma tendência a vícios (fuga da realidade), impaciência crônica ou o hábito de deixar projetos inacabados por tédio prematuro.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     6: {
      conteudo:`<h3>Caminho de Vida 6 - A Trilha da Responsabilidade e Harmonia Comunitária</h3>
@@ -1623,7 +1623,7 @@ CaminhodeVida: {
     <p>A vida frequentemente lhe entregará fardos e responsabilidades alheias para testar sua capacidade de orientação. O sucesso para você está na criação de um ambiente onde a beleza e a ordem emocional prevaleçam. Você encontrará realização em áreas de aconselhamento, artes ou gestão humanitária, onde sua presença pacifica tensões e organiza o caos através do afeto estruturado.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No seu melhor, você é a personificação do idealismo prático, possuindo um senso estético refinado, uma bondade ativa e uma lealdade que o torna o porto seguro inquestionável de todos ao redor.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco é tornar-se excessivamente controlador ou intrometido na vida alheia sob o pretexto de "ajudar". Pode haver uma tendência ao perfeccionismo paralisante ou ao sacrifício excessivo que gera mágoa por falta de reconhecimento.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     7: {
      conteudo:`<h3>Caminho de Vida 7 - A Estrada da Sabedoria e Especialização Técnica</h3>
@@ -1631,7 +1631,7 @@ CaminhodeVida: {
     <p>A vida o convidará a períodos de silêncio e isolamento necessário para o estudo. O sucesso para você virá da sua especialização; quanto mais profundo for o seu saber, maior será sua influência. Você deve aprender a confiar na sua intuição lógica, agindo como um farol de lucidez em um mundo cheio de ilusões e informações superficiais.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta um discernimento aguçado, dignidade pessoal e uma mente científica/filosófica capaz de decifrar segredos complexos. É a referência de integridade intelectual e sabedoria silenciosa.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O isolamento excessivo pode levar à melancolia ou ao cinismo. Pode haver uma tendência ao orgulho intelectual, ao sarcasmo com os "menos dotados" ou a uma dificuldade extrema em expressar sentimentos simples.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     8: {
      conteudo:`<h3>Caminho de Vida 8 - A Trilha do Poder Executivo e Gestão de Resultados</h3>
@@ -1639,7 +1639,7 @@ CaminhodeVida: {
     <p>A trajetória testará sua ética e sua resistência sob pressão. Você lidará com grandes ambições e deverá aprender que o poder sem justiça é apenas opressão. O sucesso virá através da eficiência absoluta e da capacidade de gerir pessoas e capitais com firmeza. A vida o recompensará com prestígio, influência e abundância, desde que você mantenha o equilíbrio entre o ter e o ser.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No ápice, você é o gestor vitorioso, possuindo uma visão estratégica monumental, coragem executiva e uma capacidade de gerar riqueza que beneficia comunidades inteiras. É o líder que realiza o impossível.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A ambição desmedida pode gerar ganância ou falta de escrúpulos. Pode haver uma tendência ao materialismo excessivo, à arrogância de poder ou a negligenciar a vida emocional em prol da conta bancária.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     9: {
      conteudo:`<h3>Caminho de Vida 9 - A Estrada do Humanitarismo e Conclusão de Ciclos</h3>
@@ -1647,7 +1647,7 @@ CaminhodeVida: {
     <p>Nesta jornada, a vida lhe pedirá para abrir mão de interesses puramente egoístas em favor de causas maiores. O sucesso para você não será medido pelo que você acumula, mas pelo impacto transformador que você deixa na alma das pessoas. Você terá proteção espiritual e reconhecimento enquanto agir como o guia compassivo que oferece sabedoria e amparo aos que buscam direção.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma tolerância infinita, carisma altruísta e uma sabedoria que parece vir de eras passadas. É a alma que traz esperança e regeneração para a humanidade através do exemplo vivo.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco é cair no papel de "vítima" ou de mártir incompreendido. Pode haver uma tendência à dispersão emocional, a viver no passado ou a uma dificuldade em lidar com os limites práticos da realidade material.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     11: {
      conteudo:`<h3>Caminho de Vida 11 - A Estrada da Intuição Visionária e Despertar</h3>
@@ -1655,7 +1655,7 @@ CaminhodeVida: {
     <p>Você enfrentará desafios que testarão seu sistema nervoso e sua estabilidade emocional, pois opera em uma "voltagem" superior à média. O sucesso virá quando você aprender a aterrar suas visões, transformando seus insights em ações práticas que inspirem outros. Sua presença é um convite ao progresso mental e espiritual, agindo como um catalisador de transformações profundas por onde passa.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No seu melhor, você é uma fonte de inspiração pura, possuindo um magnetismo intuitivo, ética superior e a capacidade de revelar verdades que mudam vidas. É o guia que aponta o futuro.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A alta carga energética pode gerar ansiedade extrema, fanatismo ou desconexão com a realidade prática. Pode haver uma tendência a se sentir superior ou, ao contrário, a se retrair por medo do próprio poder.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/Ls5Ryzh6iRg"
     },
     22: {
      conteudo:`<h3>Caminho de Vida 22 - A Trilha da Maestria Realizadora e Construção Global</h3>
@@ -1663,7 +1663,7 @@ CaminhodeVida: {
     <p>A trajetória exigirá de você uma disciplina absoluta e uma visão estratégica fora do comum. Você não deve se contentar com o pequeno; sua missão é o macro. O sucesso virá da união entre o idealismo mais elevado e a execução técnica mais rigorosa. A vida lhe dará os recursos e a autoridade necessários, desde que você mantenha o foco no bem comum e na construção de um futuro melhor para todos.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma capacidade produtiva gigante, resiliência inabalável e a genialidade de organizar o caos em progresso material. É a figura que constrói o que parecia impossível.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco é o mau uso do imenso poder pessoal para fins puramente egoístas ou destrutivos. Pode haver uma tendência à depressão por não conseguir atingir as próprias expectativas monumentais ou ao materialismo cínico.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     33: {
      conteudo:`<h3>Caminho de Vida 33 - A Estrada da Cura Crística e Serviço Supremo</h3>
@@ -1671,7 +1671,7 @@ CaminhodeVida: {
     <p>A vida o colocará em situações onde seu conforto pessoal será secundário em relação às necessidades do coletivo. O sucesso para você é a paz de espírito que vem da entrega total a uma causa nobre. Você será reconhecido como uma autoridade moral e um guia amoroso, cuja simples presença pacifica conflitos e restaura a esperança. É a estrada da evolução final através da compaixão absoluta.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> No ápice, você é a personificação do amor incondicional, possuindo uma sabedoria que educa e cura sem julgamentos. É o mestre que transforma a dor em luz e o desespero em paz.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O peso da responsabilidade pode gerar exaustão crônica ou uma tendência ao martírio desnecessário. Pode haver dificuldade em colocar limites, resultando em ser explorado por pessoas que se aproveitam de sua generosidade.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     44: {
      conteudo:`<h3>Caminho de Vida 44 - A Rota da Estrutura Sistêmica e Governança Superior</h3>
@@ -1679,7 +1679,7 @@ CaminhodeVida: {
     <p>A trajetória exigirá um domínio absoluto sobre a matéria e sobre os próprios instintos. Você será testado na sua capacidade de manter a justiça em meio ao grande poder. O sucesso virá através da construção de sistemas tão sólidos que sobrevivam ao tempo, garantindo a estabilidade e o progresso de gerações. Sua missão é ser o alicerce invisível mas indestrutível que permite que a civilização avance com segurança.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma eficiência técnica soberana, autoconfiança de aço e a capacidade de gerir impérios com justiça. É o arquiteto do progresso estável e da abundância ética.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A tendência ao autoritarismo implacável ou à obsessão pelo controle total são perigos reais. Pode haver um endurecimento do coração, focando apenas nos resultados frios e esquecendo-se da humanidade envolvida nos processos.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     55: {
      conteudo:`<h3>Caminho de Vida 55 - A Estrada da Revolução Mental e Liderança Futurista</h3>
@@ -1687,7 +1687,7 @@ CaminhodeVida: {
     <p>A vida trará situações de alta voltagem que exigirão decisões rápidas e uma adaptabilidade quase sobre-humana. O sucesso virá quando você liderar movimentos de transição — seja na tecnologia, na ciência ou no comportamento social. Você deve aprender a domar sua própria eletricidade interna para não se queimar, agindo como o guia que abre o portal para uma nova era de consciência e liberdade.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você possui uma mente brilhante, carisma elétrico e a coragem de um pioneiro espacial. É o agente que transforma o impossível em rotina e motiva multidões a buscarem sua própria evolução.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A instabilidade extrema e o risco de surtos de ansiedade por excesso de estímulos. Pode haver uma tendência ao radicalismo fanático ou a uma imprudência que coloca em risco as próprias conquistas por um desejo impulsivo de mudança.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     66: {
      conteudo:`<h3>Caminho de Vida 66 - A Trilha da Harmonização Universal e Justiça Afetiva</h3>
@@ -1695,7 +1695,7 @@ CaminhodeVida: {
     <p>Você será chamado a assumir o papel de protetor de grupos inteiros. O sucesso virá da sua habilidade em harmonizar interesses divergentes através da sua autoridade moral benevolente. A vida testará sua capacidade de doação, mas lhe entregará uma influência magnética capaz de desarmar qualquer conflito. Sua missão é provar que a ética e o amor são os únicos alicerces capazes de sustentar uma sociedade justa e próspera.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma bondade mística, elegância de caráter e a força de um guardião planetário. É a alma que regenera ambientes e restaura a dignidade humana através do serviço devotado.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O perigo é o sacrifício cego que leva à anulação total do eu. Pode haver uma tendência a carregar o mundo nas costas e desenvolver um ressentimento oculto por ninguém conseguir retribuir sua imensa dedicação.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     77: {
      conteudo:`<h3>Caminho de Vida 77 - A Estrada da Revelação e Maestria Espiritual Técnica</h3>
@@ -1703,7 +1703,7 @@ CaminhodeVida: {
     <p>A trajetória o levará a patamares de sabedoria que podem gerar um sentimento de isolamento do mundo comum. O sucesso virá da sua coragem em ser um "pesquisador do invisível", revelando verdades que libertam a consciência humana das amarras do materialismo cego. Você deve agir como uma autoridade de luz, cujas análises precisas dissipam a ignorância e apontam a rota da perfeição interna.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você possui uma lucidez inatacável, dignidade soberana e a sabedoria de um mestre iluminado. É a referência de verdade pura e independência mental absoluta.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O isolamento pode se tornar um abismo de solidão e frieza emocional. O risco é o desenvolvimento de uma arrogância espiritual ou um ceticismo ácido que o impede de se conectar com a simplicidade da vida humana.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     88: {
      conteudo:`<h3>Caminho de Vida 88 - A Trilha da Prosperidade Ética e Poder Visionário</h3>
@@ -1711,7 +1711,7 @@ CaminhodeVida: {
     <p>Você lidará com grandes somas de recursos, poder e influência. O sucesso virá da sua capacidade de ser um canal de prosperidade que beneficia a todos, mantendo um senso de justiça inquebrantável. A vida o recompensará com um prestígio monumental e vitórias inatacáveis, desde que seu comando seja exercido com a consciência de que você é um administrador da abundância universal, e não apenas seu dono.</p>
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você manifesta uma eficácia vitoriosa, coragem para tomar decisões de impacto global e uma força de realização que transforma a realidade física. É o líder que traz o "céu à terra" através do trabalho justo.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> O risco de cair no materialismo implacável ou na ganância que corrompe o espírito. Pode haver uma obsessão pelo sucesso a qualquer custo, resultando em uma vida de ouro, mas vazia de sentido emocional.</p>`,
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     },
     99: {
      conteudo:`<h3>Caminho de Vida 99 - A Estrada da Transcendência e Amor Crístico Final</h3>
@@ -1720,7 +1720,7 @@ CaminhodeVida: {
     <p><strong>Potencial de Expansão (Polaridade Positiva):</strong> Você é a personificação da sabedoria eterna, possuindo um carisma que cura e uma tolerância que abraça o universo. É o farol de amor incondicional que brilha além do tempo.</p>
     <p><strong>Desafios de Ajuste (Polaridade Negativa):</strong> A dificuldade em aceitar as limitações do mundo material, podendo gerar um sentimento de inadequação ou desejo de "ir embora" cedo demais. O risco é a negligência com as necessidades básicas da vida em prol de um idealismo que flutua longe da realidade.</p>`,
      
-      videoID: "ID_DO_SEU_VIDEO_AQUI"
+      videoID: "https://www.youtube.com/embed/"
     }
     },
 
