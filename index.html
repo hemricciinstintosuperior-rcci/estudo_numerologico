@@ -4349,7 +4349,7 @@ const listaItensSintese = [
     
     { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
     
-    { label: "Caminho de Vida", valor: res.CaminhodeVida },
+    { label: "Caminho de Vida", valor: res.CaminhodeVida, videoID: "Ls5Ryzh6iRg"},
     
     { label: "Propósito", valor: res.Propósito },
     
@@ -4427,27 +4427,35 @@ html += `
             if (exibicaoValor.toString().length > 5) fontSize = "18px";
             if (exibicaoValor.toString().length > 10) fontSize = "15px";
 
-            return `
-                <div style="
-                    border: 1px solid #eee; 
-                    border-top: 3px solid #d97a1e; 
-                    background: #ffffff; 
-                    padding: 8px 4px; 
-                    text-align: center; 
-                    border-radius: 4px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    min-height: 65px;
-                ">
-                    <div style="font-size: 12px; text-transform: uppercase; color: #000000; font-weight: bold; margin-bottom: 4px; line-height: 1.1;">
-                        ${item.label}
-                    </div>
-                    <div style="font-size: ${fontSize}; font-weight: bold; color: #d97a1e; word-break: break-word;">
-                        ${exibicaoValor}
-                    </div>
-                </div>
-            `;
+// ... dentro do seu .map() ...
+return `
+    <div style="
+        border: 1px solid #eee; 
+        border-top: 3px solid #d97a1e; 
+        background: #ffffff; 
+        padding: 8px 4px; 
+        text-align: center; 
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Garante que o play fique no fundo */
+        min-height: 80px;
+    ">
+        <div style="font-size: 12px; text-transform: uppercase; color: #000; font-weight: bold; margin-bottom: 4px;">
+            ${item.label}
+        </div>
+        
+        <div style="font-size: ${fontSize}; font-weight: bold; color: #d97a1e; word-break: break-word;">
+            ${exibicaoValor}
+        </div>
+
+        ${item.videoID ? `
+            <a href="https://www.youtube.com/embed/k7X5uJ_t_y8?rel=0&modestbranding=17${item.videoID}" target="_blank" style="text-decoration: none; margin-top: 5px; display: block;">
+                <span style="font-size: 14px; color: #d97a1e;">▶️</span>
+            </a>
+        ` : ""}
+    </div>
+`;
         }).join('')}
     </div>
 
