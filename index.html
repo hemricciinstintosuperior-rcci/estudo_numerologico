@@ -3324,6 +3324,23 @@ function verificarGêneroEGerar() {
     document.head.appendChild(scriptNovo);
 }
 
+
+function gerarPlayerYouTube(videoID) {
+    if (!videoID) return '';
+    
+    // O 'modestbranding' e 'rel=0' escondem as sugestões e logos do YouTube
+    return `
+    <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; border: 2px solid var(--gold); margin: 20px 0;">
+        <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            src="https://www.youtube.com/embed/${videoID}?rel=0&modestbranding=1&autohide=1" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>`;
+}
+
         
         
 function gerarMapaCompleto() {
@@ -4652,28 +4669,35 @@ const listaPremium = ["dia",  "essencia", "talento", "motivacao", "influencia", 
 listaPremium.forEach(chave => {
     const tituloBonito = nomesExibicao[chave] || chave;
 
-    
-// --- COLE ESTE BLOCO ACIMA DAS SUAS DIVS DE CLASSE PAGE ---
-// --- SEPARADOR LUXO COM PROTEÇÃO ANTI-ERRO ---
-html += `
-<div class="separador-luxo">
-    <div class="caixa-interna">
-        <h2>${tituloBonito}</h2>
+    // 1. Pega o dado do seu banco de textos
+    const resultado = textos[chave][res[chave]];
+
+    // 2. Extrai o conteúdo e o videoID (se existir)
+    // Se o resultado for objeto, pega o .conteudo; se for texto puro, usa ele mesmo
+    const conteudoFinal = (typeof resultado === 'object') ? resultado.conteudo : resultado;
+    const idDoVideo = (typeof resultado === 'object') ? resultado.videoID : null;
+
+    // --- SEPARADOR LUXO ---
+    html += `
+    <div class="separador-luxo">
+        <div class="caixa-interna">
+            <h2>${tituloBonito}</h2>
+        </div>
     </div>
-</div>
-`;
+    `;
 
-
-    
+    // --- PÁGINA COM O VÍDEO (SE HOUVER) ---
     html += `
         <div class="page">
             <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
             <div class="intro-texto">${textos.introducoes[chave] || ""}</div>
-            <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos[chave][res[chave]])}</div>
+            <div class="evitar-corte texto-res">
+                ${aplicarFiltroTexto(conteudoFinal)}
+                ${idDoVideo ? gerarPlayerYouTube(idDoVideo) : ""}
+            </div>
         </div>
     `;
-}); // <--- AQUI ESTAVA FALTANDO FECHAR O FOREACH
-
+});
 
 
 // Procure por essa parte no final do seu script principal:
@@ -5061,7 +5085,13 @@ html += `
 
 // ==========================================
 // BLOCO INDIVIDUAL: CAMINHO DE VIDA
-// ==========================================
+// --- IMPLEMENTAÇÃO DO VÍDEO NO CAMINHO DE VIDA ---
+const resCaminho = textos.CaminhodeVida[res.CaminhodeVida];
+
+// Verifica se o resultado é um objeto (novo formato) ou apenas string (antigo)
+const textoCaminho = (typeof resCaminho === 'object') ? resCaminho.conteudo : resCaminho;
+const videoCaminho = (typeof resCaminho === 'object') ? resCaminho.videoID : null;
+
 tituloBonito = "Caminho de Vida"; 
 html += `
 <div class="separador-luxo">
@@ -5072,7 +5102,10 @@ html += `
 <div class="page">
     <h2 class="titulo-topico" style="border-bottom: 2px solid var(--gold);">${tituloBonito}</h2>
     <div class="intro-texto">${textos.introducoes.CaminhodeVida || ""}</div>
-    <div class="evitar-corte texto-res">${aplicarFiltroTexto(textos.CaminhodeVida[res.CaminhodeVida])}</div>
+    <div class="evitar-corte texto-res">
+        ${aplicarFiltroTexto(textoCaminho)}
+        ${videoCaminho ? gerarPlayerYouTube(videoCaminho) : ""}
+    </div>
 </div>
 `;
 
