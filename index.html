@@ -4418,17 +4418,22 @@ ${listaItensSintese.map(item => {
     const itensParaTravar = ["Caminho de Vida", "Déficit Comportamental", "Subconsciente"];
     const estaTravado = itensParaTravar.includes(item.label);
 
-    let exibicaoValor = "--";
-    
-    // Lógica de formatação de valores que você já tem
-    if (Array.isArray(item.valor)) {
-        exibicaoValor = item.valor.join(" · ");
-    } else if (item.valor && typeof item.valor === 'object') {
-        exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
-    } else {
-        exibicaoValor = item.valor || "--";
-    }
+let exibicaoValor = "--";
+// ... (seu código de tratamento de Array/Objeto) ...
+exibicaoValor = item.valor || "--";
 
+// --- AQUI ESTÁ A CORREÇÃO ---
+// Garanta que fontSize sempre tenha um valor padrão (ex: "18px")
+let fontSize = "18px"; 
+let valorStr = exibicaoValor.toString();
+
+if (valorStr.length > 15) {
+    fontSize = "12px";
+} else if (valorStr.length > 10) {
+    fontSize = "15px";
+} else if (valorStr.length > 5) {
+    fontSize = "18px";
+}
 // ... dentro do seu .map() ...
 return `
     <div style="
