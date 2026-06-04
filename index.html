@@ -4356,9 +4356,9 @@ const listaItensSintese = [
     { label: "Maturidade", valor: res.Maturidade },
 
     { label: "Profissão", valor: formatarProfissoesSimples(res) },
-    
+  
     { label: "Ciclos da Vida", valor: res.ciclos },
-    
+ 
     { label: "Desafios", valor: res.desafios },
     
     { label: "Momentos de Decisão", valor: res.momentos },
@@ -4412,28 +4412,22 @@ html += `
         margin-top: 10px;
         flex-grow: 1;
     ">
-        ${listaItensSintese.map(item => {
-// ... dentro do seu .map(item => { ...
-let exibicaoValor = "--";
+${listaItensSintese.map(item => {
+    // 1. Defina aqui quais itens você quer travar
+    // Por exemplo, travando "Desejo Oculto", "Déficit Comportamental" e "Subconsciente"
+    const itensParaTravar = ["Caminho de Vida", "Déficit Comportamental", "Subconsciente"];
+    const estaTravado = itensParaTravar.includes(item.label);
 
-if (Array.isArray(item.valor)) {
-    // Se for um array (ex: [1, 3, 5]), junta com um espaço ou ponto
-    // Se forem muitos números, podemos usar um espaço simples para economizar espaço
-    exibicaoValor = item.valor.join(" · ");
-} else if (item.valor && typeof item.valor === 'object') {
-    exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
-} else {
-    exibicaoValor = item.valor || "--";
-}
-
-// Lógica de tamanho de fonte ajustada para arrays
-let fontSize = "20px";
-let valorStr = exibicaoValor.toString();
-
-if (valorStr.length > 15) fontSize = "12px"; // Se tiver muitos números, diminui bem a fonte
-else if (valorStr.length > 10) fontSize = "15px";
-else if (valorStr.length > 5) fontSize = "18px";
-// ... resto do seu return
+    let exibicaoValor = "--";
+    
+    // Lógica de formatação de valores que você já tem
+    if (Array.isArray(item.valor)) {
+        exibicaoValor = item.valor.join(" · ");
+    } else if (item.valor && typeof item.valor === 'object') {
+        exibicaoValor = Object.values(item.valor).filter(v => v !== "").join(" · ");
+    } else {
+        exibicaoValor = item.valor || "--";
+    }
 
 // ... dentro do seu .map() ...
 return `
