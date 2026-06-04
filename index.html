@@ -4413,57 +4413,46 @@ html += `
         flex-grow: 1;
     ">
 ${listaItensSintese.map(item => {
-    // 1. Defina aqui quais itens você quer travar
-    // Por exemplo, travando "Desejo Oculto", "Déficit Comportamental" e "Subconsciente"
-    const itensParaTravar = ["Caminho de Vida", "Déficit Comportamental", "Subconsciente"];
+    // 1. CONFIGURAÇÃO DA TRAVA (Adicione aqui o label exato que você quer travar)
+    const itensParaTravar = ["Caminho de Vida"]; 
     const estaTravado = itensParaTravar.includes(item.label);
 
-let exibicaoValor = "--";
-// ... (seu código de tratamento de Array/Objeto) ...
-exibicaoValor = item.valor || "--";
+    // 2. DECLARAÇÃO SEGURA DE VARIÁVEIS
+    let fontSize = "18px";
+    let exibicaoValor = "--";
 
-// --- AQUI ESTÁ A CORREÇÃO ---
-// Garanta que fontSize sempre tenha um valor padrão (ex: "18px")
-let fontSize = "18px"; 
-let valorStr = exibicaoValor.toString();
+    // 3. LÓGICA DE TRAVA
+    if (estaTravado) {
+        exibicaoValor = "🔒"; // Ou o texto que você quiser
+    } else {
+        // LÓGICA DE TRATAMENTO DE OBJETOS (Para Ciclos, Desafios, etc)
+        if (typeof item.valor === 'object' && item.valor !== null) {
+            // Se for objeto, tentamos extrair o conteúdo. 
+            // Se for um array ou objeto que não queremos ver como [object Object], 
+            // você pode customizar aqui:
+            exibicaoValor = Object.values(item.valor).join(" · ");
+        } else {
+            exibicaoValor = item.valor ? item.valor.toString() : "--";
+        }
+    }
 
-if (valorStr.length > 15) {
-    fontSize = "12px";
-} else if (valorStr.length > 10) {
-    fontSize = "15px";
-} else if (valorStr.length > 5) {
-    fontSize = "18px";
-}
-// ... dentro do seu .map() ...
-return `
-    <div style="
-        border: 1px solid #eee; 
-        border-top: 3px solid #d97a1e; 
-        background: #ffffff; 
-        padding: 8px 4px; 
-        text-align: center; 
-        border-radius: 4px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between; /* Garante que o play fique no fundo */
-        min-height: 80px;
-    ">
-        <div style="font-size: 12px; text-transform: uppercase; color: #000; font-weight: bold; margin-bottom: 4px;">
-            ${item.label}
+    // 4. LÓGICA DE FONTE
+    if (exibicaoValor.length > 15) fontSize = "12px";
+    else if (exibicaoValor.length > 10) fontSize = "15px";
+
+    // --- HTML FINAL ---
+    return `
+    <div style="... estilo do seu card ...">
+        <div style="...">${item.label}</div>
+        <div style="font-size: ${fontSize}; ...">
+            ${estaTravado ? '<span style="color:red;">BLOQUEADO</span>' : exibicaoValor}
         </div>
-        
-        <div style="font-size: ${fontSize}; font-weight: bold; color: #d97a1e; word-break: break-word;">
-            ${exibicaoValor}
-        </div>
-
-${item.videoID ? `
-    <a href="https://www.youtube.com/watch?v=${item.videoID}" target="_blank" style="text-decoration: none; margin-top: 5px; display: block;">
-        <span style="font-size: 14px; color: #d97a1e;">▶️</span>
-    </a>
-` : ""}
+        ${(item.videoID && !estaTravado) ? `
+            <a href="youtube.com/${item.videoID}" target="_blank">▶️</a>
+        ` : ""}
     </div>
-`;
-        }).join('')}
+    `;
+}).join('')}
     </div>
 
 <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; margin-top: 20px; flex-shrink: 0; width: 100%;">
