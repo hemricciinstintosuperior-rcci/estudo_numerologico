@@ -4728,7 +4728,7 @@ const listaItensSintese = [
     
     { label: "Fraquezas / Inibições", valor: (res.deficiencias && res.deficiencias.length > 0) ? res.deficiencias : "Livre" },
     
-    { label: "Caminho de Vida", valor: res.CaminhodeVida, videoID: "Ls5Ryzh6iRg"},
+    { label: "Caminho de Vida", valor: res.CaminhodeVida},
     
     { label: "Propósito", valor: res.Propósito },
     
@@ -4793,7 +4793,7 @@ html += `
     ">
 ${listaItensSintese.map(item => {
     // 1. CONFIGURAÇÃO DA TRAVA (Adicione aqui o label exato que você quer travar)
-    const itensParaTravar = ["Caminho de Vida"]; 
+    const itensParaTravar = [""]; 
     const estaTravado = itensParaTravar.includes(item.label);
 
     // 2. DECLARAÇÃO SEGURA DE VARIÁVEIS
